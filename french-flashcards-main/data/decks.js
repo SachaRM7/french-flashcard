@@ -2,42 +2,51 @@
 // Add new decks here or they'll be loaded from JSON files
 window.DECKS_DATA = [
   {
-    "id": "pronoms-demonstratifs",
-    "name": "Pronoms Démonstratifs et Relatifs",
-    "description": "Vocabulaire coranique : pronoms démonstratifs et relatifs",
-    "category": "Coran",
-    "cards": [
-      { "front": "هَٰذَا", "back": "ce, cet, celui-ci", "translit": "hādhā" },
-      { "front": "هَٰذِهِ", "back": "cette, celle-ci, ceci", "translit": "hādhihi" },
-      { "front": "هَٰذَانِ", "back": "ces deux-là", "translit": "hādhāni" },
-      { "front": "هَٰؤُلَاءِ", "back": "ceux-ci, celles-ci, ces", "translit": "hāulā'" },
-      { "front": "ذَٰلِكَ", "back": "ce, cet, celui-là", "translit": "dhālika" },
-      { "front": "تِلْكَ", "back": "cette, celle-là, ces", "translit": "tilka" },
-      { "front": "أُولَٰئِكَ", "back": "ceux-là, celles-là, ces", "translit": "ulā'ika" },
-      { "front": "الَّذِي", "back": "qui, lequel, celui qui...", "translit": "alladhī" },
-      { "front": "الَّتِي", "back": "qui, laquelle, celle qui...", "translit": "allatī" },
-      { "front": "الَّذِينَ", "back": "ceux qui, lesquels...", "translit": "alladhīna" },
-      { "front": "اللَّاتِي", "back": "celles qui...", "translit": "allātī" }
-    ]
+  "id": "les-couleurs",
+  "name": "Les couleurs",
+  "description": "Vocabulaire français : les couleurs en français",
+  "category": "Vocabulaire",
+  "cards": [
+    { "front": "Black", "back": "Noir", "translit": null, "audio": null },
+    { "front": "White", "back": "Blanc", "translit": null, "audio": null },
+    { "front": "Red", "back": "Rouge", "translit": null, "audio": null },
+    { "front": "Blue", "back": "Bleu", "translit": null, "audio": null },
+    { "front": "Green", "back": "Vert", "translit": null, "audio": null },
+    { "front": "Yellow", "back": "Jaune", "translit": null, "audio": null },
+    { "front": "Orange", "back": "Orange", "translit": null, "audio": null },
+    { "front": "Pink", "back": "Rose", "translit": null, "audio": null },
+    { "front": "Purple", "back": "Violet", "translit": null, "audio": null },
+    { "front": "Brown", "back": "Marron", "translit": null, "audio": null },
+    { "front": "Grey", "back": "Gris", "translit": null, "audio": null },
+    { "front": "Beige", "back": "Beige", "translit": null, "audio": null }
+  ]
   },
   {
-    "id": "pronoms-personnels",
-    "name": "Pronoms Personnels",
-    "description": "Les pronoms personnels arabes (singulier, duel, pluriel)",
-    "category": "Grammaire",
-    "cards": [
-      { "front": "أَنَا", "back": "Je", "translit": "ana" },
-      { "front": "أَنْتَ", "back": "Tu (masculin)", "translit": "anta" },
-      { "front": "أَنْتِ", "back": "Tu (féminin)", "translit": "anti" },
-      { "front": "هُوَ", "back": "Il", "translit": "huwa" },
-      { "front": "هِيَ", "back": "Elle", "translit": "hiya" },
-      { "front": "أَنْتُمَا", "back": "Vous deux (duel)", "translit": "antouma" },
-      { "front": "هُمَا", "back": "Eux/Elles deux (duel)", "translit": "houma" },
-      { "front": "نَحْنُ", "back": "Nous", "translit": "nahnou" },
-      { "front": "أَنْتُمْ", "back": "Vous (masculin pluriel)", "translit": "antoum" },
-      { "front": "أَنْتُنَّ", "back": "Vous (féminin pluriel)", "translit": "antounna" },
-      { "front": "هُمْ", "back": "Ils", "translit": "houm" },
-      { "front": "هُنَّ", "back": "Elles", "translit": "hounna" }
-    ]
-  }
+  "id": "les-nombres",
+  "name": "Les nombres",
+  "description": "Vocabulaire français : Les nombres en français",
+  "category": "Vocabulaire",
+  "cards": [
+    { "front": "One", "back": "Un", "translit": null, "audio": null },
+    { "front": "Two", "back": "Deux", "translit": null, "audio": null },
+    { "front": "Three", "back": "Trois", "translit": null, "audio": null },
+    { "front": "Four", "back": "Quatre", "translit": null, "audio": null },
+    { "front": "Five", "back": "Cinq", "translit": null, "audio": null },
+    { "front": "Six", "back": "Six", "translit": null, "audio": null },
+    { "front": "Seven", "back": "Sept", "translit": null, "audio": null },
+    { "front": "Height", "back": "Huit", "translit": null, "audio": null },
+    { "front": "Nine", "back": "Neuf", "translit": null, "audio": null },
+    { "front": "Ten", "back": "Dix", "translit": null, "audio": null },
+    { "front": "Twenty", "back": "Vingt", "translit": null, "audio": null },
+    { "front": "Thirty", "back": "Trente", "translit": null, "audio": null },
+    { "front": "Forty", "back": "Quarante", "translit": null, "audio": null },
+    { "front": "Fifty", "back": "Cinquante", "translit": null, "audio": null },
+    { "front": "Sixty", "back": "Soixante", "translit": null, "audio": null },
+    { "front": "Seventy", "back": "Soixante-dix", "translit": null, "audio": null },
+    { "front": "Eighty", "back": "Quatre-vingts", "translit": null, "audio": null },
+    { "front": "Ninety", "back": "Quatre-vingt-dix", "translit": null, "audio": null },
+    { "front": "One hundred", "back": "Cent", "translit": null, "audio": null },
+    { "front": "One thousand", "back": "Mille", "translit": null, "audio": null }
+  ]
+}
 ];
