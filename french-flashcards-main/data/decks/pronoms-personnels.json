@@ -1,0 +1,20 @@
+{
+  "id": "pronoms-personnels",
+  "name": "Pronoms Personnels",
+  "description": "Les pronoms personnels arabes (singulier, duel, pluriel)",
+  "category": "Grammaire",
+  "cards": [
+    { "front": "أَنَا", "back": "Je", "translit": "ana", "audio": null },
+    { "front": "أَنْتَ", "back": "Tu (masculin)", "translit": "anta", "audio": null },
+    { "front": "أَنْتِ", "back": "Tu (féminin)", "translit": "anti", "audio": null },
+    { "front": "هُوَ", "back": "Il", "translit": "huwa", "audio": null },
+    { "front": "هِيَ", "back": "Elle", "translit": "hiya", "audio": null },
+    { "front": "أَنْتُمَا", "back": "Vous deux (duel)", "translit": "antouma", "audio": null },
+    { "front": "هُمَا", "back": "Eux/Elles deux (duel)", "translit": "houma", "audio": null },
+    { "front": "نَحْنُ", "back": "Nous", "translit": "nahnou", "audio": null },
+    { "front": "أَنْتُمْ", "back": "Vous (masculin pluriel)", "translit": "antoum", "audio": null },
+    { "front": "أَنْتُنَّ", "back": "Vous (féminin pluriel)", "translit": "antounna", "audio": null },
+    { "front": "هُمْ", "back": "Ils", "translit": "houm", "audio": null },
+    { "front": "هُنَّ", "back": "Elles", "translit": "hounna", "audio": null }
+  ]
+}

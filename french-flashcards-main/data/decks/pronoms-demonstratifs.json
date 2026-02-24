@@ -1,0 +1,19 @@
+{
+  "id": "pronoms-demonstratifs",
+  "name": "Pronoms Démonstratifs et Relatifs",
+  "description": "Vocabulaire coranique : pronoms démonstratifs et relatifs",
+  "category": "Coran",
+  "cards": [
+    { "front": "هَٰذَا", "back": "ce, cet, celui-ci", "translit": "hādhā", "audio": null },
+    { "front": "هَٰذِهِ", "back": "cette, celle-ci, ceci", "translit": "hādhihi", "audio": null },
+    { "front": "هَٰذَانِ", "back": "ces deux-là", "translit": "hādhāni", "audio": null },
+    { "front": "هَٰؤُلَاءِ", "back": "ceux-ci, celles-ci, ces", "translit": "hāulā'", "audio": null },
+    { "front": "ذَٰلِكَ", "back": "ce, cet, celui-là", "translit": "dhālika", "audio": null },
+    { "front": "تِلْكَ", "back": "cette, celle-là, ces", "translit": "tilka", "audio": null },
+    { "front": "أُولَٰئِكَ", "back": "ceux-là, celles-là, ces", "translit": "ulā'ika", "audio": null },
+    { "front": "الَّذِي", "back": "qui, lequel, celui qui...", "translit": "alladhī", "audio": null },
+    { "front": "الَّتِي", "back": "qui, laquelle, celle qui...", "translit": "allatī", "audio": null },
+    { "front": "الَّذِينَ", "back": "ceux qui, lesquels...", "translit": "alladhīna", "audio": null },
+    { "front": "اللَّاتِي", "back": "celles qui...", "translit": "allātī", "audio": null }
+  ]
+}
