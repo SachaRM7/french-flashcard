@@ -421,7 +421,7 @@
             </div>
         </div>
         <div class="mode-list">
-            <div class="mode-btn" onclick="startCardsMode()">
+            <div class="mode-btn" onclick="showCardsConfig()">
                 <div class="mode-icon">🃏</div>
                 <div class="mode-info">
                     <div class="mode-name">Cartes</div>
@@ -466,12 +466,36 @@
         </div>
     </div>
 
+    <!-- CARDS CONFIG PAGE -->
+    <div class="page" id="cardsConfigPage">
+        <div class="page-header">
+            <button class="back-btn" onclick="exitMode()">←</button>
+            <div class="page-title" id="cardsDeckName"></div>
+        </div>
+        <div class="config-section">
+            <div class="config-title">Mode Cartes 🃏</div>
+            <div class="config-group">
+                <div class="option-group-title">Je vois d'abord...</div>
+                <div class="mode-toggle">
+                    <button class="mode-toggle-btn active" id="cardsShowEnglish" onclick="setCardsSide('english')">🇬🇧 Anglais</button>
+                    <button class="mode-toggle-btn" id="cardsShowFrench" onclick="setCardsSide('french')">🇫🇷 Français</button>
+                </div>
+            </div>
+            <div class="config-group">
+                <div class="config-row">
+                    <span class="config-label">Mélanger les cartes</span>
+                    <div class="toggle" id="cardsShuffleToggle" onclick="toggleCardsShuffle()"></div>
+                </div>
+            </div>
+            <button class="primary-btn start-test-btn" onclick="startCardsMode()">Commencer</button>
+        </div>
+    </div>
+
     <!-- CARDS MODE -->
     <div class="page" id="cardsPage">
         <div class="cards-header">
             <button class="back-btn" onclick="exitMode()">←</button>
             <div class="cards-progress" id="cardsProgress">1 / 10</div>
-            <button class="settings-btn" onclick="openOptions()">⚙️</button>
         </div>
         <div class="progress-bar-container">
             <div class="progress-side left" id="countLeft">0</div>
@@ -1275,6 +1299,26 @@
         function exitMode() { saveProgress(); openDeck(currentDeck.id); }
 
         // ========== CARDS MODE ==========
+        // ========== CARDS CONFIG ==========
+        function showCardsConfig() {
+            document.getElementById('cardsDeckName').textContent = currentDeck.name;
+            document.getElementById('cardsShowEnglish').classList.toggle('active', options.frontSide === 'english');
+            document.getElementById('cardsShowFrench').classList.toggle('active', options.frontSide === 'french');
+            document.getElementById('cardsShuffleToggle').classList.toggle('active', options.shuffle);
+            showPage('cardsConfigPage');
+        }
+        
+        function setCardsSide(side) {
+            options.frontSide = side;
+            document.getElementById('cardsShowEnglish').classList.toggle('active', side === 'english');
+            document.getElementById('cardsShowFrench').classList.toggle('active', side === 'french');
+        }
+        
+        function toggleCardsShuffle() {
+            options.shuffle = !options.shuffle;
+            document.getElementById('cardsShuffleToggle').classList.toggle('active', options.shuffle);
+        }
+
         function startCardsMode() {
             currentCards = [...currentDeck.cards];
             if (options.shuffle) currentCards = shuffle(currentCards);
