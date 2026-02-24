@@ -428,7 +428,7 @@
                     <div class="mode-desc">Swipe pour trier ce que tu connais</div>
                 </div>
             </div>
-            <div class="mode-btn" onclick="startLearnMode()">
+            <div class="mode-btn" onclick="showLearnConfig()">
                 <div class="mode-icon">📖</div>
                 <div class="mode-info">
                     <div class="mode-name">Apprendre</div>
@@ -449,14 +449,14 @@
                     <div class="mode-desc">Relie les paires rapidement</div>
                 </div>
             </div>
-            <div class="mode-btn" onclick="startListenMode()">
+            <div class="mode-btn" onclick="showListenConfig()">
                 <div class="mode-icon">🎧</div>
                 <div class="mode-info">
                     <div class="mode-name">Écoute</div>
                     <div class="mode-desc">Écoute et trouve le mot</div>
                 </div>
             </div>
-            <div class="mode-btn" onclick="startImageMode()">
+            <div class="mode-btn" onclick="showImageConfig()">
                 <div class="mode-icon">🖼️</div>
                 <div class="mode-info">
                     <div class="mode-name">Image</div>
@@ -512,11 +512,53 @@
     </div>
 
     <!-- LEARN MODE -->
+    <!-- LEARN CONFIG PAGE -->
+    <div class="page" id="learnConfigPage">
+        <div class="page-header">
+            <button class="back-btn" onclick="exitMode()">←</button>
+            <div class="page-title" id="learnDeckName"></div>
+        </div>
+        <div class="config-section">
+            <div class="config-title">Configurez votre session</div>
+            <div class="config-group">
+                <div class="option-group-title">Mode de réponse</div>
+                <div class="mode-toggle">
+                    <button class="mode-toggle-btn active" id="learnModeQCM" onclick="setLearnAnswerMode('qcm')">Choix multiple</button>
+                    <button class="mode-toggle-btn" id="learnModeWritten" onclick="setLearnAnswerMode('written')">Réponse écrite</button>
+                </div>
+                <div class="correction-options" id="learnCorrectionOptions" style="display:none; margin-top:10px;">
+                    <div class="correction-option active" data-level="flexible" onclick="setLearnCorrectionLevel('flexible')">
+                        <div class="correction-radio"></div>
+                        <div>
+                            <div class="correction-label">Flexible</div>
+                            <div class="correction-desc">Tolère les fautes mineures et accents</div>
+                        </div>
+                    </div>
+                    <div class="correction-option" data-level="moderate" onclick="setLearnCorrectionLevel('moderate')">
+                        <div class="correction-radio"></div>
+                        <div>
+                            <div class="correction-label">Modéré</div>
+                            <div class="correction-desc">Tolère les accents, orthographe exacte</div>
+                        </div>
+                    </div>
+                    <div class="correction-option" data-level="strict" onclick="setLearnCorrectionLevel('strict')">
+                        <div class="correction-radio"></div>
+                        <div>
+                            <div class="correction-label">Strict</div>
+                            <div class="correction-desc">Réponse exacte requise</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="primary-btn start-test-btn" onclick="startLearnMode()">Commencer</button>
+        </div>
+    </div>
+
+    <!-- LEARN PAGE -->
     <div class="page" id="learnPage">
         <div class="page-header">
             <button class="back-btn" onclick="exitMode()">←</button>
             <div class="page-title">Apprendre</div>
-            <button class="settings-btn" onclick="openOptions('learn')">⚙️</button>
         </div>
         <div class="learn-header">
             <div class="learn-title" id="learnCycle">Cycle d'apprentissage 1</div>
@@ -697,12 +739,53 @@
         </div>
     </div>
 
+    <!-- IMAGE CONFIG PAGE -->
+    <div class="page" id="imageConfigPage">
+        <div class="page-header">
+            <button class="back-btn" onclick="exitMode()">←</button>
+            <div class="page-title" id="imageDeckName"></div>
+        </div>
+        <div class="config-section">
+            <div class="config-title">Mode Image 🖼️</div>
+            <div class="config-group">
+                <div class="option-group-title">Mode de réponse</div>
+                <div class="mode-toggle">
+                    <button class="mode-toggle-btn active" id="imageModeQCM" onclick="setImageAnswerMode('qcm')">Choix multiple</button>
+                    <button class="mode-toggle-btn" id="imageModeWritten" onclick="setImageAnswerMode('written')">Réponse écrite</button>
+                </div>
+                <div class="correction-options" id="imageCorrectionOptions" style="display:none; margin-top:10px;">
+                    <div class="correction-option active" data-level="flexible" onclick="setImageCorrectionLevel('flexible')">
+                        <div class="correction-radio"></div>
+                        <div>
+                            <div class="correction-label">Flexible</div>
+                            <div class="correction-desc">Tolère les fautes mineures et accents</div>
+                        </div>
+                    </div>
+                    <div class="correction-option" data-level="moderate" onclick="setImageCorrectionLevel('moderate')">
+                        <div class="correction-radio"></div>
+                        <div>
+                            <div class="correction-label">Modéré</div>
+                            <div class="correction-desc">Tolère les accents, orthographe exacte</div>
+                        </div>
+                    </div>
+                    <div class="correction-option" data-level="strict" onclick="setImageCorrectionLevel('strict')">
+                        <div class="correction-radio"></div>
+                        <div>
+                            <div class="correction-label">Strict</div>
+                            <div class="correction-desc">Réponse exacte requise</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="primary-btn start-test-btn" onclick="startImageMode()">Commencer</button>
+        </div>
+    </div>
+
     <!-- IMAGE MODE -->
     <div class="page" id="imagePage">
         <div class="page-header">
             <button class="back-btn" onclick="exitMode()">←</button>
             <div class="page-title">Image</div>
-            <button class="settings-btn" onclick="openOptions('image')">⚙️</button>
         </div>
         <div class="learn-header">
             <div class="learn-title" id="imageProgress">1 / 10</div>
@@ -733,12 +816,53 @@
         </div>
     </div>
 
+    <!-- LISTEN CONFIG PAGE -->
+    <div class="page" id="listenConfigPage">
+        <div class="page-header">
+            <button class="back-btn" onclick="exitMode()">←</button>
+            <div class="page-title" id="listenDeckName"></div>
+        </div>
+        <div class="config-section">
+            <div class="config-title">Mode Écoute 🎧</div>
+            <div class="config-group">
+                <div class="option-group-title">Mode de réponse</div>
+                <div class="mode-toggle">
+                    <button class="mode-toggle-btn active" id="listenModeQCM" onclick="setListenAnswerMode('qcm')">Choix multiple</button>
+                    <button class="mode-toggle-btn" id="listenModeWritten" onclick="setListenAnswerMode('written')">Réponse écrite</button>
+                </div>
+                <div class="correction-options" id="listenCorrectionOptions" style="display:none; margin-top:10px;">
+                    <div class="correction-option active" data-level="flexible" onclick="setListenCorrectionLevel('flexible')">
+                        <div class="correction-radio"></div>
+                        <div>
+                            <div class="correction-label">Flexible</div>
+                            <div class="correction-desc">Tolère les fautes mineures et accents</div>
+                        </div>
+                    </div>
+                    <div class="correction-option" data-level="moderate" onclick="setListenCorrectionLevel('moderate')">
+                        <div class="correction-radio"></div>
+                        <div>
+                            <div class="correction-label">Modéré</div>
+                            <div class="correction-desc">Tolère les accents, orthographe exacte</div>
+                        </div>
+                    </div>
+                    <div class="correction-option" data-level="strict" onclick="setListenCorrectionLevel('strict')">
+                        <div class="correction-radio"></div>
+                        <div>
+                            <div class="correction-label">Strict</div>
+                            <div class="correction-desc">Réponse exacte requise</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="primary-btn start-test-btn" onclick="startListenMode()">Commencer</button>
+        </div>
+    </div>
+
     <!-- LISTEN MODE -->
     <div class="page" id="listenPage">
         <div class="page-header">
             <button class="back-btn" onclick="exitMode()">←</button>
             <div class="page-title">Écoute</div>
-            <button class="settings-btn" onclick="openOptions('listen')">⚙️</button>
         </div>
         <div class="learn-header">
             <div class="learn-title" id="listenProgress">1 / 10</div>
@@ -830,7 +954,7 @@
         </div>
     </div>
 
-    <script src="data/decks.js"></script>
+    <script src="data/decks.js?v=2"></script>
     <script>
         // ========== i18n ==========
         const translations = {
@@ -1285,6 +1409,35 @@
             saveProgress();
         }
 
+        // ========== LEARN CONFIG ==========
+        function showLearnConfig() {
+            document.getElementById('learnDeckName').textContent = currentDeck.name;
+            // Reset UI to match config
+            document.getElementById('learnModeQCM').classList.toggle('active', learnConfig.inputMode === 'qcm');
+            document.getElementById('learnModeWritten').classList.toggle('active', learnConfig.inputMode === 'written');
+            document.getElementById('learnCorrectionOptions').style.display = learnConfig.inputMode === 'written' ? 'block' : 'none';
+            updateLearnCorrectionUI();
+            showPage('learnConfigPage');
+        }
+        
+        function setLearnAnswerMode(mode) {
+            learnConfig.inputMode = mode;
+            document.getElementById('learnModeQCM').classList.toggle('active', mode === 'qcm');
+            document.getElementById('learnModeWritten').classList.toggle('active', mode === 'written');
+            document.getElementById('learnCorrectionOptions').style.display = mode === 'written' ? 'block' : 'none';
+        }
+        
+        function setLearnCorrectionLevel(level) {
+            learnConfig.correctionLevel = level;
+            updateLearnCorrectionUI();
+        }
+        
+        function updateLearnCorrectionUI() {
+            document.querySelectorAll('#learnCorrectionOptions .correction-option').forEach(opt => {
+                opt.classList.toggle('active', opt.dataset.level === learnConfig.correctionLevel);
+            });
+        }
+
         // ========== LEARN MODE ==========
         function startLearnMode() {
             learnCycle = 1; learnCorrect = 0; learnWrong = 0; retrySet = new Set();
@@ -1655,6 +1808,34 @@
         }
         function restartMatch() { startMatch(); }
 
+        // ========== LISTEN CONFIG ==========
+        function showListenConfig() {
+            document.getElementById('listenDeckName').textContent = currentDeck.name;
+            document.getElementById('listenModeQCM').classList.toggle('active', listenConfig.inputMode === 'qcm');
+            document.getElementById('listenModeWritten').classList.toggle('active', listenConfig.inputMode === 'written');
+            document.getElementById('listenCorrectionOptions').style.display = listenConfig.inputMode === 'written' ? 'block' : 'none';
+            updateListenCorrectionUI();
+            showPage('listenConfigPage');
+        }
+        
+        function setListenAnswerMode(mode) {
+            listenConfig.inputMode = mode;
+            document.getElementById('listenModeQCM').classList.toggle('active', mode === 'qcm');
+            document.getElementById('listenModeWritten').classList.toggle('active', mode === 'written');
+            document.getElementById('listenCorrectionOptions').style.display = mode === 'written' ? 'block' : 'none';
+        }
+        
+        function setListenCorrectionLevel(level) {
+            listenConfig.correctionLevel = level;
+            updateListenCorrectionUI();
+        }
+        
+        function updateListenCorrectionUI() {
+            document.querySelectorAll('#listenCorrectionOptions .correction-option').forEach(opt => {
+                opt.classList.toggle('active', opt.dataset.level === listenConfig.correctionLevel);
+            });
+        }
+
         // ========== LISTEN MODE ==========
         function startListenMode() {
             listenQueue = currentDeck.cards.map((card, idx) => ({ card, idx }));
@@ -1786,17 +1967,44 @@
             document.getElementById('listenCompleteStats').textContent = `✅ ${listenCorrect} ${t('correct')} · ❌ ${listenWrong} ${t('errors')}`;
         }
 
+        // ========== IMAGE CONFIG ==========
+        function showImageConfig() {
+            // Check if deck has images/emojis
+            const hasVisuals = currentDeck.cards.some(c => c.emoji || c.image);
+            if (!hasVisuals) {
+                alert(currentLang === 'fr' ? 'Ce deck n\'a pas d\'images ou émojis. Ajoutez "emoji" ou "image" aux cartes.' : 'This deck has no images or emojis. Add "emoji" or "image" to cards.');
+                return;
+            }
+            document.getElementById('imageDeckName').textContent = currentDeck.name;
+            document.getElementById('imageModeQCM').classList.toggle('active', imageConfig.inputMode === 'qcm');
+            document.getElementById('imageModeWritten').classList.toggle('active', imageConfig.inputMode === 'written');
+            document.getElementById('imageCorrectionOptions').style.display = imageConfig.inputMode === 'written' ? 'block' : 'none';
+            updateImageCorrectionUI();
+            showPage('imageConfigPage');
+        }
+        
+        function setImageAnswerMode(mode) {
+            imageConfig.inputMode = mode;
+            document.getElementById('imageModeQCM').classList.toggle('active', mode === 'qcm');
+            document.getElementById('imageModeWritten').classList.toggle('active', mode === 'written');
+            document.getElementById('imageCorrectionOptions').style.display = mode === 'written' ? 'block' : 'none';
+        }
+        
+        function setImageCorrectionLevel(level) {
+            imageConfig.correctionLevel = level;
+            updateImageCorrectionUI();
+        }
+        
+        function updateImageCorrectionUI() {
+            document.querySelectorAll('#imageCorrectionOptions .correction-option').forEach(opt => {
+                opt.classList.toggle('active', opt.dataset.level === imageConfig.correctionLevel);
+            });
+        }
+
         // ========== IMAGE MODE ==========
         function startImageMode() {
             // Filter cards that have emoji or image
             const cardsWithVisual = currentDeck.cards.filter(c => c.emoji || c.image);
-            
-            if (cardsWithVisual.length === 0) {
-                alert(currentLang === 'fr' ? 'Ce deck n\'a pas d\'images ou émojis. Ajoutez "emoji" ou "image" aux cartes.' :
-                      'This deck has no images or emojis. Add "emoji" or "image" to cards.');
-                return;
-            }
-            
             imageQueue = cardsWithVisual.map((card, idx) => ({ card, idx: currentDeck.cards.indexOf(card) }));
             imageQueue = shuffle(imageQueue);
             imageIndex = 0;
