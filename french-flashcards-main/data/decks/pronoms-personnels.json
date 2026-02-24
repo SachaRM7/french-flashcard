@@ -1,20 +1,20 @@
 {
-  "id": "pronoms-personnels",
-  "name": "Pronoms Personnels",
-  "description": "Les pronoms personnels arabes (singulier, duel, pluriel)",
-  "category": "Grammaire",
+  "id": "les-couleurs",
+  "name": "Les couleurs",
+  "description": "Vocabulaire français : les couleurs en français",
+  "category": "Vocabulaire",
   "cards": [
-    { "front": "أَنَا", "back": "Je", "translit": "ana", "audio": null },
-    { "front": "أَنْتَ", "back": "Tu (masculin)", "translit": "anta", "audio": null },
-    { "front": "أَنْتِ", "back": "Tu (féminin)", "translit": "anti", "audio": null },
-    { "front": "هُوَ", "back": "Il", "translit": "huwa", "audio": null },
-    { "front": "هِيَ", "back": "Elle", "translit": "hiya", "audio": null },
-    { "front": "أَنْتُمَا", "back": "Vous deux (duel)", "translit": "antouma", "audio": null },
-    { "front": "هُمَا", "back": "Eux/Elles deux (duel)", "translit": "houma", "audio": null },
-    { "front": "نَحْنُ", "back": "Nous", "translit": "nahnou", "audio": null },
-    { "front": "أَنْتُمْ", "back": "Vous (masculin pluriel)", "translit": "antoum", "audio": null },
-    { "front": "أَنْتُنَّ", "back": "Vous (féminin pluriel)", "translit": "antounna", "audio": null },
-    { "front": "هُمْ", "back": "Ils", "translit": "houm", "audio": null },
-    { "front": "هُنَّ", "back": "Elles", "translit": "hounna", "audio": null }
+    { "front": "Black", "back": "Noir", "translit": null, "audio": null },
+    { "front": "White", "back": "Blanc", "translit": null, "audio": null },
+    { "front": "Red", "back": "Rouge", "translit": null, "audio": null },
+    { "front": "Blue", "back": "Bleu", "translit": null, "audio": null },
+    { "front": "Green", "back": "Vert", "translit": null, "audio": null },
+    { "front": "Yellow", "back": "Jaune", "translit": null, "audio": null },
+    { "front": "Orange", "back": "Orange", "translit": null, "audio": null },
+    { "front": "Pink", "back": "Rose", "translit": null, "audio": null },
+    { "front": "Purple", "back": "Violet", "translit": null, "audio": null },
+    { "front": "Brown", "back": "Marron", "translit": null, "audio": null },
+    { "front": "Grey", "back": "Gris", "translit": null, "audio": null },
+    { "front": "Beige", "back": "Beige", "translit": null, "audio": null }
   ]
 }
