@@ -622,11 +622,7 @@
                 <div class="config-row">
                     <span class="config-label" id="configNumQLabel">Nombre de questions</span>
                     <select class="config-select" id="testNumQuestions">
-                        <option value="5">5</option>
-                        <option value="10">10</option>
-                        <option value="15" selected>15</option>
-                        <option value="20">20</option>
-                        <option value="all">Toutes</option>
+                        <!-- Options générées dynamiquement -->
                     </select>
                 </div>
             </div>
@@ -1620,6 +1616,29 @@
         // ========== TEST MODE ==========
         function startTestConfig() {
             document.getElementById('testDeckName').textContent = currentDeck.name;
+            
+            // Generate question count options based on deck size
+            const deckSize = currentDeck.cards.length;
+            const select = document.getElementById('testNumQuestions');
+            select.innerHTML = '';
+            
+            // Add numeric options only if deck is large enough
+            [5, 10, 15, 20].forEach(n => {
+                if (n <= deckSize) {
+                    const opt = document.createElement('option');
+                    opt.value = n;
+                    opt.textContent = n;
+                    select.appendChild(opt);
+                }
+            });
+            
+            // Always add "Toutes" option and select it by default
+            const allOpt = document.createElement('option');
+            allOpt.value = 'all';
+            allOpt.textContent = `Toutes (${deckSize})`;
+            allOpt.selected = true;
+            select.appendChild(allOpt);
+            
             // Update UI to match current config
             document.getElementById('testModeQCM').classList.toggle('active', testConfig.inputMode === 'qcm');
             document.getElementById('testModeWritten').classList.toggle('active', testConfig.inputMode === 'written');
