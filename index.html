@@ -978,7 +978,7 @@
         </div>
     </div>
 
-    <script src="data/decks.js?v=2"></script>
+    <script src="data/decks.js?v=3"></script>
     <script>
         // ========== i18n ==========
         const translations = {
@@ -2095,7 +2095,7 @@
                 display.textContent = item.card.emoji || '❓';
             }
             
-            document.getElementById('imageQuestion').textContent = t('whatIsThis');
+            document.getElementById('imageQuestion').textContent = currentDeck.imageQuestion || t('whatIsThis');
             
             // Reset written input
             const writtenInput = document.getElementById('imageWrittenInput');

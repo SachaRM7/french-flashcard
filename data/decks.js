@@ -5,6 +5,7 @@ window.DECKS_DATA = [
     "name": "Les couleurs",
     "description": "Vocabulaire français : les couleurs en français",
     "category": "Vocabulaire",
+    "imageQuestion": "Quelle est cette couleur ?",
     "cards": [
       { "front": "Black", "back": "Noir", "emoji": "🖤" },
       { "front": "White", "back": "Blanc", "emoji": "🤍" },
@@ -25,6 +26,7 @@ window.DECKS_DATA = [
     "name": "Les nombres",
     "description": "Vocabulaire français : Les nombres en français",
     "category": "Vocabulaire",
+    "imageQuestion": "Quel est ce nombre ?",
     "cards": [
       { "front": "One", "back": "Un", "emoji": "1️⃣" },
       { "front": "Two", "back": "Deux", "emoji": "2️⃣" },
