@@ -1,0 +1,734 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="theme-color" content="#0d1117">
+    <title>Flashcards - Vocabulaire</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+        
+        :root {
+            --bg-primary: #0d1117;
+            --bg-secondary: #161b22;
+            --bg-card: #1c2128;
+            --border: #30363d;
+            --text-primary: #e6edf3;
+            --text-secondary: #8b949e;
+            --accent-blue: #58a6ff;
+            --accent-green: #3fb950;
+            --accent-orange: #d29922;
+            --accent-red: #f85149;
+            --accent-purple: #a371f7;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, sans-serif;
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        .page { display: none; min-height: 100vh; }
+        .page.active { display: flex; flex-direction: column; }
+
+        /* ========== COMMON ========== */
+        .page-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 20px;
+            padding: 20px;
+            padding-bottom: 0;
+        }
+        .back-btn {
+            width: 40px; height: 40px;
+            background: var(--bg-secondary);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            color: var(--text-primary);
+            cursor: pointer;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 1.2rem;
+        }
+        .page-title { flex: 1; font-size: 1.1rem; font-weight: 600; }
+        .primary-btn {
+            padding: 14px 28px;
+            background: var(--accent-blue);
+            border: none;
+            border-radius: 10px;
+            color: #fff;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            width: 100%;
+        }
+        .secondary-btn {
+            padding: 14px 28px;
+            background: var(--bg-secondary);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            color: var(--text-primary);
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        /* ========== HOME PAGE ========== */
+        #homePage { padding: 20px; padding-bottom: 100px; }
+        .home-header { text-align: center; padding: 30px 0 20px; }
+        .home-header h1 { font-size: 1.8rem; font-weight: 700; margin-bottom: 5px; }
+        .home-header p { color: var(--text-secondary); font-size: 0.9rem; }
+        .deck-grid { display: flex; flex-direction: column; gap: 12px; max-width: 500px; margin: 0 auto; }
+        .deck-card {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 16px;
+            cursor: pointer;
+        }
+        .deck-card:active { transform: scale(0.98); }
+        .deck-name { font-weight: 600; font-size: 1rem; margin-bottom: 4px; }
+        .deck-meta { color: var(--text-secondary); font-size: 0.8rem; display: flex; gap: 12px; }
+
+        /* ========== DECK PAGE ========== */
+        #deckPage { padding: 20px; }
+        .deck-stats { display: flex; justify-content: center; gap: 20px; margin-bottom: 25px; }
+        .stat { text-align: center; }
+        .stat-value { font-size: 1.5rem; font-weight: 700; }
+        .stat-value.green { color: var(--accent-green); }
+        .stat-value.orange { color: var(--accent-orange); }
+        .stat-label { font-size: 0.75rem; color: var(--text-secondary); margin-top: 2px; }
+        .mode-list { display: flex; flex-direction: column; gap: 10px; max-width: 400px; margin: 0 auto; }
+        .mode-btn {
+            display: flex; align-items: center; gap: 14px;
+            padding: 16px 20px;
+            background: var(--bg-secondary);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            cursor: pointer;
+        }
+        .mode-btn:active { transform: scale(0.98); }
+        .mode-icon { font-size: 1.5rem; width: 40px; text-align: center; }
+        .mode-info { flex: 1; text-align: left; }
+        .mode-name { font-weight: 600; font-size: 0.95rem; }
+        .mode-desc { font-size: 0.8rem; color: var(--text-secondary); margin-top: 2px; }
+
+        /* ========== CARDS MODE ========== */
+        #cardsPage { padding: 20px; padding-left: 20px; padding-right: 20px; align-items: center; }
+        .cards-header { width: 100%; max-width: 400px; display: flex; align-items: center; justify-content: space-between; margin-bottom: 15px; }
+        .cards-progress { font-size: 0.95rem; font-weight: 600; }
+        .settings-btn { width: 36px; height: 36px; background: var(--bg-secondary); border: 1px solid var(--border); border-radius: 8px; color: var(--text-primary); cursor: pointer; font-size: 1rem; }
+        .progress-bar-container { width: 100%; max-width: 400px; display: flex; align-items: center; gap: 8px; margin-bottom: 20px; }
+        .progress-side { width: 40px; height: 28px; border-radius: 6px; display: flex; align-items: center; justify-content: center; font-size: 0.8rem; font-weight: 600; }
+        .progress-side.left { background: rgba(248, 81, 73, 0.2); color: var(--accent-red); }
+        .progress-side.right { background: rgba(63, 185, 80, 0.2); color: var(--accent-green); }
+        .progress-bar { flex: 1; height: 4px; background: var(--border); border-radius: 2px; overflow: hidden; }
+        .progress-fill { height: 100%; background: linear-gradient(90deg, var(--accent-blue), var(--accent-purple)); transition: width 0.3s; }
+        .card-wrapper { width: 100%; max-width: 360px; height: 400px; position: relative; margin-bottom: 20px; }
+        .swipe-hint { position: absolute; top: 50%; transform: translateY(-50%); display: flex; flex-direction: column; align-items: center; gap: 4px; font-size: 0.7rem; font-weight: 600; opacity: 0.5; pointer-events: none; }
+        .swipe-hint.left { left: -50px; color: var(--accent-orange); }
+        .swipe-hint.right { right: -50px; color: var(--accent-green); }
+        .swipe-card { width: 100%; height: 100%; position: absolute; border-radius: 16px; background: var(--bg-card); border: 2px solid var(--border); cursor: grab; touch-action: pan-y; transition: transform 0.1s, border-color 0.2s; overflow: hidden; }
+        .swipe-card.swiping-right { border-color: var(--accent-green); }
+        .swipe-card.swiping-left { border-color: var(--accent-orange); }
+        .swipe-card.fly-right { transform: translateX(150%) rotate(30deg) !important; transition: transform 0.4s ease-out; }
+        .swipe-card.fly-left { transform: translateX(-150%) rotate(-30deg) !important; transition: transform 0.4s ease-out; }
+        .card-inner { width: 100%; height: 100%; position: relative; transform-style: preserve-3d; transition: transform 0.5s; }
+        .card-inner.flipped { transform: rotateY(180deg); }
+        .card-face { position: absolute; width: 100%; height: 100%; backface-visibility: hidden; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 25px; }
+        .card-back { transform: rotateY(180deg); background: var(--bg-secondary); }
+        .swipe-indicator { position: absolute; top: 20px; padding: 8px 16px; border-radius: 8px; font-weight: 700; font-size: 1rem; opacity: 0; transition: opacity 0.2s; }
+        .swipe-indicator.left { left: 15px; background: var(--accent-orange); color: #000; }
+        .swipe-indicator.right { right: 15px; background: var(--accent-green); color: #000; }
+        .card-audio { position: absolute; top: 15px; left: 15px; width: 36px; height: 36px; background: var(--bg-secondary); border: 1px solid var(--border); border-radius: 8px; color: var(--text-primary); cursor: pointer; font-size: 1rem; }
+        .card-star { position: absolute; top: 15px; right: 15px; width: 36px; height: 36px; background: transparent; border: none; color: var(--text-secondary); cursor: pointer; font-size: 1.3rem; }
+        .card-star.active { color: var(--accent-orange); }
+        
+        .main-text { font-size: 2.2rem; font-weight: 700; text-align: center; margin-bottom: 10px; }
+        .french-text { font-size: 1.5rem; text-align: center; font-weight: 500; color: var(--accent-blue); }
+        
+        .tap-hint { position: absolute; bottom: 20px; font-size: 0.8rem; color: var(--text-secondary); }
+        .cards-controls { display: flex; gap: 15px; align-items: center; }
+        .ctrl-btn { width: 50px; height: 50px; border-radius: 50%; border: 2px solid var(--border); background: var(--bg-secondary); color: var(--text-primary); cursor: pointer; font-size: 1.2rem; }
+        .ctrl-btn.red { border-color: var(--accent-orange); color: var(--accent-orange); }
+        .ctrl-btn.green { border-color: var(--accent-green); color: var(--accent-green); }
+
+        /* ========== LEARN & TEST ========== */
+        .answers-list { width: 100%; display: flex; flex-direction: column; gap: 10px; }
+        .answer-btn { width: 100%; padding: 16px 20px; background: var(--bg-secondary); border: 2px solid var(--border); border-radius: 12px; color: var(--text-primary); font-size: 1rem; text-align: left; cursor: pointer; transition: all 0.2s; }
+        .answer-btn.correct { border-color: var(--accent-green); background: rgba(63, 185, 80, 0.15); }
+        .answer-btn.wrong { border-color: var(--accent-red); background: rgba(248, 81, 73, 0.15); }
+
+        .written-input {
+            width: 100%; padding: 16px 20px; background: var(--bg-secondary); border: 2px solid var(--border); border-radius: 12px;
+            color: var(--text-primary); font-size: 1.1rem; text-align: center; outline: none; transition: border-color 0.2s;
+        }
+        .written-input:focus { border-color: var(--accent-blue); }
+
+        /* ========== MATCH MODE ========== */
+        .match-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; width: 100%; max-width: 400px; }
+        .match-cell {
+            aspect-ratio: 1; background: var(--bg-secondary); border: 2px solid var(--border); border-radius: 12px;
+            display: flex; align-items: center; justify-content: center; text-align: center; padding: 8px; cursor: pointer; font-size: 0.85rem; transition: all 0.2s;
+        }
+        .match-cell.selected { border-color: var(--accent-purple); background: rgba(163, 113, 247, 0.2); }
+        .match-cell.correct { border-color: var(--accent-green); background: var(--accent-green); color: #000; }
+        .match-cell.wrong { border-color: var(--accent-red); background: var(--accent-red); color: #fff; animation: shake 0.4s; }
+        .match-cell.matched { opacity: 0; pointer-events: none; }
+
+        @keyframes shake {
+            0%, 100% { transform: translateX(0); }
+            20% { transform: translateX(-8px); }
+            40% { transform: translateX(8px); }
+            60% { transform: translateX(-8px); }
+            80% { transform: translateX(8px); }
+        }
+
+        /* ========== OPTIONS MODAL ========== */
+        .modal-overlay { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.7); z-index: 100; align-items: flex-end; justify-content: center; }
+        .modal-overlay.active { display: flex; }
+        .modal { width: 100%; max-width: 500px; background: var(--bg-secondary); border-radius: 20px 20px 0 0; padding: 20px; max-height: 80vh; overflow-y: auto; }
+        .option-group { background: var(--bg-card); border-radius: 12px; padding: 15px; margin-bottom: 12px; }
+        .toggle { width: 48px; height: 28px; background: var(--border); border-radius: 14px; position: relative; cursor: pointer; }
+        .toggle.active { background: var(--accent-blue); }
+        .toggle::after { content: ''; position: absolute; width: 22px; height: 22px; background: #fff; border-radius: 50%; top: 3px; left: 3px; transition: transform 0.2s; }
+        .toggle.active::after { transform: translateX(20px); }
+        .side-selector { display: flex; background: var(--bg-secondary); border-radius: 8px; overflow: hidden; }
+        .side-btn { padding: 8px 16px; border: none; background: transparent; color: var(--text-secondary); cursor: pointer; font-size: 0.85rem; }
+        .side-btn.active { background: var(--accent-blue); color: #fff; }
+
+        .complete-screen { display: none; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 40px 20px; flex: 1; }
+        .complete-screen.active { display: flex; }
+        .complete-emoji { font-size: 4rem; margin-bottom: 20px; }
+    </style>
+</head>
+<body>
+
+    <!-- HOME PAGE -->
+    <div class="page active" id="homePage">
+        <div class="home-header">
+            <h1 id="homeTitle">📚 Flashcards</h1>
+            <p id="homeSub">Apprends le vocabulaire</p>
+        </div>
+        <div class="deck-grid" id="deckGrid"></div>
+    </div>
+
+    <!-- DECK PAGE -->
+    <div class="page" id="deckPage">
+        <div class="page-header">
+            <button class="back-btn" onclick="showPage('homePage')">←</button>
+            <div class="page-title" id="deckTitle">Deck</div>
+        </div>
+        <div class="deck-stats">
+            <div class="stat">
+                <div class="stat-value green" id="statKnown">0</div>
+                <div class="stat-label">Acquis</div>
+            </div>
+            <div class="stat">
+                <div class="stat-value orange" id="statLearning">0</div>
+                <div class="stat-label">En cours</div>
+            </div>
+        </div>
+        <div class="mode-list">
+            <div class="mode-btn" onclick="startCardsMode()">
+                <div class="mode-icon">🃏</div>
+                <div class="mode-info">
+                    <div class="mode-name">Cartes</div>
+                    <div class="mode-desc">Swipe pour trier ce que tu connais</div>
+                </div>
+            </div>
+            <div class="mode-btn" onclick="startLearnMode()">
+                <div class="mode-icon">📖</div>
+                <div class="mode-info">
+                    <div class="mode-name">Apprendre</div>
+                    <div class="mode-desc">QCM avec répétition intelligente</div>
+                </div>
+            </div>
+            <div class="mode-btn" onclick="startTestConfig()">
+                <div class="mode-icon">📝</div>
+                <div class="mode-info">
+                    <div class="mode-name">Test</div>
+                    <div class="mode-desc">Évalue tes connaissances</div>
+                </div>
+            </div>
+            <div class="mode-btn" onclick="startMatch()">
+                <div class="mode-icon">🔗</div>
+                <div class="mode-info">
+                    <div class="mode-name">Associer</div>
+                    <div class="mode-desc">Relie les paires rapidement</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- CARDS MODE -->
+    <div class="page" id="cardsPage">
+        <div class="cards-header">
+            <button class="back-btn" onclick="exitMode()">←</button>
+            <div class="cards-progress" id="cardsProgress">1 / 10</div>
+            <button class="settings-btn" onclick="openOptions()">⚙️</button>
+        </div>
+        <div class="progress-bar-container">
+            <div class="progress-side left" id="countLeft">0</div>
+            <div class="progress-bar"><div class="progress-fill" id="cardsProgressBar"></div></div>
+            <div class="progress-side right" id="countRight">0</div>
+        </div>
+        <div class="card-wrapper" id="cardWrapper">
+            <div class="swipe-hint left"><span class="arrow">←</span><span>À revoir</span></div>
+            <div class="swipe-hint right"><span class="arrow">→</span><span>Acquis</span></div>
+            <div class="swipe-card" id="swipeCard">
+                <div class="swipe-indicator left">En cours</div>
+                <div class="swipe-indicator right">Acquis</div>
+                <button class="card-audio" onclick="event.stopPropagation(); speakCurrent()">🔊</button>
+                <button class="card-star" id="starBtn" onclick="event.stopPropagation(); toggleStar()">☆</button>
+                <div class="card-inner" id="cardInner">
+                    <div class="card-face card-front">
+                        <div class="main-text" id="cardFrontText"></div>
+                        <div class="tap-hint">Appuie pour retourner</div>
+                    </div>
+                    <div class="card-face card-back">
+                        <div class="french-text" id="cardBackText"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="cards-controls">
+            <button class="ctrl-btn" onclick="undoCard()">↩️</button>
+            <button class="ctrl-btn red" onclick="swipeLeft()">✕</button>
+            <button class="ctrl-btn green" onclick="swipeRight()">✓</button>
+        </div>
+        <div class="complete-screen" id="cardsComplete">
+            <div class="complete-emoji">🎉</div>
+            <div class="complete-title">Bravo !</div>
+            <div class="complete-stats" id="cardsCompleteStats"></div>
+            <button class="primary-btn" onclick="exitMode()">Retour</button>
+        </div>
+    </div>
+
+    <!-- LEARN MODE -->
+    <div class="page" id="learnPage">
+        <div class="page-header">
+            <button class="back-btn" onclick="exitMode()">←</button>
+            <div class="page-title">Apprendre</div>
+        </div>
+        <div class="question-area" style="padding: 20px; align-items: center; display: flex; flex-direction: column; flex: 1;">
+            <div class="main-text" id="questionText" style="margin-top: 50px;"></div>
+            <div class="answers-list" id="answersList" style="margin-top: 40px; width: 100%; max-width: 400px;"></div>
+        </div>
+        <div class="complete-screen" id="learnComplete">
+            <div class="complete-emoji">🏆</div>
+            <div class="complete-title">Terminé !</div>
+            <button class="primary-btn" onclick="exitMode()">Retour</button>
+        </div>
+    </div>
+
+    <!-- TEST CONFIG & TEST -->
+    <div class="page" id="testConfigPage">
+        <div class="page-header"><button class="back-btn" onclick="exitMode()">←</button></div>
+        <div style="padding: 20px; max-width: 400px; margin: 0 auto; width: 100%;">
+            <h2 style="margin-bottom: 20px;">Lancer un test</h2>
+            <button class="primary-btn" onclick="startTest()">Commencer le test</button>
+        </div>
+    </div>
+
+    <div class="page" id="testPage">
+        <div class="page-header"><div class="page-title" id="testCounter">1 / 10</div></div>
+        <div class="question-area" style="padding: 20px; align-items: center; display: flex; flex-direction: column; flex: 1;">
+            <div class="main-text" id="testQuestionText" style="margin-top: 50px;"></div>
+            <div class="answers-list" id="testAnswers" style="margin-top: 40px; width: 100%; max-width: 400px;"></div>
+        </div>
+    </div>
+
+    <!-- MATCH MODE -->
+    <div class="page" id="matchPage">
+        <div class="page-header">
+            <button class="back-btn" onclick="exitMode()">←</button>
+            <div class="page-title">Associer</div>
+        </div>
+        <div style="display: flex; justify-content: center; padding: 20px;">
+            <div class="match-grid" id="matchGrid"></div>
+        </div>
+        <div class="complete-screen" id="matchComplete">
+            <div class="complete-emoji">⚡</div>
+            <div class="complete-title">Fini !</div>
+            <button class="primary-btn" onclick="exitMode()">Retour</button>
+        </div>
+    </div>
+
+    <!-- OPTIONS -->
+    <div class="modal-overlay" id="optionsModal">
+        <div class="modal">
+            <div class="modal-header" style="display: flex; justify-content: space-between; margin-bottom: 20px;">
+                <div class="modal-title">Options</div>
+                <button onclick="closeOptions()" style="background: none; border: none; color: white; font-size: 1.5rem;">✕</button>
+            </div>
+            <div class="option-group">
+                <div style="display: flex; justify-content: space-between; align-items: center;">
+                    <span>Mélanger</span>
+                    <div class="toggle" id="toggleShuffle" onclick="toggleOption('shuffle')"></div>
+                </div>
+            </div>
+            <div class="option-group">
+                <span>Langue au recto</span>
+                <div class="side-selector" style="margin-top: 10px;">
+                    <button class="side-btn active" id="btnSideEng" onclick="setSide('english')">Anglais</button>
+                    <button class="side-btn" id="btnSideFr" onclick="setSide('french')">Français</button>
+                </div>
+            </div>
+            <button class="primary-btn" onclick="closeOptions()" style="margin-top: 10px;">Appliquer</button>
+        </div>
+    </div>
+
+    <script>
+        // ========== DONNÉES ==========
+        const DECKS_DATA = [
+            {
+                id: "les-couleurs",
+                name: "Les couleurs",
+                description: "Vocabulaire anglais-français : les couleurs",
+                cards: [
+                    { "front": "Black", "back": "Noir" },
+                    { "front": "White", "back": "Blanc" },
+                    { "front": "Red", "back": "Rouge" },
+                    { "front": "Blue", "back": "Bleu" },
+                    { "front": "Green", "back": "Vert" },
+                    { "front": "Yellow", "back": "Jaune" },
+                    { "front": "Orange", "back": "Orange" },
+                    { "front": "Pink", "back": "Rose" },
+                    { "front": "Purple", "back": "Violet" },
+                    { "front": "Brown", "back": "Marron" },
+                    { "front": "Grey", "back": "Gris" },
+                    { "front": "Beige", "back": "Beige" }
+                ]
+            },
+            {
+                id: "les-nombres",
+                name: "Les nombres",
+                description: "Vocabulaire anglais-français : les nombres",
+                cards: [
+                    { "front": "One", "back": "Un" }, { "front": "Two", "back": "Deux" },
+                    { "front": "Three", "back": "Trois" }, { "front": "Four", "back": "Quatre" },
+                    { "front": "Five", "back": "Cinq" }, { "front": "Six", "back": "Six" },
+                    { "front": "Seven", "back": "Sept" }, { "front": "Height", "back": "Huit" },
+                    { "front": "Nine", "back": "Neuf" }, { "front": "Ten", "back": "Dix" },
+                    { "front": "Twenty", "back": "Vingt" }, { "front": "Thirty", "back": "Trente" },
+                    { "front": "Forty", "back": "Quarante" }, { "front": "Fifty", "back": "Cinquante" },
+                    { "front": "Sixty", "back": "Soixante" }, { "front": "Seventy", "back": "Soixante-dix" },
+                    { "front": "Eighty", "back": "Quatre-vingts" }, { "front": "Ninety", "back": "Quatre-vingt-dix" },
+                    { "front": "One hundred", "back": "Cent" }, { "front": "One thousand", "back": "Mille" }
+                ]
+            }
+        ];
+
+        // ========== ÉTAT ==========
+        let currentDeck = null;
+        let knownCards = new Set();
+        let learningCards = new Set();
+        let starred = new Set();
+        let options = { shuffle: false, frontSide: 'english' };
+        
+        // Navigation / Rendu global
+        function showPage(id) {
+            document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+            document.getElementById(id).classList.add('active');
+        }
+
+        function exitMode() {
+            saveProgress();
+            openDeck(currentDeck.id);
+        }
+
+        function openDeck(id) {
+            currentDeck = DECKS_DATA.find(d => d.id === id);
+            loadProgress(id);
+            document.getElementById('deckTitle').textContent = currentDeck.name;
+            document.getElementById('statKnown').textContent = knownCards.size;
+            document.getElementById('statLearning').textContent = learningCards.size;
+            showPage('deckPage');
+        }
+
+        function renderDeckList() {
+            const grid = document.getElementById('deckGrid');
+            grid.innerHTML = DECKS_DATA.map(deck => `
+                <div class="deck-card" onclick="openDeck('${deck.id}')">
+                    <div class="deck-name">${deck.name}</div>
+                    <div class="deck-meta"><span>${deck.cards.length} cartes</span></div>
+                </div>
+            `).join('');
+        }
+
+        // ========== STOCKAGE ==========
+        function saveProgress() {
+            if (!currentDeck) return;
+            localStorage.setItem(`flash-${currentDeck.id}`, JSON.stringify({
+                known: [...knownCards],
+                learning: [...learningCards],
+                starred: [...starred]
+            }));
+        }
+        function loadProgress(id) {
+            const data = localStorage.getItem(`flash-${id}`);
+            if (data) {
+                const p = JSON.parse(data);
+                knownCards = new Set(p.known || []);
+                learningCards = new Set(p.learning || []);
+                starred = new Set(p.starred || []);
+            } else {
+                knownCards = new Set();
+                learningCards = new Set();
+                starred = new Set();
+            }
+        }
+
+        // ========== MODE CARTES ==========
+        let cardList = [];
+        let cardIdx = 0;
+        let history = [];
+
+        function startCardsMode() {
+            cardList = options.shuffle ? shuffle([...currentDeck.cards]) : [...currentDeck.cards];
+            cardIdx = 0;
+            history = [];
+            document.getElementById('cardsComplete').classList.remove('active');
+            document.getElementById('cardWrapper').style.display = 'block';
+            document.querySelector('.cards-controls').style.display = 'flex';
+            showPage('cardsPage');
+            renderCard();
+        }
+
+        function renderCard() {
+            if (cardIdx >= cardList.length) { showCardsComplete(); return; }
+            const card = cardList[cardIdx];
+            const inner = document.getElementById('cardInner');
+            inner.classList.remove('flipped');
+            
+            if (options.frontSide === 'english') {
+                document.getElementById('cardFrontText').textContent = card.front;
+                document.getElementById('cardBackText').textContent = card.back;
+            } else {
+                document.getElementById('cardFrontText').textContent = card.back;
+                document.getElementById('cardBackText').textContent = card.front;
+            }
+
+            const globalIdx = currentDeck.cards.indexOf(card);
+            document.getElementById('starBtn').textContent = starred.has(globalIdx) ? '★' : '☆';
+            document.getElementById('starBtn').classList.toggle('active', starred.has(globalIdx));
+            
+            document.getElementById('cardsProgress').textContent = `${cardIdx + 1} / ${cardList.length}`;
+            document.getElementById('cardsProgressBar').style.width = `${(cardIdx / cardList.length) * 100}%`;
+            document.getElementById('countLeft').textContent = learningCards.size;
+            document.getElementById('countRight').textContent = knownCards.size;
+
+            setupSwipe();
+        }
+
+        function setupSwipe() {
+            const card = document.getElementById('swipeCard');
+            let startX = 0, isDragging = false;
+            
+            const onStart = (e) => {
+                if (e.target.closest('button')) return;
+                startX = (e.type === 'touchstart') ? e.touches[0].clientX : e.clientX;
+                isDragging = true;
+                card.style.transition = 'none';
+            };
+            const onMove = (e) => {
+                if (!isDragging) return;
+                const x = (e.type === 'touchmove') ? e.touches[0].clientX : e.clientX;
+                const diff = x - startX;
+                card.style.transform = `translateX(${diff}px) rotate(${diff * 0.05}deg)`;
+                card.classList.toggle('swiping-right', diff > 50);
+                card.classList.toggle('swiping-left', diff < -50);
+            };
+            const onEnd = (e) => {
+                if (!isDragging) return;
+                isDragging = false;
+                const x = (e.type === 'touchend') ? e.changedTouches[0].clientX : e.clientX;
+                const diff = x - startX;
+                card.style.transition = 'all 0.3s ease';
+                
+                if (diff > 100) swipeRight();
+                else if (diff < -100) swipeLeft();
+                else {
+                    card.style.transform = '';
+                    card.classList.remove('swiping-left', 'swiping-right');
+                    if (Math.abs(diff) < 10) document.getElementById('cardInner').classList.toggle('flipped');
+                }
+            };
+
+            card.onmousedown = onStart;
+            window.onmousemove = onMove;
+            window.onmouseup = onEnd;
+            card.ontouchstart = onStart;
+            card.ontouchmove = onMove;
+            card.ontouchend = onEnd;
+        }
+
+        function swipeRight() {
+            const card = cardList[cardIdx];
+            const globalIdx = currentDeck.cards.indexOf(card);
+            knownCards.add(globalIdx);
+            learningCards.delete(globalIdx);
+            document.getElementById('swipeCard').classList.add('fly-right');
+            setTimeout(() => { cardIdx++; renderCard(); }, 300);
+        }
+
+        function swipeLeft() {
+            const card = cardList[cardIdx];
+            const globalIdx = currentDeck.cards.indexOf(card);
+            learningCards.add(globalIdx);
+            knownCards.delete(globalIdx);
+            document.getElementById('swipeCard').classList.add('fly-left');
+            setTimeout(() => { cardIdx++; renderCard(); }, 300);
+        }
+
+        function undoCard() { if (cardIdx > 0) { cardIdx--; renderCard(); } }
+        function toggleStar() {
+            const card = cardList[cardIdx];
+            const globalIdx = currentDeck.cards.indexOf(card);
+            if (starred.has(globalIdx)) starred.delete(globalIdx); else starred.add(globalIdx);
+            renderCard();
+        }
+
+        function showCardsComplete() {
+            document.getElementById('cardWrapper').style.display = 'none';
+            document.querySelector('.cards-controls').style.display = 'none';
+            document.getElementById('cardsComplete').classList.add('active');
+            document.getElementById('cardsCompleteStats').textContent = `${knownCards.size} acquis · ${learningCards.size} à revoir`;
+        }
+
+        // ========== APPRENDRE ==========
+        let learnList = [];
+        let lIdx = 0;
+
+        function startLearnMode() {
+            learnList = shuffle([...currentDeck.cards]);
+            lIdx = 0;
+            showPage('learnPage');
+            renderLearn();
+        }
+        function renderLearn() {
+            if (lIdx >= learnList.length) { document.getElementById('learnComplete').classList.add('active'); return; }
+            const card = learnList[lIdx];
+            const qText = document.getElementById('questionText');
+            const aList = document.getElementById('answersList');
+            
+            qText.textContent = card.front;
+            const others = currentDeck.cards.filter(c => c !== card);
+            const choices = shuffle([card, ...shuffle(others).slice(0, 3)]);
+            
+            aList.innerHTML = choices.map(c => `<button class="answer-btn" onclick="checkLearn('${c.back}', '${card.back}', this)">${c.back}</button>`).join('');
+        }
+        function checkLearn(sel, correct, btn) {
+            if (sel === correct) {
+                btn.classList.add('correct');
+                setTimeout(() => { lIdx++; renderLearn(); }, 600);
+            } else {
+                btn.classList.add('wrong');
+            }
+        }
+
+        // ========== TEST ==========
+        function startTestConfig() { showPage('testConfigPage'); }
+        function startTest() {
+            cardList = shuffle([...currentDeck.cards]).slice(0, 10);
+            cardIdx = 0;
+            showPage('testPage');
+            renderTest();
+        }
+        function renderTest() {
+            if (cardIdx >= cardList.length) { exitMode(); return; }
+            const card = cardList[cardIdx];
+            document.getElementById('testCounter').textContent = `${cardIdx + 1} / ${cardList.length}`;
+            document.getElementById('testQuestionText').textContent = card.front;
+            const choices = shuffle([card, ...shuffle(currentDeck.cards.filter(c => c !== card)).slice(0, 3)]);
+            document.getElementById('testAnswers').innerHTML = choices.map(c => `<button class="answer-btn" onclick="nextTest()">${c.back}</button>`).join('');
+        }
+        function nextTest() { cardIdx++; renderTest(); }
+
+        // ========== ASSOCIER ==========
+        function startMatch() {
+            const pairs = shuffle([...currentDeck.cards]).slice(0, 6);
+            let cells = [];
+            pairs.forEach(p => {
+                cells.push({ text: p.front, type: 'f', id: p.front });
+                cells.push({ text: p.back, type: 'b', id: p.front });
+            });
+            cells = shuffle(cells);
+            showPage('matchPage');
+            renderMatch(cells);
+        }
+        let firstMatch = null;
+        function renderMatch(cells) {
+            const grid = document.getElementById('matchGrid');
+            grid.innerHTML = cells.map((c, i) => `<div class="match-cell" onclick="handleMatch(this, '${c.id}', ${i})">${c.text}</div>`).join('');
+        }
+        function handleMatch(el, id, i) {
+            if (el.classList.contains('matched')) return;
+            if (!firstMatch) {
+                firstMatch = { el, id };
+                el.classList.add('selected');
+            } else {
+                if (firstMatch.el === el) {
+                    el.classList.remove('selected');
+                    firstMatch = null;
+                } else if (firstMatch.id === id) {
+                    el.classList.add('correct');
+                    firstMatch.el.classList.add('correct');
+                    setTimeout(() => {
+                        el.classList.add('matched');
+                        firstMatch.el.classList.add('matched');
+                        firstMatch = null;
+                        if (document.querySelectorAll('.match-cell:not(.matched)').length === 0) {
+                            document.getElementById('matchGrid').style.display = 'none';
+                            document.getElementById('matchComplete').classList.add('active');
+                        }
+                    }, 400);
+                } else {
+                    el.classList.add('wrong');
+                    firstMatch.el.classList.add('wrong');
+                    setTimeout(() => {
+                        el.classList.remove('wrong');
+                        firstMatch.el.classList.remove('wrong', 'selected');
+                        firstMatch = null;
+                    }, 400);
+                }
+            }
+        }
+
+        // ========== OPTIONS ==========
+        function openOptions() { document.getElementById('optionsModal').classList.add('active'); }
+        function closeOptions() { document.getElementById('optionsModal').classList.remove('active'); }
+        function toggleOption(key) { 
+            options[key] = !options[key]; 
+            document.getElementById('toggleShuffle').classList.toggle('active', options.shuffle);
+        }
+        function setSide(side) {
+            options.frontSide = side;
+            document.getElementById('btnSideEng').classList.toggle('active', side === 'english');
+            document.getElementById('btnSideFr').classList.toggle('active', side === 'french');
+        }
+
+        // ========== UTILS ==========
+        function shuffle(a) { for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; }
+        function speakCurrent() {
+            const text = (options.frontSide === 'english') ? cardList[cardIdx].front : cardList[cardIdx].back;
+            const lang = (options.frontSide === 'english') ? 'en-US' : 'fr-FR';
+            speechSynthesis.cancel();
+            const u = new SpeechSynthesisUtterance(text);
+            u.lang = lang;
+            speechSynthesis.speak(u);
+        }
+
+        // INIT
+        renderDeckList();
+    </script>
+</body>
+</html>
