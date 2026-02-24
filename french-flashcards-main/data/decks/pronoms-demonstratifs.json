@@ -2,7 +2,7 @@
   "id": "les-nombres",
   "name": "Les nombres",
   "description": "Vocabulaire français : Les nombres en français",
-  "category": "Français",
+  "category": "Vocabulaire",
   "cards": [
     { "front": "One", "back": "Un", "translit": null, "audio": null },
     { "front": "Two", "back": "Deux", "translit": null, "audio": null },
