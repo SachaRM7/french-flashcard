@@ -1,52 +1,51 @@
 // Auto-generated decks index
-// Add new decks here or they'll be loaded from JSON files
 window.DECKS_DATA = [
   {
-  "id": "les-couleurs",
-  "name": "Les couleurs",
-  "description": "Vocabulaire français : les couleurs en français",
-  "category": "Vocabulaire",
-  "cards": [
-    { "front": "Black", "back": "Noir", "translit": null, "audio": null },
-    { "front": "White", "back": "Blanc", "translit": null, "audio": null },
-    { "front": "Red", "back": "Rouge", "translit": null, "audio": null },
-    { "front": "Blue", "back": "Bleu", "translit": null, "audio": null },
-    { "front": "Green", "back": "Vert", "translit": null, "audio": null },
-    { "front": "Yellow", "back": "Jaune", "translit": null, "audio": null },
-    { "front": "Orange", "back": "Orange", "translit": null, "audio": null },
-    { "front": "Pink", "back": "Rose", "translit": null, "audio": null },
-    { "front": "Purple", "back": "Violet", "translit": null, "audio": null },
-    { "front": "Brown", "back": "Marron", "translit": null, "audio": null },
-    { "front": "Grey", "back": "Gris", "translit": null, "audio": null },
-    { "front": "Beige", "back": "Beige", "translit": null, "audio": null }
-  ]
+    "id": "les-couleurs",
+    "name": "Les couleurs",
+    "description": "Vocabulaire français : les couleurs en français",
+    "category": "Vocabulaire",
+    "cards": [
+      { "front": "Black", "back": "Noir", "emoji": "🖤" },
+      { "front": "White", "back": "Blanc", "emoji": "🤍" },
+      { "front": "Red", "back": "Rouge", "emoji": "❤️" },
+      { "front": "Blue", "back": "Bleu", "emoji": "💙" },
+      { "front": "Green", "back": "Vert", "emoji": "💚" },
+      { "front": "Yellow", "back": "Jaune", "emoji": "💛" },
+      { "front": "Orange", "back": "Orange", "emoji": "🧡" },
+      { "front": "Pink", "back": "Rose", "emoji": "🩷" },
+      { "front": "Purple", "back": "Violet", "emoji": "💜" },
+      { "front": "Brown", "back": "Marron", "emoji": "🤎" },
+      { "front": "Grey", "back": "Gris", "emoji": "🩶" },
+      { "front": "Beige", "back": "Beige", "emoji": "🏖️" }
+    ]
   },
   {
-  "id": "les-nombres",
-  "name": "Les nombres",
-  "description": "Vocabulaire français : Les nombres en français",
-  "category": "Vocabulaire",
-  "cards": [
-    { "front": "One", "back": "Un", "translit": null, "audio": null },
-    { "front": "Two", "back": "Deux", "translit": null, "audio": null },
-    { "front": "Three", "back": "Trois", "translit": null, "audio": null },
-    { "front": "Four", "back": "Quatre", "translit": null, "audio": null },
-    { "front": "Five", "back": "Cinq", "translit": null, "audio": null },
-    { "front": "Six", "back": "Six", "translit": null, "audio": null },
-    { "front": "Seven", "back": "Sept", "translit": null, "audio": null },
-    { "front": "Height", "back": "Huit", "translit": null, "audio": null },
-    { "front": "Nine", "back": "Neuf", "translit": null, "audio": null },
-    { "front": "Ten", "back": "Dix", "translit": null, "audio": null },
-    { "front": "Twenty", "back": "Vingt", "translit": null, "audio": null },
-    { "front": "Thirty", "back": "Trente", "translit": null, "audio": null },
-    { "front": "Forty", "back": "Quarante", "translit": null, "audio": null },
-    { "front": "Fifty", "back": "Cinquante", "translit": null, "audio": null },
-    { "front": "Sixty", "back": "Soixante", "translit": null, "audio": null },
-    { "front": "Seventy", "back": "Soixante-dix", "translit": null, "audio": null },
-    { "front": "Eighty", "back": "Quatre-vingts", "translit": null, "audio": null },
-    { "front": "Ninety", "back": "Quatre-vingt-dix", "translit": null, "audio": null },
-    { "front": "One hundred", "back": "Cent", "translit": null, "audio": null },
-    { "front": "One thousand", "back": "Mille", "translit": null, "audio": null }
-  ]
-}
+    "id": "les-nombres",
+    "name": "Les nombres",
+    "description": "Vocabulaire français : Les nombres en français",
+    "category": "Vocabulaire",
+    "cards": [
+      { "front": "One", "back": "Un", "emoji": "1️⃣" },
+      { "front": "Two", "back": "Deux", "emoji": "2️⃣" },
+      { "front": "Three", "back": "Trois", "emoji": "3️⃣" },
+      { "front": "Four", "back": "Quatre", "emoji": "4️⃣" },
+      { "front": "Five", "back": "Cinq", "emoji": "5️⃣" },
+      { "front": "Six", "back": "Six", "emoji": "6️⃣" },
+      { "front": "Seven", "back": "Sept", "emoji": "7️⃣" },
+      { "front": "Eight", "back": "Huit", "emoji": "8️⃣" },
+      { "front": "Nine", "back": "Neuf", "emoji": "9️⃣" },
+      { "front": "Ten", "back": "Dix", "emoji": "🔟" },
+      { "front": "Twenty", "back": "Vingt", "emoji": "2️⃣0️⃣" },
+      { "front": "Thirty", "back": "Trente", "emoji": "3️⃣0️⃣" },
+      { "front": "Forty", "back": "Quarante", "emoji": "4️⃣0️⃣" },
+      { "front": "Fifty", "back": "Cinquante", "emoji": "5️⃣0️⃣" },
+      { "front": "Sixty", "back": "Soixante", "emoji": "6️⃣0️⃣" },
+      { "front": "Seventy", "back": "Soixante-dix", "emoji": "7️⃣0️⃣" },
+      { "front": "Eighty", "back": "Quatre-vingts", "emoji": "8️⃣0️⃣" },
+      { "front": "Ninety", "back": "Quatre-vingt-dix", "emoji": "9️⃣0️⃣" },
+      { "front": "One hundred", "back": "Cent", "emoji": "💯" },
+      { "front": "One thousand", "back": "Mille", "emoji": "🔢" }
+    ]
+  }
 ];
