@@ -1028,21 +1028,75 @@
         }
 
         function setupSwipeGestures() {
+            const oldCard = document.getElementById('swipeCard');
+            oldCard.replaceWith(oldCard.cloneNode(true));
             const card = document.getElementById('swipeCard');
+            
             let startX = 0, curX = 0, dragging = false, moved = false;
-            const onStart = e => { if (e.target.tagName === 'BUTTON') return; startX = curX = (e.touches ? e.touches[0] : e).clientX; dragging = true; moved = false; card.style.transition = 'none'; };
-            const onMove = e => { if (!dragging) return; curX = (e.touches ? e.touches[0] : e).clientX; const d = curX - startX; if (Math.abs(d) > 15) { moved = true; card.style.transform = `translateX(${d > 0 ? d - 15 : d + 15}px) rotate(${(d > 0 ? d - 15 : d + 15) * 0.04}deg)`; card.classList.toggle('swiping-right', d > 50); card.classList.toggle('swiping-left', d < -50); } };
-            const onEnd = () => { if (!dragging) return; dragging = false; card.style.transition = ''; const d = curX - startX; if (moved && d > 80) swipeRight(); else if (moved && d < -80) swipeLeft(); else { card.style.transform = ''; card.classList.remove('swiping-left', 'swiping-right'); if (!moved) document.getElementById('cardInner').classList.toggle('flipped'); } };
-            card.replaceWith(card.cloneNode(true));
-            const nc = document.getElementById('swipeCard');
-            nc.addEventListener('touchstart', onStart, { passive: true });
-            nc.addEventListener('touchmove', onMove, { passive: true });
-            nc.addEventListener('touchend', onEnd);
-            nc.addEventListener('mousedown', onStart);
-            document.addEventListener('mousemove', onMove);
-            document.addEventListener('mouseup', onEnd);
-            nc.querySelector('.card-audio').onclick = e => { e.stopPropagation(); speakCurrent(); };
-            nc.querySelector('.card-star').onclick = e => { e.stopPropagation(); toggleStar(); };
+            
+            const onStart = e => {
+                if (e.target.closest('button')) return;
+                const touch = e.touches ? e.touches[0] : e;
+                startX = curX = touch.clientX;
+                dragging = true;
+                moved = false;
+                card.style.transition = 'none';
+            };
+            
+            const onMove = e => {
+                if (!dragging) return;
+                const touch = e.touches ? e.touches[0] : e;
+                curX = touch.clientX;
+                const d = curX - startX;
+                if (Math.abs(d) > 15) {
+                    moved = true;
+                    const offset = d > 0 ? d - 15 : d + 15;
+                    card.style.transform = `translateX(${offset}px) rotate(${offset * 0.04}deg)`;
+                    card.classList.toggle('swiping-right', d > 50);
+                    card.classList.toggle('swiping-left', d < -50);
+                }
+            };
+            
+            const onEnd = () => {
+                if (!dragging) return;
+                dragging = false;
+                card.style.transition = '';
+                const d = curX - startX;
+                if (moved && d > 80) {
+                    swipeRight();
+                } else if (moved && d < -80) {
+                    swipeLeft();
+                } else {
+                    card.style.transform = '';
+                    card.classList.remove('swiping-left', 'swiping-right');
+                    if (!moved) {
+                        document.getElementById('cardInner').classList.toggle('flipped');
+                    }
+                }
+            };
+            
+            // Touch events
+            card.addEventListener('touchstart', onStart, { passive: true });
+            card.addEventListener('touchmove', onMove, { passive: true });
+            card.addEventListener('touchend', onEnd);
+            
+            // Mouse events
+            card.addEventListener('mousedown', onStart);
+            card.addEventListener('mousemove', onMove);
+            card.addEventListener('mouseup', onEnd);
+            
+            // Click fallback for tap
+            card.addEventListener('click', e => {
+                if (!e.target.closest('button') && !moved) {
+                    document.getElementById('cardInner').classList.toggle('flipped');
+                }
+            });
+            
+            // Button events
+            const audioBtn = card.querySelector('.card-audio');
+            const starBtn = card.querySelector('.card-star');
+            if (audioBtn) audioBtn.onclick = e => { e.stopPropagation(); speakCurrent(); };
+            if (starBtn) starBtn.onclick = e => { e.stopPropagation(); toggleStar(); };
         }
 
         function speakCurrent() { const c = currentCards[currentIndex]; options.frontSide === 'front' ? speakText(getCardFront(c), getFrontStyle().lang) : speakText(getCardBack(c), getBackStyle().lang); }
