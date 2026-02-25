@@ -124,6 +124,13 @@
             margin-top: 15px;
         }
         .deck-grid { display: flex; flex-direction: column; gap: 12px; max-width: 500px; margin: 0 auto; }
+        .themes-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; max-width: 500px; margin: 0 auto; }
+        .theme-card { background: var(--bg-secondary); border: 1px solid var(--border); border-radius: 16px; padding: 20px 16px; text-align: center; cursor: pointer; transition: all 0.2s; border-left: 4px solid var(--theme-color, var(--accent-green)); }
+        .theme-card:hover { transform: translateY(-2px); border-color: var(--theme-color, var(--accent-green)); }
+        .theme-icon { font-size: 2rem; margin-bottom: 8px; }
+        .theme-name { font-weight: 600; color: var(--text-primary); font-size: 0.95rem; }
+        .theme-name-ar { font-size: 0.85rem; color: var(--text-secondary); margin-top: 4px; direction: rtl; }
+        .theme-count { font-size: 0.75rem; color: var(--text-secondary); margin-top: 8px; }
         .deck-card {
             background: var(--bg-secondary);
             border: 1px solid var(--border);
@@ -413,11 +420,23 @@
         <div class="course-grid" id="courseGrid"></div>
     </div>
 
-    <!-- HOME PAGE -->
-    <div class="page" id="homePage">
+    <!-- THEMES PAGE -->
+    <div class="page" id="themesPage">
         <div class="page-header">
             <button class="back-btn" onclick="showPage('courseSelectPage')">←</button>
-            <div class="page-title" id="homeTitle">📚 Flashcards</div>
+            <div class="page-title" id="themesTitle">📚 Thèmes</div>
+        </div>
+        <div style="text-align:center; margin-bottom:20px;">
+            <p style="color:var(--text-secondary)">Choisis un thème</p>
+        </div>
+        <div class="themes-grid" id="themesGrid"></div>
+    </div>
+
+    <!-- DECKS LIST PAGE -->
+    <div class="page" id="homePage">
+        <div class="page-header">
+            <button class="back-btn" onclick="showPage('themesPage')">←</button>
+            <div class="page-title" id="homeTitle">📚 Decks</div>
         </div>
         <div style="text-align:center; margin-bottom:20px;">
             <p style="color:var(--text-secondary)">Choisis un deck pour commencer</p>
@@ -822,6 +841,7 @@
     </div>
 
     <script src="data/courses.js"></script>
+    <script src="data/themes.js"></script>
     <script>
         // ========== STATE ==========
         let courses = [], currentCourse = null, decks = [], currentDeck = null;
@@ -917,13 +937,15 @@
             if (saved && courses.find(c => c.id === saved)) selectCourse(saved);
         }
 
+        let themes = [], currentTheme = null, allDecks = [];
+
         function selectCourse(id) {
             currentCourse = courses.find(c => c.id === id);
             if (!currentCourse) return;
             localStorage.setItem('learn-lang-course', id);
-            document.getElementById('homeTitle').textContent = `${currentCourse.flag} ${currentCourse.nameLocal}`;
+            document.getElementById('themesTitle').textContent = `${currentCourse.flag} ${currentCourse.nameLocal}`;
             updateSideSelector();
-            loadDecks();
+            loadThemesAndDecks();
         }
 
         function updateSideSelector() {
@@ -935,12 +957,42 @@
             options.frontSide = 'front';
         }
 
-        function loadDecks() {
+        function loadThemesAndDecks() {
+            themes = window.THEMES_DATA || [];
             const script = document.createElement('script');
             script.src = currentCourse.decksFile;
-            script.onload = () => { decks = window.DECKS_DATA || []; renderDeckList(); showPage('homePage'); };
-            script.onerror = () => { decks = []; renderDeckList(); showPage('homePage'); };
+            script.onload = () => { 
+                allDecks = window.DECKS_DATA || []; 
+                decks = allDecks;
+                renderThemes(); 
+                showPage('themesPage'); 
+            };
+            script.onerror = () => { allDecks = []; decks = []; renderThemes(); showPage('themesPage'); };
             document.head.appendChild(script);
+        }
+
+        function renderThemes() {
+            document.getElementById('themesGrid').innerHTML = themes.map(t => {
+                const themeDecks = allDecks.filter(d => t.decks.includes(d.id));
+                const deckCount = themeDecks.length;
+                const cardCount = themeDecks.reduce((sum, d) => sum + d.cards.length, 0);
+                if (deckCount === 0) return ''; // Skip empty themes
+                return `<div class="theme-card" style="--theme-color: ${t.color}" onclick="selectTheme('${t.id}')">
+                    <div class="theme-icon">${t.icon}</div>
+                    <div class="theme-name">${t.name}</div>
+                    ${t.nameAr ? `<div class="theme-name-ar">${t.nameAr}</div>` : ''}
+                    <div class="theme-count">${deckCount} decks • ${cardCount} cartes</div>
+                </div>`;
+            }).join('');
+        }
+
+        function selectTheme(id) {
+            currentTheme = themes.find(t => t.id === id);
+            if (!currentTheme) return;
+            decks = allDecks.filter(d => currentTheme.decks.includes(d.id));
+            document.getElementById('homeTitle').textContent = `${currentTheme.icon} ${currentTheme.name}`;
+            renderDeckList();
+            showPage('homePage');
         }
 
         function renderDeckList() {

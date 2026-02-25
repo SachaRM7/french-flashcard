@@ -1,0 +1,16 @@
+{
+  "id": "couleurs",
+  "name": "Les couleurs",
+  "nameAr": "الألوان",
+  "category": "Premiers mots",
+  "cards": [
+    { "fr": "rouge", "emoji": "🔴" },
+    { "fr": "bleu", "emoji": "🔵" },
+    { "fr": "vert", "emoji": "🟢" },
+    { "fr": "jaune", "emoji": "🟡" },
+    { "fr": "noir", "emoji": "⚫" },
+    { "fr": "blanc", "emoji": "⚪" },
+    { "fr": "orange", "emoji": "🟠" },
+    { "fr": "rose", "emoji": "🩷" }
+  ]
+}

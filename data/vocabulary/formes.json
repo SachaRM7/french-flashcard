@@ -1,0 +1,14 @@
+{
+  "id": "formes",
+  "name": "Les formes",
+  "nameAr": "الأشكال",
+  "category": "Premiers mots",
+  "cards": [
+    { "fr": "rond", "emoji": "⭕" },
+    { "fr": "carré", "emoji": "🟦" },
+    { "fr": "triangle", "emoji": "🔺" },
+    { "fr": "rectangle", "emoji": "▬" },
+    { "fr": "étoile", "emoji": "⭐" },
+    { "fr": "losange", "emoji": "🔷" }
+  ]
+}

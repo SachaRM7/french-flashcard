@@ -1,0 +1,18 @@
+{
+  "id": "nombres",
+  "name": "Les nombres",
+  "nameAr": "الأعداد",
+  "category": "Premiers mots",
+  "cards": [
+    { "fr": "un", "emoji": "1️⃣" },
+    { "fr": "deux", "emoji": "2️⃣" },
+    { "fr": "trois", "emoji": "3️⃣" },
+    { "fr": "quatre", "emoji": "4️⃣" },
+    { "fr": "cinq", "emoji": "5️⃣" },
+    { "fr": "six", "emoji": "6️⃣" },
+    { "fr": "sept", "emoji": "7️⃣" },
+    { "fr": "huit", "emoji": "8️⃣" },
+    { "fr": "neuf", "emoji": "9️⃣" },
+    { "fr": "dix", "emoji": "🔟" }
+  ]
+}

@@ -1,6 +1,6 @@
 {
-  "id": "corps-humain",
-  "name": "Le corps humain",
+  "id": "corps",
+  "name": "Le corps",
   "category": "Vocabulaire",
   "cards": [
     { "fr": "tête", "emoji": "🗣️" },
