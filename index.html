@@ -415,13 +415,12 @@
 
     <!-- HOME PAGE -->
     <div class="page" id="homePage">
-        <div class="home-header">
-            <h1 id="homeTitle">📚 Flashcards</h1>
-            <p>Choisis un deck pour commencer</p>
-            <button class="change-course-btn" onclick="showPage('courseSelectPage')">
-                <span id="currentCourseFlag">🌍</span>
-                <span>Changer de langue</span>
-            </button>
+        <div class="page-header">
+            <button class="back-btn" onclick="showPage('courseSelectPage')">←</button>
+            <div class="page-title" id="homeTitle">📚 Flashcards</div>
+        </div>
+        <div style="text-align:center; margin-bottom:20px;">
+            <p style="color:var(--text-secondary)">Choisis un deck pour commencer</p>
         </div>
         <div class="deck-grid" id="deckGrid"></div>
     </div>
