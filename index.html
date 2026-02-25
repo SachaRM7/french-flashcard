@@ -6,7 +6,7 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="theme-color" content="#0d1117">
-    <title>Flashcards</title>
+    <title>Learn Language</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
@@ -80,11 +80,49 @@
             width: 100%;
         }
 
+        /* ========== COURSE SELECT PAGE ========== */
+        #courseSelectPage { padding: 20px; align-items: center; justify-content: center; }
+        .course-select-header { text-align: center; margin-bottom: 40px; }
+        .course-select-header h1 { font-size: 2rem; font-weight: 700; margin-bottom: 10px; }
+        .course-select-header p { color: var(--text-secondary); font-size: 1rem; }
+        .course-grid { display: flex; flex-direction: column; gap: 15px; width: 100%; max-width: 400px; }
+        .course-card {
+            background: var(--bg-secondary);
+            border: 2px solid var(--border);
+            border-radius: 16px;
+            padding: 24px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            transition: all 0.2s;
+        }
+        .course-card:hover { border-color: var(--accent-blue); transform: translateY(-2px); }
+        .course-card:active { transform: scale(0.98); }
+        .course-flag { font-size: 3rem; }
+        .course-info { flex: 1; }
+        .course-name { font-size: 1.3rem; font-weight: 700; margin-bottom: 4px; }
+        .course-name-local { font-size: 0.9rem; color: var(--text-secondary); margin-bottom: 6px; }
+        .course-desc { font-size: 0.85rem; color: var(--text-secondary); }
+
         /* ========== HOME PAGE ========== */
         #homePage { padding: 20px; padding-bottom: 100px; }
         .home-header { text-align: center; padding: 30px 0 20px; }
         .home-header h1 { font-size: 1.8rem; font-weight: 700; margin-bottom: 5px; }
         .home-header p { color: var(--text-secondary); font-size: 0.9rem; }
+        .change-course-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--bg-secondary);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            padding: 8px 16px;
+            color: var(--text-primary);
+            font-size: 0.85rem;
+            cursor: pointer;
+            margin-top: 15px;
+        }
         .deck-grid { display: flex; flex-direction: column; gap: 12px; max-width: 500px; margin: 0 auto; }
         .deck-card {
             background: var(--bg-secondary);
@@ -136,11 +174,11 @@
         .swipe-hint.left { left: -50px; color: var(--accent-orange); }
         .swipe-hint.right { right: -50px; color: var(--accent-green); }
         .swipe-hint .arrow { font-size: 1.2rem; }
-        .swipe-card { width: 100%; height: 100%; position: absolute; left: 0; top: 0; border-radius: 16px; background: var(--bg-card); border: 2px solid var(--border); cursor: grab; touch-action: none; transition: transform 0.15s ease-out, border-color 0.2s; overflow: hidden; will-change: transform; }
+        .swipe-card { width: 100%; height: 100%; position: absolute; border-radius: 16px; background: var(--bg-card); border: 2px solid var(--border); cursor: grab; touch-action: pan-y; transition: transform 0.1s, border-color 0.2s; overflow: hidden; }
         .swipe-card.swiping-right { border-color: var(--accent-green); }
         .swipe-card.swiping-left { border-color: var(--accent-orange); }
-        .swipe-card.fly-right { transform: translateX(120vw) rotate(25deg) !important; transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1) !important; }
-        .swipe-card.fly-left { transform: translateX(-120vw) rotate(-25deg) !important; transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1) !important; }
+        .swipe-card.fly-right { transform: translateX(150%) rotate(30deg) !important; transition: transform 0.4s ease-out; }
+        .swipe-card.fly-left { transform: translateX(-150%) rotate(-30deg) !important; transition: transform 0.4s ease-out; }
         .card-inner { width: 100%; height: 100%; position: relative; transform-style: preserve-3d; transition: transform 0.5s; }
         .card-inner.flipped { transform: rotateY(180deg); }
         .card-face { position: absolute; width: 100%; height: 100%; backface-visibility: hidden; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 25px; }
@@ -152,9 +190,9 @@
         .card-audio { position: absolute; top: 15px; left: 15px; width: 36px; height: 36px; background: var(--bg-secondary); border: 1px solid var(--border); border-radius: 8px; color: var(--text-primary); cursor: pointer; font-size: 1rem; }
         .card-star { position: absolute; top: 15px; right: 15px; width: 36px; height: 36px; background: transparent; border: none; color: var(--text-secondary); cursor: pointer; font-size: 1.3rem; }
         .card-star.active { color: var(--accent-orange); }
-        .arabic-text {  font-size: 3rem; line-height: 1.4; text-align: center; margin-bottom: 10px; }
+        .front-text { font-size: 2.5rem; line-height: 1.4; text-align: center; margin-bottom: 10px; }
         .translit-text { font-size: 1rem; color: var(--text-secondary); font-style: italic; }
-        .french-text { font-size: 1.3rem; text-align: center; font-weight: 500; }
+        .back-text { font-size: 1.3rem; text-align: center; font-weight: 500; }
         .tap-hint { position: absolute; bottom: 20px; font-size: 0.8rem; color: var(--text-secondary); }
         .cards-controls { display: flex; gap: 15px; align-items: center; }
         .ctrl-btn { width: 50px; height: 50px; border-radius: 50%; border: 2px solid var(--border); background: var(--bg-secondary); color: var(--text-primary); cursor: pointer; font-size: 1.2rem; }
@@ -177,12 +215,11 @@
         .question-area { width: 100%; max-width: 400px; flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 30px 0; }
         .retry-badge { background: var(--accent-orange); color: #000; padding: 4px 12px; border-radius: 12px; font-size: 0.75rem; font-weight: 600; margin-bottom: 15px; }
         .question-text { font-size: 1.4rem; font-weight: 600; text-align: center; margin-bottom: 40px; }
-        .question-text.arabic {  font-size: 2.5rem; }
         .answers-list { width: 100%; display: flex; flex-direction: column; gap: 10px; }
         .answer-btn { width: 100%; padding: 16px 20px; background: var(--bg-secondary); border: 2px solid var(--border); border-radius: 12px; color: var(--text-primary); font-size: 1rem; text-align: left; cursor: pointer; transition: all 0.2s; }
         .answer-btn.correct { border-color: var(--accent-green); background: rgba(63, 185, 80, 0.15); }
         .answer-btn.wrong { border-color: var(--accent-red); background: rgba(248, 81, 73, 0.15); }
-        .answer-btn.arabic {  font-size: 1.3rem;   }
+        .answer-btn.rtl { font-family: 'Amiri', serif; font-size: 1.3rem; text-align: right; direction: rtl; }
 
         /* Written Answer */
         .written-input {
@@ -200,12 +237,12 @@
         .written-input:focus { border-color: var(--accent-blue); }
         .written-input.correct { border-color: var(--accent-green); background: rgba(63, 185, 80, 0.1); }
         .written-input.wrong { border-color: var(--accent-red); background: rgba(248, 81, 73, 0.1); }
-        .written-feedback { text-align: center; }
+        .written-feedback { text-align: center; padding: 15px; border-radius: 10px; margin-top: 15px; }
         .written-feedback.correct { background: rgba(63, 185, 80, 0.15); color: var(--accent-green); }
         .written-feedback.wrong { background: rgba(248, 81, 73, 0.15); color: var(--accent-red); }
         .written-feedback .correct-answer { margin-top: 8px; color: var(--accent-green); font-weight: 600; }
         
-        /* Mode selector in options */
+        /* Mode selector */
         .mode-toggle { display: flex; background: var(--bg-secondary); border-radius: 8px; overflow: hidden; }
         .mode-toggle-btn {
             flex: 1;
@@ -252,7 +289,6 @@
         #testConfigPage, #testPage, #testResultsPage { padding: 20px; }
         .config-section { max-width: 400px; margin: 0 auto; width: 100%; }
         .config-title { font-size: 1.5rem; font-weight: 700; margin-bottom: 25px; }
-        .config-subtitle { font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 5px; }
         .config-group { background: var(--bg-secondary); border-radius: 12px; padding: 15px; margin-bottom: 12px; }
         .config-row { display: flex; align-items: center; justify-content: space-between; padding: 10px 0; }
         .config-row:not(:last-child) { border-bottom: 1px solid var(--border); }
@@ -267,14 +303,12 @@
         /* Test Progress */
         .test-progress { width: 100%; height: 4px; background: var(--border); margin-bottom: 20px; }
         .test-progress-fill { height: 100%; background: var(--accent-green); transition: width 0.3s; }
-        .test-counter { text-align: center; font-weight: 600; margin-bottom: 30px; }
         .test-question { max-width: 400px; margin: 0 auto; width: 100%; flex: 1; display: flex; flex-direction: column; justify-content: center; }
         .test-question-text { font-size: 1.4rem; font-weight: 600; text-align: center; margin-bottom: 40px; }
-        .test-question-text.arabic {  font-size: 2.5rem; }
         .test-answers { display: flex; flex-direction: column; gap: 10px; }
         .test-answer-btn { width: 100%; padding: 16px 20px; background: var(--bg-secondary); border: 2px solid var(--border); border-radius: 12px; color: var(--text-primary); font-size: 1rem; text-align: left; cursor: pointer; }
         .test-answer-btn.selected { border-color: var(--accent-blue); background: rgba(88, 166, 255, 0.1); }
-        .test-answer-btn.arabic {  font-size: 1.3rem;   }
+        .test-answer-btn.rtl { font-family: 'Amiri', serif; font-size: 1.3rem; text-align: right; direction: rtl; }
 
         /* Test Results */
         .results-header { text-align: center; margin-bottom: 30px; }
@@ -296,8 +330,7 @@
         .result-answer { display: flex; align-items: center; gap: 6px; }
         .result-answer.correct { color: var(--accent-green); }
         .result-answer.wrong { color: var(--accent-red); }
-        .result-answer .icon { font-size: 1.1rem; }
-        .result-status { padding: 6px 12px; border-radius: 6px; font-size: 0.8rem; font-weight: 600; display: flex; align-items: center; gap: 6px; }
+        .result-status { padding: 6px 12px; border-radius: 6px; font-size: 0.8rem; font-weight: 600; }
         .result-status.correct { background: var(--accent-green); color: #000; }
         .result-status.incorrect { background: var(--accent-red); color: #fff; }
 
@@ -313,7 +346,6 @@
         
         .match-header { width: 100%; display: flex; align-items: center; justify-content: space-between; margin-bottom: 20px; }
         .match-timer { font-size: 1.1rem; font-weight: 600; }
-        .match-controls { display: flex; gap: 10px; }
         .match-ctrl-btn { width: 36px; height: 36px; background: var(--bg-secondary); border: 1px solid var(--border); border-radius: 8px; color: var(--text-primary); cursor: pointer; font-size: 1rem; }
         
         .match-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; width: 100%; max-width: 400px; }
@@ -332,7 +364,7 @@
             transition: all 0.2s;
             word-break: break-word;
         }
-        .match-cell.arabic {  font-size: 1.1rem;  }
+        .match-cell.rtl { font-family: 'Amiri', serif; font-size: 1.1rem; direction: rtl; }
         .match-cell.selected { border-color: var(--accent-purple); background: rgba(163, 113, 247, 0.2); }
         .match-cell.correct { border-color: var(--accent-green); background: var(--accent-green); color: #000; }
         .match-cell.wrong { border-color: var(--accent-red); background: var(--accent-red); color: #fff; animation: shake 0.4s; }
@@ -340,13 +372,10 @@
         
         @keyframes shake {
             0%, 100% { transform: translateX(0); }
-            20% { transform: translateX(-8px); }
-            40% { transform: translateX(8px); }
-            60% { transform: translateX(-8px); }
-            80% { transform: translateX(8px); }
+            20%, 60% { transform: translateX(-5px); }
+            40%, 80% { transform: translateX(5px); }
         }
 
-        .match-complete { text-align: center; }
         .match-complete-time { font-size: 2rem; font-weight: 700; color: var(--accent-green); margin-bottom: 10px; }
         .match-complete-text { color: var(--text-secondary); margin-bottom: 30px; }
 
@@ -366,40 +395,33 @@
         .side-btn.active { background: var(--accent-blue); color: #fff; }
 
         @media (max-width: 400px) {
-            .arabic-text { font-size: 2.4rem; }
+            .front-text { font-size: 2rem; }
             .card-wrapper { height: 350px; }
-            .question-text.arabic { font-size: 2rem; }
             .match-cell { font-size: 0.75rem; }
-            .match-cell.arabic { font-size: 0.95rem; }
+            .match-cell.rtl { font-size: 0.95rem; }
         }
-
-        /* RTL Support */
-        [dir="rtl"] .page-header { flex-direction: row-reverse; }
-        [dir="rtl"] .mode-btn { flex-direction: row-reverse;  }
-        [dir="rtl"] .mode-info {  }
-        [dir="rtl"] .deck-meta { flex-direction: row-reverse; }
-        [dir="rtl"] .cards-header { flex-direction: row-reverse; }
-        [dir="rtl"] .progress-bar-container { flex-direction: row-reverse; }
-        [dir="rtl"] .swipe-hint.left { left: auto; right: -50px; }
-        [dir="rtl"] .swipe-hint.right { right: auto; left: -50px; }
-        [dir="rtl"] .config-row { flex-direction: row-reverse; }
-        [dir="rtl"] .option-row { flex-direction: row-reverse; }
-        [dir="rtl"] .results-stat { flex-direction: row-reverse; }
-        [dir="rtl"] .result-answers { flex-direction: row-reverse; }
-        [dir="rtl"] .learn-progress { flex-direction: row-reverse; }
-        [dir="rtl"] .match-header { flex-direction: row-reverse; }
-        [dir="rtl"] .modal-header { flex-direction: row-reverse; }
-        [dir="rtl"] .answer-btn {  }
-        [dir="rtl"] .test-answer-btn {  }
     </style>
 </head>
 <body>
 
+    <!-- COURSE SELECT PAGE -->
+    <div class="page active" id="courseSelectPage">
+        <div class="course-select-header">
+            <h1>🌍 Learn Language</h1>
+            <p>Quelle langue veux-tu apprendre ?</p>
+        </div>
+        <div class="course-grid" id="courseGrid"></div>
+    </div>
+
     <!-- HOME PAGE -->
-    <div class="page active" id="homePage">
+    <div class="page" id="homePage">
         <div class="home-header">
-            <h1>📚 Flashcards</h1>
+            <h1 id="homeTitle">📚 Flashcards</h1>
             <p>Choisis un deck pour commencer</p>
+            <button class="change-course-btn" onclick="showPage('courseSelectPage')">
+                <span id="currentCourseFlag">🌍</span>
+                <span>Changer de langue</span>
+            </button>
         </div>
         <div class="deck-grid" id="deckGrid"></div>
     </div>
@@ -421,14 +443,14 @@
             </div>
         </div>
         <div class="mode-list">
-            <div class="mode-btn" onclick="showCardsConfig()">
+            <div class="mode-btn" onclick="startCardsMode()">
                 <div class="mode-icon">🃏</div>
                 <div class="mode-info">
                     <div class="mode-name">Cartes</div>
                     <div class="mode-desc">Swipe pour trier ce que tu connais</div>
                 </div>
             </div>
-            <div class="mode-btn" onclick="showLearnConfig()">
+            <div class="mode-btn" onclick="startLearnMode()">
                 <div class="mode-icon">📖</div>
                 <div class="mode-info">
                     <div class="mode-name">Apprendre</div>
@@ -449,14 +471,14 @@
                     <div class="mode-desc">Relie les paires rapidement</div>
                 </div>
             </div>
-            <div class="mode-btn" onclick="showListenConfig()">
+            <div class="mode-btn" onclick="startListenMode()">
                 <div class="mode-icon">🎧</div>
                 <div class="mode-info">
                     <div class="mode-name">Écoute</div>
                     <div class="mode-desc">Écoute et trouve le mot</div>
                 </div>
             </div>
-            <div class="mode-btn" onclick="showImageConfig()">
+            <div class="mode-btn" onclick="startImageMode()">
                 <div class="mode-icon">🖼️</div>
                 <div class="mode-info">
                     <div class="mode-name">Image</div>
@@ -466,36 +488,12 @@
         </div>
     </div>
 
-    <!-- CARDS CONFIG PAGE -->
-    <div class="page" id="cardsConfigPage">
-        <div class="page-header">
-            <button class="back-btn" onclick="exitMode()">←</button>
-            <div class="page-title" id="cardsDeckName"></div>
-        </div>
-        <div class="config-section">
-            <div class="config-title">Mode Cartes 🃏</div>
-            <div class="config-group">
-                <div class="option-group-title">Je vois d'abord...</div>
-                <div class="mode-toggle">
-                    <button class="mode-toggle-btn active" id="cardsShowEnglish" onclick="setCardsSide('english')">🇬🇧 Anglais</button>
-                    <button class="mode-toggle-btn" id="cardsShowFrench" onclick="setCardsSide('french')">🇫🇷 Français</button>
-                </div>
-            </div>
-            <div class="config-group">
-                <div class="config-row">
-                    <span class="config-label">Mélanger les cartes</span>
-                    <div class="toggle" id="cardsShuffleToggle" onclick="toggleCardsShuffle()"></div>
-                </div>
-            </div>
-            <button class="primary-btn start-test-btn" onclick="startCardsMode()">Commencer</button>
-        </div>
-    </div>
-
     <!-- CARDS MODE -->
     <div class="page" id="cardsPage">
         <div class="cards-header">
             <button class="back-btn" onclick="exitMode()">←</button>
             <div class="cards-progress" id="cardsProgress">1 / 10</div>
+            <button class="settings-btn" onclick="openOptions()">⚙️</button>
         </div>
         <div class="progress-bar-container">
             <div class="progress-side left" id="countLeft">0</div>
@@ -508,16 +506,16 @@
             <div class="swipe-card" id="swipeCard">
                 <div class="swipe-indicator left">En cours</div>
                 <div class="swipe-indicator right">Acquis</div>
-                <button class="card-audio" onclick="event.stopPropagation(); speakCurrent()">🔊</button>
-                <button class="card-star" id="starBtn" onclick="event.stopPropagation(); toggleStar()">☆</button>
+                <button class="card-audio">🔊</button>
+                <button class="card-star" id="starBtn">☆</button>
                 <div class="card-inner" id="cardInner">
                     <div class="card-face card-front">
-                        <div class="arabic-text" id="cardFrontText"></div>
+                        <div class="front-text" id="cardFrontText"></div>
                         <div class="translit-text" id="cardTranslit"></div>
                         <div class="tap-hint">Appuie pour retourner</div>
                     </div>
                     <div class="card-face card-back">
-                        <div class="french-text" id="cardBackText"></div>
+                        <div class="back-text" id="cardBackText"></div>
                     </div>
                 </div>
             </div>
@@ -536,53 +534,11 @@
     </div>
 
     <!-- LEARN MODE -->
-    <!-- LEARN CONFIG PAGE -->
-    <div class="page" id="learnConfigPage">
-        <div class="page-header">
-            <button class="back-btn" onclick="exitMode()">←</button>
-            <div class="page-title" id="learnDeckName"></div>
-        </div>
-        <div class="config-section">
-            <div class="config-title">Configurez votre session</div>
-            <div class="config-group">
-                <div class="option-group-title">Mode de réponse</div>
-                <div class="mode-toggle">
-                    <button class="mode-toggle-btn active" id="learnModeQCM" onclick="setLearnAnswerMode('qcm')">Choix multiple</button>
-                    <button class="mode-toggle-btn" id="learnModeWritten" onclick="setLearnAnswerMode('written')">Réponse écrite</button>
-                </div>
-                <div class="correction-options" id="learnCorrectionOptions" style="display:none; margin-top:10px;">
-                    <div class="correction-option active" data-level="flexible" onclick="setLearnCorrectionLevel('flexible')">
-                        <div class="correction-radio"></div>
-                        <div>
-                            <div class="correction-label">Flexible</div>
-                            <div class="correction-desc">Tolère les fautes mineures et accents</div>
-                        </div>
-                    </div>
-                    <div class="correction-option" data-level="moderate" onclick="setLearnCorrectionLevel('moderate')">
-                        <div class="correction-radio"></div>
-                        <div>
-                            <div class="correction-label">Modéré</div>
-                            <div class="correction-desc">Tolère les accents, orthographe exacte</div>
-                        </div>
-                    </div>
-                    <div class="correction-option" data-level="strict" onclick="setLearnCorrectionLevel('strict')">
-                        <div class="correction-radio"></div>
-                        <div>
-                            <div class="correction-label">Strict</div>
-                            <div class="correction-desc">Réponse exacte requise</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <button class="primary-btn start-test-btn" onclick="startLearnMode()">Commencer</button>
-        </div>
-    </div>
-
-    <!-- LEARN PAGE -->
     <div class="page" id="learnPage">
         <div class="page-header">
             <button class="back-btn" onclick="exitMode()">←</button>
             <div class="page-title">Apprendre</div>
+            <button class="settings-btn" onclick="openOptions('learn')">⚙️</button>
         </div>
         <div class="learn-header">
             <div class="learn-title" id="learnCycle">Cycle d'apprentissage 1</div>
@@ -597,8 +553,8 @@
             <div class="answers-list" id="answersList"></div>
             <div class="written-answer-area" id="writtenAnswerArea" style="display:none; width:100%;">
                 <input type="text" class="written-input" id="writtenInput" placeholder="" autocomplete="off" autocapitalize="off">
-                <button class="primary-btn" style="margin-top:10px" id="submitWrittenBtn" onclick="submitWrittenAnswer()">Valider</button>
-                <div class="written-feedback" id="writtenFeedback" style="display:none; margin-top:15px; padding:15px; border-radius:10px;"></div>
+                <button class="primary-btn" style="margin-top:10px" onclick="submitWrittenAnswer()">Valider</button>
+                <div class="written-feedback" id="writtenFeedback" style="display:none"></div>
             </div>
         </div>
         <div class="complete-screen" id="learnComplete">
@@ -617,17 +573,21 @@
             <div class="page-title" id="testDeckName"></div>
         </div>
         <div class="config-section">
-            <div class="config-title" id="configTestTitle">Configurez votre test</div>
+            <div class="config-title">Configurez votre test</div>
             <div class="config-group">
                 <div class="config-row">
-                    <span class="config-label" id="configNumQLabel">Mélanger les cartes</span>
+                    <span class="config-label">Nombre de questions</span>
                     <select class="config-select" id="testNumQuestions">
-                        <!-- Options générées dynamiquement -->
+                        <option value="5">5</option>
+                        <option value="10">10</option>
+                        <option value="15" selected>15</option>
+                        <option value="20">20</option>
+                        <option value="all">Toutes</option>
                     </select>
                 </div>
             </div>
             <div class="config-group">
-                <div class="option-group-title" id="testAnswerModeTitle">Mode de réponse</div>
+                <div class="option-group-title">Mode de réponse</div>
                 <div class="mode-toggle">
                     <button class="mode-toggle-btn active" id="testModeQCM" onclick="setTestAnswerMode('qcm')">Choix multiple</button>
                     <button class="mode-toggle-btn" id="testModeWritten" onclick="setTestAnswerMode('written')">Réponse écrite</button>
@@ -635,24 +595,15 @@
                 <div class="correction-options" id="testCorrectionOptions" style="display:none; margin-top:10px;">
                     <div class="correction-option active" data-level="flexible" onclick="setTestCorrectionLevel('flexible')">
                         <div class="correction-radio"></div>
-                        <div>
-                            <div class="correction-label">Flexible</div>
-                            <div class="correction-desc">Tolère les fautes mineures et accents</div>
-                        </div>
+                        <div><div class="correction-label">Flexible</div><div class="correction-desc">Tolère les fautes mineures</div></div>
                     </div>
                     <div class="correction-option" data-level="moderate" onclick="setTestCorrectionLevel('moderate')">
                         <div class="correction-radio"></div>
-                        <div>
-                            <div class="correction-label">Modéré</div>
-                            <div class="correction-desc">Tolère les accents, orthographe exacte</div>
-                        </div>
+                        <div><div class="correction-label">Modéré</div><div class="correction-desc">Tolère les accents</div></div>
                     </div>
                     <div class="correction-option" data-level="strict" onclick="setTestCorrectionLevel('strict')">
                         <div class="correction-radio"></div>
-                        <div>
-                            <div class="correction-label">Strict</div>
-                            <div class="correction-desc">Réponse exacte requise</div>
-                        </div>
+                        <div><div class="correction-label">Strict</div><div class="correction-desc">Réponse exacte</div></div>
                     </div>
                 </div>
             </div>
@@ -667,11 +618,11 @@
             <div class="page-title" id="testCounter">1 / 15</div>
         </div>
         <div class="test-progress"><div class="test-progress-fill" id="testProgressFill"></div></div>
-        <div class="test-question" id="testQuestionArea">
+        <div class="test-question">
             <div class="test-question-text" id="testQuestionText"></div>
             <div class="test-answers" id="testAnswers"></div>
-            <div class="test-written-area" id="testWrittenArea" style="display:none; width:100%; max-width:400px; margin:0 auto;">
-                <input type="text" class="written-input" id="testWrittenInput" placeholder="" autocomplete="off" autocapitalize="off">
+            <div id="testWrittenArea" style="display:none; width:100%; max-width:400px; margin:0 auto;">
+                <input type="text" class="written-input" id="testWrittenInput" placeholder="" autocomplete="off">
             </div>
         </div>
         <div style="padding: 20px; max-width: 400px; margin: 0 auto; width: 100%;">
@@ -683,25 +634,21 @@
     <div class="page" id="testResultsPage">
         <div class="page-header">
             <button class="back-btn" onclick="exitMode()">←</button>
-            <div class="page-title" id="testResultsCounter">15 / 15</div>
+            <div class="page-title">Résultats</div>
         </div>
-        <div class="test-progress"><div class="test-progress-fill" style="width:100%"></div></div>
         <div style="padding: 20px; overflow-y: auto; flex: 1;">
             <div class="results-header">
-                <div class="results-title" id="resultsTitle">Vous êtes en train d'apprendre !</div>
+                <div class="results-title" id="resultsTitle">Tu progresses !</div>
                 <div class="results-chart">
                     <svg width="120" height="120" viewBox="0 0 120 120">
                         <circle cx="60" cy="60" r="50" fill="none" stroke="var(--border)" stroke-width="12"/>
-                        <circle cx="60" cy="60" r="50" fill="none" stroke="var(--accent-green)" stroke-width="12" 
-                                stroke-dasharray="314" stroke-dashoffset="314" id="resultsCircle"/>
-                        <circle cx="60" cy="60" r="50" fill="none" stroke="var(--accent-orange)" stroke-width="12" 
-                                stroke-dasharray="314" stroke-dashoffset="314" id="resultsCircleWrong"/>
+                        <circle cx="60" cy="60" r="50" fill="none" stroke="var(--accent-green)" stroke-width="12" stroke-dasharray="314" stroke-dashoffset="314" id="resultsCircle"/>
                     </svg>
                     <div class="results-chart-text" id="resultsPercent">0%</div>
                 </div>
                 <div class="results-stats">
-                    <div class="results-stat"><div class="results-stat-dot green"></div><span>Correct</span><span id="resultsCorrectCount">0</span></div>
-                    <div class="results-stat"><div class="results-stat-dot red"></div><span>Incorrect</span><span id="resultsWrongCount">0</span></div>
+                    <div class="results-stat"><div class="results-stat-dot green"></div><span id="resultsCorrectCount">0</span> correct</div>
+                    <div class="results-stat"><div class="results-stat-dot red"></div><span id="resultsWrongCount">0</span> incorrect</div>
                 </div>
             </div>
             <div class="results-actions">
@@ -719,7 +666,7 @@
     <div class="page" id="matchIntroPage">
         <div class="page-header">
             <button class="back-btn" onclick="exitMode()">←</button>
-            <div class="page-title"></div>
+            <div class="page-title">Associer</div>
         </div>
         <div class="match-intro" style="flex:1; display:flex; flex-direction:column; justify-content:center;">
             <div class="match-intro-visual">
@@ -735,8 +682,8 @@
                 </div>
             </div>
             <div class="match-intro-title">Prêt à jouer ?</div>
-            <div class="match-intro-desc">Associez tous les termes avec leurs définitions le plus rapidement possible. Si vous vous trompez, une pénalité de temps sera ajoutée !</div>
-            <button class="primary-btn" onclick="startMatch()">Commencer le jeu</button>
+            <div class="match-intro-desc">Associe les paires le plus vite possible !</div>
+            <button class="primary-btn" onclick="startMatch()">Commencer</button>
         </div>
     </div>
 
@@ -744,137 +691,16 @@
     <div class="page" id="matchPage">
         <div class="match-header">
             <button class="back-btn" onclick="exitMode()">←</button>
-            <div class="match-timer" id="matchTimer">0,0 secondes</div>
-            <div class="match-controls">
-                <button class="match-ctrl-btn" onclick="restartMatch()">↻</button>
-            </div>
+            <div class="match-timer" id="matchTimer">0,0s</div>
+            <button class="match-ctrl-btn" onclick="restartMatch()">↻</button>
         </div>
         <div class="match-grid" id="matchGrid"></div>
         <div class="complete-screen" id="matchComplete">
             <div class="complete-emoji">🎉</div>
-            <div class="match-complete-time" id="matchFinalTime">12,5 secondes</div>
+            <div class="match-complete-time" id="matchFinalTime">0,0s</div>
             <div class="match-complete-text">Toutes les paires trouvées !</div>
             <button class="primary-btn" onclick="restartMatch()">Rejouer</button>
             <button class="secondary-btn" style="margin-top:10px" onclick="exitMode()">Retour</button>
-        </div>
-    </div>
-
-    <!-- IMAGE CONFIG PAGE -->
-    <div class="page" id="imageConfigPage">
-        <div class="page-header">
-            <button class="back-btn" onclick="exitMode()">←</button>
-            <div class="page-title" id="imageDeckName"></div>
-        </div>
-        <div class="config-section">
-            <div class="config-title">Mode Image 🖼️</div>
-            <div class="config-group">
-                <div class="option-group-title">Mode de réponse</div>
-                <div class="mode-toggle">
-                    <button class="mode-toggle-btn active" id="imageModeQCM" onclick="setImageAnswerMode('qcm')">Choix multiple</button>
-                    <button class="mode-toggle-btn" id="imageModeWritten" onclick="setImageAnswerMode('written')">Réponse écrite</button>
-                </div>
-                <div class="correction-options" id="imageCorrectionOptions" style="display:none; margin-top:10px;">
-                    <div class="correction-option active" data-level="flexible" onclick="setImageCorrectionLevel('flexible')">
-                        <div class="correction-radio"></div>
-                        <div>
-                            <div class="correction-label">Flexible</div>
-                            <div class="correction-desc">Tolère les fautes mineures et accents</div>
-                        </div>
-                    </div>
-                    <div class="correction-option" data-level="moderate" onclick="setImageCorrectionLevel('moderate')">
-                        <div class="correction-radio"></div>
-                        <div>
-                            <div class="correction-label">Modéré</div>
-                            <div class="correction-desc">Tolère les accents, orthographe exacte</div>
-                        </div>
-                    </div>
-                    <div class="correction-option" data-level="strict" onclick="setImageCorrectionLevel('strict')">
-                        <div class="correction-radio"></div>
-                        <div>
-                            <div class="correction-label">Strict</div>
-                            <div class="correction-desc">Réponse exacte requise</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <button class="primary-btn start-test-btn" onclick="startImageMode()">Commencer</button>
-        </div>
-    </div>
-
-    <!-- IMAGE MODE -->
-    <div class="page" id="imagePage">
-        <div class="page-header">
-            <button class="back-btn" onclick="exitMode()">←</button>
-            <div class="page-title">Image</div>
-        </div>
-        <div class="learn-header">
-            <div class="learn-title" id="imageProgress">1 / 10</div>
-            <div class="learn-progress">
-                <div class="learn-bar"><div class="learn-fill" id="imageProgressBar"></div></div>
-                <div class="learn-count" id="imageCount">0</div>
-            </div>
-        </div>
-        <div class="question-area" id="imageQuestionArea">
-            <div class="retry-badge" id="imageRetryBadge" style="display:none">Essayons à nouveau</div>
-            <div class="image-prompt" style="text-align:center; margin-bottom:20px;">
-                <div class="image-display" id="imageDisplay" style="font-size:6rem; margin-bottom:10px;"></div>
-                <div class="image-question" id="imageQuestion" style="font-size:1.1rem; color:var(--text-secondary);">Qu'est-ce que c'est ?</div>
-            </div>
-            <div class="answers-list" id="imageAnswersList"></div>
-            <div class="written-answer-area" id="imageWrittenArea" style="display:none; width:100%;">
-                <input type="text" class="written-input" id="imageWrittenInput" placeholder="" autocomplete="off" autocapitalize="off">
-                <button class="primary-btn" style="margin-top:10px" onclick="submitImageWrittenAnswer()">Valider</button>
-                <div class="written-feedback" id="imageWrittenFeedback" style="display:none; margin-top:15px; padding:15px; border-radius:10px;"></div>
-            </div>
-        </div>
-        <div class="complete-screen" id="imageComplete">
-            <div class="complete-emoji">🖼️</div>
-            <div class="complete-title">Session terminée !</div>
-            <div class="complete-stats" id="imageCompleteStats"></div>
-            <button class="primary-btn" onclick="startImageMode()">Recommencer</button>
-            <button class="secondary-btn" style="margin-top:10px" onclick="exitMode()">Retour</button>
-        </div>
-    </div>
-
-    <!-- LISTEN CONFIG PAGE -->
-    <div class="page" id="listenConfigPage">
-        <div class="page-header">
-            <button class="back-btn" onclick="exitMode()">←</button>
-            <div class="page-title" id="listenDeckName"></div>
-        </div>
-        <div class="config-section">
-            <div class="config-title">Mode Écoute 🎧</div>
-            <div class="config-group">
-                <div class="option-group-title">Mode de réponse</div>
-                <div class="mode-toggle">
-                    <button class="mode-toggle-btn active" id="listenModeQCM" onclick="setListenAnswerMode('qcm')">Choix multiple</button>
-                    <button class="mode-toggle-btn" id="listenModeWritten" onclick="setListenAnswerMode('written')">Réponse écrite</button>
-                </div>
-                <div class="correction-options" id="listenCorrectionOptions" style="display:none; margin-top:10px;">
-                    <div class="correction-option active" data-level="flexible" onclick="setListenCorrectionLevel('flexible')">
-                        <div class="correction-radio"></div>
-                        <div>
-                            <div class="correction-label">Flexible</div>
-                            <div class="correction-desc">Tolère les fautes mineures et accents</div>
-                        </div>
-                    </div>
-                    <div class="correction-option" data-level="moderate" onclick="setListenCorrectionLevel('moderate')">
-                        <div class="correction-radio"></div>
-                        <div>
-                            <div class="correction-label">Modéré</div>
-                            <div class="correction-desc">Tolère les accents, orthographe exacte</div>
-                        </div>
-                    </div>
-                    <div class="correction-option" data-level="strict" onclick="setListenCorrectionLevel('strict')">
-                        <div class="correction-radio"></div>
-                        <div>
-                            <div class="correction-label">Strict</div>
-                            <div class="correction-desc">Réponse exacte requise</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <button class="primary-btn start-test-btn" onclick="startListenMode()">Commencer</button>
         </div>
     </div>
 
@@ -883,6 +709,7 @@
         <div class="page-header">
             <button class="back-btn" onclick="exitMode()">←</button>
             <div class="page-title">Écoute</div>
+            <button class="settings-btn" onclick="openOptions('listen')">⚙️</button>
         </div>
         <div class="learn-header">
             <div class="learn-title" id="listenProgress">1 / 10</div>
@@ -893,24 +720,58 @@
         </div>
         <div class="question-area" id="listenQuestionArea">
             <div class="retry-badge" id="listenRetryBadge" style="display:none">Essayons à nouveau</div>
-            <div class="listen-prompt" style="text-align:center; margin-bottom:30px;">
+            <div style="text-align:center; margin-bottom:30px;">
                 <div style="font-size:4rem; margin-bottom:15px;">🔊</div>
-                <button class="primary-btn" style="width:auto; padding:12px 30px;" onclick="playListenAudio()">
-                    <span id="listenPromptText">Écoute le mot</span>
-                </button>
+                <button class="primary-btn" style="width:auto; padding:12px 30px;" onclick="playListenAudio()">Écouter</button>
             </div>
             <div class="answers-list" id="listenAnswersList"></div>
-            <div class="written-answer-area" id="listenWrittenArea" style="display:none; width:100%;">
-                <input type="text" class="written-input" id="listenWrittenInput" placeholder="" autocomplete="off" autocapitalize="off">
+            <div id="listenWrittenArea" style="display:none; width:100%;">
+                <input type="text" class="written-input" id="listenWrittenInput" placeholder="" autocomplete="off">
                 <button class="primary-btn" style="margin-top:10px" onclick="submitListenWrittenAnswer()">Valider</button>
-                <div class="written-feedback" id="listenWrittenFeedback" style="display:none; margin-top:15px; padding:15px; border-radius:10px;"></div>
+                <div class="written-feedback" id="listenWrittenFeedback" style="display:none"></div>
             </div>
         </div>
         <div class="complete-screen" id="listenComplete">
             <div class="complete-emoji">🎧</div>
-            <div class="complete-title">Session terminée !</div>
+            <div class="complete-title">Terminé !</div>
             <div class="complete-stats" id="listenCompleteStats"></div>
             <button class="primary-btn" onclick="startListenMode()">Recommencer</button>
+            <button class="secondary-btn" style="margin-top:10px" onclick="exitMode()">Retour</button>
+        </div>
+    </div>
+
+    <!-- IMAGE MODE -->
+    <div class="page" id="imagePage">
+        <div class="page-header">
+            <button class="back-btn" onclick="exitMode()">←</button>
+            <div class="page-title">Image</div>
+            <button class="settings-btn" onclick="openOptions('image')">⚙️</button>
+        </div>
+        <div class="learn-header">
+            <div class="learn-title" id="imageProgress">1 / 10</div>
+            <div class="learn-progress">
+                <div class="learn-bar"><div class="learn-fill" id="imageProgressBar"></div></div>
+                <div class="learn-count" id="imageCount">0</div>
+            </div>
+        </div>
+        <div class="question-area" id="imageQuestionArea">
+            <div class="retry-badge" id="imageRetryBadge" style="display:none">Essayons à nouveau</div>
+            <div style="text-align:center; margin-bottom:20px;">
+                <div id="imageDisplay" style="font-size:6rem; margin-bottom:10px;"></div>
+                <div id="imageQuestion" style="color:var(--text-secondary);">Qu'est-ce que c'est ?</div>
+            </div>
+            <div class="answers-list" id="imageAnswersList"></div>
+            <div id="imageWrittenArea" style="display:none; width:100%;">
+                <input type="text" class="written-input" id="imageWrittenInput" placeholder="" autocomplete="off">
+                <button class="primary-btn" style="margin-top:10px" onclick="submitImageWrittenAnswer()">Valider</button>
+                <div class="written-feedback" id="imageWrittenFeedback" style="display:none"></div>
+            </div>
+        </div>
+        <div class="complete-screen" id="imageComplete">
+            <div class="complete-emoji">🖼️</div>
+            <div class="complete-title">Terminé !</div>
+            <div class="complete-stats" id="imageCompleteStats"></div>
+            <button class="primary-btn" onclick="startImageMode()">Recommencer</button>
             <button class="secondary-btn" style="margin-top:10px" onclick="exitMode()">Retour</button>
         </div>
     </div>
@@ -929,357 +790,171 @@
                     <div class="toggle" id="toggleShuffle" onclick="toggleOption('shuffle')"></div>
                 </div>
             </div>
-            <div class="option-group">
-                <div class="option-group-title">Côté de la carte</div>
+            <div class="option-group" id="sideOptionGroup">
+                <div class="option-group-title">Direction</div>
                 <div class="option-row">
                     <span class="option-label">Recto</span>
-                    <div class="side-selector">
-                        <button class="side-btn active" data-side="english" onclick="setSide('english')">Anglais</button>
-                        <button class="side-btn" data-side="french" onclick="setSide('french')">Français</button>
-                    </div>
+                    <div class="side-selector" id="sideSelector"></div>
                 </div>
             </div>
-            <!-- Learn/Test specific options -->
             <div class="option-group" id="answerModeGroup" style="display:none;">
-                <div class="option-group-title" id="answerModeTitle">Mode de réponse</div>
+                <div class="option-group-title">Mode de réponse</div>
                 <div class="mode-toggle">
-                    <button class="mode-toggle-btn active" id="modeQCM" onclick="setAnswerMode('qcm')">Choix multiple</button>
-                    <button class="mode-toggle-btn" id="modeWritten" onclick="setAnswerMode('written')">Réponse écrite</button>
+                    <button class="mode-toggle-btn active" id="modeQCM" onclick="setAnswerMode('qcm')">QCM</button>
+                    <button class="mode-toggle-btn" id="modeWritten" onclick="setAnswerMode('written')">Écrit</button>
                 </div>
                 <div class="correction-options" id="correctionOptions" style="display:none;">
-                    <div class="correction-option active" onclick="setCorrectionLevel('flexible')">
+                    <div class="correction-option active" data-level="flexible" onclick="setCorrectionLevel('flexible')">
                         <div class="correction-radio"></div>
-                        <div>
-                            <div class="correction-label">Flexible</div>
-                            <div class="correction-desc">Tolère les fautes mineures et accents</div>
-                        </div>
+                        <div><div class="correction-label">Flexible</div></div>
                     </div>
-                    <div class="correction-option" onclick="setCorrectionLevel('moderate')">
+                    <div class="correction-option" data-level="moderate" onclick="setCorrectionLevel('moderate')">
                         <div class="correction-radio"></div>
-                        <div>
-                            <div class="correction-label">Modéré</div>
-                            <div class="correction-desc">Tolère les accents, orthographe exacte</div>
-                        </div>
+                        <div><div class="correction-label">Modéré</div></div>
                     </div>
-                    <div class="correction-option" onclick="setCorrectionLevel('strict')">
+                    <div class="correction-option" data-level="strict" onclick="setCorrectionLevel('strict')">
                         <div class="correction-radio"></div>
-                        <div>
-                            <div class="correction-label">Strict</div>
-                            <div class="correction-desc">Réponse exacte requise</div>
-                        </div>
+                        <div><div class="correction-label">Strict</div></div>
                     </div>
                 </div>
             </div>
-            <button class="primary-btn" style="margin-top:10px" onclick="restartWithOptions()">Parcourir à nouveau</button>
+            <button class="primary-btn" style="margin-top:10px" onclick="restartWithOptions()">Appliquer</button>
         </div>
     </div>
 
-    <script src="data/decks.js?v=4"></script>
+    <script src="data/courses.js"></script>
     <script>
-        // ========== i18n ==========
-        const translations = {
-            fr: {
-                appTitle: '📚 Flashcards',
-                chooseDecek: 'Choisis un deck pour commencer',
-                cards: 'cartes',
-                mastered: 'acquis',
-                learning: 'En cours',
-                known: 'Acquis',
-                // Modes
-                modeCards: 'Cartes',
-                modeCardsDesc: 'Swipe pour trier ce que tu connais',
-                modeLearn: 'Apprendre',
-                modeLearnDesc: 'QCM avec répétition intelligente',
-                modeTest: 'Test',
-                modeTestDesc: 'Évalue tes connaissances',
-                modeMatch: 'Associer',
-                modeMatchDesc: 'Relie les paires rapidement',
-                modeListen: 'Écoute',
-                modeListenDesc: 'Écoute et trouve le mot',
-                listenToWord: 'Écoute le mot',
-                replay: 'Réécouter',
-                modeImage: 'Image',
-                modeImageDesc: 'Trouve le mot à partir de l\'image',
-                whatIsThis: 'Qu\'est-ce que c\'est ?',
-                // Cards
-                tapToFlip: 'Appuie pour retourner',
-                toReview: 'À revoir',
-                // Learn
-                learningCycle: "Cycle d'apprentissage",
-                tryAgain: 'Essayons à nouveau',
-                cycleComplete: 'Cycle terminé !',
-                correct: 'correct',
-                errors: 'erreurs',
-                nextCycle: 'Cycle suivant',
-                finish: 'Terminer',
-                congrats: 'Bravo !',
-                allLearned: 'Bravo ! Tu as tout appris ! 🎉',
-                // Test
-                configureTest: 'Configurez votre test',
-                numQuestions: 'Mélanger les cartes',
-                multipleChoice: 'Choix multiple',
-                startTest: 'Commencer le test',
-                next: 'Suivant',
-                yourResults: 'Vos résultats',
-                youAreLearning: "Vous êtes en train d'apprendre !",
-                wellDone: 'Bien joué !',
-                excellent: 'Excellent ! 🌟',
-                correctLabel: 'Correct',
-                incorrectLabel: 'Incorrect',
-                learnMode: '📖 Mode Apprendre',
-                newTest: '🔄 Nouveau test',
-                yourAnswers: 'Vos réponses',
-                // Match
-                readyToPlay: 'Prêt à jouer ?',
-                matchInstructions: 'Associez tous les termes avec leurs définitions le plus rapidement possible. Si vous vous trompez, une pénalité de temps sera ajoutée !',
-                startGame: 'Commencer le jeu',
-                seconds: 'secondes',
-                allPairsFound: 'Toutes les paires trouvées !',
-                playAgain: 'Rejouer',
-                back: 'Retour',
-                // Options
-                options: 'Options',
-                shuffleCards: 'Mélanger les cartes',
-                cardSide: 'Côté de la carte',
-                front: 'Recto',
-                english: 'Anglais',
-                french: 'Français',
-                browseAgain: 'Parcourir à nouveau',
-                general: 'Général',
-                all: 'Toutes',
-                // Written answers
-                answerMode: 'Mode de réponse',
-                multipleChoice: 'Choix multiple',
-                writtenAnswer: 'Réponse écrite',
-                correctionLevel: 'Niveau de correction',
-                flexible: 'Flexible',
-                moderate: 'Modéré',
-                strict: 'Strict',
-                flexibleDesc: 'Tolère les fautes mineures et accents',
-                moderateDesc: 'Tolère les accents, orthographe exacte',
-                strictDesc: 'Réponse exacte requise',
-                typeYourAnswer: 'Tapez votre réponse...',
-                submit: 'Valider',
-                correctAnswerWas: 'Bonne réponse :',
-                yourAnswerWas: 'Votre réponse :'
-            },
-            en: {
-                appTitle: '📚 Flashcards',
-                chooseDeck: 'Choose a deck to start',
-                cards: 'cards',
-                mastered: 'mastered',
-                learning: 'Learning',
-                known: 'Known',
-                // Modes
-                modeCards: 'Cards',
-                modeCardsDesc: 'Swipe to sort what you know',
-                modeLearn: 'Learn',
-                modeLearnDesc: 'Quiz with smart repetition',
-                modeTest: 'Test',
-                modeTestDesc: 'Evaluate your knowledge',
-                modeMatch: 'Match',
-                modeMatchDesc: 'Match pairs quickly',
-                modeListen: 'Listen',
-                modeListenDesc: 'Listen and find the word',
-                listenToWord: 'Listen to the word',
-                replay: 'Replay',
-                modeImage: 'Image',
-                modeImageDesc: 'Find the word from the image',
-                whatIsThis: 'What is this?',
-                // Cards
-                tapToFlip: 'Tap to flip',
-                toReview: 'To review',
-                // Learn
-                learningCycle: 'Learning cycle',
-                tryAgain: 'Let\'s try again',
-                cycleComplete: 'Cycle complete!',
-                correct: 'correct',
-                errors: 'errors',
-                nextCycle: 'Next cycle',
-                finish: 'Finish',
-                congrats: 'Well done!',
-                allLearned: 'Congrats! You learned everything! 🎉',
-                // Test
-                configureTest: 'Configure your test',
-                numQuestions: 'Number of questions',
-                multipleChoice: 'Multiple choice',
-                startTest: 'Start test',
-                next: 'Next',
-                yourResults: 'Your results',
-                youAreLearning: 'You\'re learning!',
-                wellDone: 'Well done!',
-                excellent: 'Excellent! 🌟',
-                correctLabel: 'Correct',
-                incorrectLabel: 'Incorrect',
-                learnMode: '📖 Learn mode',
-                newTest: '🔄 New test',
-                yourAnswers: 'Your answers',
-                // Match
-                readyToPlay: 'Ready to play?',
-                matchInstructions: 'Match all terms with their definitions as fast as possible. If you make a mistake, a time penalty will be added!',
-                startGame: 'Start game',
-                seconds: 'seconds',
-                allPairsFound: 'All pairs found!',
-                playAgain: 'Play again',
-                back: 'Back',
-                // Options
-                options: 'Options',
-                shuffleCards: 'Shuffle cards',
-                cardSide: 'Card side',
-                front: 'Front',
-                english: 'English',
-                french: 'French',
-                browseAgain: 'Browse again',
-                general: 'General',
-                all: 'All',
-                // Written answers
-                answerMode: 'Answer mode',
-                multipleChoice: 'Multiple choice',
-                writtenAnswer: 'Written answer',
-                correctionLevel: 'Correction level',
-                flexible: 'Flexible',
-                moderate: 'Moderate',
-                strict: 'Strict',
-                flexibleDesc: 'Tolerates minor typos and accents',
-                moderateDesc: 'Tolerates accents, exact spelling',
-                strictDesc: 'Exact answer required',
-                typeYourAnswer: 'Type your answer...',
-                submit: 'Submit',
-                correctAnswerWas: 'Correct answer:',
-                yourAnswerWas: 'Your answer:'
-            }
-        };
-        
-        // Detect language (only EN and FR supported for this app)
-        const userLang = (navigator.language || navigator.userLanguage || 'en').split('-')[0];
-        const lang = (userLang === 'fr' || userLang === 'en') ? userLang : 'en';
-        const currentLang = lang;
-        const t = (key) => translations[lang][key] || translations['en'][key] || key;
-
         // ========== STATE ==========
-        let decks = [];
-        let currentDeck = null;
-        let currentCards = [];
-        let currentIndex = 0;
-        let knownCards = new Set();
-        let learningCards = new Set();
-        let history = [];
-        let starred = new Set();
-        let options = { shuffle: false, frontSide: 'english' };
+        let courses = [], currentCourse = null, decks = [], currentDeck = null;
+        let currentCards = [], currentIndex = 0, knownCards = new Set(), learningCards = new Set(), history = [], starred = new Set();
+        let options = { shuffle: false, frontSide: 'front' };
 
-        // Learn mode
+        // Learn
         let learnQueue = [], learnIndex = 0, learnCycle = 1, learnCorrect = 0, learnWrong = 0, retrySet = new Set();
-        let learnConfig = { inputMode: 'qcm', correctionLevel: 'flexible' }; // qcm | written
+        let learnConfig = { inputMode: 'qcm', correctionLevel: 'flexible' };
+        let currentLearnQuestion = { askBack: true, correctAnswer: '', cardIdx: 0 };
 
-        // Test mode
-        let testQuestions = [], testIndex = 0, testAnswers = [], testConfig = { inputMode: 'qcm', correctionLevel: 'flexible' };
+        // Test
+        let testQuestions = [], testIndex = 0, testConfig = { inputMode: 'qcm', correctionLevel: 'flexible' };
 
-        // ========== ANSWER VALIDATION ==========
-        // Remove Arabic diacritics (harakats)
-        function removeArabicDiacritics(str) {
-            return str.replace(/[\u064B-\u065F\u0670]/g, '');
-        }
-        
-        // Remove French accents
-        function removeFrenchAccents(str) {
-            return str.normalize('NFD').replace(/[\u0300-\u036f]/g, '');
-        }
-        
-        // Normalize string for comparison
-        function normalizeAnswer(str, level = 'flexible') {
-            let normalized = str.trim().toLowerCase();
-            
-            // Always remove Arabic diacritics (harakats are optional)
-            normalized = removeArabicDiacritics(normalized);
-            
-            if (level === 'flexible' || level === 'moderate') {
-                // Remove accents for flexible/moderate
-                normalized = removeFrenchAccents(normalized);
-            }
-            
-            if (level === 'flexible') {
-                // Remove extra spaces, punctuation for flexible
-                normalized = normalized.replace(/\s+/g, ' ').replace(/[.,!?;:'"()-]/g, '');
-            }
-            
-            return normalized;
-        }
-        
-        // Calculate Levenshtein distance for typo tolerance
-        function levenshtein(a, b) {
-            if (a.length === 0) return b.length;
-            if (b.length === 0) return a.length;
-            const matrix = [];
-            for (let i = 0; i <= b.length; i++) matrix[i] = [i];
-            for (let j = 0; j <= a.length; j++) matrix[0][j] = j;
-            for (let i = 1; i <= b.length; i++) {
-                for (let j = 1; j <= a.length; j++) {
-                    matrix[i][j] = b.charAt(i-1) === a.charAt(j-1) 
-                        ? matrix[i-1][j-1]
-                        : Math.min(matrix[i-1][j-1] + 1, matrix[i][j-1] + 1, matrix[i-1][j] + 1);
-                }
-            }
-            return matrix[b.length][a.length];
-        }
-        
-        // Check if answer is correct
-        function checkWrittenAnswer(userAnswer, correctAnswer, level = 'flexible') {
-            const normalizedUser = normalizeAnswer(userAnswer, level);
-            const normalizedCorrect = normalizeAnswer(correctAnswer, level);
-            
-            if (normalizedUser === normalizedCorrect) return true;
-            
-            if (level === 'flexible') {
-                // Allow 1-2 typos for longer words
-                const maxTypos = normalizedCorrect.length > 5 ? 2 : 1;
-                return levenshtein(normalizedUser, normalizedCorrect) <= maxTypos;
-            }
-            
-            return false;
-        }
-
-        // Match mode
+        // Match
         let matchCells = [], matchSelected = null, matchStartTime = 0, matchTimerInterval = null, matchPenalty = 0;
 
-        // Listen mode
+        // Listen
         let listenQueue = [], listenIndex = 0, listenCorrect = 0, listenWrong = 0, listenRetrySet = new Set();
         let listenConfig = { inputMode: 'qcm', correctionLevel: 'flexible' };
-        let currentListenQuestion = { correctAnswer: '', cardIdx: 0, card: null };
+        let currentListenQuestion = { correctAnswer: '', cardIdx: 0, card: null, playFront: true };
 
-        // Image mode
+        // Image
         let imageQueue = [], imageIndex = 0, imageCorrect = 0, imageWrong = 0, imageRetrySet = new Set();
         let imageConfig = { inputMode: 'qcm', correctionLevel: 'flexible' };
         let currentImageQuestion = { correctAnswer: '', cardIdx: 0, card: null };
 
-        // ========== STORAGE ==========
-        function getStorageKey(id) { return `flashcards-${id}`; }
-        function loadProgress(id) {
-            try {
-                const d = localStorage.getItem(getStorageKey(id));
-                if (d) { const p = JSON.parse(d); knownCards = new Set(p.known||[]); learningCards = new Set(p.learning||[]); starred = new Set(p.starred||[]); }
-            } catch(e) { knownCards = new Set(); learningCards = new Set(); starred = new Set(); }
+        // ========== UTILS ==========
+        function shuffle(arr) { const a = [...arr]; for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; }
+        function removeArabicDiacritics(s) { return s.replace(/[\u064B-\u065F\u0670]/g, ''); }
+        function removeFrenchAccents(s) { return s.normalize('NFD').replace(/[\u0300-\u036f]/g, ''); }
+        function normalizeAnswer(s, level) {
+            let n = s.trim().toLowerCase();
+            n = removeArabicDiacritics(n);
+            if (level !== 'strict') n = removeFrenchAccents(n);
+            if (level === 'flexible') n = n.replace(/\s+/g, ' ').replace(/[.,!?;:'"()-]/g, '');
+            return n;
         }
-        function saveProgress() {
-            if (!currentDeck) return;
-            localStorage.setItem(getStorageKey(currentDeck.id), JSON.stringify({ known: [...knownCards], learning: [...learningCards], starred: [...starred] }));
+        function levenshtein(a, b) {
+            if (!a.length) return b.length;
+            if (!b.length) return a.length;
+            const m = [];
+            for (let i = 0; i <= b.length; i++) m[i] = [i];
+            for (let j = 0; j <= a.length; j++) m[0][j] = j;
+            for (let i = 1; i <= b.length; i++)
+                for (let j = 1; j <= a.length; j++)
+                    m[i][j] = b[i-1] === a[j-1] ? m[i-1][j-1] : Math.min(m[i-1][j-1], m[i][j-1], m[i-1][j]) + 1;
+            return m[b.length][a.length];
+        }
+        function checkWrittenAnswer(user, correct, level) {
+            const u = normalizeAnswer(user, level), c = normalizeAnswer(correct, level);
+            if (u === c) return true;
+            if (level === 'flexible') return levenshtein(u, c) <= (c.length > 5 ? 2 : 1);
+            return false;
+        }
+        function speakText(text, lang) { speechSynthesis.cancel(); const u = new SpeechSynthesisUtterance(text); u.lang = lang; u.rate = 0.8; speechSynthesis.speak(u); }
+
+        // ========== HELPERS ==========
+        function getCardFront(c) { return c.front; }
+        function getCardBack(c) { return c.back; }
+        function getCardTranslit(c) { return c.translit || ''; }
+        function getFrontStyle() {
+            const cfg = currentCourse?.config || {};
+            return { font: cfg.frontFont || "'Inter', sans-serif", dir: cfg.frontDir || 'ltr', fontSize: cfg.frontFontSize || '1.5rem', lang: cfg.frontLang || 'en-US' };
+        }
+        function getBackStyle() {
+            const cfg = currentCourse?.config || {};
+            return { font: cfg.backFont || "'Inter', sans-serif", dir: cfg.backDir || 'ltr', fontSize: cfg.backFontSize || '1.3rem', lang: cfg.backLang || 'fr-FR' };
         }
 
-        // ========== DECK LOADING ==========
-        async function loadDecks() {
-            if (window.DECKS_DATA) { decks = window.DECKS_DATA; } 
-            else { decks = []; }
-            renderDeckList();
+        // ========== STORAGE ==========
+        function getStorageKey(id) { return `learn-lang-${currentCourse?.id || 'x'}-${id}`; }
+        function loadProgress(id) {
+            try { const d = JSON.parse(localStorage.getItem(getStorageKey(id)) || '{}'); knownCards = new Set(d.known||[]); learningCards = new Set(d.learning||[]); starred = new Set(d.starred||[]); }
+            catch(e) { knownCards = new Set(); learningCards = new Set(); starred = new Set(); }
         }
+        function saveProgress() { if (currentDeck) localStorage.setItem(getStorageKey(currentDeck.id), JSON.stringify({ known: [...knownCards], learning: [...learningCards], starred: [...starred] })); }
+
+        // ========== COURSES ==========
+        function loadCourses() {
+            courses = window.COURSES_DATA || [];
+            document.getElementById('courseGrid').innerHTML = courses.map(c => `
+                <div class="course-card" onclick="selectCourse('${c.id}')">
+                    <div class="course-flag">${c.flag}</div>
+                    <div class="course-info">
+                        <div class="course-name">${c.name}</div>
+                        <div class="course-name-local">${c.nameLocal}</div>
+                        <div class="course-desc">${c.description}</div>
+                    </div>
+                </div>
+            `).join('');
+            const saved = localStorage.getItem('learn-lang-course');
+            if (saved && courses.find(c => c.id === saved)) selectCourse(saved);
+        }
+
+        function selectCourse(id) {
+            currentCourse = courses.find(c => c.id === id);
+            if (!currentCourse) return;
+            localStorage.setItem('learn-lang-course', id);
+            document.getElementById('currentCourseFlag').textContent = currentCourse.flag;
+            document.getElementById('homeTitle').textContent = `${currentCourse.flag} ${currentCourse.nameLocal}`;
+            updateSideSelector();
+            loadDecks();
+        }
+
+        function updateSideSelector() {
+            const cfg = currentCourse.config;
+            document.getElementById('sideSelector').innerHTML = `
+                <button class="side-btn active" data-side="front" onclick="setSide('front')">${cfg.frontLabel}</button>
+                <button class="side-btn" data-side="back" onclick="setSide('back')">${cfg.backLabel}</button>
+            `;
+            options.frontSide = 'front';
+        }
+
+        function loadDecks() {
+            const script = document.createElement('script');
+            script.src = currentCourse.decksFile;
+            script.onload = () => { decks = window.DECKS_DATA || []; renderDeckList(); showPage('homePage'); };
+            script.onerror = () => { decks = []; renderDeckList(); showPage('homePage'); };
+            document.head.appendChild(script);
+        }
+
         function renderDeckList() {
-            const grid = document.getElementById('deckGrid');
-            grid.innerHTML = decks.map(deck => {
-                loadProgress(deck.id);
-                return `<div class="deck-card" onclick="openDeck('${deck.id}')">
-                    <div class="deck-name">${deck.name}</div>
-                    <div class="deck-meta"><span>📚 ${deck.cards.length} ${t('cards')}</span><span>✅ ${knownCards.size} ${t('mastered')}</span></div>
+            document.getElementById('deckGrid').innerHTML = decks.map(d => {
+                loadProgress(d.id);
+                const html = `<div class="deck-card" onclick="openDeck('${d.id}')">
+                    <div class="deck-name">${d.name}</div>
+                    <div class="deck-meta"><span>📚 ${d.cards.length} cartes</span><span>✅ ${knownCards.size} acquis</span></div>
                 </div>`;
+                knownCards = new Set(); learningCards = new Set();
+                return html;
             }).join('');
-            knownCards = new Set(); learningCards = new Set();
         }
 
         // ========== NAVIGATION ==========
@@ -1295,495 +970,185 @@
         function exitMode() { saveProgress(); openDeck(currentDeck.id); }
 
         // ========== CARDS MODE ==========
-        // ========== CARDS CONFIG ==========
-        function showCardsConfig() {
-            document.getElementById('cardsDeckName').textContent = currentDeck.name;
-            document.getElementById('cardsShowEnglish').classList.toggle('active', options.frontSide === 'english');
-            document.getElementById('cardsShowFrench').classList.toggle('active', options.frontSide === 'french');
-            document.getElementById('cardsShuffleToggle').classList.toggle('active', options.shuffle);
-            showPage('cardsConfigPage');
-        }
-        
-        function setCardsSide(side) {
-            options.frontSide = side;
-            document.getElementById('cardsShowEnglish').classList.toggle('active', side === 'english');
-            document.getElementById('cardsShowFrench').classList.toggle('active', side === 'french');
-        }
-        
-        function toggleCardsShuffle() {
-            options.shuffle = !options.shuffle;
-            document.getElementById('cardsShuffleToggle').classList.toggle('active', options.shuffle);
-        }
-
         function startCardsMode() {
-            currentCards = [...currentDeck.cards];
-            if (options.shuffle) currentCards = shuffle(currentCards);
+            currentCards = options.shuffle ? shuffle([...currentDeck.cards]) : [...currentDeck.cards];
             currentIndex = 0; history = [];
             document.getElementById('cardsComplete').classList.remove('active');
             document.getElementById('cardWrapper').style.display = 'block';
             document.querySelector('.cards-controls').style.display = 'flex';
-            showPage('cardsPage');
-            renderCurrentCard();
+            showPage('cardsPage'); renderCurrentCard();
         }
+
         function renderCurrentCard() {
             if (currentIndex >= currentCards.length) { showCardsComplete(); return; }
             const card = currentCards[currentIndex];
             const swipeCard = document.getElementById('swipeCard');
-            const cardInner = document.getElementById('cardInner');
             swipeCard.style.transform = '';
             swipeCard.classList.remove('fly-left', 'fly-right', 'swiping-left', 'swiping-right');
-            cardInner.classList.remove('flipped');
-            if (options.frontSide === 'english') {
-                // English front, French back
-                document.getElementById('cardFrontText').textContent = card.front;
-                document.getElementById('cardFrontText').style.fontFamily = "'Inter', sans-serif";
-                document.getElementById('cardFrontText').style.fontSize = '2rem';
-                document.getElementById('cardTranslit').textContent = '';
-                document.getElementById('cardBackText').textContent = card.back;
-                document.getElementById('cardBackText').style.fontFamily = "'Inter', sans-serif";
+            document.getElementById('cardInner').classList.remove('flipped');
+
+            const frontEl = document.getElementById('cardFrontText');
+            const translitEl = document.getElementById('cardTranslit');
+            const backEl = document.getElementById('cardBackText');
+
+            if (options.frontSide === 'front') {
+                const s = getFrontStyle();
+                frontEl.textContent = getCardFront(card);
+                frontEl.style.fontFamily = s.font;
+                frontEl.style.fontSize = s.fontSize;
+                frontEl.style.direction = s.dir;
+                translitEl.textContent = getCardTranslit(card);
+                translitEl.style.display = currentCourse?.config?.hasTranslit ? 'block' : 'none';
+                const bs = getBackStyle();
+                backEl.textContent = getCardBack(card);
+                backEl.style.fontFamily = bs.font;
+                backEl.style.direction = bs.dir;
             } else {
-                // French front, English back
-                document.getElementById('cardFrontText').textContent = card.back;
-                document.getElementById('cardFrontText').style.fontFamily = "'Inter', sans-serif";
-                document.getElementById('cardFrontText').style.fontSize = '2rem';
-                document.getElementById('cardTranslit').textContent = '';
-                document.getElementById('cardBackText').textContent = card.front;
-                document.getElementById('cardBackText').style.fontFamily = "'Inter', sans-serif";
+                const s = getBackStyle();
+                frontEl.textContent = getCardBack(card);
+                frontEl.style.fontFamily = s.font;
+                frontEl.style.fontSize = s.fontSize;
+                frontEl.style.direction = s.dir;
+                translitEl.style.display = 'none';
+                const fs = getFrontStyle();
+                backEl.innerHTML = `<div style="font-family:${fs.font};font-size:${fs.fontSize};direction:${fs.dir}">${getCardFront(card)}</div>`;
+                if (currentCourse?.config?.hasTranslit && getCardTranslit(card)) backEl.innerHTML += `<div style="font-size:0.9rem;color:var(--text-secondary)">${getCardTranslit(card)}</div>`;
             }
+
             const idx = currentDeck.cards.indexOf(card);
             document.getElementById('starBtn').textContent = starred.has(idx) ? '★' : '☆';
             document.getElementById('starBtn').classList.toggle('active', starred.has(idx));
             updateCardsProgress();
             setupSwipeGestures();
         }
+
         function updateCardsProgress() {
-            const total = currentCards.length;
-            document.getElementById('cardsProgress').textContent = `${currentIndex + 1} / ${total}`;
+            document.getElementById('cardsProgress').textContent = `${currentIndex + 1} / ${currentCards.length}`;
             document.getElementById('countLeft').textContent = learningCards.size;
             document.getElementById('countRight').textContent = knownCards.size;
-            document.getElementById('cardsProgressBar').style.width = `${(currentIndex / total) * 100}%`;
+            document.getElementById('cardsProgressBar').style.width = `${(currentIndex / currentCards.length) * 100}%`;
         }
+
         function setupSwipeGestures() {
             const card = document.getElementById('swipeCard');
-            let startX = 0, startY = 0, currentX = 0, isDragging = false, hasMoved = false;
-            const DRAG_THRESHOLD = 15, SWIPE_THRESHOLD = 80;
-            function onStart(e) {
-                if (e.target.tagName === 'BUTTON') return;
-                const touch = e.type === 'touchstart' ? e.touches[0] : e;
-                startX = touch.clientX; startY = touch.clientY; currentX = startX;
-                isDragging = true; hasMoved = false;
-                card.style.transition = 'none';
-            }
-            function onMove(e) {
-                if (!isDragging) return;
-                const touch = e.type === 'touchmove' ? e.touches[0] : e;
-                currentX = touch.clientX;
-                const diffX = currentX - startX, diffY = touch.clientY - startY;
-                if (Math.abs(diffX) > DRAG_THRESHOLD && Math.abs(diffX) > Math.abs(diffY)) {
-                    hasMoved = true;
-                    const visualDiff = diffX > 0 ? diffX - DRAG_THRESHOLD : diffX + DRAG_THRESHOLD;
-                    card.style.transform = `translateX(${visualDiff}px) rotate(${visualDiff * 0.04}deg)`;
-                    card.classList.toggle('swiping-right', diffX > 50);
-                    card.classList.toggle('swiping-left', diffX < -50);
-                }
-            }
-            function onEnd(e) {
-                if (!isDragging) return;
-                isDragging = false; card.style.transition = '';
-                const diff = currentX - startX;
-                if (hasMoved && diff > SWIPE_THRESHOLD) { swipeRight(); }
-                else if (hasMoved && diff < -SWIPE_THRESHOLD) { swipeLeft(); }
-                else {
-                    card.style.transform = ''; card.classList.remove('swiping-left', 'swiping-right');
-                    if (!hasMoved && Math.abs(diff) < DRAG_THRESHOLD && e.target.tagName !== 'BUTTON') {
-                        document.getElementById('cardInner').classList.toggle('flipped');
-                    }
-                }
-            }
+            let startX = 0, curX = 0, dragging = false, moved = false;
+            const onStart = e => { if (e.target.tagName === 'BUTTON') return; startX = curX = (e.touches ? e.touches[0] : e).clientX; dragging = true; moved = false; card.style.transition = 'none'; };
+            const onMove = e => { if (!dragging) return; curX = (e.touches ? e.touches[0] : e).clientX; const d = curX - startX; if (Math.abs(d) > 15) { moved = true; card.style.transform = `translateX(${d > 0 ? d - 15 : d + 15}px) rotate(${(d > 0 ? d - 15 : d + 15) * 0.04}deg)`; card.classList.toggle('swiping-right', d > 50); card.classList.toggle('swiping-left', d < -50); } };
+            const onEnd = () => { if (!dragging) return; dragging = false; card.style.transition = ''; const d = curX - startX; if (moved && d > 80) swipeRight(); else if (moved && d < -80) swipeLeft(); else { card.style.transform = ''; card.classList.remove('swiping-left', 'swiping-right'); if (!moved) document.getElementById('cardInner').classList.toggle('flipped'); } };
             card.replaceWith(card.cloneNode(true));
-            const newCard = document.getElementById('swipeCard');
-            newCard.addEventListener('touchstart', onStart, { passive: true });
-            newCard.addEventListener('touchmove', onMove, { passive: true });
-            newCard.addEventListener('touchend', onEnd);
-            newCard.addEventListener('mousedown', onStart);
+            const nc = document.getElementById('swipeCard');
+            nc.addEventListener('touchstart', onStart, { passive: true });
+            nc.addEventListener('touchmove', onMove, { passive: true });
+            nc.addEventListener('touchend', onEnd);
+            nc.addEventListener('mousedown', onStart);
             document.addEventListener('mousemove', onMove);
             document.addEventListener('mouseup', onEnd);
-            newCard.addEventListener('click', (e) => { if (!hasMoved && e.target.tagName !== 'BUTTON') document.getElementById('cardInner').classList.toggle('flipped'); });
-        }
-        function swipeRight() {
-            document.getElementById('swipeCard').classList.add('fly-right');
-            const idx = currentDeck.cards.indexOf(currentCards[currentIndex]);
-            knownCards.add(idx); learningCards.delete(idx);
-            history.push({ index: currentIndex, action: 'right', cardIdx: idx });
-            setTimeout(() => { currentIndex++; renderCurrentCard(); }, 300);
-        }
-        function swipeLeft() {
-            document.getElementById('swipeCard').classList.add('fly-left');
-            const idx = currentDeck.cards.indexOf(currentCards[currentIndex]);
-            learningCards.add(idx); knownCards.delete(idx);
-            history.push({ index: currentIndex, action: 'left', cardIdx: idx });
-            setTimeout(() => { currentIndex++; renderCurrentCard(); }, 300);
-        }
-        function undoCard() {
-            if (history.length === 0) return;
-            const last = history.pop();
-            if (last.action === 'right') knownCards.delete(last.cardIdx);
-            else learningCards.delete(last.cardIdx);
-            currentIndex = last.index; renderCurrentCard();
-        }
-        function toggleStar() {
-            const idx = currentDeck.cards.indexOf(currentCards[currentIndex]);
-            if (starred.has(idx)) starred.delete(idx); else starred.add(idx);
-            document.getElementById('starBtn').textContent = starred.has(idx) ? '★' : '☆';
-            document.getElementById('starBtn').classList.toggle('active', starred.has(idx));
-            saveProgress();
-        }
-        function speakCurrent() { speak(currentCards[currentIndex].back); }
-        function speak(text) { speechSynthesis.cancel(); const u = new SpeechSynthesisUtterance(text); u.lang = 'fr-FR'; u.rate = 0.9; speechSynthesis.speak(u); }
-        function showCardsComplete() {
-            document.getElementById('cardWrapper').style.display = 'none';
-            document.querySelector('.cards-controls').style.display = 'none';
-            document.getElementById('cardsComplete').classList.add('active');
-            document.getElementById('cardsCompleteStats').textContent = `${knownCards.size} ${t('mastered')} · ${learningCards.size} ${t('learning').toLowerCase()}`;
-            document.querySelector('#cardsComplete .complete-title').textContent = t('congrats');
-            saveProgress();
+            nc.querySelector('.card-audio').onclick = e => { e.stopPropagation(); speakCurrent(); };
+            nc.querySelector('.card-star').onclick = e => { e.stopPropagation(); toggleStar(); };
         }
 
-        // ========== LEARN CONFIG ==========
-        function showLearnConfig() {
-            document.getElementById('learnDeckName').textContent = currentDeck.name;
-            // Reset UI to match config
-            document.getElementById('learnModeQCM').classList.toggle('active', learnConfig.inputMode === 'qcm');
-            document.getElementById('learnModeWritten').classList.toggle('active', learnConfig.inputMode === 'written');
-            document.getElementById('learnCorrectionOptions').style.display = learnConfig.inputMode === 'written' ? 'block' : 'none';
-            updateLearnCorrectionUI();
-            showPage('learnConfigPage');
-        }
-        
-        function setLearnAnswerMode(mode) {
-            learnConfig.inputMode = mode;
-            document.getElementById('learnModeQCM').classList.toggle('active', mode === 'qcm');
-            document.getElementById('learnModeWritten').classList.toggle('active', mode === 'written');
-            document.getElementById('learnCorrectionOptions').style.display = mode === 'written' ? 'block' : 'none';
-        }
-        
-        function setLearnCorrectionLevel(level) {
-            learnConfig.correctionLevel = level;
-            updateLearnCorrectionUI();
-        }
-        
-        function updateLearnCorrectionUI() {
-            document.querySelectorAll('#learnCorrectionOptions .correction-option').forEach(opt => {
-                opt.classList.toggle('active', opt.dataset.level === learnConfig.correctionLevel);
-            });
-        }
+        function speakCurrent() { const c = currentCards[currentIndex]; options.frontSide === 'front' ? speakText(getCardFront(c), getFrontStyle().lang) : speakText(getCardBack(c), getBackStyle().lang); }
+        function swipeRight() { document.getElementById('swipeCard').classList.add('fly-right'); const idx = currentDeck.cards.indexOf(currentCards[currentIndex]); knownCards.add(idx); learningCards.delete(idx); history.push({ index: currentIndex, action: 'right', cardIdx: idx }); setTimeout(() => { currentIndex++; renderCurrentCard(); }, 300); }
+        function swipeLeft() { document.getElementById('swipeCard').classList.add('fly-left'); const idx = currentDeck.cards.indexOf(currentCards[currentIndex]); learningCards.add(idx); knownCards.delete(idx); history.push({ index: currentIndex, action: 'left', cardIdx: idx }); setTimeout(() => { currentIndex++; renderCurrentCard(); }, 300); }
+        function undoCard() { if (!history.length) return; const h = history.pop(); h.action === 'right' ? knownCards.delete(h.cardIdx) : learningCards.delete(h.cardIdx); currentIndex = h.index; renderCurrentCard(); }
+        function toggleStar() { const idx = currentDeck.cards.indexOf(currentCards[currentIndex]); starred.has(idx) ? starred.delete(idx) : starred.add(idx); document.getElementById('starBtn').textContent = starred.has(idx) ? '★' : '☆'; document.getElementById('starBtn').classList.toggle('active', starred.has(idx)); saveProgress(); }
+        function showCardsComplete() { document.getElementById('cardWrapper').style.display = 'none'; document.querySelector('.cards-controls').style.display = 'none'; document.getElementById('cardsComplete').classList.add('active'); document.getElementById('cardsCompleteStats').textContent = `${knownCards.size} acquis · ${learningCards.size} en cours`; saveProgress(); }
 
         // ========== LEARN MODE ==========
-        function startLearnMode() {
-            learnCycle = 1; learnCorrect = 0; learnWrong = 0; retrySet = new Set();
-            buildLearnQueue();
-            document.getElementById('learnComplete').classList.remove('active');
-            document.getElementById('questionArea').style.display = 'flex';
-            showPage('learnPage');
-            renderQuestion();
-        }
-        function buildLearnQueue() {
-            learnQueue = currentDeck.cards.map((card, idx) => ({ card, idx })).filter(item => !knownCards.has(item.idx));
-            if (retrySet.size > 0) {
-                const retryCards = [...retrySet].map(idx => ({ card: currentDeck.cards[idx], idx, isRetry: true }));
-                learnQueue = [...shuffle(retryCards), ...shuffle(learnQueue.filter(i => !retrySet.has(i.idx)))];
-            } else { learnQueue = shuffle(learnQueue); }
-            learnIndex = 0;
-        }
-        let currentLearnQuestion = { askFrench: false, correctAnswer: '', cardIdx: 0 };
-        
+        function startLearnMode() { learnCycle = 1; learnCorrect = 0; learnWrong = 0; retrySet = new Set(); buildLearnQueue(); document.getElementById('learnComplete').classList.remove('active'); document.getElementById('questionArea').style.display = 'flex'; showPage('learnPage'); renderQuestion(); }
+        function buildLearnQueue() { learnQueue = currentDeck.cards.map((c, i) => ({ card: c, idx: i })).filter(i => !knownCards.has(i.idx)); if (retrySet.size) { const r = [...retrySet].map(i => ({ card: currentDeck.cards[i], idx: i, isRetry: true })); learnQueue = [...shuffle(r), ...shuffle(learnQueue.filter(i => !retrySet.has(i.idx)))]; } else learnQueue = shuffle(learnQueue); learnIndex = 0; }
         function renderQuestion() {
             if (learnIndex >= learnQueue.length) { showLearnComplete(); return; }
             const item = learnQueue[learnIndex];
             document.getElementById('retryBadge').style.display = item.isRetry ? 'block' : 'none';
-            document.getElementById('retryBadge').textContent = t('tryAgain');
-            
-            const askFrench = Math.random() > 0.5;
-            currentLearnQuestion = {
-                askFrench,
-                correctAnswer: askFrench ? item.card.front : item.card.back,
-                cardIdx: item.idx
-            };
-            
-            const questionText = document.getElementById('questionText');
-            questionText.textContent = askFrench ? item.card.back : item.card.front;
-            // No special styling needed for French
-            
-            // Reset written input
-            const writtenInput = document.getElementById('writtenInput');
-            const writtenFeedback = document.getElementById('writtenFeedback');
-            writtenInput.value = '';
-            writtenInput.classList.remove('correct', 'wrong');
-            writtenInput.disabled = false;
-            writtenFeedback.style.display = 'none';
-            
+            const askBack = options.frontSide === 'front';
+            const qText = askBack ? getCardFront(item.card) : getCardBack(item.card);
+            const correctAnswer = askBack ? getCardBack(item.card) : getCardFront(item.card);
+            const qStyle = askBack ? getFrontStyle() : getBackStyle();
+            const aStyle = askBack ? getBackStyle() : getFrontStyle();
+            currentLearnQuestion = { askBack, correctAnswer, cardIdx: item.idx };
+            const qEl = document.getElementById('questionText');
+            qEl.textContent = qText; qEl.style.fontFamily = qStyle.font; qEl.style.direction = qStyle.dir;
+            if (qStyle.dir === 'rtl') qEl.style.fontSize = '2rem';
+            const wi = document.getElementById('writtenInput'), wf = document.getElementById('writtenFeedback');
+            wi.value = ''; wi.classList.remove('correct', 'wrong'); wi.disabled = false; wf.style.display = 'none';
             if (learnConfig.inputMode === 'written') {
-                // Written mode
                 document.getElementById('answersList').style.display = 'none';
                 document.getElementById('writtenAnswerArea').style.display = 'block';
-                writtenInput.placeholder = t('typeYourAnswer');
-                writtenInput.focus();
-                // Set direction based on expected answer
-                writtenInput.style.direction = askFrench ? 'rtl' : 'ltr';
-                writtenInput.style.fontFamily = askFrench ? "'Amiri', serif" : "'Inter', sans-serif";
+                wi.placeholder = 'Tapez votre réponse...'; wi.style.direction = aStyle.dir; wi.style.fontFamily = aStyle.font; wi.focus();
             } else {
-                // QCM mode
                 document.getElementById('answersList').style.display = 'flex';
                 document.getElementById('writtenAnswerArea').style.display = 'none';
-                const otherCards = currentDeck.cards.filter((c, i) => i !== item.idx);
-                const allAnswers = shuffle([item.card, ...shuffle(otherCards).slice(0, 3)]);
-                document.getElementById('answersList').innerHTML = allAnswers.map((ans, i) => {
-                    const text = askFrench ? ans.front : ans.back;
-                    return `<button class="answer-btn" onclick="checkAnswer(${i}, ${allAnswers.indexOf(item.card)}, ${item.idx})">${text}</button>`;
-                }).join('');
+                const others = currentDeck.cards.filter((c, i) => i !== item.idx);
+                const all = shuffle([item.card, ...shuffle(others).slice(0, 3)]);
+                const rtl = aStyle.dir === 'rtl';
+                document.getElementById('answersList').innerHTML = all.map((a, i) => `<button class="answer-btn ${rtl ? 'rtl' : ''}" onclick="checkAnswer(${i}, ${all.indexOf(item.card)}, ${item.idx})">${askBack ? getCardBack(a) : getCardFront(a)}</button>`).join('');
             }
             updateLearnProgress();
         }
-        
-        function submitWrittenAnswer() {
-            const input = document.getElementById('writtenInput');
-            const feedback = document.getElementById('writtenFeedback');
-            const userAnswer = input.value.trim();
-            
-            if (!userAnswer) return;
-            
-            const isCorrect = checkWrittenAnswer(userAnswer, currentLearnQuestion.correctAnswer, learnConfig.correctionLevel);
-            
-            input.disabled = true;
-            input.classList.add(isCorrect ? 'correct' : 'wrong');
-            
-            feedback.style.display = 'block';
-            feedback.className = 'written-feedback ' + (isCorrect ? 'correct' : 'wrong');
-            
-            if (isCorrect) {
-                feedback.innerHTML = `✓ ${t('correctLabel')}`;
-                learnCorrect++;
-                retrySet.delete(currentLearnQuestion.cardIdx);
-            } else {
-                feedback.innerHTML = `✗ ${t('incorrectLabel')}<div class="correct-answer">${t('correctAnswerWas')} ${currentLearnQuestion.correctAnswer}</div>`;
-                learnWrong++;
-                retrySet.add(currentLearnQuestion.cardIdx);
-            }
-            
-            setTimeout(() => { learnIndex++; renderQuestion(); }, isCorrect ? 1000 : 2000);
-        }
-        
-        // Handle Enter key for written input
-        document.addEventListener('keydown', (e) => {
-            if (e.key === 'Enter' && document.getElementById('writtenAnswerArea').style.display !== 'none') {
-                const input = document.getElementById('writtenInput');
-                if (!input.disabled && input.value.trim()) {
-                    submitWrittenAnswer();
-                }
-            }
-        });
-        
-        function checkAnswer(sel, correct, cardIdx) {
-            const buttons = document.querySelectorAll('.answer-btn');
-            buttons[correct].classList.add('correct');
-            if (sel === correct) { learnCorrect++; retrySet.delete(cardIdx); setTimeout(() => { learnIndex++; renderQuestion(); }, 600); }
-            else { buttons[sel].classList.add('wrong'); learnWrong++; retrySet.add(cardIdx); setTimeout(() => { learnIndex++; renderQuestion(); }, 1200); }
-            buttons.forEach(b => b.disabled = true);
-        }
-        function updateLearnProgress() {
-            const progress = (learnIndex / learnQueue.length) * 100;
-            document.getElementById('learnCycle').textContent = `${t('learningCycle')} ${learnCycle}`;
-            document.getElementById('learnProgressBar').style.width = `${progress}%`;
-            document.getElementById('learnCount').textContent = learnQueue.length - learnIndex;
-        }
-        function showLearnComplete() {
-            document.getElementById('questionArea').style.display = 'none';
-            document.getElementById('learnComplete').classList.add('active');
-            document.querySelector('#learnComplete .complete-title').textContent = t('cycleComplete');
-            document.getElementById('learnCompleteStats').textContent = `✅ ${learnCorrect} ${t('correct')} · ❌ ${learnWrong} ${t('errors')}`;
-            document.querySelector('#learnComplete .primary-btn').textContent = t('nextCycle');
-            document.querySelector('#learnComplete .secondary-btn').textContent = t('finish');
-        }
-        function nextLearnCycle() {
-            learnCycle++; learnCorrect = 0; learnWrong = 0;
-            buildLearnQueue();
-            if (learnQueue.length === 0) { alert(t('allLearned')); exitMode(); return; }
-            document.getElementById('learnComplete').classList.remove('active');
-            document.getElementById('questionArea').style.display = 'flex';
-            renderQuestion();
-        }
+        function submitWrittenAnswer() { const i = document.getElementById('writtenInput'), f = document.getElementById('writtenFeedback'), u = i.value.trim(); if (!u) return; const ok = checkWrittenAnswer(u, currentLearnQuestion.correctAnswer, learnConfig.correctionLevel); i.disabled = true; i.classList.add(ok ? 'correct' : 'wrong'); f.style.display = 'block'; f.className = 'written-feedback ' + (ok ? 'correct' : 'wrong'); f.innerHTML = ok ? '✓ Correct' : `✗ Incorrect<div class="correct-answer">→ ${currentLearnQuestion.correctAnswer}</div>`; ok ? (learnCorrect++, retrySet.delete(currentLearnQuestion.cardIdx)) : (learnWrong++, retrySet.add(currentLearnQuestion.cardIdx)); setTimeout(() => { learnIndex++; renderQuestion(); }, ok ? 1000 : 2000); }
+        function checkAnswer(sel, correct, cardIdx) { const btns = document.querySelectorAll('.answer-btn'); btns[correct].classList.add('correct'); sel === correct ? (learnCorrect++, retrySet.delete(cardIdx), setTimeout(() => { learnIndex++; renderQuestion(); }, 600)) : (btns[sel].classList.add('wrong'), learnWrong++, retrySet.add(cardIdx), setTimeout(() => { learnIndex++; renderQuestion(); }, 1200)); btns.forEach(b => b.disabled = true); }
+        function updateLearnProgress() { document.getElementById('learnCycle').textContent = `Cycle ${learnCycle}`; document.getElementById('learnProgressBar').style.width = `${(learnIndex / learnQueue.length) * 100}%`; document.getElementById('learnCount').textContent = learnQueue.length - learnIndex; }
+        function showLearnComplete() { document.getElementById('questionArea').style.display = 'none'; document.getElementById('learnComplete').classList.add('active'); document.getElementById('learnCompleteStats').textContent = `✅ ${learnCorrect} correct · ❌ ${learnWrong} erreurs`; }
+        function nextLearnCycle() { learnCycle++; learnCorrect = 0; learnWrong = 0; buildLearnQueue(); if (!learnQueue.length) { alert('Bravo ! 🎉'); exitMode(); return; } document.getElementById('learnComplete').classList.remove('active'); document.getElementById('questionArea').style.display = 'flex'; renderQuestion(); }
+        document.addEventListener('keydown', e => { if (e.key === 'Enter' && document.getElementById('writtenAnswerArea').style.display !== 'none') { const i = document.getElementById('writtenInput'); if (!i.disabled && i.value.trim()) submitWrittenAnswer(); } });
 
         // ========== TEST MODE ==========
-        function startTestConfig() {
-            document.getElementById('testDeckName').textContent = currentDeck.name;
-            
-            // Generate question count options based on deck size
-            const deckSize = currentDeck.cards.length;
-            const select = document.getElementById('testNumQuestions');
-            select.innerHTML = '';
-            
-            // Add numeric options only if deck is large enough
-            [5, 10, 15, 20].forEach(n => {
-                if (n <= deckSize) {
-                    const opt = document.createElement('option');
-                    opt.value = n;
-                    opt.textContent = n;
-                    select.appendChild(opt);
-                }
-            });
-            
-            // Always add "Toutes" option and select it by default
-            const allOpt = document.createElement('option');
-            allOpt.value = 'all';
-            allOpt.textContent = `Toutes (${deckSize})`;
-            allOpt.selected = true;
-            select.appendChild(allOpt);
-            
-            // Update UI to match current config
-            document.getElementById('testModeQCM').classList.toggle('active', testConfig.inputMode === 'qcm');
-            document.getElementById('testModeWritten').classList.toggle('active', testConfig.inputMode === 'written');
-            document.getElementById('testCorrectionOptions').style.display = testConfig.inputMode === 'written' ? 'block' : 'none';
-            updateTestCorrectionUI(testConfig.correctionLevel);
-            showPage('testConfigPage');
-        }
-        
-        function setTestAnswerMode(mode) {
-            testConfig.inputMode = mode;
-            document.getElementById('testModeQCM').classList.toggle('active', mode === 'qcm');
-            document.getElementById('testModeWritten').classList.toggle('active', mode === 'written');
-            document.getElementById('testCorrectionOptions').style.display = mode === 'written' ? 'block' : 'none';
-        }
-        
-        function setTestCorrectionLevel(level) {
-            testConfig.correctionLevel = level;
-            updateTestCorrectionUI(level);
-        }
-        
-        function updateTestCorrectionUI(level) {
-            document.querySelectorAll('#testCorrectionOptions .correction-option').forEach((opt) => {
-                opt.classList.toggle('active', opt.dataset.level === level);
-            });
-        }
-        
+        function startTestConfig() { document.getElementById('testDeckName').textContent = currentDeck.name; document.getElementById('testModeQCM').classList.toggle('active', testConfig.inputMode === 'qcm'); document.getElementById('testModeWritten').classList.toggle('active', testConfig.inputMode === 'written'); document.getElementById('testCorrectionOptions').style.display = testConfig.inputMode === 'written' ? 'block' : 'none'; showPage('testConfigPage'); }
+        function setTestAnswerMode(m) { testConfig.inputMode = m; document.getElementById('testModeQCM').classList.toggle('active', m === 'qcm'); document.getElementById('testModeWritten').classList.toggle('active', m === 'written'); document.getElementById('testCorrectionOptions').style.display = m === 'written' ? 'block' : 'none'; }
+        function setTestCorrectionLevel(l) { testConfig.correctionLevel = l; document.querySelectorAll('#testCorrectionOptions .correction-option').forEach(o => o.classList.toggle('active', o.dataset.level === l)); }
         function startTest() {
-            const numQ = document.getElementById('testNumQuestions').value;
+            const n = document.getElementById('testNumQuestions').value;
             let cards = shuffle([...currentDeck.cards]);
-            if (numQ !== 'all') cards = cards.slice(0, parseInt(numQ));
-            testQuestions = cards.map((card, i) => {
-                const askFrench = Math.random() > 0.5;
-                const correctAnswer = askFrench ? card.front : card.back;
-                const otherCards = currentDeck.cards.filter(c => c !== card);
-                const wrongAnswers = shuffle(otherCards).slice(0, 3);
-                const allAnswers = shuffle([card, ...wrongAnswers]);
-                return { 
-                    card, 
-                    askFrench, 
-                    answers: allAnswers, 
-                    correctIdx: allAnswers.indexOf(card), 
-                    correctAnswer,
-                    userAnswer: null,
-                    userWrittenAnswer: ''
-                };
+            if (n !== 'all') cards = cards.slice(0, parseInt(n));
+            const askBack = options.frontSide === 'front';
+            testQuestions = cards.map(card => {
+                const correct = askBack ? getCardBack(card) : getCardFront(card);
+                const others = shuffle(currentDeck.cards.filter(c => c !== card)).slice(0, 3);
+                const all = shuffle([card, ...others]);
+                return { card, askBack, answers: all, correctIdx: all.indexOf(card), correctAnswer: correct, userAnswer: null, userWrittenAnswer: '' };
             });
-            testIndex = 0; testAnswers = [];
-            showPage('testPage');
-            renderTestQuestion();
+            testIndex = 0; showPage('testPage'); renderTestQuestion();
         }
-        
         function renderTestQuestion() {
             const q = testQuestions[testIndex];
             document.getElementById('testCounter').textContent = `${testIndex + 1} / ${testQuestions.length}`;
             document.getElementById('testProgressFill').style.width = `${((testIndex + 1) / testQuestions.length) * 100}%`;
-            const qText = document.getElementById('testQuestionText');
-            qText.textContent = q.askFrench ? q.card.back : q.card.front;
-            // No special styling needed for French
-            
+            const qText = q.askBack ? getCardFront(q.card) : getCardBack(q.card);
+            const qStyle = q.askBack ? getFrontStyle() : getBackStyle();
+            const aStyle = q.askBack ? getBackStyle() : getFrontStyle();
+            const qEl = document.getElementById('testQuestionText');
+            qEl.textContent = qText; qEl.style.fontFamily = qStyle.font; qEl.style.direction = qStyle.dir;
             if (testConfig.inputMode === 'written') {
-                // Written mode
                 document.getElementById('testAnswers').style.display = 'none';
                 document.getElementById('testWrittenArea').style.display = 'block';
-                const input = document.getElementById('testWrittenInput');
-                input.value = q.userWrittenAnswer || '';
-                input.placeholder = t('typeYourAnswer');
-                input.style.direction = q.askFrench ? 'rtl' : 'ltr';
-                input.style.fontFamily = q.askFrench ? "'Amiri', serif" : "'Inter', sans-serif";
-                input.focus();
-                // Enable next button if there's text
-                document.getElementById('testNextBtn').disabled = !input.value.trim();
-                input.oninput = () => {
-                    q.userWrittenAnswer = input.value;
-                    document.getElementById('testNextBtn').disabled = !input.value.trim();
-                };
+                const i = document.getElementById('testWrittenInput');
+                i.value = q.userWrittenAnswer || ''; i.placeholder = 'Tapez votre réponse...'; i.style.direction = aStyle.dir; i.style.fontFamily = aStyle.font; i.focus();
+                document.getElementById('testNextBtn').disabled = !i.value.trim();
+                i.oninput = () => { q.userWrittenAnswer = i.value; document.getElementById('testNextBtn').disabled = !i.value.trim(); };
             } else {
-                // QCM mode
                 document.getElementById('testAnswers').style.display = 'flex';
                 document.getElementById('testWrittenArea').style.display = 'none';
-                document.getElementById('testAnswers').innerHTML = q.answers.map((ans, i) => {
-                    const text = q.askFrench ? ans.front : ans.back;
-                    const selected = q.userAnswer === i ? 'selected' : '';
-                    return `<button class="test-answer-btn ${selected}" onclick="selectTestAnswer(${i})">${text}</button>`;
-                }).join('');
+                const rtl = aStyle.dir === 'rtl';
+                document.getElementById('testAnswers').innerHTML = q.answers.map((a, i) => `<button class="test-answer-btn ${rtl ? 'rtl' : ''} ${q.userAnswer === i ? 'selected' : ''}" onclick="selectTestAnswer(${i})">${q.askBack ? getCardBack(a) : getCardFront(a)}</button>`).join('');
                 document.getElementById('testNextBtn').disabled = q.userAnswer === null;
             }
         }
-        
-        function selectTestAnswer(idx) {
-            testQuestions[testIndex].userAnswer = idx;
-            document.querySelectorAll('.test-answer-btn').forEach((btn, i) => btn.classList.toggle('selected', i === idx));
-            document.getElementById('testNextBtn').disabled = false;
-        }
-        
-        function nextTestQuestion() {
-            testIndex++;
-            if (testIndex >= testQuestions.length) { showTestResults(); return; }
-            renderTestQuestion();
-        }
+        function selectTestAnswer(i) { testQuestions[testIndex].userAnswer = i; document.querySelectorAll('.test-answer-btn').forEach((b, j) => b.classList.toggle('selected', j === i)); document.getElementById('testNextBtn').disabled = false; }
+        function nextTestQuestion() { testIndex++; if (testIndex >= testQuestions.length) showTestResults(); else renderTestQuestion(); }
         function showTestResults() {
-            // Calculate scores based on mode
-            let correctCount = 0;
-            testQuestions.forEach(q => {
-                if (testConfig.inputMode === 'written') {
-                    q.isCorrect = checkWrittenAnswer(q.userWrittenAnswer || '', q.correctAnswer, testConfig.correctionLevel);
-                } else {
-                    q.isCorrect = q.userAnswer === q.correctIdx;
-                }
-                if (q.isCorrect) correctCount++;
-            });
-            
-            const total = testQuestions.length;
-            const percent = Math.round((correctCount / total) * 100);
-            document.getElementById('testResultsCounter').textContent = `${total} / ${total}`;
-            document.getElementById('resultsPercent').textContent = `${percent}%`;
-            document.getElementById('resultsCorrectCount').textContent = correctCount;
-            document.getElementById('resultsWrongCount').textContent = total - correctCount;
-            // Update circle
-            const correctOffset = 314 - (314 * correctCount / total);
-            document.getElementById('resultsCircle').style.strokeDashoffset = correctOffset;
-            // Title based on score
-            const titles = percent >= 80 ? t('excellent') : percent >= 60 ? t('wellDone') : t('youAreLearning');
-            document.getElementById('resultsTitle').textContent = titles;
-            // Update buttons
-            document.querySelector('#testResultsPage .results-actions .primary-btn').textContent = t('learnMode');
-            document.querySelector('#testResultsPage .results-actions .secondary-btn').textContent = t('newTest');
-            document.querySelector('.results-history-title').textContent = t('yourAnswers');
-            // History
+            let correct = 0;
+            testQuestions.forEach(q => { q.isCorrect = testConfig.inputMode === 'written' ? checkWrittenAnswer(q.userWrittenAnswer || '', q.correctAnswer, testConfig.correctionLevel) : q.userAnswer === q.correctIdx; if (q.isCorrect) correct++; });
+            const total = testQuestions.length, pct = Math.round(correct / total * 100);
+            document.getElementById('resultsPercent').textContent = `${pct}%`;
+            document.getElementById('resultsCorrectCount').textContent = correct;
+            document.getElementById('resultsWrongCount').textContent = total - correct;
+            document.getElementById('resultsCircle').style.strokeDashoffset = 314 - (314 * correct / total);
+            document.getElementById('resultsTitle').textContent = pct >= 80 ? 'Excellent ! 🌟' : pct >= 60 ? 'Bien joué !' : 'Tu progresses !';
             document.getElementById('resultsHistoryList').innerHTML = testQuestions.map(q => {
-                const questionText = q.askFrench ? q.card.back : q.card.front;
-                const correctAnswer = q.correctAnswer;
-                let userAnswer;
-                if (testConfig.inputMode === 'written') {
-                    userAnswer = q.userWrittenAnswer || '-';
-                } else {
-                    userAnswer = q.userAnswer !== null ? (q.askFrench ? q.answers[q.userAnswer].front : q.answers[q.userAnswer].back) : '-';
-                }
-                return `<div class="result-item">
-                    <div class="result-question">${questionText}</div>
-                    <div class="result-answers">
-                        <div class="result-answer correct"><span class="icon">✓</span> ${correctAnswer}</div>
-                        ${!q.isCorrect ? `<div class="result-answer wrong"><span class="icon">✗</span> ${userAnswer}</div>` : ''}
-                    </div>
-                    <div class="result-status ${q.isCorrect ? 'correct' : 'incorrect'}">${q.isCorrect ? '✓ Correct' : '✗ Incorrect'}</div>
-                </div>`;
+                const question = q.askBack ? getCardFront(q.card) : getCardBack(q.card);
+                const userAns = testConfig.inputMode === 'written' ? (q.userWrittenAnswer || '-') : (q.userAnswer !== null ? (q.askBack ? getCardBack(q.answers[q.userAnswer]) : getCardFront(q.answers[q.userAnswer])) : '-');
+                return `<div class="result-item"><div class="result-question">${question}</div><div class="result-answers"><div class="result-answer correct">✓ ${q.correctAnswer}</div>${!q.isCorrect ? `<div class="result-answer wrong">✗ ${userAns}</div>` : ''}</div><div class="result-status ${q.isCorrect ? 'correct' : 'incorrect'}">${q.isCorrect ? '✓' : '✗'}</div></div>`;
             }).join('');
             showPage('testResultsPage');
         }
@@ -1791,562 +1156,117 @@
         // ========== MATCH MODE ==========
         function startMatchIntro() { showPage('matchIntroPage'); }
         function startMatch() {
-            // Create pairs (limit to 6 pairs for 12 cells)
             const pairs = shuffle([...currentDeck.cards]).slice(0, 6);
-            matchCells = [];
-            pairs.forEach((card, i) => {
-                matchCells.push({ id: i, type: 'front', text: card.front, pairId: i, matched: false });
-                matchCells.push({ id: i + 100, type: 'back', text: card.back, pairId: i, matched: false });
-            });
-            matchCells = shuffle(matchCells);
-            matchSelected = null; matchPenalty = 0;
+            matchCells = []; pairs.forEach((c, i) => { matchCells.push({ type: 'front', text: getCardFront(c), pairId: i, matched: false }); matchCells.push({ type: 'back', text: getCardBack(c), pairId: i, matched: false }); });
+            matchCells = shuffle(matchCells); matchSelected = null; matchPenalty = 0;
             renderMatchGrid();
             document.getElementById('matchComplete').classList.remove('active');
             document.getElementById('matchGrid').style.display = 'grid';
             showPage('matchPage');
-            matchStartTime = Date.now();
-            matchTimerInterval = setInterval(updateMatchTimer, 100);
+            matchStartTime = Date.now(); matchTimerInterval = setInterval(updateMatchTimer, 100);
         }
-        function renderMatchGrid() {
-            document.getElementById('matchGrid').innerHTML = matchCells.map((cell, i) => {
-                const isArabic = cell.type === 'front';
-                return `<div class="match-cell ${cell.matched ? 'matched' : ''}" data-idx="${i}" onclick="selectMatchCell(${i})">${cell.text}</div>`;
-            }).join('');
-        }
-        function selectMatchCell(idx) {
-            const cell = matchCells[idx];
-            if (cell.matched) return;
-            const cellEl = document.querySelectorAll('.match-cell')[idx];
-            if (matchSelected === null) {
-                matchSelected = idx;
-                cellEl.classList.add('selected');
-            } else if (matchSelected === idx) {
-                cellEl.classList.remove('selected');
-                matchSelected = null;
-            } else {
-                const firstCell = matchCells[matchSelected];
-                const firstEl = document.querySelectorAll('.match-cell')[matchSelected];
-                if (firstCell.pairId === cell.pairId && firstCell.type !== cell.type) {
-                    // Correct match
-                    firstEl.classList.remove('selected');
-                    firstEl.classList.add('correct');
-                    cellEl.classList.add('correct');
-                    setTimeout(() => {
-                        firstCell.matched = true;
-                        cell.matched = true;
-                        firstEl.classList.add('matched');
-                        cellEl.classList.add('matched');
-                        checkMatchComplete();
-                    }, 400);
+        function renderMatchGrid() { const fs = getFrontStyle(); document.getElementById('matchGrid').innerHTML = matchCells.map((c, i) => `<div class="match-cell ${c.type === 'front' && fs.dir === 'rtl' ? 'rtl' : ''} ${c.matched ? 'matched' : ''}" onclick="selectMatchCell(${i})">${c.text}</div>`).join(''); }
+        function selectMatchCell(i) {
+            const c = matchCells[i]; if (c.matched) return;
+            const el = document.querySelectorAll('.match-cell')[i];
+            if (matchSelected === null) { matchSelected = i; el.classList.add('selected'); }
+            else if (matchSelected === i) { el.classList.remove('selected'); matchSelected = null; }
+            else {
+                const fc = matchCells[matchSelected], fel = document.querySelectorAll('.match-cell')[matchSelected];
+                if (fc.pairId === c.pairId && fc.type !== c.type) {
+                    fel.classList.remove('selected'); fel.classList.add('correct'); el.classList.add('correct');
+                    setTimeout(() => { fc.matched = true; c.matched = true; fel.classList.add('matched'); el.classList.add('matched'); checkMatchComplete(); }, 400);
                 } else {
-                    // Wrong match
-                    firstEl.classList.remove('selected');
-                    firstEl.classList.add('wrong');
-                    cellEl.classList.add('wrong');
-                    matchPenalty += 2000; // 2 second penalty
-                    setTimeout(() => {
-                        firstEl.classList.remove('wrong');
-                        cellEl.classList.remove('wrong');
-                    }, 500);
+                    fel.classList.remove('selected'); fel.classList.add('wrong'); el.classList.add('wrong'); matchPenalty += 2000;
+                    setTimeout(() => { fel.classList.remove('wrong'); el.classList.remove('wrong'); }, 500);
                 }
                 matchSelected = null;
             }
         }
-        function updateMatchTimer() {
-            const elapsed = Date.now() - matchStartTime + matchPenalty;
-            const seconds = (elapsed / 1000).toFixed(1);
-            document.getElementById('matchTimer').textContent = `${seconds} ${t('seconds')}`;
-        }
-        function checkMatchComplete() {
-            if (matchCells.every(c => c.matched)) {
-                clearInterval(matchTimerInterval);
-                const finalTime = ((Date.now() - matchStartTime + matchPenalty) / 1000).toFixed(1);
-                document.getElementById('matchFinalTime').textContent = `${finalTime} ${t('seconds')}`;
-                document.querySelector('.match-complete-text').textContent = t('allPairsFound');
-                document.querySelector('#matchComplete .primary-btn').textContent = t('playAgain');
-                document.querySelector('#matchComplete .secondary-btn').textContent = t('back');
-                document.getElementById('matchGrid').style.display = 'none';
-                document.getElementById('matchComplete').classList.add('active');
-            }
-        }
+        function updateMatchTimer() { document.getElementById('matchTimer').textContent = `${((Date.now() - matchStartTime + matchPenalty) / 1000).toFixed(1)}s`; }
+        function checkMatchComplete() { if (matchCells.every(c => c.matched)) { clearInterval(matchTimerInterval); document.getElementById('matchFinalTime').textContent = `${((Date.now() - matchStartTime + matchPenalty) / 1000).toFixed(1)}s`; document.getElementById('matchGrid').style.display = 'none'; document.getElementById('matchComplete').classList.add('active'); } }
         function restartMatch() { startMatch(); }
 
-        // ========== LISTEN CONFIG ==========
-        function showListenConfig() {
-            document.getElementById('listenDeckName').textContent = currentDeck.name;
-            document.getElementById('listenModeQCM').classList.toggle('active', listenConfig.inputMode === 'qcm');
-            document.getElementById('listenModeWritten').classList.toggle('active', listenConfig.inputMode === 'written');
-            document.getElementById('listenCorrectionOptions').style.display = listenConfig.inputMode === 'written' ? 'block' : 'none';
-            updateListenCorrectionUI();
-            showPage('listenConfigPage');
-        }
-        
-        function setListenAnswerMode(mode) {
-            listenConfig.inputMode = mode;
-            document.getElementById('listenModeQCM').classList.toggle('active', mode === 'qcm');
-            document.getElementById('listenModeWritten').classList.toggle('active', mode === 'written');
-            document.getElementById('listenCorrectionOptions').style.display = mode === 'written' ? 'block' : 'none';
-        }
-        
-        function setListenCorrectionLevel(level) {
-            listenConfig.correctionLevel = level;
-            updateListenCorrectionUI();
-        }
-        
-        function updateListenCorrectionUI() {
-            document.querySelectorAll('#listenCorrectionOptions .correction-option').forEach(opt => {
-                opt.classList.toggle('active', opt.dataset.level === listenConfig.correctionLevel);
-            });
-        }
-
         // ========== LISTEN MODE ==========
-        function startListenMode() {
-            listenQueue = currentDeck.cards.map((card, idx) => ({ card, idx }));
-            listenQueue = shuffle(listenQueue);
-            listenIndex = 0;
-            listenCorrect = 0;
-            listenWrong = 0;
-            listenRetrySet = new Set();
-            
-            document.getElementById('listenComplete').classList.remove('active');
-            document.getElementById('listenQuestionArea').style.display = 'flex';
-            
-            showPage('listenPage');
-            renderListenQuestion();
-        }
-        
+        function startListenMode() { listenQueue = shuffle(currentDeck.cards.map((c, i) => ({ card: c, idx: i }))); listenIndex = 0; listenCorrect = 0; listenWrong = 0; listenRetrySet = new Set(); document.getElementById('listenComplete').classList.remove('active'); document.getElementById('listenQuestionArea').style.display = 'flex'; showPage('listenPage'); renderListenQuestion(); }
         function renderListenQuestion() {
-            if (listenIndex >= listenQueue.length) {
-                showListenComplete();
-                return;
-            }
-            
+            if (listenIndex >= listenQueue.length) { showListenComplete(); return; }
             const item = listenQueue[listenIndex];
-            currentListenQuestion = {
-                correctAnswer: item.card.front, // Hear French, answer is English
-                cardIdx: item.idx,
-                card: item.card
-            };
-            
-            // Update progress
+            const playFront = options.frontSide === 'front';
+            const correct = playFront ? getCardBack(item.card) : getCardFront(item.card);
+            const aStyle = playFront ? getBackStyle() : getFrontStyle();
+            currentListenQuestion = { correctAnswer: correct, cardIdx: item.idx, card: item.card, playFront };
             document.getElementById('listenProgress').textContent = `${listenIndex + 1} / ${listenQueue.length}`;
             document.getElementById('listenProgressBar').style.width = `${(listenIndex / listenQueue.length) * 100}%`;
             document.getElementById('listenCount').textContent = listenQueue.length - listenIndex;
-            
-            // Show retry badge if needed
-            const isRetry = listenRetrySet.has(item.idx);
-            document.getElementById('listenRetryBadge').style.display = isRetry ? 'block' : 'none';
-            document.getElementById('listenRetryBadge').textContent = t('tryAgain');
-            
-            // Update prompt text
-            document.getElementById('listenPromptText').textContent = t('listenToWord');
-            
-            // Reset written input
-            const writtenInput = document.getElementById('listenWrittenInput');
-            const writtenFeedback = document.getElementById('listenWrittenFeedback');
-            writtenInput.value = '';
-            writtenInput.classList.remove('correct', 'wrong');
-            writtenInput.disabled = false;
-            writtenFeedback.style.display = 'none';
-            
+            document.getElementById('listenRetryBadge').style.display = listenRetrySet.has(item.idx) ? 'block' : 'none';
+            const wi = document.getElementById('listenWrittenInput'), wf = document.getElementById('listenWrittenFeedback');
+            wi.value = ''; wi.classList.remove('correct', 'wrong'); wi.disabled = false; wf.style.display = 'none';
             if (listenConfig.inputMode === 'written') {
-                // Written mode
                 document.getElementById('listenAnswersList').style.display = 'none';
                 document.getElementById('listenWrittenArea').style.display = 'block';
-                writtenInput.placeholder = t('typeYourAnswer');
-                writtenInput.style.direction = 'ltr';
-                writtenInput.style.fontFamily = "'Inter', sans-serif";
+                wi.placeholder = 'Tapez votre réponse...'; wi.style.direction = aStyle.dir; wi.style.fontFamily = aStyle.font;
             } else {
-                // QCM mode
                 document.getElementById('listenAnswersList').style.display = 'flex';
                 document.getElementById('listenWrittenArea').style.display = 'none';
-                
-                const otherCards = currentDeck.cards.filter((c, i) => i !== item.idx);
-                const allAnswers = shuffle([item.card, ...shuffle(otherCards).slice(0, 3)]);
-                
-                document.getElementById('listenAnswersList').innerHTML = allAnswers.map((ans, i) => {
-                    return `<button class="answer-btn" onclick="checkListenAnswer(${i}, ${allAnswers.indexOf(item.card)}, ${item.idx})">${ans.front}</button>`;
-                }).join('');
+                const others = shuffle(currentDeck.cards.filter((c, i) => i !== item.idx)).slice(0, 3);
+                const all = shuffle([item.card, ...others]);
+                const rtl = aStyle.dir === 'rtl';
+                document.getElementById('listenAnswersList').innerHTML = all.map((a, i) => `<button class="answer-btn ${rtl ? 'rtl' : ''}" onclick="checkListenAnswer(${i}, ${all.indexOf(item.card)}, ${item.idx})">${playFront ? getCardBack(a) : getCardFront(a)}</button>`).join('');
             }
-            
-            // Auto-play audio after a short delay
-            setTimeout(() => playListenAudio(), 500);
+            setTimeout(playListenAudio, 500);
         }
-        
-        function playListenAudio() {
-            if (currentListenQuestion.card) {
-                speak(currentListenQuestion.card.back); // Speak French, user guesses English
-            }
-        }
-        
-        function checkListenAnswer(sel, correct, cardIdx) {
-            const buttons = document.querySelectorAll('#listenAnswersList .answer-btn');
-            buttons[correct].classList.add('correct');
-            
-            if (sel === correct) {
-                listenCorrect++;
-                listenRetrySet.delete(cardIdx);
-                setTimeout(() => { listenIndex++; renderListenQuestion(); }, 600);
-            } else {
-                buttons[sel].classList.add('wrong');
-                listenWrong++;
-                listenRetrySet.add(cardIdx);
-                setTimeout(() => { listenIndex++; renderListenQuestion(); }, 1200);
-            }
-            buttons.forEach(b => b.disabled = true);
-        }
-        
-        function submitListenWrittenAnswer() {
-            const input = document.getElementById('listenWrittenInput');
-            const feedback = document.getElementById('listenWrittenFeedback');
-            const userAnswer = input.value.trim();
-            
-            if (!userAnswer) return;
-            
-            const isCorrect = checkWrittenAnswer(userAnswer, currentListenQuestion.correctAnswer, listenConfig.correctionLevel);
-            
-            input.disabled = true;
-            input.classList.add(isCorrect ? 'correct' : 'wrong');
-            
-            feedback.style.display = 'block';
-            feedback.className = 'written-feedback ' + (isCorrect ? 'correct' : 'wrong');
-            
-            if (isCorrect) {
-                feedback.innerHTML = `✓ ${t('correctLabel')}`;
-                listenCorrect++;
-                listenRetrySet.delete(currentListenQuestion.cardIdx);
-            } else {
-                feedback.innerHTML = `✗ ${t('incorrectLabel')}<div class="correct-answer">${t('correctAnswerWas')} ${currentListenQuestion.correctAnswer}</div>`;
-                listenWrong++;
-                listenRetrySet.add(currentListenQuestion.cardIdx);
-            }
-            
-            setTimeout(() => { listenIndex++; renderListenQuestion(); }, isCorrect ? 1000 : 2000);
-        }
-        
-        function showListenComplete() {
-            document.getElementById('listenQuestionArea').style.display = 'none';
-            document.getElementById('listenComplete').classList.add('active');
-            document.getElementById('listenCompleteStats').textContent = `✅ ${listenCorrect} ${t('correct')} · ❌ ${listenWrong} ${t('errors')}`;
-        }
-
-        // ========== IMAGE CONFIG ==========
-        function showImageConfig() {
-            // Check if deck has images/emojis
-            const hasVisuals = currentDeck.cards.some(c => c.emoji || c.image);
-            if (!hasVisuals) {
-                alert(currentLang === 'fr' ? 'Ce deck n\'a pas d\'images ou émojis. Ajoutez "emoji" ou "image" aux cartes.' : 'This deck has no images or emojis. Add "emoji" or "image" to cards.');
-                return;
-            }
-            document.getElementById('imageDeckName').textContent = currentDeck.name;
-            document.getElementById('imageModeQCM').classList.toggle('active', imageConfig.inputMode === 'qcm');
-            document.getElementById('imageModeWritten').classList.toggle('active', imageConfig.inputMode === 'written');
-            document.getElementById('imageCorrectionOptions').style.display = imageConfig.inputMode === 'written' ? 'block' : 'none';
-            updateImageCorrectionUI();
-            showPage('imageConfigPage');
-        }
-        
-        function setImageAnswerMode(mode) {
-            imageConfig.inputMode = mode;
-            document.getElementById('imageModeQCM').classList.toggle('active', mode === 'qcm');
-            document.getElementById('imageModeWritten').classList.toggle('active', mode === 'written');
-            document.getElementById('imageCorrectionOptions').style.display = mode === 'written' ? 'block' : 'none';
-        }
-        
-        function setImageCorrectionLevel(level) {
-            imageConfig.correctionLevel = level;
-            updateImageCorrectionUI();
-        }
-        
-        function updateImageCorrectionUI() {
-            document.querySelectorAll('#imageCorrectionOptions .correction-option').forEach(opt => {
-                opt.classList.toggle('active', opt.dataset.level === imageConfig.correctionLevel);
-            });
-        }
+        function playListenAudio() { if (currentListenQuestion.card) { const t = currentListenQuestion.playFront ? getCardFront(currentListenQuestion.card) : getCardBack(currentListenQuestion.card); speakText(t, currentListenQuestion.playFront ? getFrontStyle().lang : getBackStyle().lang); } }
+        function checkListenAnswer(sel, correct, cardIdx) { const btns = document.querySelectorAll('#listenAnswersList .answer-btn'); btns[correct].classList.add('correct'); sel === correct ? (listenCorrect++, listenRetrySet.delete(cardIdx), setTimeout(() => { listenIndex++; renderListenQuestion(); }, 600)) : (btns[sel].classList.add('wrong'), listenWrong++, listenRetrySet.add(cardIdx), setTimeout(() => { listenIndex++; renderListenQuestion(); }, 1200)); btns.forEach(b => b.disabled = true); }
+        function submitListenWrittenAnswer() { const i = document.getElementById('listenWrittenInput'), f = document.getElementById('listenWrittenFeedback'), u = i.value.trim(); if (!u) return; const ok = checkWrittenAnswer(u, currentListenQuestion.correctAnswer, listenConfig.correctionLevel); i.disabled = true; i.classList.add(ok ? 'correct' : 'wrong'); f.style.display = 'block'; f.className = 'written-feedback ' + (ok ? 'correct' : 'wrong'); f.innerHTML = ok ? '✓ Correct' : `✗ Incorrect<div class="correct-answer">→ ${currentListenQuestion.correctAnswer}</div>`; ok ? (listenCorrect++, listenRetrySet.delete(currentListenQuestion.cardIdx)) : (listenWrong++, listenRetrySet.add(currentListenQuestion.cardIdx)); setTimeout(() => { listenIndex++; renderListenQuestion(); }, ok ? 1000 : 2000); }
+        function showListenComplete() { document.getElementById('listenQuestionArea').style.display = 'none'; document.getElementById('listenComplete').classList.add('active'); document.getElementById('listenCompleteStats').textContent = `✅ ${listenCorrect} · ❌ ${listenWrong}`; }
 
         // ========== IMAGE MODE ==========
-        function startImageMode() {
-            // Filter cards that have emoji or image
-            const cardsWithVisual = currentDeck.cards.filter(c => c.emoji || c.image);
-            imageQueue = cardsWithVisual.map((card, idx) => ({ card, idx: currentDeck.cards.indexOf(card) }));
-            imageQueue = shuffle(imageQueue);
-            imageIndex = 0;
-            imageCorrect = 0;
-            imageWrong = 0;
-            imageRetrySet = new Set();
-            
-            document.getElementById('imageComplete').classList.remove('active');
-            document.getElementById('imageQuestionArea').style.display = 'flex';
-            
-            showPage('imagePage');
-            renderImageQuestion();
-        }
-        
+        function startImageMode() { const cards = currentDeck.cards.filter(c => c.emoji || c.image); if (!cards.length) { alert('Pas d\'images dans ce deck'); return; } imageQueue = shuffle(cards.map(c => ({ card: c, idx: currentDeck.cards.indexOf(c) }))); imageIndex = 0; imageCorrect = 0; imageWrong = 0; imageRetrySet = new Set(); document.getElementById('imageComplete').classList.remove('active'); document.getElementById('imageQuestionArea').style.display = 'flex'; showPage('imagePage'); renderImageQuestion(); }
         function renderImageQuestion() {
-            if (imageIndex >= imageQueue.length) {
-                showImageComplete();
-                return;
-            }
-            
+            if (imageIndex >= imageQueue.length) { showImageComplete(); return; }
             const item = imageQueue[imageIndex];
-            // Ask for French word (back) based on image/emoji
-            currentImageQuestion = {
-                correctAnswer: item.card.back,
-                cardIdx: item.idx,
-                card: item.card
-            };
-            
-            // Update progress
+            const askFront = options.frontSide === 'front';
+            const correct = askFront ? getCardFront(item.card) : getCardBack(item.card);
+            const aStyle = askFront ? getFrontStyle() : getBackStyle();
+            currentImageQuestion = { correctAnswer: correct, cardIdx: item.idx, card: item.card };
             document.getElementById('imageProgress').textContent = `${imageIndex + 1} / ${imageQueue.length}`;
             document.getElementById('imageProgressBar').style.width = `${(imageIndex / imageQueue.length) * 100}%`;
             document.getElementById('imageCount').textContent = imageQueue.length - imageIndex;
-            
-            // Show retry badge if needed
-            const isRetry = imageRetrySet.has(item.idx);
-            document.getElementById('imageRetryBadge').style.display = isRetry ? 'block' : 'none';
-            document.getElementById('imageRetryBadge').textContent = t('tryAgain');
-            
-            // Display image or emoji
-            const display = document.getElementById('imageDisplay');
-            if (item.card.image) {
-                display.innerHTML = `<img src="${item.card.image}" alt="" style="max-width:150px; max-height:150px; border-radius:10px;">`;
-            } else {
-                display.textContent = item.card.emoji || '❓';
-            }
-            
-            document.getElementById('imageQuestion').textContent = currentDeck.imageQuestion || t('whatIsThis');
-            
-            // Reset written input
-            const writtenInput = document.getElementById('imageWrittenInput');
-            const writtenFeedback = document.getElementById('imageWrittenFeedback');
-            writtenInput.value = '';
-            writtenInput.classList.remove('correct', 'wrong');
-            writtenInput.disabled = false;
-            writtenFeedback.style.display = 'none';
-            
+            document.getElementById('imageRetryBadge').style.display = imageRetrySet.has(item.idx) ? 'block' : 'none';
+            document.getElementById('imageDisplay').innerHTML = item.card.image ? `<img src="${item.card.image}" style="max-width:150px;border-radius:10px">` : (item.card.emoji || '❓');
+            document.getElementById('imageQuestion').textContent = currentDeck.imageQuestion || 'Qu\'est-ce que c\'est ?';
+            const wi = document.getElementById('imageWrittenInput'), wf = document.getElementById('imageWrittenFeedback');
+            wi.value = ''; wi.classList.remove('correct', 'wrong'); wi.disabled = false; wf.style.display = 'none';
             if (imageConfig.inputMode === 'written') {
-                // Written mode - expect Arabic answer
                 document.getElementById('imageAnswersList').style.display = 'none';
                 document.getElementById('imageWrittenArea').style.display = 'block';
-                writtenInput.placeholder = t('typeYourAnswer');
-                writtenInput.style.direction = 'rtl';
-                writtenInput.style.fontFamily = "'Inter', sans-serif";
-                writtenInput.focus();
+                wi.placeholder = 'Tapez votre réponse...'; wi.style.direction = aStyle.dir; wi.style.fontFamily = aStyle.font; wi.focus();
             } else {
-                // QCM mode
                 document.getElementById('imageAnswersList').style.display = 'flex';
                 document.getElementById('imageWrittenArea').style.display = 'none';
-                
-                const otherCards = currentDeck.cards.filter((c, i) => i !== item.idx);
-                const allAnswers = shuffle([item.card, ...shuffle(otherCards).slice(0, 3)]);
-                
-                document.getElementById('imageAnswersList').innerHTML = allAnswers.map((ans, i) => {
-                    return `<button class="answer-btn" onclick="checkImageAnswer(${i}, ${allAnswers.indexOf(item.card)}, ${item.idx})">${ans.back}</button>`;
-                }).join('');
+                const others = shuffle(currentDeck.cards.filter((c, i) => i !== item.idx)).slice(0, 3);
+                const all = shuffle([item.card, ...others]);
+                const rtl = aStyle.dir === 'rtl';
+                document.getElementById('imageAnswersList').innerHTML = all.map((a, i) => `<button class="answer-btn ${rtl ? 'rtl' : ''}" onclick="checkImageAnswer(${i}, ${all.indexOf(item.card)}, ${item.idx})">${askFront ? getCardFront(a) : getCardBack(a)}</button>`).join('');
             }
         }
-        
-        function checkImageAnswer(sel, correct, cardIdx) {
-            const buttons = document.querySelectorAll('#imageAnswersList .answer-btn');
-            buttons[correct].classList.add('correct');
-            
-            if (sel === correct) {
-                imageCorrect++;
-                imageRetrySet.delete(cardIdx);
-                setTimeout(() => { imageIndex++; renderImageQuestion(); }, 600);
-            } else {
-                buttons[sel].classList.add('wrong');
-                imageWrong++;
-                imageRetrySet.add(cardIdx);
-                setTimeout(() => { imageIndex++; renderImageQuestion(); }, 1200);
-            }
-            buttons.forEach(b => b.disabled = true);
-        }
-        
-        function submitImageWrittenAnswer() {
-            const input = document.getElementById('imageWrittenInput');
-            const feedback = document.getElementById('imageWrittenFeedback');
-            const userAnswer = input.value.trim();
-            
-            if (!userAnswer) return;
-            
-            const isCorrect = checkWrittenAnswer(userAnswer, currentImageQuestion.correctAnswer, imageConfig.correctionLevel);
-            
-            input.disabled = true;
-            input.classList.add(isCorrect ? 'correct' : 'wrong');
-            
-            feedback.style.display = 'block';
-            feedback.className = 'written-feedback ' + (isCorrect ? 'correct' : 'wrong');
-            
-            if (isCorrect) {
-                feedback.innerHTML = `✓ ${t('correctLabel')}`;
-                imageCorrect++;
-                imageRetrySet.delete(currentImageQuestion.cardIdx);
-            } else {
-                feedback.innerHTML = `✗ ${t('incorrectLabel')}<div class="correct-answer">${t('correctAnswerWas')} ${currentImageQuestion.correctAnswer}</div>`;
-                imageWrong++;
-                imageRetrySet.add(currentImageQuestion.cardIdx);
-            }
-            
-            setTimeout(() => { imageIndex++; renderImageQuestion(); }, isCorrect ? 1000 : 2000);
-        }
-        
-        function showImageComplete() {
-            document.getElementById('imageQuestionArea').style.display = 'none';
-            document.getElementById('imageComplete').classList.add('active');
-            document.getElementById('imageCompleteStats').textContent = `✅ ${imageCorrect} ${t('correct')} · ❌ ${imageWrong} ${t('errors')}`;
-        }
+        function checkImageAnswer(sel, correct, cardIdx) { const btns = document.querySelectorAll('#imageAnswersList .answer-btn'); btns[correct].classList.add('correct'); sel === correct ? (imageCorrect++, imageRetrySet.delete(cardIdx), setTimeout(() => { imageIndex++; renderImageQuestion(); }, 600)) : (btns[sel].classList.add('wrong'), imageWrong++, imageRetrySet.add(cardIdx), setTimeout(() => { imageIndex++; renderImageQuestion(); }, 1200)); btns.forEach(b => b.disabled = true); }
+        function submitImageWrittenAnswer() { const i = document.getElementById('imageWrittenInput'), f = document.getElementById('imageWrittenFeedback'), u = i.value.trim(); if (!u) return; const ok = checkWrittenAnswer(u, currentImageQuestion.correctAnswer, imageConfig.correctionLevel); i.disabled = true; i.classList.add(ok ? 'correct' : 'wrong'); f.style.display = 'block'; f.className = 'written-feedback ' + (ok ? 'correct' : 'wrong'); f.innerHTML = ok ? '✓ Correct' : `✗ Incorrect<div class="correct-answer">→ ${currentImageQuestion.correctAnswer}</div>`; ok ? (imageCorrect++, imageRetrySet.delete(currentImageQuestion.cardIdx)) : (imageWrong++, imageRetrySet.add(currentImageQuestion.cardIdx)); setTimeout(() => { imageIndex++; renderImageQuestion(); }, ok ? 1000 : 2000); }
+        function showImageComplete() { document.getElementById('imageQuestionArea').style.display = 'none'; document.getElementById('imageComplete').classList.add('active'); document.getElementById('imageCompleteStats').textContent = `✅ ${imageCorrect} · ❌ ${imageWrong}`; }
 
         // ========== OPTIONS ==========
-        let currentOptionsMode = 'cards'; // cards, learn, test
-        
-        function openOptions(mode = 'cards') {
-            currentOptionsMode = mode;
-            document.getElementById('optionsModal').classList.add('active');
-            document.getElementById('toggleShuffle').classList.toggle('active', options.shuffle);
-            document.querySelectorAll('.side-btn').forEach(btn => btn.classList.toggle('active', btn.dataset.side === options.frontSide));
-            
-            // Show/hide answer mode options based on mode
-            const answerModeGroup = document.getElementById('answerModeGroup');
-            if (mode === 'learn' || mode === 'test' || mode === 'listen' || mode === 'image') {
-                answerModeGroup.style.display = 'block';
-                const config = mode === 'learn' ? learnConfig : (mode === 'listen' ? listenConfig : (mode === 'image' ? imageConfig : testConfig));
-                document.getElementById('modeQCM').classList.toggle('active', config.inputMode === 'qcm');
-                document.getElementById('modeWritten').classList.toggle('active', config.inputMode === 'written');
-                document.getElementById('correctionOptions').style.display = config.inputMode === 'written' ? 'block' : 'none';
-                updateCorrectionUI(config.correctionLevel);
-            } else {
-                answerModeGroup.style.display = 'none';
-            }
-        }
-        
+        let currentOptionsMode = 'cards';
+        function openOptions(mode = 'cards') { currentOptionsMode = mode; document.getElementById('optionsModal').classList.add('active'); document.getElementById('toggleShuffle').classList.toggle('active', options.shuffle); document.querySelectorAll('.side-btn').forEach(b => b.classList.toggle('active', b.dataset.side === options.frontSide)); const amg = document.getElementById('answerModeGroup'); if (['learn', 'test', 'listen', 'image'].includes(mode)) { amg.style.display = 'block'; const cfg = mode === 'learn' ? learnConfig : mode === 'listen' ? listenConfig : mode === 'image' ? imageConfig : testConfig; document.getElementById('modeQCM').classList.toggle('active', cfg.inputMode === 'qcm'); document.getElementById('modeWritten').classList.toggle('active', cfg.inputMode === 'written'); document.getElementById('correctionOptions').style.display = cfg.inputMode === 'written' ? 'block' : 'none'; document.querySelectorAll('#correctionOptions .correction-option').forEach(o => o.classList.toggle('active', o.dataset.level === cfg.correctionLevel)); } else amg.style.display = 'none'; }
         function closeOptions() { document.getElementById('optionsModal').classList.remove('active'); }
-        function toggleOption(opt) { options[opt] = !options[opt]; document.getElementById('toggleShuffle').classList.toggle('active', options.shuffle); }
-        function setSide(side) { options.frontSide = side; document.querySelectorAll('.side-btn').forEach(btn => btn.classList.toggle('active', btn.dataset.side === side)); }
-        
-        function setAnswerMode(mode) {
-            document.getElementById('modeQCM').classList.toggle('active', mode === 'qcm');
-            document.getElementById('modeWritten').classList.toggle('active', mode === 'written');
-            document.getElementById('correctionOptions').style.display = mode === 'written' ? 'block' : 'none';
-            
-            if (currentOptionsMode === 'learn') {
-                learnConfig.inputMode = mode;
-            } else if (currentOptionsMode === 'test') {
-                testConfig.inputMode = mode;
-            } else if (currentOptionsMode === 'listen') {
-                listenConfig.inputMode = mode;
-            } else if (currentOptionsMode === 'image') {
-                imageConfig.inputMode = mode;
-            }
-        }
-        
-        function setCorrectionLevel(level) {
-            if (currentOptionsMode === 'learn') {
-                learnConfig.correctionLevel = level;
-            } else if (currentOptionsMode === 'test') {
-                testConfig.correctionLevel = level;
-            } else if (currentOptionsMode === 'listen') {
-                listenConfig.correctionLevel = level;
-            } else if (currentOptionsMode === 'image') {
-                imageConfig.correctionLevel = level;
-            }
-            updateCorrectionUI(level);
-        }
-        
-        function updateCorrectionUI(level) {
-            document.querySelectorAll('.correction-option').forEach(opt => {
-                const optLevel = opt.querySelector('.correction-label').textContent.toLowerCase();
-                const isActive = optLevel === level || 
-                    (optLevel === t('flexible').toLowerCase() && level === 'flexible') ||
-                    (optLevel === t('moderate').toLowerCase() && level === 'moderate') ||
-                    (optLevel === t('strict').toLowerCase() && level === 'strict');
-                opt.classList.toggle('active', opt.textContent.toLowerCase().includes(level));
-            });
-            // Simpler approach - reset all and set the right one
-            const options = document.querySelectorAll('.correction-option');
-            options.forEach((opt, i) => {
-                opt.classList.toggle('active', 
-                    (i === 0 && level === 'flexible') ||
-                    (i === 1 && level === 'moderate') ||
-                    (i === 2 && level === 'strict')
-                );
-            });
-        }
-        
-        function restartWithOptions() { 
-            closeOptions(); 
-            if (currentOptionsMode === 'learn') startLearnMode();
-            else if (currentOptionsMode === 'test') startTestConfig();
-            else if (currentOptionsMode === 'listen') startListenMode();
-            else if (currentOptionsMode === 'image') startImageMode();
-            else startCardsMode(); 
-        }
-
-        // ========== UTILS ==========
-        function shuffle(arr) { const a = [...arr]; for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; }
-
-        // ========== i18n INIT ==========
-        function initI18n() {
-            // Home
-            document.querySelector('.home-header h1').textContent = t('appTitle');
-            document.querySelector('.home-header p').textContent = t('chooseDeck');
-            // Deck modes
-            document.querySelectorAll('.mode-btn').forEach((btn, i) => {
-                const modes = [
-                    { name: 'modeCards', desc: 'modeCardsDesc' },
-                    { name: 'modeLearn', desc: 'modeLearnDesc' },
-                    { name: 'modeTest', desc: 'modeTestDesc' },
-                    { name: 'modeMatch', desc: 'modeMatchDesc' },
-                    { name: 'modeListen', desc: 'modeListenDesc' },
-                    { name: 'modeImage', desc: 'modeImageDesc' }
-                ];
-                if (modes[i]) {
-                    btn.querySelector('.mode-name').textContent = t(modes[i].name);
-                    btn.querySelector('.mode-desc').textContent = t(modes[i].desc);
-                }
-            });
-            // Cards
-            document.querySelector('.tap-hint').textContent = t('tapToFlip');
-            document.querySelectorAll('.swipe-hint.left span:last-child').forEach(el => el.textContent = t('toReview'));
-            document.querySelectorAll('.swipe-hint.right span:last-child').forEach(el => el.textContent = t('known'));
-            document.querySelector('.swipe-indicator.left').textContent = t('learning');
-            document.querySelector('.swipe-indicator.right').textContent = t('known');
-            // Stats labels
-            document.querySelectorAll('.stat-label').forEach((el, i) => {
-                el.textContent = i === 0 ? t('known') : t('learning');
-            });
-            // Test config
-            document.querySelector('.config-title').textContent = t('configureTest');
-            document.querySelectorAll('.config-label').forEach((el, i) => {
-                if (i === 0) el.textContent = t('numQuestions');
-                if (i === 1) el.textContent = t('multipleChoice');
-            });
-            document.querySelector('.start-test-btn').textContent = t('startTest');
-            document.getElementById('testNextBtn').textContent = t('next');
-            // Match intro
-            document.querySelector('.match-intro-title').textContent = t('readyToPlay');
-            document.querySelector('.match-intro-desc').textContent = t('matchInstructions');
-            document.querySelector('#matchIntroPage .primary-btn').textContent = t('startGame');
-            // Options modal
-            document.querySelector('.modal-title').textContent = t('options');
-            document.querySelectorAll('.option-group-title').forEach((el, i) => {
-                el.textContent = i === 0 ? t('general') : t('cardSide');
-            });
-            document.querySelectorAll('.option-label').forEach((el, i) => {
-                if (i === 0) el.textContent = t('shuffleCards');
-                if (i === 1) el.textContent = t('front');
-            });
-            document.querySelectorAll('.side-btn').forEach((el, i) => {
-                el.textContent = i === 0 ? t('english') : t('french');
-            });
-            document.querySelector('#optionsModal .primary-btn').textContent = t('browseAgain');
-            // Update html lang
-            document.documentElement.lang = lang;
-        }
+        function toggleOption(o) { options[o] = !options[o]; document.getElementById('toggleShuffle').classList.toggle('active', options.shuffle); }
+        function setSide(s) { options.frontSide = s; document.querySelectorAll('.side-btn').forEach(b => b.classList.toggle('active', b.dataset.side === s)); }
+        function setAnswerMode(m) { document.getElementById('modeQCM').classList.toggle('active', m === 'qcm'); document.getElementById('modeWritten').classList.toggle('active', m === 'written'); document.getElementById('correctionOptions').style.display = m === 'written' ? 'block' : 'none'; if (currentOptionsMode === 'learn') learnConfig.inputMode = m; else if (currentOptionsMode === 'listen') listenConfig.inputMode = m; else if (currentOptionsMode === 'image') imageConfig.inputMode = m; else testConfig.inputMode = m; }
+        function setCorrectionLevel(l) { if (currentOptionsMode === 'learn') learnConfig.correctionLevel = l; else if (currentOptionsMode === 'listen') listenConfig.correctionLevel = l; else if (currentOptionsMode === 'image') imageConfig.correctionLevel = l; else testConfig.correctionLevel = l; document.querySelectorAll('#correctionOptions .correction-option').forEach(o => o.classList.toggle('active', o.dataset.level === l)); }
+        function restartWithOptions() { closeOptions(); if (currentOptionsMode === 'learn') startLearnMode(); else if (currentOptionsMode === 'test') startTestConfig(); else if (currentOptionsMode === 'listen') startListenMode(); else if (currentOptionsMode === 'image') startImageMode(); else startCardsMode(); }
 
         // ========== INIT ==========
-        initI18n();
-        loadDecks();
+        loadCourses();
     </script>
 </body>
 </html>
