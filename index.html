@@ -921,7 +921,6 @@
             currentCourse = courses.find(c => c.id === id);
             if (!currentCourse) return;
             localStorage.setItem('learn-lang-course', id);
-            document.getElementById('currentCourseFlag').textContent = currentCourse.flag;
             document.getElementById('homeTitle').textContent = `${currentCourse.flag} ${currentCourse.nameLocal}`;
             updateSideSelector();
             loadDecks();
