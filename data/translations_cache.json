@@ -1,0 +1,18 @@
+{
+  "tête": { "en": "head", "ar": "رَأْس", "translit": "ra's" },
+  "cheveux": { "en": "hair", "ar": "شَعْر", "translit": "sha'r" },
+  "œil": { "en": "eye", "ar": "عَيْن", "translit": "'ayn" },
+  "nez": { "en": "nose", "ar": "أَنْف", "translit": "anf" },
+  "bouche": { "en": "mouth", "ar": "فَم", "translit": "fam" },
+  "oreille": { "en": "ear", "ar": "أُذُن", "translit": "udhun" },
+  "cou": { "en": "neck", "ar": "رَقَبَة", "translit": "raqaba" },
+  "épaule": { "en": "shoulder", "ar": "كَتِف", "translit": "katif" },
+  "bras": { "en": "arm", "ar": "ذِرَاع", "translit": "dhira'" },
+  "main": { "en": "hand", "ar": "يَد", "translit": "yad" },
+  "doigt": { "en": "finger", "ar": "إِصْبَع", "translit": "isba'" },
+  "dos": { "en": "back", "ar": "ظَهْر", "translit": "dhahr" },
+  "ventre": { "en": "belly", "ar": "بَطْن", "translit": "batn" },
+  "jambe": { "en": "leg", "ar": "سَاق", "translit": "saq" },
+  "pied": { "en": "foot", "ar": "قَدَم", "translit": "qadam" },
+  "cœur": { "en": "heart", "ar": "قَلْب", "translit": "qalb" }
+}

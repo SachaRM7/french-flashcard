@@ -1,0 +1,23 @@
+{
+  "id": "corps-humain",
+  "name": "Le corps humain",
+  "category": "Vocabulaire",
+  "cards": [
+    { "fr": "tête", "emoji": "🗣️" },
+    { "fr": "cheveux", "emoji": "💇" },
+    { "fr": "œil", "emoji": "👁️" },
+    { "fr": "nez", "emoji": "👃" },
+    { "fr": "bouche", "emoji": "👄" },
+    { "fr": "oreille", "emoji": "👂" },
+    { "fr": "cou", "emoji": "🦒" },
+    { "fr": "épaule", "emoji": "🤷" },
+    { "fr": "bras", "emoji": "💪" },
+    { "fr": "main", "emoji": "🖐️" },
+    { "fr": "doigt", "emoji": "👆" },
+    { "fr": "dos", "emoji": "🔙" },
+    { "fr": "ventre", "emoji": "🫃" },
+    { "fr": "jambe", "emoji": "🦵" },
+    { "fr": "pied", "emoji": "🦶" },
+    { "fr": "cœur", "emoji": "❤️" }
+  ]
+}
