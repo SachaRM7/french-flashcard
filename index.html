@@ -187,8 +187,8 @@
         .swipe-indicator.left { left: 15px; background: var(--accent-orange); color: #000; }
         .swipe-indicator.right { right: 15px; background: var(--accent-green); color: #000; }
         .swipe-card.swiping-right .swipe-indicator.right, .swipe-card.swiping-left .swipe-indicator.left { opacity: 1; }
-        .card-audio { position: absolute; top: 15px; left: 15px; width: 36px; height: 36px; background: var(--bg-secondary); border: 1px solid var(--border); border-radius: 8px; color: var(--text-primary); cursor: pointer; font-size: 1rem; }
-        .card-star { position: absolute; top: 15px; right: 15px; width: 36px; height: 36px; background: transparent; border: none; color: var(--text-secondary); cursor: pointer; font-size: 1.3rem; }
+        .card-audio { position: absolute; top: 15px; left: 15px; width: 36px; height: 36px; background: var(--bg-secondary); border: 1px solid var(--border); border-radius: 8px; color: var(--text-primary); cursor: pointer; font-size: 1rem; z-index: 10; }
+        .card-star { position: absolute; top: 15px; right: 15px; width: 36px; height: 36px; background: transparent; border: none; color: var(--text-secondary); cursor: pointer; font-size: 1.3rem; z-index: 10; }
         .card-star.active { color: var(--accent-orange); }
         .front-text { font-size: 2.5rem; line-height: 1.4; text-align: center; margin-bottom: 10px; }
         .translit-text { font-size: 1rem; color: var(--text-secondary); font-style: italic; }
@@ -1085,18 +1085,47 @@
             card.addEventListener('mousemove', onMove);
             card.addEventListener('mouseup', onEnd);
             
-            // Click fallback for tap
+            // Button events FIRST (before card click)
+            const audioBtn = card.querySelector('.card-audio');
+            const starBtn = card.querySelector('.card-star');
+            
+            if (audioBtn) {
+                audioBtn.addEventListener('click', e => {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    e.stopImmediatePropagation();
+                    speakCurrent();
+                }, true);
+                audioBtn.addEventListener('touchend', e => {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    e.stopImmediatePropagation();
+                    speakCurrent();
+                }, true);
+            }
+            
+            if (starBtn) {
+                starBtn.addEventListener('click', e => {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    e.stopImmediatePropagation();
+                    toggleStar();
+                }, true);
+                starBtn.addEventListener('touchend', e => {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    e.stopImmediatePropagation();
+                    toggleStar();
+                }, true);
+            }
+            
+            // Click fallback for tap (only if not on button)
             card.addEventListener('click', e => {
-                if (!e.target.closest('button') && !moved) {
+                if (e.target.closest('.card-audio') || e.target.closest('.card-star')) return;
+                if (!moved) {
                     document.getElementById('cardInner').classList.toggle('flipped');
                 }
             });
-            
-            // Button events
-            const audioBtn = card.querySelector('.card-audio');
-            const starBtn = card.querySelector('.card-star');
-            if (audioBtn) audioBtn.onclick = e => { e.stopPropagation(); speakCurrent(); };
-            if (starBtn) starBtn.onclick = e => { e.stopPropagation(); toggleStar(); };
         }
 
         function speakCurrent() { const c = currentCards[currentIndex]; options.frontSide === 'front' ? speakText(getCardFront(c), getFrontStyle().lang) : speakText(getCardBack(c), getBackStyle().lang); }
