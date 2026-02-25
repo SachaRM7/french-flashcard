@@ -807,6 +807,11 @@
                     <span class="option-label">Mélanger les cartes</span>
                     <div class="toggle" id="toggleShuffle" onclick="toggleOption('shuffle')"></div>
                 </div>
+                <div class="option-row" id="favoritesRow">
+                    <span class="option-label">⭐ Favoris uniquement</span>
+                    <div class="toggle" id="toggleFavorites" onclick="toggleOption('favoritesOnly')"></div>
+                </div>
+                <div class="favorites-count" id="favoritesCount" style="font-size: 0.8rem; color: var(--text-secondary); margin-top: 4px; display: none;"></div>
             </div>
             <div class="option-group" id="sideOptionGroup">
                 <div class="option-group-title">Direction</div>
@@ -846,7 +851,7 @@
         // ========== STATE ==========
         let courses = [], currentCourse = null, decks = [], currentDeck = null;
         let currentCards = [], currentIndex = 0, knownCards = new Set(), learningCards = new Set(), history = [], starred = new Set();
-        let options = { shuffle: false, frontSide: 'front' };
+        let options = { shuffle: false, frontSide: 'front', favoritesOnly: false };
 
         // Learn
         let learnQueue = [], learnIndex = 0, learnCycle = 1, learnCorrect = 0, learnWrong = 0, retrySet = new Set();
@@ -1019,9 +1024,19 @@
         }
         function exitMode() { saveProgress(); openDeck(currentDeck.id); }
 
+        // ========== CARD FILTERING ==========
+        function getFilteredCards() {
+            let cards = [...currentDeck.cards];
+            if (options.favoritesOnly) {
+                cards = cards.filter((c, i) => starred.has(i));
+            }
+            return options.shuffle ? shuffle(cards) : cards;
+        }
+
         // ========== CARDS MODE ==========
         function startCardsMode() {
-            currentCards = options.shuffle ? shuffle([...currentDeck.cards]) : [...currentDeck.cards];
+            currentCards = getFilteredCards();
+            if (currentCards.length === 0) { alert('Aucune carte favorite ! Ajoute des favoris avec le bouton ⭐'); return; }
             currentIndex = 0; history = [];
             document.getElementById('cardsComplete').classList.remove('active');
             document.getElementById('cardWrapper').style.display = 'block';
@@ -1188,8 +1203,14 @@
         function showCardsComplete() { document.getElementById('cardWrapper').style.display = 'none'; document.querySelector('.cards-controls').style.display = 'none'; document.getElementById('cardsComplete').classList.add('active'); document.getElementById('cardsCompleteStats').textContent = `${knownCards.size} acquis · ${learningCards.size} en cours`; saveProgress(); }
 
         // ========== LEARN MODE ==========
-        function startLearnMode() { learnCycle = 1; learnCorrect = 0; learnWrong = 0; retrySet = new Set(); buildLearnQueue(); document.getElementById('learnComplete').classList.remove('active'); document.getElementById('questionArea').style.display = 'flex'; showPage('learnPage'); renderQuestion(); }
-        function buildLearnQueue() { learnQueue = currentDeck.cards.map((c, i) => ({ card: c, idx: i })).filter(i => !knownCards.has(i.idx)); if (retrySet.size) { const r = [...retrySet].map(i => ({ card: currentDeck.cards[i], idx: i, isRetry: true })); learnQueue = [...shuffle(r), ...shuffle(learnQueue.filter(i => !retrySet.has(i.idx)))]; } else learnQueue = shuffle(learnQueue); learnIndex = 0; }
+        function startLearnMode() { learnCycle = 1; learnCorrect = 0; learnWrong = 0; retrySet = new Set(); buildLearnQueue(); if (learnQueue.length === 0) { alert('Aucune carte' + (options.favoritesOnly ? ' favorite' : '') + ' à apprendre !'); return; } document.getElementById('learnComplete').classList.remove('active'); document.getElementById('questionArea').style.display = 'flex'; showPage('learnPage'); renderQuestion(); }
+        function buildLearnQueue() { 
+            let baseCards = currentDeck.cards.map((c, i) => ({ card: c, idx: i }));
+            if (options.favoritesOnly) baseCards = baseCards.filter(i => starred.has(i.idx));
+            learnQueue = baseCards.filter(i => !knownCards.has(i.idx)); 
+            if (retrySet.size) { const r = [...retrySet].map(i => ({ card: currentDeck.cards[i], idx: i, isRetry: true })); learnQueue = [...shuffle(r), ...shuffle(learnQueue.filter(i => !retrySet.has(i.idx)))]; } else learnQueue = shuffle(learnQueue); 
+            learnIndex = 0; 
+        }
         function renderQuestion() {
             if (learnIndex >= learnQueue.length) { showLearnComplete(); return; }
             const item = learnQueue[learnIndex];
@@ -1232,7 +1253,10 @@
         function setTestCorrectionLevel(l) { testConfig.correctionLevel = l; document.querySelectorAll('#testCorrectionOptions .correction-option').forEach(o => o.classList.toggle('active', o.dataset.level === l)); }
         function startTest() {
             const n = document.getElementById('testNumQuestions').value;
-            let cards = shuffle([...currentDeck.cards]);
+            let cards = [...currentDeck.cards];
+            if (options.favoritesOnly) cards = cards.filter((c, i) => starred.has(i));
+            if (cards.length === 0) { alert('Aucune carte favorite !'); return; }
+            cards = shuffle(cards);
             if (n !== 'all') cards = cards.slice(0, parseInt(n));
             const askBack = options.frontSide === 'front';
             testQuestions = cards.map(card => {
@@ -1321,7 +1345,12 @@
         function restartMatch() { startMatch(); }
 
         // ========== LISTEN MODE ==========
-        function startListenMode() { listenQueue = shuffle(currentDeck.cards.map((c, i) => ({ card: c, idx: i }))); listenIndex = 0; listenCorrect = 0; listenWrong = 0; listenRetrySet = new Set(); document.getElementById('listenComplete').classList.remove('active'); document.getElementById('listenQuestionArea').style.display = 'flex'; showPage('listenPage'); renderListenQuestion(); }
+        function startListenMode() { 
+            let baseCards = currentDeck.cards.map((c, i) => ({ card: c, idx: i }));
+            if (options.favoritesOnly) baseCards = baseCards.filter(i => starred.has(i.idx));
+            if (baseCards.length === 0) { alert('Aucune carte favorite !'); return; }
+            listenQueue = shuffle(baseCards); listenIndex = 0; listenCorrect = 0; listenWrong = 0; listenRetrySet = new Set(); document.getElementById('listenComplete').classList.remove('active'); document.getElementById('listenQuestionArea').style.display = 'flex'; showPage('listenPage'); renderListenQuestion(); 
+        }
         function renderListenQuestion() {
             if (listenIndex >= listenQueue.length) { showListenComplete(); return; }
             const item = listenQueue[listenIndex];
@@ -1355,7 +1384,12 @@
         function showListenComplete() { document.getElementById('listenQuestionArea').style.display = 'none'; document.getElementById('listenComplete').classList.add('active'); document.getElementById('listenCompleteStats').textContent = `✅ ${listenCorrect} · ❌ ${listenWrong}`; }
 
         // ========== IMAGE MODE ==========
-        function startImageMode() { const cards = currentDeck.cards.filter(c => c.emoji || c.image); if (!cards.length) { alert('Pas d\'images dans ce deck'); return; } imageQueue = shuffle(cards.map(c => ({ card: c, idx: currentDeck.cards.indexOf(c) }))); imageIndex = 0; imageCorrect = 0; imageWrong = 0; imageRetrySet = new Set(); document.getElementById('imageComplete').classList.remove('active'); document.getElementById('imageQuestionArea').style.display = 'flex'; showPage('imagePage'); renderImageQuestion(); }
+        function startImageMode() { 
+            let cards = currentDeck.cards.filter(c => c.emoji || c.image);
+            if (options.favoritesOnly) cards = cards.filter(c => starred.has(currentDeck.cards.indexOf(c)));
+            if (!cards.length) { alert(options.favoritesOnly ? 'Aucune carte favorite avec image !' : 'Pas d\'images dans ce deck'); return; } 
+            imageQueue = shuffle(cards.map(c => ({ card: c, idx: currentDeck.cards.indexOf(c) }))); imageIndex = 0; imageCorrect = 0; imageWrong = 0; imageRetrySet = new Set(); document.getElementById('imageComplete').classList.remove('active'); document.getElementById('imageQuestionArea').style.display = 'flex'; showPage('imagePage'); renderImageQuestion(); 
+        }
         function renderImageQuestion() {
             if (imageIndex >= imageQueue.length) { showImageComplete(); return; }
             const item = imageQueue[imageIndex];
@@ -1390,9 +1424,34 @@
 
         // ========== OPTIONS ==========
         let currentOptionsMode = 'cards';
-        function openOptions(mode = 'cards') { currentOptionsMode = mode; document.getElementById('optionsModal').classList.add('active'); document.getElementById('toggleShuffle').classList.toggle('active', options.shuffle); document.querySelectorAll('.side-btn').forEach(b => b.classList.toggle('active', b.dataset.side === options.frontSide)); const amg = document.getElementById('answerModeGroup'); if (['learn', 'test', 'listen', 'image'].includes(mode)) { amg.style.display = 'block'; const cfg = mode === 'learn' ? learnConfig : mode === 'listen' ? listenConfig : mode === 'image' ? imageConfig : testConfig; document.getElementById('modeQCM').classList.toggle('active', cfg.inputMode === 'qcm'); document.getElementById('modeWritten').classList.toggle('active', cfg.inputMode === 'written'); document.getElementById('correctionOptions').style.display = cfg.inputMode === 'written' ? 'block' : 'none'; document.querySelectorAll('#correctionOptions .correction-option').forEach(o => o.classList.toggle('active', o.dataset.level === cfg.correctionLevel)); } else amg.style.display = 'none'; }
+        function openOptions(mode = 'cards') { 
+            currentOptionsMode = mode; 
+            document.getElementById('optionsModal').classList.add('active'); 
+            document.getElementById('toggleShuffle').classList.toggle('active', options.shuffle); 
+            document.getElementById('toggleFavorites').classList.toggle('active', options.favoritesOnly);
+            // Show favorites count
+            const favCount = starred.size;
+            const favCountEl = document.getElementById('favoritesCount');
+            if (favCount > 0) {
+                favCountEl.textContent = `${favCount} carte${favCount > 1 ? 's' : ''} en favoris`;
+                favCountEl.style.display = 'block';
+            } else {
+                favCountEl.textContent = 'Aucun favori (utilise ⭐ en mode Cartes)';
+                favCountEl.style.display = 'block';
+            }
+            document.querySelectorAll('.side-btn').forEach(b => b.classList.toggle('active', b.dataset.side === options.frontSide)); 
+            const amg = document.getElementById('answerModeGroup'); 
+            if (['learn', 'test', 'listen', 'image'].includes(mode)) { 
+                amg.style.display = 'block'; 
+                const cfg = mode === 'learn' ? learnConfig : mode === 'listen' ? listenConfig : mode === 'image' ? imageConfig : testConfig; 
+                document.getElementById('modeQCM').classList.toggle('active', cfg.inputMode === 'qcm'); 
+                document.getElementById('modeWritten').classList.toggle('active', cfg.inputMode === 'written'); 
+                document.getElementById('correctionOptions').style.display = cfg.inputMode === 'written' ? 'block' : 'none'; 
+                document.querySelectorAll('#correctionOptions .correction-option').forEach(o => o.classList.toggle('active', o.dataset.level === cfg.correctionLevel)); 
+            } else amg.style.display = 'none'; 
+        }
         function closeOptions() { document.getElementById('optionsModal').classList.remove('active'); }
-        function toggleOption(o) { options[o] = !options[o]; document.getElementById('toggleShuffle').classList.toggle('active', options.shuffle); }
+        function toggleOption(o) { options[o] = !options[o]; document.getElementById('toggleShuffle').classList.toggle('active', options.shuffle); document.getElementById('toggleFavorites').classList.toggle('active', options.favoritesOnly); }
         function setSide(s) { options.frontSide = s; document.querySelectorAll('.side-btn').forEach(b => b.classList.toggle('active', b.dataset.side === s)); }
         function setAnswerMode(m) { document.getElementById('modeQCM').classList.toggle('active', m === 'qcm'); document.getElementById('modeWritten').classList.toggle('active', m === 'written'); document.getElementById('correctionOptions').style.display = m === 'written' ? 'block' : 'none'; if (currentOptionsMode === 'learn') learnConfig.inputMode = m; else if (currentOptionsMode === 'listen') listenConfig.inputMode = m; else if (currentOptionsMode === 'image') imageConfig.inputMode = m; else testConfig.inputMode = m; }
         function setCorrectionLevel(l) { if (currentOptionsMode === 'learn') learnConfig.correctionLevel = l; else if (currentOptionsMode === 'listen') listenConfig.correctionLevel = l; else if (currentOptionsMode === 'image') imageConfig.correctionLevel = l; else testConfig.correctionLevel = l; document.querySelectorAll('#correctionOptions .correction-option').forEach(o => o.classList.toggle('active', o.dataset.level === l)); }
