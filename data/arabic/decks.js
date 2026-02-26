@@ -4,6 +4,7 @@ window.DECKS_DATA = [
     "id": "couleurs",
     "name": "Les couleurs",
     "category": "Premiers mots",
+    "imageQuestion": "Quelle est cette couleur ?",
     "cards": [
       {
         "front": "أَحْمَر",
@@ -81,6 +82,7 @@ window.DECKS_DATA = [
     "id": "corps",
     "name": "Le corps",
     "category": "Vocabulaire",
+    "imageQuestion": "Quelle est cette partie du corps ?",
     "cards": [
       {
         "front": "رَأْس",
@@ -184,6 +186,7 @@ window.DECKS_DATA = [
     "id": "nombres",
     "name": "Les nombres",
     "category": "Premiers mots",
+    "imageQuestion": "Quel est ce nombre ?",
     "cards": [
       {
         "front": "وَاحِد",
@@ -261,6 +264,7 @@ window.DECKS_DATA = [
     "id": "formes",
     "name": "Les formes",
     "category": "Premiers mots",
+    "imageQuestion": "Quelle est cette forme ?",
     "cards": [
       {
         "front": "دَائِرَة",
