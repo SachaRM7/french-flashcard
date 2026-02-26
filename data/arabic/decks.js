@@ -274,7 +274,7 @@ window.DECKS_DATA = [
         "back": "carré",
         "translit": "murabba'",
         "emoji": "🟦",
-        "image": "images/formes/carré.png"
+        "image": "images/formes/carre.png"
       },
       {
         "front": "مُثَلَّث",
@@ -295,7 +295,7 @@ window.DECKS_DATA = [
         "back": "étoile",
         "translit": "najma",
         "emoji": "⭐",
-        "image": "images/formes/étoile.png"
+        "image": "images/formes/etoile.png"
       },
       {
         "front": "مُعَيَّن",
