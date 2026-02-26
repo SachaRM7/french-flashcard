@@ -4,15 +4,15 @@
   "nameAr": "الأعداد",
   "category": "Premiers mots",
   "cards": [
-    { "fr": "un", "emoji": "1️⃣" },
-    { "fr": "deux", "emoji": "2️⃣" },
-    { "fr": "trois", "emoji": "3️⃣" },
-    { "fr": "quatre", "emoji": "4️⃣" },
-    { "fr": "cinq", "emoji": "5️⃣" },
-    { "fr": "six", "emoji": "6️⃣" },
-    { "fr": "sept", "emoji": "7️⃣" },
-    { "fr": "huit", "emoji": "8️⃣" },
-    { "fr": "neuf", "emoji": "9️⃣" },
-    { "fr": "dix", "emoji": "🔟" }
+    { "fr": "un", "emoji": "1️⃣", "image": "images/nombres/un.png" },
+    { "fr": "deux", "emoji": "2️⃣", "image": "images/nombres/deux.png" },
+    { "fr": "trois", "emoji": "3️⃣", "image": "images/nombres/trois.png" },
+    { "fr": "quatre", "emoji": "4️⃣", "image": "images/nombres/quatre.png" },
+    { "fr": "cinq", "emoji": "5️⃣", "image": "images/nombres/cinq.png" },
+    { "fr": "six", "emoji": "6️⃣", "image": "images/nombres/six.png" },
+    { "fr": "sept", "emoji": "7️⃣", "image": "images/nombres/sept.png" },
+    { "fr": "huit", "emoji": "8️⃣", "image": "images/nombres/huit.png" },
+    { "fr": "neuf", "emoji": "9️⃣", "image": "images/nombres/neuf.png" },
+    { "fr": "dix", "emoji": "🔟", "image": "images/nombres/dix.png" }
   ]
 }

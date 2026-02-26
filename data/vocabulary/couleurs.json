@@ -4,13 +4,15 @@
   "nameAr": "الألوان",
   "category": "Premiers mots",
   "cards": [
-    { "fr": "rouge", "emoji": "🔴" },
-    { "fr": "bleu", "emoji": "🔵" },
-    { "fr": "vert", "emoji": "🟢" },
-    { "fr": "jaune", "emoji": "🟡" },
-    { "fr": "noir", "emoji": "⚫" },
-    { "fr": "blanc", "emoji": "⚪" },
-    { "fr": "orange", "emoji": "🟠" },
-    { "fr": "rose", "emoji": "🩷" }
+    { "fr": "rouge", "emoji": "🔴", "image": "images/couleurs/rouge.png" },
+    { "fr": "bleu", "emoji": "🔵", "image": "images/couleurs/bleu.png" },
+    { "fr": "vert", "emoji": "🟢", "image": "images/couleurs/vert.png" },
+    { "fr": "jaune", "emoji": "🟡", "image": "images/couleurs/jaune.png" },
+    { "fr": "noir", "emoji": "⚫", "image": "images/couleurs/noir.png" },
+    { "fr": "blanc", "emoji": "⚪", "image": "images/couleurs/blanc.png" },
+    { "fr": "orange", "emoji": "🟠", "image": "images/couleurs/orange.png" },
+    { "fr": "rose", "emoji": "🩷", "image": "images/couleurs/rose.png" },
+    { "fr": "marron", "emoji": "🟤", "image": "images/couleurs/marron.png" },
+    { "fr": "mauve", "emoji": "🟣", "image": "images/couleurs/mauve.png" }
   ]
 }

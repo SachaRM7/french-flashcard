@@ -4,11 +4,13 @@
   "nameAr": "الأشكال",
   "category": "Premiers mots",
   "cards": [
-    { "fr": "rond", "emoji": "⭕" },
-    { "fr": "carré", "emoji": "🟦" },
-    { "fr": "triangle", "emoji": "🔺" },
-    { "fr": "rectangle", "emoji": "▬" },
-    { "fr": "étoile", "emoji": "⭐" },
-    { "fr": "losange", "emoji": "🔷" }
+    { "fr": "rond", "emoji": "⭕", "image": "images/formes/rond.png" },
+    { "fr": "carré", "emoji": "🟦", "image": "images/formes/carré.png" },
+    { "fr": "triangle", "emoji": "🔺", "image": "images/formes/triangle.png" },
+    { "fr": "rectangle", "emoji": "▬", "image": "images/formes/rectangle.png" },
+    { "fr": "étoile", "emoji": "⭐", "image": "images/formes/étoile.png" },
+    { "fr": "losange", "emoji": "🔷", "image": "images/formes/losange.png" },
+    { "fr": "ovale", "emoji": "⬭", "image": "images/formes/ovale.png" },
+    { "fr": "cœur", "emoji": "❤️", "image": "images/formes/coeur.png" }
   ]
 }
