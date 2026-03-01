@@ -1,0 +1,14 @@
+{
+  "id": "les-metiers",
+  "name": "Les métiers",
+  "nameAr": "المهن",
+  "category": "Le travail",
+  "cards": [
+    { "fr": "le professeur des écoles", "en": "schoolteacher", "ar": "المدرس", "ar_translit": "al-moudarris", "emoji": "👨‍🏫" },
+    { "fr": "la directrice", "en": "headmistress", "ar": "المديرة", "ar_translit": "al-moudira", "emoji": "👩‍💼" },
+    { "fr": "la secrétaire", "en": "secretary", "ar": "السكريترا", "ar_translit": "as-sikrītira", "emoji": "👩‍💻" },
+    { "fr": "l'homme de ménage", "en": "janitor", "ar": "عون نظافة", "ar_translit": "'awn nadhāfa", "emoji": "🧹" },
+    { "fr": "le cuisinier", "en": "cook", "ar": "الطباخ", "ar_translit": "at-tabbāḥ", "emoji": "👨‍🍳" },
+    { "fr": "le jardinier", "en": "gardener", "ar": "البستاني", "ar_translit": "al-boustāni", "emoji": "🌱" }
+  ]
+}

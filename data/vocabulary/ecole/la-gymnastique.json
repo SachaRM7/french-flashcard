@@ -1,0 +1,14 @@
+{
+  "id": "la-gymnastique",
+  "name": "La gymnastique",
+  "nameAr": "الجمباز",
+  "category": "L'école",
+  "cards": [
+    { "fr": "les chaussures de sport", "en": "sports shoes", "ar": "حذاء رياضي", "ar_translit": "hidhāe li-r-riyādha", "emoji": "👟" },
+    { "fr": "le plot", "en": "cone", "ar": "الخشبة", "ar_translit": "al-khachaba", "emoji": "🔴" },
+    { "fr": "le cerceau", "en": "hoop", "ar": "الطوق", "ar_translit": "at-tawq", "emoji": "⭕" },
+    { "fr": "la poutre", "en": "beam", "ar": "الماريسة", "ar_translit": "al-'ārida", "emoji": "🏅" },
+    { "fr": "les quilles", "en": "skittles", "ar": "لعبة القنانين الخشبية", "ar_translit": "lou'bat al-qanānī al-khachabiyya", "emoji": "🎳" },
+    { "fr": "faire une roulade", "en": "do a roll", "ar": "يعمل لفة", "ar_translit": "ya'mal laffāt", "emoji": "🤸" }
+  ]
+}

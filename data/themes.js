@@ -54,7 +54,7 @@ window.THEMES_DATA = [
         nameAr: 'المدرسة',
         color: '#aed6f1',
         icon: '🏫',
-        decks: ['le-chemin-de-l-ecole', 'la-salle-de-classe', 'le-materiel', 'la-recreation', 'la-cantine', 'la-gymnastique']
+        decks: ['le-chemin-de-l-ecole', 'la-salle-de-classe', 'le-materiel', 'les-arts-plastiques', 'la-recreation', 'la-cantine', 'la-gymnastique']
     },
     {
         id: 'ville',
@@ -62,7 +62,7 @@ window.THEMES_DATA = [
         nameAr: 'المدينة',
         color: '#d5dbdb',
         icon: '🏙️',
-        decks: ['la-rue', 'la-place']
+        decks: ['la-rue', 'le-square']
     },
     {
         id: 'travail',

@@ -1,0 +1,19 @@
+{
+  "id": "la-rue",
+  "name": "La rue",
+  "nameAr": "الشارع",
+  "category": "La ville",
+  "cards": [
+    { "fr": "la caserne des pompiers", "en": "fire station", "ar": "ثكنة رجال الإطفاء", "ar_translit": "thakanat ridjal al-ittfaae", "emoji": "🚒" },
+    { "fr": "l'arrêt de bus", "en": "bus stop", "ar": "موقف الحافلات", "ar_translit": "mawqif al-hafīlāt", "emoji": "🚌" },
+    { "fr": "l'immeuble", "en": "apartment building", "ar": "العمارة", "ar_translit": "al-'imāra", "emoji": "🏢" },
+    { "fr": "le kiosque à journaux", "en": "newspaper stand", "ar": "كشك الجرائد", "ar_translit": "koushk al-jarāid", "emoji": "📰" },
+    { "fr": "la place", "en": "square/plaza", "ar": "الساحة", "ar_translit": "es'saha", "emoji": "🏛️" },
+    { "fr": "la banque", "en": "bank", "ar": "البنك", "ar_translit": "al-bank", "emoji": "🏦" },
+    { "fr": "la mairie", "en": "town hall", "ar": "البلدية", "ar_translit": "al-baladiyya", "emoji": "🏛️" },
+    { "fr": "la gare", "en": "train station", "ar": "المحطة", "ar_translit": "al-mahatta", "emoji": "🚂" },
+    { "fr": "la bibliothèque", "en": "library", "ar": "المكتبة", "ar_translit": "al-maktaba", "emoji": "📚" },
+    { "fr": "le supermarché", "en": "supermarket", "ar": "مركز تجاري", "ar_translit": "markaz tidjāri", "emoji": "🛒" },
+    { "fr": "la mosquée", "en": "mosque", "ar": "المسجد", "ar_translit": "al-masdjid", "emoji": "🕌" }
+  ]
+}

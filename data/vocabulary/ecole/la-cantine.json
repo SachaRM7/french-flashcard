@@ -1,0 +1,14 @@
+{
+  "id": "la-cantine",
+  "name": "La cantine",
+  "nameAr": "مطعم المدرسة",
+  "category": "L'école",
+  "cards": [
+    { "fr": "le menu", "en": "menu", "ar": "قائمة الطعام", "ar_translit": "qāimat al-maekoulāt", "emoji": "📋" },
+    { "fr": "la dame de cantine", "en": "lunch lady", "ar": "النادلة", "ar_translit": "an-nādila", "emoji": "👩‍🍳" },
+    { "fr": "le chariot", "en": "cart", "ar": "العربة", "ar_translit": "al-'araba", "emoji": "🛒" },
+    { "fr": "le plat", "en": "dish/plate", "ar": "الطبق", "ar_translit": "at-tabaq", "emoji": "🍽️" },
+    { "fr": "la serviette", "en": "napkin", "ar": "المنديل", "ar_translit": "al-mindil", "emoji": "🧻" },
+    { "fr": "manger tout seul", "en": "eat alone", "ar": "أكل وحده", "ar_translit": "akala wahdahou", "emoji": "🍴" }
+  ]
+}

@@ -1,5 +1,5 @@
-// Auto-generated decks - 2026-03-01T13:32:16.240353
-window.DECKS_VERSION = '2026-03-01T13:32:16.240353';
+// Auto-generated decks - 2026-03-01T13:42:14.820392
+window.DECKS_VERSION = '2026-03-01T13:42:14.820392';
 window.DECKS_DATA = [
   {
     "id": "les-animaux-de-la-montagne",
@@ -1227,6 +1227,125 @@ window.DECKS_DATA = [
     ]
   },
   {
+    "id": "la-rue",
+    "name": "La rue",
+    "category": "La ville",
+    "cards": [
+      {
+        "front": "fire station",
+        "back": "la caserne des pompiers",
+        "emoji": "🚒"
+      },
+      {
+        "front": "bus stop",
+        "back": "l'arrêt de bus",
+        "emoji": "🚌"
+      },
+      {
+        "front": "apartment building",
+        "back": "l'immeuble",
+        "emoji": "🏢"
+      },
+      {
+        "front": "newspaper stand",
+        "back": "le kiosque à journaux",
+        "emoji": "📰"
+      },
+      {
+        "front": "square/plaza",
+        "back": "la place",
+        "emoji": "🏛️"
+      },
+      {
+        "front": "bank",
+        "back": "la banque",
+        "emoji": "🏦"
+      },
+      {
+        "front": "town hall",
+        "back": "la mairie",
+        "emoji": "🏛️"
+      },
+      {
+        "front": "train station",
+        "back": "la gare",
+        "emoji": "🚂"
+      },
+      {
+        "front": "library",
+        "back": "la bibliothèque",
+        "emoji": "📚"
+      },
+      {
+        "front": "supermarket",
+        "back": "le supermarché",
+        "emoji": "🛒"
+      },
+      {
+        "front": "mosque",
+        "back": "la mosquée",
+        "emoji": "🕌"
+      }
+    ]
+  },
+  {
+    "id": "le-square",
+    "name": "Le square",
+    "category": "La ville",
+    "cards": [
+      {
+        "front": "sandbox",
+        "back": "le bac à sable",
+        "emoji": "🏖️"
+      },
+      {
+        "front": "fountain",
+        "back": "la fontaine",
+        "emoji": "⛲"
+      },
+      {
+        "front": "swing",
+        "back": "la balançoire",
+        "emoji": "🎪"
+      },
+      {
+        "front": "carousel",
+        "back": "le manège",
+        "emoji": "🎠"
+      },
+      {
+        "front": "nanny",
+        "back": "la nounou",
+        "emoji": "👩‍🍼"
+      },
+      {
+        "front": "snack",
+        "back": "le goûter",
+        "emoji": "🍪"
+      },
+      {
+        "front": "pram",
+        "back": "le landau",
+        "emoji": "👶"
+      },
+      {
+        "front": "stroller",
+        "back": "la poussette",
+        "emoji": "👶"
+      },
+      {
+        "front": "scooter",
+        "back": "la trottinette",
+        "emoji": "🛴"
+      },
+      {
+        "front": "roller skates",
+        "back": "les patins à roulettes",
+        "emoji": "⛸️"
+      }
+    ]
+  },
+  {
     "id": "jouer-de-la-musique",
     "name": "Jouer De La Musique",
     "category": "La Musique",
@@ -1249,6 +1368,43 @@ window.DECKS_DATA = [
     "name": "Les Instruments A Vent",
     "category": "La Musique",
     "cards": []
+  },
+  {
+    "id": "la-cantine",
+    "name": "La cantine",
+    "category": "L'école",
+    "cards": [
+      {
+        "front": "menu",
+        "back": "le menu",
+        "emoji": "📋"
+      },
+      {
+        "front": "lunch lady",
+        "back": "la dame de cantine",
+        "emoji": "👩‍🍳"
+      },
+      {
+        "front": "cart",
+        "back": "le chariot",
+        "emoji": "🛒"
+      },
+      {
+        "front": "dish/plate",
+        "back": "le plat",
+        "emoji": "🍽️"
+      },
+      {
+        "front": "napkin",
+        "back": "la serviette",
+        "emoji": "🧻"
+      },
+      {
+        "front": "eat alone",
+        "back": "manger tout seul",
+        "emoji": "🍴"
+      }
+    ]
   },
   {
     "id": "la-salle-de-classe",
@@ -1284,6 +1440,43 @@ window.DECKS_DATA = [
         "front": "chair",
         "back": "la chaise",
         "emoji": "🪑"
+      }
+    ]
+  },
+  {
+    "id": "la-gymnastique",
+    "name": "La gymnastique",
+    "category": "L'école",
+    "cards": [
+      {
+        "front": "sports shoes",
+        "back": "les chaussures de sport",
+        "emoji": "👟"
+      },
+      {
+        "front": "cone",
+        "back": "le plot",
+        "emoji": "🔴"
+      },
+      {
+        "front": "hoop",
+        "back": "le cerceau",
+        "emoji": "⭕"
+      },
+      {
+        "front": "beam",
+        "back": "la poutre",
+        "emoji": "🏅"
+      },
+      {
+        "front": "skittles",
+        "back": "les quilles",
+        "emoji": "🎳"
+      },
+      {
+        "front": "do a roll",
+        "back": "faire une roulade",
+        "emoji": "🤸"
       }
     ]
   },
@@ -1403,6 +1596,110 @@ window.DECKS_DATA = [
         "front": "glue",
         "back": "la colle",
         "emoji": "🧴"
+      }
+    ]
+  },
+  {
+    "id": "la-recreation",
+    "name": "La récréation",
+    "category": "L'école",
+    "cards": [
+      {
+        "front": "ball",
+        "back": "le ballon",
+        "emoji": "⚽"
+      },
+      {
+        "front": "slide",
+        "back": "le toboggan",
+        "emoji": "🛝"
+      },
+      {
+        "front": "hopscotch",
+        "back": "la marelle",
+        "emoji": "🎲"
+      },
+      {
+        "front": "tricycle",
+        "back": "le tricycle",
+        "emoji": "🚲"
+      },
+      {
+        "front": "bench",
+        "back": "le banc",
+        "emoji": "🪑"
+      },
+      {
+        "front": "play tag",
+        "back": "jouer au loup",
+        "emoji": "🏃"
+      },
+      {
+        "front": "play ring around the rosie",
+        "back": "faire la ronde",
+        "emoji": "👥"
+      },
+      {
+        "front": "get bored",
+        "back": "s'ennuyer",
+        "emoji": "😑"
+      },
+      {
+        "front": "fight/argue",
+        "back": "se disputer",
+        "emoji": "😠"
+      },
+      {
+        "front": "make up",
+        "back": "se réconcilier",
+        "emoji": "🤝"
+      },
+      {
+        "front": "hold hands",
+        "back": "se tenir la main",
+        "emoji": "🤲"
+      },
+      {
+        "front": "get in line",
+        "back": "se mettre en rang",
+        "emoji": "📏"
+      }
+    ]
+  },
+  {
+    "id": "les-arts-plastiques",
+    "name": "Les arts plastiques",
+    "category": "L'école",
+    "cards": [
+      {
+        "front": "colored pencils",
+        "back": "les crayons de couleur",
+        "emoji": "✏️"
+      },
+      {
+        "front": "paint",
+        "back": "la peinture",
+        "emoji": "🎨"
+      },
+      {
+        "front": "tape",
+        "back": "le ruban adhésif",
+        "emoji": "📎"
+      },
+      {
+        "front": "stickers",
+        "back": "les gommettes",
+        "emoji": "⭐"
+      },
+      {
+        "front": "modeling clay",
+        "back": "la pâte à modeler",
+        "emoji": "🧪"
+      },
+      {
+        "front": "rubber bands",
+        "back": "les élastiques",
+        "emoji": "🔗"
       }
     ]
   },
@@ -2035,6 +2332,43 @@ window.DECKS_DATA = [
         "front": "heater",
         "back": "le radiateur",
         "emoji": "🔥"
+      }
+    ]
+  },
+  {
+    "id": "les-metiers",
+    "name": "Les métiers",
+    "category": "Le travail",
+    "cards": [
+      {
+        "front": "schoolteacher",
+        "back": "le professeur des écoles",
+        "emoji": "👨‍🏫"
+      },
+      {
+        "front": "headmistress",
+        "back": "la directrice",
+        "emoji": "👩‍💼"
+      },
+      {
+        "front": "secretary",
+        "back": "la secrétaire",
+        "emoji": "👩‍💻"
+      },
+      {
+        "front": "janitor",
+        "back": "l'homme de ménage",
+        "emoji": "🧹"
+      },
+      {
+        "front": "cook",
+        "back": "le cuisinier",
+        "emoji": "👨‍🍳"
+      },
+      {
+        "front": "gardener",
+        "back": "le jardinier",
+        "emoji": "🌱"
       }
     ]
   },

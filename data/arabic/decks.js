@@ -1,5 +1,5 @@
-// Auto-generated decks - 2026-03-01T13:32:16.240353
-window.DECKS_VERSION = '2026-03-01T13:32:16.240353';
+// Auto-generated decks - 2026-03-01T13:42:14.820392
+window.DECKS_VERSION = '2026-03-01T13:42:14.820392';
 window.DECKS_DATA = [
   {
     "id": "les-animaux-de-la-montagne",
@@ -1422,6 +1422,146 @@ window.DECKS_DATA = [
     ]
   },
   {
+    "id": "la-rue",
+    "name": "La rue",
+    "category": "La ville",
+    "cards": [
+      {
+        "front": "ثكنة رجال الإطفاء",
+        "back": "la caserne des pompiers",
+        "translit": "thakanat ridjal al-ittfaae",
+        "emoji": "🚒"
+      },
+      {
+        "front": "موقف الحافلات",
+        "back": "l'arrêt de bus",
+        "translit": "mawqif al-hafīlāt",
+        "emoji": "🚌"
+      },
+      {
+        "front": "العمارة",
+        "back": "l'immeuble",
+        "translit": "al-'imāra",
+        "emoji": "🏢"
+      },
+      {
+        "front": "كشك الجرائد",
+        "back": "le kiosque à journaux",
+        "translit": "koushk al-jarāid",
+        "emoji": "📰"
+      },
+      {
+        "front": "الساحة",
+        "back": "la place",
+        "translit": "es'saha",
+        "emoji": "🏛️"
+      },
+      {
+        "front": "البنك",
+        "back": "la banque",
+        "translit": "al-bank",
+        "emoji": "🏦"
+      },
+      {
+        "front": "البلدية",
+        "back": "la mairie",
+        "translit": "al-baladiyya",
+        "emoji": "🏛️"
+      },
+      {
+        "front": "المحطة",
+        "back": "la gare",
+        "translit": "al-mahatta",
+        "emoji": "🚂"
+      },
+      {
+        "front": "المكتبة",
+        "back": "la bibliothèque",
+        "translit": "al-maktaba",
+        "emoji": "📚"
+      },
+      {
+        "front": "مركز تجاري",
+        "back": "le supermarché",
+        "translit": "markaz tidjāri",
+        "emoji": "🛒"
+      },
+      {
+        "front": "المسجد",
+        "back": "la mosquée",
+        "translit": "al-masdjid",
+        "emoji": "🕌"
+      }
+    ]
+  },
+  {
+    "id": "le-square",
+    "name": "Le square",
+    "category": "La ville",
+    "cards": [
+      {
+        "front": "وعاء الرمل",
+        "back": "le bac à sable",
+        "translit": "wi'ae li-arraml",
+        "emoji": "🏖️"
+      },
+      {
+        "front": "النافورة",
+        "back": "la fontaine",
+        "translit": "an-nāfouqra",
+        "emoji": "⛲"
+      },
+      {
+        "front": "الأرجوحة",
+        "back": "la balançoire",
+        "translit": "al-ourdjouqha",
+        "emoji": "🎪"
+      },
+      {
+        "front": "دوامة الخيل",
+        "back": "le manège",
+        "translit": "dawāmat al-khayl",
+        "emoji": "🎠"
+      },
+      {
+        "front": "مربية أطفال",
+        "back": "la nounou",
+        "translit": "mourabbiyyat atfāl",
+        "emoji": "👩‍🍼"
+      },
+      {
+        "front": "اللمجة",
+        "back": "le goûter",
+        "translit": "al-loumdja",
+        "emoji": "🍪"
+      },
+      {
+        "front": "المهد",
+        "back": "le landau",
+        "translit": "al-mahd",
+        "emoji": "👶"
+      },
+      {
+        "front": "عربة أطفال",
+        "back": "la poussette",
+        "translit": "'arabat atfāl",
+        "emoji": "👶"
+      },
+      {
+        "front": "تروتينات",
+        "back": "la trottinette",
+        "translit": "trouṭinaat",
+        "emoji": "🛴"
+      },
+      {
+        "front": "الواح التزحلق",
+        "back": "les patins à roulettes",
+        "translit": "alwah attazahloq",
+        "emoji": "⛸️"
+      }
+    ]
+  },
+  {
     "id": "jouer-de-la-musique",
     "name": "Jouer De La Musique",
     "category": "La Musique",
@@ -1444,6 +1584,49 @@ window.DECKS_DATA = [
     "name": "Les Instruments A Vent",
     "category": "La Musique",
     "cards": []
+  },
+  {
+    "id": "la-cantine",
+    "name": "La cantine",
+    "category": "L'école",
+    "cards": [
+      {
+        "front": "قائمة الطعام",
+        "back": "le menu",
+        "translit": "qāimat al-maekoulāt",
+        "emoji": "📋"
+      },
+      {
+        "front": "النادلة",
+        "back": "la dame de cantine",
+        "translit": "an-nādila",
+        "emoji": "👩‍🍳"
+      },
+      {
+        "front": "العربة",
+        "back": "le chariot",
+        "translit": "al-'araba",
+        "emoji": "🛒"
+      },
+      {
+        "front": "الطبق",
+        "back": "le plat",
+        "translit": "at-tabaq",
+        "emoji": "🍽️"
+      },
+      {
+        "front": "المنديل",
+        "back": "la serviette",
+        "translit": "al-mindil",
+        "emoji": "🧻"
+      },
+      {
+        "front": "أكل وحده",
+        "back": "manger tout seul",
+        "translit": "akala wahdahou",
+        "emoji": "🍴"
+      }
+    ]
   },
   {
     "id": "la-salle-de-classe",
@@ -1485,6 +1668,49 @@ window.DECKS_DATA = [
         "back": "la chaise",
         "translit": "al-kursi",
         "emoji": "🪑"
+      }
+    ]
+  },
+  {
+    "id": "la-gymnastique",
+    "name": "La gymnastique",
+    "category": "L'école",
+    "cards": [
+      {
+        "front": "حذاء رياضي",
+        "back": "les chaussures de sport",
+        "translit": "hidhāe li-r-riyādha",
+        "emoji": "👟"
+      },
+      {
+        "front": "الخشبة",
+        "back": "le plot",
+        "translit": "al-khachaba",
+        "emoji": "🔴"
+      },
+      {
+        "front": "الطوق",
+        "back": "le cerceau",
+        "translit": "at-tawq",
+        "emoji": "⭕"
+      },
+      {
+        "front": "الماريسة",
+        "back": "la poutre",
+        "translit": "al-'ārida",
+        "emoji": "🏅"
+      },
+      {
+        "front": "لعبة القنانين الخشبية",
+        "back": "les quilles",
+        "translit": "lou'bat al-qanānī al-khachabiyya",
+        "emoji": "🎳"
+      },
+      {
+        "front": "يعمل لفة",
+        "back": "faire une roulade",
+        "translit": "ya'mal laffāt",
+        "emoji": "🤸"
       }
     ]
   },
@@ -1625,6 +1851,128 @@ window.DECKS_DATA = [
         "back": "la colle",
         "translit": "alghirāe",
         "emoji": "🧴"
+      }
+    ]
+  },
+  {
+    "id": "la-recreation",
+    "name": "La récréation",
+    "category": "L'école",
+    "cards": [
+      {
+        "front": "الكرة",
+        "back": "le ballon",
+        "translit": "al-kora",
+        "emoji": "⚽"
+      },
+      {
+        "front": "الزحلقة",
+        "back": "le toboggan",
+        "translit": "az-zahlaqā",
+        "emoji": "🛝"
+      },
+      {
+        "front": "لعبة المربعات",
+        "back": "la marelle",
+        "translit": "lou'bat al-mourabba'āt",
+        "emoji": "🎲"
+      },
+      {
+        "front": "دراجة ذات ثلاث عجلات",
+        "back": "le tricycle",
+        "translit": "daradja dhāt thalāth 'ajalāt",
+        "emoji": "🚲"
+      },
+      {
+        "front": "المقعد",
+        "back": "le banc",
+        "translit": "al-maq'ad",
+        "emoji": "🪑"
+      },
+      {
+        "front": "لعبة الذيب",
+        "back": "jouer au loup",
+        "translit": "lou'bat adh-dhieb",
+        "emoji": "🏃"
+      },
+      {
+        "front": "لعبة الدائرة",
+        "back": "faire la ronde",
+        "translit": "lou'bat ad-dāira",
+        "emoji": "👥"
+      },
+      {
+        "front": "ملل",
+        "back": "s'ennuyer",
+        "translit": "malla",
+        "emoji": "😑"
+      },
+      {
+        "front": "تخاصم",
+        "back": "se disputer",
+        "translit": "takhāṣama",
+        "emoji": "😠"
+      },
+      {
+        "front": "تصالح",
+        "back": "se réconcilier",
+        "translit": "tașālaha",
+        "emoji": "🤝"
+      },
+      {
+        "front": "مسك اليد",
+        "back": "se tenir la main",
+        "translit": "mask al-yad",
+        "emoji": "🤲"
+      },
+      {
+        "front": "اصطفف",
+        "back": "se mettre en rang",
+        "translit": "istaffa",
+        "emoji": "📏"
+      }
+    ]
+  },
+  {
+    "id": "les-arts-plastiques",
+    "name": "Les arts plastiques",
+    "category": "L'école",
+    "cards": [
+      {
+        "front": "أقلام ألوان",
+        "back": "les crayons de couleur",
+        "translit": "aqlām talwin",
+        "emoji": "✏️"
+      },
+      {
+        "front": "الصباغة",
+        "back": "la peinture",
+        "translit": "as-sibāgha",
+        "emoji": "🎨"
+      },
+      {
+        "front": "شريط لاصق",
+        "back": "le ruban adhésif",
+        "translit": "sharīt lāsiq",
+        "emoji": "📎"
+      },
+      {
+        "front": "الملصقات",
+        "back": "les gommettes",
+        "translit": "al-molsaqāt",
+        "emoji": "⭐"
+      },
+      {
+        "front": "العجين",
+        "back": "la pâte à modeler",
+        "translit": "al-'adjin",
+        "emoji": "🧪"
+      },
+      {
+        "front": "حلقات مطاطية",
+        "back": "les élastiques",
+        "translit": "halaqāt mattātiyya",
+        "emoji": "🔗"
       }
     ]
   },
@@ -2375,6 +2723,49 @@ window.DECKS_DATA = [
         "back": "le radiateur",
         "translit": "al-moussakhin",
         "emoji": "🔥"
+      }
+    ]
+  },
+  {
+    "id": "les-metiers",
+    "name": "Les métiers",
+    "category": "Le travail",
+    "cards": [
+      {
+        "front": "المدرس",
+        "back": "le professeur des écoles",
+        "translit": "al-moudarris",
+        "emoji": "👨‍🏫"
+      },
+      {
+        "front": "المديرة",
+        "back": "la directrice",
+        "translit": "al-moudira",
+        "emoji": "👩‍💼"
+      },
+      {
+        "front": "السكريترا",
+        "back": "la secrétaire",
+        "translit": "as-sikrītira",
+        "emoji": "👩‍💻"
+      },
+      {
+        "front": "عون نظافة",
+        "back": "l'homme de ménage",
+        "translit": "'awn nadhāfa",
+        "emoji": "🧹"
+      },
+      {
+        "front": "الطباخ",
+        "back": "le cuisinier",
+        "translit": "at-tabbāḥ",
+        "emoji": "👨‍🍳"
+      },
+      {
+        "front": "البستاني",
+        "back": "le jardinier",
+        "translit": "al-boustāni",
+        "emoji": "🌱"
       }
     ]
   },

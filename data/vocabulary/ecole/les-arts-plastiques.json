@@ -1,0 +1,14 @@
+{
+  "id": "les-arts-plastiques",
+  "name": "Les arts plastiques",
+  "nameAr": "الفنون الجميلة",
+  "category": "L'école",
+  "cards": [
+    { "fr": "les crayons de couleur", "en": "colored pencils", "ar": "أقلام ألوان", "ar_translit": "aqlām talwin", "emoji": "✏️" },
+    { "fr": "la peinture", "en": "paint", "ar": "الصباغة", "ar_translit": "as-sibāgha", "emoji": "🎨" },
+    { "fr": "le ruban adhésif", "en": "tape", "ar": "شريط لاصق", "ar_translit": "sharīt lāsiq", "emoji": "📎" },
+    { "fr": "les gommettes", "en": "stickers", "ar": "الملصقات", "ar_translit": "al-molsaqāt", "emoji": "⭐" },
+    { "fr": "la pâte à modeler", "en": "modeling clay", "ar": "العجين", "ar_translit": "al-'adjin", "emoji": "🧪" },
+    { "fr": "les élastiques", "en": "rubber bands", "ar": "حلقات مطاطية", "ar_translit": "halaqāt mattātiyya", "emoji": "🔗" }
+  ]
+}
