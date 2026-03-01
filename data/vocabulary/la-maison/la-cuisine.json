@@ -1,6 +1,20 @@
 {
   "id": "la-cuisine",
   "name": "La Cuisine",
+  "nameAr": "المطبخ",
   "category": "La Maison",
-  "cards": []
+  "cards": [
+    { "fr": "la cuisinière", "en": "stove", "ar": "الموقد", "ar_translit": "al-mawqad", "emoji": "🔥" },
+    { "fr": "le réfrigérateur", "en": "refrigerator", "ar": "الثلاجة", "ar_translit": "ath-thalaja", "emoji": "❄️" },
+    { "fr": "le four", "en": "oven", "ar": "الفرن", "ar_translit": "al-firn", "emoji": "🍳" },
+    { "fr": "le lave-vaisselle", "en": "dishwasher", "ar": "غسالة الأطباق", "ar_translit": "ghassālet al-atbāq", "emoji": "🍽️" },
+    { "fr": "la poubelle", "en": "trash", "ar": "صندوق القمامة", "ar_translit": "soundouq al-qumāma", "emoji": "🗑️" },
+    { "fr": "l'évier", "en": "sink", "ar": "الحوض", "ar_translit": "al-hawdh", "emoji": "🚰" },
+    { "fr": "le plan de travail", "en": "counter", "ar": "سطح العمل", "ar_translit": "sath al-'amal", "emoji": "📐" },
+    { "fr": "les placards", "en": "cabinets", "ar": "الخزائن", "ar_translit": "al-khazāin", "emoji": "🚪" },
+    { "fr": "le tabouret", "en": "stool", "ar": "البراز", "ar_translit": "al-burāz", "emoji": "🪑" },
+    { "fr": "la table de cuisine", "en": "kitchen table", "ar": "مائدة المطبخ", "ar_translit": "māidat al-matbakh", "emoji": "🍴" },
+    { "fr": "la fenêtre", "en": "window", "ar": "النافذة", "ar_translit": "an-nāfidha", "emoji": "🪟" },
+    { "fr": "la porte", "en": "door", "ar": "الباب", "ar_translit": "al-bāb", "emoji": "🚪" }
+  ]
 }

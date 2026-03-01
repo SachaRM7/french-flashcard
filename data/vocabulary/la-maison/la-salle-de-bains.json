@@ -1,6 +1,20 @@
 {
   "id": "la-salle-de-bains",
-  "name": "La Salle De Bains",
+  "name": "La Salle de Bains",
+  "nameAr": "حمام",
   "category": "La Maison",
-  "cards": []
+  "cards": [
+    { "fr": "la baignoire", "en": "bathtub", "ar": "حوض الاستحمام", "ar_translit": "hawdh al-istihmām", "emoji": "🛁" },
+    { "fr": "la douche", "en": "shower", "ar": "الدش", "ar_translit": "ad-dash", "emoji": "🚿" },
+    { "fr": "le lavabo", "en": "sink", "ar": "المغسلة", "ar_translit": "al-maghsala", "emoji": "🚰" },
+    { "fr": "les toilettes", "en": "toilet", "ar": "المرحاض", "ar_translit": "al-mirhādh", "emoji": "🚽" },
+    { "fr": "le miroir", "en": "mirror", "ar": "المرآة", "ar_translit": "al-mirāt", "emoji": "🪞" },
+    { "fr": "le savon", "en": "soap", "ar": "الصابون", "ar_translit": "as-sāboun", "emoji": "🧼" },
+    { "fr": "la brosse à dents", "en": "toothbrush", "ar": "فرشاة الأسنان", "ar_translit": "farshat al-asnān", "emoji": "🪥" },
+    { "fr": "le dentifrice", "en": "toothpaste", "ar": "معجون الأسنان", "ar_translit": "ma'joun al-asnān", "emoji": "😁" },
+    { "fr": "la serviette", "en": "towel", "ar": "المنشفة", "ar_translit": "al-minshafa", "emoji": "🛀" },
+    { "fr": "le peigne", "en": "comb", "ar": "المشط", "ar_translit": "al-mishta", "emoji": "💇" },
+    { "fr": "la brosse", "en": "brush", "ar": "الفرشاة", "ar_translit": "al-farshāt", "emoji": "💇" },
+    { "fr": "le shampooing", "en": "shampoo", "ar": "الشامبو", "ar_translit": "ach-chāmbou", "emoji": "🧴" }
+  ]
 }

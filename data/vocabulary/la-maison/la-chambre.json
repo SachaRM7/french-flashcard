@@ -1,6 +1,20 @@
 {
   "id": "la-chambre",
   "name": "La Chambre",
+  "nameAr": "غرفة النوم",
   "category": "La Maison",
-  "cards": []
+  "cards": [
+    { "fr": "le lit", "en": "bed", "ar": "السرير", "ar_translit": "as-sarir", "emoji": "🛏️" },
+    { "fr": "l'oreiller", "en": "pillow", "ar": "الوسادة", "ar_translit": "al-wisāda", "emoji": "🛏️" },
+    { "fr": "la couverture", "en": "blanket", "ar": "البطانية", "ar_translit": "al-batāniyya", "emoji": "🛏️" },
+    { "fr": "la lampe", "en": "lamp", "ar": "المصباح", "ar_translit": "al-misbāh", "emoji": "💡" },
+    { "fr": "l'armoire", "en": "wardrobe", "ar": "الخزانة", "ar_translit": "al-khazāna", "emoji": "🚪" },
+    { "fr": "le placard", "en": "closet", "ar": "الدولاب", "ar_translit": "ad-doumāq", "emoji": "🚪" },
+    { "fr": "le bureau", "en": "desk", "ar": "المكتب", "ar_translit": "al-maktab", "emoji": "📚" },
+    { "fr": "la chaise", "en": "chair", "ar": "الكرسي", "ar_translit": "al-kursi", "emoji": "🪑" },
+    { "fr": "la fenêtre", "en": "window", "ar": "النافذة", "ar_translit": "an-nāfidha", "emoji": "🪟" },
+    { "fr": "la porte", "en": "door", "ar": "الباب", "ar_translit": "al-bāb", "emoji": "🚪" },
+    { "fr": "le tapis", "en": "carpet", "ar": "السجادة", "ar_translit": "as-sajāda", "emoji": "🧶" },
+    { "fr": "le poster", "en": "poster", "ar": "ملصق", "ar_translit": "malsa", "emoji": "🖼️" }
+  ]
 }

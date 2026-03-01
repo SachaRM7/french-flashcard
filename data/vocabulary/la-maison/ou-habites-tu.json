@@ -1,6 +1,20 @@
 {
   "id": "ou-habites-tu",
-  "name": "Ou Habites Tu",
+  "name": "Où habites-tu ?",
+  "nameAr": "أين تسكن؟",
   "category": "La Maison",
-  "cards": []
+  "cards": [
+    { "fr": "la maison", "en": "house", "ar": "البيت", "ar_translit": "al-bayt", "emoji": "🏠" },
+    { "fr": "l'appartement", "en": "apartment", "ar": "الشقة", "ar_translit": "ash-shiqqa", "emoji": "🏢" },
+    { "fr": "l'immeuble", "en": "building", "ar": "المبنى", "ar_translit": "al-mabna", "emoji": "🏢" },
+    { "fr": "la rue", "en": "street", "ar": "الشارع", "ar_translit": "ash-shāri'", "emoji": "🛣️" },
+    { "fr": "le quartier", "en": "neighborhood", "ar": "الحي", "ar_translit": "al-hay", "emoji": "🏘️" },
+    { "fr": "la ville", "en": "city", "ar": "المدينة", "ar_translit": "al-madīna", "emoji": "🏙️" },
+    { "fr": "le village", "en": "village", "ar": "القرية", "ar_translit": "al-qarya", "emoji": "🏘️" },
+    { "fr": "la campagne", "en": "countryside", "ar": "الريف", "ar_translit": "ar-rif", "emoji": "🌄" },
+    { "fr": "la montagne", "en": "mountain", "ar": "الجبل", "ar_translit": "al-jabal", "emoji": "⛰️" },
+    { "fr": "le bord de la mer", "en": "seaside", "ar": "الساحل", "ar_translit": "as-sāhil", "emoji": "🏖️" },
+    { "fr": "le balcon", "en": "balcony", "ar": "الشرفة", "ar_translit": "ach-charfa", "emoji": "🌳" },
+    { "fr": "le jardin", "en": "garden", "ar": "الحديقة", "ar_translit": "al-hadīqa", "emoji": "🌳" }
+  ]
 }

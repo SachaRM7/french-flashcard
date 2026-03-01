@@ -1,5 +1,5 @@
-// Auto-generated decks - 2026-03-01T12:39:23.023486
-window.DECKS_VERSION = '2026-03-01T12:39:23.023486';
+// Auto-generated decks - 2026-03-01T13:01:33.847784
+window.DECKS_VERSION = '2026-03-01T13:01:33.847784';
 window.DECKS_DATA = [
   {
     "id": "les-animaux-de-la-montagne",
@@ -1412,37 +1412,475 @@ window.DECKS_DATA = [
     "id": "la-cuisine",
     "name": "La Cuisine",
     "category": "La Maison",
-    "cards": []
+    "cards": [
+      {
+        "front": "الموقد",
+        "back": "la cuisinière",
+        "translit": "al-mawqad",
+        "emoji": "🔥"
+      },
+      {
+        "front": "الثلاجة",
+        "back": "le réfrigérateur",
+        "translit": "ath-thalaja",
+        "emoji": "❄️"
+      },
+      {
+        "front": "الفرن",
+        "back": "le four",
+        "translit": "al-firn",
+        "emoji": "🍳"
+      },
+      {
+        "front": "غسالة الأطباق",
+        "back": "le lave-vaisselle",
+        "translit": "ghassālet al-atbāq",
+        "emoji": "🍽️"
+      },
+      {
+        "front": "صندوق القمامة",
+        "back": "la poubelle",
+        "translit": "soundouq al-qumāma",
+        "emoji": "🗑️"
+      },
+      {
+        "front": "الحوض",
+        "back": "l'évier",
+        "translit": "al-hawdh",
+        "emoji": "🚰"
+      },
+      {
+        "front": "سطح العمل",
+        "back": "le plan de travail",
+        "translit": "sath al-'amal",
+        "emoji": "📐"
+      },
+      {
+        "front": "الخزائن",
+        "back": "les placards",
+        "translit": "al-khazāin",
+        "emoji": "🚪"
+      },
+      {
+        "front": "البراز",
+        "back": "le tabouret",
+        "translit": "al-burāz",
+        "emoji": "🪑"
+      },
+      {
+        "front": "مائدة المطبخ",
+        "back": "la table de cuisine",
+        "translit": "māidat al-matbakh",
+        "emoji": "🍴"
+      },
+      {
+        "front": "النافذة",
+        "back": "la fenêtre",
+        "translit": "an-nāfidha",
+        "emoji": "🪟"
+      },
+      {
+        "front": "الباب",
+        "back": "la porte",
+        "translit": "al-bāb",
+        "emoji": "🚪"
+      }
+    ]
   },
   {
     "id": "jouer",
     "name": "Jouer",
     "category": "La Maison",
-    "cards": []
+    "cards": [
+      {
+        "front": "يلعب",
+        "back": "jouer",
+        "translit": "yal'ab",
+        "emoji": "🎮"
+      },
+      {
+        "front": "لعبة الطاولة",
+        "back": "le jeu de société",
+        "translit": "lu'bat at-tāwla",
+        "emoji": "🎲"
+      },
+      {
+        "front": "الكرة",
+        "back": "le ballon",
+        "translit": "al-kura",
+        "emoji": "⚽"
+      },
+      {
+        "front": "الدمية",
+        "back": "la poupée",
+        "translit": "ad-dumya",
+        "emoji": "🪆"
+      },
+      {
+        "front": "المكعبات",
+        "back": "les cubes",
+        "translit": "al-muka'abāt",
+        "emoji": "🧩"
+      },
+      {
+        "front": "لعبة فيديو",
+        "back": "le jeu vidéo",
+        "translit": "lu'bat fīdiyou",
+        "emoji": "🎮"
+      },
+      {
+        "front": "جهاز الألعاب",
+        "back": "la console",
+        "translit": "jihāz al-al'āb",
+        "emoji": "🕹️"
+      },
+      {
+        "front": "الألعاب",
+        "back": "les jouets",
+        "translit": "al-al'āb",
+        "emoji": "🧸"
+      },
+      {
+        "front": "اللغز",
+        "back": "le puzzle",
+        "translit": "al-loghz",
+        "emoji": "🧩"
+      },
+      {
+        "front": "لعبة مَحشوة",
+        "back": "la peluche",
+        "translit": "lu'bat mahshwa",
+        "emoji": "🧸"
+      },
+      {
+        "front": "لعبة الخطوط",
+        "back": "la marelle",
+        "translit": "lu'bat al-khittat",
+        "emoji": "🎯"
+      },
+      {
+        "front": "الخرزة",
+        "back": "la bille",
+        "translit": "al-kharza",
+        "emoji": "⚪"
+      }
+    ]
   },
   {
     "id": "ou-habites-tu",
-    "name": "Ou Habites Tu",
+    "name": "Où habites-tu ?",
     "category": "La Maison",
-    "cards": []
+    "cards": [
+      {
+        "front": "البيت",
+        "back": "la maison",
+        "translit": "al-bayt",
+        "emoji": "🏠"
+      },
+      {
+        "front": "الشقة",
+        "back": "l'appartement",
+        "translit": "ash-shiqqa",
+        "emoji": "🏢"
+      },
+      {
+        "front": "المبنى",
+        "back": "l'immeuble",
+        "translit": "al-mabna",
+        "emoji": "🏢"
+      },
+      {
+        "front": "الشارع",
+        "back": "la rue",
+        "translit": "ash-shāri'",
+        "emoji": "🛣️"
+      },
+      {
+        "front": "الحي",
+        "back": "le quartier",
+        "translit": "al-hay",
+        "emoji": "🏘️"
+      },
+      {
+        "front": "المدينة",
+        "back": "la ville",
+        "translit": "al-madīna",
+        "emoji": "🏙️"
+      },
+      {
+        "front": "القرية",
+        "back": "le village",
+        "translit": "al-qarya",
+        "emoji": "🏘️"
+      },
+      {
+        "front": "الريف",
+        "back": "la campagne",
+        "translit": "ar-rif",
+        "emoji": "🌄"
+      },
+      {
+        "front": "الجبل",
+        "back": "la montagne",
+        "translit": "al-jabal",
+        "emoji": "⛰️"
+      },
+      {
+        "front": "الساحل",
+        "back": "le bord de la mer",
+        "translit": "as-sāhil",
+        "emoji": "🏖️"
+      },
+      {
+        "front": "الشرفة",
+        "back": "le balcon",
+        "translit": "ach-charfa",
+        "emoji": "🌳"
+      },
+      {
+        "front": "الحديقة",
+        "back": "le jardin",
+        "translit": "al-hadīqa",
+        "emoji": "🌳"
+      }
+    ]
   },
   {
     "id": "le-salon",
     "name": "Le Salon",
     "category": "La Maison",
-    "cards": []
+    "cards": [
+      {
+        "front": "الأريكة",
+        "back": "le canapé",
+        "translit": "al-arīka",
+        "emoji": "🛋️"
+      },
+      {
+        "front": "الكرسي",
+        "back": "le fauteuil",
+        "translit": "al-kursi",
+        "emoji": "🪑"
+      },
+      {
+        "front": "طاولة القهوة",
+        "back": "la table basse",
+        "translit": "tāwlat al-qahwa",
+        "emoji": "🪑"
+      },
+      {
+        "front": "التلفاز",
+        "back": "la télévision",
+        "translit": "at-tilifāz",
+        "emoji": "📺"
+      },
+      {
+        "front": "مصباح أرضي",
+        "back": "la lampadaire",
+        "translit": "misbāh ardhi",
+        "emoji": "💡"
+      },
+      {
+        "front": "الستائر",
+        "back": "les rideaux",
+        "translit": "as-sitā'ir",
+        "emoji": "🪟"
+      },
+      {
+        "front": "السجادة",
+        "back": "le tapis",
+        "translit": "as-sajāda",
+        "emoji": "🧶"
+      },
+      {
+        "front": "اللوحة",
+        "back": "le tableau",
+        "translit": "al-lawha",
+        "emoji": "🖼️"
+      },
+      {
+        "front": "رف الكتب",
+        "back": "la bibliothèque",
+        "translit": "raff al-kutub",
+        "emoji": "📚"
+      },
+      {
+        "front": "الموقد",
+        "back": "la cheminée",
+        "translit": "al-mawqad",
+        "emoji": "🔥"
+      },
+      {
+        "front": "النافذة",
+        "back": "la fenêtre",
+        "translit": "an-nāfidha",
+        "emoji": "🪟"
+      },
+      {
+        "front": "الباب",
+        "back": "la porte",
+        "translit": "al-bāb",
+        "emoji": "🚪"
+      }
+    ]
   },
   {
     "id": "la-salle-de-bains",
-    "name": "La Salle De Bains",
+    "name": "La Salle de Bains",
     "category": "La Maison",
-    "cards": []
+    "cards": [
+      {
+        "front": "حوض الاستحمام",
+        "back": "la baignoire",
+        "translit": "hawdh al-istihmām",
+        "emoji": "🛁"
+      },
+      {
+        "front": "الدش",
+        "back": "la douche",
+        "translit": "ad-dash",
+        "emoji": "🚿"
+      },
+      {
+        "front": "المغسلة",
+        "back": "le lavabo",
+        "translit": "al-maghsala",
+        "emoji": "🚰"
+      },
+      {
+        "front": "المرحاض",
+        "back": "les toilettes",
+        "translit": "al-mirhādh",
+        "emoji": "🚽"
+      },
+      {
+        "front": "المرآة",
+        "back": "le miroir",
+        "translit": "al-mirāt",
+        "emoji": "🪞"
+      },
+      {
+        "front": "الصابون",
+        "back": "le savon",
+        "translit": "as-sāboun",
+        "emoji": "🧼"
+      },
+      {
+        "front": "فرشاة الأسنان",
+        "back": "la brosse à dents",
+        "translit": "farshat al-asnān",
+        "emoji": "🪥"
+      },
+      {
+        "front": "معجون الأسنان",
+        "back": "le dentifrice",
+        "translit": "ma'joun al-asnān",
+        "emoji": "😁"
+      },
+      {
+        "front": "المنشفة",
+        "back": "la serviette",
+        "translit": "al-minshafa",
+        "emoji": "🛀"
+      },
+      {
+        "front": "المشط",
+        "back": "le peigne",
+        "translit": "al-mishta",
+        "emoji": "💇"
+      },
+      {
+        "front": "الفرشاة",
+        "back": "la brosse",
+        "translit": "al-farshāt",
+        "emoji": "💇"
+      },
+      {
+        "front": "الشامبو",
+        "back": "le shampooing",
+        "translit": "ach-chāmbou",
+        "emoji": "🧴"
+      }
+    ]
   },
   {
     "id": "la-chambre",
     "name": "La Chambre",
     "category": "La Maison",
-    "cards": []
+    "cards": [
+      {
+        "front": "السرير",
+        "back": "le lit",
+        "translit": "as-sarir",
+        "emoji": "🛏️"
+      },
+      {
+        "front": "الوسادة",
+        "back": "l'oreiller",
+        "translit": "al-wisāda",
+        "emoji": "🛏️"
+      },
+      {
+        "front": "البطانية",
+        "back": "la couverture",
+        "translit": "al-batāniyya",
+        "emoji": "🛏️"
+      },
+      {
+        "front": "المصباح",
+        "back": "la lampe",
+        "translit": "al-misbāh",
+        "emoji": "💡"
+      },
+      {
+        "front": "الخزانة",
+        "back": "l'armoire",
+        "translit": "al-khazāna",
+        "emoji": "🚪"
+      },
+      {
+        "front": "الدولاب",
+        "back": "le placard",
+        "translit": "ad-doumāq",
+        "emoji": "🚪"
+      },
+      {
+        "front": "المكتب",
+        "back": "le bureau",
+        "translit": "al-maktab",
+        "emoji": "📚"
+      },
+      {
+        "front": "الكرسي",
+        "back": "la chaise",
+        "translit": "al-kursi",
+        "emoji": "🪑"
+      },
+      {
+        "front": "النافذة",
+        "back": "la fenêtre",
+        "translit": "an-nāfidha",
+        "emoji": "🪟"
+      },
+      {
+        "front": "الباب",
+        "back": "la porte",
+        "translit": "al-bāb",
+        "emoji": "🚪"
+      },
+      {
+        "front": "السجادة",
+        "back": "le tapis",
+        "translit": "as-sajāda",
+        "emoji": "🧶"
+      },
+      {
+        "front": "ملصق",
+        "back": "le poster",
+        "translit": "malsa",
+        "emoji": "🖼️"
+      }
+    ]
   },
   {
     "id": "faire-du-sport",

@@ -1,6 +1,20 @@
 {
   "id": "jouer",
   "name": "Jouer",
+  "nameAr": "يلعب",
   "category": "La Maison",
-  "cards": []
+  "cards": [
+    { "fr": "jouer", "en": "to play", "ar": "يلعب", "ar_translit": "yal'ab", "emoji": "🎮" },
+    { "fr": "le jeu de société", "en": "board game", "ar": "لعبة الطاولة", "ar_translit": "lu'bat at-tāwla", "emoji": "🎲" },
+    { "fr": "le ballon", "en": "ball", "ar": "الكرة", "ar_translit": "al-kura", "emoji": "⚽" },
+    { "fr": "la poupée", "en": "doll", "ar": "الدمية", "ar_translit": "ad-dumya", "emoji": "🪆" },
+    { "fr": "les cubes", "en": "blocks", "ar": "المكعبات", "ar_translit": "al-muka'abāt", "emoji": "🧩" },
+    { "fr": "le jeu vidéo", "en": "video game", "ar": "لعبة فيديو", "ar_translit": "lu'bat fīdiyou", "emoji": "🎮" },
+    { "fr": "la console", "en": "console", "ar": "جهاز الألعاب", "ar_translit": "jihāz al-al'āb", "emoji": "🕹️" },
+    { "fr": "les jouets", "en": "toys", "ar": "الألعاب", "ar_translit": "al-al'āb", "emoji": "🧸" },
+    { "fr": "le puzzle", "en": "puzzle", "ar": "اللغز", "ar_translit": "al-loghz", "emoji": "🧩" },
+    { "fr": "la peluche", "en": "stuffed animal", "ar": "لعبة مَحشوة", "ar_translit": "lu'bat mahshwa", "emoji": "🧸" },
+    { "fr": "la marelle", "en": "hopscotch", "ar": "لعبة الخطوط", "ar_translit": "lu'bat al-khittat", "emoji": "🎯" },
+    { "fr": "la bille", "en": "marble", "ar": "الخرزة", "ar_translit": "al-kharza", "emoji": "⚪" }
+  ]
 }

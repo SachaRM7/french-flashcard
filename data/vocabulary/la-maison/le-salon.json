@@ -1,6 +1,20 @@
 {
   "id": "le-salon",
   "name": "Le Salon",
+  "nameAr": "غرفة الجلوس",
   "category": "La Maison",
-  "cards": []
+  "cards": [
+    { "fr": "le canapé", "en": "sofa", "ar": "الأريكة", "ar_translit": "al-arīka", "emoji": "🛋️" },
+    { "fr": "le fauteuil", "en": "armchair", "ar": "الكرسي", "ar_translit": "al-kursi", "emoji": "🪑" },
+    { "fr": "la table basse", "en": "coffee table", "ar": "طاولة القهوة", "ar_translit": "tāwlat al-qahwa", "emoji": "🪑" },
+    { "fr": "la télévision", "en": "television", "ar": "التلفاز", "ar_translit": "at-tilifāz", "emoji": "📺" },
+    { "fr": "la lampadaire", "en": "floor lamp", "ar": "مصباح أرضي", "ar_translit": "misbāh ardhi", "emoji": "💡" },
+    { "fr": "les rideaux", "en": "curtains", "ar": "الستائر", "ar_translit": "as-sitā'ir", "emoji": "🪟" },
+    { "fr": "le tapis", "en": "carpet", "ar": "السجادة", "ar_translit": "as-sajāda", "emoji": "🧶" },
+    { "fr": "le tableau", "en": "painting", "ar": "اللوحة", "ar_translit": "al-lawha", "emoji": "🖼️" },
+    { "fr": "la bibliothèque", "en": "bookshelf", "ar": "رف الكتب", "ar_translit": "raff al-kutub", "emoji": "📚" },
+    { "fr": "la cheminée", "en": "fireplace", "ar": "الموقد", "ar_translit": "al-mawqad", "emoji": "🔥" },
+    { "fr": "la fenêtre", "en": "window", "ar": "النافذة", "ar_translit": "an-nāfidha", "emoji": "🪟" },
+    { "fr": "la porte", "en": "door", "ar": "الباب", "ar_translit": "al-bāb", "emoji": "🚪" }
+  ]
 }

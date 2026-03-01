@@ -1,5 +1,5 @@
-// Auto-generated decks - 2026-03-01T12:39:23.023486
-window.DECKS_VERSION = '2026-03-01T12:39:23.023486';
+// Auto-generated decks - 2026-03-01T13:01:33.847784
+window.DECKS_VERSION = '2026-03-01T13:01:33.847784';
 window.DECKS_DATA = [
   {
     "id": "les-animaux-de-la-montagne",
@@ -1223,37 +1223,403 @@ window.DECKS_DATA = [
     "id": "la-cuisine",
     "name": "La Cuisine",
     "category": "La Maison",
-    "cards": []
+    "cards": [
+      {
+        "front": "stove",
+        "back": "la cuisinière",
+        "emoji": "🔥"
+      },
+      {
+        "front": "refrigerator",
+        "back": "le réfrigérateur",
+        "emoji": "❄️"
+      },
+      {
+        "front": "oven",
+        "back": "le four",
+        "emoji": "🍳"
+      },
+      {
+        "front": "dishwasher",
+        "back": "le lave-vaisselle",
+        "emoji": "🍽️"
+      },
+      {
+        "front": "trash",
+        "back": "la poubelle",
+        "emoji": "🗑️"
+      },
+      {
+        "front": "sink",
+        "back": "l'évier",
+        "emoji": "🚰"
+      },
+      {
+        "front": "counter",
+        "back": "le plan de travail",
+        "emoji": "📐"
+      },
+      {
+        "front": "cabinets",
+        "back": "les placards",
+        "emoji": "🚪"
+      },
+      {
+        "front": "stool",
+        "back": "le tabouret",
+        "emoji": "🪑"
+      },
+      {
+        "front": "kitchen table",
+        "back": "la table de cuisine",
+        "emoji": "🍴"
+      },
+      {
+        "front": "window",
+        "back": "la fenêtre",
+        "emoji": "🪟"
+      },
+      {
+        "front": "door",
+        "back": "la porte",
+        "emoji": "🚪"
+      }
+    ]
   },
   {
     "id": "jouer",
     "name": "Jouer",
     "category": "La Maison",
-    "cards": []
+    "cards": [
+      {
+        "front": "to play",
+        "back": "jouer",
+        "emoji": "🎮"
+      },
+      {
+        "front": "board game",
+        "back": "le jeu de société",
+        "emoji": "🎲"
+      },
+      {
+        "front": "ball",
+        "back": "le ballon",
+        "emoji": "⚽"
+      },
+      {
+        "front": "doll",
+        "back": "la poupée",
+        "emoji": "🪆"
+      },
+      {
+        "front": "blocks",
+        "back": "les cubes",
+        "emoji": "🧩"
+      },
+      {
+        "front": "video game",
+        "back": "le jeu vidéo",
+        "emoji": "🎮"
+      },
+      {
+        "front": "console",
+        "back": "la console",
+        "emoji": "🕹️"
+      },
+      {
+        "front": "toys",
+        "back": "les jouets",
+        "emoji": "🧸"
+      },
+      {
+        "front": "puzzle",
+        "back": "le puzzle",
+        "emoji": "🧩"
+      },
+      {
+        "front": "stuffed animal",
+        "back": "la peluche",
+        "emoji": "🧸"
+      },
+      {
+        "front": "hopscotch",
+        "back": "la marelle",
+        "emoji": "🎯"
+      },
+      {
+        "front": "marble",
+        "back": "la bille",
+        "emoji": "⚪"
+      }
+    ]
   },
   {
     "id": "ou-habites-tu",
-    "name": "Ou Habites Tu",
+    "name": "Où habites-tu ?",
     "category": "La Maison",
-    "cards": []
+    "cards": [
+      {
+        "front": "house",
+        "back": "la maison",
+        "emoji": "🏠"
+      },
+      {
+        "front": "apartment",
+        "back": "l'appartement",
+        "emoji": "🏢"
+      },
+      {
+        "front": "building",
+        "back": "l'immeuble",
+        "emoji": "🏢"
+      },
+      {
+        "front": "street",
+        "back": "la rue",
+        "emoji": "🛣️"
+      },
+      {
+        "front": "neighborhood",
+        "back": "le quartier",
+        "emoji": "🏘️"
+      },
+      {
+        "front": "city",
+        "back": "la ville",
+        "emoji": "🏙️"
+      },
+      {
+        "front": "village",
+        "back": "le village",
+        "emoji": "🏘️"
+      },
+      {
+        "front": "countryside",
+        "back": "la campagne",
+        "emoji": "🌄"
+      },
+      {
+        "front": "mountain",
+        "back": "la montagne",
+        "emoji": "⛰️"
+      },
+      {
+        "front": "seaside",
+        "back": "le bord de la mer",
+        "emoji": "🏖️"
+      },
+      {
+        "front": "balcony",
+        "back": "le balcon",
+        "emoji": "🌳"
+      },
+      {
+        "front": "garden",
+        "back": "le jardin",
+        "emoji": "🌳"
+      }
+    ]
   },
   {
     "id": "le-salon",
     "name": "Le Salon",
     "category": "La Maison",
-    "cards": []
+    "cards": [
+      {
+        "front": "sofa",
+        "back": "le canapé",
+        "emoji": "🛋️"
+      },
+      {
+        "front": "armchair",
+        "back": "le fauteuil",
+        "emoji": "🪑"
+      },
+      {
+        "front": "coffee table",
+        "back": "la table basse",
+        "emoji": "🪑"
+      },
+      {
+        "front": "television",
+        "back": "la télévision",
+        "emoji": "📺"
+      },
+      {
+        "front": "floor lamp",
+        "back": "la lampadaire",
+        "emoji": "💡"
+      },
+      {
+        "front": "curtains",
+        "back": "les rideaux",
+        "emoji": "🪟"
+      },
+      {
+        "front": "carpet",
+        "back": "le tapis",
+        "emoji": "🧶"
+      },
+      {
+        "front": "painting",
+        "back": "le tableau",
+        "emoji": "🖼️"
+      },
+      {
+        "front": "bookshelf",
+        "back": "la bibliothèque",
+        "emoji": "📚"
+      },
+      {
+        "front": "fireplace",
+        "back": "la cheminée",
+        "emoji": "🔥"
+      },
+      {
+        "front": "window",
+        "back": "la fenêtre",
+        "emoji": "🪟"
+      },
+      {
+        "front": "door",
+        "back": "la porte",
+        "emoji": "🚪"
+      }
+    ]
   },
   {
     "id": "la-salle-de-bains",
-    "name": "La Salle De Bains",
+    "name": "La Salle de Bains",
     "category": "La Maison",
-    "cards": []
+    "cards": [
+      {
+        "front": "bathtub",
+        "back": "la baignoire",
+        "emoji": "🛁"
+      },
+      {
+        "front": "shower",
+        "back": "la douche",
+        "emoji": "🚿"
+      },
+      {
+        "front": "sink",
+        "back": "le lavabo",
+        "emoji": "🚰"
+      },
+      {
+        "front": "toilet",
+        "back": "les toilettes",
+        "emoji": "🚽"
+      },
+      {
+        "front": "mirror",
+        "back": "le miroir",
+        "emoji": "🪞"
+      },
+      {
+        "front": "soap",
+        "back": "le savon",
+        "emoji": "🧼"
+      },
+      {
+        "front": "toothbrush",
+        "back": "la brosse à dents",
+        "emoji": "🪥"
+      },
+      {
+        "front": "toothpaste",
+        "back": "le dentifrice",
+        "emoji": "😁"
+      },
+      {
+        "front": "towel",
+        "back": "la serviette",
+        "emoji": "🛀"
+      },
+      {
+        "front": "comb",
+        "back": "le peigne",
+        "emoji": "💇"
+      },
+      {
+        "front": "brush",
+        "back": "la brosse",
+        "emoji": "💇"
+      },
+      {
+        "front": "shampoo",
+        "back": "le shampooing",
+        "emoji": "🧴"
+      }
+    ]
   },
   {
     "id": "la-chambre",
     "name": "La Chambre",
     "category": "La Maison",
-    "cards": []
+    "cards": [
+      {
+        "front": "bed",
+        "back": "le lit",
+        "emoji": "🛏️"
+      },
+      {
+        "front": "pillow",
+        "back": "l'oreiller",
+        "emoji": "🛏️"
+      },
+      {
+        "front": "blanket",
+        "back": "la couverture",
+        "emoji": "🛏️"
+      },
+      {
+        "front": "lamp",
+        "back": "la lampe",
+        "emoji": "💡"
+      },
+      {
+        "front": "wardrobe",
+        "back": "l'armoire",
+        "emoji": "🚪"
+      },
+      {
+        "front": "closet",
+        "back": "le placard",
+        "emoji": "🚪"
+      },
+      {
+        "front": "desk",
+        "back": "le bureau",
+        "emoji": "📚"
+      },
+      {
+        "front": "chair",
+        "back": "la chaise",
+        "emoji": "🪑"
+      },
+      {
+        "front": "window",
+        "back": "la fenêtre",
+        "emoji": "🪟"
+      },
+      {
+        "front": "door",
+        "back": "la porte",
+        "emoji": "🚪"
+      },
+      {
+        "front": "carpet",
+        "back": "le tapis",
+        "emoji": "🧶"
+      },
+      {
+        "front": "poster",
+        "back": "le poster",
+        "emoji": "🖼️"
+      }
+    ]
   },
   {
     "id": "faire-du-sport",
