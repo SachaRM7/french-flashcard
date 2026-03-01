@@ -1,6 +1,14 @@
 {
   "id": "faire-du-sport",
-  "name": "Faire Du Sport",
-  "category": "Les Sports",
-  "cards": []
+  "name": "Faire du sport",
+  "nameAr": "ممارسة الرياضة",
+  "category": "Les sports",
+  "cards": [
+    { "fr": "le football", "en": "football/soccer", "ar": "كرة القدم", "ar_translit": "kourat al-qadam", "emoji": "⚽" },
+    { "fr": "le judo", "en": "judo", "ar": "جيدو", "ar_translit": "jidou", "emoji": "🥋" },
+    { "fr": "le basket", "en": "basketball", "ar": "كرة السلة", "ar_translit": "kourat as-salla", "emoji": "🏀" },
+    { "fr": "le tennis", "en": "tennis", "ar": "التنس", "ar_translit": "at-tinis", "emoji": "🎾" },
+    { "fr": "l'équitation", "en": "horseback riding", "ar": "فن ركوب الخيل", "ar_translit": "fan roukoub al-khayl", "emoji": "🐴" },
+    { "fr": "l'escalade", "en": "rock climbing", "ar": "التسلق", "ar_translit": "at-tasalloqu", "emoji": "🧗" }
+  ]
 }

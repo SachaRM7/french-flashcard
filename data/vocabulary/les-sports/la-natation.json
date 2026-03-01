@@ -1,6 +1,14 @@
 {
   "id": "la-natation",
-  "name": "La Natation",
-  "category": "Les Sports",
-  "cards": []
+  "name": "La natation",
+  "nameAr": "السباحة",
+  "category": "Les sports",
+  "cards": [
+    { "fr": "la piscine", "en": "swimming pool", "ar": "المسبح", "ar_translit": "al-masbah", "emoji": "🏊" },
+    { "fr": "le plongeoir", "en": "diving board", "ar": "المنصة", "ar_translit": "al-minatta", "emoji": "🏊" },
+    { "fr": "le maillot de bain", "en": "swimsuit", "ar": "لبس السباحة", "ar_translit": "libās as-sibāha", "emoji": "👙" },
+    { "fr": "le bonnet de bain", "en": "swimming cap", "ar": "قبعة السباحة", "ar_translit": "qouba't as-sibāha", "emoji": "🎩" },
+    { "fr": "les lunettes de natation", "en": "swimming goggles", "ar": "نظارات السباحة", "ar_translit": "nadhārāt as-sibāha", "emoji": "🥽" },
+    { "fr": "les brassards", "en": "arm bands", "ar": "عوامات يدوية", "ar_translit": "'awwāmāt yadawiyya", "emoji": "💪" }
+  ]
 }

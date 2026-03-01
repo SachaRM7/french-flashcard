@@ -1,5 +1,5 @@
-// Auto-generated decks - 2026-03-01T13:45:51.607174
-window.DECKS_VERSION = '2026-03-01T13:45:51.607174';
+// Auto-generated decks - 2026-03-01T13:50:19.302242
+window.DECKS_VERSION = '2026-03-01T13:50:19.302242';
 window.DECKS_DATA = [
   {
     "id": "les-animaux-de-la-montagne",
@@ -586,9 +586,40 @@ window.DECKS_DATA = [
   },
   {
     "id": "dans-les-airs",
-    "name": "Dans Les Airs",
-    "category": "Les Transports",
-    "cards": []
+    "name": "Dans les airs",
+    "category": "Les transports",
+    "cards": [
+      {
+        "front": "airplane",
+        "back": "l'avion",
+        "emoji": "✈️"
+      },
+      {
+        "front": "helicopter",
+        "back": "l'hélicoptère",
+        "emoji": "🚁"
+      },
+      {
+        "front": "parachute",
+        "back": "le parachute",
+        "emoji": "🪂"
+      },
+      {
+        "front": "hot air balloon",
+        "back": "la montgolfière",
+        "emoji": "🎈"
+      },
+      {
+        "front": "paraglider",
+        "back": "le parapente",
+        "emoji": "🪂"
+      },
+      {
+        "front": "glider plane",
+        "back": "le planeur",
+        "emoji": "🛩️"
+      }
+    ]
   },
   {
     "id": "sur-l-eau",
@@ -598,9 +629,70 @@ window.DECKS_DATA = [
   },
   {
     "id": "sur-la-terre",
-    "name": "Sur La Terre",
-    "category": "Les Transports",
-    "cards": []
+    "name": "Sur la terre",
+    "category": "Les transports",
+    "cards": [
+      {
+        "front": "bicycle",
+        "back": "le vélo",
+        "emoji": "🚲"
+      },
+      {
+        "front": "scooter",
+        "back": "le scooter",
+        "emoji": "🛵"
+      },
+      {
+        "front": "motorcycle",
+        "back": "la moto",
+        "emoji": "🏍️"
+      },
+      {
+        "front": "car",
+        "back": "la voiture",
+        "emoji": "🚗"
+      },
+      {
+        "front": "truck",
+        "back": "le camion",
+        "emoji": "🚚"
+      },
+      {
+        "front": "bus",
+        "back": "le bus",
+        "emoji": "🚌"
+      },
+      {
+        "front": "metro/subway",
+        "back": "le métro",
+        "emoji": "🚇"
+      },
+      {
+        "front": "tram",
+        "back": "le tramway",
+        "emoji": "🚊"
+      },
+      {
+        "front": "train",
+        "back": "le train",
+        "emoji": "🚂"
+      },
+      {
+        "front": "digger/excavator",
+        "back": "la pelleteuse",
+        "emoji": "🚜"
+      },
+      {
+        "front": "caravan",
+        "back": "la caravane",
+        "emoji": "🚐"
+      },
+      {
+        "front": "horse-drawn carriage",
+        "back": "la calèche",
+        "emoji": "🐴"
+      }
+    ]
   },
   {
     "id": "la-boucherie",
@@ -1353,21 +1445,114 @@ window.DECKS_DATA = [
   },
   {
     "id": "les-instruments-a-cordes",
-    "name": "Les Instruments A Cordes",
-    "category": "La Musique",
-    "cards": []
+    "name": "Les instruments à cordes",
+    "category": "La musique",
+    "cards": [
+      {
+        "front": "piano",
+        "back": "le piano",
+        "emoji": "🎹"
+      },
+      {
+        "front": "violin",
+        "back": "le violon",
+        "emoji": "🎻"
+      },
+      {
+        "front": "cello",
+        "back": "le violoncelle",
+        "emoji": "🎻"
+      },
+      {
+        "front": "double bass",
+        "back": "la contrebasse",
+        "emoji": "🎸"
+      },
+      {
+        "front": "guitar",
+        "back": "la guitare",
+        "emoji": "🎸"
+      },
+      {
+        "front": "banjo",
+        "back": "le banjo",
+        "emoji": "🪕"
+      }
+    ]
   },
   {
     "id": "les-percussions",
-    "name": "Les Percussions",
-    "category": "La Musique",
-    "cards": []
+    "name": "Les percussions",
+    "category": "La musique",
+    "cards": [
+      {
+        "front": "drums",
+        "back": "la batterie",
+        "emoji": "🥁"
+      },
+      {
+        "front": "maracas",
+        "back": "les maracas",
+        "emoji": "🪶"
+      },
+      {
+        "front": "xylophone",
+        "back": "le xylophone",
+        "emoji": "🎵"
+      },
+      {
+        "front": "djembe",
+        "back": "le djembé",
+        "emoji": "🥁"
+      },
+      {
+        "front": "tambourine",
+        "back": "le tambourin",
+        "emoji": "🎵"
+      },
+      {
+        "front": "triangle",
+        "back": "le triangle",
+        "emoji": "🔺"
+      }
+    ]
   },
   {
     "id": "les-instruments-a-vent",
-    "name": "Les Instruments A Vent",
-    "category": "La Musique",
-    "cards": []
+    "name": "Les instruments à vent",
+    "category": "La musique",
+    "cards": [
+      {
+        "front": "flute",
+        "back": "la flûte",
+        "emoji": "🎵"
+      },
+      {
+        "front": "trumpet",
+        "back": "la trompette",
+        "emoji": "🎺"
+      },
+      {
+        "front": "trombone",
+        "back": "le trombone",
+        "emoji": "🎺"
+      },
+      {
+        "front": "saxophone",
+        "back": "le saxophone",
+        "emoji": "🎷"
+      },
+      {
+        "front": "harmonica",
+        "back": "l'harmonica",
+        "emoji": "🎼"
+      },
+      {
+        "front": "accordion",
+        "back": "l'accordéon",
+        "emoji": "🎹"
+      }
+    ]
   },
   {
     "id": "la-cantine",
@@ -2464,21 +2649,114 @@ window.DECKS_DATA = [
   },
   {
     "id": "faire-du-sport",
-    "name": "Faire Du Sport",
-    "category": "Les Sports",
-    "cards": []
+    "name": "Faire du sport",
+    "category": "Les sports",
+    "cards": [
+      {
+        "front": "football/soccer",
+        "back": "le football",
+        "emoji": "⚽"
+      },
+      {
+        "front": "judo",
+        "back": "le judo",
+        "emoji": "🥋"
+      },
+      {
+        "front": "basketball",
+        "back": "le basket",
+        "emoji": "🏀"
+      },
+      {
+        "front": "tennis",
+        "back": "le tennis",
+        "emoji": "🎾"
+      },
+      {
+        "front": "horseback riding",
+        "back": "l'équitation",
+        "emoji": "🐴"
+      },
+      {
+        "front": "rock climbing",
+        "back": "l'escalade",
+        "emoji": "🧗"
+      }
+    ]
   },
   {
     "id": "la-natation",
-    "name": "La Natation",
-    "category": "Les Sports",
-    "cards": []
+    "name": "La natation",
+    "category": "Les sports",
+    "cards": [
+      {
+        "front": "swimming pool",
+        "back": "la piscine",
+        "emoji": "🏊"
+      },
+      {
+        "front": "diving board",
+        "back": "le plongeoir",
+        "emoji": "🏊"
+      },
+      {
+        "front": "swimsuit",
+        "back": "le maillot de bain",
+        "emoji": "👙"
+      },
+      {
+        "front": "swimming cap",
+        "back": "le bonnet de bain",
+        "emoji": "🎩"
+      },
+      {
+        "front": "swimming goggles",
+        "back": "les lunettes de natation",
+        "emoji": "🥽"
+      },
+      {
+        "front": "arm bands",
+        "back": "les brassards",
+        "emoji": "💪"
+      }
+    ]
   },
   {
     "id": "la-danse",
-    "name": "La Danse",
-    "category": "Les Sports",
-    "cards": []
+    "name": "La danse",
+    "category": "Les sports",
+    "cards": [
+      {
+        "front": "dance",
+        "back": "danser",
+        "emoji": "💃"
+      },
+      {
+        "front": "practice",
+        "back": "s'entraîner",
+        "emoji": "🎭"
+      },
+      {
+        "front": "ballet slippers",
+        "back": "les chaussons de danse",
+        "emoji": "🩰"
+      },
+      {
+        "front": "tutu",
+        "back": "le tutu",
+        "emoji": "🩱"
+      },
+      {
+        "front": "barre",
+        "back": "la barre",
+        "emoji": "🎭"
+      },
+      {
+        "front": "move/figure",
+        "back": "la figure",
+        "emoji": "🎭"
+      }
+    ]
   },
   {
     "id": "la-ferme",

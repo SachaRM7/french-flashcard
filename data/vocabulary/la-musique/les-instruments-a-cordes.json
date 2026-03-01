@@ -1,6 +1,14 @@
 {
   "id": "les-instruments-a-cordes",
-  "name": "Les Instruments A Cordes",
-  "category": "La Musique",
-  "cards": []
+  "name": "Les instruments à cordes",
+  "nameAr": "آلات وترية",
+  "category": "La musique",
+  "cards": [
+    { "fr": "le piano", "en": "piano", "ar": "البيانو", "ar_translit": "al-biyānou", "emoji": "🎹" },
+    { "fr": "le violon", "en": "violin", "ar": "الكمنجة", "ar_translit": "al-kamandja", "emoji": "🎻" },
+    { "fr": "le violoncelle", "en": "cello", "ar": "الكمان", "ar_translit": "al-kamān", "emoji": "🎻" },
+    { "fr": "la contrebasse", "en": "double bass", "ar": "الكنترباص", "ar_translit": "al-kountrobās", "emoji": "🎸" },
+    { "fr": "la guitare", "en": "guitar", "ar": "الغيتارة", "ar_translit": "al-ghitāra", "emoji": "🎸" },
+    { "fr": "le banjo", "en": "banjo", "ar": "البانجو", "ar_translit": "al-bānjou", "emoji": "🪕" }
+  ]
 }

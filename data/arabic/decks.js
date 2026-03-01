@@ -1,5 +1,5 @@
-// Auto-generated decks - 2026-03-01T13:45:51.607174
-window.DECKS_VERSION = '2026-03-01T13:45:51.607174';
+// Auto-generated decks - 2026-03-01T13:50:19.302242
+window.DECKS_VERSION = '2026-03-01T13:50:19.302242';
 window.DECKS_DATA = [
   {
     "id": "les-animaux-de-la-montagne",
@@ -673,9 +673,46 @@ window.DECKS_DATA = [
   },
   {
     "id": "dans-les-airs",
-    "name": "Dans Les Airs",
-    "category": "Les Transports",
-    "cards": []
+    "name": "Dans les airs",
+    "category": "Les transports",
+    "cards": [
+      {
+        "front": "الطائرة",
+        "back": "l'avion",
+        "translit": "at-tā'ira",
+        "emoji": "✈️"
+      },
+      {
+        "front": "طائرة مروحية",
+        "back": "l'hélicoptère",
+        "translit": "tā'ira mirwahiyya",
+        "emoji": "🚁"
+      },
+      {
+        "front": "المظلة",
+        "back": "le parachute",
+        "translit": "al-midhālla",
+        "emoji": "🪂"
+      },
+      {
+        "front": "المنطاد",
+        "back": "la montgolfière",
+        "translit": "al-mintād",
+        "emoji": "🎈"
+      },
+      {
+        "front": "طيران شراعي",
+        "back": "le parapente",
+        "translit": "tayarān shirāe",
+        "emoji": "🪂"
+      },
+      {
+        "front": "طائرة شراعية",
+        "back": "le planeur",
+        "translit": "tā'ira shirāiyya",
+        "emoji": "🛩️"
+      }
+    ]
   },
   {
     "id": "sur-l-eau",
@@ -685,9 +722,82 @@ window.DECKS_DATA = [
   },
   {
     "id": "sur-la-terre",
-    "name": "Sur La Terre",
-    "category": "Les Transports",
-    "cards": []
+    "name": "Sur la terre",
+    "category": "Les transports",
+    "cards": [
+      {
+        "front": "الدراجة",
+        "back": "le vélo",
+        "translit": "ad-darrādja",
+        "emoji": "🚲"
+      },
+      {
+        "front": "سكوتير",
+        "back": "le scooter",
+        "translit": "skoutir",
+        "emoji": "🛵"
+      },
+      {
+        "front": "دراجة نارية",
+        "back": "la moto",
+        "translit": "daradja nāriyya",
+        "emoji": "🏍️"
+      },
+      {
+        "front": "السيارة",
+        "back": "la voiture",
+        "translit": "as-sayyāra",
+        "emoji": "🚗"
+      },
+      {
+        "front": "الشاحنة",
+        "back": "le camion",
+        "translit": "ac-chāhina",
+        "emoji": "🚚"
+      },
+      {
+        "front": "الحافلة",
+        "back": "le bus",
+        "translit": "al-hafila",
+        "emoji": "🚌"
+      },
+      {
+        "front": "المترو",
+        "back": "le métro",
+        "translit": "al-mitrou",
+        "emoji": "🚇"
+      },
+      {
+        "front": "ترام",
+        "back": "le tramway",
+        "translit": "tram",
+        "emoji": "🚊"
+      },
+      {
+        "front": "القطار",
+        "back": "le train",
+        "translit": "al-qitār",
+        "emoji": "🚂"
+      },
+      {
+        "front": "الحفارة",
+        "back": "la pelleteuse",
+        "translit": "al-haffāra",
+        "emoji": "🚜"
+      },
+      {
+        "front": "القافلة",
+        "back": "la caravane",
+        "translit": "al-qāfila",
+        "emoji": "🚐"
+      },
+      {
+        "front": "عربة خيل",
+        "back": "la calèche",
+        "translit": "'arabat khayl",
+        "emoji": "🐴"
+      }
+    ]
   },
   {
     "id": "la-boucherie",
@@ -1569,21 +1679,132 @@ window.DECKS_DATA = [
   },
   {
     "id": "les-instruments-a-cordes",
-    "name": "Les Instruments A Cordes",
-    "category": "La Musique",
-    "cards": []
+    "name": "Les instruments à cordes",
+    "category": "La musique",
+    "cards": [
+      {
+        "front": "البيانو",
+        "back": "le piano",
+        "translit": "al-biyānou",
+        "emoji": "🎹"
+      },
+      {
+        "front": "الكمنجة",
+        "back": "le violon",
+        "translit": "al-kamandja",
+        "emoji": "🎻"
+      },
+      {
+        "front": "الكمان",
+        "back": "le violoncelle",
+        "translit": "al-kamān",
+        "emoji": "🎻"
+      },
+      {
+        "front": "الكنترباص",
+        "back": "la contrebasse",
+        "translit": "al-kountrobās",
+        "emoji": "🎸"
+      },
+      {
+        "front": "الغيتارة",
+        "back": "la guitare",
+        "translit": "al-ghitāra",
+        "emoji": "🎸"
+      },
+      {
+        "front": "البانجو",
+        "back": "le banjo",
+        "translit": "al-bānjou",
+        "emoji": "🪕"
+      }
+    ]
   },
   {
     "id": "les-percussions",
-    "name": "Les Percussions",
-    "category": "La Musique",
-    "cards": []
+    "name": "Les percussions",
+    "category": "La musique",
+    "cards": [
+      {
+        "front": "الطبل",
+        "back": "la batterie",
+        "translit": "at-tabal",
+        "emoji": "🥁"
+      },
+      {
+        "front": "خشخشيشات",
+        "back": "les maracas",
+        "translit": "khoushkhayshat",
+        "emoji": "🪶"
+      },
+      {
+        "front": "مارمبا",
+        "back": "le xylophone",
+        "translit": "mārimba",
+        "emoji": "🎵"
+      },
+      {
+        "front": "دربوكة",
+        "back": "le djembé",
+        "translit": "darboûkka",
+        "emoji": "🥁"
+      },
+      {
+        "front": "الرق",
+        "back": "le tambourin",
+        "translit": "ar-riqq",
+        "emoji": "🎵"
+      },
+      {
+        "front": "مثلث",
+        "back": "le triangle",
+        "translit": "mouthallath",
+        "emoji": "🔺"
+      }
+    ]
   },
   {
     "id": "les-instruments-a-vent",
-    "name": "Les Instruments A Vent",
-    "category": "La Musique",
-    "cards": []
+    "name": "Les instruments à vent",
+    "category": "La musique",
+    "cards": [
+      {
+        "front": "الناي",
+        "back": "la flûte",
+        "translit": "an-nāy",
+        "emoji": "🎵"
+      },
+      {
+        "front": "البوق",
+        "back": "la trompette",
+        "translit": "al-boûq",
+        "emoji": "🎺"
+      },
+      {
+        "front": "ترومبون",
+        "back": "le trombone",
+        "translit": "troûmboun",
+        "emoji": "🎺"
+      },
+      {
+        "front": "الساكسوفون",
+        "back": "le saxophone",
+        "translit": "as-sāxoûfoun",
+        "emoji": "🎷"
+      },
+      {
+        "front": "الهارمونيكا",
+        "back": "l'harmonica",
+        "translit": "al-hārmoûnika",
+        "emoji": "🎼"
+      },
+      {
+        "front": "الأكورديون",
+        "back": "l'accordéon",
+        "translit": "al-akourdioun",
+        "emoji": "🎹"
+      }
+    ]
   },
   {
     "id": "la-cantine",
@@ -2879,21 +3100,132 @@ window.DECKS_DATA = [
   },
   {
     "id": "faire-du-sport",
-    "name": "Faire Du Sport",
-    "category": "Les Sports",
-    "cards": []
+    "name": "Faire du sport",
+    "category": "Les sports",
+    "cards": [
+      {
+        "front": "كرة القدم",
+        "back": "le football",
+        "translit": "kourat al-qadam",
+        "emoji": "⚽"
+      },
+      {
+        "front": "جيدو",
+        "back": "le judo",
+        "translit": "jidou",
+        "emoji": "🥋"
+      },
+      {
+        "front": "كرة السلة",
+        "back": "le basket",
+        "translit": "kourat as-salla",
+        "emoji": "🏀"
+      },
+      {
+        "front": "التنس",
+        "back": "le tennis",
+        "translit": "at-tinis",
+        "emoji": "🎾"
+      },
+      {
+        "front": "فن ركوب الخيل",
+        "back": "l'équitation",
+        "translit": "fan roukoub al-khayl",
+        "emoji": "🐴"
+      },
+      {
+        "front": "التسلق",
+        "back": "l'escalade",
+        "translit": "at-tasalloqu",
+        "emoji": "🧗"
+      }
+    ]
   },
   {
     "id": "la-natation",
-    "name": "La Natation",
-    "category": "Les Sports",
-    "cards": []
+    "name": "La natation",
+    "category": "Les sports",
+    "cards": [
+      {
+        "front": "المسبح",
+        "back": "la piscine",
+        "translit": "al-masbah",
+        "emoji": "🏊"
+      },
+      {
+        "front": "المنصة",
+        "back": "le plongeoir",
+        "translit": "al-minatta",
+        "emoji": "🏊"
+      },
+      {
+        "front": "لبس السباحة",
+        "back": "le maillot de bain",
+        "translit": "libās as-sibāha",
+        "emoji": "👙"
+      },
+      {
+        "front": "قبعة السباحة",
+        "back": "le bonnet de bain",
+        "translit": "qouba't as-sibāha",
+        "emoji": "🎩"
+      },
+      {
+        "front": "نظارات السباحة",
+        "back": "les lunettes de natation",
+        "translit": "nadhārāt as-sibāha",
+        "emoji": "🥽"
+      },
+      {
+        "front": "عوامات يدوية",
+        "back": "les brassards",
+        "translit": "'awwāmāt yadawiyya",
+        "emoji": "💪"
+      }
+    ]
   },
   {
     "id": "la-danse",
-    "name": "La Danse",
-    "category": "Les Sports",
-    "cards": []
+    "name": "La danse",
+    "category": "Les sports",
+    "cards": [
+      {
+        "front": "يرقص",
+        "back": "danser",
+        "translit": "yarqousou",
+        "emoji": "💃"
+      },
+      {
+        "front": "يتدارب",
+        "back": "s'entraîner",
+        "translit": "yatadarrab",
+        "emoji": "🎭"
+      },
+      {
+        "front": "جوارب الرقص",
+        "back": "les chaussons de danse",
+        "translit": "djawārib ar-raqṣ",
+        "emoji": "🩰"
+      },
+      {
+        "front": "تنورة رقص",
+        "back": "le tutu",
+        "translit": "tannoûrat raqṣ",
+        "emoji": "🩱"
+      },
+      {
+        "front": "القضيب",
+        "back": "la barre",
+        "translit": "al-qadhib",
+        "emoji": "🎭"
+      },
+      {
+        "front": "الشكل",
+        "back": "la figure",
+        "translit": "ash-chakl",
+        "emoji": "🎭"
+      }
+    ]
   },
   {
     "id": "la-ferme",

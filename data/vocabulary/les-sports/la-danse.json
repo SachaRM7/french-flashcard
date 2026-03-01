@@ -1,6 +1,14 @@
 {
   "id": "la-danse",
-  "name": "La Danse",
-  "category": "Les Sports",
-  "cards": []
+  "name": "La danse",
+  "nameAr": "الرقص",
+  "category": "Les sports",
+  "cards": [
+    { "fr": "danser", "en": "dance", "ar": "يرقص", "ar_translit": "yarqousou", "emoji": "💃" },
+    { "fr": "s'entraîner", "en": "practice", "ar": "يتدارب", "ar_translit": "yatadarrab", "emoji": "🎭" },
+    { "fr": "les chaussons de danse", "en": "ballet slippers", "ar": "جوارب الرقص", "ar_translit": "djawārib ar-raqṣ", "emoji": "🩰" },
+    { "fr": "le tutu", "en": "tutu", "ar": "تنورة رقص", "ar_translit": "tannoûrat raqṣ", "emoji": "🩱" },
+    { "fr": "la barre", "en": "barre", "ar": "القضيب", "ar_translit": "al-qadhib", "emoji": "🎭" },
+    { "fr": "la figure", "en": "move/figure", "ar": "الشكل", "ar_translit": "ash-chakl", "emoji": "🎭" }
+  ]
 }

@@ -1,6 +1,20 @@
 {
   "id": "sur-la-terre",
-  "name": "Sur La Terre",
-  "category": "Les Transports",
-  "cards": []
+  "name": "Sur la terre",
+  "nameAr": "على الأرض",
+  "category": "Les transports",
+  "cards": [
+    { "fr": "le vélo", "en": "bicycle", "ar": "الدراجة", "ar_translit": "ad-darrādja", "emoji": "🚲" },
+    { "fr": "le scooter", "en": "scooter", "ar": "سكوتير", "ar_translit": "skoutir", "emoji": "🛵" },
+    { "fr": "la moto", "en": "motorcycle", "ar": "دراجة نارية", "ar_translit": "daradja nāriyya", "emoji": "🏍️" },
+    { "fr": "la voiture", "en": "car", "ar": "السيارة", "ar_translit": "as-sayyāra", "emoji": "🚗" },
+    { "fr": "le camion", "en": "truck", "ar": "الشاحنة", "ar_translit": "ac-chāhina", "emoji": "🚚" },
+    { "fr": "le bus", "en": "bus", "ar": "الحافلة", "ar_translit": "al-hafila", "emoji": "🚌" },
+    { "fr": "le métro", "en": "metro/subway", "ar": "المترو", "ar_translit": "al-mitrou", "emoji": "🚇" },
+    { "fr": "le tramway", "en": "tram", "ar": "ترام", "ar_translit": "tram", "emoji": "🚊" },
+    { "fr": "le train", "en": "train", "ar": "القطار", "ar_translit": "al-qitār", "emoji": "🚂" },
+    { "fr": "la pelleteuse", "en": "digger/excavator", "ar": "الحفارة", "ar_translit": "al-haffāra", "emoji": "🚜" },
+    { "fr": "la caravane", "en": "caravan", "ar": "القافلة", "ar_translit": "al-qāfila", "emoji": "🚐" },
+    { "fr": "la calèche", "en": "horse-drawn carriage", "ar": "عربة خيل", "ar_translit": "'arabat khayl", "emoji": "🐴" }
+  ]
 }

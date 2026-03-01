@@ -1,6 +1,14 @@
 {
   "id": "les-percussions",
-  "name": "Les Percussions",
-  "category": "La Musique",
-  "cards": []
+  "name": "Les percussions",
+  "nameAr": "آلات الإيقاع",
+  "category": "La musique",
+  "cards": [
+    { "fr": "la batterie", "en": "drums", "ar": "الطبل", "ar_translit": "at-tabal", "emoji": "🥁" },
+    { "fr": "les maracas", "en": "maracas", "ar": "خشخشيشات", "ar_translit": "khoushkhayshat", "emoji": "🪶" },
+    { "fr": "le xylophone", "en": "xylophone", "ar": "مارمبا", "ar_translit": "mārimba", "emoji": "🎵" },
+    { "fr": "le djembé", "en": "djembe", "ar": "دربوكة", "ar_translit": "darboûkka", "emoji": "🥁" },
+    { "fr": "le tambourin", "en": "tambourine", "ar": "الرق", "ar_translit": "ar-riqq", "emoji": "🎵" },
+    { "fr": "le triangle", "en": "triangle", "ar": "مثلث", "ar_translit": "mouthallath", "emoji": "🔺" }
+  ]
 }

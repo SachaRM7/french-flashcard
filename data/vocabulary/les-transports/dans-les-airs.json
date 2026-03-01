@@ -1,6 +1,14 @@
 {
   "id": "dans-les-airs",
-  "name": "Dans Les Airs",
-  "category": "Les Transports",
-  "cards": []
+  "name": "Dans les airs",
+  "nameAr": "في الهواء",
+  "category": "Les transports",
+  "cards": [
+    { "fr": "l'avion", "en": "airplane", "ar": "الطائرة", "ar_translit": "at-tā'ira", "emoji": "✈️" },
+    { "fr": "l'hélicoptère", "en": "helicopter", "ar": "طائرة مروحية", "ar_translit": "tā'ira mirwahiyya", "emoji": "🚁" },
+    { "fr": "le parachute", "en": "parachute", "ar": "المظلة", "ar_translit": "al-midhālla", "emoji": "🪂" },
+    { "fr": "la montgolfière", "en": "hot air balloon", "ar": "المنطاد", "ar_translit": "al-mintād", "emoji": "🎈" },
+    { "fr": "le parapente", "en": "paraglider", "ar": "طيران شراعي", "ar_translit": "tayarān shirāe", "emoji": "🪂" },
+    { "fr": "le planeur", "en": "glider plane", "ar": "طائرة شراعية", "ar_translit": "tā'ira shirāiyya", "emoji": "🛩️" }
+  ]
 }

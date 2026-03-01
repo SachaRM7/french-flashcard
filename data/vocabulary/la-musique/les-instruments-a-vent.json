@@ -1,6 +1,14 @@
 {
   "id": "les-instruments-a-vent",
-  "name": "Les Instruments A Vent",
-  "category": "La Musique",
-  "cards": []
+  "name": "Les instruments à vent",
+  "nameAr": "آلات هوائية",
+  "category": "La musique",
+  "cards": [
+    { "fr": "la flûte", "en": "flute", "ar": "الناي", "ar_translit": "an-nāy", "emoji": "🎵" },
+    { "fr": "la trompette", "en": "trumpet", "ar": "البوق", "ar_translit": "al-boûq", "emoji": "🎺" },
+    { "fr": "le trombone", "en": "trombone", "ar": "ترومبون", "ar_translit": "troûmboun", "emoji": "🎺" },
+    { "fr": "le saxophone", "en": "saxophone", "ar": "الساكسوفون", "ar_translit": "as-sāxoûfoun", "emoji": "🎷" },
+    { "fr": "l'harmonica", "en": "harmonica", "ar": "الهارمونيكا", "ar_translit": "al-hārmoûnika", "emoji": "🎼" },
+    { "fr": "l'accordéon", "en": "accordion", "ar": "الأكورديون", "ar_translit": "al-akourdioun", "emoji": "🎹" }
+  ]
 }
