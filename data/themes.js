@@ -4,7 +4,7 @@ window.THEMES_DATA = [
         id: 'premiers-mots',
         name: 'Premiers mots',
         nameAr: 'الكلمات الأولى',
-        color: '#a8d5a2', // vert clair
+        color: '#a8d5a2',
         icon: '🔤',
         decks: ['nombres', 'couleurs', 'formes', 'mouvements', 'se-reperer', 'jours-semaine', 'mois-annee', 'fetes', 'saisons', 'temps']
     },
@@ -12,120 +12,120 @@ window.THEMES_DATA = [
         id: 'corps-humain',
         name: 'Le corps humain',
         nameAr: 'جسم الإنسان',
-        color: '#f4a7a7', // rose
+        color: '#f4a7a7',
         icon: '🧍',
-        decks: ['corps', 'visage', 'cheveux', 'handicaps', 'sens', 'grandir', 'docteur', 'maladies', 'hopital']
+        decks: ['le-corps', 'le-visage', 'les-cheveux', 'les-handicaps', 'les-sens', 'grandir', 'chez-le-docteur', 'les-maladies', 'a-l-hopital', 'tous-differents']
     },
     {
         id: 'vivre-ensemble',
         name: 'Vivre ensemble',
         nameAr: 'العيش معاً',
-        color: '#c9b8e0', // violet clair
+        color: '#c9b8e0',
         icon: '👥',
-        decks: ['emotions', 'famille', 'amis']
+        decks: ['les-emotions', 'la-famille', 'la-politesse', 's-exprimer', 'communiquer']
     },
     {
         id: 'shabiller',
         name: 'S\'habiller',
         nameAr: 'الملابس',
-        color: '#b8d4e8', // bleu clair
+        color: '#b8d4e8',
         icon: '👕',
-        decks: ['vetements', 'chaud', 'froid']
+        decks: ['les-vetements', 'il-fait-chaud', 'il-fait-froid']
     },
     {
         id: 'manger',
         name: 'Manger',
         nameAr: 'الأكل',
-        color: '#f9e79f', // jaune
+        color: '#f9e79f',
         icon: '🍽️',
-        decks: ['petit-dejeuner', 'couvert', 'boissons', 'gout', 'sale', 'sucre', 'legumes', 'fruits', 'produits-laitiers', 'boulangerie', 'boucherie', 'courses']
+        decks: ['le-petit-dejeuner', 'mettre-le-couvert', 'les-boissons', 'le-gout', 'le-sale', 'le-sucre', 'les-legumes', 'les-fruits', 'les-produits-laitiers', 'la-boulangerie', 'faire-les-courses']
     },
     {
         id: 'maison',
         name: 'La maison',
         nameAr: 'البيت',
-        color: '#f5cba7', // orange clair
+        color: '#f5cba7',
         icon: '🏠',
-        decks: ['habitation', 'chambre', 'jouer', 'cuisine', 'salon', 'salle-bains']
+        decks: ['ou-habites-tu', 'la-chambre', 'jouer', 'la-cuisine', 'le-salon', 'la-salle-de-bains']
     },
     {
         id: 'ecole',
         name: 'L\'école',
         nameAr: 'المدرسة',
-        color: '#aed6f1', // bleu
+        color: '#aed6f1',
         icon: '🏫',
-        decks: ['chemin-ecole', 'salle-classe', 'materiel', 'recreation', 'cantine', 'gymnastique']
+        decks: ['le-chemin-de-l-ecole', 'la-salle-de-classe', 'le-materiel', 'la-recreation', 'la-cantine', 'la-gymnastique']
     },
     {
         id: 'ville',
         name: 'La ville',
         nameAr: 'المدينة',
-        color: '#d5dbdb', // gris
+        color: '#d5dbdb',
         icon: '🏙️',
-        decks: ['rue', 'square']
+        decks: ['la-rue', 'la-place']
     },
     {
         id: 'travail',
         name: 'Le travail',
         nameAr: 'العمل',
-        color: '#f1948a', // rose foncé
+        color: '#f1948a',
         icon: '💼',
-        decks: ['metiers']
+        decks: ['les-metiers']
     },
     {
         id: 'sortir',
         name: 'Sortir',
         nameAr: 'الخروج',
-        color: '#e8daef', // mauve
+        color: '#e8daef',
         icon: '🎭',
-        decks: ['musee', 'spectacle', 'cirque', 'ferme']
+        decks: ['le-musee', 'le-spectacle', 'le-cirque', 'la-ferme']
     },
     {
         id: 'musique',
         name: 'La musique',
         nameAr: 'الموسيقى',
-        color: '#fadbd8', // rose pâle
+        color: '#fadbd8',
         icon: '🎵',
-        decks: ['jouer-musique', 'instruments-cordes', 'instruments-vent', 'percussions']
+        decks: ['jouer-de-la-musique', 'les-instruments-a-cordes', 'les-instruments-a-vent', 'les-percussions']
     },
     {
         id: 'sports',
         name: 'Les sports',
         nameAr: 'الرياضة',
-        color: '#fcf3cf', // jaune pâle
+        color: '#fcf3cf',
         icon: '⚽',
-        decks: ['faire-sport', 'danse', 'natation']
+        decks: ['faire-du-sport', 'la-danse', 'la-natation']
     },
     {
         id: 'transports',
         name: 'Les transports',
         nameAr: 'وسائل النقل',
-        color: '#a9dfbf', // vert d'eau
+        color: '#a9dfbf',
         icon: '🚗',
-        decks: ['sur-terre', 'dans-airs', 'sur-eau']
+        decks: ['sur-la-terre', 'dans-les-airs', 'sur-l-eau']
     },
     {
         id: 'vacances',
         name: 'Les vacances',
         nameAr: 'العطلة',
-        color: '#f9e79f', // jaune
+        color: '#f9e79f',
         icon: '🏖️',
-        decks: ['gare', 'aeroport', 'plage', 'mer', 'montagne', 'sports-hiver', 'foret']
+        decks: ['la-gare', 'l-aeroport', 'la-plage', 'la-mer', 'la-montagne', 'les-sports-d-hiver', 'la-foret']
     },
     {
         id: 'animaux',
         name: 'Les animaux',
         nameAr: 'الحيوانات',
-        color: '#f5b7b1', // saumon
+        color: '#f5b7b1',
         icon: '🐾',
-        decks: ['animaux-domestiques', 'animaux-jardin', 'animaux-ferme', 'animaux-foret', 'animaux-montagne', 'animaux-banquise', 'animaux-bord-mer', 'animaux-oceans', 'animaux-jungle', 'animaux-savane', 'insectes', 'oiseaux', 'cris-animaux']
+        decks: ['les-animaux-domestiques', 'les-animaux-du-jardin', 'les-animaux-de-la-ferme', 'les-animaux-de-la-foret', 'les-animaux-de-la-montagne', 'les-animaux-de-la-banquise', 'les-animaux-du-bord-de-mer', 'les-animaux-des-oceans', 'les-animaux-de-la-jungle', 'les-animaux-de-la-savane', 'les-insectes', 'les-oiseaux', 'les-cris-des-animaux']
     },
     {
         id: 'monde',
         name: 'Le monde',
         nameAr: 'العالم',
-        color: '#d2b4de', // violet
+        color: '#d2b4de',
         icon: '🌍',
-        decks: ['continents', 'espace']
+        decks: ['les-continents', 'l-espace']
     }
 ];
