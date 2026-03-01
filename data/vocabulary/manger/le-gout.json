@@ -1,6 +1,14 @@
 {
   "id": "le-gout",
-  "name": "Le Gout",
+  "name": "Le goût",
+  "nameAr": "المذاق",
   "category": "Manger",
-  "cards": []
+  "cards": [
+    { "fr": "salé", "en": "salty", "ar": "مالح", "ar_translit": "malih", "emoji": "🧂" },
+    { "fr": "sucré", "en": "sweet", "ar": "حلو", "ar_translit": "houlw", "emoji": "🍬" },
+    { "fr": "acide", "en": "sour", "ar": "حامض", "ar_translit": "hāmidh", "emoji": "🍋" },
+    { "fr": "amer", "en": "bitter", "ar": "مرّ", "ar_translit": "mourr", "emoji": "😖" },
+    { "fr": "piquant", "en": "spicy", "ar": "حار", "ar_translit": "hār", "emoji": "🌶️" },
+    { "fr": "insipide", "en": "bland", "ar": "بلا طعم", "ar_translit": "bilā ta'um", "emoji": "😐" }
+  ]
 }

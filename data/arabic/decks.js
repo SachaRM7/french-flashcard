@@ -1,5 +1,5 @@
-// Auto-generated decks - 2026-03-01T12:16:31.385029
-window.DECKS_VERSION = '2026-03-01T12:16:31.385029';
+// Auto-generated decks - 2026-03-01T12:20:59.778460
+window.DECKS_VERSION = '2026-03-01T12:20:59.778460';
 window.DECKS_DATA = [
   {
     "id": "les-animaux-de-la-montagne",
@@ -697,9 +697,46 @@ window.DECKS_DATA = [
   },
   {
     "id": "le-gout",
-    "name": "Le Gout",
+    "name": "Le goût",
     "category": "Manger",
-    "cards": []
+    "cards": [
+      {
+        "front": "مالح",
+        "back": "salé",
+        "translit": "malih",
+        "emoji": "🧂"
+      },
+      {
+        "front": "حلو",
+        "back": "sucré",
+        "translit": "houlw",
+        "emoji": "🍬"
+      },
+      {
+        "front": "حامض",
+        "back": "acide",
+        "translit": "hāmidh",
+        "emoji": "🍋"
+      },
+      {
+        "front": "مرّ",
+        "back": "amer",
+        "translit": "mourr",
+        "emoji": "😖"
+      },
+      {
+        "front": "حار",
+        "back": "piquant",
+        "translit": "hār",
+        "emoji": "🌶️"
+      },
+      {
+        "front": "بلا طعم",
+        "back": "insipide",
+        "translit": "bilā ta'um",
+        "emoji": "😐"
+      }
+    ]
   },
   {
     "id": "les-legumes",
@@ -709,9 +746,46 @@ window.DECKS_DATA = [
   },
   {
     "id": "les-boissons",
-    "name": "Les Boissons",
+    "name": "Les boissons",
     "category": "Manger",
-    "cards": []
+    "cards": [
+      {
+        "front": "الماء",
+        "back": "l'eau",
+        "translit": "al-mā'",
+        "emoji": "💧"
+      },
+      {
+        "front": "مشروب غازي",
+        "back": "le soda",
+        "translit": "machroub ghazi",
+        "emoji": "🥤"
+      },
+      {
+        "front": "عصير الرمان",
+        "back": "la grenadine",
+        "translit": "'assir ar-roumān",
+        "emoji": "🍓"
+      },
+      {
+        "front": "عصير البرتقال",
+        "back": "le jus d'orange",
+        "translit": "assir al-bourtouqāl",
+        "emoji": "🧡"
+      },
+      {
+        "front": "الخمر",
+        "back": "le vin",
+        "translit": "al-khamr",
+        "emoji": "🍷"
+      },
+      {
+        "front": "النبيذ",
+        "back": "la bière",
+        "translit": "an-nabīdh",
+        "emoji": "🍺"
+      }
+    ]
   },
   {
     "id": "la-boulangerie",
@@ -727,15 +801,125 @@ window.DECKS_DATA = [
   },
   {
     "id": "le-sale",
-    "name": "Le Sale",
+    "name": "Le salé",
     "category": "Manger",
-    "cards": []
+    "cards": [
+      {
+        "front": "العجائن",
+        "back": "les pâtes",
+        "translit": "al-'adjāin",
+        "emoji": "🍝"
+      },
+      {
+        "front": "الدجاج",
+        "back": "le poulet",
+        "translit": "ad-dadjāji",
+        "emoji": "🍗"
+      },
+      {
+        "front": "السمك",
+        "back": "le poisson",
+        "translit": "as-samak",
+        "emoji": "🐟"
+      },
+      {
+        "front": "الأرز",
+        "back": "le riz",
+        "translit": "al-arouzz",
+        "emoji": "🍚"
+      },
+      {
+        "front": "بطاطا مقلية",
+        "back": "les frites",
+        "translit": "batātā maqliyya",
+        "emoji": "🍟"
+      },
+      {
+        "front": "شريحة لحم",
+        "back": "le steak",
+        "translit": "sharihat lahm",
+        "emoji": "🥩"
+      },
+      {
+        "front": "بطاطا مهروسة",
+        "back": "la purée",
+        "translit": "batātā mahroussa",
+        "emoji": "🥔"
+      },
+      {
+        "front": "الكسكس",
+        "back": "le couscous",
+        "translit": "al kouskous",
+        "emoji": "🍲"
+      },
+      {
+        "front": "الحساء",
+        "back": "la soupe",
+        "translit": "al-hassaae",
+        "emoji": "🍲"
+      },
+      {
+        "front": "بيضة مسلوقة",
+        "back": "l'œuf à la coque",
+        "translit": "bayda maslouqa",
+        "emoji": "🥚"
+      },
+      {
+        "front": "الكش",
+        "back": "la quiche",
+        "translit": "al-kîch",
+        "emoji": "🥧"
+      },
+      {
+        "front": "البيتزا",
+        "back": "la pizza",
+        "translit": "al-bītzā",
+        "emoji": "🍕"
+      }
+    ]
   },
   {
     "id": "le-sucre",
-    "name": "Le Sucre",
+    "name": "Le sucré",
     "category": "Manger",
-    "cards": []
+    "cards": [
+      {
+        "front": "البسكويت",
+        "back": "les biscuits",
+        "translit": "al-biskout",
+        "emoji": "🍪"
+      },
+      {
+        "front": "بسكويت بالحبوب",
+        "back": "la barre de céréales",
+        "translit": "biskout bi-al-houbōb",
+        "emoji": "📦"
+      },
+      {
+        "front": "الفطائر",
+        "back": "les crêpes",
+        "translit": "al-fataîr",
+        "emoji": "🥞"
+      },
+      {
+        "front": "الوافل",
+        "back": "la gaufre",
+        "translit": "al-wāfil",
+        "emoji": "🧇"
+      },
+      {
+        "front": "الشكولاطة",
+        "back": "le chocolat",
+        "translit": "ach-choukoulāta",
+        "emoji": "🍫"
+      },
+      {
+        "front": "كريمة الطلي",
+        "back": "la pâte à tartiner",
+        "translit": "krimat at-talya",
+        "emoji": "🫘"
+      }
+    ]
   },
   {
     "id": "les-produits-laitiers",
@@ -751,15 +935,161 @@ window.DECKS_DATA = [
   },
   {
     "id": "mettre-le-couvert",
-    "name": "Mettre Le Couvert",
+    "name": "Mettre le couvert",
     "category": "Manger",
-    "cards": []
+    "cards": [
+      {
+        "front": "الشوكة",
+        "back": "la fourchette",
+        "translit": "ach-chaouka",
+        "emoji": "🍴"
+      },
+      {
+        "front": "السكين",
+        "back": "le couteau",
+        "translit": "as-sikkin",
+        "emoji": "🔪"
+      },
+      {
+        "front": "الملعقة",
+        "back": "la cuillère",
+        "translit": "al-mil'aqa",
+        "emoji": "🥄"
+      },
+      {
+        "front": "ملعقة صغيرة",
+        "back": "la petite cuillère",
+        "translit": "mil'aqa saghira",
+        "emoji": "🥄"
+      },
+      {
+        "front": "الصحن",
+        "back": "l'assiette",
+        "translit": "as-sahn",
+        "emoji": "🍽️"
+      },
+      {
+        "front": "الكأس",
+        "back": "le verre",
+        "translit": "al-kas",
+        "emoji": "🥤"
+      },
+      {
+        "front": "الفنينة",
+        "back": "la carafe d'eau",
+        "translit": "al-qinnina",
+        "emoji": "🫗"
+      },
+      {
+        "front": "سلة الخبز",
+        "back": "la corbeille de pain",
+        "translit": "sallatou al-khoubz",
+        "emoji": "🧺"
+      },
+      {
+        "front": "الملح",
+        "back": "le sel",
+        "translit": "al-milh",
+        "emoji": "🧂"
+      },
+      {
+        "front": "الفلفل الأسود",
+        "back": "le poivre",
+        "translit": "foulfoul asouad",
+        "emoji": "🌶️"
+      },
+      {
+        "front": "الخردل",
+        "back": "la moutarde",
+        "translit": "al-khardal",
+        "emoji": "💛"
+      },
+      {
+        "front": "صلصة الخل",
+        "back": "la vinaigre",
+        "translit": "salsat khall",
+        "emoji": "🍶"
+      }
+    ]
   },
   {
     "id": "le-petit-dejeuner",
-    "name": "Le Petit Dejeuner",
+    "name": "Le petit déjeuner",
     "category": "Manger",
-    "cards": []
+    "cards": [
+      {
+        "front": "الرضاعة",
+        "back": "donner le biberon",
+        "translit": "al-radhā'a",
+        "emoji": "🍼"
+      },
+      {
+        "front": "شكولاتة ساخنة",
+        "back": "le chocolat chaud",
+        "translit": "chocolata sakhina",
+        "emoji": "☕"
+      },
+      {
+        "front": "القهوة",
+        "back": "le café",
+        "translit": "al-qahwa",
+        "emoji": "☕"
+      },
+      {
+        "front": "الشاي",
+        "back": "le thé",
+        "translit": "al-chay",
+        "emoji": "🍵"
+      },
+      {
+        "front": "السكر",
+        "back": "le sucre",
+        "translit": "al-soukkar",
+        "emoji": "🍬"
+      },
+      {
+        "front": "الحبوب",
+        "back": "les céréales",
+        "translit": "al-houbou",
+        "emoji": "🥣"
+      },
+      {
+        "front": "كرواسون",
+        "back": "le croissant",
+        "translit": "karouassoun",
+        "emoji": "🥐"
+      },
+      {
+        "front": "البسكويت",
+        "back": "la biscotte",
+        "translit": "al-biskout",
+        "emoji": "🍪"
+      },
+      {
+        "front": "جهاز تحميص الخبز",
+        "back": "le grille-pain",
+        "translit": "djihāz tahmis al-khoubz",
+        "emoji": "🍞"
+      },
+      {
+        "front": "المربى",
+        "back": "la confiture",
+        "translit": "al-mourabba",
+        "emoji": "🍓"
+      },
+      {
+        "front": "العسل",
+        "back": "le miel",
+        "translit": "al'asal",
+        "emoji": "🍯"
+      },
+      {
+        "front": "شريحة خبز",
+        "back": "la tartine",
+        "translit": "sharibhat khoubz",
+        "emoji": "🍞"
+      }
+    ]
   },
   {
     "id": "jouer-de-la-musique",
@@ -1280,9 +1610,46 @@ window.DECKS_DATA = [
   },
   {
     "id": "il-fait-froid",
-    "name": "Il Fait Froid",
-    "category": "S Habiller",
-    "cards": []
+    "name": "Il fait froid !",
+    "category": "S'habiller",
+    "cards": [
+      {
+        "front": "المعطف",
+        "back": "le manteau",
+        "translit": "al-mi'taf",
+        "emoji": "🧥"
+      },
+      {
+        "front": "القلنسوة",
+        "back": "le bonnet",
+        "translit": "al-qoulounsoua",
+        "emoji": "🧢"
+      },
+      {
+        "front": "الغفازات",
+        "back": "les gants",
+        "translit": "al-gouffāz",
+        "emoji": "🧤"
+      },
+      {
+        "front": "الوشاح",
+        "back": "l'écharpe",
+        "translit": "al-wichah",
+        "emoji": "🧣"
+      },
+      {
+        "front": "معطف مشمّع",
+        "back": "l'imperméable",
+        "translit": "mi'taf mouchammā'",
+        "emoji": "🧥"
+      },
+      {
+        "front": "حذاء الشتوي",
+        "back": "les bottes",
+        "translit": "hidhae chattoui",
+        "emoji": "🥾"
+      }
+    ]
   },
   {
     "id": "la-cantine",

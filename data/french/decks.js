@@ -1,5 +1,5 @@
-// Auto-generated decks - 2026-03-01T12:16:31.385029
-window.DECKS_VERSION = '2026-03-01T12:16:31.385029';
+// Auto-generated decks - 2026-03-01T12:20:59.778460
+window.DECKS_VERSION = '2026-03-01T12:20:59.778460';
 window.DECKS_DATA = [
   {
     "id": "les-animaux-de-la-montagne",
@@ -610,9 +610,40 @@ window.DECKS_DATA = [
   },
   {
     "id": "le-gout",
-    "name": "Le Gout",
+    "name": "Le goût",
     "category": "Manger",
-    "cards": []
+    "cards": [
+      {
+        "front": "salty",
+        "back": "salé",
+        "emoji": "🧂"
+      },
+      {
+        "front": "sweet",
+        "back": "sucré",
+        "emoji": "🍬"
+      },
+      {
+        "front": "sour",
+        "back": "acide",
+        "emoji": "🍋"
+      },
+      {
+        "front": "bitter",
+        "back": "amer",
+        "emoji": "😖"
+      },
+      {
+        "front": "spicy",
+        "back": "piquant",
+        "emoji": "🌶️"
+      },
+      {
+        "front": "bland",
+        "back": "insipide",
+        "emoji": "😐"
+      }
+    ]
   },
   {
     "id": "les-legumes",
@@ -622,9 +653,40 @@ window.DECKS_DATA = [
   },
   {
     "id": "les-boissons",
-    "name": "Les Boissons",
+    "name": "Les boissons",
     "category": "Manger",
-    "cards": []
+    "cards": [
+      {
+        "front": "water",
+        "back": "l'eau",
+        "emoji": "💧"
+      },
+      {
+        "front": "soda",
+        "back": "le soda",
+        "emoji": "🥤"
+      },
+      {
+        "front": "grenadine",
+        "back": "la grenadine",
+        "emoji": "🍓"
+      },
+      {
+        "front": "orange juice",
+        "back": "le jus d'orange",
+        "emoji": "🧡"
+      },
+      {
+        "front": "wine",
+        "back": "le vin",
+        "emoji": "🍷"
+      },
+      {
+        "front": "beer",
+        "back": "la bière",
+        "emoji": "🍺"
+      }
+    ]
   },
   {
     "id": "la-boulangerie",
@@ -640,15 +702,107 @@ window.DECKS_DATA = [
   },
   {
     "id": "le-sale",
-    "name": "Le Sale",
+    "name": "Le salé",
     "category": "Manger",
-    "cards": []
+    "cards": [
+      {
+        "front": "pasta",
+        "back": "les pâtes",
+        "emoji": "🍝"
+      },
+      {
+        "front": "chicken",
+        "back": "le poulet",
+        "emoji": "🍗"
+      },
+      {
+        "front": "fish",
+        "back": "le poisson",
+        "emoji": "🐟"
+      },
+      {
+        "front": "rice",
+        "back": "le riz",
+        "emoji": "🍚"
+      },
+      {
+        "front": "fries",
+        "back": "les frites",
+        "emoji": "🍟"
+      },
+      {
+        "front": "steak",
+        "back": "le steak",
+        "emoji": "🥩"
+      },
+      {
+        "front": "mashed potatoes",
+        "back": "la purée",
+        "emoji": "🥔"
+      },
+      {
+        "front": "couscous",
+        "back": "le couscous",
+        "emoji": "🍲"
+      },
+      {
+        "front": "soup",
+        "back": "la soupe",
+        "emoji": "🍲"
+      },
+      {
+        "front": "soft boiled egg",
+        "back": "l'œuf à la coque",
+        "emoji": "🥚"
+      },
+      {
+        "front": "quiche",
+        "back": "la quiche",
+        "emoji": "🥧"
+      },
+      {
+        "front": "pizza",
+        "back": "la pizza",
+        "emoji": "🍕"
+      }
+    ]
   },
   {
     "id": "le-sucre",
-    "name": "Le Sucre",
+    "name": "Le sucré",
     "category": "Manger",
-    "cards": []
+    "cards": [
+      {
+        "front": "cookies/biscuits",
+        "back": "les biscuits",
+        "emoji": "🍪"
+      },
+      {
+        "front": "cereal bar",
+        "back": "la barre de céréales",
+        "emoji": "📦"
+      },
+      {
+        "front": "crepes",
+        "back": "les crêpes",
+        "emoji": "🥞"
+      },
+      {
+        "front": "waffle",
+        "back": "la gaufre",
+        "emoji": "🧇"
+      },
+      {
+        "front": "chocolate",
+        "back": "le chocolat",
+        "emoji": "🍫"
+      },
+      {
+        "front": "spread",
+        "back": "la pâte à tartiner",
+        "emoji": "🫘"
+      }
+    ]
   },
   {
     "id": "les-produits-laitiers",
@@ -664,15 +818,137 @@ window.DECKS_DATA = [
   },
   {
     "id": "mettre-le-couvert",
-    "name": "Mettre Le Couvert",
+    "name": "Mettre le couvert",
     "category": "Manger",
-    "cards": []
+    "cards": [
+      {
+        "front": "fork",
+        "back": "la fourchette",
+        "emoji": "🍴"
+      },
+      {
+        "front": "knife",
+        "back": "le couteau",
+        "emoji": "🔪"
+      },
+      {
+        "front": "spoon",
+        "back": "la cuillère",
+        "emoji": "🥄"
+      },
+      {
+        "front": "small spoon",
+        "back": "la petite cuillère",
+        "emoji": "🥄"
+      },
+      {
+        "front": "plate",
+        "back": "l'assiette",
+        "emoji": "🍽️"
+      },
+      {
+        "front": "glass",
+        "back": "le verre",
+        "emoji": "🥤"
+      },
+      {
+        "front": "water pitcher",
+        "back": "la carafe d'eau",
+        "emoji": "🫗"
+      },
+      {
+        "front": "bread basket",
+        "back": "la corbeille de pain",
+        "emoji": "🧺"
+      },
+      {
+        "front": "salt",
+        "back": "le sel",
+        "emoji": "🧂"
+      },
+      {
+        "front": "pepper",
+        "back": "le poivre",
+        "emoji": "🌶️"
+      },
+      {
+        "front": "mustard",
+        "back": "la moutarde",
+        "emoji": "💛"
+      },
+      {
+        "front": "vinegar",
+        "back": "la vinaigre",
+        "emoji": "🍶"
+      }
+    ]
   },
   {
     "id": "le-petit-dejeuner",
-    "name": "Le Petit Dejeuner",
+    "name": "Le petit déjeuner",
     "category": "Manger",
-    "cards": []
+    "cards": [
+      {
+        "front": "to bottle feed",
+        "back": "donner le biberon",
+        "emoji": "🍼"
+      },
+      {
+        "front": "hot chocolate",
+        "back": "le chocolat chaud",
+        "emoji": "☕"
+      },
+      {
+        "front": "coffee",
+        "back": "le café",
+        "emoji": "☕"
+      },
+      {
+        "front": "tea",
+        "back": "le thé",
+        "emoji": "🍵"
+      },
+      {
+        "front": "sugar",
+        "back": "le sucre",
+        "emoji": "🍬"
+      },
+      {
+        "front": "cereals",
+        "back": "les céréales",
+        "emoji": "🥣"
+      },
+      {
+        "front": "croissant",
+        "back": "le croissant",
+        "emoji": "🥐"
+      },
+      {
+        "front": "rusk",
+        "back": "la biscotte",
+        "emoji": "🍪"
+      },
+      {
+        "front": "toaster",
+        "back": "le grille-pain",
+        "emoji": "🍞"
+      },
+      {
+        "front": "jam",
+        "back": "la confiture",
+        "emoji": "🍓"
+      },
+      {
+        "front": "honey",
+        "back": "le miel",
+        "emoji": "🍯"
+      },
+      {
+        "front": "slice of bread",
+        "back": "la tartine",
+        "emoji": "🍞"
+      }
+    ]
   },
   {
     "id": "jouer-de-la-musique",
@@ -1142,9 +1418,40 @@ window.DECKS_DATA = [
   },
   {
     "id": "il-fait-froid",
-    "name": "Il Fait Froid",
-    "category": "S Habiller",
-    "cards": []
+    "name": "Il fait froid !",
+    "category": "S'habiller",
+    "cards": [
+      {
+        "front": "coat",
+        "back": "le manteau",
+        "emoji": "🧥"
+      },
+      {
+        "front": "beanie",
+        "back": "le bonnet",
+        "emoji": "🧢"
+      },
+      {
+        "front": "gloves",
+        "back": "les gants",
+        "emoji": "🧤"
+      },
+      {
+        "front": "scarf",
+        "back": "l'écharpe",
+        "emoji": "🧣"
+      },
+      {
+        "front": "raincoat",
+        "back": "l'imperméable",
+        "emoji": "🧥"
+      },
+      {
+        "front": "boots",
+        "back": "les bottes",
+        "emoji": "🥾"
+      }
+    ]
   },
   {
     "id": "la-cantine",

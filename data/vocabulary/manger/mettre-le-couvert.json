@@ -1,6 +1,20 @@
 {
   "id": "mettre-le-couvert",
-  "name": "Mettre Le Couvert",
+  "name": "Mettre le couvert",
+  "nameAr": "إعداد السفرة",
   "category": "Manger",
-  "cards": []
+  "cards": [
+    { "fr": "la fourchette", "en": "fork", "ar": "الشوكة", "ar_translit": "ach-chaouka", "emoji": "🍴" },
+    { "fr": "le couteau", "en": "knife", "ar": "السكين", "ar_translit": "as-sikkin", "emoji": "🔪" },
+    { "fr": "la cuillère", "en": "spoon", "ar": "الملعقة", "ar_translit": "al-mil'aqa", "emoji": "🥄" },
+    { "fr": "la petite cuillère", "en": "small spoon", "ar": "ملعقة صغيرة", "ar_translit": "mil'aqa saghira", "emoji": "🥄" },
+    { "fr": "l'assiette", "en": "plate", "ar": "الصحن", "ar_translit": "as-sahn", "emoji": "🍽️" },
+    { "fr": "le verre", "en": "glass", "ar": "الكأس", "ar_translit": "al-kas", "emoji": "🥤" },
+    { "fr": "la carafe d'eau", "en": "water pitcher", "ar": "الفنينة", "ar_translit": "al-qinnina", "emoji": "🫗" },
+    { "fr": "la corbeille de pain", "en": "bread basket", "ar": "سلة الخبز", "ar_translit": "sallatou al-khoubz", "emoji": "🧺" },
+    { "fr": "le sel", "en": "salt", "ar": "الملح", "ar_translit": "al-milh", "emoji": "🧂" },
+    { "fr": "le poivre", "en": "pepper", "ar": "الفلفل الأسود", "ar_translit": "foulfoul asouad", "emoji": "🌶️" },
+    { "fr": "la moutarde", "en": "mustard", "ar": "الخردل", "ar_translit": "al-khardal", "emoji": "💛" },
+    { "fr": "la vinaigre", "en": "vinegar", "ar": "صلصة الخل", "ar_translit": "salsat khall", "emoji": "🍶" }
+  ]
 }

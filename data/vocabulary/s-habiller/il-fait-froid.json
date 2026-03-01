@@ -1,6 +1,14 @@
 {
   "id": "il-fait-froid",
-  "name": "Il Fait Froid",
-  "category": "S Habiller",
-  "cards": []
+  "name": "Il fait froid !",
+  "nameAr": "الجو بارد!",
+  "category": "S'habiller",
+  "cards": [
+    { "fr": "le manteau", "en": "coat", "ar": "المعطف", "ar_translit": "al-mi'taf", "emoji": "🧥" },
+    { "fr": "le bonnet", "en": "beanie", "ar": "القلنسوة", "ar_translit": "al-qoulounsoua", "emoji": "🧢" },
+    { "fr": "les gants", "en": "gloves", "ar": "الغفازات", "ar_translit": "al-gouffāz", "emoji": "🧤" },
+    { "fr": "l'écharpe", "en": "scarf", "ar": "الوشاح", "ar_translit": "al-wichah", "emoji": "🧣" },
+    { "fr": "l'imperméable", "en": "raincoat", "ar": "معطف مشمّع", "ar_translit": "mi'taf mouchammā'", "emoji": "🧥" },
+    { "fr": "les bottes", "en": "boots", "ar": "حذاء الشتوي", "ar_translit": "hidhae chattoui", "emoji": "🥾" }
+  ]
 }

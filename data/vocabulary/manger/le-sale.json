@@ -1,6 +1,20 @@
 {
   "id": "le-sale",
-  "name": "Le Sale",
+  "name": "Le salé",
+  "nameAr": "المالح",
   "category": "Manger",
-  "cards": []
+  "cards": [
+    { "fr": "les pâtes", "en": "pasta", "ar": "العجائن", "ar_translit": "al-'adjāin", "emoji": "🍝" },
+    { "fr": "le poulet", "en": "chicken", "ar": "الدجاج", "ar_translit": "ad-dadjāji", "emoji": "🍗" },
+    { "fr": "le poisson", "en": "fish", "ar": "السمك", "ar_translit": "as-samak", "emoji": "🐟" },
+    { "fr": "le riz", "en": "rice", "ar": "الأرز", "ar_translit": "al-arouzz", "emoji": "🍚" },
+    { "fr": "les frites", "en": "fries", "ar": "بطاطا مقلية", "ar_translit": "batātā maqliyya", "emoji": "🍟" },
+    { "fr": "le steak", "en": "steak", "ar": "شريحة لحم", "ar_translit": "sharihat lahm", "emoji": "🥩" },
+    { "fr": "la purée", "en": "mashed potatoes", "ar": "بطاطا مهروسة", "ar_translit": "batātā mahroussa", "emoji": "🥔" },
+    { "fr": "le couscous", "en": "couscous", "ar": "الكسكس", "ar_translit": "al kouskous", "emoji": "🍲" },
+    { "fr": "la soupe", "en": "soup", "ar": "الحساء", "ar_translit": "al-hassaae", "emoji": "🍲" },
+    { "fr": "l'œuf à la coque", "en": "soft boiled egg", "ar": "بيضة مسلوقة", "ar_translit": "bayda maslouqa", "emoji": "🥚" },
+    { "fr": "la quiche", "en": "quiche", "ar": "الكش", "ar_translit": "al-kîch", "emoji": "🥧" },
+    { "fr": "la pizza", "en": "pizza", "ar": "البيتزا", "ar_translit": "al-bītzā", "emoji": "🍕" }
+  ]
 }

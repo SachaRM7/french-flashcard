@@ -1,6 +1,14 @@
 {
   "id": "les-boissons",
-  "name": "Les Boissons",
+  "name": "Les boissons",
+  "nameAr": "المشروبات",
   "category": "Manger",
-  "cards": []
+  "cards": [
+    { "fr": "l'eau", "en": "water", "ar": "الماء", "ar_translit": "al-mā'", "emoji": "💧" },
+    { "fr": "le soda", "en": "soda", "ar": "مشروب غازي", "ar_translit": "machroub ghazi", "emoji": "🥤" },
+    { "fr": "la grenadine", "en": "grenadine", "ar": "عصير الرمان", "ar_translit": "'assir ar-roumān", "emoji": "🍓" },
+    { "fr": "le jus d'orange", "en": "orange juice", "ar": "عصير البرتقال", "ar_translit": "assir al-bourtouqāl", "emoji": "🧡" },
+    { "fr": "le vin", "en": "wine", "ar": "الخمر", "ar_translit": "al-khamr", "emoji": "🍷" },
+    { "fr": "la bière", "en": "beer", "ar": "النبيذ", "ar_translit": "an-nabīdh", "emoji": "🍺" }
+  ]
 }

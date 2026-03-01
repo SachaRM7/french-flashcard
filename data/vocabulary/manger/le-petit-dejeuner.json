@@ -1,6 +1,20 @@
 {
   "id": "le-petit-dejeuner",
-  "name": "Le Petit Dejeuner",
+  "name": "Le petit déjeuner",
+  "nameAr": "فطور الصباح",
   "category": "Manger",
-  "cards": []
+  "cards": [
+    { "fr": "donner le biberon", "en": "to bottle feed", "ar": "الرضاعة", "ar_translit": "al-radhā'a", "emoji": "🍼" },
+    { "fr": "le chocolat chaud", "en": "hot chocolate", "ar": "شكولاتة ساخنة", "ar_translit": "chocolata sakhina", "emoji": "☕" },
+    { "fr": "le café", "en": "coffee", "ar": "القهوة", "ar_translit": "al-qahwa", "emoji": "☕" },
+    { "fr": "le thé", "en": "tea", "ar": "الشاي", "ar_translit": "al-chay", "emoji": "🍵" },
+    { "fr": "le sucre", "en": "sugar", "ar": "السكر", "ar_translit": "al-soukkar", "emoji": "🍬" },
+    { "fr": "les céréales", "en": "cereals", "ar": "الحبوب", "ar_translit": "al-houbou", "emoji": "🥣" },
+    { "fr": "le croissant", "en": "croissant", "ar": "كرواسون", "ar_translit": "karouassoun", "emoji": "🥐" },
+    { "fr": "la biscotte", "en": "rusk", "ar": "البسكويت", "ar_translit": "al-biskout", "emoji": "🍪" },
+    { "fr": "le grille-pain", "en": "toaster", "ar": "جهاز تحميص الخبز", "ar_translit": "djihāz tahmis al-khoubz", "emoji": "🍞" },
+    { "fr": "la confiture", "en": "jam", "ar": "المربى", "ar_translit": "al-mourabba", "emoji": "🍓" },
+    { "fr": "le miel", "en": "honey", "ar": "العسل", "ar_translit": "al'asal", "emoji": "🍯" },
+    { "fr": "la tartine", "en": "slice of bread", "ar": "شريحة خبز", "ar_translit": "sharibhat khoubz", "emoji": "🍞" }
+  ]
 }

@@ -1,6 +1,14 @@
 {
   "id": "le-sucre",
-  "name": "Le Sucre",
+  "name": "Le sucré",
+  "nameAr": "الحلويات",
   "category": "Manger",
-  "cards": []
+  "cards": [
+    { "fr": "les biscuits", "en": "cookies/biscuits", "ar": "البسكويت", "ar_translit": "al-biskout", "emoji": "🍪" },
+    { "fr": "la barre de céréales", "en": "cereal bar", "ar": "بسكويت بالحبوب", "ar_translit": "biskout bi-al-houbōb", "emoji": "📦" },
+    { "fr": "les crêpes", "en": "crepes", "ar": "الفطائر", "ar_translit": "al-fataîr", "emoji": "🥞" },
+    { "fr": "la gaufre", "en": "waffle", "ar": "الوافل", "ar_translit": "al-wāfil", "emoji": "🧇" },
+    { "fr": "le chocolat", "en": "chocolate", "ar": "الشكولاطة", "ar_translit": "ach-choukoulāta", "emoji": "🍫" },
+    { "fr": "la pâte à tartiner", "en": "spread", "ar": "كريمة الطلي", "ar_translit": "krimat at-talya", "emoji": "🫘" }
+  ]
 }
