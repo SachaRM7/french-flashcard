@@ -1,0 +1,16 @@
+{
+  "id": "formes",
+  "name": "Les formes",
+  "nameAr": "الأشكال",
+  "category": "Premiers mots",
+  "cards": [
+    { "fr": "rond", "en": "circle", "ar": "دَائِرَة", "ar_translit": "dāira", "emoji": "⭕", "image": "images/formes/rond.png" },
+    { "fr": "carré", "en": "square", "ar": "مُرَبَّع", "ar_translit": "murabba'", "emoji": "🟦", "image": "images/formes/carré.png" },
+    { "fr": "triangle", "en": "triangle", "ar": "مُثَلَّث", "ar_translit": "muthallath", "emoji": "🔺", "image": "images/formes/triangle.png" },
+    { "fr": "rectangle", "en": "rectangle", "ar": "مُسْتَطِيل", "ar_translit": "mustatīl", "emoji": "▬", "image": "images/formes/rectangle.png" },
+    { "fr": "étoile", "en": "star", "ar": "نَجْمَة", "ar_translit": "najma", "emoji": "⭐", "image": "images/formes/étoile.png" },
+    { "fr": "losange", "en": "diamond", "ar": "مُعَيَّن", "ar_translit": "mu'ayyan", "emoji": "🔷", "image": "images/formes/losange.png" },
+    { "fr": "ovale", "en": "oval", "ar": "بيضاوي", "ar_translit": "baydāwī", "emoji": "⬭", "image": "images/formes/ovale.png" },
+    { "fr": "cœur", "en": "heart", "ar": "قَلْب", "ar_translit": "qalb", "emoji": "❤️", "image": "images/formes/coeur.png" }
+  ]
+}

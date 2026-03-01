@@ -1,0 +1,18 @@
+{
+  "id": "couleurs",
+  "name": "Les couleurs",
+  "nameAr": "الألوان",
+  "category": "Premiers mots",
+  "cards": [
+    { "fr": "rouge", "en": "red", "ar": "أَحْمَر", "ar_translit": "ahmar", "emoji": "🔴", "image": "images/couleurs/rouge.png" },
+    { "fr": "bleu", "en": "blue", "ar": "أَزْرَق", "ar_translit": "azraq", "emoji": "🔵", "image": "images/couleurs/bleu.png" },
+    { "fr": "vert", "en": "green", "ar": "أَخْضَر", "ar_translit": "akhdhar", "emoji": "🟢", "image": "images/couleurs/vert.png" },
+    { "fr": "jaune", "en": "yellow", "ar": "أَصْفَر", "ar_translit": "asfar", "emoji": "🟡", "image": "images/couleurs/jaune.png" },
+    { "fr": "noir", "en": "black", "ar": "أَسْوَد", "ar_translit": "aswad", "emoji": "⚫", "image": "images/couleurs/noir.png" },
+    { "fr": "blanc", "en": "white", "ar": "أَبْيَض", "ar_translit": "abyad", "emoji": "⚪", "image": "images/couleurs/blanc.png" },
+    { "fr": "orange", "en": "orange", "ar": "بُرْتُقَالِي", "ar_translit": "burtuqāli", "emoji": "🟠", "image": "images/couleurs/orange.png" },
+    { "fr": "rose", "en": "pink", "ar": "وَرْدِي", "ar_translit": "wardi", "emoji": "🩷", "image": "images/couleurs/rose.png" },
+    { "fr": "marron", "en": "brown", "ar": "بني", "ar_translit": "bunni", "emoji": "🟤", "image": "images/couleurs/marron.png" },
+    { "fr": "mauve", "en": "purple", "ar": "بنفسجي", "ar_translit": "banafsaji", "emoji": "🟣", "image": "images/couleurs/mauve.png" }
+  ]
+}

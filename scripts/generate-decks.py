@@ -74,7 +74,8 @@ Mots: {words_list}"""
 def generate_decks(do_translate=False):
     cache = load_cache()
     
-    vocab_files = list(VOCAB_DIR.glob("*.json"))
+    # Chercher tous les fichiers .json récursivement (inclut sous-dossiers)
+    vocab_files = list(VOCAB_DIR.glob("**/*.json"))
     if not vocab_files:
         print("Aucun fichier vocabulary trouvé dans data/vocabulary/")
         return

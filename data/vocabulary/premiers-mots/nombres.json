@@ -1,0 +1,18 @@
+{
+  "id": "nombres",
+  "name": "Les nombres",
+  "nameAr": "الأعداد",
+  "category": "Premiers mots",
+  "cards": [
+    { "fr": "un", "en": "one", "ar": "وَاحِد", "ar_translit": "wāhid", "emoji": "1️⃣", "image": "images/nombres/un.png" },
+    { "fr": "deux", "en": "two", "ar": "اِثْنَان", "ar_translit": "ithnān", "emoji": "2️⃣", "image": "images/nombres/deux.png" },
+    { "fr": "trois", "en": "three", "ar": "ثَلَاثَة", "ar_translit": "thalātha", "emoji": "3️⃣", "image": "images/nombres/trois.png" },
+    { "fr": "quatre", "en": "four", "ar": "أَرْبَعَة", "ar_translit": "arba'a", "emoji": "4️⃣", "image": "images/nombres/quatre.png" },
+    { "fr": "cinq", "en": "five", "ar": "خَمْسَة", "ar_translit": "khamsa", "emoji": "5️⃣", "image": "images/nombres/cinq.png" },
+    { "fr": "six", "en": "six", "ar": "سِتَّة", "ar_translit": "sitta", "emoji": "6️⃣", "image": "images/nombres/six.png" },
+    { "fr": "sept", "en": "seven", "ar": "سَبْعَة", "ar_translit": "sab'a", "emoji": "7️⃣", "image": "images/nombres/sept.png" },
+    { "fr": "huit", "en": "eight", "ar": "ثَمَانِيَة", "ar_translit": "thamāniya", "emoji": "8️⃣", "image": "images/nombres/huit.png" },
+    { "fr": "neuf", "en": "nine", "ar": "تِسْعَة", "ar_translit": "tis'a", "emoji": "9️⃣", "image": "images/nombres/neuf.png" },
+    { "fr": "dix", "en": "ten", "ar": "عَشَرَة", "ar_translit": "'ashara", "emoji": "🔟", "image": "images/nombres/dix.png" }
+  ]
+}

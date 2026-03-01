@@ -1,0 +1,23 @@
+{
+  "id": "le-corps",
+  "name": "Le corps",
+  "category": "Corps humain",
+  "cards": [
+    { "fr": "tête", "en": "head", "ar": "رَأْس", "ar_translit": "ra's", "emoji": "🗣️" },
+    { "fr": "cheveux", "en": "hair", "ar": "شَعْر", "ar_translit": "sha'r", "emoji": "💇" },
+    { "fr": "œil", "en": "eye", "ar": "عَيْن", "ar_translit": "'ayn", "emoji": "👁️" },
+    { "fr": "nez", "en": "nose", "ar": "أَنْف", "ar_translit": "anf", "emoji": "👃" },
+    { "fr": "bouche", "en": "mouth", "ar": "فَم", "ar_translit": "fam", "emoji": "👄" },
+    { "fr": "oreille", "en": "ear", "ar": "أُذُن", "ar_translit": "udhun", "emoji": "👂" },
+    { "fr": "cou", "en": "neck", "ar": "رَقَبَة", "ar_translit": "raqaba", "emoji": "🦒" },
+    { "fr": "épaule", "en": "shoulder", "ar": "كَتِف", "ar_translit": "katif", "emoji": "🤷" },
+    { "fr": "bras", "en": "arm", "ar": "ذِرَاع", "ar_translit": "dhira'", "emoji": "💪" },
+    { "fr": "main", "en": "hand", "ar": "يَد", "ar_translit": "yad", "emoji": "🖐️" },
+    { "fr": "doigt", "en": "finger", "ar": "إِصْبَع", "ar_translit": "isba'", "emoji": "👆" },
+    { "fr": "dos", "en": "back", "ar": "ظَهْر", "ar_translit": "dhahr", "emoji": "🔙" },
+    { "fr": "ventre", "en": "belly", "ar": "بَطْن", "ar_translit": "batn", "emoji": "🫃" },
+    { "fr": "jambe", "en": "leg", "ar": "سَاق", "ar_translit": "saq", "emoji": "🦵" },
+    { "fr": "pied", "en": "foot", "ar": "قَدَم", "ar_translit": "qadam", "emoji": "🦶" },
+    { "fr": "cœur", "en": "heart", "ar": "قَلْب", "ar_translit": "qalb", "emoji": "❤️" }
+  ]
+}
