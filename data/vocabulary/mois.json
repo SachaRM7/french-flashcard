@@ -1,0 +1,20 @@
+{
+  "id": "mois",
+  "name": "Les mois de l'année",
+  "nameAr": "شهور السنة",
+  "category": "Temps",
+  "cards": [
+    { "fr": "janvier", "ar": "يناير", "ar_translit": "yanāyar", "emoji": "❄️" },
+    { "fr": "février", "ar": "فبراير", "ar_translit": "fabrayār", "emoji": "❄️" },
+    { "fr": "mars", "ar": "مارس", "ar_translit": "mārs", "emoji": "🌧️" },
+    { "fr": "avril", "ar": "أبريل", "ar_translit": "ifrīl", "emoji": "🌸" },
+    { "fr": "mai", "ar": "مايو", "ar_translit": "māy", "emoji": "🌼" },
+    { "fr": "juin", "ar": "جوان", "ar_translit": "djouane", "emoji": "☀️" },
+    { "fr": "juillet", "ar": "جويلية", "ar_translit": "djouillya", "emoji": "☀️" },
+    { "fr": "août", "ar": "أوت", "ar_translit": "aout", "emoji": "☀️" },
+    { "fr": "septembre", "ar": "سبتمبر", "ar_translit": "sibtambar", "emoji": "🍂" },
+    { "fr": "octobre", "ar": "أكتوبر", "ar_translit": "ouktoubар", "emoji": "🍂" },
+    { "fr": "novembre", "ar": "نوفمبر", "ar_translit": "noufambar", "emoji": "🍂" },
+    { "fr": "décembre", "ar": "ديسمبر", "ar_translit": "disambar", "emoji": "❄️" }
+  ]
+}

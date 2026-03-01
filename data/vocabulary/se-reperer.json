@@ -1,0 +1,14 @@
+{
+  "id": "se-reperer",
+  "name": "Se repérer",
+  "nameAr": "التوجه المكاني",
+  "category": "Vocabulaire",
+  "cards": [
+    { "fr": "devant", "ar": "أمام", "ar_translit": "amām", "emoji": "👉" },
+    { "fr": "derrière", "ar": "وراء", "ar_translit": "warā'", "emoji": "👈" },
+    { "fr": "à gauche", "ar": "يسارا", "ar_translit": "yasāran", "emoji": "⬅️" },
+    { "fr": "à droite", "ar": "يمينا", "ar_translit": "yaminan", "emoji": "➡️" },
+    { "fr": "dessus", "ar": "فوق", "ar_translit": "fawqa", "emoji": "⬆️" },
+    { "fr": "dessous", "ar": "تحت", "ar_translit": "tahta", "emoji": "⬇️" }
+  ]
+}

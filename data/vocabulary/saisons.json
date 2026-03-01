@@ -1,0 +1,12 @@
+{
+  "id": "saisons",
+  "name": "Les saisons",
+  "nameAr": "الفصول",
+  "category": "Temps",
+  "cards": [
+    { "fr": "le printemps", "ar": "الربيع", "ar_translit": "ar-rabi'", "emoji": "🌸" },
+    { "fr": "l'été", "ar": "الصيف", "ar_translit": "as-sayf", "emoji": "☀️" },
+    { "fr": "l'automne", "ar": "الخريف", "ar_translit": "al kharif", "emoji": "🍂" },
+    { "fr": "l'hiver", "ar": "الشتاء", "ar_translit": "ach-chitāe", "emoji": "❄️" }
+  ]
+}

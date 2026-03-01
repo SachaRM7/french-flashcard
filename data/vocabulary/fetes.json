@@ -1,0 +1,14 @@
+{
+  "id": "fetes",
+  "name": "Les fêtes",
+  "nameAr": "الأعياد",
+  "category": "Culturel",
+  "cards": [
+    { "fr": "l'anniversaire", "ar": "عيد الميلاد", "ar_translit": "Aid al-milād", "emoji": "🎂" },
+    { "fr": "la Chandeleur", "ar": "عيد الشموع", "ar_translit": "Aid al-choumou'", "emoji": "🕯️" },
+    { "fr": "le carnaval", "ar": "كرنافال", "ar_translit": "karnāfāl", "emoji": "🎭" },
+    { "fr": "la Aachoura", "ar": "العاشوراء", "ar_translit": "Al aachourae", "emoji": "🌙" },
+    { "fr": "Ramadan", "ar": "رمضان", "ar_translit": "Ramadhane", "emoji": "🌙" },
+    { "fr": "l'Aïd al-Fitr", "ar": "عيد الفطر", "ar_translit": "Aid al-fitre", "emoji": "🎉" }
+  ]
+}

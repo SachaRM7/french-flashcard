@@ -1,0 +1,14 @@
+{
+  "id": "temps",
+  "name": "Le temps qu'il fait",
+  "nameAr": "حالة الطقس",
+  "category": "Météo",
+  "cards": [
+    { "fr": "le soleil", "ar": "الشمس", "ar_translit": "ach-chams", "emoji": "☀️" },
+    { "fr": "les nuages", "ar": "الغيوم", "ar_translit": "al ghouyoûm", "emoji": "☁️" },
+    { "fr": "la pluie", "ar": "المطر", "ar_translit": "al matar", "emoji": "🌧️" },
+    { "fr": "l'orage", "ar": "العاصفة", "ar_translit": "al aasifa", "emoji": "⛈️" },
+    { "fr": "la neige", "ar": "الثلج", "ar_translit": "ath-thaldj", "emoji": "❄️" },
+    { "fr": "le brouillard", "ar": "الضباب", "ar_translit": "adh-dhababh", "emoji": "🌫️" }
+  ]
+}
