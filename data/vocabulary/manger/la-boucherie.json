@@ -1,6 +1,14 @@
 {
   "id": "la-boucherie",
-  "name": "La Boucherie",
+  "name": "La boucherie",
+  "nameAr": "القصابة",
   "category": "Manger",
-  "cards": []
+  "cards": [
+    { "fr": "le boucher", "en": "butcher", "ar": "الجزار", "ar_translit": "al-jazzār", "emoji": "👨‍🔧" },
+    { "fr": "la rôtissoire", "en": "rotisserie", "ar": "الشواية", "ar_translit": "ach-chawāya", "emoji": "🔥" },
+    { "fr": "la viande hachée", "en": "ground meat", "ar": "لحم مفروم", "ar_translit": "lahm mafrōum", "emoji": "🥩" },
+    { "fr": "le rôti", "en": "roast", "ar": "الشوي", "ar_translit": "al-machhwī", "emoji": "🍖" },
+    { "fr": "le gigot de mouton", "en": "leg of lamb", "ar": "فخذ الخروف", "ar_translit": "fakhidh al-kharouf", "emoji": "🐑" },
+    { "fr": "les brochettes", "en": "skewers", "ar": "أسياخ اللحم", "ar_translit": "assiakh allahm", "emoji": "🍢" }
+  ]
 }

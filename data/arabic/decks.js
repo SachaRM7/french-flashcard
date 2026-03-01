@@ -1,5 +1,5 @@
-// Auto-generated decks - 2026-03-01T13:01:33.847784
-window.DECKS_VERSION = '2026-03-01T13:01:33.847784';
+// Auto-generated decks - 2026-03-01T13:27:32.131665
+window.DECKS_VERSION = '2026-03-01T13:27:32.131665';
 window.DECKS_DATA = [
   {
     "id": "les-animaux-de-la-montagne",
@@ -691,9 +691,46 @@ window.DECKS_DATA = [
   },
   {
     "id": "la-boucherie",
-    "name": "La Boucherie",
+    "name": "La boucherie",
     "category": "Manger",
-    "cards": []
+    "cards": [
+      {
+        "front": "الجزار",
+        "back": "le boucher",
+        "translit": "al-jazzār",
+        "emoji": "👨‍🔧"
+      },
+      {
+        "front": "الشواية",
+        "back": "la rôtissoire",
+        "translit": "ach-chawāya",
+        "emoji": "🔥"
+      },
+      {
+        "front": "لحم مفروم",
+        "back": "la viande hachée",
+        "translit": "lahm mafrōum",
+        "emoji": "🥩"
+      },
+      {
+        "front": "الشوي",
+        "back": "le rôti",
+        "translit": "al-machhwī",
+        "emoji": "🍖"
+      },
+      {
+        "front": "فخذ الخروف",
+        "back": "le gigot de mouton",
+        "translit": "fakhidh al-kharouf",
+        "emoji": "🐑"
+      },
+      {
+        "front": "أسياخ اللحم",
+        "back": "les brochettes",
+        "translit": "assiakh allahm",
+        "emoji": "🍢"
+      }
+    ]
   },
   {
     "id": "le-gout",
@@ -1484,6 +1521,42 @@ window.DECKS_DATA = [
         "back": "la porte",
         "translit": "al-bāb",
         "emoji": "🚪"
+      },
+      {
+        "front": "مكينة قهوة",
+        "back": "la cafetière",
+        "translit": "makīnat qahwa",
+        "emoji": "☕"
+      },
+      {
+        "front": "لوحة تقطيع",
+        "back": "la planche à découper",
+        "translit": "lawhat taqti'",
+        "emoji": "🍴"
+      },
+      {
+        "front": "المصفاة",
+        "back": "la passoire",
+        "translit": "al-misfāt",
+        "emoji": "🥄"
+      },
+      {
+        "front": "الإسفنج",
+        "back": "l'éponge",
+        "translit": "al-isfindj",
+        "emoji": "🧽"
+      },
+      {
+        "front": "الطنجرة",
+        "back": "la casserole",
+        "translit": "at-tandjara",
+        "emoji": "🍳"
+      },
+      {
+        "front": "المقلاة",
+        "back": "la poêle",
+        "translit": "al-miqlāt",
+        "emoji": "🍳"
       }
     ]
   },
@@ -1563,6 +1636,42 @@ window.DECKS_DATA = [
         "back": "la bille",
         "translit": "al-kharza",
         "emoji": "⚪"
+      },
+      {
+        "front": "الدبدوب",
+        "back": "le nounours",
+        "translit": "ad-dabdoub",
+        "emoji": "🧸"
+      },
+      {
+        "front": "سيارة صغيرة",
+        "back": "la petite voiture",
+        "translit": "sayāra saghīra",
+        "emoji": "🚗"
+      },
+      {
+        "front": "حصان خشبي هزاز",
+        "back": "le cheval à bascule",
+        "translit": "hisān khachabi hazzāz",
+        "emoji": "🎠"
+      },
+      {
+        "front": "الأدوات",
+        "back": "les outils",
+        "translit": "al-adawāt",
+        "emoji": "🔨"
+      },
+      {
+        "front": "التنكر",
+        "back": "le déguisement",
+        "translit": "at-tanakour",
+        "emoji": "🎭"
+      },
+      {
+        "front": "لعبة أطفال لتحضير الوجبة",
+        "back": "la dinette",
+        "translit": "lou'bat atfāl litahdhir al-wajba",
+        "emoji": "🍽️"
       }
     ]
   },
@@ -1642,6 +1751,66 @@ window.DECKS_DATA = [
         "back": "le jardin",
         "translit": "al-hadīqa",
         "emoji": "🌳"
+      },
+      {
+        "front": "العلية",
+        "back": "le grenier",
+        "translit": "as-sandra",
+        "emoji": "🏠"
+      },
+      {
+        "front": "البوابة",
+        "back": "le portail",
+        "translit": "al-bawwāba",
+        "emoji": "🚪"
+      },
+      {
+        "front": "بيت صغير",
+        "back": "la niche",
+        "translit": "bayt kalb",
+        "emoji": "🐕"
+      },
+      {
+        "front": "المرآب",
+        "back": "le garage",
+        "translit": "moustawda'",
+        "emoji": "🚗"
+      },
+      {
+        "front": "غسالة الملابس",
+        "back": "la buanderie",
+        "translit": "maghsala",
+        "emoji": "🧺"
+      },
+      {
+        "front": "القبو",
+        "back": "la cave",
+        "translit": "al-qabw",
+        "emoji": "🏠"
+      },
+      {
+        "front": "المدخل",
+        "back": "l'entrée",
+        "translit": "al-madkhal",
+        "emoji": "🚪"
+      },
+      {
+        "front": "السلم",
+        "back": "l'escalier",
+        "translit": "as-soullam",
+        "emoji": "🪜"
+      },
+      {
+        "front": "السقف",
+        "back": "le toit",
+        "translit": "as-saqf",
+        "emoji": "🏠"
+      },
+      {
+        "front": "المصعد",
+        "back": "l'ascenseur",
+        "translit": "al-mas'ad",
+        "emoji": "🛗"
       }
     ]
   },
@@ -1721,6 +1890,18 @@ window.DECKS_DATA = [
         "back": "la porte",
         "translit": "al-bāb",
         "emoji": "🚪"
+      },
+      {
+        "front": "الوسادة",
+        "back": "le coussin",
+        "translit": "al-wisāda",
+        "emoji": "🛋️"
+      },
+      {
+        "front": "خزانة الأدراج",
+        "back": "la commode",
+        "translit": "khizanat al-adraj",
+        "emoji": "🗄️"
       }
     ]
   },
@@ -1879,6 +2060,42 @@ window.DECKS_DATA = [
         "back": "le poster",
         "translit": "malsa",
         "emoji": "🖼️"
+      },
+      {
+        "front": "دمية من القماش",
+        "back": "le doudou",
+        "translit": "doumya min al-qomāch",
+        "emoji": "🧸"
+      },
+      {
+        "front": "الحلاية",
+        "back": "la tétine",
+        "translit": "al-halāma",
+        "emoji": "🍼"
+      },
+      {
+        "front": "صندوق الألعاب",
+        "back": "le coffre à jouets",
+        "translit": "soundouq al-al'āb",
+        "emoji": "📦"
+      },
+      {
+        "front": "المنبه",
+        "back": "le réveil",
+        "translit": "al-mounabbih",
+        "emoji": "⏰"
+      },
+      {
+        "front": "مصباح الليل",
+        "back": "la veilleuse",
+        "translit": "misbāh allayl",
+        "emoji": "🌙"
+      },
+      {
+        "front": "المسخن",
+        "back": "le radiateur",
+        "translit": "al-moussakhin",
+        "emoji": "🔥"
       }
     ]
   },

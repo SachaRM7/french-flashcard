@@ -15,6 +15,12 @@
     { "fr": "le puzzle", "en": "puzzle", "ar": "اللغز", "ar_translit": "al-loghz", "emoji": "🧩" },
     { "fr": "la peluche", "en": "stuffed animal", "ar": "لعبة مَحشوة", "ar_translit": "lu'bat mahshwa", "emoji": "🧸" },
     { "fr": "la marelle", "en": "hopscotch", "ar": "لعبة الخطوط", "ar_translit": "lu'bat al-khittat", "emoji": "🎯" },
-    { "fr": "la bille", "en": "marble", "ar": "الخرزة", "ar_translit": "al-kharza", "emoji": "⚪" }
+    { "fr": "la bille", "en": "marble", "ar": "الخرزة", "ar_translit": "al-kharza", "emoji": "⚪" },
+    { "fr": "le nounours", "en": "teddy bear", "ar": "الدبدوب", "ar_translit": "ad-dabdoub", "emoji": "🧸" },
+    { "fr": "la petite voiture", "en": "toy car", "ar": "سيارة صغيرة", "ar_translit": "sayāra saghīra", "emoji": "🚗" },
+    { "fr": "le cheval à bascule", "en": "rocking horse", "ar": "حصان خشبي هزاز", "ar_translit": "hisān khachabi hazzāz", "emoji": "🎠" },
+    { "fr": "les outils", "en": "tools", "ar": "الأدوات", "ar_translit": "al-adawāt", "emoji": "🔨" },
+    { "fr": "le déguisement", "en": "costume", "ar": "التنكر", "ar_translit": "at-tanakour", "emoji": "🎭" },
+    { "fr": "la dinette", "en": "dish set", "ar": "لعبة أطفال لتحضير الوجبة", "ar_translit": "lou'bat atfāl litahdhir al-wajba", "emoji": "🍽️" }
   ]
 }

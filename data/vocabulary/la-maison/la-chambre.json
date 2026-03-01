@@ -15,6 +15,12 @@
     { "fr": "la fenêtre", "en": "window", "ar": "النافذة", "ar_translit": "an-nāfidha", "emoji": "🪟" },
     { "fr": "la porte", "en": "door", "ar": "الباب", "ar_translit": "al-bāb", "emoji": "🚪" },
     { "fr": "le tapis", "en": "carpet", "ar": "السجادة", "ar_translit": "as-sajāda", "emoji": "🧶" },
-    { "fr": "le poster", "en": "poster", "ar": "ملصق", "ar_translit": "malsa", "emoji": "🖼️" }
+    { "fr": "le poster", "en": "poster", "ar": "ملصق", "ar_translit": "malsa", "emoji": "🖼️" },
+    { "fr": "le doudou", "en": "cuddle toy", "ar": "دمية من القماش", "ar_translit": "doumya min al-qomāch", "emoji": "🧸" },
+    { "fr": "la tétine", "en": "pacifier", "ar": "الحلاية", "ar_translit": "al-halāma", "emoji": "🍼" },
+    { "fr": "le coffre à jouets", "en": "toy box", "ar": "صندوق الألعاب", "ar_translit": "soundouq al-al'āb", "emoji": "📦" },
+    { "fr": "le réveil", "en": "alarm clock", "ar": "المنبه", "ar_translit": "al-mounabbih", "emoji": "⏰" },
+    { "fr": "la veilleuse", "en": "nightlight", "ar": "مصباح الليل", "ar_translit": "misbāh allayl", "emoji": "🌙" },
+    { "fr": "le radiateur", "en": "heater", "ar": "المسخن", "ar_translit": "al-moussakhin", "emoji": "🔥" }
   ]
 }

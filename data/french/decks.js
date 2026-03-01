@@ -1,5 +1,5 @@
-// Auto-generated decks - 2026-03-01T13:01:33.847784
-window.DECKS_VERSION = '2026-03-01T13:01:33.847784';
+// Auto-generated decks - 2026-03-01T13:27:32.131665
+window.DECKS_VERSION = '2026-03-01T13:27:32.131665';
 window.DECKS_DATA = [
   {
     "id": "les-animaux-de-la-montagne",
@@ -604,9 +604,40 @@ window.DECKS_DATA = [
   },
   {
     "id": "la-boucherie",
-    "name": "La Boucherie",
+    "name": "La boucherie",
     "category": "Manger",
-    "cards": []
+    "cards": [
+      {
+        "front": "butcher",
+        "back": "le boucher",
+        "emoji": "👨‍🔧"
+      },
+      {
+        "front": "rotisserie",
+        "back": "la rôtissoire",
+        "emoji": "🔥"
+      },
+      {
+        "front": "ground meat",
+        "back": "la viande hachée",
+        "emoji": "🥩"
+      },
+      {
+        "front": "roast",
+        "back": "le rôti",
+        "emoji": "🍖"
+      },
+      {
+        "front": "leg of lamb",
+        "back": "le gigot de mouton",
+        "emoji": "🐑"
+      },
+      {
+        "front": "skewers",
+        "back": "les brochettes",
+        "emoji": "🍢"
+      }
+    ]
   },
   {
     "id": "le-gout",
@@ -1283,6 +1314,36 @@ window.DECKS_DATA = [
         "front": "door",
         "back": "la porte",
         "emoji": "🚪"
+      },
+      {
+        "front": "coffee maker",
+        "back": "la cafetière",
+        "emoji": "☕"
+      },
+      {
+        "front": "cutting board",
+        "back": "la planche à découper",
+        "emoji": "🍴"
+      },
+      {
+        "front": "colander",
+        "back": "la passoire",
+        "emoji": "🥄"
+      },
+      {
+        "front": "sponge",
+        "back": "l'éponge",
+        "emoji": "🧽"
+      },
+      {
+        "front": "saucepan",
+        "back": "la casserole",
+        "emoji": "🍳"
+      },
+      {
+        "front": "frying pan",
+        "back": "la poêle",
+        "emoji": "🍳"
       }
     ]
   },
@@ -1350,6 +1411,36 @@ window.DECKS_DATA = [
         "front": "marble",
         "back": "la bille",
         "emoji": "⚪"
+      },
+      {
+        "front": "teddy bear",
+        "back": "le nounours",
+        "emoji": "🧸"
+      },
+      {
+        "front": "toy car",
+        "back": "la petite voiture",
+        "emoji": "🚗"
+      },
+      {
+        "front": "rocking horse",
+        "back": "le cheval à bascule",
+        "emoji": "🎠"
+      },
+      {
+        "front": "tools",
+        "back": "les outils",
+        "emoji": "🔨"
+      },
+      {
+        "front": "costume",
+        "back": "le déguisement",
+        "emoji": "🎭"
+      },
+      {
+        "front": "dish set",
+        "back": "la dinette",
+        "emoji": "🍽️"
       }
     ]
   },
@@ -1417,6 +1508,56 @@ window.DECKS_DATA = [
         "front": "garden",
         "back": "le jardin",
         "emoji": "🌳"
+      },
+      {
+        "front": "attic",
+        "back": "le grenier",
+        "emoji": "🏠"
+      },
+      {
+        "front": "gate",
+        "back": "le portail",
+        "emoji": "🚪"
+      },
+      {
+        "front": "niche",
+        "back": "la niche",
+        "emoji": "🐕"
+      },
+      {
+        "front": "garage",
+        "back": "le garage",
+        "emoji": "🚗"
+      },
+      {
+        "front": "laundry room",
+        "back": "la buanderie",
+        "emoji": "🧺"
+      },
+      {
+        "front": "cellar",
+        "back": "la cave",
+        "emoji": "🏠"
+      },
+      {
+        "front": "entrance",
+        "back": "l'entrée",
+        "emoji": "🚪"
+      },
+      {
+        "front": "stairs",
+        "back": "l'escalier",
+        "emoji": "🪜"
+      },
+      {
+        "front": "roof",
+        "back": "le toit",
+        "emoji": "🏠"
+      },
+      {
+        "front": "elevator",
+        "back": "l'ascenseur",
+        "emoji": "🛗"
       }
     ]
   },
@@ -1484,6 +1625,16 @@ window.DECKS_DATA = [
         "front": "door",
         "back": "la porte",
         "emoji": "🚪"
+      },
+      {
+        "front": "cushion",
+        "back": "le coussin",
+        "emoji": "🛋️"
+      },
+      {
+        "front": "chest of drawers",
+        "back": "la commode",
+        "emoji": "🗄️"
       }
     ]
   },
@@ -1618,6 +1769,36 @@ window.DECKS_DATA = [
         "front": "poster",
         "back": "le poster",
         "emoji": "🖼️"
+      },
+      {
+        "front": "cuddle toy",
+        "back": "le doudou",
+        "emoji": "🧸"
+      },
+      {
+        "front": "pacifier",
+        "back": "la tétine",
+        "emoji": "🍼"
+      },
+      {
+        "front": "toy box",
+        "back": "le coffre à jouets",
+        "emoji": "📦"
+      },
+      {
+        "front": "alarm clock",
+        "back": "le réveil",
+        "emoji": "⏰"
+      },
+      {
+        "front": "nightlight",
+        "back": "la veilleuse",
+        "emoji": "🌙"
+      },
+      {
+        "front": "heater",
+        "back": "le radiateur",
+        "emoji": "🔥"
       }
     ]
   },

@@ -15,6 +15,16 @@
     { "fr": "la montagne", "en": "mountain", "ar": "الجبل", "ar_translit": "al-jabal", "emoji": "⛰️" },
     { "fr": "le bord de la mer", "en": "seaside", "ar": "الساحل", "ar_translit": "as-sāhil", "emoji": "🏖️" },
     { "fr": "le balcon", "en": "balcony", "ar": "الشرفة", "ar_translit": "ach-charfa", "emoji": "🌳" },
-    { "fr": "le jardin", "en": "garden", "ar": "الحديقة", "ar_translit": "al-hadīqa", "emoji": "🌳" }
+    { "fr": "le jardin", "en": "garden", "ar": "الحديقة", "ar_translit": "al-hadīqa", "emoji": "🌳" },
+    { "fr": "le grenier", "en": "attic", "ar": "العلية", "ar_translit": "as-sandra", "emoji": "🏠" },
+    { "fr": "le portail", "en": "gate", "ar": "البوابة", "ar_translit": "al-bawwāba", "emoji": "🚪" },
+    { "fr": "la niche", "en": "niche", "ar": "بيت صغير", "ar_translit": "bayt kalb", "emoji": "🐕" },
+    { "fr": "le garage", "en": "garage", "ar": "المرآب", "ar_translit": "moustawda'", "emoji": "🚗" },
+    { "fr": "la buanderie", "en": "laundry room", "ar": "غسالة الملابس", "ar_translit": "maghsala", "emoji": "🧺" },
+    { "fr": "la cave", "en": "cellar", "ar": "القبو", "ar_translit": "al-qabw", "emoji": "🏠" },
+    { "fr": "l'entrée", "en": "entrance", "ar": "المدخل", "ar_translit": "al-madkhal", "emoji": "🚪" },
+    { "fr": "l'escalier", "en": "stairs", "ar": "السلم", "ar_translit": "as-soullam", "emoji": "🪜" },
+    { "fr": "le toit", "en": "roof", "ar": "السقف", "ar_translit": "as-saqf", "emoji": "🏠" },
+    { "fr": "l'ascenseur", "en": "elevator", "ar": "المصعد", "ar_translit": "al-mas'ad", "emoji": "🛗" }
   ]
 }

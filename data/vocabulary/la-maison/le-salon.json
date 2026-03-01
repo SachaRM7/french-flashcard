@@ -15,6 +15,8 @@
     { "fr": "la bibliothèque", "en": "bookshelf", "ar": "رف الكتب", "ar_translit": "raff al-kutub", "emoji": "📚" },
     { "fr": "la cheminée", "en": "fireplace", "ar": "الموقد", "ar_translit": "al-mawqad", "emoji": "🔥" },
     { "fr": "la fenêtre", "en": "window", "ar": "النافذة", "ar_translit": "an-nāfidha", "emoji": "🪟" },
-    { "fr": "la porte", "en": "door", "ar": "الباب", "ar_translit": "al-bāb", "emoji": "🚪" }
+    { "fr": "la porte", "en": "door", "ar": "الباب", "ar_translit": "al-bāb", "emoji": "🚪" },
+    { "fr": "le coussin", "en": "cushion", "ar": "الوسادة", "ar_translit": "al-wisāda", "emoji": "🛋️" },
+    { "fr": "la commode", "en": "chest of drawers", "ar": "خزانة الأدراج", "ar_translit": "khizanat al-adraj", "emoji": "🗄️" }
   ]
 }

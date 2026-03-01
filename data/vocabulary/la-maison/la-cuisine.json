@@ -15,6 +15,12 @@
     { "fr": "le tabouret", "en": "stool", "ar": "البراز", "ar_translit": "al-burāz", "emoji": "🪑" },
     { "fr": "la table de cuisine", "en": "kitchen table", "ar": "مائدة المطبخ", "ar_translit": "māidat al-matbakh", "emoji": "🍴" },
     { "fr": "la fenêtre", "en": "window", "ar": "النافذة", "ar_translit": "an-nāfidha", "emoji": "🪟" },
-    { "fr": "la porte", "en": "door", "ar": "الباب", "ar_translit": "al-bāb", "emoji": "🚪" }
+    { "fr": "la porte", "en": "door", "ar": "الباب", "ar_translit": "al-bāb", "emoji": "🚪" },
+    { "fr": "la cafetière", "en": "coffee maker", "ar": "مكينة قهوة", "ar_translit": "makīnat qahwa", "emoji": "☕" },
+    { "fr": "la planche à découper", "en": "cutting board", "ar": "لوحة تقطيع", "ar_translit": "lawhat taqti'", "emoji": "🍴" },
+    { "fr": "la passoire", "en": "colander", "ar": "المصفاة", "ar_translit": "al-misfāt", "emoji": "🥄" },
+    { "fr": "l'éponge", "en": "sponge", "ar": "الإسفنج", "ar_translit": "al-isfindj", "emoji": "🧽" },
+    { "fr": "la casserole", "en": "saucepan", "ar": "الطنجرة", "ar_translit": "at-tandjara", "emoji": "🍳" },
+    { "fr": "la poêle", "en": "frying pan", "ar": "المقلاة", "ar_translit": "al-miqlāt", "emoji": "🍳" }
   ]
 }
