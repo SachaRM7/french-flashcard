@@ -1,5 +1,5 @@
-// Auto-generated decks - 2026-03-01T13:53:24.724301
-window.DECKS_VERSION = '2026-03-01T13:53:24.724301';
+// Auto-generated decks - 2026-03-01T14:01:04.132728
+window.DECKS_VERSION = '2026-03-01T14:01:04.132728';
 window.DECKS_DATA = [
   {
     "id": "les-animaux-de-la-montagne",
@@ -2252,12 +2252,6 @@ window.DECKS_DATA = [
     ]
   },
   {
-    "id": "la-ferme",
-    "name": "La Ferme",
-    "category": "Sortir",
-    "cards": []
-  },
-  {
     "id": "le-cirque",
     "name": "Le cirque",
     "category": "Sortir",
@@ -2390,45 +2384,359 @@ window.DECKS_DATA = [
   },
   {
     "id": "la-foret",
-    "name": "La Foret",
-    "category": "Les Vacances",
-    "cards": []
+    "name": "La forêt",
+    "category": "Les vacances",
+    "cards": [
+      {
+        "front": "tree",
+        "back": "l'arbre",
+        "emoji": "🌳"
+      },
+      {
+        "front": "branch",
+        "back": "la branche",
+        "emoji": "🌿"
+      },
+      {
+        "front": "leaf",
+        "back": "la feuille",
+        "emoji": "🍃"
+      },
+      {
+        "front": "grass",
+        "back": "l'herbe",
+        "emoji": "🌱"
+      },
+      {
+        "front": "trunk",
+        "back": "le tronc",
+        "emoji": "🪵"
+      },
+      {
+        "front": "bush",
+        "back": "le buisson",
+        "emoji": "🌿"
+      }
+    ]
   },
   {
     "id": "a-la-mer",
-    "name": "A La Mer",
-    "category": "Les Vacances",
-    "cards": []
+    "name": "À la mer",
+    "category": "Les vacances",
+    "cards": [
+      {
+        "front": "sand",
+        "back": "le sable",
+        "emoji": "🏖️"
+      },
+      {
+        "front": "wave",
+        "back": "la vague",
+        "emoji": "🌊"
+      },
+      {
+        "front": "dune",
+        "back": "la dune",
+        "emoji": "🏔️"
+      },
+      {
+        "front": "seaweed",
+        "back": "l'algue",
+        "emoji": "🌿"
+      },
+      {
+        "front": "coral",
+        "back": "le corail",
+        "emoji": "🪸"
+      },
+      {
+        "front": "shells",
+        "back": "les coquillages",
+        "emoji": "🐚"
+      }
+    ]
   },
   {
     "id": "la-plage",
-    "name": "La Plage",
-    "category": "Les Vacances",
-    "cards": []
+    "name": "La plage",
+    "category": "Les vacances",
+    "cards": [
+      {
+        "front": "beach bag",
+        "back": "le sac de plage",
+        "emoji": "👜"
+      },
+      {
+        "front": "parasol/umbrella",
+        "back": "le parasol",
+        "emoji": "☂️"
+      },
+      {
+        "front": "towel",
+        "back": "la serviette",
+        "emoji": "🏖️"
+      },
+      {
+        "front": "sunscreen",
+        "back": "la crème solaire",
+        "emoji": "🧴"
+      },
+      {
+        "front": "tan",
+        "back": "bronzer",
+        "emoji": "☀️"
+      },
+      {
+        "front": "bucket",
+        "back": "le seau",
+        "emoji": "🪣"
+      },
+      {
+        "front": "sandcastle",
+        "back": "le château de sable",
+        "emoji": "🏰"
+      },
+      {
+        "front": "ice cream",
+        "back": "la glace",
+        "emoji": "🍦"
+      },
+      {
+        "front": "paddle ball",
+        "back": "le jeu de raquettes",
+        "emoji": "🏓"
+      },
+      {
+        "front": "inflatable boat",
+        "back": "le bateau gonflable",
+        "emoji": "🛟"
+      },
+      {
+        "front": "swim/bathe",
+        "back": "se baigner",
+        "emoji": "🏊"
+      },
+      {
+        "front": "swim",
+        "back": "nager",
+        "emoji": "🏊"
+      }
+    ]
+  },
+  {
+    "id": "sur-l-eau",
+    "name": "Sur l'eau",
+    "category": "Les vacances",
+    "cards": [
+      {
+        "front": "boat",
+        "back": "le bateau",
+        "emoji": "⛵"
+      },
+      {
+        "front": "sailboat",
+        "back": "le voilier",
+        "emoji": "⛵"
+      },
+      {
+        "front": "small boat",
+        "back": "la barque",
+        "emoji": "🚤"
+      },
+      {
+        "front": "canoe",
+        "back": "le canoé",
+        "emoji": "🛶"
+      },
+      {
+        "front": "cruise ship",
+        "back": "le paquebot",
+        "emoji": "🚢"
+      },
+      {
+        "front": "submarine",
+        "back": "le sous-marin",
+        "emoji": "🚢"
+      }
+    ]
   },
   {
     "id": "l-aeroport",
-    "name": "L Aeroport",
-    "category": "Les Vacances",
-    "cards": []
+    "name": "L'aéroport",
+    "category": "Les vacances",
+    "cards": [
+      {
+        "front": "takeoff",
+        "back": "le décollage",
+        "emoji": "✈️"
+      },
+      {
+        "front": "landing",
+        "back": "l'atterrissage",
+        "emoji": "✈️"
+      },
+      {
+        "front": "passport",
+        "back": "le passeport",
+        "emoji": "📕"
+      },
+      {
+        "front": "luggage cart",
+        "back": "le chariot à bagages",
+        "emoji": "🛒"
+      },
+      {
+        "front": "check-in",
+        "back": "l'enregistrement",
+        "emoji": "📋"
+      },
+      {
+        "front": "plane ticket",
+        "back": "le billet d'avion",
+        "emoji": "🎫"
+      }
+    ]
   },
   {
     "id": "les-sports-d-hiver",
-    "name": "Les Sports D Hiver",
-    "category": "Les Vacances",
-    "cards": []
+    "name": "Les sports d'hiver",
+    "category": "Les vacances",
+    "cards": [
+      {
+        "front": "snowplow",
+        "back": "la chasse-neige",
+        "emoji": "❄️"
+      },
+      {
+        "front": "snowman",
+        "back": "le bonhomme de neige",
+        "emoji": "⛄"
+      },
+      {
+        "front": "ski lift",
+        "back": "le téléski",
+        "emoji": "🎿"
+      },
+      {
+        "front": "ice rink",
+        "back": "la patinoire",
+        "emoji": "⛸️"
+      },
+      {
+        "front": "surf",
+        "back": "surfer",
+        "emoji": "🏂"
+      },
+      {
+        "front": "instructor",
+        "back": "le moniteur",
+        "emoji": "👨‍🏫"
+      },
+      {
+        "front": "cable car",
+        "back": "le télépherique",
+        "emoji": "🚡"
+      },
+      {
+        "front": "snowshoes",
+        "back": "les raquettes",
+        "emoji": "🎿"
+      },
+      {
+        "front": "snowball fight",
+        "back": "la bataille de boules de neige",
+        "emoji": "❄️"
+      },
+      {
+        "front": "ski",
+        "back": "skier",
+        "emoji": "🎿"
+      },
+      {
+        "front": "sledding",
+        "back": "la luge",
+        "emoji": "🛷"
+      },
+      {
+        "front": "sleigh",
+        "back": "le traineau",
+        "emoji": "🛷"
+      }
+    ]
   },
   {
     "id": "a-la-montagne",
-    "name": "A La Montagne",
-    "category": "Les Vacances",
-    "cards": []
+    "name": "À la montagne",
+    "category": "Les vacances",
+    "cards": [
+      {
+        "front": "summit/peak",
+        "back": "le sommet",
+        "emoji": "⛰️"
+      },
+      {
+        "front": "fir tree",
+        "back": "le sapin",
+        "emoji": "🌲"
+      },
+      {
+        "front": "chalet",
+        "back": "le chalet",
+        "emoji": "🏔️"
+      },
+      {
+        "front": "burrow",
+        "back": "le terrier",
+        "emoji": "🐰"
+      },
+      {
+        "front": "fisherman",
+        "back": "le pêcheur",
+        "emoji": "🎣"
+      },
+      {
+        "front": "torrent/stream",
+        "back": "le torrent",
+        "emoji": "💧"
+      }
+    ]
   },
   {
     "id": "la-gare",
-    "name": "La Gare",
-    "category": "Les Vacances",
-    "cards": []
+    "name": "La gare",
+    "category": "Les vacances",
+    "cards": [
+      {
+        "front": "rails",
+        "back": "les rails",
+        "emoji": "🚂"
+      },
+      {
+        "front": "platform",
+        "back": "le quai",
+        "emoji": "🚂"
+      },
+      {
+        "front": "information board",
+        "back": "le panneau d'informations",
+        "emoji": "📋"
+      },
+      {
+        "front": "traveler",
+        "back": "le voyageur",
+        "emoji": "👨‍🚀"
+      },
+      {
+        "front": "conductor",
+        "back": "le contrôleur",
+        "emoji": "👔"
+      },
+      {
+        "front": "suitcase",
+        "back": "la valise",
+        "emoji": "🧳"
+      }
+    ]
   },
   {
     "id": "les-metiers",

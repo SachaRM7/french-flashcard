@@ -1,0 +1,14 @@
+{
+  "id": "sur-l-eau",
+  "name": "Sur l'eau",
+  "nameAr": "على الماء",
+  "category": "Les vacances",
+  "cards": [
+    { "fr": "le bateau", "en": "boat", "ar": "الباخرة", "ar_translit": "al-bākhira", "emoji": "⛵" },
+    { "fr": "le voilier", "en": "sailboat", "ar": "قارب شراعي", "ar_translit": "qārib shirā'ī", "emoji": "⛵" },
+    { "fr": "la barque", "en": "small boat", "ar": "الزورق", "ar_translit": "az-zawraq", "emoji": "🚤" },
+    { "fr": "le canoé", "en": "canoe", "ar": "القارب", "ar_translit": "al-qāirib", "emoji": "🛶" },
+    { "fr": "le paquebot", "en": "cruise ship", "ar": "السفينة", "ar_translit": "as-safīna", "emoji": "🚢" },
+    { "fr": "le sous-marin", "en": "submarine", "ar": "الغواصة", "ar_translit": "al-ghawwāsa", "emoji": "🚢" }
+  ]
+}

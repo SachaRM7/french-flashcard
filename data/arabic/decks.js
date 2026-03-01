@@ -1,5 +1,5 @@
-// Auto-generated decks - 2026-03-01T13:53:24.724301
-window.DECKS_VERSION = '2026-03-01T13:53:24.724301';
+// Auto-generated decks - 2026-03-01T14:01:04.132728
+window.DECKS_VERSION = '2026-03-01T14:01:04.132728';
 window.DECKS_DATA = [
   {
     "id": "les-animaux-de-la-montagne",
@@ -2625,12 +2625,6 @@ window.DECKS_DATA = [
     ]
   },
   {
-    "id": "la-ferme",
-    "name": "La Ferme",
-    "category": "Sortir",
-    "cards": []
-  },
-  {
     "id": "le-cirque",
     "name": "Le cirque",
     "category": "Sortir",
@@ -2785,45 +2779,419 @@ window.DECKS_DATA = [
   },
   {
     "id": "la-foret",
-    "name": "La Foret",
-    "category": "Les Vacances",
-    "cards": []
+    "name": "La forêt",
+    "category": "Les vacances",
+    "cards": [
+      {
+        "front": "الشجرة",
+        "back": "l'arbre",
+        "translit": "ach-chadjara",
+        "emoji": "🌳"
+      },
+      {
+        "front": "الغصن",
+        "back": "la branche",
+        "translit": "al-ghousn",
+        "emoji": "🌿"
+      },
+      {
+        "front": "الورقة",
+        "back": "la feuille",
+        "translit": "al-waraqa",
+        "emoji": "🍃"
+      },
+      {
+        "front": "العشب",
+        "back": "l'herbe",
+        "translit": "al-'oushb",
+        "emoji": "🌱"
+      },
+      {
+        "front": "الجذع",
+        "back": "le tronc",
+        "translit": "al-djidh'",
+        "emoji": "🪵"
+      },
+      {
+        "front": "الشجيرة",
+        "back": "le buisson",
+        "translit": "ach-choudjayrat",
+        "emoji": "🌿"
+      }
+    ]
   },
   {
     "id": "a-la-mer",
-    "name": "A La Mer",
-    "category": "Les Vacances",
-    "cards": []
+    "name": "À la mer",
+    "category": "Les vacances",
+    "cards": [
+      {
+        "front": "الرمل",
+        "back": "le sable",
+        "translit": "ar-raml",
+        "emoji": "🏖️"
+      },
+      {
+        "front": "الموجة",
+        "back": "la vague",
+        "translit": "al-mawja",
+        "emoji": "🌊"
+      },
+      {
+        "front": "الكثيب",
+        "back": "la dune",
+        "translit": "al-kāthib",
+        "emoji": "🏔️"
+      },
+      {
+        "front": "الطحلب",
+        "back": "l'algue",
+        "translit": "at-ṭohlob",
+        "emoji": "🌿"
+      },
+      {
+        "front": "المرجان",
+        "back": "le corail",
+        "translit": "al-mordjān",
+        "emoji": "🪸"
+      },
+      {
+        "front": "الصدف",
+        "back": "les coquillages",
+        "translit": "as-ṣadaf",
+        "emoji": "🐚"
+      }
+    ]
   },
   {
     "id": "la-plage",
-    "name": "La Plage",
-    "category": "Les Vacances",
-    "cards": []
+    "name": "La plage",
+    "category": "Les vacances",
+    "cards": [
+      {
+        "front": "حقيبة الشاطئ",
+        "back": "le sac de plage",
+        "translit": "haqibat ach-chātịa",
+        "emoji": "👜"
+      },
+      {
+        "front": "مظلة شمسية",
+        "back": "le parasol",
+        "translit": "midhalla chamsiyya",
+        "emoji": "☂️"
+      },
+      {
+        "front": "الفوطة",
+        "back": "la serviette",
+        "translit": "al-fouta",
+        "emoji": "🏖️"
+      },
+      {
+        "front": "مرهم للشمس",
+        "back": "la crème solaire",
+        "translit": "mirham lich-chams",
+        "emoji": "🧴"
+      },
+      {
+        "front": "يتشمس",
+        "back": "bronzer",
+        "translit": "yatachammas",
+        "emoji": "☀️"
+      },
+      {
+        "front": "الدلو",
+        "back": "le seau",
+        "translit": "ad-dalw",
+        "emoji": "🪣"
+      },
+      {
+        "front": "قصر من الرمل",
+        "back": "le château de sable",
+        "translit": "qasr min ar-raml",
+        "emoji": "🏰"
+      },
+      {
+        "front": "كريمة مثلجة",
+        "back": "la glace",
+        "translit": "krima mouthallădja",
+        "emoji": "🍦"
+      },
+      {
+        "front": "لعبة المضرب",
+        "back": "le jeu de raquettes",
+        "translit": "lou'bat al-migrab",
+        "emoji": "🏓"
+      },
+      {
+        "front": "قارب قابل للنفخ",
+        "back": "le bateau gonflable",
+        "translit": "qārib an-naftakh",
+        "emoji": "🛟"
+      },
+      {
+        "front": "يستحم",
+        "back": "se baigner",
+        "translit": "yastahim",
+        "emoji": "🏊"
+      },
+      {
+        "front": "يسبح",
+        "back": "nager",
+        "translit": "yasbah",
+        "emoji": "🏊"
+      }
+    ]
+  },
+  {
+    "id": "sur-l-eau",
+    "name": "Sur l'eau",
+    "category": "Les vacances",
+    "cards": [
+      {
+        "front": "الباخرة",
+        "back": "le bateau",
+        "translit": "al-bākhira",
+        "emoji": "⛵"
+      },
+      {
+        "front": "قارب شراعي",
+        "back": "le voilier",
+        "translit": "qārib shirā'ī",
+        "emoji": "⛵"
+      },
+      {
+        "front": "الزورق",
+        "back": "la barque",
+        "translit": "az-zawraq",
+        "emoji": "🚤"
+      },
+      {
+        "front": "القارب",
+        "back": "le canoé",
+        "translit": "al-qāirib",
+        "emoji": "🛶"
+      },
+      {
+        "front": "السفينة",
+        "back": "le paquebot",
+        "translit": "as-safīna",
+        "emoji": "🚢"
+      },
+      {
+        "front": "الغواصة",
+        "back": "le sous-marin",
+        "translit": "al-ghawwāsa",
+        "emoji": "🚢"
+      }
+    ]
   },
   {
     "id": "l-aeroport",
-    "name": "L Aeroport",
-    "category": "Les Vacances",
-    "cards": []
+    "name": "L'aéroport",
+    "category": "Les vacances",
+    "cards": [
+      {
+        "front": "الإقلاع",
+        "back": "le décollage",
+        "translit": "al-iqlā'",
+        "emoji": "✈️"
+      },
+      {
+        "front": "الهبوط",
+        "back": "l'atterrissage",
+        "translit": "al-houbout",
+        "emoji": "✈️"
+      },
+      {
+        "front": "جواز السفر",
+        "back": "le passeport",
+        "translit": "djawāz safar",
+        "emoji": "📕"
+      },
+      {
+        "front": "عربة الحقائب",
+        "back": "le chariot à bagages",
+        "translit": "'araba li-l-haqāib",
+        "emoji": "🛒"
+      },
+      {
+        "front": "التسجيل",
+        "back": "l'enregistrement",
+        "translit": "at-tasdil",
+        "emoji": "📋"
+      },
+      {
+        "front": "تذكرة الطيارة",
+        "back": "le billet d'avion",
+        "translit": "tadhkira at-tayyara",
+        "emoji": "🎫"
+      }
+    ]
   },
   {
     "id": "les-sports-d-hiver",
-    "name": "Les Sports D Hiver",
-    "category": "Les Vacances",
-    "cards": []
+    "name": "Les sports d'hiver",
+    "category": "Les vacances",
+    "cards": [
+      {
+        "front": "كاسحة الثلج",
+        "back": "la chasse-neige",
+        "translit": "kāsihat ath-thoulûdj",
+        "emoji": "❄️"
+      },
+      {
+        "front": "رجل ثلجي",
+        "back": "le bonhomme de neige",
+        "translit": "radjoul thalji",
+        "emoji": "⛄"
+      },
+      {
+        "front": "مصعد التزلج",
+        "back": "le téléski",
+        "translit": "mis'ad at-tazalloudj",
+        "emoji": "🎿"
+      },
+      {
+        "front": "حلبة تزحلوق",
+        "back": "la patinoire",
+        "translit": "halabat tazahloqu",
+        "emoji": "⛸️"
+      },
+      {
+        "front": "تصفح",
+        "back": "surfer",
+        "translit": "tasafaha",
+        "emoji": "🏂"
+      },
+      {
+        "front": "المدرب",
+        "back": "le moniteur",
+        "translit": "al-moudarrib",
+        "emoji": "👨‍🏫"
+      },
+      {
+        "front": "عربة هوائية",
+        "back": "le télépherique",
+        "translit": "'araba hawaiyya",
+        "emoji": "🚡"
+      },
+      {
+        "front": "نعل التلج",
+        "back": "les raquettes",
+        "translit": "na'l ath-thalji",
+        "emoji": "🎿"
+      },
+      {
+        "front": "تراشق بكرات الثلج",
+        "back": "la bataille de boules de neige",
+        "translit": "tarāchaq bi-kourāt ath-thaldj",
+        "emoji": "❄️"
+      },
+      {
+        "front": "تزلج",
+        "back": "skier",
+        "translit": "tazallaudj",
+        "emoji": "🎿"
+      },
+      {
+        "front": "الزلاجة",
+        "back": "la luge",
+        "translit": "az-zalādja",
+        "emoji": "🛷"
+      },
+      {
+        "front": "زلاجة جرار",
+        "back": "le traineau",
+        "translit": "zalādjat djarr",
+        "emoji": "🛷"
+      }
+    ]
   },
   {
     "id": "a-la-montagne",
-    "name": "A La Montagne",
-    "category": "Les Vacances",
-    "cards": []
+    "name": "À la montagne",
+    "category": "Les vacances",
+    "cards": [
+      {
+        "front": "القمة",
+        "back": "le sommet",
+        "translit": "al-qimma",
+        "emoji": "⛰️"
+      },
+      {
+        "front": "شجرة الصنوبر",
+        "back": "le sapin",
+        "translit": "chajarat as-sanawbar",
+        "emoji": "🌲"
+      },
+      {
+        "front": "الكوخ",
+        "back": "le chalet",
+        "translit": "al-koukh",
+        "emoji": "🏔️"
+      },
+      {
+        "front": "الجحر",
+        "back": "le terrier",
+        "translit": "al-djouhr",
+        "emoji": "🐰"
+      },
+      {
+        "front": "الصياد",
+        "back": "le pêcheur",
+        "translit": "as-ṣayyād",
+        "emoji": "🎣"
+      },
+      {
+        "front": "السيل",
+        "back": "le torrent",
+        "translit": "as-sayl",
+        "emoji": "💧"
+      }
+    ]
   },
   {
     "id": "la-gare",
-    "name": "La Gare",
-    "category": "Les Vacances",
-    "cards": []
+    "name": "La gare",
+    "category": "Les vacances",
+    "cards": [
+      {
+        "front": "سكك الحديد",
+        "back": "les rails",
+        "translit": "sikak al-hadīd",
+        "emoji": "🚂"
+      },
+      {
+        "front": "الرصيف",
+        "back": "le quai",
+        "translit": "ar-rasīf",
+        "emoji": "🚂"
+      },
+      {
+        "front": "لوحة معلومات",
+        "back": "le panneau d'informations",
+        "translit": "lawhat ma'loumāt",
+        "emoji": "📋"
+      },
+      {
+        "front": "المسافر",
+        "back": "le voyageur",
+        "translit": "al-mousāfir",
+        "emoji": "👨‍🚀"
+      },
+      {
+        "front": "المراقب",
+        "back": "le contrôleur",
+        "translit": "al-mouaraqib",
+        "emoji": "👔"
+      },
+      {
+        "front": "الحقيبة",
+        "back": "la valise",
+        "translit": "al-haqiba",
+        "emoji": "🧳"
+      }
+    ]
   },
   {
     "id": "les-metiers",

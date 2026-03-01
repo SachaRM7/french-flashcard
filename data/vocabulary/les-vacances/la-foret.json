@@ -1,6 +1,14 @@
 {
   "id": "la-foret",
-  "name": "La Foret",
-  "category": "Les Vacances",
-  "cards": []
+  "name": "La forêt",
+  "nameAr": "الغابة",
+  "category": "Les vacances",
+  "cards": [
+    { "fr": "l'arbre", "en": "tree", "ar": "الشجرة", "ar_translit": "ach-chadjara", "emoji": "🌳" },
+    { "fr": "la branche", "en": "branch", "ar": "الغصن", "ar_translit": "al-ghousn", "emoji": "🌿" },
+    { "fr": "la feuille", "en": "leaf", "ar": "الورقة", "ar_translit": "al-waraqa", "emoji": "🍃" },
+    { "fr": "l'herbe", "en": "grass", "ar": "العشب", "ar_translit": "al-'oushb", "emoji": "🌱" },
+    { "fr": "le tronc", "en": "trunk", "ar": "الجذع", "ar_translit": "al-djidh'", "emoji": "🪵" },
+    { "fr": "le buisson", "en": "bush", "ar": "الشجيرة", "ar_translit": "ach-choudjayrat", "emoji": "🌿" }
+  ]
 }

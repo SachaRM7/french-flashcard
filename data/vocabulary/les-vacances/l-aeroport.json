@@ -1,6 +1,14 @@
 {
   "id": "l-aeroport",
-  "name": "L Aeroport",
-  "category": "Les Vacances",
-  "cards": []
+  "name": "L'aéroport",
+  "nameAr": "المطار",
+  "category": "Les vacances",
+  "cards": [
+    { "fr": "le décollage", "en": "takeoff", "ar": "الإقلاع", "ar_translit": "al-iqlā'", "emoji": "✈️" },
+    { "fr": "l'atterrissage", "en": "landing", "ar": "الهبوط", "ar_translit": "al-houbout", "emoji": "✈️" },
+    { "fr": "le passeport", "en": "passport", "ar": "جواز السفر", "ar_translit": "djawāz safar", "emoji": "📕" },
+    { "fr": "le chariot à bagages", "en": "luggage cart", "ar": "عربة الحقائب", "ar_translit": "'araba li-l-haqāib", "emoji": "🛒" },
+    { "fr": "l'enregistrement", "en": "check-in", "ar": "التسجيل", "ar_translit": "at-tasdil", "emoji": "📋" },
+    { "fr": "le billet d'avion", "en": "plane ticket", "ar": "تذكرة الطيارة", "ar_translit": "tadhkira at-tayyara", "emoji": "🎫" }
+  ]
 }

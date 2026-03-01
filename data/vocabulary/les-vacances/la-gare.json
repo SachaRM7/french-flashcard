@@ -1,6 +1,14 @@
 {
   "id": "la-gare",
-  "name": "La Gare",
-  "category": "Les Vacances",
-  "cards": []
+  "name": "La gare",
+  "nameAr": "المحطة",
+  "category": "Les vacances",
+  "cards": [
+    { "fr": "les rails", "en": "rails", "ar": "سكك الحديد", "ar_translit": "sikak al-hadīd", "emoji": "🚂" },
+    { "fr": "le quai", "en": "platform", "ar": "الرصيف", "ar_translit": "ar-rasīf", "emoji": "🚂" },
+    { "fr": "le panneau d'informations", "en": "information board", "ar": "لوحة معلومات", "ar_translit": "lawhat ma'loumāt", "emoji": "📋" },
+    { "fr": "le voyageur", "en": "traveler", "ar": "المسافر", "ar_translit": "al-mousāfir", "emoji": "👨‍🚀" },
+    { "fr": "le contrôleur", "en": "conductor", "ar": "المراقب", "ar_translit": "al-mouaraqib", "emoji": "👔" },
+    { "fr": "la valise", "en": "suitcase", "ar": "الحقيبة", "ar_translit": "al-haqiba", "emoji": "🧳" }
+  ]
 }

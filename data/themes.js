@@ -110,7 +110,7 @@ window.THEMES_DATA = [
         nameAr: 'العطلة',
         color: '#f9e79f',
         icon: '🏖️',
-        decks: ['la-gare', 'l-aeroport', 'la-plage', 'la-mer', 'la-montagne', 'les-sports-d-hiver', 'la-foret']
+        decks: ['la-gare', 'l-aeroport', 'la-plage', 'sur-l-eau', 'a-la-mer', 'la-foret', 'a-la-montagne', 'les-sports-d-hiver']
     },
     {
         id: 'animaux',

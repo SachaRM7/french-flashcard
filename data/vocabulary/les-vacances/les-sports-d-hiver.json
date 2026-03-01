@@ -1,6 +1,20 @@
 {
   "id": "les-sports-d-hiver",
-  "name": "Les Sports D Hiver",
-  "category": "Les Vacances",
-  "cards": []
+  "name": "Les sports d'hiver",
+  "nameAr": "رياضات شتوية",
+  "category": "Les vacances",
+  "cards": [
+    { "fr": "la chasse-neige", "en": "snowplow", "ar": "كاسحة الثلج", "ar_translit": "kāsihat ath-thoulûdj", "emoji": "❄️" },
+    { "fr": "le bonhomme de neige", "en": "snowman", "ar": "رجل ثلجي", "ar_translit": "radjoul thalji", "emoji": "⛄" },
+    { "fr": "le téléski", "en": "ski lift", "ar": "مصعد التزلج", "ar_translit": "mis'ad at-tazalloudj", "emoji": "🎿" },
+    { "fr": "la patinoire", "en": "ice rink", "ar": "حلبة تزحلوق", "ar_translit": "halabat tazahloqu", "emoji": "⛸️" },
+    { "fr": "surfer", "en": "surf", "ar": "تصفح", "ar_translit": "tasafaha", "emoji": "🏂" },
+    { "fr": "le moniteur", "en": "instructor", "ar": "المدرب", "ar_translit": "al-moudarrib", "emoji": "👨‍🏫" },
+    { "fr": "le télépherique", "en": "cable car", "ar": "عربة هوائية", "ar_translit": "'araba hawaiyya", "emoji": "🚡" },
+    { "fr": "les raquettes", "en": "snowshoes", "ar": "نعل التلج", "ar_translit": "na'l ath-thalji", "emoji": "🎿" },
+    { "fr": "la bataille de boules de neige", "en": "snowball fight", "ar": "تراشق بكرات الثلج", "ar_translit": "tarāchaq bi-kourāt ath-thaldj", "emoji": "❄️" },
+    { "fr": "skier", "en": "ski", "ar": "تزلج", "ar_translit": "tazallaudj", "emoji": "🎿" },
+    { "fr": "la luge", "en": "sledding", "ar": "الزلاجة", "ar_translit": "az-zalādja", "emoji": "🛷" },
+    { "fr": "le traineau", "en": "sleigh", "ar": "زلاجة جرار", "ar_translit": "zalādjat djarr", "emoji": "🛷" }
+  ]
 }

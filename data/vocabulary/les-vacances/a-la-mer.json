@@ -1,6 +1,14 @@
 {
   "id": "a-la-mer",
-  "name": "A La Mer",
-  "category": "Les Vacances",
-  "cards": []
+  "name": "À la mer",
+  "nameAr": "في البحر",
+  "category": "Les vacances",
+  "cards": [
+    { "fr": "le sable", "en": "sand", "ar": "الرمل", "ar_translit": "ar-raml", "emoji": "🏖️" },
+    { "fr": "la vague", "en": "wave", "ar": "الموجة", "ar_translit": "al-mawja", "emoji": "🌊" },
+    { "fr": "la dune", "en": "dune", "ar": "الكثيب", "ar_translit": "al-kāthib", "emoji": "🏔️" },
+    { "fr": "l'algue", "en": "seaweed", "ar": "الطحلب", "ar_translit": "at-ṭohlob", "emoji": "🌿" },
+    { "fr": "le corail", "en": "coral", "ar": "المرجان", "ar_translit": "al-mordjān", "emoji": "🪸" },
+    { "fr": "les coquillages", "en": "shells", "ar": "الصدف", "ar_translit": "as-ṣadaf", "emoji": "🐚" }
+  ]
 }

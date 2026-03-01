@@ -1,6 +1,20 @@
 {
   "id": "la-plage",
-  "name": "La Plage",
-  "category": "Les Vacances",
-  "cards": []
+  "name": "La plage",
+  "nameAr": "الشاطئ",
+  "category": "Les vacances",
+  "cards": [
+    { "fr": "le sac de plage", "en": "beach bag", "ar": "حقيبة الشاطئ", "ar_translit": "haqibat ach-chātịa", "emoji": "👜" },
+    { "fr": "le parasol", "en": "parasol/umbrella", "ar": "مظلة شمسية", "ar_translit": "midhalla chamsiyya", "emoji": "☂️" },
+    { "fr": "la serviette", "en": "towel", "ar": "الفوطة", "ar_translit": "al-fouta", "emoji": "🏖️" },
+    { "fr": "la crème solaire", "en": "sunscreen", "ar": "مرهم للشمس", "ar_translit": "mirham lich-chams", "emoji": "🧴" },
+    { "fr": "bronzer", "en": "tan", "ar": "يتشمس", "ar_translit": "yatachammas", "emoji": "☀️" },
+    { "fr": "le seau", "en": "bucket", "ar": "الدلو", "ar_translit": "ad-dalw", "emoji": "🪣" },
+    { "fr": "le château de sable", "en": "sandcastle", "ar": "قصر من الرمل", "ar_translit": "qasr min ar-raml", "emoji": "🏰" },
+    { "fr": "la glace", "en": "ice cream", "ar": "كريمة مثلجة", "ar_translit": "krima mouthallădja", "emoji": "🍦" },
+    { "fr": "le jeu de raquettes", "en": "paddle ball", "ar": "لعبة المضرب", "ar_translit": "lou'bat al-migrab", "emoji": "🏓" },
+    { "fr": "le bateau gonflable", "en": "inflatable boat", "ar": "قارب قابل للنفخ", "ar_translit": "qārib an-naftakh", "emoji": "🛟" },
+    { "fr": "se baigner", "en": "swim/bathe", "ar": "يستحم", "ar_translit": "yastahim", "emoji": "🏊" },
+    { "fr": "nager", "en": "swim", "ar": "يسبح", "ar_translit": "yasbah", "emoji": "🏊" }
+  ]
 }

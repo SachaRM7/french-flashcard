@@ -1,6 +1,14 @@
 {
   "id": "a-la-montagne",
-  "name": "A La Montagne",
-  "category": "Les Vacances",
-  "cards": []
+  "name": "À la montagne",
+  "nameAr": "في الجبال",
+  "category": "Les vacances",
+  "cards": [
+    { "fr": "le sommet", "en": "summit/peak", "ar": "القمة", "ar_translit": "al-qimma", "emoji": "⛰️" },
+    { "fr": "le sapin", "en": "fir tree", "ar": "شجرة الصنوبر", "ar_translit": "chajarat as-sanawbar", "emoji": "🌲" },
+    { "fr": "le chalet", "en": "chalet", "ar": "الكوخ", "ar_translit": "al-koukh", "emoji": "🏔️" },
+    { "fr": "le terrier", "en": "burrow", "ar": "الجحر", "ar_translit": "al-djouhr", "emoji": "🐰" },
+    { "fr": "le pêcheur", "en": "fisherman", "ar": "الصياد", "ar_translit": "as-ṣayyād", "emoji": "🎣" },
+    { "fr": "le torrent", "en": "torrent/stream", "ar": "السيل", "ar_translit": "as-sayl", "emoji": "💧" }
+  ]
 }
