@@ -1,5 +1,5 @@
-// Auto-generated decks - 2026-03-01T09:38:16.263209
-window.DECKS_VERSION = '2026-03-01T09:38:16.263209';
+// Auto-generated decks - 2026-03-01T09:42:22.692138
+window.DECKS_VERSION = '2026-03-01T09:42:22.692138';
 window.DECKS_DATA = [
   {
     "id": "couleurs",
@@ -47,12 +47,12 @@ window.DECKS_DATA = [
         "emoji": "🩷"
       },
       {
-        "front": "marron",
+        "front": "brown",
         "back": "marron",
         "emoji": "🟤"
       },
       {
-        "front": "mauve",
+        "front": "purple",
         "back": "mauve",
         "emoji": "🟣"
       }
@@ -64,32 +64,32 @@ window.DECKS_DATA = [
     "category": "Vocabulaire",
     "cards": [
       {
-        "front": "devant",
+        "front": "in front",
         "back": "devant",
         "emoji": "👉"
       },
       {
-        "front": "derrière",
+        "front": "behind",
         "back": "derrière",
         "emoji": "👈"
       },
       {
-        "front": "à gauche",
+        "front": "left",
         "back": "à gauche",
         "emoji": "⬅️"
       },
       {
-        "front": "à droite",
+        "front": "right",
         "back": "à droite",
         "emoji": "➡️"
       },
       {
-        "front": "dessus",
+        "front": "above",
         "back": "dessus",
         "emoji": "⬆️"
       },
       {
-        "front": "dessous",
+        "front": "below",
         "back": "dessous",
         "emoji": "⬇️"
       }
@@ -101,62 +101,62 @@ window.DECKS_DATA = [
     "category": "Temps",
     "cards": [
       {
-        "front": "janvier",
+        "front": "January",
         "back": "janvier",
         "emoji": "❄️"
       },
       {
-        "front": "février",
+        "front": "February",
         "back": "février",
         "emoji": "❄️"
       },
       {
-        "front": "mars",
+        "front": "March",
         "back": "mars",
         "emoji": "🌧️"
       },
       {
-        "front": "avril",
+        "front": "April",
         "back": "avril",
         "emoji": "🌸"
       },
       {
-        "front": "mai",
+        "front": "May",
         "back": "mai",
         "emoji": "🌼"
       },
       {
-        "front": "juin",
+        "front": "June",
         "back": "juin",
         "emoji": "☀️"
       },
       {
-        "front": "juillet",
+        "front": "July",
         "back": "juillet",
         "emoji": "☀️"
       },
       {
-        "front": "août",
+        "front": "August",
         "back": "août",
         "emoji": "☀️"
       },
       {
-        "front": "septembre",
+        "front": "September",
         "back": "septembre",
         "emoji": "🍂"
       },
       {
-        "front": "octobre",
+        "front": "October",
         "back": "octobre",
         "emoji": "🍂"
       },
       {
-        "front": "novembre",
+        "front": "November",
         "back": "novembre",
         "emoji": "🍂"
       },
       {
-        "front": "décembre",
+        "front": "December",
         "back": "décembre",
         "emoji": "❄️"
       }
@@ -168,32 +168,32 @@ window.DECKS_DATA = [
     "category": "Verbes",
     "cards": [
       {
-        "front": "marcher",
+        "front": "walk",
         "back": "marcher",
         "emoji": "🚶"
       },
       {
-        "front": "courir",
+        "front": "run",
         "back": "courir",
         "emoji": "🏃"
       },
       {
-        "front": "sauter",
+        "front": "jump",
         "back": "sauter",
         "emoji": "🦘"
       },
       {
-        "front": "danser",
+        "front": "dance",
         "back": "danser",
         "emoji": "💃"
       },
       {
-        "front": "nager",
+        "front": "swim",
         "back": "nager",
         "emoji": "🏊"
       },
       {
-        "front": "tomber",
+        "front": "fall",
         "back": "tomber",
         "emoji": "⬇️"
       }
@@ -205,37 +205,37 @@ window.DECKS_DATA = [
     "category": "Temps",
     "cards": [
       {
-        "front": "lundi",
+        "front": "Monday",
         "back": "lundi",
         "emoji": "📅"
       },
       {
-        "front": "mardi",
+        "front": "Tuesday",
         "back": "mardi",
         "emoji": "📅"
       },
       {
-        "front": "mercredi",
+        "front": "Wednesday",
         "back": "mercredi",
         "emoji": "📅"
       },
       {
-        "front": "jeudi",
+        "front": "Thursday",
         "back": "jeudi",
         "emoji": "📅"
       },
       {
-        "front": "vendredi",
+        "front": "Friday",
         "back": "vendredi",
         "emoji": "📅"
       },
       {
-        "front": "samedi",
+        "front": "Saturday",
         "back": "samedi",
         "emoji": "📅"
       },
       {
-        "front": "dimanche",
+        "front": "Sunday",
         "back": "dimanche",
         "emoji": "📅"
       }
@@ -247,22 +247,22 @@ window.DECKS_DATA = [
     "category": "Temps",
     "cards": [
       {
-        "front": "le printemps",
+        "front": "spring",
         "back": "le printemps",
         "emoji": "🌸"
       },
       {
-        "front": "l'été",
+        "front": "summer",
         "back": "l'été",
         "emoji": "☀️"
       },
       {
-        "front": "l'automne",
+        "front": "autumn",
         "back": "l'automne",
         "emoji": "🍂"
       },
       {
-        "front": "l'hiver",
+        "front": "winter",
         "back": "l'hiver",
         "emoji": "❄️"
       }
@@ -418,32 +418,32 @@ window.DECKS_DATA = [
     "category": "Météo",
     "cards": [
       {
-        "front": "le soleil",
+        "front": "sun",
         "back": "le soleil",
         "emoji": "☀️"
       },
       {
-        "front": "les nuages",
+        "front": "clouds",
         "back": "les nuages",
         "emoji": "☁️"
       },
       {
-        "front": "la pluie",
+        "front": "rain",
         "back": "la pluie",
         "emoji": "🌧️"
       },
       {
-        "front": "l'orage",
+        "front": "storm",
         "back": "l'orage",
         "emoji": "⛈️"
       },
       {
-        "front": "la neige",
+        "front": "snow",
         "back": "la neige",
         "emoji": "❄️"
       },
       {
-        "front": "le brouillard",
+        "front": "fog",
         "back": "le brouillard",
         "emoji": "🌫️"
       }
@@ -485,7 +485,7 @@ window.DECKS_DATA = [
         "emoji": "🔷"
       },
       {
-        "front": "ovale",
+        "front": "oval",
         "back": "ovale",
         "emoji": "⬭"
       },
@@ -502,22 +502,22 @@ window.DECKS_DATA = [
     "category": "Culturel",
     "cards": [
       {
-        "front": "l'anniversaire",
+        "front": "birthday",
         "back": "l'anniversaire",
         "emoji": "🎂"
       },
       {
-        "front": "la Chandeleur",
+        "front": "Candlemas",
         "back": "la Chandeleur",
         "emoji": "🕯️"
       },
       {
-        "front": "le carnaval",
+        "front": "carnival",
         "back": "le carnaval",
         "emoji": "🎭"
       },
       {
-        "front": "la Aachoura",
+        "front": "Ashura",
         "back": "la Aachoura",
         "emoji": "🌙"
       },
@@ -527,7 +527,7 @@ window.DECKS_DATA = [
         "emoji": "🌙"
       },
       {
-        "front": "l'Aïd al-Fitr",
+        "front": "Eid al-Fitr",
         "back": "l'Aïd al-Fitr",
         "emoji": "🎉"
       }

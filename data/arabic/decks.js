@@ -1,5 +1,5 @@
-// Auto-generated decks - 2026-03-01T09:38:16.263209
-window.DECKS_VERSION = '2026-03-01T09:38:16.263209';
+// Auto-generated decks - 2026-03-01T09:42:22.692138
+window.DECKS_VERSION = '2026-03-01T09:42:22.692138';
 window.DECKS_DATA = [
   {
     "id": "couleurs",
@@ -55,15 +55,15 @@ window.DECKS_DATA = [
         "emoji": "🩷"
       },
       {
-        "front": "marron",
+        "front": "بني",
         "back": "marron",
-        "translit": "",
+        "translit": "bunni",
         "emoji": "🟤"
       },
       {
-        "front": "mauve",
+        "front": "بنفسجي",
         "back": "mauve",
-        "translit": "",
+        "translit": "banafsaji",
         "emoji": "🟣"
       }
     ]
@@ -74,39 +74,39 @@ window.DECKS_DATA = [
     "category": "Vocabulaire",
     "cards": [
       {
-        "front": "devant",
+        "front": "أمام",
         "back": "devant",
-        "translit": "",
+        "translit": "amām",
         "emoji": "👉"
       },
       {
-        "front": "derrière",
+        "front": "وراء",
         "back": "derrière",
-        "translit": "",
+        "translit": "warā'",
         "emoji": "👈"
       },
       {
-        "front": "à gauche",
+        "front": "يسارا",
         "back": "à gauche",
-        "translit": "",
+        "translit": "yasāran",
         "emoji": "⬅️"
       },
       {
-        "front": "à droite",
+        "front": "يمينا",
         "back": "à droite",
-        "translit": "",
+        "translit": "yaminan",
         "emoji": "➡️"
       },
       {
-        "front": "dessus",
+        "front": "فوق",
         "back": "dessus",
-        "translit": "",
+        "translit": "fawqa",
         "emoji": "⬆️"
       },
       {
-        "front": "dessous",
+        "front": "تحت",
         "back": "dessous",
-        "translit": "",
+        "translit": "tahta",
         "emoji": "⬇️"
       }
     ]
@@ -117,75 +117,75 @@ window.DECKS_DATA = [
     "category": "Temps",
     "cards": [
       {
-        "front": "janvier",
+        "front": "يناير",
         "back": "janvier",
-        "translit": "",
+        "translit": "yanāyar",
         "emoji": "❄️"
       },
       {
-        "front": "février",
+        "front": "فبراير",
         "back": "février",
-        "translit": "",
+        "translit": "fabrayār",
         "emoji": "❄️"
       },
       {
-        "front": "mars",
+        "front": "مارس",
         "back": "mars",
-        "translit": "",
+        "translit": "mārs",
         "emoji": "🌧️"
       },
       {
-        "front": "avril",
+        "front": "أبريل",
         "back": "avril",
-        "translit": "",
+        "translit": "ifrīl",
         "emoji": "🌸"
       },
       {
-        "front": "mai",
+        "front": "مايو",
         "back": "mai",
-        "translit": "",
+        "translit": "māy",
         "emoji": "🌼"
       },
       {
-        "front": "juin",
+        "front": "جوان",
         "back": "juin",
-        "translit": "",
+        "translit": "djouane",
         "emoji": "☀️"
       },
       {
-        "front": "juillet",
+        "front": "جويلية",
         "back": "juillet",
-        "translit": "",
+        "translit": "djouillya",
         "emoji": "☀️"
       },
       {
-        "front": "août",
+        "front": "أوت",
         "back": "août",
-        "translit": "",
+        "translit": "aout",
         "emoji": "☀️"
       },
       {
-        "front": "septembre",
+        "front": "سبتمبر",
         "back": "septembre",
-        "translit": "",
+        "translit": "sibtambar",
         "emoji": "🍂"
       },
       {
-        "front": "octobre",
+        "front": "أكتوبر",
         "back": "octobre",
-        "translit": "",
+        "translit": "ouktoubар",
         "emoji": "🍂"
       },
       {
-        "front": "novembre",
+        "front": "نوفمبر",
         "back": "novembre",
-        "translit": "",
+        "translit": "noufambar",
         "emoji": "🍂"
       },
       {
-        "front": "décembre",
+        "front": "ديسمبر",
         "back": "décembre",
-        "translit": "",
+        "translit": "disambar",
         "emoji": "❄️"
       }
     ]
@@ -196,39 +196,39 @@ window.DECKS_DATA = [
     "category": "Verbes",
     "cards": [
       {
-        "front": "marcher",
+        "front": "مشي",
         "back": "marcher",
-        "translit": "",
+        "translit": "mashy",
         "emoji": "🚶"
       },
       {
-        "front": "courir",
+        "front": "جري",
         "back": "courir",
-        "translit": "",
+        "translit": "jari",
         "emoji": "🏃"
       },
       {
-        "front": "sauter",
+        "front": "قفز",
         "back": "sauter",
-        "translit": "",
+        "translit": "qafz",
         "emoji": "🦘"
       },
       {
-        "front": "danser",
+        "front": "رقص",
         "back": "danser",
-        "translit": "",
+        "translit": "raqas",
         "emoji": "💃"
       },
       {
-        "front": "nager",
+        "front": "سباحة",
         "back": "nager",
-        "translit": "",
+        "translit": "sibaha",
         "emoji": "🏊"
       },
       {
-        "front": "tomber",
+        "front": "سقط",
         "back": "tomber",
-        "translit": "",
+        "translit": "saqat",
         "emoji": "⬇️"
       }
     ]
@@ -239,45 +239,45 @@ window.DECKS_DATA = [
     "category": "Temps",
     "cards": [
       {
-        "front": "lundi",
+        "front": "الاثنين",
         "back": "lundi",
-        "translit": "",
+        "translit": "al-ithnain",
         "emoji": "📅"
       },
       {
-        "front": "mardi",
+        "front": "الثلاثاء",
         "back": "mardi",
-        "translit": "",
+        "translit": "al-thoulathā",
         "emoji": "📅"
       },
       {
-        "front": "mercredi",
+        "front": "الأربعاء",
         "back": "mercredi",
-        "translit": "",
+        "translit": "al-arbi'ā",
         "emoji": "📅"
       },
       {
-        "front": "jeudi",
+        "front": "الخميس",
         "back": "jeudi",
-        "translit": "",
+        "translit": "al-khamis",
         "emoji": "📅"
       },
       {
-        "front": "vendredi",
+        "front": "الجمعة",
         "back": "vendredi",
-        "translit": "",
+        "translit": "al-djoumouaa",
         "emoji": "📅"
       },
       {
-        "front": "samedi",
+        "front": "السبت",
         "back": "samedi",
-        "translit": "",
+        "translit": "as-sabt",
         "emoji": "📅"
       },
       {
-        "front": "dimanche",
+        "front": "الأحد",
         "back": "dimanche",
-        "translit": "",
+        "translit": "al-ahad",
         "emoji": "📅"
       }
     ]
@@ -288,27 +288,27 @@ window.DECKS_DATA = [
     "category": "Temps",
     "cards": [
       {
-        "front": "le printemps",
+        "front": "الربيع",
         "back": "le printemps",
-        "translit": "",
+        "translit": "ar-rabi'",
         "emoji": "🌸"
       },
       {
-        "front": "l'été",
+        "front": "الصيف",
         "back": "l'été",
-        "translit": "",
+        "translit": "as-sayf",
         "emoji": "☀️"
       },
       {
-        "front": "l'automne",
+        "front": "الخريف",
         "back": "l'automne",
-        "translit": "",
+        "translit": "al kharif",
         "emoji": "🍂"
       },
       {
-        "front": "l'hiver",
+        "front": "الشتاء",
         "back": "l'hiver",
-        "translit": "",
+        "translit": "ach-chitāe",
         "emoji": "❄️"
       }
     ]
@@ -489,39 +489,39 @@ window.DECKS_DATA = [
     "category": "Météo",
     "cards": [
       {
-        "front": "le soleil",
+        "front": "الشمس",
         "back": "le soleil",
-        "translit": "",
+        "translit": "ach-chams",
         "emoji": "☀️"
       },
       {
-        "front": "les nuages",
+        "front": "الغيوم",
         "back": "les nuages",
-        "translit": "",
+        "translit": "al ghouyoûm",
         "emoji": "☁️"
       },
       {
-        "front": "la pluie",
+        "front": "المطر",
         "back": "la pluie",
-        "translit": "",
+        "translit": "al matar",
         "emoji": "🌧️"
       },
       {
-        "front": "l'orage",
+        "front": "العاصفة",
         "back": "l'orage",
-        "translit": "",
+        "translit": "al aasifa",
         "emoji": "⛈️"
       },
       {
-        "front": "la neige",
+        "front": "الثلج",
         "back": "la neige",
-        "translit": "",
+        "translit": "ath-thaldj",
         "emoji": "❄️"
       },
       {
-        "front": "le brouillard",
+        "front": "الضباب",
         "back": "le brouillard",
-        "translit": "",
+        "translit": "adh-dhababh",
         "emoji": "🌫️"
       }
     ]
@@ -568,9 +568,9 @@ window.DECKS_DATA = [
         "emoji": "🔷"
       },
       {
-        "front": "ovale",
+        "front": "بيضاوي",
         "back": "ovale",
-        "translit": "",
+        "translit": "baydāwī",
         "emoji": "⬭"
       },
       {
@@ -587,39 +587,39 @@ window.DECKS_DATA = [
     "category": "Culturel",
     "cards": [
       {
-        "front": "l'anniversaire",
+        "front": "عيد الميلاد",
         "back": "l'anniversaire",
-        "translit": "",
+        "translit": "Aid al-milād",
         "emoji": "🎂"
       },
       {
-        "front": "la Chandeleur",
+        "front": "عيد الشموع",
         "back": "la Chandeleur",
-        "translit": "",
+        "translit": "Aid al-choumou'",
         "emoji": "🕯️"
       },
       {
-        "front": "le carnaval",
+        "front": "كرنافال",
         "back": "le carnaval",
-        "translit": "",
+        "translit": "karnāfāl",
         "emoji": "🎭"
       },
       {
-        "front": "la Aachoura",
+        "front": "العاشوراء",
         "back": "la Aachoura",
-        "translit": "",
+        "translit": "Al aachourae",
         "emoji": "🌙"
       },
       {
-        "front": "Ramadan",
+        "front": "رمضان",
         "back": "Ramadan",
-        "translit": "",
+        "translit": "Ramadhane",
         "emoji": "🌙"
       },
       {
-        "front": "l'Aïd al-Fitr",
+        "front": "عيد الفطر",
         "back": "l'Aïd al-Fitr",
-        "translit": "",
+        "translit": "Aid al-fitre",
         "emoji": "🎉"
       }
     ]
