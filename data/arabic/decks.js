@@ -1,5 +1,5 @@
-// Auto-generated decks - 2026-03-01T14:10:03.076302
-window.DECKS_VERSION = '2026-03-01T14:10:03.076302';
+// Auto-generated decks - 2026-03-01T14:13:13.167816
+window.DECKS_VERSION = '2026-03-01T14:13:13.167816';
 window.DECKS_DATA = [
   {
     "id": "les-animaux-de-la-montagne",
@@ -84,6 +84,42 @@ window.DECKS_DATA = [
         "back": "le requin",
         "translit": "al-qirsh",
         "emoji": "🦈"
+      },
+      {
+        "front": "فرس البحر",
+        "back": "l'hippocampe",
+        "translit": "faras al-bahr",
+        "emoji": "🐴"
+      },
+      {
+        "front": "ثعبان البحر",
+        "back": "l'anguille",
+        "translit": "thou'bān al-bahr",
+        "emoji": "🐍"
+      },
+      {
+        "front": "سمك السيف",
+        "back": "l'espadon",
+        "translit": "samak as-sayf",
+        "emoji": "🐟"
+      },
+      {
+        "front": "الراية",
+        "back": "la raie",
+        "translit": "ar-rāya",
+        "emoji": "🦈"
+      },
+      {
+        "front": "حوت العنبر",
+        "back": "le cachalot",
+        "translit": "hout al-'anbar",
+        "emoji": "🐋"
+      },
+      {
+        "front": "الأوركا",
+        "back": "l'orque",
+        "translit": "al-ourka",
+        "emoji": "🐋"
       }
     ]
   },
@@ -132,9 +168,82 @@ window.DECKS_DATA = [
   },
   {
     "id": "les-insectes",
-    "name": "Les Insectes",
-    "category": "Les Animaux",
-    "cards": []
+    "name": "Les insectes",
+    "category": "Les animaux",
+    "cards": [
+      {
+        "front": "النملة",
+        "back": "la fourmi",
+        "translit": "an-namla",
+        "emoji": "🐜"
+      },
+      {
+        "front": "الذبابة",
+        "back": "la mouche",
+        "translit": "adh-dhubāba",
+        "emoji": "🪰"
+      },
+      {
+        "front": "البعوضة",
+        "back": "le moustique",
+        "translit": "al-ba'oûda",
+        "emoji": "🦟"
+      },
+      {
+        "front": "الجرادة",
+        "back": "la sauterelle",
+        "translit": "al-djarāda",
+        "emoji": "🦗"
+      },
+      {
+        "front": "دعسوقة",
+        "back": "la coccinelle",
+        "translit": "ad-da'soûqa",
+        "emoji": "🐞"
+      },
+      {
+        "front": "الفراشة",
+        "back": "le papillon",
+        "translit": "al-faracha",
+        "emoji": "🦋"
+      },
+      {
+        "front": "النحلة",
+        "back": "l'abeille",
+        "translit": "an-nahla",
+        "emoji": "🐝"
+      },
+      {
+        "front": "الزنبور",
+        "back": "la guêpe",
+        "translit": "az-zounbour",
+        "emoji": "🐝"
+      },
+      {
+        "front": "الخنفساء",
+        "back": "le scarabée",
+        "translit": "al-khounfusāe",
+        "emoji": "🪲"
+      },
+      {
+        "front": "البقة",
+        "back": "la punaise",
+        "translit": "al-baqqa",
+        "emoji": "🐛"
+      },
+      {
+        "front": "الجرادة",
+        "back": "le criquet",
+        "translit": "al-djarāda",
+        "emoji": "🦗"
+      },
+      {
+        "front": "العنكبوت",
+        "back": "l'araignée",
+        "translit": "al-'ankabout",
+        "emoji": "🕷️"
+      }
+    ]
   },
   {
     "id": "les-animaux-du-bord-de-mer",
@@ -224,9 +333,46 @@ window.DECKS_DATA = [
   },
   {
     "id": "les-cris-des-animaux",
-    "name": "Les Cris Des Animaux",
-    "category": "Les Animaux",
-    "cards": []
+    "name": "Les cris des animaux",
+    "category": "Les animaux",
+    "cards": [
+      {
+        "front": "هوهو",
+        "back": "« Ouaf! »",
+        "translit": "haw haw",
+        "emoji": "🐕"
+      },
+      {
+        "front": "مياو",
+        "back": "« Miaou! »",
+        "translit": "miyāw",
+        "emoji": "🐱"
+      },
+      {
+        "front": "موه",
+        "back": "« Meuh! »",
+        "translit": "moûh",
+        "emoji": "🐄"
+      },
+      {
+        "front": "بالاء",
+        "back": "« Bêê! »",
+        "translit": "bāaa'",
+        "emoji": "🐑"
+      },
+      {
+        "front": "كواق",
+        "back": "« Coâ! »",
+        "translit": "qouwāq",
+        "emoji": "🐸"
+      },
+      {
+        "front": "كوت كوت",
+        "back": "« Cot cot! »",
+        "translit": "kout kout",
+        "emoji": "🐔"
+      }
+    ]
   },
   {
     "id": "les-animaux-de-la-banquise",
@@ -316,15 +462,89 @@ window.DECKS_DATA = [
   },
   {
     "id": "les-oiseaux",
-    "name": "Les Oiseaux",
-    "category": "Les Animaux",
-    "cards": []
+    "name": "Les oiseaux",
+    "category": "Les animaux",
+    "cards": [
+      {
+        "front": "العصفور",
+        "back": "le moineau",
+        "translit": "al-'osfour",
+        "emoji": "🐦"
+      },
+      {
+        "front": "الحمامة",
+        "back": "le pigeon",
+        "translit": "al-hamāma",
+        "emoji": "🕊️"
+      },
+      {
+        "front": "البومة",
+        "back": "la chouette",
+        "translit": "al-boûma",
+        "emoji": "🦉"
+      },
+      {
+        "front": "الصقر",
+        "back": "le faucon",
+        "translit": "as-saqr",
+        "emoji": "🦅"
+      },
+      {
+        "front": "مالك الحزين",
+        "back": "le héron",
+        "translit": "mālik al-hazīn",
+        "emoji": "🦆"
+      },
+      {
+        "front": "البجعة",
+        "back": "le cygne",
+        "translit": "al-badja'a",
+        "emoji": "🦢"
+      }
+    ]
   },
   {
     "id": "les-animaux-de-la-jungle",
-    "name": "Les Animaux De La Jungle",
-    "category": "Les Animaux",
-    "cards": []
+    "name": "Les animaux de la jungle",
+    "category": "Les animaux",
+    "cards": [
+      {
+        "front": "الببغاء",
+        "back": "le perroquet",
+        "translit": "al-babaghae",
+        "emoji": "🦜"
+      },
+      {
+        "front": "القرد",
+        "back": "le singe",
+        "translit": "al-qird",
+        "emoji": "🐵"
+      },
+      {
+        "front": "النمر",
+        "back": "le tigre",
+        "translit": "an-namir",
+        "emoji": "🐯"
+      },
+      {
+        "front": "الباندا",
+        "back": "le panda",
+        "translit": "al-bāndā",
+        "emoji": "🐼"
+      },
+      {
+        "front": "التمساح",
+        "back": "le crocodile",
+        "translit": "at-timsāh",
+        "emoji": "🐊"
+      },
+      {
+        "front": "الحرباء",
+        "back": "le caméléon",
+        "translit": "al-hirbāe",
+        "emoji": "🦎"
+      }
+    ]
   },
   {
     "id": "les-animaux-de-la-ferme",
@@ -438,9 +658,46 @@ window.DECKS_DATA = [
   },
   {
     "id": "les-animaux-de-la-savane",
-    "name": "Les Animaux De La Savane",
-    "category": "Les Animaux",
-    "cards": []
+    "name": "Les animaux de la savane",
+    "category": "Les animaux",
+    "cards": [
+      {
+        "front": "الأسد",
+        "back": "le lion",
+        "translit": "al-asad",
+        "emoji": "🦁"
+      },
+      {
+        "front": "الزرافة",
+        "back": "la girafe",
+        "translit": "az-zarāfa",
+        "emoji": "🦒"
+      },
+      {
+        "front": "وحيد القرن",
+        "back": "le rhinocéros",
+        "translit": "wahid al-qarn",
+        "emoji": "🦏"
+      },
+      {
+        "front": "الفيل",
+        "back": "l'éléphant",
+        "translit": "al-fīl",
+        "emoji": "🐘"
+      },
+      {
+        "front": "الغزالة",
+        "back": "la gazelle",
+        "translit": "al-ghazāla",
+        "emoji": "🦌"
+      },
+      {
+        "front": "حمار وحشي",
+        "back": "le zèbre",
+        "translit": "himār wahshi",
+        "emoji": "🦓"
+      }
+    ]
   },
   {
     "id": "le-visage",
@@ -4332,9 +4589,82 @@ window.DECKS_DATA = [
   },
   {
     "id": "l-espace",
-    "name": "L Espace",
-    "category": "Le Monde",
-    "cards": []
+    "name": "L'espace",
+    "category": "Le monde",
+    "cards": [
+      {
+        "front": "الكوكب",
+        "back": "la planète",
+        "translit": "al-kawkab",
+        "emoji": "🪐"
+      },
+      {
+        "front": "الأرض",
+        "back": "la Terre",
+        "translit": "al-ardh",
+        "emoji": "🌍"
+      },
+      {
+        "front": "القمر",
+        "back": "la Lune",
+        "translit": "al-qamar",
+        "emoji": "🌙"
+      },
+      {
+        "front": "النجوم",
+        "back": "les étoiles",
+        "translit": "an-noudjoûm",
+        "emoji": "⭐"
+      },
+      {
+        "front": "الشهاب",
+        "back": "l'étoile filante",
+        "translit": "ach-chihab",
+        "emoji": "💫"
+      },
+      {
+        "front": "النيزك",
+        "back": "la météorite",
+        "translit": "an-nayzak",
+        "emoji": "☄️"
+      },
+      {
+        "front": "رائد الفضاء",
+        "back": "l'astronaute",
+        "translit": "rāid al-fadāe",
+        "emoji": "👨‍🚀"
+      },
+      {
+        "front": "انعدام الجاذبية",
+        "back": "l'apesanteur",
+        "translit": "in'idām al-jādhībiyya",
+        "emoji": "⚖️"
+      },
+      {
+        "front": "الصاروخ",
+        "back": "la fusée",
+        "translit": "as-sāroûkh",
+        "emoji": "🚀"
+      },
+      {
+        "front": "سفينة فضائية",
+        "back": "la navette spatiale",
+        "translit": "safina fadāiyya",
+        "emoji": "🚀"
+      },
+      {
+        "front": "محطة فضائية",
+        "back": "la station spatiale",
+        "translit": "mahatta fadāiyya",
+        "emoji": "🛰️"
+      },
+      {
+        "front": "قمر صناعي",
+        "back": "le satellite",
+        "translit": "qamar sinā'ī",
+        "emoji": "🛰️"
+      }
+    ]
   },
   {
     "id": "couleurs",

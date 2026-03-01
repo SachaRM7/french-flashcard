@@ -1,6 +1,14 @@
 {
   "id": "les-animaux-de-la-savane",
-  "name": "Les Animaux De La Savane",
-  "category": "Les Animaux",
-  "cards": []
+  "name": "Les animaux de la savane",
+  "nameAr": "حيوانات السافانا",
+  "category": "Les animaux",
+  "cards": [
+    { "fr": "le lion", "en": "lion", "ar": "الأسد", "ar_translit": "al-asad", "emoji": "🦁" },
+    { "fr": "la girafe", "en": "giraffe", "ar": "الزرافة", "ar_translit": "az-zarāfa", "emoji": "🦒" },
+    { "fr": "le rhinocéros", "en": "rhinoceros", "ar": "وحيد القرن", "ar_translit": "wahid al-qarn", "emoji": "🦏" },
+    { "fr": "l'éléphant", "en": "elephant", "ar": "الفيل", "ar_translit": "al-fīl", "emoji": "🐘" },
+    { "fr": "la gazelle", "en": "gazelle", "ar": "الغزالة", "ar_translit": "al-ghazāla", "emoji": "🦌" },
+    { "fr": "le zèbre", "en": "zebra", "ar": "حمار وحشي", "ar_translit": "himār wahshi", "emoji": "🦓" }
+  ]
 }

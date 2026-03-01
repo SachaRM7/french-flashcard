@@ -1,6 +1,20 @@
 {
   "id": "les-insectes",
-  "name": "Les Insectes",
-  "category": "Les Animaux",
-  "cards": []
+  "name": "Les insectes",
+  "nameAr": "الحشرات",
+  "category": "Les animaux",
+  "cards": [
+    { "fr": "la fourmi", "en": "ant", "ar": "النملة", "ar_translit": "an-namla", "emoji": "🐜" },
+    { "fr": "la mouche", "en": "fly", "ar": "الذبابة", "ar_translit": "adh-dhubāba", "emoji": "🪰" },
+    { "fr": "le moustique", "en": "mosquito", "ar": "البعوضة", "ar_translit": "al-ba'oûda", "emoji": "🦟" },
+    { "fr": "la sauterelle", "en": "grasshopper", "ar": "الجرادة", "ar_translit": "al-djarāda", "emoji": "🦗" },
+    { "fr": "la coccinelle", "en": "ladybug", "ar": "دعسوقة", "ar_translit": "ad-da'soûqa", "emoji": "🐞" },
+    { "fr": "le papillon", "en": "butterfly", "ar": "الفراشة", "ar_translit": "al-faracha", "emoji": "🦋" },
+    { "fr": "l'abeille", "en": "bee", "ar": "النحلة", "ar_translit": "an-nahla", "emoji": "🐝" },
+    { "fr": "la guêpe", "en": "wasp", "ar": "الزنبور", "ar_translit": "az-zounbour", "emoji": "🐝" },
+    { "fr": "le scarabée", "en": "beetle", "ar": "الخنفساء", "ar_translit": "al-khounfusāe", "emoji": "🪲" },
+    { "fr": "la punaise", "en": "bug/stink bug", "ar": "البقة", "ar_translit": "al-baqqa", "emoji": "🐛" },
+    { "fr": "le criquet", "en": "cricket", "ar": "الجرادة", "ar_translit": "al-djarāda", "emoji": "🦗" },
+    { "fr": "l'araignée", "en": "spider", "ar": "العنكبوت", "ar_translit": "al-'ankabout", "emoji": "🕷️" }
+  ]
 }

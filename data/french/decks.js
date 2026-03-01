@@ -1,5 +1,5 @@
-// Auto-generated decks - 2026-03-01T14:10:03.076302
-window.DECKS_VERSION = '2026-03-01T14:10:03.076302';
+// Auto-generated decks - 2026-03-01T14:13:13.167816
+window.DECKS_VERSION = '2026-03-01T14:13:13.167816';
 window.DECKS_DATA = [
   {
     "id": "les-animaux-de-la-montagne",
@@ -72,6 +72,36 @@ window.DECKS_DATA = [
         "front": "shark",
         "back": "le requin",
         "emoji": "🦈"
+      },
+      {
+        "front": "seahorse",
+        "back": "l'hippocampe",
+        "emoji": "🐴"
+      },
+      {
+        "front": "eel",
+        "back": "l'anguille",
+        "emoji": "🐍"
+      },
+      {
+        "front": "swordfish",
+        "back": "l'espadon",
+        "emoji": "🐟"
+      },
+      {
+        "front": "stingray",
+        "back": "la raie",
+        "emoji": "🦈"
+      },
+      {
+        "front": "sperm whale",
+        "back": "le cachalot",
+        "emoji": "🐋"
+      },
+      {
+        "front": "orca/killer whale",
+        "back": "l'orque",
+        "emoji": "🐋"
       }
     ]
   },
@@ -114,9 +144,70 @@ window.DECKS_DATA = [
   },
   {
     "id": "les-insectes",
-    "name": "Les Insectes",
-    "category": "Les Animaux",
-    "cards": []
+    "name": "Les insectes",
+    "category": "Les animaux",
+    "cards": [
+      {
+        "front": "ant",
+        "back": "la fourmi",
+        "emoji": "🐜"
+      },
+      {
+        "front": "fly",
+        "back": "la mouche",
+        "emoji": "🪰"
+      },
+      {
+        "front": "mosquito",
+        "back": "le moustique",
+        "emoji": "🦟"
+      },
+      {
+        "front": "grasshopper",
+        "back": "la sauterelle",
+        "emoji": "🦗"
+      },
+      {
+        "front": "ladybug",
+        "back": "la coccinelle",
+        "emoji": "🐞"
+      },
+      {
+        "front": "butterfly",
+        "back": "le papillon",
+        "emoji": "🦋"
+      },
+      {
+        "front": "bee",
+        "back": "l'abeille",
+        "emoji": "🐝"
+      },
+      {
+        "front": "wasp",
+        "back": "la guêpe",
+        "emoji": "🐝"
+      },
+      {
+        "front": "beetle",
+        "back": "le scarabée",
+        "emoji": "🪲"
+      },
+      {
+        "front": "bug/stink bug",
+        "back": "la punaise",
+        "emoji": "🐛"
+      },
+      {
+        "front": "cricket",
+        "back": "le criquet",
+        "emoji": "🦗"
+      },
+      {
+        "front": "spider",
+        "back": "l'araignée",
+        "emoji": "🕷️"
+      }
+    ]
   },
   {
     "id": "les-animaux-du-bord-de-mer",
@@ -194,9 +285,40 @@ window.DECKS_DATA = [
   },
   {
     "id": "les-cris-des-animaux",
-    "name": "Les Cris Des Animaux",
-    "category": "Les Animaux",
-    "cards": []
+    "name": "Les cris des animaux",
+    "category": "Les animaux",
+    "cards": [
+      {
+        "front": "Woof!",
+        "back": "« Ouaf! »",
+        "emoji": "🐕"
+      },
+      {
+        "front": "Meow!",
+        "back": "« Miaou! »",
+        "emoji": "🐱"
+      },
+      {
+        "front": "Moo!",
+        "back": "« Meuh! »",
+        "emoji": "🐄"
+      },
+      {
+        "front": "Baa!",
+        "back": "« Bêê! »",
+        "emoji": "🐑"
+      },
+      {
+        "front": "Croak!",
+        "back": "« Coâ! »",
+        "emoji": "🐸"
+      },
+      {
+        "front": "Cluck!",
+        "back": "« Cot cot! »",
+        "emoji": "🐔"
+      }
+    ]
   },
   {
     "id": "les-animaux-de-la-banquise",
@@ -274,15 +396,77 @@ window.DECKS_DATA = [
   },
   {
     "id": "les-oiseaux",
-    "name": "Les Oiseaux",
-    "category": "Les Animaux",
-    "cards": []
+    "name": "Les oiseaux",
+    "category": "Les animaux",
+    "cards": [
+      {
+        "front": "sparrow",
+        "back": "le moineau",
+        "emoji": "🐦"
+      },
+      {
+        "front": "pigeon",
+        "back": "le pigeon",
+        "emoji": "🕊️"
+      },
+      {
+        "front": "owl",
+        "back": "la chouette",
+        "emoji": "🦉"
+      },
+      {
+        "front": "falcon",
+        "back": "le faucon",
+        "emoji": "🦅"
+      },
+      {
+        "front": "heron",
+        "back": "le héron",
+        "emoji": "🦆"
+      },
+      {
+        "front": "swan",
+        "back": "le cygne",
+        "emoji": "🦢"
+      }
+    ]
   },
   {
     "id": "les-animaux-de-la-jungle",
-    "name": "Les Animaux De La Jungle",
-    "category": "Les Animaux",
-    "cards": []
+    "name": "Les animaux de la jungle",
+    "category": "Les animaux",
+    "cards": [
+      {
+        "front": "parrot",
+        "back": "le perroquet",
+        "emoji": "🦜"
+      },
+      {
+        "front": "monkey",
+        "back": "le singe",
+        "emoji": "🐵"
+      },
+      {
+        "front": "tiger",
+        "back": "le tigre",
+        "emoji": "🐯"
+      },
+      {
+        "front": "panda",
+        "back": "le panda",
+        "emoji": "🐼"
+      },
+      {
+        "front": "crocodile",
+        "back": "le crocodile",
+        "emoji": "🐊"
+      },
+      {
+        "front": "chameleon",
+        "back": "le caméléon",
+        "emoji": "🦎"
+      }
+    ]
   },
   {
     "id": "les-animaux-de-la-ferme",
@@ -380,9 +564,40 @@ window.DECKS_DATA = [
   },
   {
     "id": "les-animaux-de-la-savane",
-    "name": "Les Animaux De La Savane",
-    "category": "Les Animaux",
-    "cards": []
+    "name": "Les animaux de la savane",
+    "category": "Les animaux",
+    "cards": [
+      {
+        "front": "lion",
+        "back": "le lion",
+        "emoji": "🦁"
+      },
+      {
+        "front": "giraffe",
+        "back": "la girafe",
+        "emoji": "🦒"
+      },
+      {
+        "front": "rhinoceros",
+        "back": "le rhinocéros",
+        "emoji": "🦏"
+      },
+      {
+        "front": "elephant",
+        "back": "l'éléphant",
+        "emoji": "🐘"
+      },
+      {
+        "front": "gazelle",
+        "back": "la gazelle",
+        "emoji": "🦌"
+      },
+      {
+        "front": "zebra",
+        "back": "le zèbre",
+        "emoji": "🦓"
+      }
+    ]
   },
   {
     "id": "le-visage",
@@ -3705,9 +3920,70 @@ window.DECKS_DATA = [
   },
   {
     "id": "l-espace",
-    "name": "L Espace",
-    "category": "Le Monde",
-    "cards": []
+    "name": "L'espace",
+    "category": "Le monde",
+    "cards": [
+      {
+        "front": "planet",
+        "back": "la planète",
+        "emoji": "🪐"
+      },
+      {
+        "front": "Earth",
+        "back": "la Terre",
+        "emoji": "🌍"
+      },
+      {
+        "front": "Moon",
+        "back": "la Lune",
+        "emoji": "🌙"
+      },
+      {
+        "front": "stars",
+        "back": "les étoiles",
+        "emoji": "⭐"
+      },
+      {
+        "front": "shooting star",
+        "back": "l'étoile filante",
+        "emoji": "💫"
+      },
+      {
+        "front": "meteorite",
+        "back": "la météorite",
+        "emoji": "☄️"
+      },
+      {
+        "front": "astronaut",
+        "back": "l'astronaute",
+        "emoji": "👨‍🚀"
+      },
+      {
+        "front": "weightlessness",
+        "back": "l'apesanteur",
+        "emoji": "⚖️"
+      },
+      {
+        "front": "rocket",
+        "back": "la fusée",
+        "emoji": "🚀"
+      },
+      {
+        "front": "space shuttle",
+        "back": "la navette spatiale",
+        "emoji": "🚀"
+      },
+      {
+        "front": "space station",
+        "back": "la station spatiale",
+        "emoji": "🛰️"
+      },
+      {
+        "front": "satellite",
+        "back": "le satellite",
+        "emoji": "🛰️"
+      }
+    ]
   },
   {
     "id": "couleurs",

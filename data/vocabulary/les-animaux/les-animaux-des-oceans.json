@@ -9,6 +9,12 @@
     { "fr": "la méduse", "en": "jellyfish", "ar": "قنديل البحر", "ar_translit": "qandīl al-bahr", "emoji": "🪼" },
     { "fr": "la pieuvre", "en": "octopus", "ar": "الأخطبوط", "ar_translit": "al-oukhtobout", "emoji": "🐙" },
     { "fr": "la baleine", "en": "whale", "ar": "الحوت", "ar_translit": "al-hout", "emoji": "🐋" },
-    { "fr": "le requin", "en": "shark", "ar": "الفرش", "ar_translit": "al-qirsh", "emoji": "🦈" }
+    { "fr": "le requin", "en": "shark", "ar": "الفرش", "ar_translit": "al-qirsh", "emoji": "🦈" },
+    { "fr": "l'hippocampe", "en": "seahorse", "ar": "فرس البحر", "ar_translit": "faras al-bahr", "emoji": "🐴" },
+    { "fr": "l'anguille", "en": "eel", "ar": "ثعبان البحر", "ar_translit": "thou'bān al-bahr", "emoji": "🐍" },
+    { "fr": "l'espadon", "en": "swordfish", "ar": "سمك السيف", "ar_translit": "samak as-sayf", "emoji": "🐟" },
+    { "fr": "la raie", "en": "stingray", "ar": "الراية", "ar_translit": "ar-rāya", "emoji": "🦈" },
+    { "fr": "le cachalot", "en": "sperm whale", "ar": "حوت العنبر", "ar_translit": "hout al-'anbar", "emoji": "🐋" },
+    { "fr": "l'orque", "en": "orca/killer whale", "ar": "الأوركا", "ar_translit": "al-ourka", "emoji": "🐋" }
   ]
 }

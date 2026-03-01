@@ -1,6 +1,20 @@
 {
   "id": "l-espace",
-  "name": "L Espace",
-  "category": "Le Monde",
-  "cards": []
+  "name": "L'espace",
+  "nameAr": "الفضاء",
+  "category": "Le monde",
+  "cards": [
+    { "fr": "la planète", "en": "planet", "ar": "الكوكب", "ar_translit": "al-kawkab", "emoji": "🪐" },
+    { "fr": "la Terre", "en": "Earth", "ar": "الأرض", "ar_translit": "al-ardh", "emoji": "🌍" },
+    { "fr": "la Lune", "en": "Moon", "ar": "القمر", "ar_translit": "al-qamar", "emoji": "🌙" },
+    { "fr": "les étoiles", "en": "stars", "ar": "النجوم", "ar_translit": "an-noudjoûm", "emoji": "⭐" },
+    { "fr": "l'étoile filante", "en": "shooting star", "ar": "الشهاب", "ar_translit": "ach-chihab", "emoji": "💫" },
+    { "fr": "la météorite", "en": "meteorite", "ar": "النيزك", "ar_translit": "an-nayzak", "emoji": "☄️" },
+    { "fr": "l'astronaute", "en": "astronaut", "ar": "رائد الفضاء", "ar_translit": "rāid al-fadāe", "emoji": "👨‍🚀" },
+    { "fr": "l'apesanteur", "en": "weightlessness", "ar": "انعدام الجاذبية", "ar_translit": "in'idām al-jādhībiyya", "emoji": "⚖️" },
+    { "fr": "la fusée", "en": "rocket", "ar": "الصاروخ", "ar_translit": "as-sāroûkh", "emoji": "🚀" },
+    { "fr": "la navette spatiale", "en": "space shuttle", "ar": "سفينة فضائية", "ar_translit": "safina fadāiyya", "emoji": "🚀" },
+    { "fr": "la station spatiale", "en": "space station", "ar": "محطة فضائية", "ar_translit": "mahatta fadāiyya", "emoji": "🛰️" },
+    { "fr": "le satellite", "en": "satellite", "ar": "قمر صناعي", "ar_translit": "qamar sinā'ī", "emoji": "🛰️" }
+  ]
 }

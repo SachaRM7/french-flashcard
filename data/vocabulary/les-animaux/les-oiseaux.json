@@ -1,6 +1,14 @@
 {
   "id": "les-oiseaux",
-  "name": "Les Oiseaux",
-  "category": "Les Animaux",
-  "cards": []
+  "name": "Les oiseaux",
+  "nameAr": "الطيور",
+  "category": "Les animaux",
+  "cards": [
+    { "fr": "le moineau", "en": "sparrow", "ar": "العصفور", "ar_translit": "al-'osfour", "emoji": "🐦" },
+    { "fr": "le pigeon", "en": "pigeon", "ar": "الحمامة", "ar_translit": "al-hamāma", "emoji": "🕊️" },
+    { "fr": "la chouette", "en": "owl", "ar": "البومة", "ar_translit": "al-boûma", "emoji": "🦉" },
+    { "fr": "le faucon", "en": "falcon", "ar": "الصقر", "ar_translit": "as-saqr", "emoji": "🦅" },
+    { "fr": "le héron", "en": "heron", "ar": "مالك الحزين", "ar_translit": "mālik al-hazīn", "emoji": "🦆" },
+    { "fr": "le cygne", "en": "swan", "ar": "البجعة", "ar_translit": "al-badja'a", "emoji": "🦢" }
+  ]
 }

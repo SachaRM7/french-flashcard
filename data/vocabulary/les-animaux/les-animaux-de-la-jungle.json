@@ -1,6 +1,14 @@
 {
   "id": "les-animaux-de-la-jungle",
-  "name": "Les Animaux De La Jungle",
-  "category": "Les Animaux",
-  "cards": []
+  "name": "Les animaux de la jungle",
+  "nameAr": "حيوانات الغابة الاستوائية",
+  "category": "Les animaux",
+  "cards": [
+    { "fr": "le perroquet", "en": "parrot", "ar": "الببغاء", "ar_translit": "al-babaghae", "emoji": "🦜" },
+    { "fr": "le singe", "en": "monkey", "ar": "القرد", "ar_translit": "al-qird", "emoji": "🐵" },
+    { "fr": "le tigre", "en": "tiger", "ar": "النمر", "ar_translit": "an-namir", "emoji": "🐯" },
+    { "fr": "le panda", "en": "panda", "ar": "الباندا", "ar_translit": "al-bāndā", "emoji": "🐼" },
+    { "fr": "le crocodile", "en": "crocodile", "ar": "التمساح", "ar_translit": "at-timsāh", "emoji": "🐊" },
+    { "fr": "le caméléon", "en": "chameleon", "ar": "الحرباء", "ar_translit": "al-hirbāe", "emoji": "🦎" }
+  ]
 }

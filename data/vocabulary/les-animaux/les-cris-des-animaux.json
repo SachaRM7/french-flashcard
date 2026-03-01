@@ -1,6 +1,14 @@
 {
   "id": "les-cris-des-animaux",
-  "name": "Les Cris Des Animaux",
-  "category": "Les Animaux",
-  "cards": []
+  "name": "Les cris des animaux",
+  "nameAr": "أصوات الحيوانات",
+  "category": "Les animaux",
+  "cards": [
+    { "fr": "« Ouaf! »", "en": "Woof!", "ar": "هوهو", "ar_translit": "haw haw", "emoji": "🐕" },
+    { "fr": "« Miaou! »", "en": "Meow!", "ar": "مياو", "ar_translit": "miyāw", "emoji": "🐱" },
+    { "fr": "« Meuh! »", "en": "Moo!", "ar": "موه", "ar_translit": "moûh", "emoji": "🐄" },
+    { "fr": "« Bêê! »", "en": "Baa!", "ar": "بالاء", "ar_translit": "bāaa'", "emoji": "🐑" },
+    { "fr": "« Coâ! »", "en": "Croak!", "ar": "كواق", "ar_translit": "qouwāq", "emoji": "🐸" },
+    { "fr": "« Cot cot! »", "en": "Cluck!", "ar": "كوت كوت", "ar_translit": "kout kout", "emoji": "🐔" }
+  ]
 }
