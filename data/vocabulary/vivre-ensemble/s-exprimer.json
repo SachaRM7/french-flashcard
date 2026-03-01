@@ -1,6 +1,14 @@
 {
   "id": "s-exprimer",
-  "name": "S Exprimer",
-  "category": "Vivre Ensemble",
-  "cards": []
+  "name": "S'exprimer",
+  "nameAr": "التعبير",
+  "category": "Vivre ensemble",
+  "cards": [
+    { "fr": "parler", "en": "to talk", "ar": "يتكلم", "ar_translit": "yatakallam", "emoji": "💬" },
+    { "fr": "crier", "en": "to shout", "ar": "يصرخ", "ar_translit": "yasroukh", "emoji": "📢" },
+    { "fr": "lire", "en": "to read", "ar": "يقرأ", "ar_translit": "yaqra", "emoji": "📖" },
+    { "fr": "écrire", "en": "to write", "ar": "يكتب", "ar_translit": "yaktoub", "emoji": "✏️" },
+    { "fr": "donner", "en": "to give", "ar": "يعطي", "ar_translit": "yaati", "emoji": "🎁" },
+    { "fr": "recevoir", "en": "to receive", "ar": "يأخذ", "ar_translit": "yaakhodh", "emoji": "📦" }
+  ]
 }

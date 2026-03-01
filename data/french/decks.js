@@ -1,5 +1,5 @@
-// Auto-generated decks - 2026-03-01T12:10:20.372994
-window.DECKS_VERSION = '2026-03-01T12:10:20.372994';
+// Auto-generated decks - 2026-03-01T12:16:31.385029
+window.DECKS_VERSION = '2026-03-01T12:16:31.385029';
 window.DECKS_DATA = [
   {
     "id": "les-animaux-de-la-montagne",
@@ -425,9 +425,40 @@ window.DECKS_DATA = [
   },
   {
     "id": "a-l-hopital",
-    "name": "A L Hopital",
-    "category": "Corps Humain",
-    "cards": []
+    "name": "À l'hôpital",
+    "category": "Corps humain",
+    "cards": [
+      {
+        "front": "maternity ward",
+        "back": "la maternité",
+        "emoji": "👶"
+      },
+      {
+        "front": "to be hospitalized",
+        "back": "être hospitalisé",
+        "emoji": "🏥"
+      },
+      {
+        "front": "operation",
+        "back": "l'opération",
+        "emoji": "🔪"
+      },
+      {
+        "front": "X-ray",
+        "back": "la radiographie",
+        "emoji": "📸"
+      },
+      {
+        "front": "waiting room",
+        "back": "la salle d'attente",
+        "emoji": "🪑"
+      },
+      {
+        "front": "ambulance",
+        "back": "l'ambulance",
+        "emoji": "🚑"
+      }
+    ]
   },
   {
     "id": "les-handicaps",
@@ -807,45 +838,307 @@ window.DECKS_DATA = [
   },
   {
     "id": "les-emotions",
-    "name": "Les Emotions",
-    "category": "Vivre Ensemble",
-    "cards": []
+    "name": "Les émotions",
+    "category": "Vivre ensemble",
+    "cards": [
+      {
+        "front": "to be happy",
+        "back": "être content / contente",
+        "emoji": "😊"
+      },
+      {
+        "front": "to laugh",
+        "back": "rire",
+        "emoji": "😂"
+      },
+      {
+        "front": "to love",
+        "back": "aimer",
+        "emoji": "❤️"
+      },
+      {
+        "front": "to be proud",
+        "back": "être fier / fière",
+        "emoji": "🦁"
+      },
+      {
+        "front": "to be sad",
+        "back": "être triste",
+        "emoji": "😢"
+      },
+      {
+        "front": "to cry",
+        "back": "pleurer",
+        "emoji": "😭"
+      },
+      {
+        "front": "to be afraid",
+        "back": "avoir peur",
+        "emoji": "😨"
+      },
+      {
+        "front": "to be jealous",
+        "back": "être jaloux / jalouse",
+        "emoji": "😠"
+      },
+      {
+        "front": "to be annoyed",
+        "back": "être énervé / énervée",
+        "emoji": "😡"
+      },
+      {
+        "front": "to pout",
+        "back": "bouder",
+        "emoji": "😒"
+      },
+      {
+        "front": "to be ashamed",
+        "back": "avoir honte",
+        "emoji": "😳"
+      },
+      {
+        "front": "to be intimidated",
+        "back": "être intimidé / intimidée",
+        "emoji": "😟"
+      }
+    ]
   },
   {
     "id": "s-exprimer",
-    "name": "S Exprimer",
-    "category": "Vivre Ensemble",
-    "cards": []
+    "name": "S'exprimer",
+    "category": "Vivre ensemble",
+    "cards": [
+      {
+        "front": "to talk",
+        "back": "parler",
+        "emoji": "💬"
+      },
+      {
+        "front": "to shout",
+        "back": "crier",
+        "emoji": "📢"
+      },
+      {
+        "front": "to read",
+        "back": "lire",
+        "emoji": "📖"
+      },
+      {
+        "front": "to write",
+        "back": "écrire",
+        "emoji": "✏️"
+      },
+      {
+        "front": "to give",
+        "back": "donner",
+        "emoji": "🎁"
+      },
+      {
+        "front": "to receive",
+        "back": "recevoir",
+        "emoji": "📦"
+      }
+    ]
   },
   {
     "id": "la-politesse",
-    "name": "La Politesse",
-    "category": "Vivre Ensemble",
-    "cards": []
+    "name": "La politesse",
+    "category": "Vivre ensemble",
+    "cards": [
+      {
+        "front": "Good morning",
+        "back": "« Bonjour ! »",
+        "emoji": "👋"
+      },
+      {
+        "front": "Good night",
+        "back": "« Bonne nuit. »",
+        "emoji": "🌙"
+      },
+      {
+        "front": "Please",
+        "back": "« S'il te plaît. »",
+        "emoji": "🙏"
+      },
+      {
+        "front": "Thank you",
+        "back": "« Merci. »",
+        "emoji": "🙏"
+      },
+      {
+        "front": "Sorry",
+        "back": "« Pardon. »",
+        "emoji": "😔"
+      },
+      {
+        "front": "Goodbye",
+        "back": "« Au revoir! »",
+        "emoji": "👋"
+      }
+    ]
   },
   {
     "id": "la-famille",
-    "name": "La Famille",
-    "category": "Vivre Ensemble",
-    "cards": []
+    "name": "La famille",
+    "category": "Vivre ensemble",
+    "cards": [
+      {
+        "front": "children",
+        "back": "les enfants",
+        "emoji": "👧👦"
+      },
+      {
+        "front": "parents",
+        "back": "les parents",
+        "emoji": "👨👩"
+      },
+      {
+        "front": "grandparents",
+        "back": "les grands-parents",
+        "emoji": "👴👵"
+      }
+    ]
   },
   {
     "id": "communiquer",
     "name": "Communiquer",
-    "category": "Vivre Ensemble",
-    "cards": []
+    "category": "Vivre ensemble",
+    "cards": [
+      {
+        "front": "mobile phone",
+        "back": "le téléphone portable",
+        "emoji": "📱"
+      },
+      {
+        "front": "computer",
+        "back": "l'ordinateur",
+        "emoji": "💻"
+      },
+      {
+        "front": "to write an email",
+        "back": "écrire un e-mail",
+        "emoji": "📧"
+      },
+      {
+        "front": "to receive an email",
+        "back": "recevoir un e-mail",
+        "emoji": "📧"
+      },
+      {
+        "front": "letter",
+        "back": "la lettre",
+        "emoji": "✉️"
+      },
+      {
+        "front": "mailbox",
+        "back": "la boîte aux lettres",
+        "emoji": "📮"
+      }
+    ]
   },
   {
     "id": "les-vetements",
-    "name": "Les Vetements",
-    "category": "S Habiller",
-    "cards": []
+    "name": "Les vêtements",
+    "category": "S'habiller",
+    "cards": [
+      {
+        "front": "slip/briefs",
+        "back": "le slip",
+        "emoji": "👙"
+      },
+      {
+        "front": "panties",
+        "back": "la culotte",
+        "emoji": "👙"
+      },
+      {
+        "front": "socks",
+        "back": "les chaussettes",
+        "emoji": "🧦"
+      },
+      {
+        "front": "tights",
+        "back": "les collants",
+        "emoji": "🧦"
+      },
+      {
+        "front": "pants",
+        "back": "le pantalon",
+        "emoji": "👖"
+      },
+      {
+        "front": "t-shirt",
+        "back": "le tee-shirt",
+        "emoji": "👕"
+      },
+      {
+        "front": "shirt",
+        "back": "la chemise",
+        "emoji": "👔"
+      },
+      {
+        "front": "sweater",
+        "back": "le pull",
+        "emoji": "🧶"
+      },
+      {
+        "front": "dress",
+        "back": "la robe",
+        "emoji": "👗"
+      },
+      {
+        "front": "skirt",
+        "back": "la jupe",
+        "emoji": "👗"
+      },
+      {
+        "front": "shoes",
+        "back": "les chaussures",
+        "emoji": "👟"
+      },
+      {
+        "front": "slippers",
+        "back": "les chaussons",
+        "emoji": "🥿"
+      }
+    ]
   },
   {
     "id": "il-fait-chaud",
-    "name": "Il Fait Chaud",
-    "category": "S Habiller",
-    "cards": []
+    "name": "Il fait chaud !",
+    "category": "S'habiller",
+    "cards": [
+      {
+        "front": "hat",
+        "back": "le chapeau",
+        "emoji": "🎩"
+      },
+      {
+        "front": "cap",
+        "back": "la casquette",
+        "emoji": "🧢"
+      },
+      {
+        "front": "tank top",
+        "back": "le débardeur",
+        "emoji": "🫀"
+      },
+      {
+        "front": "shorts",
+        "back": "le short",
+        "emoji": "🩳"
+      },
+      {
+        "front": "sunglasses",
+        "back": "les lunettes de soleil",
+        "emoji": "😎"
+      },
+      {
+        "front": "sandals",
+        "back": "les sandales",
+        "emoji": "👡"
+      }
+    ]
   },
   {
     "id": "il-fait-froid",

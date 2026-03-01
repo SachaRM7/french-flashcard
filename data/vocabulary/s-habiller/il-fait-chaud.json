@@ -1,6 +1,14 @@
 {
   "id": "il-fait-chaud",
-  "name": "Il Fait Chaud",
-  "category": "S Habiller",
-  "cards": []
+  "name": "Il fait chaud !",
+  "nameAr": "الجو حار!",
+  "category": "S'habiller",
+  "cards": [
+    { "fr": "le chapeau", "en": "hat", "ar": "القبعة", "ar_translit": "al-qoubba'a", "emoji": "🎩" },
+    { "fr": "la casquette", "en": "cap", "ar": "قبعة ذات حافة", "ar_translit": "qoubba'a dhāt hāfa", "emoji": "🧢" },
+    { "fr": "le débardeur", "en": "tank top", "ar": "قميص داخلي", "ar_translit": "qamis dākhili", "emoji": "🫀" },
+    { "fr": "le short", "en": "shorts", "ar": "سروال قصير", "ar_translit": "sirwāl qasir", "emoji": "🩳" },
+    { "fr": "les lunettes de soleil", "en": "sunglasses", "ar": "نظارات شمسية", "ar_translit": "nadhārāt shamssiya", "emoji": "😎" },
+    { "fr": "les sandales", "en": "sandals", "ar": "النعال", "ar_translit": "an-ni'āl", "emoji": "👡" }
+  ]
 }

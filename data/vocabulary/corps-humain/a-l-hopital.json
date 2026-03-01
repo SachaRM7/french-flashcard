@@ -1,6 +1,14 @@
 {
   "id": "a-l-hopital",
-  "name": "A L Hopital",
-  "category": "Corps Humain",
-  "cards": []
+  "name": "À l'hôpital",
+  "nameAr": "في المستشفى",
+  "category": "Corps humain",
+  "cards": [
+    { "fr": "la maternité", "en": "maternity ward", "ar": "قسم الولادة", "ar_translit": "qism al-wilāda", "emoji": "👶" },
+    { "fr": "être hospitalisé", "en": "to be hospitalized", "ar": "أدخل إلى المستشفى", "ar_translit": "oudkhila ilā al-moustachfā", "emoji": "🏥" },
+    { "fr": "l'opération", "en": "operation", "ar": "العملية", "ar_translit": "'amaliyya", "emoji": "🔪" },
+    { "fr": "la radiographie", "en": "X-ray", "ar": "تصوير بالأشعة", "ar_translit": "taswir bi-al-achia", "emoji": "📸" },
+    { "fr": "la salle d'attente", "en": "waiting room", "ar": "قاعة الانتظار", "ar_translit": "qā'at al-intidzhār", "emoji": "🪑" },
+    { "fr": "l'ambulance", "en": "ambulance", "ar": "سيارة الإسعاف", "ar_translit": "sayārat al-is'āf", "emoji": "🚑" }
+  ]
 }

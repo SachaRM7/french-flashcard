@@ -1,6 +1,20 @@
 {
   "id": "les-emotions",
-  "name": "Les Emotions",
-  "category": "Vivre Ensemble",
-  "cards": []
+  "name": "Les émotions",
+  "nameAr": "المشاعر",
+  "category": "Vivre ensemble",
+  "cards": [
+    { "fr": "être content / contente", "en": "to be happy", "ar": "سعيد / سعيدة", "ar_translit": "said / saida", "emoji": "😊" },
+    { "fr": "rire", "en": "to laugh", "ar": "الضحك", "ar_translit": "al-dhahik", "emoji": "😂" },
+    { "fr": "aimer", "en": "to love", "ar": "يحب", "ar_translit": "youhib", "emoji": "❤️" },
+    { "fr": "être fier / fière", "en": "to be proud", "ar": "فخور / فخورة", "ar_translit": "fakhoûr / fakhoûra", "emoji": "🦁" },
+    { "fr": "être triste", "en": "to be sad", "ar": "حزين / حزينة", "ar_translit": "hazin / hazina", "emoji": "😢" },
+    { "fr": "pleurer", "en": "to cry", "ar": "يبكي", "ar_translit": "yabki", "emoji": "😭" },
+    { "fr": "avoir peur", "en": "to be afraid", "ar": "خائف", "ar_translit": "khāf", "emoji": "😨" },
+    { "fr": "être jaloux / jalouse", "en": "to be jealous", "ar": "غيور / غيورة", "ar_translit": "ghayour / ghayoura", "emoji": "😠" },
+    { "fr": "être énervé / énervée", "en": "to be annoyed", "ar": "غاضب / غاضبة", "ar_translit": "ghadhib / ghadhiba", "emoji": "😡" },
+    { "fr": "bouder", "en": "to pout", "ar": "عبس", "ar_translit": "aabasa", "emoji": "😒" },
+    { "fr": "avoir honte", "en": "to be ashamed", "ar": "الشعور بالخجل", "ar_translit": "ash-shou'ûr bi-l-khajal", "emoji": "😳" },
+    { "fr": "être intimidé / intimidée", "en": "to be intimidated", "ar": "مجرج / مجرجة", "ar_translit": "mohradj / mohradja", "emoji": "😟" }
+  ]
 }

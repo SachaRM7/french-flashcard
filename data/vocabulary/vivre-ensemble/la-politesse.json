@@ -1,6 +1,14 @@
 {
   "id": "la-politesse",
-  "name": "La Politesse",
-  "category": "Vivre Ensemble",
-  "cards": []
+  "name": "La politesse",
+  "nameAr": "الأدب",
+  "category": "Vivre ensemble",
+  "cards": [
+    { "fr": "« Bonjour ! »", "en": "Good morning", "ar": "صباح الخير", "ar_translit": "sabāh al-khair", "emoji": "👋" },
+    { "fr": "« Bonne nuit. »", "en": "Good night", "ar": "ليلة سعيدة", "ar_translit": "layla saida", "emoji": "🌙" },
+    { "fr": "« S'il te plaît. »", "en": "Please", "ar": "من فضلك", "ar_translit": "min fadhlika", "emoji": "🙏" },
+    { "fr": "« Merci. »", "en": "Thank you", "ar": "شكرا", "ar_translit": "choukran", "emoji": "🙏" },
+    { "fr": "« Pardon. »", "en": "Sorry", "ar": "أسمحلي / أسمحي لي", "ar_translit": "Ismah li / Ismahi li", "emoji": "😔" },
+    { "fr": "« Au revoir! »", "en": "Goodbye", "ar": "إلى اللقاء", "ar_translit": "ilā al-liqāe", "emoji": "👋" }
+  ]
 }

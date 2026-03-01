@@ -1,6 +1,20 @@
 {
   "id": "les-vetements",
-  "name": "Les Vetements",
-  "category": "S Habiller",
-  "cards": []
+  "name": "Les vêtements",
+  "nameAr": "الملابس",
+  "category": "S'habiller",
+  "cards": [
+    { "fr": "le slip", "en": "slip/briefs", "ar": "الشيبان", "ar_translit": "at-toubban", "emoji": "👙" },
+    { "fr": "la culotte", "en": "panties", "ar": "الشيبان", "ar_translit": "at-toubban", "emoji": "👙" },
+    { "fr": "les chaussettes", "en": "socks", "ar": "الجوارب", "ar_translit": "al-djawārib", "emoji": "🧦" },
+    { "fr": "les collants", "en": "tights", "ar": "الجوارب الطويلة", "ar_translit": "al-djawārib at-tawila", "emoji": "🧦" },
+    { "fr": "le pantalon", "en": "pants", "ar": "السروال", "ar_translit": "as-siroual", "emoji": "👖" },
+    { "fr": "le tee-shirt", "en": "t-shirt", "ar": "تي شيرت", "ar_translit": "ti-shirt", "emoji": "👕" },
+    { "fr": "la chemise", "en": "shirt", "ar": "القميص", "ar_translit": "al-qamis", "emoji": "👔" },
+    { "fr": "le pull", "en": "sweater", "ar": "الكنزة", "ar_translit": "al-kanza", "emoji": "🧶" },
+    { "fr": "la robe", "en": "dress", "ar": "الفستان", "ar_translit": "al-foustān", "emoji": "👗" },
+    { "fr": "la jupe", "en": "skirt", "ar": "التنورة", "ar_translit": "al-tannoura", "emoji": "👗" },
+    { "fr": "les chaussures", "en": "shoes", "ar": "الأحذية", "ar_translit": "al-ahdhya", "emoji": "👟" },
+    { "fr": "les chaussons", "en": "slippers", "ar": "الخفاف", "ar_translit": "al-khifaf", "emoji": "🥿" }
+  ]
 }

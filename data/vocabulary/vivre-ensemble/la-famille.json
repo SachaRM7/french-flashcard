@@ -1,6 +1,11 @@
 {
   "id": "la-famille",
-  "name": "La Famille",
-  "category": "Vivre Ensemble",
-  "cards": []
+  "name": "La famille",
+  "nameAr": "الأسرة",
+  "category": "Vivre ensemble",
+  "cards": [
+    { "fr": "les enfants", "en": "children", "ar": "الأطفال", "ar_translit": "al-atfāl", "emoji": "👧👦" },
+    { "fr": "les parents", "en": "parents", "ar": "الوالدان", "ar_translit": "al-wālidāni", "emoji": "👨👩" },
+    { "fr": "les grands-parents", "en": "grandparents", "ar": "الأجداد", "ar_translit": "al-adjdād", "emoji": "👴👵" }
+  ]
 }

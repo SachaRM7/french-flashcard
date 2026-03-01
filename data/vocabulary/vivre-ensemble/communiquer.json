@@ -1,6 +1,14 @@
 {
   "id": "communiquer",
   "name": "Communiquer",
-  "category": "Vivre Ensemble",
-  "cards": []
+  "nameAr": "التواصل",
+  "category": "Vivre ensemble",
+  "cards": [
+    { "fr": "le téléphone portable", "en": "mobile phone", "ar": "الهاتف المحمول", "ar_translit": "al-hātif al-mahmoul", "emoji": "📱" },
+    { "fr": "l'ordinateur", "en": "computer", "ar": "الحاسوب", "ar_translit": "al-hāssoub", "emoji": "💻" },
+    { "fr": "écrire un e-mail", "en": "to write an email", "ar": "كتابة رسالة إلكترونية", "ar_translit": "kitabaf rissāla iliktroûniyya", "emoji": "📧" },
+    { "fr": "recevoir un e-mail", "en": "to receive an email", "ar": "تلقي رسالة إلكترونية", "ar_translit": "talaqi rissāla iliktroûniyya", "emoji": "📧" },
+    { "fr": "la lettre", "en": "letter", "ar": "الرسالة", "ar_translit": "ar-risāla", "emoji": "✉️" },
+    { "fr": "la boîte aux lettres", "en": "mailbox", "ar": "صندوق البريد", "ar_translit": "soundouq al-barid", "emoji": "📮" }
+  ]
 }

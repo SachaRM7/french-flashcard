@@ -1,5 +1,5 @@
-// Auto-generated decks - 2026-03-01T12:10:20.372994
-window.DECKS_VERSION = '2026-03-01T12:10:20.372994';
+// Auto-generated decks - 2026-03-01T12:16:31.385029
+window.DECKS_VERSION = '2026-03-01T12:16:31.385029';
 window.DECKS_DATA = [
   {
     "id": "les-animaux-de-la-montagne",
@@ -484,9 +484,46 @@ window.DECKS_DATA = [
   },
   {
     "id": "a-l-hopital",
-    "name": "A L Hopital",
-    "category": "Corps Humain",
-    "cards": []
+    "name": "À l'hôpital",
+    "category": "Corps humain",
+    "cards": [
+      {
+        "front": "قسم الولادة",
+        "back": "la maternité",
+        "translit": "qism al-wilāda",
+        "emoji": "👶"
+      },
+      {
+        "front": "أدخل إلى المستشفى",
+        "back": "être hospitalisé",
+        "translit": "oudkhila ilā al-moustachfā",
+        "emoji": "🏥"
+      },
+      {
+        "front": "العملية",
+        "back": "l'opération",
+        "translit": "'amaliyya",
+        "emoji": "🔪"
+      },
+      {
+        "front": "تصوير بالأشعة",
+        "back": "la radiographie",
+        "translit": "taswir bi-al-achia",
+        "emoji": "📸"
+      },
+      {
+        "front": "قاعة الانتظار",
+        "back": "la salle d'attente",
+        "translit": "qā'at al-intidzhār",
+        "emoji": "🪑"
+      },
+      {
+        "front": "سيارة الإسعاف",
+        "back": "l'ambulance",
+        "translit": "sayārat al-is'āf",
+        "emoji": "🚑"
+      }
+    ]
   },
   {
     "id": "les-handicaps",
@@ -888,45 +925,358 @@ window.DECKS_DATA = [
   },
   {
     "id": "les-emotions",
-    "name": "Les Emotions",
-    "category": "Vivre Ensemble",
-    "cards": []
+    "name": "Les émotions",
+    "category": "Vivre ensemble",
+    "cards": [
+      {
+        "front": "سعيد / سعيدة",
+        "back": "être content / contente",
+        "translit": "said / saida",
+        "emoji": "😊"
+      },
+      {
+        "front": "الضحك",
+        "back": "rire",
+        "translit": "al-dhahik",
+        "emoji": "😂"
+      },
+      {
+        "front": "يحب",
+        "back": "aimer",
+        "translit": "youhib",
+        "emoji": "❤️"
+      },
+      {
+        "front": "فخور / فخورة",
+        "back": "être fier / fière",
+        "translit": "fakhoûr / fakhoûra",
+        "emoji": "🦁"
+      },
+      {
+        "front": "حزين / حزينة",
+        "back": "être triste",
+        "translit": "hazin / hazina",
+        "emoji": "😢"
+      },
+      {
+        "front": "يبكي",
+        "back": "pleurer",
+        "translit": "yabki",
+        "emoji": "😭"
+      },
+      {
+        "front": "خائف",
+        "back": "avoir peur",
+        "translit": "khāf",
+        "emoji": "😨"
+      },
+      {
+        "front": "غيور / غيورة",
+        "back": "être jaloux / jalouse",
+        "translit": "ghayour / ghayoura",
+        "emoji": "😠"
+      },
+      {
+        "front": "غاضب / غاضبة",
+        "back": "être énervé / énervée",
+        "translit": "ghadhib / ghadhiba",
+        "emoji": "😡"
+      },
+      {
+        "front": "عبس",
+        "back": "bouder",
+        "translit": "aabasa",
+        "emoji": "😒"
+      },
+      {
+        "front": "الشعور بالخجل",
+        "back": "avoir honte",
+        "translit": "ash-shou'ûr bi-l-khajal",
+        "emoji": "😳"
+      },
+      {
+        "front": "مجرج / مجرجة",
+        "back": "être intimidé / intimidée",
+        "translit": "mohradj / mohradja",
+        "emoji": "😟"
+      }
+    ]
   },
   {
     "id": "s-exprimer",
-    "name": "S Exprimer",
-    "category": "Vivre Ensemble",
-    "cards": []
+    "name": "S'exprimer",
+    "category": "Vivre ensemble",
+    "cards": [
+      {
+        "front": "يتكلم",
+        "back": "parler",
+        "translit": "yatakallam",
+        "emoji": "💬"
+      },
+      {
+        "front": "يصرخ",
+        "back": "crier",
+        "translit": "yasroukh",
+        "emoji": "📢"
+      },
+      {
+        "front": "يقرأ",
+        "back": "lire",
+        "translit": "yaqra",
+        "emoji": "📖"
+      },
+      {
+        "front": "يكتب",
+        "back": "écrire",
+        "translit": "yaktoub",
+        "emoji": "✏️"
+      },
+      {
+        "front": "يعطي",
+        "back": "donner",
+        "translit": "yaati",
+        "emoji": "🎁"
+      },
+      {
+        "front": "يأخذ",
+        "back": "recevoir",
+        "translit": "yaakhodh",
+        "emoji": "📦"
+      }
+    ]
   },
   {
     "id": "la-politesse",
-    "name": "La Politesse",
-    "category": "Vivre Ensemble",
-    "cards": []
+    "name": "La politesse",
+    "category": "Vivre ensemble",
+    "cards": [
+      {
+        "front": "صباح الخير",
+        "back": "« Bonjour ! »",
+        "translit": "sabāh al-khair",
+        "emoji": "👋"
+      },
+      {
+        "front": "ليلة سعيدة",
+        "back": "« Bonne nuit. »",
+        "translit": "layla saida",
+        "emoji": "🌙"
+      },
+      {
+        "front": "من فضلك",
+        "back": "« S'il te plaît. »",
+        "translit": "min fadhlika",
+        "emoji": "🙏"
+      },
+      {
+        "front": "شكرا",
+        "back": "« Merci. »",
+        "translit": "choukran",
+        "emoji": "🙏"
+      },
+      {
+        "front": "أسمحلي / أسمحي لي",
+        "back": "« Pardon. »",
+        "translit": "Ismah li / Ismahi li",
+        "emoji": "😔"
+      },
+      {
+        "front": "إلى اللقاء",
+        "back": "« Au revoir! »",
+        "translit": "ilā al-liqāe",
+        "emoji": "👋"
+      }
+    ]
   },
   {
     "id": "la-famille",
-    "name": "La Famille",
-    "category": "Vivre Ensemble",
-    "cards": []
+    "name": "La famille",
+    "category": "Vivre ensemble",
+    "cards": [
+      {
+        "front": "الأطفال",
+        "back": "les enfants",
+        "translit": "al-atfāl",
+        "emoji": "👧👦"
+      },
+      {
+        "front": "الوالدان",
+        "back": "les parents",
+        "translit": "al-wālidāni",
+        "emoji": "👨👩"
+      },
+      {
+        "front": "الأجداد",
+        "back": "les grands-parents",
+        "translit": "al-adjdād",
+        "emoji": "👴👵"
+      }
+    ]
   },
   {
     "id": "communiquer",
     "name": "Communiquer",
-    "category": "Vivre Ensemble",
-    "cards": []
+    "category": "Vivre ensemble",
+    "cards": [
+      {
+        "front": "الهاتف المحمول",
+        "back": "le téléphone portable",
+        "translit": "al-hātif al-mahmoul",
+        "emoji": "📱"
+      },
+      {
+        "front": "الحاسوب",
+        "back": "l'ordinateur",
+        "translit": "al-hāssoub",
+        "emoji": "💻"
+      },
+      {
+        "front": "كتابة رسالة إلكترونية",
+        "back": "écrire un e-mail",
+        "translit": "kitabaf rissāla iliktroûniyya",
+        "emoji": "📧"
+      },
+      {
+        "front": "تلقي رسالة إلكترونية",
+        "back": "recevoir un e-mail",
+        "translit": "talaqi rissāla iliktroûniyya",
+        "emoji": "📧"
+      },
+      {
+        "front": "الرسالة",
+        "back": "la lettre",
+        "translit": "ar-risāla",
+        "emoji": "✉️"
+      },
+      {
+        "front": "صندوق البريد",
+        "back": "la boîte aux lettres",
+        "translit": "soundouq al-barid",
+        "emoji": "📮"
+      }
+    ]
   },
   {
     "id": "les-vetements",
-    "name": "Les Vetements",
-    "category": "S Habiller",
-    "cards": []
+    "name": "Les vêtements",
+    "category": "S'habiller",
+    "cards": [
+      {
+        "front": "الشيبان",
+        "back": "le slip",
+        "translit": "at-toubban",
+        "emoji": "👙"
+      },
+      {
+        "front": "الشيبان",
+        "back": "la culotte",
+        "translit": "at-toubban",
+        "emoji": "👙"
+      },
+      {
+        "front": "الجوارب",
+        "back": "les chaussettes",
+        "translit": "al-djawārib",
+        "emoji": "🧦"
+      },
+      {
+        "front": "الجوارب الطويلة",
+        "back": "les collants",
+        "translit": "al-djawārib at-tawila",
+        "emoji": "🧦"
+      },
+      {
+        "front": "السروال",
+        "back": "le pantalon",
+        "translit": "as-siroual",
+        "emoji": "👖"
+      },
+      {
+        "front": "تي شيرت",
+        "back": "le tee-shirt",
+        "translit": "ti-shirt",
+        "emoji": "👕"
+      },
+      {
+        "front": "القميص",
+        "back": "la chemise",
+        "translit": "al-qamis",
+        "emoji": "👔"
+      },
+      {
+        "front": "الكنزة",
+        "back": "le pull",
+        "translit": "al-kanza",
+        "emoji": "🧶"
+      },
+      {
+        "front": "الفستان",
+        "back": "la robe",
+        "translit": "al-foustān",
+        "emoji": "👗"
+      },
+      {
+        "front": "التنورة",
+        "back": "la jupe",
+        "translit": "al-tannoura",
+        "emoji": "👗"
+      },
+      {
+        "front": "الأحذية",
+        "back": "les chaussures",
+        "translit": "al-ahdhya",
+        "emoji": "👟"
+      },
+      {
+        "front": "الخفاف",
+        "back": "les chaussons",
+        "translit": "al-khifaf",
+        "emoji": "🥿"
+      }
+    ]
   },
   {
     "id": "il-fait-chaud",
-    "name": "Il Fait Chaud",
-    "category": "S Habiller",
-    "cards": []
+    "name": "Il fait chaud !",
+    "category": "S'habiller",
+    "cards": [
+      {
+        "front": "القبعة",
+        "back": "le chapeau",
+        "translit": "al-qoubba'a",
+        "emoji": "🎩"
+      },
+      {
+        "front": "قبعة ذات حافة",
+        "back": "la casquette",
+        "translit": "qoubba'a dhāt hāfa",
+        "emoji": "🧢"
+      },
+      {
+        "front": "قميص داخلي",
+        "back": "le débardeur",
+        "translit": "qamis dākhili",
+        "emoji": "🫀"
+      },
+      {
+        "front": "سروال قصير",
+        "back": "le short",
+        "translit": "sirwāl qasir",
+        "emoji": "🩳"
+      },
+      {
+        "front": "نظارات شمسية",
+        "back": "les lunettes de soleil",
+        "translit": "nadhārāt shamssiya",
+        "emoji": "😎"
+      },
+      {
+        "front": "النعال",
+        "back": "les sandales",
+        "translit": "an-ni'āl",
+        "emoji": "👡"
+      }
+    ]
   },
   {
     "id": "il-fait-froid",
