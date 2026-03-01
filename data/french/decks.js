@@ -1,5 +1,5 @@
-// Auto-generated decks - 2026-03-01T13:42:14.820392
-window.DECKS_VERSION = '2026-03-01T13:42:14.820392';
+// Auto-generated decks - 2026-03-01T13:45:51.607174
+window.DECKS_VERSION = '2026-03-01T13:45:51.607174';
 window.DECKS_DATA = [
   {
     "id": "les-animaux-de-la-montagne",
@@ -2369,6 +2369,96 @@ window.DECKS_DATA = [
         "front": "gardener",
         "back": "le jardinier",
         "emoji": "🌱"
+      },
+      {
+        "front": "veterinarian",
+        "back": "la vétérinaire",
+        "emoji": "🐾"
+      },
+      {
+        "front": "firefighter",
+        "back": "le pompier",
+        "emoji": "🚒"
+      },
+      {
+        "front": "policeman",
+        "back": "le policier",
+        "emoji": "👮"
+      },
+      {
+        "front": "soldier",
+        "back": "le militaire",
+        "emoji": "🪖"
+      },
+      {
+        "front": "doctor",
+        "back": "la médecin",
+        "emoji": "👨‍⚕️"
+      },
+      {
+        "front": "nurse",
+        "back": "l'infirmière",
+        "emoji": "👩‍⚕️"
+      },
+      {
+        "front": "postman",
+        "back": "le facteur",
+        "emoji": "📮"
+      },
+      {
+        "front": "waiter",
+        "back": "le serveur",
+        "emoji": "🍽️"
+      },
+      {
+        "front": "journalist",
+        "back": "la journaliste",
+        "emoji": "📰"
+      },
+      {
+        "front": "illustrator",
+        "back": "l'illustratrice",
+        "emoji": "🎨"
+      },
+      {
+        "front": "photographer",
+        "back": "la photographe",
+        "emoji": "📷"
+      },
+      {
+        "front": "pilot",
+        "back": "la pilote de ligne",
+        "emoji": "✈️"
+      },
+      {
+        "front": "mechanic",
+        "back": "le garagiste",
+        "emoji": "🚗"
+      },
+      {
+        "front": "mover",
+        "back": "le déménageur",
+        "emoji": "📦"
+      },
+      {
+        "front": "architect",
+        "back": "l'architecte",
+        "emoji": "🏗️"
+      },
+      {
+        "front": "worker",
+        "back": "l'ouvrier",
+        "emoji": "👷"
+      },
+      {
+        "front": "seamstress",
+        "back": "la couturière",
+        "emoji": "🪡"
+      },
+      {
+        "front": "be unemployed",
+        "back": "être au chômage",
+        "emoji": "😔"
       }
     ]
   },
@@ -2398,21 +2488,134 @@ window.DECKS_DATA = [
   },
   {
     "id": "le-cirque",
-    "name": "Le Cirque",
+    "name": "Le cirque",
     "category": "Sortir",
-    "cards": []
+    "cards": [
+      {
+        "front": "audience",
+        "back": "le public",
+        "emoji": "👥"
+      },
+      {
+        "front": "ring master",
+        "back": "monsieur Loyal",
+        "emoji": "🎩"
+      },
+      {
+        "front": "acrobats",
+        "back": "les acrobates",
+        "emoji": "🤸"
+      },
+      {
+        "front": "juggle",
+        "back": "jongler",
+        "emoji": "🤹"
+      },
+      {
+        "front": "circus ring",
+        "back": "la piste",
+        "emoji": "⭕"
+      },
+      {
+        "front": "white clown",
+        "back": "le clown blanc",
+        "emoji": "🤡"
+      },
+      {
+        "front": "clown",
+        "back": "le clown",
+        "emoji": "🤡"
+      },
+      {
+        "front": "magician",
+        "back": "le magicien",
+        "emoji": "🪄"
+      },
+      {
+        "front": "greet",
+        "back": "saluer",
+        "emoji": "👋"
+      },
+      {
+        "front": "applaud",
+        "back": "applaudir",
+        "emoji": "👏"
+      }
+    ]
   },
   {
     "id": "le-musee",
-    "name": "Le Musee",
+    "name": "Le musée",
     "category": "Sortir",
-    "cards": []
+    "cards": [
+      {
+        "front": "visit",
+        "back": "visiter",
+        "emoji": "👀"
+      },
+      {
+        "front": "entrance ticket",
+        "back": "le billet d'entrée",
+        "emoji": "🎫"
+      },
+      {
+        "front": "painting",
+        "back": "le tableau",
+        "emoji": "🖼️"
+      },
+      {
+        "front": "sculpture",
+        "back": "la sculpture",
+        "emoji": "🗿"
+      },
+      {
+        "front": "stuffed animal",
+        "back": "l'animal empaillé",
+        "emoji": "🐻"
+      },
+      {
+        "front": "skeleton",
+        "back": "le squelette",
+        "emoji": "💀"
+      }
+    ]
   },
   {
     "id": "le-spectacle",
-    "name": "Le Spectacle",
+    "name": "Le spectacle",
     "category": "Sortir",
-    "cards": []
+    "cards": [
+      {
+        "front": "puppets",
+        "back": "les marionnettes",
+        "emoji": "🎭"
+      },
+      {
+        "front": "cinema",
+        "back": "le cinéma",
+        "emoji": "🎬"
+      },
+      {
+        "front": "concert",
+        "back": "le concert",
+        "emoji": "🎵"
+      },
+      {
+        "front": "fireworks",
+        "back": "le feu d'artifice",
+        "emoji": "🎆"
+      },
+      {
+        "front": "theater",
+        "back": "le théâtre",
+        "emoji": "🎭"
+      },
+      {
+        "front": "opera",
+        "back": "l'opéra",
+        "emoji": "🎼"
+      }
+    ]
   },
   {
     "id": "la-foret",
@@ -2850,6 +3053,43 @@ window.DECKS_DATA = [
     "name": "La Recreation",
     "category": "L Ecole",
     "cards": []
+  },
+  {
+    "id": "jouer-de-la-musique",
+    "name": "Jouer de la musique",
+    "category": "La musique",
+    "cards": [
+      {
+        "front": "musical note",
+        "back": "la note de musique",
+        "emoji": "🎵"
+      },
+      {
+        "front": "sheet music",
+        "back": "la partition",
+        "emoji": "🎼"
+      },
+      {
+        "front": "sing",
+        "back": "chanter",
+        "emoji": "🎤"
+      },
+      {
+        "front": "play an instrument",
+        "back": "jouer d'un instrument",
+        "emoji": "🎸"
+      },
+      {
+        "front": "count the beat",
+        "back": "compter le rythme",
+        "emoji": "🥁"
+      },
+      {
+        "front": "conductor",
+        "back": "le chef d'orchestre",
+        "emoji": "🎼"
+      }
+    ]
   },
   {
     "id": "les-continents",
@@ -3305,6 +3545,73 @@ window.DECKS_DATA = [
         "front": "Eid al-Fitr",
         "back": "l'Aïd al-Fitr",
         "emoji": "🎉"
+      }
+    ]
+  },
+  {
+    "id": "la-ferme",
+    "name": "La ferme",
+    "category": "Le monde",
+    "cards": [
+      {
+        "front": "farmer",
+        "back": "le fermier",
+        "emoji": "👨‍🌾"
+      },
+      {
+        "front": "tractor",
+        "back": "le tracteur",
+        "emoji": "🚜"
+      },
+      {
+        "front": "wheelbarrow",
+        "back": "la brouette",
+        "emoji": "🛒"
+      },
+      {
+        "front": "tool shed",
+        "back": "le hangar à outils",
+        "emoji": "🏚️"
+      },
+      {
+        "front": "orchard",
+        "back": "le verger",
+        "emoji": "🌳"
+      },
+      {
+        "front": "field",
+        "back": "le champ",
+        "emoji": "🌾"
+      },
+      {
+        "front": "chicken coop",
+        "back": "le poulailler",
+        "emoji": "🐔"
+      },
+      {
+        "front": "farmyard",
+        "back": "la basse-cour",
+        "emoji": "🐔"
+      },
+      {
+        "front": "stable",
+        "back": "l'étable",
+        "emoji": "🐄"
+      },
+      {
+        "front": "horse stable",
+        "back": "l'écurie",
+        "emoji": "🐴"
+      },
+      {
+        "front": "sheepfold",
+        "back": "la bergerie",
+        "emoji": "🐑"
+      },
+      {
+        "front": "pigsty",
+        "back": "la porcherie",
+        "emoji": "🐷"
       }
     ]
   }

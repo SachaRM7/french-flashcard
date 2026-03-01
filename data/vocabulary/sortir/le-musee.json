@@ -1,6 +1,14 @@
 {
   "id": "le-musee",
-  "name": "Le Musee",
+  "name": "Le musée",
+  "nameAr": "المتحف",
   "category": "Sortir",
-  "cards": []
+  "cards": [
+    { "fr": "visiter", "en": "visit", "ar": "زار", "ar_translit": "zāra", "emoji": "👀" },
+    { "fr": "le billet d'entrée", "en": "entrance ticket", "ar": "تذكرة الدخول", "ar_translit": "tadhkira ad-doukhoûl", "emoji": "🎫" },
+    { "fr": "le tableau", "en": "painting", "ar": "اللوحة", "ar_translit": "al-lawḥa", "emoji": "🖼️" },
+    { "fr": "la sculpture", "en": "sculpture", "ar": "النحت", "ar_translit": "an-naht", "emoji": "🗿" },
+    { "fr": "l'animal empaillé", "en": "stuffed animal", "ar": "حيوان محنط", "ar_translit": "hayawān mouhannāt", "emoji": "🐻" },
+    { "fr": "le squelette", "en": "skeleton", "ar": "هيكل عظمي", "ar_translit": "haykal 'adhmi", "emoji": "💀" }
+  ]
 }

@@ -1,0 +1,20 @@
+{
+  "id": "la-ferme",
+  "name": "La ferme",
+  "nameAr": "المزرعة",
+  "category": "Le monde",
+  "cards": [
+    { "fr": "le fermier", "en": "farmer", "ar": "المزارع", "ar_translit": "al-mouzāri'", "emoji": "👨‍🌾" },
+    { "fr": "le tracteur", "en": "tractor", "ar": "الجرار", "ar_translit": "al-djarrār", "emoji": "🚜" },
+    { "fr": "la brouette", "en": "wheelbarrow", "ar": "عربة اليد", "ar_translit": "'arabat al-yad", "emoji": "🛒" },
+    { "fr": "le hangar à outils", "en": "tool shed", "ar": "مخزن الأدوات", "ar_translit": "makhzan al-adawāt", "emoji": "🏚️" },
+    { "fr": "le verger", "en": "orchard", "ar": "البستان", "ar_translit": "al-boustān", "emoji": "🌳" },
+    { "fr": "le champ", "en": "field", "ar": "الحقل", "ar_translit": "al-haql", "emoji": "🌾" },
+    { "fr": "le poulailler", "en": "chicken coop", "ar": "حظيرة الدجاج", "ar_translit": "hadhirat ad-dadjādj", "emoji": "🐔" },
+    { "fr": "la basse-cour", "en": "farmyard", "ar": "الحظيرة", "ar_translit": "al-hadhīra", "emoji": "🐔" },
+    { "fr": "l'étable", "en": "stable", "ar": "الإسطبل", "ar_translit": "al-istabāl", "emoji": "🐄" },
+    { "fr": "l'écurie", "en": "horse stable", "ar": "إسطبل الخيول", "ar_translit": "istabāl li-l-khouyoûl", "emoji": "🐴" },
+    { "fr": "la bergerie", "en": "sheepfold", "ar": "حظيرة الغنم", "ar_translit": "hadhīrat al-ghanam", "emoji": "🐑" },
+    { "fr": "la porcherie", "en": "pigsty", "ar": "حظيرة الخنزير", "ar_translit": "hadhīrat al-khinzir", "emoji": "🐷" }
+  ]
+}

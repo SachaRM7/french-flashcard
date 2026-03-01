@@ -1,6 +1,14 @@
 {
   "id": "le-spectacle",
-  "name": "Le Spectacle",
+  "name": "Le spectacle",
+  "nameAr": "العرض المسرحي",
   "category": "Sortir",
-  "cards": []
+  "cards": [
+    { "fr": "les marionnettes", "en": "puppets", "ar": "عرائس الغرغاؤز", "ar_translit": "'arāis al-ghāragāouz", "emoji": "🎭" },
+    { "fr": "le cinéma", "en": "cinema", "ar": "السينما", "ar_translit": "as-sīnimā", "emoji": "🎬" },
+    { "fr": "le concert", "en": "concert", "ar": "حفلة موسيقية", "ar_translit": "hafla moûsiqiyya", "emoji": "🎵" },
+    { "fr": "le feu d'artifice", "en": "fireworks", "ar": "الألعاب نارية", "ar_translit": "al'āb nāriyya", "emoji": "🎆" },
+    { "fr": "le théâtre", "en": "theater", "ar": "المسرح", "ar_translit": "al-masrah", "emoji": "🎭" },
+    { "fr": "l'opéra", "en": "opera", "ar": "أوبيرا", "ar_translit": "ōbīrā", "emoji": "🎼" }
+  ]
 }

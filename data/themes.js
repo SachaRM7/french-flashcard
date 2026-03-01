@@ -78,7 +78,7 @@ window.THEMES_DATA = [
         nameAr: 'الخروج',
         color: '#e8daef',
         icon: '🎭',
-        decks: ['le-musee', 'le-spectacle', 'le-cirque', 'la-ferme']
+        decks: ['le-musee', 'le-spectacle', 'le-cirque']
     },
     {
         id: 'musique',
@@ -126,6 +126,6 @@ window.THEMES_DATA = [
         nameAr: 'العالم',
         color: '#d2b4de',
         icon: '🌍',
-        decks: ['les-continents', 'l-espace']
+        decks: ['les-continents', 'l-espace', 'la-ferme']
     }
 ];

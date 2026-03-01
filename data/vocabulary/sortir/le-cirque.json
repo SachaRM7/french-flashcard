@@ -1,6 +1,18 @@
 {
   "id": "le-cirque",
-  "name": "Le Cirque",
+  "name": "Le cirque",
+  "nameAr": "السيرك",
   "category": "Sortir",
-  "cards": []
+  "cards": [
+    { "fr": "le public", "en": "audience", "ar": "الجمهور", "ar_translit": "al-djouthmour", "emoji": "👥" },
+    { "fr": "monsieur Loyal", "en": "ring master", "ar": "السيد لوايال", "ar_translit": "as-sayyid Louayāl", "emoji": "🎩" },
+    { "fr": "les acrobates", "en": "acrobats", "ar": "البهلوانية", "ar_translit": "al-bahlwania", "emoji": "🤸" },
+    { "fr": "jongler", "en": "juggle", "ar": "يقذف الكرة", "ar_translit": "yaqdhif al-kora", "emoji": "🤹" },
+    { "fr": "la piste", "en": "circus ring", "ar": "المسار", "ar_translit": "al-masār", "emoji": "⭕" },
+    { "fr": "le clown blanc", "en": "white clown", "ar": "المهرج الأبيض", "ar_translit": "almuharaj al'abyad", "emoji": "🤡" },
+    { "fr": "le clown", "en": "clown", "ar": "المهرج", "ar_translit": "al-moharridj", "emoji": "🤡" },
+    { "fr": "le magicien", "en": "magician", "ar": "الساحر", "ar_translit": "as-sāhir", "emoji": "🪄" },
+    { "fr": "saluer", "en": "greet", "ar": "يحيي", "ar_translit": "youhayyi", "emoji": "👋" },
+    { "fr": "applaudir", "en": "applaud", "ar": "يصفق", "ar_translit": "yousaffiq", "emoji": "👏" }
+  ]
 }

@@ -1,5 +1,5 @@
-// Auto-generated decks - 2026-03-01T13:42:14.820392
-window.DECKS_VERSION = '2026-03-01T13:42:14.820392';
+// Auto-generated decks - 2026-03-01T13:45:51.607174
+window.DECKS_VERSION = '2026-03-01T13:45:51.607174';
 window.DECKS_DATA = [
   {
     "id": "les-animaux-de-la-montagne",
@@ -2766,6 +2766,114 @@ window.DECKS_DATA = [
         "back": "le jardinier",
         "translit": "al-boustāni",
         "emoji": "🌱"
+      },
+      {
+        "front": "الطبيبة البيطرية",
+        "back": "la vétérinaire",
+        "translit": "al-bayṭariyya",
+        "emoji": "🐾"
+      },
+      {
+        "front": "رجل إطفاء",
+        "back": "le pompier",
+        "translit": "radjol ittfaae",
+        "emoji": "🚒"
+      },
+      {
+        "front": "الشرطي",
+        "back": "le policier",
+        "translit": "ach-chourti",
+        "emoji": "👮"
+      },
+      {
+        "front": "العسكري",
+        "back": "le militaire",
+        "translit": "al-'askari",
+        "emoji": "🪖"
+      },
+      {
+        "front": "الطبيب",
+        "back": "la médecin",
+        "translit": "al-tabib",
+        "emoji": "👨‍⚕️"
+      },
+      {
+        "front": "الممرضة",
+        "back": "l'infirmière",
+        "translit": "al-moumarridha",
+        "emoji": "👩‍⚕️"
+      },
+      {
+        "front": "ساعي البريد",
+        "back": "le facteur",
+        "translit": "sā'i al-barīd",
+        "emoji": "📮"
+      },
+      {
+        "front": "الخادل",
+        "back": "le serveur",
+        "translit": "an-nādil",
+        "emoji": "🍽️"
+      },
+      {
+        "front": "الصحافية",
+        "back": "la journaliste",
+        "translit": "as-sahafiyya",
+        "emoji": "📰"
+      },
+      {
+        "front": "رسامة صور للكتب",
+        "back": "l'illustratrice",
+        "translit": "rassāmat souwar li-l-koutub",
+        "emoji": "🎨"
+      },
+      {
+        "front": "المصورة",
+        "back": "la photographe",
+        "translit": "al-mousawwira",
+        "emoji": "📷"
+      },
+      {
+        "front": "قائدة الطائرة",
+        "back": "la pilote de ligne",
+        "translit": "qāidat at-tāira",
+        "emoji": "✈️"
+      },
+      {
+        "front": "مصلح السيارات",
+        "back": "le garagiste",
+        "translit": "mosālih as-sayyārāt",
+        "emoji": "🚗"
+      },
+      {
+        "front": "ناقل أثاث",
+        "back": "le déménageur",
+        "translit": "nāqil athāth",
+        "emoji": "📦"
+      },
+      {
+        "front": "مهندس معماري",
+        "back": "l'architecte",
+        "translit": "mouhandis mi'māri",
+        "emoji": "🏗️"
+      },
+      {
+        "front": "عامل",
+        "back": "l'ouvrier",
+        "translit": "'āmil",
+        "emoji": "👷"
+      },
+      {
+        "front": "الخياطة",
+        "back": "la couturière",
+        "translit": "al-khāyyāt",
+        "emoji": "🪡"
+      },
+      {
+        "front": "عاطل عن العمل",
+        "back": "être au chômage",
+        "translit": "'ātil 'an al-'āmāl",
+        "emoji": "😔"
       }
     ]
   },
@@ -2795,21 +2903,156 @@ window.DECKS_DATA = [
   },
   {
     "id": "le-cirque",
-    "name": "Le Cirque",
+    "name": "Le cirque",
     "category": "Sortir",
-    "cards": []
+    "cards": [
+      {
+        "front": "الجمهور",
+        "back": "le public",
+        "translit": "al-djouthmour",
+        "emoji": "👥"
+      },
+      {
+        "front": "السيد لوايال",
+        "back": "monsieur Loyal",
+        "translit": "as-sayyid Louayāl",
+        "emoji": "🎩"
+      },
+      {
+        "front": "البهلوانية",
+        "back": "les acrobates",
+        "translit": "al-bahlwania",
+        "emoji": "🤸"
+      },
+      {
+        "front": "يقذف الكرة",
+        "back": "jongler",
+        "translit": "yaqdhif al-kora",
+        "emoji": "🤹"
+      },
+      {
+        "front": "المسار",
+        "back": "la piste",
+        "translit": "al-masār",
+        "emoji": "⭕"
+      },
+      {
+        "front": "المهرج الأبيض",
+        "back": "le clown blanc",
+        "translit": "almuharaj al'abyad",
+        "emoji": "🤡"
+      },
+      {
+        "front": "المهرج",
+        "back": "le clown",
+        "translit": "al-moharridj",
+        "emoji": "🤡"
+      },
+      {
+        "front": "الساحر",
+        "back": "le magicien",
+        "translit": "as-sāhir",
+        "emoji": "🪄"
+      },
+      {
+        "front": "يحيي",
+        "back": "saluer",
+        "translit": "youhayyi",
+        "emoji": "👋"
+      },
+      {
+        "front": "يصفق",
+        "back": "applaudir",
+        "translit": "yousaffiq",
+        "emoji": "👏"
+      }
+    ]
   },
   {
     "id": "le-musee",
-    "name": "Le Musee",
+    "name": "Le musée",
     "category": "Sortir",
-    "cards": []
+    "cards": [
+      {
+        "front": "زار",
+        "back": "visiter",
+        "translit": "zāra",
+        "emoji": "👀"
+      },
+      {
+        "front": "تذكرة الدخول",
+        "back": "le billet d'entrée",
+        "translit": "tadhkira ad-doukhoûl",
+        "emoji": "🎫"
+      },
+      {
+        "front": "اللوحة",
+        "back": "le tableau",
+        "translit": "al-lawḥa",
+        "emoji": "🖼️"
+      },
+      {
+        "front": "النحت",
+        "back": "la sculpture",
+        "translit": "an-naht",
+        "emoji": "🗿"
+      },
+      {
+        "front": "حيوان محنط",
+        "back": "l'animal empaillé",
+        "translit": "hayawān mouhannāt",
+        "emoji": "🐻"
+      },
+      {
+        "front": "هيكل عظمي",
+        "back": "le squelette",
+        "translit": "haykal 'adhmi",
+        "emoji": "💀"
+      }
+    ]
   },
   {
     "id": "le-spectacle",
-    "name": "Le Spectacle",
+    "name": "Le spectacle",
     "category": "Sortir",
-    "cards": []
+    "cards": [
+      {
+        "front": "عرائس الغرغاؤز",
+        "back": "les marionnettes",
+        "translit": "'arāis al-ghāragāouz",
+        "emoji": "🎭"
+      },
+      {
+        "front": "السينما",
+        "back": "le cinéma",
+        "translit": "as-sīnimā",
+        "emoji": "🎬"
+      },
+      {
+        "front": "حفلة موسيقية",
+        "back": "le concert",
+        "translit": "hafla moûsiqiyya",
+        "emoji": "🎵"
+      },
+      {
+        "front": "الألعاب نارية",
+        "back": "le feu d'artifice",
+        "translit": "al'āb nāriyya",
+        "emoji": "🎆"
+      },
+      {
+        "front": "المسرح",
+        "back": "le théâtre",
+        "translit": "al-masrah",
+        "emoji": "🎭"
+      },
+      {
+        "front": "أوبيرا",
+        "back": "l'opéra",
+        "translit": "ōbīrā",
+        "emoji": "🎼"
+      }
+    ]
   },
   {
     "id": "la-foret",
@@ -3304,6 +3547,49 @@ window.DECKS_DATA = [
     "name": "La Recreation",
     "category": "L Ecole",
     "cards": []
+  },
+  {
+    "id": "jouer-de-la-musique",
+    "name": "Jouer de la musique",
+    "category": "La musique",
+    "cards": [
+      {
+        "front": "النوتة",
+        "back": "la note de musique",
+        "translit": "an-noûta",
+        "emoji": "🎵"
+      },
+      {
+        "front": "قيطة موسيقية",
+        "back": "la partition",
+        "translit": "qit'a moûsiqiyya",
+        "emoji": "🎼"
+      },
+      {
+        "front": "يغني",
+        "back": "chanter",
+        "translit": "youghanni",
+        "emoji": "🎤"
+      },
+      {
+        "front": "عزف على آلة",
+        "back": "jouer d'un instrument",
+        "translit": "'azāfa 'lā āla",
+        "emoji": "🎸"
+      },
+      {
+        "front": "حسب الإيقاع",
+        "back": "compter le rythme",
+        "translit": "hasaba l-īqā'",
+        "emoji": "🥁"
+      },
+      {
+        "front": "قائد الجوق",
+        "back": "le chef d'orchestre",
+        "translit": "qā'id al-djawq",
+        "emoji": "🎼"
+      }
+    ]
   },
   {
     "id": "les-continents",
@@ -3834,6 +4120,85 @@ window.DECKS_DATA = [
         "back": "l'Aïd al-Fitr",
         "translit": "Aid al-fitre",
         "emoji": "🎉"
+      }
+    ]
+  },
+  {
+    "id": "la-ferme",
+    "name": "La ferme",
+    "category": "Le monde",
+    "cards": [
+      {
+        "front": "المزارع",
+        "back": "le fermier",
+        "translit": "al-mouzāri'",
+        "emoji": "👨‍🌾"
+      },
+      {
+        "front": "الجرار",
+        "back": "le tracteur",
+        "translit": "al-djarrār",
+        "emoji": "🚜"
+      },
+      {
+        "front": "عربة اليد",
+        "back": "la brouette",
+        "translit": "'arabat al-yad",
+        "emoji": "🛒"
+      },
+      {
+        "front": "مخزن الأدوات",
+        "back": "le hangar à outils",
+        "translit": "makhzan al-adawāt",
+        "emoji": "🏚️"
+      },
+      {
+        "front": "البستان",
+        "back": "le verger",
+        "translit": "al-boustān",
+        "emoji": "🌳"
+      },
+      {
+        "front": "الحقل",
+        "back": "le champ",
+        "translit": "al-haql",
+        "emoji": "🌾"
+      },
+      {
+        "front": "حظيرة الدجاج",
+        "back": "le poulailler",
+        "translit": "hadhirat ad-dadjādj",
+        "emoji": "🐔"
+      },
+      {
+        "front": "الحظيرة",
+        "back": "la basse-cour",
+        "translit": "al-hadhīra",
+        "emoji": "🐔"
+      },
+      {
+        "front": "الإسطبل",
+        "back": "l'étable",
+        "translit": "al-istabāl",
+        "emoji": "🐄"
+      },
+      {
+        "front": "إسطبل الخيول",
+        "back": "l'écurie",
+        "translit": "istabāl li-l-khouyoûl",
+        "emoji": "🐴"
+      },
+      {
+        "front": "حظيرة الغنم",
+        "back": "la bergerie",
+        "translit": "hadhīrat al-ghanam",
+        "emoji": "🐑"
+      },
+      {
+        "front": "حظيرة الخنزير",
+        "back": "la porcherie",
+        "translit": "hadhīrat al-khinzir",
+        "emoji": "🐷"
       }
     ]
   }

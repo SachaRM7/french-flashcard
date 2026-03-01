@@ -1,0 +1,14 @@
+{
+  "id": "jouer-de-la-musique",
+  "name": "Jouer de la musique",
+  "nameAr": "يعزف",
+  "category": "La musique",
+  "cards": [
+    { "fr": "la note de musique", "en": "musical note", "ar": "النوتة", "ar_translit": "an-noûta", "emoji": "🎵" },
+    { "fr": "la partition", "en": "sheet music", "ar": "قيطة موسيقية", "ar_translit": "qit'a moûsiqiyya", "emoji": "🎼" },
+    { "fr": "chanter", "en": "sing", "ar": "يغني", "ar_translit": "youghanni", "emoji": "🎤" },
+    { "fr": "jouer d'un instrument", "en": "play an instrument", "ar": "عزف على آلة", "ar_translit": "'azāfa 'lā āla", "emoji": "🎸" },
+    { "fr": "compter le rythme", "en": "count the beat", "ar": "حسب الإيقاع", "ar_translit": "hasaba l-īqā'", "emoji": "🥁" },
+    { "fr": "le chef d'orchestre", "en": "conductor", "ar": "قائد الجوق", "ar_translit": "qā'id al-djawq", "emoji": "🎼" }
+  ]
+}
