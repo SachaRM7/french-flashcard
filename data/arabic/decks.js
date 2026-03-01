@@ -1,5 +1,5 @@
-// Auto-generated decks - 2026-03-01T09:42:22.692138
-window.DECKS_VERSION = '2026-03-01T09:42:22.692138';
+// Auto-generated decks - 2026-03-01T09:45:29.867493
+window.DECKS_VERSION = '2026-03-01T09:45:29.867493';
 window.DECKS_DATA = [
   {
     "id": "couleurs",

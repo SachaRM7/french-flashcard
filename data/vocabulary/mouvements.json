@@ -4,11 +4,11 @@
   "nameAr": "الحركات",
   "category": "Verbes",
   "cards": [
-    { "fr": "marcher", "ar": "مشي", "ar_translit": "mashy", "emoji": "🚶" },
-    { "fr": "courir", "ar": "جري", "ar_translit": "jari", "emoji": "🏃" },
-    { "fr": "sauter", "ar": "قفز", "ar_translit": "qafz", "emoji": "🦘" },
-    { "fr": "danser", "ar": "رقص", "ar_translit": "raqas", "emoji": "💃" },
-    { "fr": "nager", "ar": "سباحة", "ar_translit": "sibaha", "emoji": "🏊" },
-    { "fr": "tomber", "ar": "سقط", "ar_translit": "saqat", "emoji": "⬇️" }
+    { "fr": "marcher", "en": "walk", "ar": "مشي", "ar_translit": "mashy", "emoji": "🚶" },
+    { "fr": "courir", "en": "run", "ar": "جري", "ar_translit": "jari", "emoji": "🏃" },
+    { "fr": "sauter", "en": "jump", "ar": "قفز", "ar_translit": "qafz", "emoji": "🦘" },
+    { "fr": "danser", "en": "dance", "ar": "رقص", "ar_translit": "raqas", "emoji": "💃" },
+    { "fr": "nager", "en": "swim", "ar": "سباحة", "ar_translit": "sibaha", "emoji": "🏊" },
+    { "fr": "tomber", "en": "fall", "ar": "سقط", "ar_translit": "saqat", "emoji": "⬇️" }
   ]
 }

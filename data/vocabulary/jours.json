@@ -4,12 +4,12 @@
   "nameAr": "أيام الأسبوع",
   "category": "Temps",
   "cards": [
-    { "fr": "lundi", "ar": "الاثنين", "ar_translit": "al-ithnain", "emoji": "📅" },
-    { "fr": "mardi", "ar": "الثلاثاء", "ar_translit": "al-thoulathā", "emoji": "📅" },
-    { "fr": "mercredi", "ar": "الأربعاء", "ar_translit": "al-arbi'ā", "emoji": "📅" },
-    { "fr": "jeudi", "ar": "الخميس", "ar_translit": "al-khamis", "emoji": "📅" },
-    { "fr": "vendredi", "ar": "الجمعة", "ar_translit": "al-djoumouaa", "emoji": "📅" },
-    { "fr": "samedi", "ar": "السبت", "ar_translit": "as-sabt", "emoji": "📅" },
-    { "fr": "dimanche", "ar": "الأحد", "ar_translit": "al-ahad", "emoji": "📅" }
+    { "fr": "lundi", "en": "Monday", "ar": "الاثنين", "ar_translit": "al-ithnain", "emoji": "📅" },
+    { "fr": "mardi", "en": "Tuesday", "ar": "الثلاثاء", "ar_translit": "al-thoulathā", "emoji": "📅" },
+    { "fr": "mercredi", "en": "Wednesday", "ar": "الأربعاء", "ar_translit": "al-arbi'ā", "emoji": "📅" },
+    { "fr": "jeudi", "en": "Thursday", "ar": "الخميس", "ar_translit": "al-khamis", "emoji": "📅" },
+    { "fr": "vendredi", "en": "Friday", "ar": "الجمعة", "ar_translit": "al-djoumouaa", "emoji": "📅" },
+    { "fr": "samedi", "en": "Saturday", "ar": "السبت", "ar_translit": "as-sabt", "emoji": "📅" },
+    { "fr": "dimanche", "en": "Sunday", "ar": "الأحد", "ar_translit": "al-ahad", "emoji": "📅" }
   ]
 }

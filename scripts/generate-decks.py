@@ -112,17 +112,31 @@ def generate_decks(do_translate=False):
         for card in vocab["cards"]:
             word_fr = card["fr"]
             emoji = card.get("emoji", "")
-            trans = cache.get(word_fr, {"en": word_fr, "ar": word_fr, "translit": ""})
+            
+            # D'abord, regarder si AR/EN/TRANSLIT sont déjà dans la carte
+            ar = card.get("ar")
+            en = card.get("en")
+            translit = card.get("ar_translit", "")
+            
+            # Sinon, regarder dans le cache
+            if not ar or not en:
+                trans = cache.get(word_fr, {})
+                if not ar:
+                    ar = trans.get("ar", word_fr)
+                if not en:
+                    en = trans.get("en", word_fr)
+                if not translit:
+                    translit = trans.get("translit", "")
             
             arabic_cards.append({
-                "front": trans["ar"],
+                "front": ar,
                 "back": word_fr,
-                "translit": trans.get("translit", ""),
+                "translit": translit,
                 "emoji": emoji
             })
             
             french_cards.append({
-                "front": trans["en"],
+                "front": en,
                 "back": word_fr,
                 "emoji": emoji
             })
