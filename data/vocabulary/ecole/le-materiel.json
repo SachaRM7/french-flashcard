@@ -1,20 +1,6 @@
 {
   "id": "le-materiel",
-  "name": "Le matériel scolaire",
-  "nameAr": "الأدوات المدرسية",
-  "category": "L'école",
-  "cards": [
-    { "fr": "le livre", "en": "book", "ar": "الكتاب", "ar_translit": "al-kitāb", "emoji": "📖" },
-    { "fr": "la bibliothèque", "en": "library", "ar": "المكتبة", "ar_translit": "al-maktaba", "emoji": "📚" },
-    { "fr": "le panier à doudous", "en": "toy basket", "ar": "سلة للدمى", "ar_translit": "sallat li-d-duuma", "emoji": "🧺" },
-    { "fr": "les jeux de société", "en": "board games", "ar": "لعبة الطاولة", "ar_translit": "lu'bat tāwila", "emoji": "🎲" },
-    { "fr": "le cartable", "en": "schoolbag", "ar": "الحقيبة", "ar_translit": "al-haqiba", "emoji": "🎒" },
-    { "fr": "le portemanteau", "en": "coat rack", "ar": "معلّق الملاعيف", "ar_translit": "moualiq alama'atif", "emoji": "🧥" },
-    { "fr": "le cahier", "en": "notebook", "ar": "الكرّاس", "ar_translit": "al-korras", "emoji": "📓" },
-    { "fr": "les crayons", "en": "crayons", "ar": "أقلام رصاص", "ar_translit": "aqlām rasās", "emoji": "✏️" },
-    { "fr": "la gomme", "en": "eraser", "ar": "الممحاة", "ar_translit": "al-mimhāt", "emoji": "🧹" },
-    { "fr": "la règle", "en": "ruler", "ar": "المسطرة", "ar_translit": "al-mistara", "emoji": "📏" },
-    { "fr": "les ciseaux", "en": "scissors", "ar": "المقص", "ar_translit": "al-miqs", "emoji": "✂️" },
-    { "fr": "la colle", "en": "glue", "ar": "الغراء", "ar_translit": "alghirāe", "emoji": "🧴" }
-  ]
+  "name": "Le Materiel",
+  "category": "L Ecole",
+  "cards": []
 }

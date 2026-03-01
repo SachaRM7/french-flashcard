@@ -1,17 +1,6 @@
 {
   "id": "le-chemin-de-l-ecole",
-  "name": "Le chemin de l'école",
-  "nameAr": "الطريق إلى المدرسة",
-  "category": "L'école",
-  "cards": [
-    { "fr": "le bibliobus", "en": "library bus", "ar": "مكتبة متنقلة", "ar_translit": "maktaba moutanaqila", "emoji": "📚" },
-    { "fr": "le bus scolaire", "en": "school bus", "ar": "الناقل المدرسي", "ar_translit": "an-naqil al-madrassi", "emoji": "🚌" },
-    { "fr": "le parking", "en": "parking lot", "ar": "موقف السيارات", "ar_translit": "mawqif as-sayārāt", "emoji": "🅿️" },
-    { "fr": "le feu tricolore", "en": "traffic light", "ar": "إشارة المرور", "ar_translit": "ishārat al-morūr", "emoji": "🚦" },
-    { "fr": "la crèche", "en": "daycare", "ar": "روضة الأطفال", "ar_translit": "rawdha al-atfāl", "emoji": "👶" },
-    { "fr": "le passage piéton", "en": "crosswalk", "ar": "ممر المشاة", "ar_translit": "mammar al-mashāt", "emoji": "🚶" },
-    { "fr": "l'école maternelle", "en": "preschool", "ar": "الحضانة", "ar_translit": "al-hadhāna", "emoji": "🏫" },
-    { "fr": "l'école primaire", "en": "primary school", "ar": "مدرسة ابتدائية", "ar_translit": "madrasa ibtidāiyya", "emoji": "🏫" },
-    { "fr": "la cour de récréation", "en": "playground", "ar": "ساحة المدرسة", "ar_translit": "sāhat al-madrasas", "emoji": "🎪" }
-  ]
+  "name": "Le Chemin De L Ecole",
+  "category": "L Ecole",
+  "cards": []
 }

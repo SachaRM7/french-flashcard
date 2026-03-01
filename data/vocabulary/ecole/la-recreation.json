@@ -1,20 +1,6 @@
 {
   "id": "la-recreation",
-  "name": "La récréation",
-  "nameAr": "الاستراحة",
-  "category": "L'école",
-  "cards": [
-    { "fr": "le ballon", "en": "ball", "ar": "الكرة", "ar_translit": "al-kora", "emoji": "⚽" },
-    { "fr": "le toboggan", "en": "slide", "ar": "الزحلقة", "ar_translit": "az-zahlaqā", "emoji": "🛝" },
-    { "fr": "la marelle", "en": "hopscotch", "ar": "لعبة المربعات", "ar_translit": "lou'bat al-mourabba'āt", "emoji": "🎲" },
-    { "fr": "le tricycle", "en": "tricycle", "ar": "دراجة ذات ثلاث عجلات", "ar_translit": "daradja dhāt thalāth 'ajalāt", "emoji": "🚲" },
-    { "fr": "le banc", "en": "bench", "ar": "المقعد", "ar_translit": "al-maq'ad", "emoji": "🪑" },
-    { "fr": "jouer au loup", "en": "play tag", "ar": "لعبة الذيب", "ar_translit": "lou'bat adh-dhieb", "emoji": "🏃" },
-    { "fr": "faire la ronde", "en": "play ring around the rosie", "ar": "لعبة الدائرة", "ar_translit": "lou'bat ad-dāira", "emoji": "👥" },
-    { "fr": "s'ennuyer", "en": "get bored", "ar": "ملل", "ar_translit": "malla", "emoji": "😑" },
-    { "fr": "se disputer", "en": "fight/argue", "ar": "تخاصم", "ar_translit": "takhāṣama", "emoji": "😠" },
-    { "fr": "se réconcilier", "en": "make up", "ar": "تصالح", "ar_translit": "tașālaha", "emoji": "🤝" },
-    { "fr": "se tenir la main", "en": "hold hands", "ar": "مسك اليد", "ar_translit": "mask al-yad", "emoji": "🤲" },
-    { "fr": "se mettre en rang", "en": "get in line", "ar": "اصطفف", "ar_translit": "istaffa", "emoji": "📏" }
-  ]
+  "name": "La Recreation",
+  "category": "L Ecole",
+  "cards": []
 }

@@ -1,5 +1,5 @@
-// Auto-generated decks - 2026-03-01T13:50:19.302242
-window.DECKS_VERSION = '2026-03-01T13:50:19.302242';
+// Auto-generated decks - 2026-03-01T13:53:24.724301
+window.DECKS_VERSION = '2026-03-01T13:53:24.724301';
 window.DECKS_DATA = [
   {
     "id": "les-animaux-de-la-montagne",
@@ -1319,125 +1319,6 @@ window.DECKS_DATA = [
     ]
   },
   {
-    "id": "la-rue",
-    "name": "La rue",
-    "category": "La ville",
-    "cards": [
-      {
-        "front": "fire station",
-        "back": "la caserne des pompiers",
-        "emoji": "🚒"
-      },
-      {
-        "front": "bus stop",
-        "back": "l'arrêt de bus",
-        "emoji": "🚌"
-      },
-      {
-        "front": "apartment building",
-        "back": "l'immeuble",
-        "emoji": "🏢"
-      },
-      {
-        "front": "newspaper stand",
-        "back": "le kiosque à journaux",
-        "emoji": "📰"
-      },
-      {
-        "front": "square/plaza",
-        "back": "la place",
-        "emoji": "🏛️"
-      },
-      {
-        "front": "bank",
-        "back": "la banque",
-        "emoji": "🏦"
-      },
-      {
-        "front": "town hall",
-        "back": "la mairie",
-        "emoji": "🏛️"
-      },
-      {
-        "front": "train station",
-        "back": "la gare",
-        "emoji": "🚂"
-      },
-      {
-        "front": "library",
-        "back": "la bibliothèque",
-        "emoji": "📚"
-      },
-      {
-        "front": "supermarket",
-        "back": "le supermarché",
-        "emoji": "🛒"
-      },
-      {
-        "front": "mosque",
-        "back": "la mosquée",
-        "emoji": "🕌"
-      }
-    ]
-  },
-  {
-    "id": "le-square",
-    "name": "Le square",
-    "category": "La ville",
-    "cards": [
-      {
-        "front": "sandbox",
-        "back": "le bac à sable",
-        "emoji": "🏖️"
-      },
-      {
-        "front": "fountain",
-        "back": "la fontaine",
-        "emoji": "⛲"
-      },
-      {
-        "front": "swing",
-        "back": "la balançoire",
-        "emoji": "🎪"
-      },
-      {
-        "front": "carousel",
-        "back": "le manège",
-        "emoji": "🎠"
-      },
-      {
-        "front": "nanny",
-        "back": "la nounou",
-        "emoji": "👩‍🍼"
-      },
-      {
-        "front": "snack",
-        "back": "le goûter",
-        "emoji": "🍪"
-      },
-      {
-        "front": "pram",
-        "back": "le landau",
-        "emoji": "👶"
-      },
-      {
-        "front": "stroller",
-        "back": "la poussette",
-        "emoji": "👶"
-      },
-      {
-        "front": "scooter",
-        "back": "la trottinette",
-        "emoji": "🛴"
-      },
-      {
-        "front": "roller skates",
-        "back": "les patins à roulettes",
-        "emoji": "⛸️"
-      }
-    ]
-  },
-  {
     "id": "jouer-de-la-musique",
     "name": "Jouer De La Musique",
     "category": "La Musique",
@@ -1556,300 +1437,39 @@ window.DECKS_DATA = [
   },
   {
     "id": "la-cantine",
-    "name": "La cantine",
-    "category": "L'école",
-    "cards": [
-      {
-        "front": "menu",
-        "back": "le menu",
-        "emoji": "📋"
-      },
-      {
-        "front": "lunch lady",
-        "back": "la dame de cantine",
-        "emoji": "👩‍🍳"
-      },
-      {
-        "front": "cart",
-        "back": "le chariot",
-        "emoji": "🛒"
-      },
-      {
-        "front": "dish/plate",
-        "back": "le plat",
-        "emoji": "🍽️"
-      },
-      {
-        "front": "napkin",
-        "back": "la serviette",
-        "emoji": "🧻"
-      },
-      {
-        "front": "eat alone",
-        "back": "manger tout seul",
-        "emoji": "🍴"
-      }
-    ]
+    "name": "La Cantine",
+    "category": "L Ecole",
+    "cards": []
   },
   {
     "id": "la-salle-de-classe",
-    "name": "La salle de classe",
-    "category": "L'école",
-    "cards": [
-      {
-        "front": "blackboard",
-        "back": "le tableau",
-        "emoji": "🖌️"
-      },
-      {
-        "front": "date",
-        "back": "la date",
-        "emoji": "📅"
-      },
-      {
-        "front": "clock",
-        "back": "l'horloge",
-        "emoji": "🕐"
-      },
-      {
-        "front": "name list",
-        "back": "la liste des noms",
-        "emoji": "📝"
-      },
-      {
-        "front": "desk",
-        "back": "le bureau",
-        "emoji": "📚"
-      },
-      {
-        "front": "chair",
-        "back": "la chaise",
-        "emoji": "🪑"
-      }
-    ]
+    "name": "La Salle De Classe",
+    "category": "L Ecole",
+    "cards": []
   },
   {
     "id": "la-gymnastique",
-    "name": "La gymnastique",
-    "category": "L'école",
-    "cards": [
-      {
-        "front": "sports shoes",
-        "back": "les chaussures de sport",
-        "emoji": "👟"
-      },
-      {
-        "front": "cone",
-        "back": "le plot",
-        "emoji": "🔴"
-      },
-      {
-        "front": "hoop",
-        "back": "le cerceau",
-        "emoji": "⭕"
-      },
-      {
-        "front": "beam",
-        "back": "la poutre",
-        "emoji": "🏅"
-      },
-      {
-        "front": "skittles",
-        "back": "les quilles",
-        "emoji": "🎳"
-      },
-      {
-        "front": "do a roll",
-        "back": "faire une roulade",
-        "emoji": "🤸"
-      }
-    ]
+    "name": "La Gymnastique",
+    "category": "L Ecole",
+    "cards": []
   },
   {
     "id": "le-chemin-de-l-ecole",
-    "name": "Le chemin de l'école",
-    "category": "L'école",
-    "cards": [
-      {
-        "front": "library bus",
-        "back": "le bibliobus",
-        "emoji": "📚"
-      },
-      {
-        "front": "school bus",
-        "back": "le bus scolaire",
-        "emoji": "🚌"
-      },
-      {
-        "front": "parking lot",
-        "back": "le parking",
-        "emoji": "🅿️"
-      },
-      {
-        "front": "traffic light",
-        "back": "le feu tricolore",
-        "emoji": "🚦"
-      },
-      {
-        "front": "daycare",
-        "back": "la crèche",
-        "emoji": "👶"
-      },
-      {
-        "front": "crosswalk",
-        "back": "le passage piéton",
-        "emoji": "🚶"
-      },
-      {
-        "front": "preschool",
-        "back": "l'école maternelle",
-        "emoji": "🏫"
-      },
-      {
-        "front": "primary school",
-        "back": "l'école primaire",
-        "emoji": "🏫"
-      },
-      {
-        "front": "playground",
-        "back": "la cour de récréation",
-        "emoji": "🎪"
-      }
-    ]
+    "name": "Le Chemin De L Ecole",
+    "category": "L Ecole",
+    "cards": []
   },
   {
     "id": "le-materiel",
-    "name": "Le matériel scolaire",
-    "category": "L'école",
-    "cards": [
-      {
-        "front": "book",
-        "back": "le livre",
-        "emoji": "📖"
-      },
-      {
-        "front": "library",
-        "back": "la bibliothèque",
-        "emoji": "📚"
-      },
-      {
-        "front": "toy basket",
-        "back": "le panier à doudous",
-        "emoji": "🧺"
-      },
-      {
-        "front": "board games",
-        "back": "les jeux de société",
-        "emoji": "🎲"
-      },
-      {
-        "front": "schoolbag",
-        "back": "le cartable",
-        "emoji": "🎒"
-      },
-      {
-        "front": "coat rack",
-        "back": "le portemanteau",
-        "emoji": "🧥"
-      },
-      {
-        "front": "notebook",
-        "back": "le cahier",
-        "emoji": "📓"
-      },
-      {
-        "front": "crayons",
-        "back": "les crayons",
-        "emoji": "✏️"
-      },
-      {
-        "front": "eraser",
-        "back": "la gomme",
-        "emoji": "🧹"
-      },
-      {
-        "front": "ruler",
-        "back": "la règle",
-        "emoji": "📏"
-      },
-      {
-        "front": "scissors",
-        "back": "les ciseaux",
-        "emoji": "✂️"
-      },
-      {
-        "front": "glue",
-        "back": "la colle",
-        "emoji": "🧴"
-      }
-    ]
+    "name": "Le Materiel",
+    "category": "L Ecole",
+    "cards": []
   },
   {
     "id": "la-recreation",
-    "name": "La récréation",
-    "category": "L'école",
-    "cards": [
-      {
-        "front": "ball",
-        "back": "le ballon",
-        "emoji": "⚽"
-      },
-      {
-        "front": "slide",
-        "back": "le toboggan",
-        "emoji": "🛝"
-      },
-      {
-        "front": "hopscotch",
-        "back": "la marelle",
-        "emoji": "🎲"
-      },
-      {
-        "front": "tricycle",
-        "back": "le tricycle",
-        "emoji": "🚲"
-      },
-      {
-        "front": "bench",
-        "back": "le banc",
-        "emoji": "🪑"
-      },
-      {
-        "front": "play tag",
-        "back": "jouer au loup",
-        "emoji": "🏃"
-      },
-      {
-        "front": "play ring around the rosie",
-        "back": "faire la ronde",
-        "emoji": "👥"
-      },
-      {
-        "front": "get bored",
-        "back": "s'ennuyer",
-        "emoji": "😑"
-      },
-      {
-        "front": "fight/argue",
-        "back": "se disputer",
-        "emoji": "😠"
-      },
-      {
-        "front": "make up",
-        "back": "se réconcilier",
-        "emoji": "🤝"
-      },
-      {
-        "front": "hold hands",
-        "back": "se tenir la main",
-        "emoji": "🤲"
-      },
-      {
-        "front": "get in line",
-        "back": "se mettre en rang",
-        "emoji": "📏"
-      }
-    ]
+    "name": "La Recreation",
+    "category": "L Ecole",
+    "cards": []
   },
   {
     "id": "les-arts-plastiques",
@@ -2521,133 +2141,6 @@ window.DECKS_DATA = [
     ]
   },
   {
-    "id": "les-metiers",
-    "name": "Les métiers",
-    "category": "Le travail",
-    "cards": [
-      {
-        "front": "schoolteacher",
-        "back": "le professeur des écoles",
-        "emoji": "👨‍🏫"
-      },
-      {
-        "front": "headmistress",
-        "back": "la directrice",
-        "emoji": "👩‍💼"
-      },
-      {
-        "front": "secretary",
-        "back": "la secrétaire",
-        "emoji": "👩‍💻"
-      },
-      {
-        "front": "janitor",
-        "back": "l'homme de ménage",
-        "emoji": "🧹"
-      },
-      {
-        "front": "cook",
-        "back": "le cuisinier",
-        "emoji": "👨‍🍳"
-      },
-      {
-        "front": "gardener",
-        "back": "le jardinier",
-        "emoji": "🌱"
-      },
-      {
-        "front": "veterinarian",
-        "back": "la vétérinaire",
-        "emoji": "🐾"
-      },
-      {
-        "front": "firefighter",
-        "back": "le pompier",
-        "emoji": "🚒"
-      },
-      {
-        "front": "policeman",
-        "back": "le policier",
-        "emoji": "👮"
-      },
-      {
-        "front": "soldier",
-        "back": "le militaire",
-        "emoji": "🪖"
-      },
-      {
-        "front": "doctor",
-        "back": "la médecin",
-        "emoji": "👨‍⚕️"
-      },
-      {
-        "front": "nurse",
-        "back": "l'infirmière",
-        "emoji": "👩‍⚕️"
-      },
-      {
-        "front": "postman",
-        "back": "le facteur",
-        "emoji": "📮"
-      },
-      {
-        "front": "waiter",
-        "back": "le serveur",
-        "emoji": "🍽️"
-      },
-      {
-        "front": "journalist",
-        "back": "la journaliste",
-        "emoji": "📰"
-      },
-      {
-        "front": "illustrator",
-        "back": "l'illustratrice",
-        "emoji": "🎨"
-      },
-      {
-        "front": "photographer",
-        "back": "la photographe",
-        "emoji": "📷"
-      },
-      {
-        "front": "pilot",
-        "back": "la pilote de ligne",
-        "emoji": "✈️"
-      },
-      {
-        "front": "mechanic",
-        "back": "le garagiste",
-        "emoji": "🚗"
-      },
-      {
-        "front": "mover",
-        "back": "le déménageur",
-        "emoji": "📦"
-      },
-      {
-        "front": "architect",
-        "back": "l'architecte",
-        "emoji": "🏗️"
-      },
-      {
-        "front": "worker",
-        "back": "l'ouvrier",
-        "emoji": "👷"
-      },
-      {
-        "front": "seamstress",
-        "back": "la couturière",
-        "emoji": "🪡"
-      },
-      {
-        "front": "be unemployed",
-        "back": "être au chômage",
-        "emoji": "😔"
-      }
-    ]
-  },
-  {
     "id": "faire-du-sport",
     "name": "Faire du sport",
     "category": "Les sports",
@@ -2939,21 +2432,249 @@ window.DECKS_DATA = [
   },
   {
     "id": "les-metiers",
-    "name": "Les Metiers",
-    "category": "Le Travail",
-    "cards": []
+    "name": "Les métiers",
+    "category": "Le travail",
+    "cards": [
+      {
+        "front": "schoolteacher",
+        "back": "le professeur des écoles",
+        "emoji": "👨‍🏫"
+      },
+      {
+        "front": "headmistress",
+        "back": "la directrice",
+        "emoji": "👩‍💼"
+      },
+      {
+        "front": "secretary",
+        "back": "la secrétaire",
+        "emoji": "👩‍💻"
+      },
+      {
+        "front": "janitor",
+        "back": "l'homme de ménage",
+        "emoji": "🧹"
+      },
+      {
+        "front": "cook",
+        "back": "le cuisinier",
+        "emoji": "👨‍🍳"
+      },
+      {
+        "front": "gardener",
+        "back": "le jardinier",
+        "emoji": "🌱"
+      },
+      {
+        "front": "veterinarian",
+        "back": "la vétérinaire",
+        "emoji": "🐾"
+      },
+      {
+        "front": "firefighter",
+        "back": "le pompier",
+        "emoji": "🚒"
+      },
+      {
+        "front": "policeman",
+        "back": "le policier",
+        "emoji": "👮"
+      },
+      {
+        "front": "soldier",
+        "back": "le militaire",
+        "emoji": "🪖"
+      },
+      {
+        "front": "doctor",
+        "back": "la médecin",
+        "emoji": "👨‍⚕️"
+      },
+      {
+        "front": "nurse",
+        "back": "l'infirmière",
+        "emoji": "👩‍⚕️"
+      },
+      {
+        "front": "postman",
+        "back": "le facteur",
+        "emoji": "📮"
+      },
+      {
+        "front": "waiter",
+        "back": "le serveur",
+        "emoji": "🍽️"
+      },
+      {
+        "front": "journalist",
+        "back": "la journaliste",
+        "emoji": "📰"
+      },
+      {
+        "front": "illustrator",
+        "back": "l'illustratrice",
+        "emoji": "🎨"
+      },
+      {
+        "front": "photographer",
+        "back": "la photographe",
+        "emoji": "📷"
+      },
+      {
+        "front": "pilot",
+        "back": "la pilote de ligne",
+        "emoji": "✈️"
+      },
+      {
+        "front": "mechanic",
+        "back": "le garagiste",
+        "emoji": "🚗"
+      },
+      {
+        "front": "mover",
+        "back": "le déménageur",
+        "emoji": "📦"
+      },
+      {
+        "front": "architect",
+        "back": "l'architecte",
+        "emoji": "🏗️"
+      },
+      {
+        "front": "worker",
+        "back": "l'ouvrier",
+        "emoji": "👷"
+      },
+      {
+        "front": "seamstress",
+        "back": "la couturière",
+        "emoji": "🪡"
+      },
+      {
+        "front": "be unemployed",
+        "back": "être au chômage",
+        "emoji": "😔"
+      }
+    ]
   },
   {
     "id": "la-rue",
-    "name": "La Rue",
-    "category": "La Ville",
-    "cards": []
+    "name": "La rue",
+    "category": "La ville",
+    "cards": [
+      {
+        "front": "fire station",
+        "back": "la caserne des pompiers",
+        "emoji": "🚒"
+      },
+      {
+        "front": "bus stop",
+        "back": "l'arrêt de bus",
+        "emoji": "🚌"
+      },
+      {
+        "front": "apartment building",
+        "back": "l'immeuble",
+        "emoji": "🏢"
+      },
+      {
+        "front": "newspaper stand",
+        "back": "le kiosque à journaux",
+        "emoji": "📰"
+      },
+      {
+        "front": "square/plaza",
+        "back": "la place",
+        "emoji": "🏛️"
+      },
+      {
+        "front": "bank",
+        "back": "la banque",
+        "emoji": "🏦"
+      },
+      {
+        "front": "town hall",
+        "back": "la mairie",
+        "emoji": "🏛️"
+      },
+      {
+        "front": "train station",
+        "back": "la gare",
+        "emoji": "🚂"
+      },
+      {
+        "front": "library",
+        "back": "la bibliothèque",
+        "emoji": "📚"
+      },
+      {
+        "front": "supermarket",
+        "back": "le supermarché",
+        "emoji": "🛒"
+      },
+      {
+        "front": "mosque",
+        "back": "la mosquée",
+        "emoji": "🕌"
+      }
+    ]
   },
   {
     "id": "le-square",
-    "name": "Le Square",
-    "category": "La Ville",
-    "cards": []
+    "name": "Le square",
+    "category": "La ville",
+    "cards": [
+      {
+        "front": "sandbox",
+        "back": "le bac à sable",
+        "emoji": "🏖️"
+      },
+      {
+        "front": "fountain",
+        "back": "la fontaine",
+        "emoji": "⛲"
+      },
+      {
+        "front": "swing",
+        "back": "la balançoire",
+        "emoji": "🎪"
+      },
+      {
+        "front": "carousel",
+        "back": "le manège",
+        "emoji": "🎠"
+      },
+      {
+        "front": "nanny",
+        "back": "la nounou",
+        "emoji": "👩‍🍼"
+      },
+      {
+        "front": "snack",
+        "back": "le goûter",
+        "emoji": "🍪"
+      },
+      {
+        "front": "pram",
+        "back": "le landau",
+        "emoji": "👶"
+      },
+      {
+        "front": "stroller",
+        "back": "la poussette",
+        "emoji": "👶"
+      },
+      {
+        "front": "scooter",
+        "back": "la trottinette",
+        "emoji": "🛴"
+      },
+      {
+        "front": "roller skates",
+        "back": "les patins à roulettes",
+        "emoji": "⛸️"
+      }
+    ]
   },
   {
     "id": "les-emotions",
@@ -3297,75 +3018,69 @@ window.DECKS_DATA = [
     ]
   },
   {
-    "id": "la-cantine",
-    "name": "La Cantine",
-    "category": "L Ecole",
-    "cards": []
-  },
-  {
-    "id": "la-salle-de-classe",
-    "name": "La Salle De Classe",
-    "category": "L Ecole",
-    "cards": []
-  },
-  {
-    "id": "la-gymnastique",
-    "name": "La Gymnastique",
-    "category": "L Ecole",
-    "cards": []
-  },
-  {
-    "id": "le-chemin-de-l-ecole",
-    "name": "Le Chemin De L Ecole",
-    "category": "L Ecole",
-    "cards": []
-  },
-  {
-    "id": "le-materiel",
-    "name": "Le Materiel",
-    "category": "L Ecole",
-    "cards": []
-  },
-  {
-    "id": "la-recreation",
-    "name": "La Recreation",
-    "category": "L Ecole",
-    "cards": []
-  },
-  {
-    "id": "jouer-de-la-musique",
-    "name": "Jouer de la musique",
-    "category": "La musique",
+    "id": "la-ferme",
+    "name": "La ferme",
+    "category": "Le monde",
     "cards": [
       {
-        "front": "musical note",
-        "back": "la note de musique",
-        "emoji": "🎵"
+        "front": "farmer",
+        "back": "le fermier",
+        "emoji": "👨‍🌾"
       },
       {
-        "front": "sheet music",
-        "back": "la partition",
-        "emoji": "🎼"
+        "front": "tractor",
+        "back": "le tracteur",
+        "emoji": "🚜"
       },
       {
-        "front": "sing",
-        "back": "chanter",
-        "emoji": "🎤"
+        "front": "wheelbarrow",
+        "back": "la brouette",
+        "emoji": "🛒"
       },
       {
-        "front": "play an instrument",
-        "back": "jouer d'un instrument",
-        "emoji": "🎸"
+        "front": "tool shed",
+        "back": "le hangar à outils",
+        "emoji": "🏚️"
       },
       {
-        "front": "count the beat",
-        "back": "compter le rythme",
-        "emoji": "🥁"
+        "front": "orchard",
+        "back": "le verger",
+        "emoji": "🌳"
       },
       {
-        "front": "conductor",
-        "back": "le chef d'orchestre",
-        "emoji": "🎼"
+        "front": "field",
+        "back": "le champ",
+        "emoji": "🌾"
+      },
+      {
+        "front": "chicken coop",
+        "back": "le poulailler",
+        "emoji": "🐔"
+      },
+      {
+        "front": "farmyard",
+        "back": "la basse-cour",
+        "emoji": "🐔"
+      },
+      {
+        "front": "stable",
+        "back": "l'étable",
+        "emoji": "🐄"
+      },
+      {
+        "front": "horse stable",
+        "back": "l'écurie",
+        "emoji": "🐴"
+      },
+      {
+        "front": "sheepfold",
+        "back": "la bergerie",
+        "emoji": "🐑"
+      },
+      {
+        "front": "pigsty",
+        "back": "la porcherie",
+        "emoji": "🐷"
       }
     ]
   },
@@ -3823,73 +3538,6 @@ window.DECKS_DATA = [
         "front": "Eid al-Fitr",
         "back": "l'Aïd al-Fitr",
         "emoji": "🎉"
-      }
-    ]
-  },
-  {
-    "id": "la-ferme",
-    "name": "La ferme",
-    "category": "Le monde",
-    "cards": [
-      {
-        "front": "farmer",
-        "back": "le fermier",
-        "emoji": "👨‍🌾"
-      },
-      {
-        "front": "tractor",
-        "back": "le tracteur",
-        "emoji": "🚜"
-      },
-      {
-        "front": "wheelbarrow",
-        "back": "la brouette",
-        "emoji": "🛒"
-      },
-      {
-        "front": "tool shed",
-        "back": "le hangar à outils",
-        "emoji": "🏚️"
-      },
-      {
-        "front": "orchard",
-        "back": "le verger",
-        "emoji": "🌳"
-      },
-      {
-        "front": "field",
-        "back": "le champ",
-        "emoji": "🌾"
-      },
-      {
-        "front": "chicken coop",
-        "back": "le poulailler",
-        "emoji": "🐔"
-      },
-      {
-        "front": "farmyard",
-        "back": "la basse-cour",
-        "emoji": "🐔"
-      },
-      {
-        "front": "stable",
-        "back": "l'étable",
-        "emoji": "🐄"
-      },
-      {
-        "front": "horse stable",
-        "back": "l'écurie",
-        "emoji": "🐴"
-      },
-      {
-        "front": "sheepfold",
-        "back": "la bergerie",
-        "emoji": "🐑"
-      },
-      {
-        "front": "pigsty",
-        "back": "la porcherie",
-        "emoji": "🐷"
       }
     ]
   }

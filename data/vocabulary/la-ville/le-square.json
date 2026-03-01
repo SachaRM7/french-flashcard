@@ -1,6 +1,18 @@
 {
   "id": "le-square",
-  "name": "Le Square",
-  "category": "La Ville",
-  "cards": []
+  "name": "Le square",
+  "nameAr": "الحديقة",
+  "category": "La ville",
+  "cards": [
+    { "fr": "le bac à sable", "en": "sandbox", "ar": "وعاء الرمل", "ar_translit": "wi'ae li-arraml", "emoji": "🏖️" },
+    { "fr": "la fontaine", "en": "fountain", "ar": "النافورة", "ar_translit": "an-nāfouqra", "emoji": "⛲" },
+    { "fr": "la balançoire", "en": "swing", "ar": "الأرجوحة", "ar_translit": "al-ourdjouqha", "emoji": "🎪" },
+    { "fr": "le manège", "en": "carousel", "ar": "دوامة الخيل", "ar_translit": "dawāmat al-khayl", "emoji": "🎠" },
+    { "fr": "la nounou", "en": "nanny", "ar": "مربية أطفال", "ar_translit": "mourabbiyyat atfāl", "emoji": "👩‍🍼" },
+    { "fr": "le goûter", "en": "snack", "ar": "اللمجة", "ar_translit": "al-loumdja", "emoji": "🍪" },
+    { "fr": "le landau", "en": "pram", "ar": "المهد", "ar_translit": "al-mahd", "emoji": "👶" },
+    { "fr": "la poussette", "en": "stroller", "ar": "عربة أطفال", "ar_translit": "'arabat atfāl", "emoji": "👶" },
+    { "fr": "la trottinette", "en": "scooter", "ar": "تروتينات", "ar_translit": "trouṭinaat", "emoji": "🛴" },
+    { "fr": "les patins à roulettes", "en": "roller skates", "ar": "الواح التزحلق", "ar_translit": "alwah attazahloq", "emoji": "⛸️" }
+  ]
 }
