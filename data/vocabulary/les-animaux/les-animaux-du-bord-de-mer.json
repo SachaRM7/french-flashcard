@@ -1,6 +1,14 @@
 {
   "id": "les-animaux-du-bord-de-mer",
-  "name": "Les Animaux Du Bord De Mer",
-  "category": "Les Animaux",
-  "cards": []
+  "name": "Les animaux du bord de mer",
+  "nameAr": "حيوانات شاطئ البحر",
+  "category": "Les animaux",
+  "cards": [
+    { "fr": "le crabe", "en": "crab", "ar": "السرطان", "ar_translit": "as-saratān", "emoji": "🦀" },
+    { "fr": "la crevette", "en": "shrimp", "ar": "الجمبري", "ar_translit": "al-djambari", "emoji": "🦐" },
+    { "fr": "l'étoile de mer", "en": "starfish", "ar": "نجمة البحر", "ar_translit": "najmat al-bahr", "emoji": "⭐" },
+    { "fr": "le bernard-l'ermite", "en": "hermit crab", "ar": "سرطان بحري", "ar_translit": "saratān bahrī", "emoji": "🦀" },
+    { "fr": "l'oursin", "en": "sea urchin", "ar": "قنفذ البحر", "ar_translit": "qunfodh al-bahr", "emoji": "🔵" },
+    { "fr": "le goéland", "en": "seagull", "ar": "النورس", "ar_translit": "an-nawras", "emoji": "🐦" }
+  ]
 }

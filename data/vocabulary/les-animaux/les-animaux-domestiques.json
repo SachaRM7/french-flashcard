@@ -1,6 +1,14 @@
 {
   "id": "les-animaux-domestiques",
-  "name": "Les Animaux Domestiques",
-  "category": "Les Animaux",
-  "cards": []
+  "name": "Les animaux domestiques",
+  "nameAr": "حيوانات أليفة",
+  "category": "Les animaux",
+  "cards": [
+    { "fr": "le chat", "en": "cat", "ar": "القط", "ar_translit": "al-qīt", "emoji": "🐱" },
+    { "fr": "le chien", "en": "dog", "ar": "الكلب", "ar_translit": "al-kalb", "emoji": "🐶" },
+    { "fr": "le hamster", "en": "hamster", "ar": "الهمستير", "ar_translit": "al-hamstir", "emoji": "🐹" },
+    { "fr": "le lapin", "en": "rabbit", "ar": "الأرنب", "ar_translit": "al-arnab", "emoji": "🐰" },
+    { "fr": "le poisson rouge", "en": "goldfish", "ar": "سمكة حمراء", "ar_translit": "samaka hamrāe", "emoji": "🐠" },
+    { "fr": "la tortue", "en": "turtle", "ar": "السلحفاة", "ar_translit": "as-sulahfat", "emoji": "🐢" }
+  ]
 }

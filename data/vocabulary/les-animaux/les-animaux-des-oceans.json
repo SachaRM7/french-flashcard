@@ -1,6 +1,14 @@
 {
   "id": "les-animaux-des-oceans",
-  "name": "Les Animaux Des Oceans",
-  "category": "Les Animaux",
-  "cards": []
+  "name": "Les animaux des océans",
+  "nameAr": "حيوانات المحيطات",
+  "category": "Les animaux",
+  "cards": [
+    { "fr": "le poisson", "en": "fish", "ar": "السمك", "ar_translit": "as-samak", "emoji": "🐟" },
+    { "fr": "le dauphin", "en": "dolphin", "ar": "الدلفين", "ar_translit": "ad-dalfin", "emoji": "🐬" },
+    { "fr": "la méduse", "en": "jellyfish", "ar": "قنديل البحر", "ar_translit": "qandīl al-bahr", "emoji": "🪼" },
+    { "fr": "la pieuvre", "en": "octopus", "ar": "الأخطبوط", "ar_translit": "al-oukhtobout", "emoji": "🐙" },
+    { "fr": "la baleine", "en": "whale", "ar": "الحوت", "ar_translit": "al-hout", "emoji": "🐋" },
+    { "fr": "le requin", "en": "shark", "ar": "الفرش", "ar_translit": "al-qirsh", "emoji": "🦈" }
+  ]
 }

@@ -1,6 +1,14 @@
 {
   "id": "les-animaux-de-la-foret",
-  "name": "Les Animaux De La Foret",
-  "category": "Les Animaux",
-  "cards": []
+  "name": "Les animaux de la forêt",
+  "nameAr": "حيوانات الغابة",
+  "category": "Les animaux",
+  "cards": [
+    { "fr": "la biche", "en": "doe/female deer", "ar": "الأيل", "ar_translit": "al-ayyil", "emoji": "🦌" },
+    { "fr": "le cerf", "en": "stag/male deer", "ar": "الأيل", "ar_translit": "al-ayyil", "emoji": "🦌" },
+    { "fr": "le renard", "en": "fox", "ar": "الثعلب", "ar_translit": "ath-tha'lab", "emoji": "🦊" },
+    { "fr": "le sanglier", "en": "wild boar", "ar": "خنزير بري", "ar_translit": "khinzir barrī", "emoji": "🐗" },
+    { "fr": "le raton laveur", "en": "raccoon", "ar": "الراكون", "ar_translit": "ar-rākoun", "emoji": "🦝" },
+    { "fr": "la belette", "en": "weasel", "ar": "ابن عرس", "ar_translit": "ibn 'ors", "emoji": "🦡" }
+  ]
 }

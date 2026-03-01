@@ -1,6 +1,18 @@
 {
   "id": "les-animaux-de-la-ferme",
-  "name": "Les Animaux De La Ferme",
-  "category": "Les Animaux",
-  "cards": []
+  "name": "Les animaux de la ferme",
+  "nameAr": "حيوانات المزرعة",
+  "category": "Les animaux",
+  "cards": [
+    { "fr": "la vache", "en": "cow", "ar": "البقرة", "ar_translit": "al-baqara", "emoji": "🐄" },
+    { "fr": "le cochon", "en": "pig", "ar": "الخنزير", "ar_translit": "al-khinzir", "emoji": "🐷" },
+    { "fr": "la chèvre", "en": "goat", "ar": "المعزة", "ar_translit": "al-ma'za", "emoji": "🐐" },
+    { "fr": "le mouton", "en": "sheep", "ar": "الخروف", "ar_translit": "al-kharoûf", "emoji": "🐑" },
+    { "fr": "le cheval", "en": "horse", "ar": "الحصان", "ar_translit": "al-hisān", "emoji": "🐴" },
+    { "fr": "l'âne", "en": "donkey", "ar": "الحمار", "ar_translit": "al-himār", "emoji": "🐴" },
+    { "fr": "l'oie", "en": "goose", "ar": "الإوزة", "ar_translit": "al-iwazza", "emoji": "🦆" },
+    { "fr": "le canard", "en": "duck", "ar": "البطة", "ar_translit": "al-batta", "emoji": "🦆" },
+    { "fr": "le dindon", "en": "turkey", "ar": "الديك الرومي", "ar_translit": "addīk ar-roûmi", "emoji": "🦃" },
+    { "fr": "la poule", "en": "chicken/hen", "ar": "الدجاجة", "ar_translit": "ad-dadjādja", "emoji": "🐔" }
+  ]
 }

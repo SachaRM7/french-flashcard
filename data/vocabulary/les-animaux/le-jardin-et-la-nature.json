@@ -1,0 +1,14 @@
+{
+  "id": "le-jardin-et-la-nature",
+  "name": "Le jardin et la nature",
+  "nameAr": "الحديقة والطبيعة",
+  "category": "Les animaux",
+  "cards": [
+    { "fr": "les champignons", "en": "mushrooms", "ar": "الفطر", "ar_translit": "al-fitr", "emoji": "🍄" },
+    { "fr": "les empreintes", "en": "footprints", "ar": "الآثار", "ar_translit": "al-āthār", "emoji": "👣" },
+    { "fr": "la fleur", "en": "flower", "ar": "الزهرة", "ar_translit": "az-zahra", "emoji": "🌸" },
+    { "fr": "cueillir des fleurs", "en": "pick flowers", "ar": "قطف الزهور", "ar_translit": "qatf az-zouhour", "emoji": "💐" },
+    { "fr": "le randonneur", "en": "hiker", "ar": "المتجول", "ar_translit": "al-moutadjawil", "emoji": "🥾" },
+    { "fr": "le pique-nique", "en": "picnic", "ar": "النزهة", "ar_translit": "an-nouzha", "emoji": "🧺" }
+  ]
+}

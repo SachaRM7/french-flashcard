@@ -1,6 +1,14 @@
 {
   "id": "les-animaux-de-la-banquise",
-  "name": "Les Animaux De La Banquise",
-  "category": "Les Animaux",
-  "cards": []
+  "name": "Les animaux de la banquise",
+  "nameAr": "حيوانات الجليد",
+  "category": "Les animaux",
+  "cards": [
+    { "fr": "le pingouin", "en": "penguin", "ar": "البطريق", "ar_translit": "al-batriq", "emoji": "🐧" },
+    { "fr": "l'ours polaire", "en": "polar bear", "ar": "دب قطبي", "ar_translit": "doubb qoutbi", "emoji": "🐻‍❄️" },
+    { "fr": "le morse", "en": "walrus", "ar": "الفيل البحري", "ar_translit": "al-fiqh", "emoji": "🦭" },
+    { "fr": "l'otarie", "en": "seal", "ar": "فقمة البحر", "ar_translit": "foqmat al-bahr", "emoji": "🦭" },
+    { "fr": "la renne", "en": "reindeer", "ar": "الرنة", "ar_translit": "ar-ranna", "emoji": "🦌" },
+    { "fr": "le chien husky", "en": "husky dog", "ar": "كلب الاسكيمو", "ar_translit": "kalb al-askimou", "emoji": "🐕" }
+  ]
 }

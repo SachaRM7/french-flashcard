@@ -1,23 +1,116 @@
-// Auto-generated decks - 2026-03-01T14:01:04.132728
-window.DECKS_VERSION = '2026-03-01T14:01:04.132728';
+// Auto-generated decks - 2026-03-01T14:10:03.076302
+window.DECKS_VERSION = '2026-03-01T14:10:03.076302';
 window.DECKS_DATA = [
   {
     "id": "les-animaux-de-la-montagne",
-    "name": "Les Animaux De La Montagne",
-    "category": "Les Animaux",
-    "cards": []
+    "name": "Les animaux de la montagne",
+    "category": "Les animaux",
+    "cards": [
+      {
+        "front": "bear",
+        "back": "l'ours",
+        "emoji": "🐻"
+      },
+      {
+        "front": "wolf",
+        "back": "le loup",
+        "emoji": "🐺"
+      },
+      {
+        "front": "chamois",
+        "back": "le chamois",
+        "emoji": "🐐"
+      },
+      {
+        "front": "ibex",
+        "back": "le bouquetin",
+        "emoji": "🐐"
+      },
+      {
+        "front": "marmot",
+        "back": "la marmotte",
+        "emoji": "🐭"
+      },
+      {
+        "front": "snake",
+        "back": "le serpent",
+        "emoji": "🐍"
+      }
+    ]
   },
   {
     "id": "les-animaux-des-oceans",
-    "name": "Les Animaux Des Oceans",
-    "category": "Les Animaux",
-    "cards": []
+    "name": "Les animaux des océans",
+    "category": "Les animaux",
+    "cards": [
+      {
+        "front": "fish",
+        "back": "le poisson",
+        "emoji": "🐟"
+      },
+      {
+        "front": "dolphin",
+        "back": "le dauphin",
+        "emoji": "🐬"
+      },
+      {
+        "front": "jellyfish",
+        "back": "la méduse",
+        "emoji": "🪼"
+      },
+      {
+        "front": "octopus",
+        "back": "la pieuvre",
+        "emoji": "🐙"
+      },
+      {
+        "front": "whale",
+        "back": "la baleine",
+        "emoji": "🐋"
+      },
+      {
+        "front": "shark",
+        "back": "le requin",
+        "emoji": "🦈"
+      }
+    ]
   },
   {
     "id": "les-animaux-de-la-foret",
-    "name": "Les Animaux De La Foret",
-    "category": "Les Animaux",
-    "cards": []
+    "name": "Les animaux de la forêt",
+    "category": "Les animaux",
+    "cards": [
+      {
+        "front": "doe/female deer",
+        "back": "la biche",
+        "emoji": "🦌"
+      },
+      {
+        "front": "stag/male deer",
+        "back": "le cerf",
+        "emoji": "🦌"
+      },
+      {
+        "front": "fox",
+        "back": "le renard",
+        "emoji": "🦊"
+      },
+      {
+        "front": "wild boar",
+        "back": "le sanglier",
+        "emoji": "🐗"
+      },
+      {
+        "front": "raccoon",
+        "back": "le raton laveur",
+        "emoji": "🦝"
+      },
+      {
+        "front": "weasel",
+        "back": "la belette",
+        "emoji": "🦡"
+      }
+    ]
   },
   {
     "id": "les-insectes",
@@ -27,15 +120,77 @@ window.DECKS_DATA = [
   },
   {
     "id": "les-animaux-du-bord-de-mer",
-    "name": "Les Animaux Du Bord De Mer",
-    "category": "Les Animaux",
-    "cards": []
+    "name": "Les animaux du bord de mer",
+    "category": "Les animaux",
+    "cards": [
+      {
+        "front": "crab",
+        "back": "le crabe",
+        "emoji": "🦀"
+      },
+      {
+        "front": "shrimp",
+        "back": "la crevette",
+        "emoji": "🦐"
+      },
+      {
+        "front": "starfish",
+        "back": "l'étoile de mer",
+        "emoji": "⭐"
+      },
+      {
+        "front": "hermit crab",
+        "back": "le bernard-l'ermite",
+        "emoji": "🦀"
+      },
+      {
+        "front": "sea urchin",
+        "back": "l'oursin",
+        "emoji": "🔵"
+      },
+      {
+        "front": "seagull",
+        "back": "le goéland",
+        "emoji": "🐦"
+      }
+    ]
   },
   {
     "id": "les-animaux-domestiques",
-    "name": "Les Animaux Domestiques",
-    "category": "Les Animaux",
-    "cards": []
+    "name": "Les animaux domestiques",
+    "category": "Les animaux",
+    "cards": [
+      {
+        "front": "cat",
+        "back": "le chat",
+        "emoji": "🐱"
+      },
+      {
+        "front": "dog",
+        "back": "le chien",
+        "emoji": "🐶"
+      },
+      {
+        "front": "hamster",
+        "back": "le hamster",
+        "emoji": "🐹"
+      },
+      {
+        "front": "rabbit",
+        "back": "le lapin",
+        "emoji": "🐰"
+      },
+      {
+        "front": "goldfish",
+        "back": "le poisson rouge",
+        "emoji": "🐠"
+      },
+      {
+        "front": "turtle",
+        "back": "la tortue",
+        "emoji": "🐢"
+      }
+    ]
   },
   {
     "id": "les-cris-des-animaux",
@@ -45,9 +200,77 @@ window.DECKS_DATA = [
   },
   {
     "id": "les-animaux-de-la-banquise",
-    "name": "Les Animaux De La Banquise",
-    "category": "Les Animaux",
-    "cards": []
+    "name": "Les animaux de la banquise",
+    "category": "Les animaux",
+    "cards": [
+      {
+        "front": "penguin",
+        "back": "le pingouin",
+        "emoji": "🐧"
+      },
+      {
+        "front": "polar bear",
+        "back": "l'ours polaire",
+        "emoji": "🐻‍❄️"
+      },
+      {
+        "front": "walrus",
+        "back": "le morse",
+        "emoji": "🦭"
+      },
+      {
+        "front": "seal",
+        "back": "l'otarie",
+        "emoji": "🦭"
+      },
+      {
+        "front": "reindeer",
+        "back": "la renne",
+        "emoji": "🦌"
+      },
+      {
+        "front": "husky dog",
+        "back": "le chien husky",
+        "emoji": "🐕"
+      }
+    ]
+  },
+  {
+    "id": "le-jardin-et-la-nature",
+    "name": "Le jardin et la nature",
+    "category": "Les animaux",
+    "cards": [
+      {
+        "front": "mushrooms",
+        "back": "les champignons",
+        "emoji": "🍄"
+      },
+      {
+        "front": "footprints",
+        "back": "les empreintes",
+        "emoji": "👣"
+      },
+      {
+        "front": "flower",
+        "back": "la fleur",
+        "emoji": "🌸"
+      },
+      {
+        "front": "pick flowers",
+        "back": "cueillir des fleurs",
+        "emoji": "💐"
+      },
+      {
+        "front": "hiker",
+        "back": "le randonneur",
+        "emoji": "🥾"
+      },
+      {
+        "front": "picnic",
+        "back": "le pique-nique",
+        "emoji": "🧺"
+      }
+    ]
   },
   {
     "id": "les-oiseaux",
@@ -63,15 +286,97 @@ window.DECKS_DATA = [
   },
   {
     "id": "les-animaux-de-la-ferme",
-    "name": "Les Animaux De La Ferme",
-    "category": "Les Animaux",
-    "cards": []
+    "name": "Les animaux de la ferme",
+    "category": "Les animaux",
+    "cards": [
+      {
+        "front": "cow",
+        "back": "la vache",
+        "emoji": "🐄"
+      },
+      {
+        "front": "pig",
+        "back": "le cochon",
+        "emoji": "🐷"
+      },
+      {
+        "front": "goat",
+        "back": "la chèvre",
+        "emoji": "🐐"
+      },
+      {
+        "front": "sheep",
+        "back": "le mouton",
+        "emoji": "🐑"
+      },
+      {
+        "front": "horse",
+        "back": "le cheval",
+        "emoji": "🐴"
+      },
+      {
+        "front": "donkey",
+        "back": "l'âne",
+        "emoji": "🐴"
+      },
+      {
+        "front": "goose",
+        "back": "l'oie",
+        "emoji": "🦆"
+      },
+      {
+        "front": "duck",
+        "back": "le canard",
+        "emoji": "🦆"
+      },
+      {
+        "front": "turkey",
+        "back": "le dindon",
+        "emoji": "🦃"
+      },
+      {
+        "front": "chicken/hen",
+        "back": "la poule",
+        "emoji": "🐔"
+      }
+    ]
   },
   {
     "id": "les-animaux-du-jardin",
-    "name": "Les Animaux Du Jardin",
-    "category": "Les Animaux",
-    "cards": []
+    "name": "Les animaux du jardin",
+    "category": "Les animaux",
+    "cards": [
+      {
+        "front": "mole",
+        "back": "la taupe",
+        "emoji": "🐿️"
+      },
+      {
+        "front": "mouse/vole",
+        "back": "le mulot",
+        "emoji": "🐭"
+      },
+      {
+        "front": "squirrel",
+        "back": "l'écureuil",
+        "emoji": "🐿️"
+      },
+      {
+        "front": "frog",
+        "back": "la grenouille",
+        "emoji": "🐸"
+      },
+      {
+        "front": "snail",
+        "back": "l'escargot",
+        "emoji": "🐌"
+      },
+      {
+        "front": "hedgehog",
+        "back": "le hérisson",
+        "emoji": "🦔"
+      }
+    ]
   },
   {
     "id": "les-animaux-de-la-savane",

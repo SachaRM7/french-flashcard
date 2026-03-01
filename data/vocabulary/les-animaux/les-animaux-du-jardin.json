@@ -1,6 +1,14 @@
 {
   "id": "les-animaux-du-jardin",
-  "name": "Les Animaux Du Jardin",
-  "category": "Les Animaux",
-  "cards": []
+  "name": "Les animaux du jardin",
+  "nameAr": "حيوانات الحديقة",
+  "category": "Les animaux",
+  "cards": [
+    { "fr": "la taupe", "en": "mole", "ar": "الخلد", "ar_translit": "al-khould", "emoji": "🐿️" },
+    { "fr": "le mulot", "en": "mouse/vole", "ar": "فأر الغيط", "ar_translit": "faer al-ghayt", "emoji": "🐭" },
+    { "fr": "l'écureuil", "en": "squirrel", "ar": "السنجاب", "ar_translit": "as-sindjāb", "emoji": "🐿️" },
+    { "fr": "la grenouille", "en": "frog", "ar": "الضفدع", "ar_translit": "adh-dhifdā'", "emoji": "🐸" },
+    { "fr": "l'escargot", "en": "snail", "ar": "الحلزون", "ar_translit": "al-halazoun", "emoji": "🐌" },
+    { "fr": "le hérisson", "en": "hedgehog", "ar": "القنفذ", "ar_translit": "al-qunfodh", "emoji": "🦔" }
+  ]
 }

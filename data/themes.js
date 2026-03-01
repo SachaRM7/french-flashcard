@@ -118,7 +118,7 @@ window.THEMES_DATA = [
         nameAr: 'الحيوانات',
         color: '#f5b7b1',
         icon: '🐾',
-        decks: ['les-animaux-domestiques', 'les-animaux-du-jardin', 'les-animaux-de-la-ferme', 'les-animaux-de-la-foret', 'les-animaux-de-la-montagne', 'les-animaux-de-la-banquise', 'les-animaux-du-bord-de-mer', 'les-animaux-des-oceans', 'les-animaux-de-la-jungle', 'les-animaux-de-la-savane', 'les-insectes', 'les-oiseaux', 'les-cris-des-animaux']
+        decks: ['le-jardin-et-la-nature', 'les-animaux-domestiques', 'les-animaux-du-jardin', 'les-animaux-de-la-ferme', 'les-animaux-de-la-foret', 'les-animaux-de-la-montagne', 'les-animaux-de-la-banquise', 'les-animaux-du-bord-de-mer', 'les-animaux-des-oceans', 'les-animaux-de-la-jungle', 'les-animaux-de-la-savane', 'les-insectes', 'les-oiseaux', 'les-cris-des-animaux']
     },
     {
         id: 'monde',

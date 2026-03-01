@@ -1,6 +1,14 @@
 {
   "id": "les-animaux-de-la-montagne",
-  "name": "Les Animaux De La Montagne",
-  "category": "Les Animaux",
-  "cards": []
+  "name": "Les animaux de la montagne",
+  "nameAr": "حيوانات الجبال",
+  "category": "Les animaux",
+  "cards": [
+    { "fr": "l'ours", "en": "bear", "ar": "الدب", "ar_translit": "ad-doubb", "emoji": "🐻" },
+    { "fr": "le loup", "en": "wolf", "ar": "الذئب", "ar_translit": "adh-dhieb", "emoji": "🐺" },
+    { "fr": "le chamois", "en": "chamois", "ar": "الشامو", "ar_translit": "ach-chāmwā", "emoji": "🐐" },
+    { "fr": "le bouquetin", "en": "ibex", "ar": "الوعل", "ar_translit": "al-wa'l", "emoji": "🐐" },
+    { "fr": "la marmotte", "en": "marmot", "ar": "جرذ الأرض", "ar_translit": "djordh al-ardh", "emoji": "🐭" },
+    { "fr": "le serpent", "en": "snake", "ar": "الثعبان", "ar_translit": "ath-thou'bān", "emoji": "🐍" }
+  ]
 }
