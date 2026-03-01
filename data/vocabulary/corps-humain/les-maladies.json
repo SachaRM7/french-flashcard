@@ -1,6 +1,14 @@
 {
   "id": "les-maladies",
-  "name": "Les Maladies",
-  "category": "Corps Humain",
-  "cards": []
+  "name": "Les maladies",
+  "nameAr": "الأمراض",
+  "category": "Corps humain",
+  "cards": [
+    { "fr": "le rhume", "en": "cold", "ar": "الزكام", "ar_translit": "az-zoukām", "emoji": "🤧" },
+    { "fr": "l'angine", "en": "sore throat", "ar": "التهاب الحنجرة", "ar_translit": "iltihāb al-houndjoura", "emoji": "😣" },
+    { "fr": "l'otite", "en": "ear infection", "ar": "التهاب الأذن", "ar_translit": "iltihāb al-oudhoun", "emoji": "👂" },
+    { "fr": "la gastro-entérite", "en": "gastroenteritis", "ar": "التهاب المعدة والأمعاء", "ar_translit": "iltihāb al-ma'da wa-l-am'āe", "emoji": "🤢" },
+    { "fr": "la varicelle", "en": "chickenpox", "ar": "الجدري", "ar_translit": "al-djoudari", "emoji": "🦠" },
+    { "fr": "la grippe", "en": "flu", "ar": "أنف الونزى", "ar_translit": "anf al-wanza", "emoji": "🤒" }
+  ]
 }

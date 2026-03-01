@@ -1,6 +1,14 @@
 {
   "id": "les-cheveux",
-  "name": "Les Cheveux",
-  "category": "Corps Humain",
-  "cards": []
+  "name": "Les cheveux",
+  "nameAr": "الشعر",
+  "category": "Corps humain",
+  "cards": [
+    { "fr": "brun", "en": "brown", "ar": "أسمر", "ar_translit": "asmar", "emoji": "👱" },
+    { "fr": "blond", "en": "blond", "ar": "اشقر", "ar_translit": "ashqar", "emoji": "👨" },
+    { "fr": "châtain", "en": "chestnut", "ar": "كستنائي", "ar_translit": "kastanāi", "emoji": "👩" },
+    { "fr": "roux", "en": "red", "ar": "أحمر", "ar_translit": "ahmar", "emoji": "👩" },
+    { "fr": "gris", "en": "grey", "ar": "الشيب", "ar_translit": "chaib", "emoji": "👴" },
+    { "fr": "chauve", "en": "bald", "ar": "أصلع", "ar_translit": "asla'", "emoji": "👨" }
+  ]
 }

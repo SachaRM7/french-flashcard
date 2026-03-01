@@ -1,6 +1,14 @@
 {
   "id": "les-handicaps",
-  "name": "Les Handicaps",
-  "category": "Corps Humain",
-  "cards": []
+  "name": "Les handicaps",
+  "nameAr": "الإعاقات",
+  "category": "Corps humain",
+  "cards": [
+    { "fr": "handicapé mental", "en": "mentally disabled", "ar": "معاق ذهنيا", "ar_translit": "mu'āq dhihniyyan", "emoji": "🧠" },
+    { "fr": "handicapé physique", "en": "physically disabled", "ar": "معاق حسياً", "ar_translit": "mu'āq djasadiyyan", "emoji": "♿" },
+    { "fr": "le fauteuil roulant", "en": "wheelchair", "ar": "كرسي متحرك", "ar_translit": "kourssī moutaharrik", "emoji": "♿" },
+    { "fr": "non voyant", "en": "blind", "ar": "أعمى", "ar_translit": "aemaa", "emoji": "🕶️" },
+    { "fr": "sourd", "en": "deaf", "ar": "أصم", "ar_translit": "asam", "emoji": "🦻" },
+    { "fr": "la langue des signes", "en": "sign language", "ar": "لغة الإشارات", "ar_translit": "loughaf al-isharāt", "emoji": "👋" }
+  ]
 }

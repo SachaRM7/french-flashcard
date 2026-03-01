@@ -1,5 +1,5 @@
-// Auto-generated decks - 2026-03-01T11:55:02.866385
-window.DECKS_VERSION = '2026-03-01T11:55:02.866385';
+// Auto-generated decks - 2026-03-01T12:10:20.372994
+window.DECKS_VERSION = '2026-03-01T12:10:20.372994';
 window.DECKS_DATA = [
   {
     "id": "les-animaux-de-la-montagne",
@@ -81,45 +81,347 @@ window.DECKS_DATA = [
   },
   {
     "id": "le-visage",
-    "name": "Le Visage",
-    "category": "Corps Humain",
-    "cards": []
+    "name": "Le visage",
+    "category": "Corps humain",
+    "cards": [
+      {
+        "front": "eyelashes",
+        "back": "les cils",
+        "emoji": "👁️"
+      },
+      {
+        "front": "forehead",
+        "back": "le front",
+        "emoji": "🧠"
+      },
+      {
+        "front": "hair",
+        "back": "les cheveux",
+        "emoji": "💇"
+      },
+      {
+        "front": "eyebrow",
+        "back": "le sourcil",
+        "emoji": "👀"
+      },
+      {
+        "front": "ear",
+        "back": "l'oreille",
+        "emoji": "👂"
+      },
+      {
+        "front": "eye",
+        "back": "l'œil",
+        "emoji": "👁️"
+      },
+      {
+        "front": "cheek",
+        "back": "la joue",
+        "emoji": "😊"
+      },
+      {
+        "front": "nose",
+        "back": "le nez",
+        "emoji": "👃"
+      },
+      {
+        "front": "teeth",
+        "back": "les dents",
+        "emoji": "😁"
+      },
+      {
+        "front": "chin",
+        "back": "le menton",
+        "emoji": "👤"
+      },
+      {
+        "front": "tongue",
+        "back": "la langue",
+        "emoji": "👅"
+      },
+      {
+        "front": "mouth",
+        "back": "la bouche",
+        "emoji": "👄"
+      },
+      {
+        "front": "glasses",
+        "back": "les lunettes",
+        "emoji": "👓"
+      },
+      {
+        "front": "scar",
+        "back": "la cicatrice",
+        "emoji": "🩹"
+      },
+      {
+        "front": "freckles",
+        "back": "les taches de rousseur",
+        "emoji": "🟤"
+      },
+      {
+        "front": "beauty spot",
+        "back": "le grain de beauté",
+        "emoji": "⭕"
+      },
+      {
+        "front": "beard",
+        "back": "la barbe",
+        "emoji": "🧔"
+      },
+      {
+        "front": "mustache",
+        "back": "la moustache",
+        "emoji": "😎"
+      }
+    ]
   },
   {
     "id": "chez-le-docteur",
-    "name": "Chez Le Docteur",
-    "category": "Corps Humain",
-    "cards": []
+    "name": "Chez le docteur",
+    "category": "Corps humain",
+    "cards": [
+      {
+        "front": "Ouch !",
+        "back": "Aïe !",
+        "emoji": "😫"
+      },
+      {
+        "front": "to be sick",
+        "back": "être malade",
+        "emoji": "🤒"
+      },
+      {
+        "front": "to examine",
+        "back": "ausculter",
+        "emoji": "🩺"
+      },
+      {
+        "front": "thermometer",
+        "back": "le thermomètre",
+        "emoji": "🌡️"
+      },
+      {
+        "front": "scale",
+        "back": "le pèse-personne",
+        "emoji": "⚖️"
+      },
+      {
+        "front": "height measure",
+        "back": "la toise",
+        "emoji": "📏"
+      },
+      {
+        "front": "syrup",
+        "back": "le sirop",
+        "emoji": "🧴"
+      },
+      {
+        "front": "medicine",
+        "back": "le médicament",
+        "emoji": "💊"
+      },
+      {
+        "front": "vaccine",
+        "back": "le vaccin",
+        "emoji": "💉"
+      },
+      {
+        "front": "bandages",
+        "back": "les pansements",
+        "emoji": "🩹"
+      },
+      {
+        "front": "health record",
+        "back": "le carnet de santé",
+        "emoji": "📋"
+      },
+      {
+        "front": "prescription",
+        "back": "l'ordonnance",
+        "emoji": "📝"
+      }
+    ]
   },
   {
     "id": "les-cheveux",
-    "name": "Les Cheveux",
-    "category": "Corps Humain",
-    "cards": []
+    "name": "Les cheveux",
+    "category": "Corps humain",
+    "cards": [
+      {
+        "front": "brown",
+        "back": "brun",
+        "emoji": "👱"
+      },
+      {
+        "front": "blond",
+        "back": "blond",
+        "emoji": "👨"
+      },
+      {
+        "front": "chestnut",
+        "back": "châtain",
+        "emoji": "👩"
+      },
+      {
+        "front": "red",
+        "back": "roux",
+        "emoji": "👩"
+      },
+      {
+        "front": "grey",
+        "back": "gris",
+        "emoji": "👴"
+      },
+      {
+        "front": "bald",
+        "back": "chauve",
+        "emoji": "👨"
+      }
+    ]
   },
   {
     "id": "tous-differents",
-    "name": "Tous Differents",
-    "category": "Corps Humain",
-    "cards": []
+    "name": "Tous différents !",
+    "category": "Corps humain",
+    "cards": [
+      {
+        "front": "small",
+        "back": "petit / petite",
+        "emoji": "👶"
+      },
+      {
+        "front": "big",
+        "back": "grand / grande",
+        "emoji": "👨"
+      },
+      {
+        "front": "fat",
+        "back": "gros / grosse",
+        "emoji": "😊"
+      },
+      {
+        "front": "thin",
+        "back": "maigre",
+        "emoji": "😐"
+      },
+      {
+        "front": "skin colors",
+        "back": "les couleurs de peau",
+        "emoji": "🌍"
+      }
+    ]
   },
   {
     "id": "les-sens",
-    "name": "Les Sens",
-    "category": "Corps Humain",
-    "cards": []
+    "name": "Les sens",
+    "category": "Corps humain",
+    "cards": [
+      {
+        "front": "to see",
+        "back": "voir",
+        "emoji": "👀"
+      },
+      {
+        "front": "to taste",
+        "back": "goûter",
+        "emoji": "👅"
+      },
+      {
+        "front": "to listen",
+        "back": "écouter",
+        "emoji": "👂"
+      },
+      {
+        "front": "to hear",
+        "back": "entendre",
+        "emoji": "👂"
+      },
+      {
+        "front": "to smell/feel",
+        "back": "sentir",
+        "emoji": "👃"
+      },
+      {
+        "front": "to touch",
+        "back": "toucher",
+        "emoji": "🤝"
+      }
+    ]
   },
   {
     "id": "grandir",
     "name": "Grandir",
-    "category": "Corps Humain",
-    "cards": []
+    "category": "Corps humain",
+    "cards": [
+      {
+        "front": "baby",
+        "back": "le bébé",
+        "emoji": "👶"
+      },
+      {
+        "front": "child",
+        "back": "l'enfant",
+        "emoji": "👧"
+      },
+      {
+        "front": "teenager",
+        "back": "l'adolescent",
+        "emoji": "👦"
+      },
+      {
+        "front": "adult",
+        "back": "l'adulte",
+        "emoji": "👨"
+      },
+      {
+        "front": "senior",
+        "back": "le sénior",
+        "emoji": "👴"
+      },
+      {
+        "front": "elderly person",
+        "back": "la personne âgée",
+        "emoji": "👴"
+      }
+    ]
   },
   {
     "id": "les-maladies",
-    "name": "Les Maladies",
-    "category": "Corps Humain",
-    "cards": []
+    "name": "Les maladies",
+    "category": "Corps humain",
+    "cards": [
+      {
+        "front": "cold",
+        "back": "le rhume",
+        "emoji": "🤧"
+      },
+      {
+        "front": "sore throat",
+        "back": "l'angine",
+        "emoji": "😣"
+      },
+      {
+        "front": "ear infection",
+        "back": "l'otite",
+        "emoji": "👂"
+      },
+      {
+        "front": "gastroenteritis",
+        "back": "la gastro-entérite",
+        "emoji": "🤢"
+      },
+      {
+        "front": "chickenpox",
+        "back": "la varicelle",
+        "emoji": "🦠"
+      },
+      {
+        "front": "flu",
+        "back": "la grippe",
+        "emoji": "🤒"
+      }
+    ]
   },
   {
     "id": "a-l-hopital",
@@ -129,9 +431,40 @@ window.DECKS_DATA = [
   },
   {
     "id": "les-handicaps",
-    "name": "Les Handicaps",
-    "category": "Corps Humain",
-    "cards": []
+    "name": "Les handicaps",
+    "category": "Corps humain",
+    "cards": [
+      {
+        "front": "mentally disabled",
+        "back": "handicapé mental",
+        "emoji": "🧠"
+      },
+      {
+        "front": "physically disabled",
+        "back": "handicapé physique",
+        "emoji": "♿"
+      },
+      {
+        "front": "wheelchair",
+        "back": "le fauteuil roulant",
+        "emoji": "♿"
+      },
+      {
+        "front": "blind",
+        "back": "non voyant",
+        "emoji": "🕶️"
+      },
+      {
+        "front": "deaf",
+        "back": "sourd",
+        "emoji": "🦻"
+      },
+      {
+        "front": "sign language",
+        "back": "la langue des signes",
+        "emoji": "👋"
+      }
+    ]
   },
   {
     "id": "le-corps",

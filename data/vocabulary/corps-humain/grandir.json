@@ -1,6 +1,14 @@
 {
   "id": "grandir",
   "name": "Grandir",
-  "category": "Corps Humain",
-  "cards": []
+  "nameAr": "يكبُر",
+  "category": "Corps humain",
+  "cards": [
+    { "fr": "le bébé", "en": "baby", "ar": "رضيع", "ar_translit": "radhi'", "emoji": "👶" },
+    { "fr": "l'enfant", "en": "child", "ar": "طفل", "ar_translit": "tifl", "emoji": "👧" },
+    { "fr": "l'adolescent", "en": "teenager", "ar": "مراهق", "ar_translit": "mourahiq", "emoji": "👦" },
+    { "fr": "l'adulte", "en": "adult", "ar": "بالغ", "ar_translit": "bāligh", "emoji": "👨" },
+    { "fr": "le sénior", "en": "senior", "ar": "كهل", "ar_translit": "kahl", "emoji": "👴" },
+    { "fr": "la personne âgée", "en": "elderly person", "ar": "مسن", "ar_translit": "mousin", "emoji": "👴" }
+  ]
 }

@@ -1,6 +1,26 @@
 {
   "id": "le-visage",
-  "name": "Le Visage",
-  "category": "Corps Humain",
-  "cards": []
+  "name": "Le visage",
+  "nameAr": "الوجه",
+  "category": "Corps humain",
+  "cards": [
+    { "fr": "les cils", "en": "eyelashes", "ar": "الرموش", "ar_translit": "ar-roumouîch", "emoji": "👁️" },
+    { "fr": "le front", "en": "forehead", "ar": "الجبهة", "ar_translit": "al-djabha", "emoji": "🧠" },
+    { "fr": "les cheveux", "en": "hair", "ar": "الشعر", "ar_translit": "ach-cha'r", "emoji": "💇" },
+    { "fr": "le sourcil", "en": "eyebrow", "ar": "الحاجب", "ar_translit": "al-hadjib", "emoji": "👀" },
+    { "fr": "l'oreille", "en": "ear", "ar": "الأذن", "ar_translit": "al-oudhoun", "emoji": "👂" },
+    { "fr": "l'œil", "en": "eye", "ar": "العين", "ar_translit": "al-'ayn", "emoji": "👁️" },
+    { "fr": "la joue", "en": "cheek", "ar": "الخد", "ar_translit": "al-khadd", "emoji": "😊" },
+    { "fr": "le nez", "en": "nose", "ar": "الأنف", "ar_translit": "al-anf", "emoji": "👃" },
+    { "fr": "les dents", "en": "teeth", "ar": "الأسنان", "ar_translit": "al-asnān", "emoji": "😁" },
+    { "fr": "le menton", "en": "chin", "ar": "الذقن", "ar_translit": "adh-dhiqn", "emoji": "👤" },
+    { "fr": "la langue", "en": "tongue", "ar": "اللسان", "ar_translit": "al-lisān", "emoji": "👅" },
+    { "fr": "la bouche", "en": "mouth", "ar": "الفم", "ar_translit": "al-fam", "emoji": "👄" },
+    { "fr": "les lunettes", "en": "glasses", "ar": "نظارات", "ar_translit": "nadhārāt", "emoji": "👓" },
+    { "fr": "la cicatrice", "en": "scar", "ar": "ندبة", "ar_translit": "nadba", "emoji": "🩹" },
+    { "fr": "les taches de rousseur", "en": "freckles", "ar": "نمش", "ar_translit": "namach", "emoji": "🟤" },
+    { "fr": "le grain de beauté", "en": "beauty spot", "ar": "شامة", "ar_translit": "chāma", "emoji": "⭕" },
+    { "fr": "la barbe", "en": "beard", "ar": "لحية", "ar_translit": "lahya", "emoji": "🧔" },
+    { "fr": "la moustache", "en": "mustache", "ar": "شوارب", "ar_translit": "chawārib", "emoji": "😎" }
+  ]
 }

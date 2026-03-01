@@ -1,6 +1,14 @@
 {
   "id": "les-sens",
-  "name": "Les Sens",
-  "category": "Corps Humain",
-  "cards": []
+  "name": "Les sens",
+  "nameAr": "الحواس",
+  "category": "Corps humain",
+  "cards": [
+    { "fr": "voir", "en": "to see", "ar": "رأى", "ar_translit": "raa", "emoji": "👀" },
+    { "fr": "goûter", "en": "to taste", "ar": "ذاق", "ar_translit": "dhāqa", "emoji": "👅" },
+    { "fr": "écouter", "en": "to listen", "ar": "استمع", "ar_translit": "istama'a", "emoji": "👂" },
+    { "fr": "entendre", "en": "to hear", "ar": "سمع", "ar_translit": "sami'a", "emoji": "👂" },
+    { "fr": "sentir", "en": "to smell/feel", "ar": "شم", "ar_translit": "chamma", "emoji": "👃" },
+    { "fr": "toucher", "en": "to touch", "ar": "لمس", "ar_translit": "lamassa", "emoji": "🤝" }
+  ]
 }

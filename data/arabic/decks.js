@@ -1,5 +1,5 @@
-// Auto-generated decks - 2026-03-01T11:55:02.866385
-window.DECKS_VERSION = '2026-03-01T11:55:02.866385';
+// Auto-generated decks - 2026-03-01T12:10:20.372994
+window.DECKS_VERSION = '2026-03-01T12:10:20.372994';
 window.DECKS_DATA = [
   {
     "id": "les-animaux-de-la-montagne",
@@ -81,45 +81,406 @@ window.DECKS_DATA = [
   },
   {
     "id": "le-visage",
-    "name": "Le Visage",
-    "category": "Corps Humain",
-    "cards": []
+    "name": "Le visage",
+    "category": "Corps humain",
+    "cards": [
+      {
+        "front": "الرموش",
+        "back": "les cils",
+        "translit": "ar-roumouîch",
+        "emoji": "👁️"
+      },
+      {
+        "front": "الجبهة",
+        "back": "le front",
+        "translit": "al-djabha",
+        "emoji": "🧠"
+      },
+      {
+        "front": "الشعر",
+        "back": "les cheveux",
+        "translit": "ach-cha'r",
+        "emoji": "💇"
+      },
+      {
+        "front": "الحاجب",
+        "back": "le sourcil",
+        "translit": "al-hadjib",
+        "emoji": "👀"
+      },
+      {
+        "front": "الأذن",
+        "back": "l'oreille",
+        "translit": "al-oudhoun",
+        "emoji": "👂"
+      },
+      {
+        "front": "العين",
+        "back": "l'œil",
+        "translit": "al-'ayn",
+        "emoji": "👁️"
+      },
+      {
+        "front": "الخد",
+        "back": "la joue",
+        "translit": "al-khadd",
+        "emoji": "😊"
+      },
+      {
+        "front": "الأنف",
+        "back": "le nez",
+        "translit": "al-anf",
+        "emoji": "👃"
+      },
+      {
+        "front": "الأسنان",
+        "back": "les dents",
+        "translit": "al-asnān",
+        "emoji": "😁"
+      },
+      {
+        "front": "الذقن",
+        "back": "le menton",
+        "translit": "adh-dhiqn",
+        "emoji": "👤"
+      },
+      {
+        "front": "اللسان",
+        "back": "la langue",
+        "translit": "al-lisān",
+        "emoji": "👅"
+      },
+      {
+        "front": "الفم",
+        "back": "la bouche",
+        "translit": "al-fam",
+        "emoji": "👄"
+      },
+      {
+        "front": "نظارات",
+        "back": "les lunettes",
+        "translit": "nadhārāt",
+        "emoji": "👓"
+      },
+      {
+        "front": "ندبة",
+        "back": "la cicatrice",
+        "translit": "nadba",
+        "emoji": "🩹"
+      },
+      {
+        "front": "نمش",
+        "back": "les taches de rousseur",
+        "translit": "namach",
+        "emoji": "🟤"
+      },
+      {
+        "front": "شامة",
+        "back": "le grain de beauté",
+        "translit": "chāma",
+        "emoji": "⭕"
+      },
+      {
+        "front": "لحية",
+        "back": "la barbe",
+        "translit": "lahya",
+        "emoji": "🧔"
+      },
+      {
+        "front": "شوارب",
+        "back": "la moustache",
+        "translit": "chawārib",
+        "emoji": "😎"
+      }
+    ]
   },
   {
     "id": "chez-le-docteur",
-    "name": "Chez Le Docteur",
-    "category": "Corps Humain",
-    "cards": []
+    "name": "Chez le docteur",
+    "category": "Corps humain",
+    "cards": [
+      {
+        "front": "آه",
+        "back": "Aïe !",
+        "translit": "āh",
+        "emoji": "😫"
+      },
+      {
+        "front": "مريض",
+        "back": "être malade",
+        "translit": "maridh",
+        "emoji": "🤒"
+      },
+      {
+        "front": "فحص",
+        "back": "ausculter",
+        "translit": "fahasa",
+        "emoji": "🩺"
+      },
+      {
+        "front": "جهاز قياس الحرارة",
+        "back": "le thermomètre",
+        "translit": "djihāz qiyās al-harāra",
+        "emoji": "🌡️"
+      },
+      {
+        "front": "الميزان",
+        "back": "le pèse-personne",
+        "translit": "al-mizān",
+        "emoji": "⚖️"
+      },
+      {
+        "front": "الغامة",
+        "back": "la toise",
+        "translit": "al-ghāma",
+        "emoji": "📏"
+      },
+      {
+        "front": "الشراب",
+        "back": "le sirop",
+        "translit": "ach-charāb",
+        "emoji": "🧴"
+      },
+      {
+        "front": "الدواء",
+        "back": "le médicament",
+        "translit": "ad-dawāe",
+        "emoji": "💊"
+      },
+      {
+        "front": "اللقاح",
+        "back": "le vaccin",
+        "translit": "al-liqāh",
+        "emoji": "💉"
+      },
+      {
+        "front": "الضمادات",
+        "back": "les pansements",
+        "translit": "adh-dhimādāt",
+        "emoji": "🩹"
+      },
+      {
+        "front": "الدفتر الصحي",
+        "back": "le carnet de santé",
+        "translit": "ad-daftar as-sihi",
+        "emoji": "📋"
+      },
+      {
+        "front": "وصفة طبية",
+        "back": "l'ordonnance",
+        "translit": "wasfa tibbiyya",
+        "emoji": "📝"
+      }
+    ]
   },
   {
     "id": "les-cheveux",
-    "name": "Les Cheveux",
-    "category": "Corps Humain",
-    "cards": []
+    "name": "Les cheveux",
+    "category": "Corps humain",
+    "cards": [
+      {
+        "front": "أسمر",
+        "back": "brun",
+        "translit": "asmar",
+        "emoji": "👱"
+      },
+      {
+        "front": "اشقر",
+        "back": "blond",
+        "translit": "ashqar",
+        "emoji": "👨"
+      },
+      {
+        "front": "كستنائي",
+        "back": "châtain",
+        "translit": "kastanāi",
+        "emoji": "👩"
+      },
+      {
+        "front": "أحمر",
+        "back": "roux",
+        "translit": "ahmar",
+        "emoji": "👩"
+      },
+      {
+        "front": "الشيب",
+        "back": "gris",
+        "translit": "chaib",
+        "emoji": "👴"
+      },
+      {
+        "front": "أصلع",
+        "back": "chauve",
+        "translit": "asla'",
+        "emoji": "👨"
+      }
+    ]
   },
   {
     "id": "tous-differents",
-    "name": "Tous Differents",
-    "category": "Corps Humain",
-    "cards": []
+    "name": "Tous différents !",
+    "category": "Corps humain",
+    "cards": [
+      {
+        "front": "قصير / قصيرة",
+        "back": "petit / petite",
+        "translit": "qasir / qasira",
+        "emoji": "👶"
+      },
+      {
+        "front": "طويل / طويلة",
+        "back": "grand / grande",
+        "translit": "tawil / tawila",
+        "emoji": "👨"
+      },
+      {
+        "front": "سمين / سمينة",
+        "back": "gros / grosse",
+        "translit": "samin / samina",
+        "emoji": "😊"
+      },
+      {
+        "front": "نحيف / نحيفة",
+        "back": "maigre",
+        "translit": "nahif / nahifa",
+        "emoji": "😐"
+      },
+      {
+        "front": "ألوان البشرة",
+        "back": "les couleurs de peau",
+        "translit": "alwan al-bachara",
+        "emoji": "🌍"
+      }
+    ]
   },
   {
     "id": "les-sens",
-    "name": "Les Sens",
-    "category": "Corps Humain",
-    "cards": []
+    "name": "Les sens",
+    "category": "Corps humain",
+    "cards": [
+      {
+        "front": "رأى",
+        "back": "voir",
+        "translit": "raa",
+        "emoji": "👀"
+      },
+      {
+        "front": "ذاق",
+        "back": "goûter",
+        "translit": "dhāqa",
+        "emoji": "👅"
+      },
+      {
+        "front": "استمع",
+        "back": "écouter",
+        "translit": "istama'a",
+        "emoji": "👂"
+      },
+      {
+        "front": "سمع",
+        "back": "entendre",
+        "translit": "sami'a",
+        "emoji": "👂"
+      },
+      {
+        "front": "شم",
+        "back": "sentir",
+        "translit": "chamma",
+        "emoji": "👃"
+      },
+      {
+        "front": "لمس",
+        "back": "toucher",
+        "translit": "lamassa",
+        "emoji": "🤝"
+      }
+    ]
   },
   {
     "id": "grandir",
     "name": "Grandir",
-    "category": "Corps Humain",
-    "cards": []
+    "category": "Corps humain",
+    "cards": [
+      {
+        "front": "رضيع",
+        "back": "le bébé",
+        "translit": "radhi'",
+        "emoji": "👶"
+      },
+      {
+        "front": "طفل",
+        "back": "l'enfant",
+        "translit": "tifl",
+        "emoji": "👧"
+      },
+      {
+        "front": "مراهق",
+        "back": "l'adolescent",
+        "translit": "mourahiq",
+        "emoji": "👦"
+      },
+      {
+        "front": "بالغ",
+        "back": "l'adulte",
+        "translit": "bāligh",
+        "emoji": "👨"
+      },
+      {
+        "front": "كهل",
+        "back": "le sénior",
+        "translit": "kahl",
+        "emoji": "👴"
+      },
+      {
+        "front": "مسن",
+        "back": "la personne âgée",
+        "translit": "mousin",
+        "emoji": "👴"
+      }
+    ]
   },
   {
     "id": "les-maladies",
-    "name": "Les Maladies",
-    "category": "Corps Humain",
-    "cards": []
+    "name": "Les maladies",
+    "category": "Corps humain",
+    "cards": [
+      {
+        "front": "الزكام",
+        "back": "le rhume",
+        "translit": "az-zoukām",
+        "emoji": "🤧"
+      },
+      {
+        "front": "التهاب الحنجرة",
+        "back": "l'angine",
+        "translit": "iltihāb al-houndjoura",
+        "emoji": "😣"
+      },
+      {
+        "front": "التهاب الأذن",
+        "back": "l'otite",
+        "translit": "iltihāb al-oudhoun",
+        "emoji": "👂"
+      },
+      {
+        "front": "التهاب المعدة والأمعاء",
+        "back": "la gastro-entérite",
+        "translit": "iltihāb al-ma'da wa-l-am'āe",
+        "emoji": "🤢"
+      },
+      {
+        "front": "الجدري",
+        "back": "la varicelle",
+        "translit": "al-djoudari",
+        "emoji": "🦠"
+      },
+      {
+        "front": "أنف الونزى",
+        "back": "la grippe",
+        "translit": "anf al-wanza",
+        "emoji": "🤒"
+      }
+    ]
   },
   {
     "id": "a-l-hopital",
@@ -129,9 +490,46 @@ window.DECKS_DATA = [
   },
   {
     "id": "les-handicaps",
-    "name": "Les Handicaps",
-    "category": "Corps Humain",
-    "cards": []
+    "name": "Les handicaps",
+    "category": "Corps humain",
+    "cards": [
+      {
+        "front": "معاق ذهنيا",
+        "back": "handicapé mental",
+        "translit": "mu'āq dhihniyyan",
+        "emoji": "🧠"
+      },
+      {
+        "front": "معاق حسياً",
+        "back": "handicapé physique",
+        "translit": "mu'āq djasadiyyan",
+        "emoji": "♿"
+      },
+      {
+        "front": "كرسي متحرك",
+        "back": "le fauteuil roulant",
+        "translit": "kourssī moutaharrik",
+        "emoji": "♿"
+      },
+      {
+        "front": "أعمى",
+        "back": "non voyant",
+        "translit": "aemaa",
+        "emoji": "🕶️"
+      },
+      {
+        "front": "أصم",
+        "back": "sourd",
+        "translit": "asam",
+        "emoji": "🦻"
+      },
+      {
+        "front": "لغة الإشارات",
+        "back": "la langue des signes",
+        "translit": "loughaf al-isharāt",
+        "emoji": "👋"
+      }
+    ]
   },
   {
     "id": "le-corps",

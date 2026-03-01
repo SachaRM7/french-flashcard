@@ -1,6 +1,13 @@
 {
   "id": "tous-differents",
-  "name": "Tous Differents",
-  "category": "Corps Humain",
-  "cards": []
+  "name": "Tous différents !",
+  "nameAr": "كُلّنا مُختلِفون",
+  "category": "Corps humain",
+  "cards": [
+    { "fr": "petit / petite", "en": "small", "ar": "قصير / قصيرة", "ar_translit": "qasir / qasira", "emoji": "👶" },
+    { "fr": "grand / grande", "en": "big", "ar": "طويل / طويلة", "ar_translit": "tawil / tawila", "emoji": "👨" },
+    { "fr": "gros / grosse", "en": "fat", "ar": "سمين / سمينة", "ar_translit": "samin / samina", "emoji": "😊" },
+    { "fr": "maigre", "en": "thin", "ar": "نحيف / نحيفة", "ar_translit": "nahif / nahifa", "emoji": "😐" },
+    { "fr": "les couleurs de peau", "en": "skin colors", "ar": "ألوان البشرة", "ar_translit": "alwan al-bachara", "emoji": "🌍" }
+  ]
 }

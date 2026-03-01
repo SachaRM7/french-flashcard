@@ -1,6 +1,20 @@
 {
   "id": "chez-le-docteur",
-  "name": "Chez Le Docteur",
-  "category": "Corps Humain",
-  "cards": []
+  "name": "Chez le docteur",
+  "nameAr": "عند الطبيب",
+  "category": "Corps humain",
+  "cards": [
+    { "fr": "Aïe !", "en": "Ouch !", "ar": "آه", "ar_translit": "āh", "emoji": "😫" },
+    { "fr": "être malade", "en": "to be sick", "ar": "مريض", "ar_translit": "maridh", "emoji": "🤒" },
+    { "fr": "ausculter", "en": "to examine", "ar": "فحص", "ar_translit": "fahasa", "emoji": "🩺" },
+    { "fr": "le thermomètre", "en": "thermometer", "ar": "جهاز قياس الحرارة", "ar_translit": "djihāz qiyās al-harāra", "emoji": "🌡️" },
+    { "fr": "le pèse-personne", "en": "scale", "ar": "الميزان", "ar_translit": "al-mizān", "emoji": "⚖️" },
+    { "fr": "la toise", "en": "height measure", "ar": "الغامة", "ar_translit": "al-ghāma", "emoji": "📏" },
+    { "fr": "le sirop", "en": "syrup", "ar": "الشراب", "ar_translit": "ach-charāb", "emoji": "🧴" },
+    { "fr": "le médicament", "en": "medicine", "ar": "الدواء", "ar_translit": "ad-dawāe", "emoji": "💊" },
+    { "fr": "le vaccin", "en": "vaccine", "ar": "اللقاح", "ar_translit": "al-liqāh", "emoji": "💉" },
+    { "fr": "les pansements", "en": "bandages", "ar": "الضمادات", "ar_translit": "adh-dhimādāt", "emoji": "🩹" },
+    { "fr": "le carnet de santé", "en": "health record", "ar": "الدفتر الصحي", "ar_translit": "ad-daftar as-sihi", "emoji": "📋" },
+    { "fr": "l'ordonnance", "en": "prescription", "ar": "وصفة طبية", "ar_translit": "wasfa tibbiyya", "emoji": "📝" }
+  ]
 }
