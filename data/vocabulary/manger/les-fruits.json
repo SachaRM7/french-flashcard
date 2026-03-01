@@ -1,6 +1,20 @@
 {
   "id": "les-fruits",
-  "name": "Les Fruits",
+  "name": "Les fruits",
+  "nameAr": "الفواكه",
   "category": "Manger",
-  "cards": []
+  "cards": [
+    { "fr": "la pomme", "en": "apple", "ar": "التفاحة", "ar_translit": "at-touffāha", "emoji": "🍎" },
+    { "fr": "la poire", "en": "pear", "ar": "الإجاص", "ar_translit": "al-idjās", "emoji": "🍐" },
+    { "fr": "la banane", "en": "banana", "ar": "الموزة", "ar_translit": "al-moûza", "emoji": "🍌" },
+    { "fr": "la fraise", "en": "strawberry", "ar": "الفراولة", "ar_translit": "al-farawla", "emoji": "🍓" },
+    { "fr": "la framboise", "en": "raspberry", "ar": "توت العليق", "ar_translit": "tōut al-alliq", "emoji": "🫐" },
+    { "fr": "la cerise", "en": "cherry", "ar": "الكراز", "ar_translit": "al-karaz", "emoji": "🍒" },
+    { "fr": "la tomate", "en": "tomato", "ar": "الطماطم", "ar_translit": "at-tamatim", "emoji": "🍅" },
+    { "fr": "l'orange", "en": "orange", "ar": "البرتقال", "ar_translit": "al-bourtouqāl", "emoji": "🍊" },
+    { "fr": "le kiwi", "en": "kiwi", "ar": "الكيوي", "ar_translit": "al-kīwi", "emoji": "🥝" },
+    { "fr": "la pêche", "en": "peach", "ar": "الخوخ", "ar_translit": "al khoukh", "emoji": "🍑" },
+    { "fr": "le melon", "en": "melon", "ar": "الشمام", "ar_translit": "ach-chammām", "emoji": "🍈" },
+    { "fr": "la myrtille", "en": "blueberry", "ar": "الثوت", "ar_translit": "at-tout", "emoji": "🫐" }
+  ]
 }

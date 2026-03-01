@@ -1,6 +1,14 @@
 {
   "id": "faire-les-courses",
-  "name": "Faire Les Courses",
+  "name": "Faire les courses",
+  "nameAr": "التسوق",
   "category": "Manger",
-  "cards": []
+  "cards": [
+    { "fr": "le chariot", "en": "shopping cart", "ar": "العربة", "ar_translit": "al-'araba", "emoji": "🛒" },
+    { "fr": "le client", "en": "customer", "ar": "الزبون", "ar_translit": "az-zzaboun", "emoji": "👤" },
+    { "fr": "peser", "en": "to weigh", "ar": "وزن", "ar_translit": "wazana", "emoji": "⚖️" },
+    { "fr": "la caisse", "en": "checkout", "ar": "صندوق الدفع", "ar_translit": "soundouq addafa'a", "emoji": "💳" },
+    { "fr": "l'argent", "en": "money", "ar": "النقود", "ar_translit": "al-nouqoud", "emoji": "💰" },
+    { "fr": "acheter", "en": "to buy", "ar": "اشترى", "ar_translit": "ishtarā", "emoji": "🛍️" }
+  ]
 }

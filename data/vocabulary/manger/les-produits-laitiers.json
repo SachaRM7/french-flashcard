@@ -1,6 +1,14 @@
 {
   "id": "les-produits-laitiers",
-  "name": "Les Produits Laitiers",
+  "name": "Les produits laitiers",
+  "nameAr": "منتوجات الحليب",
   "category": "Manger",
-  "cards": []
+  "cards": [
+    { "fr": "le lait", "en": "milk", "ar": "الحليب", "ar_translit": "al-halīb", "emoji": "🥛" },
+    { "fr": "le beurre", "en": "butter", "ar": "الزبدة", "ar_translit": "al-zoubda", "emoji": "🧈" },
+    { "fr": "les yaourts", "en": "yogurts", "ar": "الزبادي", "ar_translit": "az-zabādi", "emoji": "🍯" },
+    { "fr": "la crème fraîche", "en": "sour cream", "ar": "القشطة", "ar_translit": "al-qichtta", "emoji": "🥄" },
+    { "fr": "le fromage", "en": "cheese", "ar": "الجبن", "ar_translit": "al-djoubn", "emoji": "🧀" },
+    { "fr": "le gruyère râpé", "en": "grated gruyere", "ar": "جبن مبشور", "ar_translit": "djoubn mabchour", "emoji": "🧀" }
+  ]
 }

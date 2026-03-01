@@ -1,6 +1,14 @@
 {
   "id": "la-boulangerie",
-  "name": "La Boulangerie",
+  "name": "La boulangerie",
+  "nameAr": "المخبزة",
   "category": "Manger",
-  "cards": []
+  "cards": [
+    { "fr": "le pain", "en": "bread", "ar": "الخبز", "ar_translit": "al-khoubz", "emoji": "🍞" },
+    { "fr": "la brioche", "en": "brioche", "ar": "البريوش", "ar_translit": "al-bariouche", "emoji": "🥐" },
+    { "fr": "le pain au chocolat", "en": "chocolate bread", "ar": "خبز بالشكولاطة", "ar_translit": "khoubz bi ch-choukoulāta", "emoji": "🥐" },
+    { "fr": "la meringue", "en": "meringue", "ar": "المرينج", "ar_translit": "al-mirindj", "emoji": "🤍" },
+    { "fr": "les macarons", "en": "macarons", "ar": "مغكرون", "ar_translit": "ma'karūn", "emoji": "🍪" },
+    { "fr": "la tarte", "en": "tart", "ar": "الطورطة", "ar_translit": "at-torta", "emoji": "🥧" }
+  ]
 }

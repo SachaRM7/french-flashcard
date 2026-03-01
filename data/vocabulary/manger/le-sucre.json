@@ -9,6 +9,12 @@
     { "fr": "les crêpes", "en": "crepes", "ar": "الفطائر", "ar_translit": "al-fataîr", "emoji": "🥞" },
     { "fr": "la gaufre", "en": "waffle", "ar": "الوافل", "ar_translit": "al-wāfil", "emoji": "🧇" },
     { "fr": "le chocolat", "en": "chocolate", "ar": "الشكولاطة", "ar_translit": "ach-choukoulāta", "emoji": "🍫" },
-    { "fr": "la pâte à tartiner", "en": "spread", "ar": "كريمة الطلي", "ar_translit": "krimat at-talya", "emoji": "🫘" }
+    { "fr": "la pâte à tartiner", "en": "spread", "ar": "كريمة الطلي", "ar_translit": "krimat at-talya", "emoji": "🫘" },
+    { "fr": "la compote", "en": "compote", "ar": "فواكه مطبوخة", "ar_translit": "fawwakih matboukha", "emoji": "🍲" },
+    { "fr": "le pain d'épices", "en": "gingerbread", "ar": "خبز التوابل", "ar_translit": "khoubz at-taoubail", "emoji": "🍪" },
+    { "fr": "la salade de fruits", "en": "fruit salad", "ar": "سلطة فواكه", "ar_translit": "salatatfawākih", "emoji": "🍱" },
+    { "fr": "le gâteau", "en": "cake", "ar": "الكعكة", "ar_translit": "al-ka'ka", "emoji": "🎂" },
+    { "fr": "la barbe à papa", "en": "cotton candy", "ar": "الحلوى القطنية", "ar_translit": "al-halwā alqotniyya", "emoji": "🍬" },
+    { "fr": "les bonbons", "en": "candies", "ar": "الحلويات", "ar_translit": "al-halaouiat", "emoji": "🍭" }
   ]
 }

@@ -1,6 +1,20 @@
 {
   "id": "les-legumes",
-  "name": "Les Legumes",
+  "name": "Les légumes",
+  "nameAr": "الخضروات",
   "category": "Manger",
-  "cards": []
+  "cards": [
+    { "fr": "la carotte", "en": "carrot", "ar": "الجزر", "ar_translit": "al-djazar", "emoji": "🥕" },
+    { "fr": "la pomme de terre", "en": "potato", "ar": "البطاطس", "ar_translit": "al-batatis", "emoji": "🥔" },
+    { "fr": "les petits pois", "en": "peas", "ar": "البازلاء", "ar_translit": "al-bāzilā'", "emoji": "🫛" },
+    { "fr": "les haricots verts", "en": "green beans", "ar": "فاصولية خضراء", "ar_translit": "fasouliya khadrā'", "emoji": "🫘" },
+    { "fr": "le poireau", "en": "leek", "ar": "الكراث", "ar_translit": "al-kourrāth", "emoji": "🥬" },
+    { "fr": "l'oignon", "en": "onion", "ar": "البصل", "ar_translit": "al-basal", "emoji": "🧅" },
+    { "fr": "la laitue", "en": "lettuce", "ar": "الخس", "ar_translit": "al-khass", "emoji": "🥬" },
+    { "fr": "le radis", "en": "radish", "ar": "الفجل", "ar_translit": "al-fijl", "emoji": "🌰" },
+    { "fr": "la courgette", "en": "zucchini", "ar": "الكوسة", "ar_translit": "al-koûssa", "emoji": "🥒" },
+    { "fr": "l'aubergine", "en": "eggplant", "ar": "الباذنجان", "ar_translit": "al-bādindjān", "emoji": "🍆" },
+    { "fr": "la betterave", "en": "beet", "ar": "البنجر", "ar_translit": "al-banjar", "emoji": "🫕" },
+    { "fr": "l'artichaut", "en": "artichoke", "ar": "الخرشوف", "ar_translit": "al-khorchouf", "emoji": "🫀" }
+  ]
 }

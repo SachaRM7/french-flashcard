@@ -1,5 +1,5 @@
-// Auto-generated decks - 2026-03-01T12:20:59.778460
-window.DECKS_VERSION = '2026-03-01T12:20:59.778460';
+// Auto-generated decks - 2026-03-01T12:39:23.023486
+window.DECKS_VERSION = '2026-03-01T12:39:23.023486';
 window.DECKS_DATA = [
   {
     "id": "les-animaux-de-la-montagne",
@@ -647,9 +647,70 @@ window.DECKS_DATA = [
   },
   {
     "id": "les-legumes",
-    "name": "Les Legumes",
+    "name": "Les légumes",
     "category": "Manger",
-    "cards": []
+    "cards": [
+      {
+        "front": "carrot",
+        "back": "la carotte",
+        "emoji": "🥕"
+      },
+      {
+        "front": "potato",
+        "back": "la pomme de terre",
+        "emoji": "🥔"
+      },
+      {
+        "front": "peas",
+        "back": "les petits pois",
+        "emoji": "🫛"
+      },
+      {
+        "front": "green beans",
+        "back": "les haricots verts",
+        "emoji": "🫘"
+      },
+      {
+        "front": "leek",
+        "back": "le poireau",
+        "emoji": "🥬"
+      },
+      {
+        "front": "onion",
+        "back": "l'oignon",
+        "emoji": "🧅"
+      },
+      {
+        "front": "lettuce",
+        "back": "la laitue",
+        "emoji": "🥬"
+      },
+      {
+        "front": "radish",
+        "back": "le radis",
+        "emoji": "🌰"
+      },
+      {
+        "front": "zucchini",
+        "back": "la courgette",
+        "emoji": "🥒"
+      },
+      {
+        "front": "eggplant",
+        "back": "l'aubergine",
+        "emoji": "🍆"
+      },
+      {
+        "front": "beet",
+        "back": "la betterave",
+        "emoji": "🫕"
+      },
+      {
+        "front": "artichoke",
+        "back": "l'artichaut",
+        "emoji": "🫀"
+      }
+    ]
   },
   {
     "id": "les-boissons",
@@ -690,15 +751,107 @@ window.DECKS_DATA = [
   },
   {
     "id": "la-boulangerie",
-    "name": "La Boulangerie",
+    "name": "La boulangerie",
     "category": "Manger",
-    "cards": []
+    "cards": [
+      {
+        "front": "bread",
+        "back": "le pain",
+        "emoji": "🍞"
+      },
+      {
+        "front": "brioche",
+        "back": "la brioche",
+        "emoji": "🥐"
+      },
+      {
+        "front": "chocolate bread",
+        "back": "le pain au chocolat",
+        "emoji": "🥐"
+      },
+      {
+        "front": "meringue",
+        "back": "la meringue",
+        "emoji": "🤍"
+      },
+      {
+        "front": "macarons",
+        "back": "les macarons",
+        "emoji": "🍪"
+      },
+      {
+        "front": "tart",
+        "back": "la tarte",
+        "emoji": "🥧"
+      }
+    ]
   },
   {
     "id": "les-fruits",
-    "name": "Les Fruits",
+    "name": "Les fruits",
     "category": "Manger",
-    "cards": []
+    "cards": [
+      {
+        "front": "apple",
+        "back": "la pomme",
+        "emoji": "🍎"
+      },
+      {
+        "front": "pear",
+        "back": "la poire",
+        "emoji": "🍐"
+      },
+      {
+        "front": "banana",
+        "back": "la banane",
+        "emoji": "🍌"
+      },
+      {
+        "front": "strawberry",
+        "back": "la fraise",
+        "emoji": "🍓"
+      },
+      {
+        "front": "raspberry",
+        "back": "la framboise",
+        "emoji": "🫐"
+      },
+      {
+        "front": "cherry",
+        "back": "la cerise",
+        "emoji": "🍒"
+      },
+      {
+        "front": "tomato",
+        "back": "la tomate",
+        "emoji": "🍅"
+      },
+      {
+        "front": "orange",
+        "back": "l'orange",
+        "emoji": "🍊"
+      },
+      {
+        "front": "kiwi",
+        "back": "le kiwi",
+        "emoji": "🥝"
+      },
+      {
+        "front": "peach",
+        "back": "la pêche",
+        "emoji": "🍑"
+      },
+      {
+        "front": "melon",
+        "back": "le melon",
+        "emoji": "🍈"
+      },
+      {
+        "front": "blueberry",
+        "back": "la myrtille",
+        "emoji": "🫐"
+      }
+    ]
   },
   {
     "id": "le-sale",
@@ -801,20 +954,112 @@ window.DECKS_DATA = [
         "front": "spread",
         "back": "la pâte à tartiner",
         "emoji": "🫘"
+      },
+      {
+        "front": "compote",
+        "back": "la compote",
+        "emoji": "🍲"
+      },
+      {
+        "front": "gingerbread",
+        "back": "le pain d'épices",
+        "emoji": "🍪"
+      },
+      {
+        "front": "fruit salad",
+        "back": "la salade de fruits",
+        "emoji": "🍱"
+      },
+      {
+        "front": "cake",
+        "back": "le gâteau",
+        "emoji": "🎂"
+      },
+      {
+        "front": "cotton candy",
+        "back": "la barbe à papa",
+        "emoji": "🍬"
+      },
+      {
+        "front": "candies",
+        "back": "les bonbons",
+        "emoji": "🍭"
       }
     ]
   },
   {
     "id": "les-produits-laitiers",
-    "name": "Les Produits Laitiers",
+    "name": "Les produits laitiers",
     "category": "Manger",
-    "cards": []
+    "cards": [
+      {
+        "front": "milk",
+        "back": "le lait",
+        "emoji": "🥛"
+      },
+      {
+        "front": "butter",
+        "back": "le beurre",
+        "emoji": "🧈"
+      },
+      {
+        "front": "yogurts",
+        "back": "les yaourts",
+        "emoji": "🍯"
+      },
+      {
+        "front": "sour cream",
+        "back": "la crème fraîche",
+        "emoji": "🥄"
+      },
+      {
+        "front": "cheese",
+        "back": "le fromage",
+        "emoji": "🧀"
+      },
+      {
+        "front": "grated gruyere",
+        "back": "le gruyère râpé",
+        "emoji": "🧀"
+      }
+    ]
   },
   {
     "id": "faire-les-courses",
-    "name": "Faire Les Courses",
+    "name": "Faire les courses",
     "category": "Manger",
-    "cards": []
+    "cards": [
+      {
+        "front": "shopping cart",
+        "back": "le chariot",
+        "emoji": "🛒"
+      },
+      {
+        "front": "customer",
+        "back": "le client",
+        "emoji": "👤"
+      },
+      {
+        "front": "to weigh",
+        "back": "peser",
+        "emoji": "⚖️"
+      },
+      {
+        "front": "checkout",
+        "back": "la caisse",
+        "emoji": "💳"
+      },
+      {
+        "front": "money",
+        "back": "l'argent",
+        "emoji": "💰"
+      },
+      {
+        "front": "to buy",
+        "back": "acheter",
+        "emoji": "🛍️"
+      }
+    ]
   },
   {
     "id": "mettre-le-couvert",
