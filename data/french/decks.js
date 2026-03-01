@@ -1,5 +1,5 @@
-// Auto-generated decks - 2026-03-01T14:13:13.167816
-window.DECKS_VERSION = '2026-03-01T14:13:13.167816';
+// Auto-generated decks - 2026-03-01T14:15:10.263669
+window.DECKS_VERSION = '2026-03-01T14:15:10.263669';
 window.DECKS_DATA = [
   {
     "id": "les-animaux-de-la-montagne",
@@ -3914,9 +3914,65 @@ window.DECKS_DATA = [
   },
   {
     "id": "les-continents",
-    "name": "Les Continents",
-    "category": "Le Monde",
-    "cards": []
+    "name": "Les continents",
+    "category": "Le monde",
+    "cards": [
+      {
+        "front": "Europe",
+        "back": "l'Europe",
+        "emoji": "🌍"
+      },
+      {
+        "front": "Africa",
+        "back": "l'Afrique",
+        "emoji": "🌍"
+      },
+      {
+        "front": "Asia",
+        "back": "l'Asie",
+        "emoji": "🌏"
+      },
+      {
+        "front": "North America",
+        "back": "l'Amérique du Nord",
+        "emoji": "🌎"
+      },
+      {
+        "front": "South America",
+        "back": "l'Amérique du Sud",
+        "emoji": "🌎"
+      },
+      {
+        "front": "Oceania",
+        "back": "l'Océanie",
+        "emoji": "🌏"
+      },
+      {
+        "front": "Atlantic Ocean",
+        "back": "l'océan Atlantique",
+        "emoji": "🌊"
+      },
+      {
+        "front": "Pacific Ocean",
+        "back": "l'océan Pacifique",
+        "emoji": "🌊"
+      },
+      {
+        "front": "Indian Ocean",
+        "back": "l'océan Indien",
+        "emoji": "🌊"
+      },
+      {
+        "front": "Arctic Ocean",
+        "back": "l'océan Arctique",
+        "emoji": "🌊"
+      },
+      {
+        "front": "Antarctica",
+        "back": "l'Antarctique",
+        "emoji": "🧊"
+      }
+    ]
   },
   {
     "id": "l-espace",

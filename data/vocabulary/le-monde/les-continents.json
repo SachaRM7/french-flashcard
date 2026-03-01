@@ -1,6 +1,19 @@
 {
   "id": "les-continents",
-  "name": "Les Continents",
-  "category": "Le Monde",
-  "cards": []
+  "name": "Les continents",
+  "nameAr": "القارات",
+  "category": "Le monde",
+  "cards": [
+    { "fr": "l'Europe", "en": "Europe", "ar": "أوروبا", "ar_translit": "ouroûbba", "emoji": "🌍" },
+    { "fr": "l'Afrique", "en": "Africa", "ar": "إفريقيا", "ar_translit": "ifriqiya", "emoji": "🌍" },
+    { "fr": "l'Asie", "en": "Asia", "ar": "آسيا", "ar_translit": "asiya", "emoji": "🌏" },
+    { "fr": "l'Amérique du Nord", "en": "North America", "ar": "أمريكا الشمالية", "ar_translit": "amrika achamaliya", "emoji": "🌎" },
+    { "fr": "l'Amérique du Sud", "en": "South America", "ar": "أمريكا الجنوبية", "ar_translit": "amrika al-djanoubiya", "emoji": "🌎" },
+    { "fr": "l'Océanie", "en": "Oceania", "ar": "أوقيانوسيا", "ar_translit": "ouqiyānousiya", "emoji": "🌏" },
+    { "fr": "l'océan Atlantique", "en": "Atlantic Ocean", "ar": "المحيط الأطلسي", "ar_translit": "al-mouhit al-atlanti", "emoji": "🌊" },
+    { "fr": "l'océan Pacifique", "en": "Pacific Ocean", "ar": "المحيط الهادي", "ar_translit": "al-mouhit al-hādi", "emoji": "🌊" },
+    { "fr": "l'océan Indien", "en": "Indian Ocean", "ar": "المحيط الهندي", "ar_translit": "al-mouhit al-hindi", "emoji": "🌊" },
+    { "fr": "l'océan Arctique", "en": "Arctic Ocean", "ar": "المحيط الشمالي", "ar_translit": "al-mouhit ach-chamāli", "emoji": "🌊" },
+    { "fr": "l'Antarctique", "en": "Antarctica", "ar": "القطب الجنوبي", "ar_translit": "qoutb al-janoûbi", "emoji": "🧊" }
+  ]
 }

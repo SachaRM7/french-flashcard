@@ -1,5 +1,5 @@
-// Auto-generated decks - 2026-03-01T14:13:13.167816
-window.DECKS_VERSION = '2026-03-01T14:13:13.167816';
+// Auto-generated decks - 2026-03-01T14:15:10.263669
+window.DECKS_VERSION = '2026-03-01T14:15:10.263669';
 window.DECKS_DATA = [
   {
     "id": "les-animaux-de-la-montagne",
@@ -4583,9 +4583,76 @@ window.DECKS_DATA = [
   },
   {
     "id": "les-continents",
-    "name": "Les Continents",
-    "category": "Le Monde",
-    "cards": []
+    "name": "Les continents",
+    "category": "Le monde",
+    "cards": [
+      {
+        "front": "أوروبا",
+        "back": "l'Europe",
+        "translit": "ouroûbba",
+        "emoji": "🌍"
+      },
+      {
+        "front": "إفريقيا",
+        "back": "l'Afrique",
+        "translit": "ifriqiya",
+        "emoji": "🌍"
+      },
+      {
+        "front": "آسيا",
+        "back": "l'Asie",
+        "translit": "asiya",
+        "emoji": "🌏"
+      },
+      {
+        "front": "أمريكا الشمالية",
+        "back": "l'Amérique du Nord",
+        "translit": "amrika achamaliya",
+        "emoji": "🌎"
+      },
+      {
+        "front": "أمريكا الجنوبية",
+        "back": "l'Amérique du Sud",
+        "translit": "amrika al-djanoubiya",
+        "emoji": "🌎"
+      },
+      {
+        "front": "أوقيانوسيا",
+        "back": "l'Océanie",
+        "translit": "ouqiyānousiya",
+        "emoji": "🌏"
+      },
+      {
+        "front": "المحيط الأطلسي",
+        "back": "l'océan Atlantique",
+        "translit": "al-mouhit al-atlanti",
+        "emoji": "🌊"
+      },
+      {
+        "front": "المحيط الهادي",
+        "back": "l'océan Pacifique",
+        "translit": "al-mouhit al-hādi",
+        "emoji": "🌊"
+      },
+      {
+        "front": "المحيط الهندي",
+        "back": "l'océan Indien",
+        "translit": "al-mouhit al-hindi",
+        "emoji": "🌊"
+      },
+      {
+        "front": "المحيط الشمالي",
+        "back": "l'océan Arctique",
+        "translit": "al-mouhit ach-chamāli",
+        "emoji": "🌊"
+      },
+      {
+        "front": "القطب الجنوبي",
+        "back": "l'Antarctique",
+        "translit": "qoutb al-janoûbi",
+        "emoji": "🧊"
+      }
+    ]
   },
   {
     "id": "l-espace",
