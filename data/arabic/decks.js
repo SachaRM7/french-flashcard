@@ -1,4 +1,5 @@
-// Auto-generated decks
+// Auto-generated decks - 2026-03-01T09:38:16.263209
+window.DECKS_VERSION = '2026-03-01T09:38:16.263209';
 window.DECKS_DATA = [
   {
     "id": "couleurs",

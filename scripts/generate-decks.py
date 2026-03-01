@@ -141,12 +141,15 @@ def generate_decks(do_translate=False):
             "cards": french_cards
         })
     
-    # Écrire les fichiers
+    # Écrire les fichiers avec timestamp cache-buster
+    from datetime import datetime
+    timestamp = datetime.utcnow().isoformat()
+    
     (BASE_DIR / "data" / "arabic" / "decks.js").write_text(
-        f"// Auto-generated decks\nwindow.DECKS_DATA = {json.dumps(arabic_decks, ensure_ascii=False, indent=2)};"
+        f"// Auto-generated decks - {timestamp}\nwindow.DECKS_VERSION = '{timestamp}';\nwindow.DECKS_DATA = {json.dumps(arabic_decks, ensure_ascii=False, indent=2)};"
     )
     (BASE_DIR / "data" / "french" / "decks.js").write_text(
-        f"// Auto-generated decks\nwindow.DECKS_DATA = {json.dumps(french_decks, ensure_ascii=False, indent=2)};"
+        f"// Auto-generated decks - {timestamp}\nwindow.DECKS_VERSION = '{timestamp}';\nwindow.DECKS_DATA = {json.dumps(french_decks, ensure_ascii=False, indent=2)};"
     )
     
     print(f"\n✅ Généré: {len(arabic_decks)} decks Arabe, {len(french_decks)} decks Français")
