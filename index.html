@@ -984,7 +984,6 @@
                 const themeDecks = allDecks.filter(d => t.decks.includes(d.id));
                 const deckCount = themeDecks.length;
                 const cardCount = themeDecks.reduce((sum, d) => sum + d.cards.length, 0);
-                if (deckCount === 0) return ''; // Skip empty themes
                 return `<div class="theme-card" style="--theme-color: ${t.color}" onclick="selectTheme('${t.id}')">
                     <div class="theme-icon">${t.icon}</div>
                     <div class="theme-name">${t.name}</div>
@@ -1001,6 +1000,9 @@
             document.getElementById('homeTitle').textContent = `${currentTheme.icon} ${currentTheme.name}`;
             renderDeckList();
             showPage('homePage');
+            if (decks.length === 0) {
+                document.getElementById('deckGrid').innerHTML = '<div style="padding: 20px; color: var(--text-secondary); text-align: center;">Aucun deck disponible pour ce thème (en construction)</div>';
+            }
         }
 
         function renderDeckList() {
