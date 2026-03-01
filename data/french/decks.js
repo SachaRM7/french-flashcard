@@ -1,5 +1,5 @@
-// Auto-generated decks - 2026-03-01T13:27:32.131665
-window.DECKS_VERSION = '2026-03-01T13:27:32.131665';
+// Auto-generated decks - 2026-03-01T13:32:16.240353
+window.DECKS_VERSION = '2026-03-01T13:32:16.240353';
 window.DECKS_DATA = [
   {
     "id": "les-animaux-de-la-montagne",
@@ -1251,6 +1251,162 @@ window.DECKS_DATA = [
     "cards": []
   },
   {
+    "id": "la-salle-de-classe",
+    "name": "La salle de classe",
+    "category": "L'école",
+    "cards": [
+      {
+        "front": "blackboard",
+        "back": "le tableau",
+        "emoji": "🖌️"
+      },
+      {
+        "front": "date",
+        "back": "la date",
+        "emoji": "📅"
+      },
+      {
+        "front": "clock",
+        "back": "l'horloge",
+        "emoji": "🕐"
+      },
+      {
+        "front": "name list",
+        "back": "la liste des noms",
+        "emoji": "📝"
+      },
+      {
+        "front": "desk",
+        "back": "le bureau",
+        "emoji": "📚"
+      },
+      {
+        "front": "chair",
+        "back": "la chaise",
+        "emoji": "🪑"
+      }
+    ]
+  },
+  {
+    "id": "le-chemin-de-l-ecole",
+    "name": "Le chemin de l'école",
+    "category": "L'école",
+    "cards": [
+      {
+        "front": "library bus",
+        "back": "le bibliobus",
+        "emoji": "📚"
+      },
+      {
+        "front": "school bus",
+        "back": "le bus scolaire",
+        "emoji": "🚌"
+      },
+      {
+        "front": "parking lot",
+        "back": "le parking",
+        "emoji": "🅿️"
+      },
+      {
+        "front": "traffic light",
+        "back": "le feu tricolore",
+        "emoji": "🚦"
+      },
+      {
+        "front": "daycare",
+        "back": "la crèche",
+        "emoji": "👶"
+      },
+      {
+        "front": "crosswalk",
+        "back": "le passage piéton",
+        "emoji": "🚶"
+      },
+      {
+        "front": "preschool",
+        "back": "l'école maternelle",
+        "emoji": "🏫"
+      },
+      {
+        "front": "primary school",
+        "back": "l'école primaire",
+        "emoji": "🏫"
+      },
+      {
+        "front": "playground",
+        "back": "la cour de récréation",
+        "emoji": "🎪"
+      }
+    ]
+  },
+  {
+    "id": "le-materiel",
+    "name": "Le matériel scolaire",
+    "category": "L'école",
+    "cards": [
+      {
+        "front": "book",
+        "back": "le livre",
+        "emoji": "📖"
+      },
+      {
+        "front": "library",
+        "back": "la bibliothèque",
+        "emoji": "📚"
+      },
+      {
+        "front": "toy basket",
+        "back": "le panier à doudous",
+        "emoji": "🧺"
+      },
+      {
+        "front": "board games",
+        "back": "les jeux de société",
+        "emoji": "🎲"
+      },
+      {
+        "front": "schoolbag",
+        "back": "le cartable",
+        "emoji": "🎒"
+      },
+      {
+        "front": "coat rack",
+        "back": "le portemanteau",
+        "emoji": "🧥"
+      },
+      {
+        "front": "notebook",
+        "back": "le cahier",
+        "emoji": "📓"
+      },
+      {
+        "front": "crayons",
+        "back": "les crayons",
+        "emoji": "✏️"
+      },
+      {
+        "front": "eraser",
+        "back": "la gomme",
+        "emoji": "🧹"
+      },
+      {
+        "front": "ruler",
+        "back": "la règle",
+        "emoji": "📏"
+      },
+      {
+        "front": "scissors",
+        "back": "les ciseaux",
+        "emoji": "✂️"
+      },
+      {
+        "front": "glue",
+        "back": "la colle",
+        "emoji": "🧴"
+      }
+    ]
+  },
+  {
     "id": "la-cuisine",
     "name": "La Cuisine",
     "category": "La Maison",
@@ -1635,6 +1791,36 @@ window.DECKS_DATA = [
         "front": "chest of drawers",
         "back": "la commode",
         "emoji": "🗄️"
+      },
+      {
+        "front": "television",
+        "back": "la télévision",
+        "emoji": "📺"
+      },
+      {
+        "front": "hi-fi system",
+        "back": "la chaîne hi-fi",
+        "emoji": "🔊"
+      },
+      {
+        "front": "newspaper",
+        "back": "le journal",
+        "emoji": "📰"
+      },
+      {
+        "front": "picture frame",
+        "back": "le cadre photo",
+        "emoji": "🖼️"
+      },
+      {
+        "front": "vase",
+        "back": "le vase",
+        "emoji": "🏺"
+      },
+      {
+        "front": "plant",
+        "back": "la plante",
+        "emoji": "🌱"
       }
     ]
   },
@@ -1702,6 +1888,56 @@ window.DECKS_DATA = [
         "front": "shampoo",
         "back": "le shampooing",
         "emoji": "🧴"
+      },
+      {
+        "front": "bathrobe",
+        "back": "le peignoir",
+        "emoji": "👗"
+      },
+      {
+        "front": "cream",
+        "back": "la crème",
+        "emoji": "🧴"
+      },
+      {
+        "front": "cotton swab",
+        "back": "le Coton-Tige",
+        "emoji": "🧼"
+      },
+      {
+        "front": "trash bin",
+        "back": "la poubelle",
+        "emoji": "🗑️"
+      },
+      {
+        "front": "hair brush",
+        "back": "la brosse à cheveux",
+        "emoji": "💇"
+      },
+      {
+        "front": "comb",
+        "back": "le peigne",
+        "emoji": "💇"
+      },
+      {
+        "front": "tissues",
+        "back": "les mouchoirs",
+        "emoji": "🧻"
+      },
+      {
+        "front": "hair dryer",
+        "back": "le sèche-cheveux",
+        "emoji": "💨"
+      },
+      {
+        "front": "makeup",
+        "back": "le maquillage",
+        "emoji": "💄"
+      },
+      {
+        "front": "perfume",
+        "back": "le parfum",
+        "emoji": "💐"
       }
     ]
   },

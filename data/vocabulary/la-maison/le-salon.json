@@ -17,6 +17,12 @@
     { "fr": "la fenêtre", "en": "window", "ar": "النافذة", "ar_translit": "an-nāfidha", "emoji": "🪟" },
     { "fr": "la porte", "en": "door", "ar": "الباب", "ar_translit": "al-bāb", "emoji": "🚪" },
     { "fr": "le coussin", "en": "cushion", "ar": "الوسادة", "ar_translit": "al-wisāda", "emoji": "🛋️" },
-    { "fr": "la commode", "en": "chest of drawers", "ar": "خزانة الأدراج", "ar_translit": "khizanat al-adraj", "emoji": "🗄️" }
+    { "fr": "la commode", "en": "chest of drawers", "ar": "خزانة الأدراج", "ar_translit": "khizanat al-adraj", "emoji": "🗄️" },
+    { "fr": "la télévision", "en": "television", "ar": "التلفاز", "ar_translit": "at-tilifāz", "emoji": "📺" },
+    { "fr": "la chaîne hi-fi", "en": "hi-fi system", "ar": "جهاز ستيريو هي في", "ar_translit": "djihāz stiriyo hi-fi", "emoji": "🔊" },
+    { "fr": "le journal", "en": "newspaper", "ar": "الجريدة", "ar_translit": "al-djarīda", "emoji": "📰" },
+    { "fr": "le cadre photo", "en": "picture frame", "ar": "إطار الصورة", "ar_translit": "itār as-soura", "emoji": "🖼️" },
+    { "fr": "le vase", "en": "vase", "ar": "المزهرية", "ar_translit": "al-mizhariyya", "emoji": "🏺" },
+    { "fr": "la plante", "en": "plant", "ar": "النبتة", "ar_translit": "an-nabta", "emoji": "🌱" }
   ]
 }

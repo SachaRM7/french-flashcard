@@ -1,0 +1,14 @@
+{
+  "id": "la-salle-de-classe",
+  "name": "La salle de classe",
+  "nameAr": "القسم",
+  "category": "L'école",
+  "cards": [
+    { "fr": "le tableau", "en": "blackboard", "ar": "السبورة", "ar_translit": "as-sabbōura", "emoji": "🖌️" },
+    { "fr": "la date", "en": "date", "ar": "تاريخ اليوم", "ar_translit": "tārikh al-yawm", "emoji": "📅" },
+    { "fr": "l'horloge", "en": "clock", "ar": "الساعة", "ar_translit": "as-sā'a", "emoji": "🕐" },
+    { "fr": "la liste des noms", "en": "name list", "ar": "قائمة الأسماء", "ar_translit": "qāimat al-asmāe", "emoji": "📝" },
+    { "fr": "le bureau", "en": "desk", "ar": "المكتب", "ar_translit": "al-maktab", "emoji": "📚" },
+    { "fr": "la chaise", "en": "chair", "ar": "الكرسي", "ar_translit": "al-kursi", "emoji": "🪑" }
+  ]
+}

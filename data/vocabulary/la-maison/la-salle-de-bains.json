@@ -15,6 +15,16 @@
     { "fr": "la serviette", "en": "towel", "ar": "المنشفة", "ar_translit": "al-minshafa", "emoji": "🛀" },
     { "fr": "le peigne", "en": "comb", "ar": "المشط", "ar_translit": "al-mishta", "emoji": "💇" },
     { "fr": "la brosse", "en": "brush", "ar": "الفرشاة", "ar_translit": "al-farshāt", "emoji": "💇" },
-    { "fr": "le shampooing", "en": "shampoo", "ar": "الشامبو", "ar_translit": "ach-chāmbou", "emoji": "🧴" }
+    { "fr": "le shampooing", "en": "shampoo", "ar": "الشامبو", "ar_translit": "ach-chāmbou", "emoji": "🧴" },
+    { "fr": "le peignoir", "en": "bathrobe", "ar": "ردّاء الحمام", "ar_translit": "ridāe al-hammām", "emoji": "👗" },
+    { "fr": "la crème", "en": "cream", "ar": "الكريمة", "ar_translit": "al-krīma", "emoji": "🧴" },
+    { "fr": "le Coton-Tige", "en": "cotton swab", "ar": "عود تنظيف الأذن", "ar_translit": "awd tandhif al-oudhoun", "emoji": "🧼" },
+    { "fr": "la poubelle", "en": "trash bin", "ar": "سلة المهملات", "ar_translit": "sallat al-mouhmalāt", "emoji": "🗑️" },
+    { "fr": "la brosse à cheveux", "en": "hair brush", "ar": "فرشاة الشعر", "ar_translit": "farshāt ach-cha'r", "emoji": "💇" },
+    { "fr": "le peigne", "en": "comb", "ar": "المشط", "ar_translit": "al-misht", "emoji": "💇" },
+    { "fr": "les mouchoirs", "en": "tissues", "ar": "المنادیل", "ar_translit": "al-manādil", "emoji": "🧻" },
+    { "fr": "le sèche-cheveux", "en": "hair dryer", "ar": "مجفّف الشعر", "ar_translit": "moudjaffif ach-cha'r", "emoji": "💨" },
+    { "fr": "le maquillage", "en": "makeup", "ar": "مستحضرات التجميل", "ar_translit": "moustahadhirāt at-tadjmil", "emoji": "💄" },
+    { "fr": "le parfum", "en": "perfume", "ar": "العطر", "ar_translit": "al-'itr", "emoji": "💐" }
   ]
 }

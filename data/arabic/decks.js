@@ -1,5 +1,5 @@
-// Auto-generated decks - 2026-03-01T13:27:32.131665
-window.DECKS_VERSION = '2026-03-01T13:27:32.131665';
+// Auto-generated decks - 2026-03-01T13:32:16.240353
+window.DECKS_VERSION = '2026-03-01T13:32:16.240353';
 window.DECKS_DATA = [
   {
     "id": "les-animaux-de-la-montagne",
@@ -1446,6 +1446,189 @@ window.DECKS_DATA = [
     "cards": []
   },
   {
+    "id": "la-salle-de-classe",
+    "name": "La salle de classe",
+    "category": "L'école",
+    "cards": [
+      {
+        "front": "السبورة",
+        "back": "le tableau",
+        "translit": "as-sabbōura",
+        "emoji": "🖌️"
+      },
+      {
+        "front": "تاريخ اليوم",
+        "back": "la date",
+        "translit": "tārikh al-yawm",
+        "emoji": "📅"
+      },
+      {
+        "front": "الساعة",
+        "back": "l'horloge",
+        "translit": "as-sā'a",
+        "emoji": "🕐"
+      },
+      {
+        "front": "قائمة الأسماء",
+        "back": "la liste des noms",
+        "translit": "qāimat al-asmāe",
+        "emoji": "📝"
+      },
+      {
+        "front": "المكتب",
+        "back": "le bureau",
+        "translit": "al-maktab",
+        "emoji": "📚"
+      },
+      {
+        "front": "الكرسي",
+        "back": "la chaise",
+        "translit": "al-kursi",
+        "emoji": "🪑"
+      }
+    ]
+  },
+  {
+    "id": "le-chemin-de-l-ecole",
+    "name": "Le chemin de l'école",
+    "category": "L'école",
+    "cards": [
+      {
+        "front": "مكتبة متنقلة",
+        "back": "le bibliobus",
+        "translit": "maktaba moutanaqila",
+        "emoji": "📚"
+      },
+      {
+        "front": "الناقل المدرسي",
+        "back": "le bus scolaire",
+        "translit": "an-naqil al-madrassi",
+        "emoji": "🚌"
+      },
+      {
+        "front": "موقف السيارات",
+        "back": "le parking",
+        "translit": "mawqif as-sayārāt",
+        "emoji": "🅿️"
+      },
+      {
+        "front": "إشارة المرور",
+        "back": "le feu tricolore",
+        "translit": "ishārat al-morūr",
+        "emoji": "🚦"
+      },
+      {
+        "front": "روضة الأطفال",
+        "back": "la crèche",
+        "translit": "rawdha al-atfāl",
+        "emoji": "👶"
+      },
+      {
+        "front": "ممر المشاة",
+        "back": "le passage piéton",
+        "translit": "mammar al-mashāt",
+        "emoji": "🚶"
+      },
+      {
+        "front": "الحضانة",
+        "back": "l'école maternelle",
+        "translit": "al-hadhāna",
+        "emoji": "🏫"
+      },
+      {
+        "front": "مدرسة ابتدائية",
+        "back": "l'école primaire",
+        "translit": "madrasa ibtidāiyya",
+        "emoji": "🏫"
+      },
+      {
+        "front": "ساحة المدرسة",
+        "back": "la cour de récréation",
+        "translit": "sāhat al-madrasas",
+        "emoji": "🎪"
+      }
+    ]
+  },
+  {
+    "id": "le-materiel",
+    "name": "Le matériel scolaire",
+    "category": "L'école",
+    "cards": [
+      {
+        "front": "الكتاب",
+        "back": "le livre",
+        "translit": "al-kitāb",
+        "emoji": "📖"
+      },
+      {
+        "front": "المكتبة",
+        "back": "la bibliothèque",
+        "translit": "al-maktaba",
+        "emoji": "📚"
+      },
+      {
+        "front": "سلة للدمى",
+        "back": "le panier à doudous",
+        "translit": "sallat li-d-duuma",
+        "emoji": "🧺"
+      },
+      {
+        "front": "لعبة الطاولة",
+        "back": "les jeux de société",
+        "translit": "lu'bat tāwila",
+        "emoji": "🎲"
+      },
+      {
+        "front": "الحقيبة",
+        "back": "le cartable",
+        "translit": "al-haqiba",
+        "emoji": "🎒"
+      },
+      {
+        "front": "معلّق الملاعيف",
+        "back": "le portemanteau",
+        "translit": "moualiq alama'atif",
+        "emoji": "🧥"
+      },
+      {
+        "front": "الكرّاس",
+        "back": "le cahier",
+        "translit": "al-korras",
+        "emoji": "📓"
+      },
+      {
+        "front": "أقلام رصاص",
+        "back": "les crayons",
+        "translit": "aqlām rasās",
+        "emoji": "✏️"
+      },
+      {
+        "front": "الممحاة",
+        "back": "la gomme",
+        "translit": "al-mimhāt",
+        "emoji": "🧹"
+      },
+      {
+        "front": "المسطرة",
+        "back": "la règle",
+        "translit": "al-mistara",
+        "emoji": "📏"
+      },
+      {
+        "front": "المقص",
+        "back": "les ciseaux",
+        "translit": "al-miqs",
+        "emoji": "✂️"
+      },
+      {
+        "front": "الغراء",
+        "back": "la colle",
+        "translit": "alghirāe",
+        "emoji": "🧴"
+      }
+    ]
+  },
+  {
     "id": "la-cuisine",
     "name": "La Cuisine",
     "category": "La Maison",
@@ -1902,6 +2085,42 @@ window.DECKS_DATA = [
         "back": "la commode",
         "translit": "khizanat al-adraj",
         "emoji": "🗄️"
+      },
+      {
+        "front": "التلفاز",
+        "back": "la télévision",
+        "translit": "at-tilifāz",
+        "emoji": "📺"
+      },
+      {
+        "front": "جهاز ستيريو هي في",
+        "back": "la chaîne hi-fi",
+        "translit": "djihāz stiriyo hi-fi",
+        "emoji": "🔊"
+      },
+      {
+        "front": "الجريدة",
+        "back": "le journal",
+        "translit": "al-djarīda",
+        "emoji": "📰"
+      },
+      {
+        "front": "إطار الصورة",
+        "back": "le cadre photo",
+        "translit": "itār as-soura",
+        "emoji": "🖼️"
+      },
+      {
+        "front": "المزهرية",
+        "back": "le vase",
+        "translit": "al-mizhariyya",
+        "emoji": "🏺"
+      },
+      {
+        "front": "النبتة",
+        "back": "la plante",
+        "translit": "an-nabta",
+        "emoji": "🌱"
       }
     ]
   },
@@ -1981,6 +2200,66 @@ window.DECKS_DATA = [
         "back": "le shampooing",
         "translit": "ach-chāmbou",
         "emoji": "🧴"
+      },
+      {
+        "front": "ردّاء الحمام",
+        "back": "le peignoir",
+        "translit": "ridāe al-hammām",
+        "emoji": "👗"
+      },
+      {
+        "front": "الكريمة",
+        "back": "la crème",
+        "translit": "al-krīma",
+        "emoji": "🧴"
+      },
+      {
+        "front": "عود تنظيف الأذن",
+        "back": "le Coton-Tige",
+        "translit": "awd tandhif al-oudhoun",
+        "emoji": "🧼"
+      },
+      {
+        "front": "سلة المهملات",
+        "back": "la poubelle",
+        "translit": "sallat al-mouhmalāt",
+        "emoji": "🗑️"
+      },
+      {
+        "front": "فرشاة الشعر",
+        "back": "la brosse à cheveux",
+        "translit": "farshāt ach-cha'r",
+        "emoji": "💇"
+      },
+      {
+        "front": "المشط",
+        "back": "le peigne",
+        "translit": "al-misht",
+        "emoji": "💇"
+      },
+      {
+        "front": "المنادیل",
+        "back": "les mouchoirs",
+        "translit": "al-manādil",
+        "emoji": "🧻"
+      },
+      {
+        "front": "مجفّف الشعر",
+        "back": "le sèche-cheveux",
+        "translit": "moudjaffif ach-cha'r",
+        "emoji": "💨"
+      },
+      {
+        "front": "مستحضرات التجميل",
+        "back": "le maquillage",
+        "translit": "moustahadhirāt at-tadjmil",
+        "emoji": "💄"
+      },
+      {
+        "front": "العطر",
+        "back": "le parfum",
+        "translit": "al-'itr",
+        "emoji": "💐"
       }
     ]
   },
