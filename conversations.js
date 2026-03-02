@@ -114,6 +114,7 @@ function renderConversationsHome() {
     });
     
     document.getElementById('convLessonsList').innerHTML = lessonsHtml;
+    if (typeof feather !== 'undefined') feather.replace();
 }
 
 function switchConversationsLevel(level) {
@@ -175,7 +176,7 @@ function renderConversationTab(tab) {
                 <div class="speaker-label">${line.speaker}</div>
                 <div class="dialogue-ar">${line.ar}</div>
                 ${conversationsSettings.showTranslation ? `<div class="dialogue-en">${line.en}</div>` : ''}
-                <button class="audio-btn" onclick="playDialogueAudio('${line.ar}')">🔊</button>
+                <button class="audio-btn" onclick="playDialogueAudio('${line.ar}')"><i data-feather="volume-2"></i></button>
             </div>
         `).join('');
     } else if (tab === 'vocabulary') {
@@ -187,8 +188,8 @@ function renderConversationTab(tab) {
                     <div class="vocab-en">${item.en}</div>
                 </div>
                 <div class="vocab-actions">
-                    <button class="audio-btn" onclick="playVocabAudio('${item.ar}')">🔊</button>
-                    <button class="fav-btn">♡</button>
+                    <button class="audio-btn" onclick="playVocabAudio('${item.ar}')"><i data-feather="volume-2"></i></button>
+                    <button class="fav-btn" onclick="toggleFav(this)"><i data-feather="heart"></i></button>
                 </div>
             </div>
         `).join('');
@@ -197,7 +198,7 @@ function renderConversationTab(tab) {
             <div class="example-item">
                 <div class="example-ar">${ex.ar}</div>
                 ${conversationsSettings.showTranslation ? `<div class="example-en">${ex.en}</div>` : ''}
-                <button class="audio-btn" onclick="playExampleAudio('${ex.ar}')">🔊</button>
+                <button class="audio-btn" onclick="playExampleAudio('${ex.ar}')"><i data-feather="volume-2"></i></button>
             </div>
         `).join('');
     } else if (tab === 'grammar') {
@@ -208,7 +209,7 @@ function renderConversationTab(tab) {
                     <div class="grammar-example">
                         <div class="grammar-ar">${ex.ar}</div>
                         ${conversationsSettings.showTranslation ? `<div class="grammar-en">${ex.en}</div>` : ''}
-                        <button class="audio-btn" onclick="playGrammarAudio('${ex.ar}')">🔊</button>
+                        <button class="audio-btn" onclick="playGrammarAudio('${ex.ar}')"><i data-feather="volume-2"></i></button>
                     </div>
                 `).join('')}
             </div>
@@ -216,6 +217,7 @@ function renderConversationTab(tab) {
     }
     
     container.innerHTML = html;
+    feather.replace();
 }
 
 function toggleConversationTranslation() {

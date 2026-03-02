@@ -12,6 +12,7 @@
     <title>Learn Language</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.css">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
         
@@ -949,7 +950,7 @@
     <!-- CONVERSATIONS HOME PAGE -->
     <div class="page" id="conversationsHomePage">
         <div id="convHeader" class="conv-header">
-            <button class="back-btn" onclick="showPage('learningTypePage')" style="color: white;">←</button>
+            <button class="back-btn" onclick="showPage('learningTypePage')" style="color: white;"><i data-feather="chevron-left" style="color: white;"></i></button>
             <div class="page-title" style="color: white;">Tous les sujets</div>
         </div>
         <div class="conv-level-tabs" id="convLevelTabs"></div>
@@ -977,7 +978,7 @@
     <!-- CONVERSATION LESSON PAGE -->
     <div class="page" id="conversationLessonPage">
         <div class="conv-lesson-header">
-            <button class="back-btn" onclick="showPage('conversationsHomePage')">←</button>
+            <button class="back-btn" onclick="showPage('conversationsHomePage')"><i data-feather="chevron-left"></i></button>
             <div class="conv-lesson-header-info">
                 <div id="convLessonTitle" class="conv-lesson-title">Lesson</div>
                 <div id="convLessonDesc" class="conv-lesson-desc">Description</div>
@@ -1005,7 +1006,7 @@
 
         <div id="convTabContent" class="conv-tab-content"></div>
 
-        <button class="conv-ai-practice" onclick="console.log('AI Practice')">💬 Pratique de conversation en IA</button>
+        <button class="conv-ai-practice" onclick="console.log('AI Practice')"><i data-feather="message-circle" style="display: inline; margin-right: 8px; width: 18px; height: 18px; vertical-align: middle;"></i> Pratique de conversation en IA</button>
 
         <div class="conv-player">
             <div class="player-progress">
@@ -1014,15 +1015,16 @@
                 <span id="convAudioDuration" class="player-time">07:59</span>
             </div>
             <div class="player-controls">
-                <button onclick="console.log('Menu')">☰</button>
-                <button onclick="console.log('Skip -15')">⏮ 15</button>
-                <button class="player-play-btn" onclick="console.log('Play')">⏸</button>
-                <button onclick="console.log('Skip +15')">15 ⏭</button>
+                <button onclick="console.log('Menu')"><i data-feather="menu"></i></button>
+                <button onclick="console.log('Skip -15')"><i data-feather="skip-back"></i> 15</button>
+                <button class="player-play-btn" onclick="console.log('Play')"><i data-feather="play" style="width: 24px; height: 24px;"></i></button>
+                <button onclick="console.log('Skip +15')">15 <i data-feather="skip-forward"></i></button>
                 <button onclick="console.log('Speed')">1.0x</button>
             </div>
         </div>
     </div>
 
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
     <script src="data/courses.js"></script>
     <script src="data/themes.js"></script>
     <script src="conversations.js"></script>
