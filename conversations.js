@@ -179,33 +179,37 @@ function renderConversationTab(tab) {
         html = lesson.dialogue.map(line => `
             <div class="dialogue-line">
                 <div class="speaker-label">${line.speaker}</div>
-                <div class="dialogue-text">
-                    <div class="dialogue-ar">${line.ar}</div>
+                <div class="dialogue-content">
+                    <div class="dialogue-ar-audio">
+                        <div class="dialogue-ar">${line.ar}</div>
+                        <button class="audio-btn" onclick="playDialogueAudio('${line.ar}')"><i data-feather="volume-2"></i></button>
+                    </div>
                     ${conversationsSettings.showTranslation ? `<div class="dialogue-en">${line.en}</div>` : ''}
                 </div>
-                <button class="audio-btn" onclick="playDialogueAudio('${line.ar}')"><i data-feather="volume-2"></i></button>
             </div>
         `).join('');
     } else if (tab === 'vocabulary') {
         html = lesson.vocabulary.map(item => `
             <div class="vocab-item">
-                <div class="vocab-word">${item.ar}</div>
+                <div class="vocab-word-audio">
+                    <div class="vocab-word">${item.ar}</div>
+                    <button class="audio-btn" onclick="playVocabAudio('${item.ar}')"><i data-feather="volume-2"></i></button>
+                </div>
                 <div class="vocab-meta">
                     <div class="vocab-trans">${item.trans}</div>
                     <div class="vocab-en">${item.en}</div>
                 </div>
-                <div class="vocab-actions">
-                    <button class="audio-btn" onclick="playVocabAudio('${item.ar}')"><i data-feather="volume-2"></i></button>
-                    <button class="fav-btn" onclick="toggleFav(this)"><i data-feather="heart"></i></button>
-                </div>
+                <button class="fav-btn" onclick="toggleFav(this)"><i data-feather="heart"></i></button>
             </div>
         `).join('');
     } else if (tab === 'examples') {
         html = lesson.examples.map(ex => `
             <div class="example-item">
-                <div class="example-ar">${ex.ar}</div>
+                <div class="example-ar-audio">
+                    <div class="example-ar">${ex.ar}</div>
+                    <button class="audio-btn" onclick="playExampleAudio('${ex.ar}')"><i data-feather="volume-2"></i></button>
+                </div>
                 ${conversationsSettings.showTranslation ? `<div class="example-en">${ex.en}</div>` : ''}
-                <button class="audio-btn" onclick="playExampleAudio('${ex.ar}')"><i data-feather="volume-2"></i></button>
             </div>
         `).join('');
     } else if (tab === 'grammar') {
@@ -214,9 +218,11 @@ function renderConversationTab(tab) {
                 <div class="grammar-title">${gram.title}</div>
                 ${gram.examples.map(ex => `
                     <div class="grammar-example">
-                        <div class="grammar-ar">${ex.ar}</div>
+                        <div class="grammar-ar-audio">
+                            <div class="grammar-ar">${ex.ar}</div>
+                            <button class="audio-btn" onclick="playGrammarAudio('${ex.ar}')"><i data-feather="volume-2"></i></button>
+                        </div>
                         ${conversationsSettings.showTranslation ? `<div class="grammar-en">${ex.en}</div>` : ''}
-                        <button class="audio-btn" onclick="playGrammarAudio('${ex.ar}')"><i data-feather="volume-2"></i></button>
                     </div>
                 `).join('')}
             </div>
