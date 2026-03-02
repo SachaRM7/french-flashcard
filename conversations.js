@@ -179,8 +179,10 @@ function renderConversationTab(tab) {
         html = lesson.dialogue.map(line => `
             <div class="dialogue-line">
                 <div class="speaker-label">${line.speaker}</div>
-                <div class="dialogue-ar">${line.ar}</div>
-                ${conversationsSettings.showTranslation ? `<div class="dialogue-en">${line.en}</div>` : ''}
+                <div class="dialogue-text">
+                    <div class="dialogue-ar">${line.ar}</div>
+                    ${conversationsSettings.showTranslation ? `<div class="dialogue-en">${line.en}</div>` : ''}
+                </div>
                 <button class="audio-btn" onclick="playDialogueAudio('${line.ar}')"><i data-feather="volume-2"></i></button>
             </div>
         `).join('');
