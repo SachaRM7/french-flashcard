@@ -182,10 +182,14 @@ function renderConversationTab(tab) {
         html = lesson.vocabulary.map(item => `
             <div class="vocab-item">
                 <div class="vocab-word">${item.ar}</div>
-                <div class="vocab-trans">${item.trans}</div>
-                <div class="vocab-en">${item.en}</div>
-                <button class="audio-btn" onclick="playVocabAudio('${item.ar}')">🔊</button>
-                <button class="fav-btn">♡</button>
+                <div class="vocab-meta">
+                    <div class="vocab-trans">${item.trans}</div>
+                    <div class="vocab-en">${item.en}</div>
+                </div>
+                <div class="vocab-actions">
+                    <button class="audio-btn" onclick="playVocabAudio('${item.ar}')">🔊</button>
+                    <button class="fav-btn">♡</button>
+                </div>
             </div>
         `).join('');
     } else if (tab === 'examples') {

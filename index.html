@@ -451,9 +451,9 @@
         .conv-tab { background: none; border: none; color: var(--text-tertiary); cursor: pointer; padding: 12px 0; font-size: 0.9rem; border-bottom: 2px solid transparent; font-weight: 500; }
         .conv-tab.active { color: var(--accent-blue); border-bottom-color: var(--accent-blue); font-weight: 600; }
 
-        .conv-tab-content { padding: 20px; flex: 1; overflow-y: auto; }
+        .conv-tab-content { padding: 16px 0; flex: 1; overflow-y: auto; margin: 0 16px; }
         
-        .dialogue-line { display: flex; gap: 12px; padding: 16px; margin-bottom: 0; background: var(--bg-card); border: 1px solid rgba(255,255,255,0.08); border-radius: 8px; margin-bottom: 12px; align-items: flex-start; }
+        .dialogue-line { display: flex; gap: 12px; padding: 14px 0; margin-bottom: 0; background: transparent; border: none; border-bottom: 1px solid rgba(255,255,255,0.05); align-items: flex-start; }
         .dialogue-line:last-child { margin-bottom: 0; }
         .speaker-label { width: 24px; font-weight: 700; min-width: 24px; font-size: 1rem; }
         .dialogue-text { flex: 1; }
@@ -461,20 +461,22 @@
         .dialogue-en { color: var(--text-secondary); font-size: 0.85rem; margin-top: 6px; }
         .audio-btn { background: none; border: none; color: var(--accent-blue); cursor: pointer; font-size: 1.1rem; flex-shrink: 0; }
 
-        .vocab-item { display: flex; flex-direction: column; gap: 8px; padding: 16px; background: var(--bg-card); border: 1px solid rgba(255,255,255,0.08); border-radius: 8px; margin-bottom: 12px; }
-        .vocab-word { direction: rtl; text-align: right; font-family: 'Amiri', serif; font-weight: 600; font-size: 1.1rem; }
-        .vocab-meta { display: flex; justify-content: space-between; align-items: center; }
-        .vocab-trans { color: var(--text-tertiary); font-size: 0.8rem; }
-        .vocab-en { color: var(--text-secondary); font-size: 0.85rem; }
-        .fav-btn { background: none; border: none; color: var(--text-secondary); cursor: pointer; font-size: 1.1rem; }
+        .vocab-item { display: flex; align-items: center; gap: 16px; padding: 12px 0; border-bottom: 1px solid rgba(255,255,255,0.05); }
+        .vocab-item:last-child { border-bottom: none; }
+        .vocab-word { direction: rtl; text-align: right; font-family: 'Amiri', serif; font-weight: 600; font-size: 1rem; min-width: 60px; }
+        .vocab-meta { flex: 1; display: flex; flex-direction: column; gap: 2px; }
+        .vocab-trans { color: var(--text-tertiary); font-size: 0.75rem; }
+        .vocab-en { color: var(--text-secondary); font-size: 0.8rem; }
+        .vocab-actions { display: flex; gap: 12px; align-items: center; }
+        .fav-btn { background: none; border: none; color: var(--text-secondary); cursor: pointer; font-size: 1rem; }
 
-        .example-item { padding: 16px; background: var(--bg-card); border: 1px solid rgba(255,255,255,0.08); border-radius: 8px; margin-bottom: 12px; }
+        .example-item { padding: 12px 0; background: transparent; border: none; border-bottom: 1px solid rgba(255,255,255,0.05); margin-bottom: 0; }
         .example-ar { direction: rtl; text-align: right; font-family: 'Amiri', serif; font-size: 1.05rem; margin-bottom: 6px; font-weight: 500; }
         .example-en { color: var(--text-secondary); font-size: 0.85rem; margin-bottom: 8px; }
 
         .grammar-section { margin-bottom: 24px; }
         .grammar-title { font-weight: 700; margin-bottom: 14px; padding-bottom: 10px; border-bottom: 1px solid rgba(255,255,255,0.08); }
-        .grammar-example { padding: 16px; background: var(--bg-card); border: 1px solid rgba(255,255,255,0.08); border-radius: 8px; margin-bottom: 12px; }
+        .grammar-example { padding: 12px 0; background: transparent; border: none; border-bottom: 1px solid rgba(255,255,255,0.05); margin-bottom: 0; }
         .grammar-ar { direction: rtl; text-align: right; font-family: 'Amiri', serif; font-size: 1.05rem; margin-bottom: 6px; font-weight: 500; }
         .grammar-en { color: var(--text-secondary); font-size: 0.85rem; }
 
