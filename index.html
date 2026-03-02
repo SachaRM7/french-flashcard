@@ -31,6 +31,16 @@
             --accent-purple: #a371f7;
         }
 
+        body.light-mode {
+            --bg-primary: #F5F7FA;
+            --bg-secondary: #FFFFFF;
+            --bg-card: #F0F3F8;
+            --border: #E1E8F0;
+            --text-primary: #1A1A1A;
+            --text-secondary: #666666;
+            --text-tertiary: #999999;
+        }
+
         body {
             font-family: 'Inter', -apple-system, sans-serif;
             background: var(--bg-primary);
@@ -952,6 +962,7 @@
         <div id="convHeader" class="conv-header">
             <button class="back-btn" onclick="showPage('learningTypePage')" style="color: white;"><i data-feather="chevron-left" style="color: white;"></i></button>
             <div class="page-title" style="color: white;">Tous les sujets</div>
+            <button onclick="toggleDarkMode()" style="background: none; border: none; color: white; cursor: pointer; display: flex; align-items: center;" id="themeToggleBtn2"><i data-feather="sun"></i></button>
         </div>
         <div class="conv-level-tabs" id="convLevelTabs"></div>
         <div style="padding: 20px; overflow-y: auto; flex: 1;">
@@ -983,7 +994,10 @@
                 <div id="convLessonTitle" class="conv-lesson-title">Lesson</div>
                 <div id="convLessonDesc" class="conv-lesson-desc">Description</div>
             </div>
-            <button onclick="console.log('Fav')" style="background: none; border: none; color: white; font-size: 1.5rem; cursor: pointer;">♡</button>
+            <div style="display: flex; gap: 12px; align-items: center;">
+                <button onclick="toggleDarkMode()" style="background: none; border: none; color: white; cursor: pointer; display: flex; align-items: center;" id="themeToggleBtn"><i data-feather="sun"></i></button>
+                <button onclick="console.log('Fav')" style="background: none; border: none; color: white; cursor: pointer; display: flex; align-items: center;"><i data-feather="heart"></i></button>
+            </div>
         </div>
 
         <div class="conv-controls">

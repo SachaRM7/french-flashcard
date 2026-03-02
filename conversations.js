@@ -75,6 +75,7 @@ let conversationsSettings = {
 };
 
 function startConversations() {
+    initTheme();
     showPage('conversationsHomePage');
     renderConversationsHome();
 }
@@ -114,6 +115,7 @@ function renderConversationsHome() {
     });
     
     document.getElementById('convLessonsList').innerHTML = lessonsHtml;
+    updateThemeButtons();
     if (typeof feather !== 'undefined') feather.replace();
 }
 
@@ -153,6 +155,9 @@ function renderConversationLesson() {
     
     // Setup player
     document.getElementById('convAudioDuration').textContent = lesson.duration;
+    
+    // Update theme buttons
+    updateThemeButtons();
 }
 
 function switchConversationTab(tab) {
@@ -227,6 +232,37 @@ function toggleConversationTranslation() {
 
 function toggleConversationAutoPlay() {
     conversationsSettings.autoPlay = !conversationsSettings.autoPlay;
+}
+
+// Theme Toggle
+function toggleDarkMode() {
+    const isDarkMode = document.body.classList.toggle('light-mode');
+    localStorage.setItem('theme-mode', isDarkMode ? 'light' : 'dark');
+    updateThemeButtons();
+    if (typeof feather !== 'undefined') feather.replace();
+}
+
+function updateThemeButtons() {
+    const isLightMode = document.body.classList.contains('light-mode');
+    const btn1 = document.getElementById('themeToggleBtn');
+    const btn2 = document.getElementById('themeToggleBtn2');
+    
+    if (btn1) {
+        btn1.innerHTML = isLightMode ? '<i data-feather="moon"></i>' : '<i data-feather="sun"></i>';
+    }
+    if (btn2) {
+        btn2.innerHTML = isLightMode ? '<i data-feather="moon"></i>' : '<i data-feather="sun"></i>';
+    }
+    
+    if (typeof feather !== 'undefined') feather.replace();
+}
+
+function initTheme() {
+    const savedTheme = localStorage.getItem('theme-mode');
+    if (savedTheme === 'light') {
+        document.body.classList.add('light-mode');
+    }
+    updateThemeButtons();
 }
 
 // Audio playback stubs
