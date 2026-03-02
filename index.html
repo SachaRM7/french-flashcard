@@ -449,10 +449,11 @@
         .conv-banner-desc { font-size: 0.85rem; color: rgba(255,255,255,0.8); }
         .conv-cta-btn { background: white; color: var(--accent-orange); border: none; padding: 10px 20px; border-radius: 20px; cursor: pointer; font-weight: 600; }
 
-        .conv-lesson-header { background: #4a5568; padding: 20px; display: flex; align-items: center; gap: 12px; }
-        .conv-lesson-header-info { flex: 1; }
-        .conv-lesson-title { font-weight: 600; }
-        .conv-lesson-desc { color: rgba(255,255,255,0.8); font-size: 0.85rem; }
+        .conv-lesson-header { background: linear-gradient(135deg, #4a5568 0%, #3a4558 100%); padding: 16px 20px; display: flex; align-items: center; gap: 14px; }
+        .conv-lesson-thumbnail { width: 64px; height: 64px; border-radius: 12px; background: rgba(255,255,255,0.15); display: flex; align-items: center; justify-content: center; font-size: 2rem; flex-shrink: 0; }
+        .conv-lesson-header-info { flex: 1; min-width: 0; }
+        .conv-lesson-title { font-weight: 700; font-size: 1rem; color: white; }
+        .conv-lesson-desc { color: rgba(255,255,255,0.75); font-size: 0.8rem; margin-top: 4px; line-height: 1.3; }
 
         .conv-controls { display: flex; gap: 20px; padding: 15px 20px; border-bottom: 1px solid var(--border); }
         .conv-toggle { display: flex; align-items: center; gap: 8px; cursor: pointer; font-size: 0.9rem; }
@@ -996,11 +997,12 @@
     <div class="page" id="conversationLessonPage">
         <div class="conv-lesson-header">
             <button class="back-btn" onclick="showPage('conversationsHomePage')"><i data-feather="chevron-left"></i></button>
+            <div class="conv-lesson-thumbnail" id="convLessonThumbnail">📚</div>
             <div class="conv-lesson-header-info">
                 <div id="convLessonTitle" class="conv-lesson-title">Lesson</div>
                 <div id="convLessonDesc" class="conv-lesson-desc">Description</div>
             </div>
-            <div style="display: flex; gap: 12px; align-items: center;">
+            <div style="display: flex; gap: 8px; align-items: center;">
                 <button onclick="toggleDarkMode()" style="background: none; border: none; color: white; cursor: pointer; display: flex; align-items: center;" id="themeToggleBtn"><i data-feather="sun"></i></button>
                 <button onclick="console.log('Fav')" style="background: none; border: none; color: white; cursor: pointer; display: flex; align-items: center;"><i data-feather="heart"></i></button>
             </div>
