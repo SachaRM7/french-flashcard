@@ -410,6 +410,79 @@
             .match-cell { font-size: 0.75rem; }
             .match-cell.rtl { font-size: 0.95rem; }
         }
+
+        /* ========== CONVERSATIONS ========== */
+        .conv-header { padding: 20px; display: flex; align-items: center; gap: 12px; min-height: 60px; }
+        .conv-level-tabs { display: flex; gap: 20px; padding: 0 20px; border-bottom: 1px solid var(--border); overflow-x: auto; }
+        .conv-level-tab { background: none; border: none; color: var(--text-secondary); cursor: pointer; padding: 12px 0; font-size: 1rem; border-bottom: 2px solid transparent; }
+        .conv-level-tab.active { border-bottom-color: currentColor; }
+
+        .conv-card { background: var(--bg-card); border-radius: 16px; padding: 20px; margin-bottom: 20px; }
+        .conv-card-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 15px; }
+        .conv-card-title { font-size: 1.3rem; font-weight: 600; }
+        .conv-card-users { color: var(--text-secondary); font-size: 0.9rem; margin-top: 4px; }
+
+        .conv-play-all { background: var(--accent-blue); color: white; border: none; padding: 10px 20px; border-radius: 8px; cursor: pointer; margin-bottom: 15px; }
+
+        .conv-lessons-list { display: flex; flex-direction: column; gap: 15px; }
+        .lesson-item { display: flex; gap: 12px; padding: 12px; background: var(--bg-secondary); border-radius: 12px; cursor: pointer; }
+        .lesson-thumb { width: 80px; height: 80px; border-radius: 8px; object-fit: cover; }
+        .lesson-content { flex: 1; }
+        .lesson-title { font-weight: 600; margin-bottom: 4px; }
+        .lesson-desc { color: var(--text-secondary); font-size: 0.85rem; line-height: 1.3; }
+        .lesson-progress { color: var(--accent-green); font-size: 0.8rem; margin-top: 4px; }
+
+        .conv-subscription-banner { background: var(--accent-orange); padding: 20px; margin: 20px; border-radius: 12px; color: white; display: flex; justify-content: space-between; align-items: center; }
+        .conv-banner-title { font-weight: 600; margin-bottom: 4px; }
+        .conv-banner-desc { font-size: 0.85rem; color: rgba(255,255,255,0.8); }
+        .conv-cta-btn { background: white; color: var(--accent-orange); border: none; padding: 10px 20px; border-radius: 20px; cursor: pointer; font-weight: 600; }
+
+        .conv-lesson-header { background: #4a5568; padding: 20px; display: flex; align-items: center; gap: 12px; }
+        .conv-lesson-header-info { flex: 1; }
+        .conv-lesson-title { font-weight: 600; }
+        .conv-lesson-desc { color: rgba(255,255,255,0.8); font-size: 0.85rem; }
+
+        .conv-controls { display: flex; gap: 20px; padding: 15px 20px; border-bottom: 1px solid var(--border); }
+        .conv-toggle { display: flex; align-items: center; gap: 8px; cursor: pointer; font-size: 0.9rem; }
+        .conv-toggle input { cursor: pointer; }
+
+        .conv-tabs { display: flex; gap: 20px; padding: 0 20px; border-bottom: 1px solid var(--border); overflow-x: auto; }
+        .conv-tab { background: none; border: none; color: var(--text-secondary); cursor: pointer; padding: 12px 0; font-size: 0.9rem; border-bottom: 2px solid transparent; }
+        .conv-tab.active { color: var(--accent-blue); border-bottom-color: var(--accent-blue); }
+
+        .conv-tab-content { padding: 20px; flex: 1; overflow-y: auto; }
+        
+        .dialogue-line { display: flex; gap: 12px; margin-bottom: 15px; align-items: flex-start; }
+        .speaker-label { width: 20px; font-weight: 600; }
+        .dialogue-ar { flex: 1; direction: rtl; text-align: right; font-family: 'Amiri', serif; }
+        .dialogue-en { color: var(--text-secondary); font-size: 0.85rem; }
+        .audio-btn { background: none; border: none; color: var(--accent-blue); cursor: pointer; font-size: 1.1rem; }
+
+        .vocab-item { display: flex; align-items: center; gap: 10px; padding: 10px; background: var(--bg-secondary); border-radius: 8px; margin-bottom: 10px; }
+        .vocab-word { flex: 1; direction: rtl; text-align: right; font-family: 'Amiri', serif; font-weight: 600; }
+        .vocab-trans { color: var(--text-secondary); font-size: 0.8rem; }
+        .vocab-en { color: var(--text-secondary); font-size: 0.85rem; flex: 1; }
+        .fav-btn { background: none; border: none; color: var(--text-secondary); cursor: pointer; }
+
+        .example-item { padding: 12px; background: var(--bg-secondary); border-radius: 8px; margin-bottom: 10px; }
+        .example-ar { direction: rtl; text-align: right; font-family: 'Amiri', serif; margin-bottom: 4px; }
+        .example-en { color: var(--text-secondary); font-size: 0.85rem; margin-bottom: 8px; }
+
+        .grammar-section { margin-bottom: 20px; }
+        .grammar-title { font-weight: 600; margin-bottom: 10px; padding-bottom: 8px; border-bottom: 1px solid var(--border); }
+        .grammar-example { padding: 12px; background: var(--bg-secondary); border-radius: 8px; margin-bottom: 10px; }
+        .grammar-ar { direction: rtl; text-align: right; font-family: 'Amiri', serif; margin-bottom: 4px; }
+        .grammar-en { color: var(--text-secondary); font-size: 0.85rem; }
+
+        .conv-ai-practice { background: var(--accent-blue); color: white; border: none; padding: 12px 20px; border-radius: 8px; cursor: pointer; width: 90%; margin: 15px auto; display: block; }
+
+        .conv-player { background: var(--bg-secondary); padding: 15px 20px; }
+        .player-progress { display: flex; align-items: center; gap: 10px; margin-bottom: 15px; }
+        .player-time { font-size: 0.8rem; color: var(--text-secondary); min-width: 35px; }
+        .player-slider { flex: 1; height: 4px; border-radius: 2px; }
+        .player-controls { display: flex; justify-content: space-around; align-items: center; }
+        .player-controls button { background: none; border: none; color: var(--text-primary); cursor: pointer; font-size: 1rem; }
+        .player-play-btn { background: var(--accent-blue); color: white; width: 50px; height: 50px; border-radius: 25px; display: flex; align-items: center; justify-content: center; }
     </style>
 </head>
 <body>
@@ -867,8 +940,86 @@
         </div>
     </div>
 
+    <!-- CONVERSATIONS HOME PAGE -->
+    <div class="page" id="conversationsHomePage">
+        <div id="convHeader" class="conv-header">
+            <button class="back-btn" onclick="showPage('learningTypePage')" style="color: white;">←</button>
+            <div class="page-title" style="color: white;">Tous les sujets</div>
+        </div>
+        <div class="conv-level-tabs" id="convLevelTabs"></div>
+        <div style="padding: 20px; overflow-y: auto; flex: 1;">
+            <div class="conv-card">
+                <div class="conv-card-header">
+                    <div>
+                        <div class="conv-card-title">Liste de leçons</div>
+                        <div class="conv-card-users">👥 194239</div>
+                    </div>
+                </div>
+                <button class="conv-play-all" onclick="console.log('Play all')">▶ Écoutez tout</button>
+                <div id="convLessonsList" class="conv-lessons-list"></div>
+            </div>
+        </div>
+        <div class="conv-subscription-banner">
+            <div>
+                <div class="conv-banner-title">Apprendre avec natifs</div>
+                <div class="conv-banner-desc">Maîtrisez le vocabulaire, la conversation et la culture</div>
+            </div>
+            <button class="conv-cta-btn">S'abonner maintenant</button>
+        </div>
+    </div>
+
+    <!-- CONVERSATION LESSON PAGE -->
+    <div class="page" id="conversationLessonPage">
+        <div class="conv-lesson-header">
+            <button class="back-btn" onclick="showPage('conversationsHomePage')">←</button>
+            <div class="conv-lesson-header-info">
+                <div id="convLessonTitle" class="conv-lesson-title">Lesson</div>
+                <div id="convLessonDesc" class="conv-lesson-desc">Description</div>
+            </div>
+            <button onclick="console.log('Fav')" style="background: none; border: none; color: white; font-size: 1.5rem; cursor: pointer;">♡</button>
+        </div>
+
+        <div class="conv-controls">
+            <label class="conv-toggle">
+                <input type="checkbox" id="convShowTranslation" onchange="toggleConversationTranslation()">
+                <span>Afficher la traduction</span>
+            </label>
+            <label class="conv-toggle">
+                <input type="checkbox" id="convAutoPlay" onchange="toggleConversationAutoPlay()">
+                <span>Lecture automatique</span>
+            </label>
+        </div>
+
+        <div class="conv-tabs">
+            <button class="conv-tab active" data-tab="dialogue" onclick="switchConversationTab('dialogue')">Dialogue</button>
+            <button class="conv-tab" data-tab="vocabulary" onclick="switchConversationTab('vocabulary')">Vocabulaire</button>
+            <button class="conv-tab" data-tab="examples" onclick="switchConversationTab('examples')">Phrases d'exemple</button>
+            <button class="conv-tab" data-tab="grammar" onclick="switchConversationTab('grammar')">Grammaire</button>
+        </div>
+
+        <div id="convTabContent" class="conv-tab-content"></div>
+
+        <button class="conv-ai-practice" onclick="console.log('AI Practice')">💬 Pratique de conversation en IA</button>
+
+        <div class="conv-player">
+            <div class="player-progress">
+                <span id="convAudioTime" class="player-time">00:00</span>
+                <input type="range" class="player-slider" min="0" max="100" value="0">
+                <span id="convAudioDuration" class="player-time">07:59</span>
+            </div>
+            <div class="player-controls">
+                <button onclick="console.log('Menu')">☰</button>
+                <button onclick="console.log('Skip -15')">⏮ 15</button>
+                <button class="player-play-btn" onclick="console.log('Play')">⏸</button>
+                <button onclick="console.log('Skip +15')">15 ⏭</button>
+                <button onclick="console.log('Speed')">1.0x</button>
+            </div>
+        </div>
+    </div>
+
     <script src="data/courses.js"></script>
     <script src="data/themes.js"></script>
+    <script src="conversations.js"></script>
     <script>
         // ========== STATE ==========
         let courses = [], currentCourse = null, currentLearningType = 'words', decks = [], currentDeck = null;
@@ -982,8 +1133,12 @@
         function selectLearningType(type) {
             currentLearningType = type;
             localStorage.setItem('learn-lang-type', type);
-            document.getElementById('themesTitle').textContent = `${currentCourse.flag} ${currentCourse.nameLocal}`;
-            loadThemesAndDecks();
+            if (type === 'conversations') {
+                startConversations();
+            } else {
+                document.getElementById('themesTitle').textContent = `${currentCourse.flag} ${currentCourse.nameLocal}`;
+                loadThemesAndDecks();
+            }
         }
 
         function updateSideSelector() {
