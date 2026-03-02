@@ -16,12 +16,13 @@
         * { margin: 0; padding: 0; box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
         
         :root {
-            --bg-primary: #0d1117;
-            --bg-secondary: #161b22;
-            --bg-card: #1c2128;
-            --border: #30363d;
-            --text-primary: #e6edf3;
-            --text-secondary: #8b949e;
+            --bg-primary: #0B0F16;
+            --bg-secondary: #121826;
+            --bg-card: #1A2233;
+            --border: #2A3544;
+            --text-primary: #FFFFFF;
+            --text-secondary: #B8C1D1;
+            --text-tertiary: #8E97A8;
             --accent-blue: #58a6ff;
             --accent-green: #3fb950;
             --accent-orange: #d29922;
@@ -447,42 +448,45 @@
         .conv-toggle input { cursor: pointer; }
 
         .conv-tabs { display: flex; gap: 20px; padding: 0 20px; border-bottom: 1px solid var(--border); overflow-x: auto; }
-        .conv-tab { background: none; border: none; color: var(--text-secondary); cursor: pointer; padding: 12px 0; font-size: 0.9rem; border-bottom: 2px solid transparent; }
-        .conv-tab.active { color: var(--accent-blue); border-bottom-color: var(--accent-blue); }
+        .conv-tab { background: none; border: none; color: var(--text-tertiary); cursor: pointer; padding: 12px 0; font-size: 0.9rem; border-bottom: 2px solid transparent; font-weight: 500; }
+        .conv-tab.active { color: var(--accent-blue); border-bottom-color: var(--accent-blue); font-weight: 600; }
 
         .conv-tab-content { padding: 20px; flex: 1; overflow-y: auto; }
         
-        .dialogue-line { display: flex; gap: 12px; margin-bottom: 15px; align-items: flex-start; }
-        .speaker-label { width: 20px; font-weight: 600; }
-        .dialogue-ar { flex: 1; direction: rtl; text-align: right; font-family: 'Amiri', serif; }
-        .dialogue-en { color: var(--text-secondary); font-size: 0.85rem; }
-        .audio-btn { background: none; border: none; color: var(--accent-blue); cursor: pointer; font-size: 1.1rem; }
+        .dialogue-line { display: flex; gap: 12px; padding: 16px; margin-bottom: 0; background: var(--bg-card); border: 1px solid rgba(255,255,255,0.08); border-radius: 8px; margin-bottom: 12px; align-items: flex-start; }
+        .dialogue-line:last-child { margin-bottom: 0; }
+        .speaker-label { width: 24px; font-weight: 700; min-width: 24px; font-size: 1rem; }
+        .dialogue-text { flex: 1; }
+        .dialogue-ar { direction: rtl; text-align: right; font-family: 'Amiri', serif; font-size: 1.05rem; line-height: 1.5; font-weight: 500; }
+        .dialogue-en { color: var(--text-secondary); font-size: 0.85rem; margin-top: 6px; }
+        .audio-btn { background: none; border: none; color: var(--accent-blue); cursor: pointer; font-size: 1.1rem; flex-shrink: 0; }
 
-        .vocab-item { display: flex; align-items: center; gap: 10px; padding: 10px; background: var(--bg-secondary); border-radius: 8px; margin-bottom: 10px; }
-        .vocab-word { flex: 1; direction: rtl; text-align: right; font-family: 'Amiri', serif; font-weight: 600; }
-        .vocab-trans { color: var(--text-secondary); font-size: 0.8rem; }
-        .vocab-en { color: var(--text-secondary); font-size: 0.85rem; flex: 1; }
-        .fav-btn { background: none; border: none; color: var(--text-secondary); cursor: pointer; }
+        .vocab-item { display: flex; flex-direction: column; gap: 8px; padding: 16px; background: var(--bg-card); border: 1px solid rgba(255,255,255,0.08); border-radius: 8px; margin-bottom: 12px; }
+        .vocab-word { direction: rtl; text-align: right; font-family: 'Amiri', serif; font-weight: 600; font-size: 1.1rem; }
+        .vocab-meta { display: flex; justify-content: space-between; align-items: center; }
+        .vocab-trans { color: var(--text-tertiary); font-size: 0.8rem; }
+        .vocab-en { color: var(--text-secondary); font-size: 0.85rem; }
+        .fav-btn { background: none; border: none; color: var(--text-secondary); cursor: pointer; font-size: 1.1rem; }
 
-        .example-item { padding: 12px; background: var(--bg-secondary); border-radius: 8px; margin-bottom: 10px; }
-        .example-ar { direction: rtl; text-align: right; font-family: 'Amiri', serif; margin-bottom: 4px; }
+        .example-item { padding: 16px; background: var(--bg-card); border: 1px solid rgba(255,255,255,0.08); border-radius: 8px; margin-bottom: 12px; }
+        .example-ar { direction: rtl; text-align: right; font-family: 'Amiri', serif; font-size: 1.05rem; margin-bottom: 6px; font-weight: 500; }
         .example-en { color: var(--text-secondary); font-size: 0.85rem; margin-bottom: 8px; }
 
-        .grammar-section { margin-bottom: 20px; }
-        .grammar-title { font-weight: 600; margin-bottom: 10px; padding-bottom: 8px; border-bottom: 1px solid var(--border); }
-        .grammar-example { padding: 12px; background: var(--bg-secondary); border-radius: 8px; margin-bottom: 10px; }
-        .grammar-ar { direction: rtl; text-align: right; font-family: 'Amiri', serif; margin-bottom: 4px; }
+        .grammar-section { margin-bottom: 24px; }
+        .grammar-title { font-weight: 700; margin-bottom: 14px; padding-bottom: 10px; border-bottom: 1px solid rgba(255,255,255,0.08); }
+        .grammar-example { padding: 16px; background: var(--bg-card); border: 1px solid rgba(255,255,255,0.08); border-radius: 8px; margin-bottom: 12px; }
+        .grammar-ar { direction: rtl; text-align: right; font-family: 'Amiri', serif; font-size: 1.05rem; margin-bottom: 6px; font-weight: 500; }
         .grammar-en { color: var(--text-secondary); font-size: 0.85rem; }
 
         .conv-ai-practice { background: var(--accent-blue); color: white; border: none; padding: 12px 20px; border-radius: 8px; cursor: pointer; width: 90%; margin: 15px auto; display: block; }
 
-        .conv-player { background: var(--bg-secondary); padding: 15px 20px; }
-        .player-progress { display: flex; align-items: center; gap: 10px; margin-bottom: 15px; }
-        .player-time { font-size: 0.8rem; color: var(--text-secondary); min-width: 35px; }
-        .player-slider { flex: 1; height: 4px; border-radius: 2px; }
-        .player-controls { display: flex; justify-content: space-around; align-items: center; }
-        .player-controls button { background: none; border: none; color: var(--text-primary); cursor: pointer; font-size: 1rem; }
-        .player-play-btn { background: var(--accent-blue); color: white; width: 50px; height: 50px; border-radius: 25px; display: flex; align-items: center; justify-content: center; }
+        .conv-player { background: var(--bg-secondary); padding: 20px; border-top: 1px solid var(--border); }
+        .player-progress { display: flex; align-items: center; gap: 12px; margin-bottom: 18px; }
+        .player-time { font-size: 0.75rem; color: var(--text-secondary); min-width: 40px; font-weight: 500; }
+        .player-slider { flex: 1; height: 5px; border-radius: 3px; background: var(--bg-card); accent-color: var(--accent-blue); cursor: pointer; }
+        .player-controls { display: flex; justify-content: space-around; align-items: center; gap: 10px; }
+        .player-controls button { background: none; border: none; color: var(--text-secondary); cursor: pointer; font-size: 1.1rem; font-weight: 500; }
+        .player-play-btn { background: var(--accent-blue); color: white; width: 52px; height: 52px; border-radius: 26px; display: flex; align-items: center; justify-content: center; border: none; cursor: pointer; box-shadow: 0 4px 12px rgba(88, 166, 255, 0.3); }
     </style>
 </head>
 <body>
