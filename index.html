@@ -423,10 +423,29 @@
         <div class="course-grid" id="courseGrid"></div>
     </div>
 
+    <!-- LEARNING TYPE PAGE -->
+    <div class="page" id="learningTypePage">
+        <div class="page-header">
+            <button class="back-btn" onclick="showPage('courseSelectPage')">←</button>
+            <div class="page-title" id="learningTypeTitle">📚 Mode d'apprentissage</div>
+        </div>
+        <div style="text-align:center; margin-bottom:40px; padding: 0 20px;">
+            <p style="color:var(--text-secondary); font-size: 1.05rem;">Comment veux-tu apprendre ?</p>
+        </div>
+        <div style="padding: 20px; display: flex; flex-direction: column; gap: 16px; max-width: 400px; margin: 0 auto;">
+            <button class="primary-btn" style="background: var(--accent-blue); font-size: 1.1rem; padding: 20px;" onclick="selectLearningType('words')">
+                📝 Apprendre avec des mots
+            </button>
+            <button class="primary-btn" style="background: var(--accent-purple); font-size: 1.1rem; padding: 20px;" onclick="selectLearningType('conversations')">
+                💬 Apprendre avec des conversations
+            </button>
+        </div>
+    </div>
+
     <!-- THEMES PAGE -->
     <div class="page" id="themesPage">
         <div class="page-header">
-            <button class="back-btn" onclick="showPage('courseSelectPage')">←</button>
+            <button class="back-btn" onclick="showPage('learningTypePage')">←</button>
             <div class="page-title" id="themesTitle">📚 Thèmes</div>
         </div>
         <div style="text-align:center; margin-bottom:20px;">
@@ -852,7 +871,7 @@
     <script src="data/themes.js"></script>
     <script>
         // ========== STATE ==========
-        let courses = [], currentCourse = null, decks = [], currentDeck = null;
+        let courses = [], currentCourse = null, currentLearningType = 'words', decks = [], currentDeck = null;
         let currentCards = [], currentIndex = 0, knownCards = new Set(), learningCards = new Set(), history = [], starred = new Set();
         let options = { shuffle: false, frontSide: 'front', favoritesOnly: false };
 
@@ -946,13 +965,24 @@
         }
 
         let themes = [], currentTheme = null, allDecks = [];
+        
+        // Load saved learning type preference
+        const savedLearningType = localStorage.getItem('learn-lang-type');
+        if (savedLearningType) currentLearningType = savedLearningType;
 
         function selectCourse(id) {
             currentCourse = courses.find(c => c.id === id);
             if (!currentCourse) return;
             localStorage.setItem('learn-lang-course', id);
-            document.getElementById('themesTitle').textContent = `${currentCourse.flag} ${currentCourse.nameLocal}`;
+            document.getElementById('learningTypeTitle').textContent = `${currentCourse.flag} ${currentCourse.nameLocal} - Mode d'apprentissage`;
             updateSideSelector();
+            showPage('learningTypePage');
+        }
+
+        function selectLearningType(type) {
+            currentLearningType = type;
+            localStorage.setItem('learn-lang-type', type);
+            document.getElementById('themesTitle').textContent = `${currentCourse.flag} ${currentCourse.nameLocal}`;
             loadThemesAndDecks();
         }
 
