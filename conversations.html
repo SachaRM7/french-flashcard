@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="theme-color" content="#0d1117">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <title>Learn Language - Conversations</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+        
+        :root {
+            --bg-primary: #0d1117;
+            --bg-secondary: #161b22;
+            --bg-card: #1c2128;
+            --border: #30363d;
+            --text-primary: #e6edf3;
+            --text-secondary: #8b949e;
+            --accent-blue: #58a6ff;
+            --accent-green: #3fb950;
+            --accent-orange: #d29922;
+            --accent-red: #f85149;
+            --accent-purple: #a371f7;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, sans-serif;
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        .page { display: none; min-height: 100vh; }
+        .page.active { display: flex; flex-direction: column; }
+
+        .page-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 20px;
+            border-bottom: 1px solid var(--border);
+        }
+        
+        .back-btn {
+            width: 40px; height: 40px;
+            background: transparent;
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            color: var(--text-primary);
+            cursor: pointer;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 1.2rem;
+        }
+        
+        .page-title { flex: 1; font-size: 1.1rem; font-weight: 600; }
+    </style>
+</head>
+<body>
+
+    <!-- FIRST HOME PAGE (Conversations) -->
+    <div class="page active" id="firstHomePage" style="display:flex;flex-direction:column;">
+        <div class="page-header">
+            <button class="back-btn" onclick="window.location.href='index.html'">←</button>
+            <div class="page-title" style="flex:1;">HelloArabic</div>
+            <button style="width:40px;height:40px;border:1px solid var(--border);border-radius:12px;background:transparent;color:var(--text-primary);cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:1rem;" onclick="alert('Pin feature coming soon')" title="Pin">📌</button>
+            <button style="width:40px;height:40px;border:1px solid var(--border);border-radius:12px;background:transparent;color:var(--text-primary);cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:1rem;" onclick="alert('Bookmark feature coming soon')" title="Bookmark">♡</button>
+            <button style="width:40px;height:40px;border:1px solid var(--border);border-radius:12px;background:transparent;color:var(--text-primary);cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:1rem;" onclick="alert('Share feature coming soon')" title="Share">↗</button>
+        </div>
+        <div style="flex:1;overflow-y:auto;padding:0;">
+            <!-- POPULAIRE -->
+            <div style="padding:20px;border-bottom:1px solid var(--border);">
+                <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:16px;">
+                    <h2 style="margin:0;font-size:1rem;font-weight:600;">Populaire</h2>
+                    <a href="#" style="color:var(--accent-blue);font-size:0.85rem;text-decoration:none;">En savoir plus >></a>
+                </div>
+                <div style="display:flex;gap:16px;background:var(--bg-secondary);border:1px solid var(--border);border-radius:16px;padding:16px;cursor:pointer;transition:all 0.2s;" onclick="openLessonFromFirstHome(window.LESSONS_DATA.find(l=>l.isPopular)||window.LESSONS_DATA[0])">
+                    <div style="min-width:100px;width:100px;height:100px;border:1px solid var(--border);border-radius:12px;background:var(--bg-primary);display:flex;align-items:center;justify-content:center;color:var(--text-secondary);font-size:2rem;flex-shrink:0;">
+                        <span id="fhPopularIcon">?</span>
+                    </div>
+                    <div style="flex:1;display:flex;flex-direction:column;justify-content:center;">
+                        <h3 id="fhPopularTitle" style="font-size:0.95rem;font-weight:700;margin:0 0 8px 0;line-height:1.3;">Loading...</h3>
+                        <p id="fhPopularDesc" style="font-size:0.8rem;color:var(--text-secondary);margin:0;line-height:1.4;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;">Loading...</p>
+                        <div style="margin-top:8px;font-size:0.75rem;color:var(--text-secondary);">▶ <span id="fhPopularCount">0</span></div>
+                    </div>
+                </div>
+            </div>
+            <!-- NIVEAUX -->
+            <div style="padding:20px;border-bottom:1px solid var(--border);">
+                <div style="display:flex;align-items:center;gap:12px;margin-bottom:16px;">
+                    <h2 style="margin:0;font-size:1rem;font-weight:600;">Étude par niveau</h2>
+                    <button style="width:20px;height:20px;border-radius:50%;border:1px solid var(--border);background:transparent;color:var(--text-secondary);cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:0.7rem;font-weight:bold;transition:all 0.2s;color:var(--accent-blue);" onclick="alert('CECRL Levels:\nA1: Beginner\nA2: Elementary\nB1: Intermediate\nB2: Upper Intermediate\nC1: Advanced')" title="Info">?</button>
+                </div>
+                <div style="font-size:0.85rem;color:var(--text-secondary);margin-bottom:16px;">Votre niveau : <strong id="fhUserLevel">A2</strong></div>
+                <div id="fhLevelsGrid" style="display:grid;grid-template-columns:1fr 1fr;gap:12px;"></div>
+            </div>
+            <!-- THÈMES -->
+            <div style="padding:20px;">
+                <h2 style="margin:0 0 4px 0;font-size:1rem;font-weight:600;">Étude par thème</h2>
+                <p style="margin:0 0 16px 0;font-size:0.85rem;color:var(--text-secondary);">Tous les <span id="fhThemesCount">0</span> sujets, <span id="fhLessonsCount">0</span> leçons</p>
+                <div id="fhThemesGrid" style="display:grid;grid-template-columns:1fr 1fr;gap:12px;"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="data/courses.js"></script>
+    <script src="data/themes.js"></script>
+    <script src="data/lessons.js"></script>
+    
+    <script>
+        function countLessonsByLevel(lessons = window.LESSONS_DATA) {
+            const counts = { 'A1': 0, 'A2': 0, 'B1': 0, 'B2': 0, 'C1': 0 };
+            lessons.forEach(lesson => {
+                if (counts.hasOwnProperty(lesson.level)) {
+                    counts[lesson.level]++;
+                }
+            });
+            return counts;
+        }
+
+        function countLessonsByTheme(lessons = window.LESSONS_DATA) {
+            const counts = {};
+            lessons.forEach(lesson => {
+                if (!counts[lesson.themeId]) {
+                    counts[lesson.themeId] = 0;
+                }
+                counts[lesson.themeId]++;
+            });
+            return counts;
+        }
+
+        function getPopularLesson(lessons = window.LESSONS_DATA) {
+            return lessons.find(l => l.isPopular) || lessons[0] || null;
+        }
+
+        function initFirstHome() {
+            if (!window.LESSONS_DATA || window.LESSONS_DATA.length === 0) return;
+            
+            const popular = getPopularLesson();
+            if (popular) {
+                document.getElementById('fhPopularIcon').textContent = '📖';
+                document.getElementById('fhPopularTitle').textContent = `${popular.themeName} | ${popular.number}: ${popular.title}`;
+                document.getElementById('fhPopularDesc').textContent = popular.description;
+                document.getElementById('fhPopularCount').textContent = popular.playCount.toLocaleString();
+            }
+            
+            const levelCounts = countLessonsByLevel();
+            const levelColors = {
+                'A1': { bg: '#e8f5e9', text: '#2e7d32', border: '#c8e6c9' },
+                'A2': { bg: '#e3f2fd', text: '#1565c0', border: '#bbdefb' },
+                'B1': { bg: '#f3e5f5', text: '#6a1b9a', border: '#e1bee7' },
+                'B2': { bg: '#fff3e0', text: '#e65100', border: '#ffe0b2' },
+                'C1': { bg: '#fce4ec', text: '#c2185b', border: '#f8bbd0' }
+            };
+            
+            const levelsGrid = document.getElementById('fhLevelsGrid');
+            if (levelsGrid) {
+                const levelOrder = ['A1', 'A2', 'B1', 'B2', 'C1'];
+                const levelHTML = levelOrder.map(level => {
+                    const colors = levelColors[level];
+                    return `
+                        <div style="background:${colors.bg};border:1px solid ${colors.border};border-radius:14px;padding:18px;text-align:center;cursor:pointer;transition:all 0.2s;" onclick="alert('Filtering by level ${level}')" onmouseover="this.style.transform='translateY(-2px)';this.style.boxShadow='0 4px 12px rgba(0,0,0,0.1)'" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='none'">
+                            <div style="font-size:1.4rem;font-weight:700;color:${colors.text};margin-bottom:8px;">${level}</div>
+                            <div style="font-size:0.8rem;color:${colors.text};opacity:0.8;">${levelCounts[level]} Lessons</div>
+                        </div>
+                    `;
+                }).join('');
+                levelsGrid.innerHTML = levelHTML;
+            }
+            
+            document.getElementById('fhUserLevel').textContent = 'A2';
+            
+            renderFirstHomeThemes();
+            
+            const totalLessons = window.LESSONS_DATA.length;
+            const totalThemes = (window.THEMES_DATA || []).length;
+            document.getElementById('fhLessonsCount').textContent = totalLessons;
+            document.getElementById('fhThemesCount').textContent = totalThemes;
+        }
+
+        function renderFirstHomeThemes() {
+            const themeCounts = countLessonsByTheme();
+            const themesGrid = document.getElementById('fhThemesGrid');
+            if (themesGrid && window.THEMES_DATA) {
+                const gridHTML = window.THEMES_DATA.slice(0, 6).map((theme, i) => `
+                    <div style="display:flex;flex-direction:column;">
+                        <div style="position:relative;border-radius:16px;overflow:hidden;cursor:pointer;aspect-ratio:1;transition:all 0.3s;background:var(--bg-secondary);" onclick="alert('View theme: ${theme.name}')" onmouseover="this.style.transform='scale(1.03)';this.style.boxShadow='0 8px 20px rgba(0,0,0,0.2)'" onmouseout="this.style.transform='scale(1)';this.style.boxShadow='none'">
+                            <img src="${theme.coverUrl || 'https://via.placeholder.com/200x200'}" alt="${theme.name}" style="width:100%;height:100%;object-fit:cover;">
+                            <div style="position:absolute;top:8px;left:8px;background:rgba(0,0,0,0.65);color:var(--accent-orange);padding:4px 10px;border-radius:8px;font-size:0.7rem;font-weight:600;">Vu récemment</div>
+                            <div style="position:absolute;bottom:0;left:0;right:0;background:linear-gradient(to top, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.3) 70%, transparent 100%);padding:12px;color:white;font-size:0.75rem;">${themeCounts[theme.id] || 0} Lessons</div>
+                        </div>
+                        <div style="text-align:center;padding:10px 0;font-size:0.9rem;font-weight:500;color:var(--text-primary);">${theme.name}</div>
+                    </div>
+                `).join('');
+                
+                themesGrid.innerHTML = gridHTML;
+            }
+        }
+
+        function openLessonFromFirstHome(lesson) {
+            if (lesson) {
+                alert(`Opening: ${lesson.themeName} | ${lesson.number}: ${lesson.title}`);
+            }
+        }
+
+        // Init on load
+        window.addEventListener('DOMContentLoaded', initFirstHome);
+    </script>
+
+</body>
+</html>
