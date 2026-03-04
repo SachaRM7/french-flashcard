@@ -545,9 +545,9 @@
             <button class="back-btn" onclick="showPage('learningTypePage')">←</button>
             <div class="page-title">HelloArabic</div>
             <div style="display:flex; gap:8px;">
-                <button style="width:36px;height:36px;border:1px solid var(--border);border-radius:8px;background:transparent;color:var(--text-primary);cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:1.1rem;" onclick="alert('Pin feature coming soon')" title="Pin">📌</button>
-                <button style="width:36px;height:36px;border:1px solid var(--border);border-radius:8px;background:transparent;color:var(--text-primary);cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:1.1rem;" onclick="alert('Bookmark feature coming soon')" title="Bookmark">🔖</button>
-                <button style="width:36px;height:36px;border:1px solid var(--border);border-radius:8px;background:transparent;color:var(--text-primary);cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:1.1rem;" onclick="alert('Share feature coming soon')" title="Share">↗️</button>
+                <button style="width:36px;height:36px;border:1px solid var(--border);border-radius:8px;background:transparent;color:var(--text-primary);cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:0.9rem;" onclick="alert('Pin feature coming soon')" title="Pin">📍</button>
+                <button style="width:36px;height:36px;border:1px solid var(--border);border-radius:8px;background:transparent;color:var(--text-primary);cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:0.9rem;" onclick="alert('Bookmark feature coming soon')" title="Bookmark">♡</button>
+                <button style="width:36px;height:36px;border:1px solid var(--border);border-radius:8px;background:transparent;color:var(--text-primary);cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:0.9rem;" onclick="alert('Share feature coming soon')" title="Share">↗</button>
             </div>
         </div>
         <div style="flex:1;overflow-y:auto;padding-bottom:20px;">
@@ -567,7 +567,7 @@
             <div style="margin-bottom:32px;padding-top:20px;">
                 <div style="display:flex;align-items:center;gap:8px;margin-bottom:16px;margin-left:20px;">
                     <h2 style="margin:0;font-size:1.1rem;font-weight:600;">Étude par niveau</h2>
-                    <button style="width:24px;height:24px;border-radius:50%;border:1px solid var(--border);background:transparent;color:var(--text-secondary);cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:0.8rem;" onclick="alert('CECRL Levels:\nA1: Beginner\nA2: Elementary\nB1: Intermediate\nB2: Upper Intermediate\nC1: Advanced')" title="Info">ℹ️</button>
+                    <button style="width:24px;height:24px;border-radius:50%;border:1px solid var(--border);background:transparent;color:var(--text-secondary);cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:0.75rem;font-weight:bold;" onclick="alert('CECRL Levels:\nA1: Beginner\nA2: Elementary\nB1: Intermediate\nB2: Upper Intermediate\nC1: Advanced')" title="Info">i</button>
                 </div>
                 <div style="display:flex;flex-wrap:wrap;gap:8px;margin-bottom:12px;padding:0 20px;margin-bottom:12px;font-size:0.9rem;color:var(--text-secondary);">
                     <span>Votre niveau : <strong id="fhUserLevel">A2</strong></span>
@@ -1281,13 +1281,42 @@
         function filterByLevelFirstHome(level) {
             localStorage.setItem('filter-level', level);
             localStorage.removeItem('filter-theme');
+            document.getElementById('themesTitle').textContent = `${currentCourse.flag} ${currentCourse.nameLocal} — ${level}`;
+            renderThemesFiltered();
             showPage('themesPage');
         }
 
         function filterByThemeFirstHome(themeId) {
             localStorage.setItem('filter-theme', themeId);
             localStorage.removeItem('filter-level');
+            const theme = themes.find(t => t.id === themeId);
+            if (theme) {
+                document.getElementById('themesTitle').textContent = `${currentCourse.flag} ${theme.name}`;
+            }
+            renderThemesFiltered();
             showPage('themesPage');
+        }
+
+        function renderThemesFiltered() {
+            const filterLevel = localStorage.getItem('filter-level');
+            const filterTheme = localStorage.getItem('filter-theme');
+            
+            let filteredThemes = themes;
+            if (filterTheme) {
+                filteredThemes = themes.filter(t => t.id === filterTheme);
+            }
+            
+            document.getElementById('themesGrid').innerHTML = filteredThemes.map(t => {
+                const themeDecks = allDecks.filter(d => t.decks.includes(d.id));
+                const deckCount = themeDecks.length;
+                const cardCount = themeDecks.reduce((sum, d) => sum + d.cards.length, 0);
+                return `<div class="theme-card" style="--theme-color: ${t.color}" onclick="selectTheme('${t.id}', '${filterLevel || ''}')">
+                    <div class="theme-icon">${t.icon}</div>
+                    <div class="theme-name">${t.name}</div>
+                    ${t.nameAr ? `<div class="theme-name-ar">${t.nameAr}</div>` : ''}
+                    <div class="theme-count">${deckCount} decks • ${cardCount} cartes</div>
+                </div>`;
+            }).join('');
         }
 
         function openLessonFromFirstHome(lesson) {
@@ -1334,11 +1363,13 @@
             }).join('');
         }
 
-        function selectTheme(id) {
+        function selectTheme(id, filterLevel) {
             currentTheme = themes.find(t => t.id === id);
             if (!currentTheme) return;
             decks = allDecks.filter(d => currentTheme.decks.includes(d.id));
             document.getElementById('homeTitle').textContent = `${currentTheme.icon} ${currentTheme.name}`;
+            localStorage.removeItem('filter-level');
+            localStorage.removeItem('filter-theme');
             renderDeckList();
             showPage('homePage');
             if (decks.length === 0) {
