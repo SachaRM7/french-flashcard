@@ -523,7 +523,7 @@
     <!-- LEARNING TYPE PAGE -->
     <div class="page" id="learningTypePage">
         <div class="page-header">
-            <button class="back-btn" onclick="showPage('courseSelectPage')">←</button>
+            <button class="back-btn" onclick="window.location.href='index.html'">←</button>
             <div class="page-title" id="learningTypeTitle">📚 Mode d'apprentissage</div>
         </div>
         <div style="text-align:center; margin-bottom:40px; padding: 0 20px;">
@@ -1201,9 +1201,9 @@
             currentCourse = courses.find(c => c.id === id);
             if (!currentCourse) return;
             localStorage.setItem('learn-lang-course', id);
-            document.getElementById('learningTypeTitle').textContent = `${currentCourse.flag} ${currentCourse.nameLocal} - Mode d'apprentissage`;
+            document.getElementById('themesTitle').textContent = `${currentCourse.flag} ${currentCourse.nameLocal}`;
             updateSideSelector();
-            showPage('learningTypePage');
+            loadThemesAndDecks();
         }
 
         function selectLearningType(type) {

@@ -40,6 +40,8 @@
         .page { display: none; min-height: 100vh; }
         .page.active { display: flex; flex-direction: column; }
 
+        #courseSelectPage.active { align-items: center; justify-content: center; }
+
         .page-header {
             display: flex;
             align-items: center;
@@ -64,10 +66,24 @@
 </head>
 <body>
 
+    <!-- COURSE SELECT PAGE -->
+    <div class="page active" id="courseSelectPage">
+        <div style="padding:20px;">
+            <button class="back-btn" onclick="window.location.href='index.html'" style="margin-bottom:20px;">←</button>
+        </div>
+        <div style="text-align:center;padding:20px;">
+            <h1 style="font-size:2rem;font-weight:700;margin-bottom:10px;">🌍 Learn Language</h1>
+            <p style="color:var(--text-secondary);font-size:1rem;margin-bottom:40px;">Apprendre avec des conversations</p>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:15px;max-width:400px;margin:0 auto;padding:0 20px;">
+            <div id="courseGrid"></div>
+        </div>
+    </div>
+
     <!-- FIRST HOME PAGE (Conversations) -->
-    <div class="page active" id="firstHomePage" style="display:flex;flex-direction:column;">
+    <div class="page" id="firstHomePage" style="display:flex;flex-direction:column;">
         <div class="page-header">
-            <button class="back-btn" onclick="window.location.href='index.html'">←</button>
+            <button class="back-btn" onclick="showPage('courseSelectPage')">←</button>
             <div class="page-title" style="flex:1;">HelloArabic</div>
             <button style="width:40px;height:40px;border:1px solid var(--border);border-radius:12px;background:transparent;color:var(--text-primary);cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:1rem;" onclick="alert('Pin feature coming soon')" title="Pin">📌</button>
             <button style="width:40px;height:40px;border:1px solid var(--border);border-radius:12px;background:transparent;color:var(--text-primary);cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:1rem;" onclick="alert('Bookmark feature coming soon')" title="Bookmark">♡</button>
@@ -114,6 +130,38 @@
     <script src="data/lessons.js"></script>
     
     <script>
+        let currentCourse = null;
+        let courses = [];
+
+        function showPage(id) { 
+            document.querySelectorAll('.page').forEach(p => p.classList.remove('active')); 
+            document.getElementById(id).classList.add('active'); 
+        }
+
+        function loadCourses() {
+            courses = window.COURSES_DATA || [];
+            const courseGrid = document.getElementById('courseGrid');
+            if (courseGrid) {
+                courseGrid.innerHTML = courses.map(c => `
+                    <div style="background:var(--bg-secondary);border:2px solid var(--border);border-radius:16px;padding:24px;cursor:pointer;display:flex;align-items:center;gap:20px;transition:all 0.2s;" onclick="selectCourseForConversations('${c.id}')">
+                        <div style="font-size:3rem;">${c.flag}</div>
+                        <div style="flex:1;">
+                            <div style="font-size:1.1rem;font-weight:700;margin-bottom:4px;">${c.name}</div>
+                            <div style="font-size:0.85rem;color:var(--text-secondary);">${c.nameLocal}</div>
+                        </div>
+                    </div>
+                `).join('');
+            }
+        }
+
+        function selectCourseForConversations(courseId) {
+            currentCourse = courses.find(c => c.id === courseId);
+            if (!currentCourse) return;
+            localStorage.setItem('learn-lang-course', courseId);
+            initFirstHome();
+            showPage('firstHomePage');
+        }
+
         function countLessonsByLevel(lessons = window.LESSONS_DATA) {
             const counts = { 'A1': 0, 'A2': 0, 'B1': 0, 'B2': 0, 'C1': 0 };
             lessons.forEach(lesson => {
@@ -210,7 +258,7 @@
         }
 
         // Init on load
-        window.addEventListener('DOMContentLoaded', initFirstHome);
+        window.addEventListener('DOMContentLoaded', loadCourses);
     </script>
 
 </body>
