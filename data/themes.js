@@ -5,7 +5,7 @@ window.THEMES_DATA = [
         name: 'Premiers mots',
         nameAr: 'الكلمات الأولى',
         color: '#a8d5a2',
-        icon: '🔤',
+        icon: 'A',
         decks: ['nombres', 'couleurs', 'formes', 'mouvements', 'se-reperer', 'jours-semaine', 'mois-annee', 'fetes', 'saisons', 'temps']
     },
     {
@@ -13,7 +13,7 @@ window.THEMES_DATA = [
         name: 'Le corps humain',
         nameAr: 'جسم الإنسان',
         color: '#f4a7a7',
-        icon: '🧍',
+        icon: '◉',
         decks: ['le-corps', 'le-visage', 'les-cheveux', 'les-handicaps', 'les-sens', 'grandir', 'chez-le-docteur', 'les-maladies', 'a-l-hopital', 'tous-differents']
     },
     {
@@ -21,7 +21,7 @@ window.THEMES_DATA = [
         name: 'Vivre ensemble',
         nameAr: 'العيش معاً',
         color: '#c9b8e0',
-        icon: '👥',
+        icon: '◈',
         decks: ['les-emotions', 'la-famille', 'la-politesse', 's-exprimer', 'communiquer']
     },
     {
@@ -29,7 +29,7 @@ window.THEMES_DATA = [
         name: 'S\'habiller',
         nameAr: 'الملابس',
         color: '#b8d4e8',
-        icon: '👕',
+        icon: '▮',
         decks: ['les-vetements', 'il-fait-chaud', 'il-fait-froid']
     },
     {
@@ -37,7 +37,7 @@ window.THEMES_DATA = [
         name: 'Manger',
         nameAr: 'الأكل',
         color: '#f9e79f',
-        icon: '🍽️',
+        icon: '◊',
         decks: ['le-petit-dejeuner', 'mettre-le-couvert', 'les-boissons', 'le-gout', 'le-sale', 'le-sucre', 'les-legumes', 'les-fruits', 'les-produits-laitiers', 'la-boulangerie', 'faire-les-courses']
     },
     {
@@ -45,7 +45,7 @@ window.THEMES_DATA = [
         name: 'La maison',
         nameAr: 'البيت',
         color: '#f5cba7',
-        icon: '🏠',
+        icon: '⌂',
         decks: ['ou-habites-tu', 'la-chambre', 'jouer', 'la-cuisine', 'le-salon', 'la-salle-de-bains']
     },
     {
@@ -53,7 +53,7 @@ window.THEMES_DATA = [
         name: 'L\'école',
         nameAr: 'المدرسة',
         color: '#aed6f1',
-        icon: '🏫',
+        icon: '⊡',
         decks: ['le-chemin-de-l-ecole', 'la-salle-de-classe', 'le-materiel', 'les-arts-plastiques', 'la-recreation', 'la-cantine', 'la-gymnastique']
     },
     {
@@ -61,7 +61,7 @@ window.THEMES_DATA = [
         name: 'La ville',
         nameAr: 'المدينة',
         color: '#d5dbdb',
-        icon: '🏙️',
+        icon: '⊞',
         decks: ['la-rue', 'le-square']
     },
     {
@@ -69,7 +69,7 @@ window.THEMES_DATA = [
         name: 'Le travail',
         nameAr: 'العمل',
         color: '#f1948a',
-        icon: '💼',
+        icon: '▪',
         decks: ['les-metiers']
     },
     {
@@ -77,7 +77,7 @@ window.THEMES_DATA = [
         name: 'Sortir',
         nameAr: 'الخروج',
         color: '#e8daef',
-        icon: '🎭',
+        icon: '◆',
         decks: ['le-musee', 'le-spectacle', 'le-cirque']
     },
     {
@@ -85,7 +85,7 @@ window.THEMES_DATA = [
         name: 'La musique',
         nameAr: 'الموسيقى',
         color: '#fadbd8',
-        icon: '🎵',
+        icon: '♪',
         decks: ['jouer-de-la-musique', 'les-instruments-a-cordes', 'les-instruments-a-vent', 'les-percussions']
     },
     {
@@ -93,7 +93,7 @@ window.THEMES_DATA = [
         name: 'Les sports',
         nameAr: 'الرياضة',
         color: '#fcf3cf',
-        icon: '⚽',
+        icon: '●',
         decks: ['faire-du-sport', 'la-danse', 'la-natation']
     },
     {
@@ -101,7 +101,7 @@ window.THEMES_DATA = [
         name: 'Les transports',
         nameAr: 'وسائل النقل',
         color: '#a9dfbf',
-        icon: '🚗',
+        icon: '▶',
         decks: ['sur-la-terre', 'dans-les-airs', 'sur-l-eau']
     },
     {
@@ -109,7 +109,7 @@ window.THEMES_DATA = [
         name: 'Les vacances',
         nameAr: 'العطلة',
         color: '#f9e79f',
-        icon: '🏖️',
+        icon: '▤',
         decks: ['la-gare', 'l-aeroport', 'la-plage', 'sur-l-eau', 'a-la-mer', 'la-foret', 'a-la-montagne', 'les-sports-d-hiver']
     },
     {
@@ -117,7 +117,7 @@ window.THEMES_DATA = [
         name: 'Les animaux',
         nameAr: 'الحيوانات',
         color: '#f5b7b1',
-        icon: '🐾',
+        icon: '✧',
         decks: ['le-jardin-et-la-nature', 'les-animaux-domestiques', 'les-animaux-du-jardin', 'les-animaux-de-la-ferme', 'les-animaux-de-la-foret', 'les-animaux-de-la-montagne', 'les-animaux-de-la-banquise', 'les-animaux-du-bord-de-mer', 'les-animaux-des-oceans', 'les-animaux-de-la-jungle', 'les-animaux-de-la-savane', 'les-insectes', 'les-oiseaux', 'les-cris-des-animaux']
     },
     {
@@ -125,7 +125,7 @@ window.THEMES_DATA = [
         name: 'Le monde',
         nameAr: 'العالم',
         color: '#d2b4de',
-        icon: '🌍',
+        icon: '◌',
         decks: ['les-continents', 'l-espace', 'la-ferme']
     }
 ];
