@@ -540,72 +540,47 @@
     </div>
 
     <!-- FIRST HOME PAGE (Conversations) -->
-    <div class="page" id="firstHomePage">
-        <div class="page-header">
+    <div class="page" id="firstHomePage" style="display:flex;flex-direction:column;">
+        <div class="page-header" style="border-bottom:1px solid var(--border);">
             <button class="back-btn" onclick="showPage('learningTypePage')">←</button>
-            <div class="page-title">HelloArabic</div>
-            <div style="display:flex; gap:8px;">
-                <button style="width:36px;height:36px;border:1px solid var(--border);border-radius:8px;background:transparent;color:var(--text-primary);cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:0.9rem;" onclick="alert('Pin feature coming soon')" title="Pin">📍</button>
-                <button style="width:36px;height:36px;border:1px solid var(--border);border-radius:8px;background:transparent;color:var(--text-primary);cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:0.9rem;" onclick="alert('Bookmark feature coming soon')" title="Bookmark">♡</button>
-                <button style="width:36px;height:36px;border:1px solid var(--border);border-radius:8px;background:transparent;color:var(--text-primary);cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:0.9rem;" onclick="alert('Share feature coming soon')" title="Share">↗</button>
-            </div>
+            <div class="page-title" style="flex:1;">HelloArabic</div>
+            <button style="width:40px;height:40px;border:1px solid var(--border);border-radius:12px;background:transparent;color:var(--text-primary);cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:1rem;transition:all 0.2s;" onclick="alert('Pin feature coming soon')" title="Pin">📌</button>
+            <button style="width:40px;height:40px;border:1px solid var(--border);border-radius:12px;background:transparent;color:var(--text-primary);cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:1rem;transition:all 0.2s;" onclick="alert('Bookmark feature coming soon')" title="Bookmark">♡</button>
+            <button style="width:40px;height:40px;border:1px solid var(--border);border-radius:12px;background:transparent;color:var(--text-primary);cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:1rem;transition:all 0.2s;" onclick="alert('Share feature coming soon')" title="Share">↗</button>
         </div>
-        <div style="flex:1;overflow-y:auto;padding-bottom:20px;">
+        <div style="flex:1;overflow-y:auto;padding:0;">
             <!-- POPULAIRE -->
-            <div style="margin-bottom:32px;padding-top:20px;">
-                <h2 style="margin-bottom:16px;margin-left:20px;font-size:1.1rem;font-weight:600;">Populaire</h2>
-                <div style="display:flex;margin:0 20px;background:var(--bg-secondary);border:1px solid var(--border);border-radius:16px;overflow:hidden;cursor:pointer;transition:all 0.2s;position:relative;" onclick="openLessonFromFirstHome(window.LESSONS_DATA.find(l=>l.isPopular)||window.LESSONS_DATA[0])">
-                    <img id="fhPopularThumbnail" src="https://via.placeholder.com/120x120" alt="Lesson" style="width:120px;height:120px;object-fit:cover;flex-shrink:0;">
-                    <div style="flex:1;padding:16px;display:flex;flex-direction:column;justify-content:center;">
-                        <h3 id="fhPopularTitle" style="font-size:1rem;font-weight:700;margin-bottom:8px;">Loading...</h3>
-                        <p id="fhPopularDesc" style="font-size:0.85rem;color:var(--text-secondary);margin-bottom:8px;line-height:1.3;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;">Loading...</p>
-                        <span style="font-size:0.75rem;color:var(--text-secondary);">▶ <span id="fhPopularCount">0</span></span>
+            <div style="padding:20px;border-bottom:1px solid var(--border);">
+                <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:16px;">
+                    <h2 style="margin:0;font-size:1rem;font-weight:600;">Populaire</h2>
+                    <a href="#" style="color:var(--accent-blue);font-size:0.85rem;text-decoration:none;">En savoir plus >></a>
+                </div>
+                <div style="display:flex;gap:16px;background:var(--bg-secondary);border:1px solid var(--border);border-radius:16px;padding:16px;cursor:pointer;transition:all 0.2s;" onclick="openLessonFromFirstHome(window.LESSONS_DATA.find(l=>l.isPopular)||window.LESSONS_DATA[0])">
+                    <div style="min-width:100px;width:100px;height:100px;border:1px solid var(--border);border-radius:12px;background:var(--bg-primary);display:flex;align-items:center;justify-content:center;color:var(--text-secondary);font-size:2rem;flex-shrink:0;">
+                        <span id="fhPopularIcon">?</span>
+                    </div>
+                    <div style="flex:1;display:flex;flex-direction:column;justify-content:center;">
+                        <h3 id="fhPopularTitle" style="font-size:0.95rem;font-weight:700;margin:0 0 8px 0;line-height:1.3;">Loading...</h3>
+                        <p id="fhPopularDesc" style="font-size:0.8rem;color:var(--text-secondary);margin:0;line-height:1.4;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;">Loading...</p>
+                        <div style="margin-top:8px;font-size:0.75rem;color:var(--text-secondary);">▶ <span id="fhPopularCount">0</span></div>
                     </div>
                 </div>
             </div>
             <!-- NIVEAUX -->
-            <div style="margin-bottom:32px;padding-top:20px;">
-                <div style="display:flex;align-items:center;gap:8px;margin-bottom:16px;margin-left:20px;">
-                    <h2 style="margin:0;font-size:1.1rem;font-weight:600;">Étude par niveau</h2>
-                    <button style="width:24px;height:24px;border-radius:50%;border:1px solid var(--border);background:transparent;color:var(--text-secondary);cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:0.75rem;font-weight:bold;" onclick="alert('CECRL Levels:\nA1: Beginner\nA2: Elementary\nB1: Intermediate\nB2: Upper Intermediate\nC1: Advanced')" title="Info">i</button>
+            <div style="padding:20px;border-bottom:1px solid var(--border);">
+                <div style="display:flex;align-items:center;gap:12px;margin-bottom:16px;">
+                    <h2 style="margin:0;font-size:1rem;font-weight:600;">Étude par niveau</h2>
+                    <button style="width:20px;height:20px;border-radius:50%;border:1px solid var(--border);background:transparent;color:var(--text-secondary);cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:0.7rem;font-weight:bold;transition:all 0.2s;" onclick="alert('CECRL Levels:\nA1: Beginner\nA2: Elementary\nB1: Intermediate\nB2: Upper Intermediate\nC1: Advanced')" title="Info" style="color:var(--accent-blue);">?</button>
                 </div>
-                <div style="display:flex;flex-wrap:wrap;gap:8px;margin-bottom:12px;padding:0 20px;margin-bottom:12px;font-size:0.9rem;color:var(--text-secondary);">
-                    <span>Votre niveau : <strong id="fhUserLevel">A2</strong></span>
-                </div>
-                <div id="fhLevelsGrid" style="display:grid;grid-template-columns:1fr 1fr;gap:12px;padding:0 20px;margin-bottom:16px;"></div>
+                <div style="font-size:0.85rem;color:var(--text-secondary);margin-bottom:16px;">Votre niveau : <strong id="fhUserLevel">A2</strong></div>
+                <div id="fhLevelsGrid" style="display:grid;grid-template-columns:1fr 1fr;gap:12px;"></div>
             </div>
             <!-- THÈMES -->
-            <div style="margin-bottom:32px;padding-top:20px;">
-                <div style="margin-left:20px;">
-                    <h2 style="margin-bottom:4px;font-size:1.1rem;font-weight:600;">Étude par thème</h2>
-                    <p style="font-size:0.85rem;color:var(--text-secondary);margin-bottom:16px;">Tous les <span id="fhThemesCount">0</span> sujets, <span id="fhLessonsCount">0</span> leçons</p>
-                </div>
-                <div id="fhThemesGrid" style="display:grid;grid-template-columns:1fr 1fr;gap:12px;padding:0 20px;"></div>
+            <div style="padding:20px;">
+                <h2 style="margin:0 0 4px 0;font-size:1rem;font-weight:600;">Étude par thème</h2>
+                <p style="margin:0 0 16px 0;font-size:0.85rem;color:var(--text-secondary);">Tous les <span id="fhThemesCount">0</span> sujets, <span id="fhLessonsCount">0</span> leçons</p>
+                <div id="fhThemesGrid" style="display:grid;grid-template-columns:1fr 1fr;gap:12px;"></div>
             </div>
-            <script>
-            // FirstHome only: render themes with clean icons
-            function renderFirstHomeThemes() {
-                const themeCounts = countLessonsByTheme();
-                const themesGrid = document.getElementById('fhThemesGrid');
-                const iconMap = {
-                    'premiers-mots': 'A', 'corps-humain': '◉', 'vivre-ensemble': '◈',
-                    'shabiller': '▮', 'manger': '◊', 'maison': '⌂', 'ecole': '⊡',
-                    'ville': '⊞', 'travail': '▪', 'sortir': '◆', 'musique': '♪',
-                    'sports': '●', 'transports': '▶', 'vacances': '▤', 'animaux': '✧', 'monde': '◌'
-                };
-                if (themesGrid && window.THEMES_DATA) {
-                    themesGrid.innerHTML = window.THEMES_DATA.slice(0, 6).map(theme => `
-                        <div style="position:relative;background:var(--bg-secondary);border-radius:16px;overflow:hidden;cursor:pointer;aspect-ratio:1;transition:all 0.2s;" onclick="filterByThemeFirstHome('${theme.id}')" onmouseover="this.style.transform='scale(1.02)'" onmouseout="this.style.transform='scale(1)'">
-                            <img src="${theme.coverUrl || 'https://via.placeholder.com/200x200'}" alt="${theme.name}" style="width:100%;height:100%;object-fit:cover;">
-                            <div style="position:absolute;bottom:0;left:0;right:0;background:linear-gradient(to top, rgba(0,0,0,0.6), transparent);padding:12px;color:white;font-size:0.75rem;">
-                                ${themeCounts[theme.id] || 0} Lessons
-                            </div>
-                            <div style="margin-top:8px;text-align:center;font-size:0.9rem;font-weight:500;color:var(--text-primary);">${theme.name}</div>
-                        </div>
-                    `).join('');
-                }
-            }
-            </script>
         </div>
     </div>
 
@@ -1254,22 +1229,35 @@
             // Popular lesson
             const popular = getPopularLesson();
             if (popular) {
-                document.getElementById('fhPopularThumbnail').src = popular.coverUrl;
+                document.getElementById('fhPopularIcon').textContent = '📖';
                 document.getElementById('fhPopularTitle').textContent = `${popular.themeName} | ${popular.number}: ${popular.title}`;
                 document.getElementById('fhPopularDesc').textContent = popular.description;
                 document.getElementById('fhPopularCount').textContent = popular.playCount.toLocaleString();
             }
             
-            // Levels
+            // Levels - with pastel colors
             const levelCounts = countLessonsByLevel();
+            const levelColors = {
+                'A1': { bg: '#e8f5e9', text: '#2e7d32', border: '#c8e6c9' },
+                'A2': { bg: '#e3f2fd', text: '#1565c0', border: '#bbdefb' },
+                'B1': { bg: '#f3e5f5', text: '#6a1b9a', border: '#e1bee7' },
+                'B2': { bg: '#fff3e0', text: '#e65100', border: '#ffe0b2' },
+                'C1': { bg: '#fce4ec', text: '#c2185b', border: '#f8bbd0' }
+            };
+            
             const levelsGrid = document.getElementById('fhLevelsGrid');
             if (levelsGrid) {
-                levelsGrid.innerHTML = ['A1', 'A2', 'B1', 'B2', 'C1'].map(level => `
-                    <div style="background:var(--bg-secondary);border:2px solid var(--border);border-radius:16px;padding:16px;text-align:center;cursor:pointer;transition:all 0.2s;" onclick="filterByLevelFirstHome('${level}')" onmouseover="this.style.borderColor='var(--accent-blue)';this.style.transform='translateY(-2px)'" onmouseout="this.style.borderColor='var(--border)';this.style.transform='translateY(0)'">
-                        <div style="font-size:1.2rem;font-weight:700;margin-bottom:8px;color:${getLevelColor(level)}">${level}</div>
-                        <div style="font-size:0.85rem;color:var(--text-secondary);">${levelCounts[level]} Lessons</div>
-                    </div>
-                `).join('');
+                const levelOrder = ['A1', 'A2', 'B1', 'B2', 'C1'];
+                const levelHTML = levelOrder.map(level => {
+                    const colors = levelColors[level];
+                    return `
+                        <div style="background:${colors.bg};border:1px solid ${colors.border};border-radius:14px;padding:18px;text-align:center;cursor:pointer;transition:all 0.2s;" onclick="filterByLevelFirstHome('${level}')" onmouseover="this.style.transform='translateY(-2px)';this.style.boxShadow='0 4px 12px rgba(0,0,0,0.1)'" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='none'">
+                            <div style="font-size:1.4rem;font-weight:700;color:${colors.text};margin-bottom:8px;">${level}</div>
+                            <div style="font-size:0.8rem;color:${colors.text};opacity:0.8;">${levelCounts[level]} Lessons</div>
+                        </div>
+                    `;
+                }).join('');
+                levelsGrid.innerHTML = levelHTML;
             }
             
             // User level
@@ -1288,6 +1276,43 @@
         function getLevelColor(level) {
             const colors = { A1: '#a8d5a2', A2: '#b8d4e8', B1: '#f4a7a7', B2: '#c9b8e0', C1: '#f9e79f' };
             return colors[level] || '#58a6ff';
+        }
+
+        function renderFirstHomeThemes() {
+            const themeCounts = countLessonsByTheme();
+            const themesGrid = document.getElementById('fhThemesGrid');
+            if (themesGrid && window.THEMES_DATA) {
+                themesGrid.innerHTML = window.THEMES_DATA.slice(0, 6).map(theme => `
+                    <div style="position:relative;border-radius:16px;overflow:hidden;cursor:pointer;aspect-ratio:1;transition:all 0.3s;background:var(--bg-secondary);" onclick="filterByThemeFirstHome('${theme.id}')" onmouseover="this.style.transform='scale(1.03)';this.style.boxShadow='0 8px 20px rgba(0,0,0,0.2)'" onmouseout="this.style.transform='scale(1)';this.style.boxShadow='none'">
+                        <img src="${theme.coverUrl || 'https://via.placeholder.com/200x200'}" alt="${theme.name}" style="width:100%;height:100%;object-fit:cover;">
+                        <div style="position:absolute;top:8px;left:8px;background:rgba(0,0,0,0.65);color:var(--accent-orange);padding:4px 10px;border-radius:8px;font-size:0.7rem;font-weight:600;">Vu récemment</div>
+                        <div style="position:absolute;bottom:0;left:0;right:0;background:linear-gradient(to top, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.3) 70%, transparent 100%);padding:12px;color:white;">
+                            <div style="font-size:0.75rem;margin-bottom:2px;">${themeCounts[theme.id] || 0} Lessons</div>
+                        </div>
+                    </div>
+                `).join('');
+                
+                // Add theme titles below cards
+                const cardsWithTitles = document.getElementById('fhThemesGrid').innerHTML;
+                const themeTitles = window.THEMES_DATA.slice(0, 6).map(theme => `
+                    <div style="text-align:center;padding:8px 0;font-size:0.85rem;font-weight:500;color:var(--text-primary);">${theme.name}</div>
+                `).join('');
+                
+                // We'll handle titles with CSS grid
+                // Recreate with proper grid layout
+                const gridHTML = window.THEMES_DATA.slice(0, 6).map((theme, i) => `
+                    <div style="display:flex;flex-direction:column;">
+                        <div style="position:relative;border-radius:16px;overflow:hidden;cursor:pointer;aspect-ratio:1;transition:all 0.3s;background:var(--bg-secondary);" onclick="filterByThemeFirstHome('${theme.id}')" onmouseover="this.style.transform='scale(1.03)';this.style.boxShadow='0 8px 20px rgba(0,0,0,0.2)'" onmouseout="this.style.transform='scale(1)';this.style.boxShadow='none'">
+                            <img src="${theme.coverUrl || 'https://via.placeholder.com/200x200'}" alt="${theme.name}" style="width:100%;height:100%;object-fit:cover;">
+                            <div style="position:absolute;top:8px;left:8px;background:rgba(0,0,0,0.65);color:var(--accent-orange);padding:4px 10px;border-radius:8px;font-size:0.7rem;font-weight:600;">Vu récemment</div>
+                            <div style="position:absolute;bottom:0;left:0;right:0;background:linear-gradient(to top, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.3) 70%, transparent 100%);padding:12px;color:white;font-size:0.75rem;">${themeCounts[theme.id] || 0} Lessons</div>
+                        </div>
+                        <div style="text-align:center;padding:10px 0;font-size:0.9rem;font-weight:500;color:var(--text-primary);">${theme.name}</div>
+                    </div>
+                `).join('');
+                
+                themesGrid.innerHTML = gridHTML;
+            }
         }
 
         function filterByLevelFirstHome(level) {
