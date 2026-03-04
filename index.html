@@ -582,6 +582,30 @@
                 </div>
                 <div id="fhThemesGrid" style="display:grid;grid-template-columns:1fr 1fr;gap:12px;padding:0 20px;"></div>
             </div>
+            <script>
+            // FirstHome only: render themes with clean icons
+            function renderFirstHomeThemes() {
+                const themeCounts = countLessonsByTheme();
+                const themesGrid = document.getElementById('fhThemesGrid');
+                const iconMap = {
+                    'premiers-mots': 'A', 'corps-humain': '◉', 'vivre-ensemble': '◈',
+                    'shabiller': '▮', 'manger': '◊', 'maison': '⌂', 'ecole': '⊡',
+                    'ville': '⊞', 'travail': '▪', 'sortir': '◆', 'musique': '♪',
+                    'sports': '●', 'transports': '▶', 'vacances': '▤', 'animaux': '✧', 'monde': '◌'
+                };
+                if (themesGrid && window.THEMES_DATA) {
+                    themesGrid.innerHTML = window.THEMES_DATA.slice(0, 6).map(theme => `
+                        <div style="position:relative;background:var(--bg-secondary);border-radius:16px;overflow:hidden;cursor:pointer;aspect-ratio:1;transition:all 0.2s;" onclick="filterByThemeFirstHome('${theme.id}')" onmouseover="this.style.transform='scale(1.02)'" onmouseout="this.style.transform='scale(1)'">
+                            <img src="${theme.coverUrl || 'https://via.placeholder.com/200x200'}" alt="${theme.name}" style="width:100%;height:100%;object-fit:cover;">
+                            <div style="position:absolute;bottom:0;left:0;right:0;background:linear-gradient(to top, rgba(0,0,0,0.6), transparent);padding:12px;color:white;font-size:0.75rem;">
+                                ${themeCounts[theme.id] || 0} Lessons
+                            </div>
+                            <div style="margin-top:8px;text-align:center;font-size:0.9rem;font-weight:500;color:var(--text-primary);">${theme.name}</div>
+                        </div>
+                    `).join('');
+                }
+            }
+            </script>
         </div>
     </div>
 
@@ -1251,20 +1275,8 @@
             // User level
             document.getElementById('fhUserLevel').textContent = 'A2';
             
-            // Themes
-            const themeCounts = countLessonsByTheme();
-            const themesGrid = document.getElementById('fhThemesGrid');
-            if (themesGrid && window.THEMES_DATA) {
-                themesGrid.innerHTML = window.THEMES_DATA.slice(0, 6).map(theme => `
-                    <div style="position:relative;background:var(--bg-secondary);border-radius:16px;overflow:hidden;cursor:pointer;aspect-ratio:1;transition:all 0.2s;" onclick="filterByThemeFirstHome('${theme.id}')" onmouseover="this.style.transform='scale(1.02)'" onmouseout="this.style.transform='scale(1)'">
-                        <img src="${theme.coverUrl || 'https://via.placeholder.com/200x200'}" alt="${theme.name}" style="width:100%;height:100%;object-fit:cover;">
-                        <div style="position:absolute;bottom:0;left:0;right:0;background:linear-gradient(to top, rgba(0,0,0,0.6), transparent);padding:12px;color:white;font-size:0.75rem;">
-                            ${themeCounts[theme.id] || 0} Lessons
-                        </div>
-                        <div style="margin-top:8px;text-align:center;font-size:0.9rem;font-weight:500;color:var(--text-primary);">${theme.name}</div>
-                    </div>
-                `).join('');
-            }
+            // Themes (with clean icons)
+            renderFirstHomeThemes();
             
             // Totals
             const totalLessons = window.LESSONS_DATA.length;
