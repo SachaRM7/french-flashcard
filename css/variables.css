@@ -1,0 +1,90 @@
+/* css/variables.css — Tokens design HelloArabic */
+:root {
+  /* Couleurs — Dark theme (défaut) */
+  --bg-primary: #0B0F16;
+  --bg-secondary: #121826;
+  --bg-card: #1A2233;
+  --bg-hover: #1E2A3D;
+  --border: #2A3544;
+  --border-hover: #3A4554;
+
+  --text-primary: #FFFFFF;
+  --text-secondary: #B8C1D1;
+  --text-tertiary: #8E97A8;
+
+  --accent-blue: #58a6ff;
+  --accent-green: #3fb950;
+  --accent-orange: #d29922;
+  --accent-red: #f85149;
+  --accent-purple: #a371f7;
+
+  /* Spacing */
+  --space-xs: 4px;
+  --space-sm: 8px;
+  --space-md: 12px;
+  --space-lg: 16px;
+  --space-xl: 20px;
+  --space-2xl: 24px;
+  --space-3xl: 32px;
+  --space-4xl: 40px;
+
+  /* Radius */
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 14px;
+  --radius-xl: 16px;
+  --radius-full: 50%;
+
+  /* Fonts */
+  --font-ui: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-arabic: 'Amiri', serif;
+
+  /* Font sizes */
+  --text-xs: 0.75rem;
+  --text-sm: 0.85rem;
+  --text-base: 1rem;
+  --text-lg: 1.1rem;
+  --text-xl: 1.3rem;
+  --text-2xl: 1.5rem;
+  --text-3xl: 2rem;
+  --text-4xl: 2.5rem;
+
+  /* Transitions */
+  --transition-fast: 0.15s ease;
+  --transition-base: 0.2s ease;
+  --transition-slow: 0.4s ease;
+
+  /* Shadows */
+  --shadow-sm: 0 1px 3px rgba(0,0,0,0.2);
+  --shadow-md: 0 4px 12px rgba(0,0,0,0.3);
+  --shadow-lg: 0 8px 24px rgba(0,0,0,0.4);
+
+  /* Z-index scale */
+  --z-base: 1;
+  --z-dropdown: 10;
+  --z-modal: 100;
+  --z-toast: 200;
+
+  /* Layout */
+  --max-width: 500px;
+  --header-height: 60px;
+  --player-height: 120px;
+}
+
+/* Light theme override */
+body.light-mode {
+  --bg-primary: #F5F7FA;
+  --bg-secondary: #FFFFFF;
+  --bg-card: #F0F3F8;
+  --bg-hover: #E8EDF3;
+  --border: #E1E8F0;
+  --border-hover: #CBD5E0;
+
+  --text-primary: #1A1A1A;
+  --text-secondary: #666666;
+  --text-tertiary: #999999;
+
+  --shadow-sm: 0 1px 3px rgba(0,0,0,0.08);
+  --shadow-md: 0 4px 12px rgba(0,0,0,0.1);
+  --shadow-lg: 0 8px 24px rgba(0,0,0,0.12);
+}

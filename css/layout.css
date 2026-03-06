@@ -1,0 +1,52 @@
+/* css/layout.css — Grilles, header, nav, page containers */
+
+#app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.page-header {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  padding: 0 var(--space-xl);
+  height: var(--header-height);
+  flex-shrink: 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.page-header__title {
+  flex: 1;
+  font-size: var(--text-lg);
+  font-weight: 600;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.page-header__actions {
+  display: flex;
+  gap: var(--space-sm);
+}
+
+.page-content {
+  flex: 1;
+  padding: var(--space-xl);
+  overflow-y: auto;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  width: 100%;
+}
+
+.themes-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-md);
+}
+
+.deck-grid {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}

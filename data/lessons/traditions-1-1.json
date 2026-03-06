@@ -1,0 +1,24 @@
+{
+  "id": "traditions-1-1",
+  "seriesId": "traditions-1",
+  "seriesName": "Traditions 1",
+  "number": 1,
+  "title": "Are you American?",
+  "titleFr": "Tu es Américain ?",
+  "description": "Sam meets a border agent at the airport.",
+  "descriptionFr": "Sam rencontre un agent à l'aéroport.",
+  "level": "A1",
+  "tags": ["salutations", "nationalité", "aéroport"],
+  "duration": "7:59",
+  "audioUrl": "audio/lessons/traditions-1-1.mp3",
+  "coverUrl": null,
+  "speakers": {},
+  "dialogue": [],
+  "vocabulary": [],
+  "grammar": [],
+  "examples": [],
+  "exercises": {
+    "fillBlanks": [],
+    "dialogueBlanks": []
+  }
+}

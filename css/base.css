@@ -1,0 +1,58 @@
+/* css/base.css — Reset, body, typographie globale */
+
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  font-family: var(--font-ui);
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  min-height: 100vh;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+button {
+  font-family: var(--font-ui);
+  cursor: pointer;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Texte arabe */
+.text-ar {
+  font-family: var(--font-arabic);
+  direction: rtl;
+  unicode-bidi: bidi-override;
+}
+
+/* Translitération */
+.text-translit {
+  font-style: italic;
+  color: var(--text-secondary);
+}
+
+/* Scrollbar webkit */
+::-webkit-scrollbar {
+  width: 4px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 4px;
+}
+
+/* Sélection */
+::selection {
+  background: rgba(88, 166, 255, 0.3);
+  color: var(--text-primary);
+}

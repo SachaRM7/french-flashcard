@@ -1,0 +1,130 @@
+[
+  {
+    "id": "premiers-mots",
+    "name": "Premiers mots",
+    "nameAr": "الكلمات الأولى",
+    "color": "#a8d5a2",
+    "icon": "🔤",
+    "decks": ["nombres", "couleurs", "formes", "mouvements", "se-reperer", "jours-semaine", "mois-annee", "fetes", "saisons", "temps"]
+  },
+  {
+    "id": "corps-humain",
+    "name": "Le corps humain",
+    "nameAr": "جسم الإنسان",
+    "color": "#f4a7a7",
+    "icon": "🧍",
+    "decks": ["le-corps", "le-visage", "les-cheveux", "les-handicaps", "les-sens", "grandir", "chez-le-docteur", "les-maladies", "a-l-hopital", "tous-differents"]
+  },
+  {
+    "id": "vivre-ensemble",
+    "name": "Vivre ensemble",
+    "nameAr": "العيش معاً",
+    "color": "#c9b8e0",
+    "icon": "👥",
+    "decks": ["les-emotions", "la-famille", "la-politesse", "s-exprimer", "communiquer"]
+  },
+  {
+    "id": "shabiller",
+    "name": "S'habiller",
+    "nameAr": "الملابس",
+    "color": "#b8d4e8",
+    "icon": "👕",
+    "decks": ["les-vetements", "il-fait-chaud", "il-fait-froid"]
+  },
+  {
+    "id": "manger",
+    "name": "Manger",
+    "nameAr": "الأكل",
+    "color": "#f9e79f",
+    "icon": "🍽️",
+    "decks": ["le-petit-dejeuner", "mettre-le-couvert", "les-boissons", "le-gout", "le-sale", "le-sucre", "les-legumes", "les-fruits", "les-produits-laitiers", "la-boulangerie", "faire-les-courses"]
+  },
+  {
+    "id": "maison",
+    "name": "La maison",
+    "nameAr": "البيت",
+    "color": "#f5cba7",
+    "icon": "🏠",
+    "decks": ["ou-habites-tu", "la-chambre", "jouer", "la-cuisine", "le-salon", "la-salle-de-bains"]
+  },
+  {
+    "id": "ecole",
+    "name": "L'école",
+    "nameAr": "المدرسة",
+    "color": "#aed6f1",
+    "icon": "🏫",
+    "decks": ["le-chemin-de-l-ecole", "la-salle-de-classe", "le-materiel", "les-arts-plastiques", "la-recreation", "la-cantine", "la-gymnastique"]
+  },
+  {
+    "id": "ville",
+    "name": "La ville",
+    "nameAr": "المدينة",
+    "color": "#d5dbdb",
+    "icon": "🏙️",
+    "decks": ["la-rue", "le-square"]
+  },
+  {
+    "id": "travail",
+    "name": "Le travail",
+    "nameAr": "العمل",
+    "color": "#f1948a",
+    "icon": "💼",
+    "decks": ["les-metiers"]
+  },
+  {
+    "id": "sortir",
+    "name": "Sortir",
+    "nameAr": "الخروج",
+    "color": "#e8daef",
+    "icon": "🎭",
+    "decks": ["le-musee", "le-spectacle", "le-cirque"]
+  },
+  {
+    "id": "musique",
+    "name": "La musique",
+    "nameAr": "الموسيقى",
+    "color": "#fadbd8",
+    "icon": "🎵",
+    "decks": ["jouer-de-la-musique", "les-instruments-a-cordes", "les-instruments-a-vent", "les-percussions"]
+  },
+  {
+    "id": "sports",
+    "name": "Les sports",
+    "nameAr": "الرياضة",
+    "color": "#fcf3cf",
+    "icon": "⚽",
+    "decks": ["faire-du-sport", "la-danse", "la-natation"]
+  },
+  {
+    "id": "transports",
+    "name": "Les transports",
+    "nameAr": "وسائل النقل",
+    "color": "#a9dfbf",
+    "icon": "🚗",
+    "decks": ["sur-la-terre", "dans-les-airs", "sur-l-eau"]
+  },
+  {
+    "id": "vacances",
+    "name": "Les vacances",
+    "nameAr": "العطلة",
+    "color": "#f9e79f",
+    "icon": "🏖️",
+    "decks": ["la-gare", "l-aeroport", "la-plage", "sur-l-eau", "a-la-mer", "la-foret", "a-la-montagne", "les-sports-d-hiver"]
+  },
+  {
+    "id": "animaux",
+    "name": "Les animaux",
+    "nameAr": "الحيوانات",
+    "color": "#f5b7b1",
+    "icon": "🐾",
+    "decks": ["le-jardin-et-la-nature", "les-animaux-domestiques", "les-animaux-du-jardin", "les-animaux-de-la-ferme", "les-animaux-de-la-foret", "les-animaux-de-la-montagne", "les-animaux-de-la-banquise", "les-animaux-du-bord-de-mer", "les-animaux-des-oceans", "les-animaux-de-la-jungle", "les-animaux-de-la-savane", "les-insectes", "les-oiseaux", "les-cris-des-animaux"]
+  },
+  {
+    "id": "monde",
+    "name": "Le monde",
+    "nameAr": "العالم",
+    "color": "#d2b4de",
+    "icon": "🌍",
+    "decks": ["les-continents", "l-espace", "la-ferme"]
+  }
+]
