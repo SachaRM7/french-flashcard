@@ -1,0 +1,25 @@
+{
+  "id": "traditions-2-1",
+  "seriesId": "traditions-2",
+  "seriesName": "Traditions 2",
+  "number": 1,
+  "title": "At the market",
+  "titleFr": "Au marché",
+  "description": "Shopping at a local souk in Cairo.",
+  "descriptionFr": "Faire ses courses dans un souk local au Caire.",
+  "level": "A2",
+  "tags": ["marché", "commerce", "prix"],
+  "duration": "6:30",
+  "audioUrl": null,
+  "coverUrl": null,
+  "hasAudio": false,
+  "speakers": {},
+  "dialogue": [],
+  "vocabulary": [],
+  "grammar": [],
+  "examples": [],
+  "exercises": {
+    "fillBlanks": [],
+    "dialogueBlanks": []
+  }
+}

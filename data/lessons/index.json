@@ -1,4 +1,77 @@
 {
   "version": "2026-03-06",
-  "lessons": []
+  "lessons": [
+    {
+      "id": "traditions-1-1",
+      "seriesId": "traditions-1",
+      "seriesName": "Traditions 1",
+      "number": 1,
+      "title": "Are you American?",
+      "titleFr": "Tu es Américain ?",
+      "description": "Sam meets a border agent at the airport and is questioned by him.",
+      "descriptionFr": "Sam rencontre un agent à la frontière à l'aéroport.",
+      "level": "A1",
+      "tags": ["salutations", "nationalité", "aéroport"],
+      "duration": "7:59",
+      "coverUrl": null,
+      "hasAudio": false,
+      "vocabCount": 4,
+      "exerciseCount": 3,
+      "playCount": 111398
+    },
+    {
+      "id": "traditions-1-2",
+      "seriesId": "traditions-1",
+      "seriesName": "Traditions 1",
+      "number": 2,
+      "title": "I'm Jordanian.",
+      "titleFr": "Je suis Jordanien.",
+      "description": "Sam takes a taxi from Queen Rania airport to his uncle's house in Amman.",
+      "descriptionFr": "Sam prend un taxi de l'aéroport Queen Rania jusqu'à chez son oncle à Amman.",
+      "level": "A1",
+      "tags": ["nationalité", "taxi", "amman"],
+      "duration": "8:15",
+      "coverUrl": null,
+      "hasAudio": false,
+      "vocabCount": 0,
+      "exerciseCount": 0,
+      "playCount": 89234
+    },
+    {
+      "id": "traditions-2-1",
+      "seriesId": "traditions-2",
+      "seriesName": "Traditions 2",
+      "number": 1,
+      "title": "At the market",
+      "titleFr": "Au marché",
+      "description": "Shopping at a local souk in Cairo.",
+      "descriptionFr": "Faire ses courses dans un souk local au Caire.",
+      "level": "A2",
+      "tags": ["marché", "commerce", "prix"],
+      "duration": "6:30",
+      "coverUrl": null,
+      "hasAudio": false,
+      "vocabCount": 0,
+      "exerciseCount": 0,
+      "playCount": 78456
+    },
+    {
+      "id": "traditions-3-1",
+      "seriesId": "traditions-3",
+      "seriesName": "Traditions 3",
+      "number": 1,
+      "title": "Family gathering",
+      "titleFr": "Réunion de famille",
+      "description": "A typical family visit during Eid celebration.",
+      "descriptionFr": "Une visite familiale typique pendant les célébrations de l'Aïd.",
+      "level": "B1",
+      "tags": ["famille", "fêtes", "traditions"],
+      "duration": "5:45",
+      "coverUrl": null,
+      "hasAudio": false,
+      "vocabCount": 0,
+      "exerciseCount": 0,
+      "playCount": 65234
+    }
+  ]
 }

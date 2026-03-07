@@ -5,20 +5,224 @@
   "number": 1,
   "title": "Are you American?",
   "titleFr": "Tu es Américain ?",
-  "description": "Sam meets a border agent at the airport.",
-  "descriptionFr": "Sam rencontre un agent à l'aéroport.",
+  "description": "Sam meets a border agent at the airport and is questioned by him.",
+  "descriptionFr": "Sam rencontre un agent à la frontière à l'aéroport.",
   "level": "A1",
   "tags": ["salutations", "nationalité", "aéroport"],
   "duration": "7:59",
   "audioUrl": "audio/lessons/traditions-1-1.mp3",
   "coverUrl": null,
-  "speakers": {},
-  "dialogue": [],
-  "vocabulary": [],
-  "grammar": [],
-  "examples": [],
+  "hasAudio": false,
+
+  "speakers": {
+    "sam": {
+      "name": "Sam",
+      "gender": "male",
+      "color": "#58a6ff"
+    },
+    "agent": {
+      "name": "L'agent",
+      "gender": "male",
+      "color": "#3fb950"
+    }
+  },
+
+  "dialogue": [
+    {
+      "id": "d1",
+      "speaker": "sam",
+      "ar": "مَرْحَبًا!",
+      "arPlain": "مرحبا!",
+      "translit": "marhaban!",
+      "fr": "Salut !",
+      "en": "Hi!",
+      "audioStart": 0.0,
+      "audioEnd": 1.2
+    },
+    {
+      "id": "d2",
+      "speaker": "agent",
+      "ar": "مَرْحَبًا! أَنْتَ أَمِيرِكِيّ؟",
+      "arPlain": "مرحبا! أنت أميركي؟",
+      "translit": "marhaban! anta amiriki?",
+      "fr": "Salut ! Tu es Américain ?",
+      "en": "Hi! Are you American?",
+      "audioStart": 1.5,
+      "audioEnd": 4.0
+    },
+    {
+      "id": "d3",
+      "speaker": "sam",
+      "ar": "نَعَمْ.",
+      "arPlain": "نعم.",
+      "translit": "na'am.",
+      "fr": "Oui.",
+      "en": "Yes.",
+      "audioStart": 4.5,
+      "audioEnd": 5.2
+    },
+    {
+      "id": "d4",
+      "speaker": "agent",
+      "ar": "مَرْحَبًا بِكَ فِي الْأُرْدُنّ!",
+      "arPlain": "مرحبا بك في الأردن!",
+      "translit": "marhaban bika fi al-urdunn!",
+      "fr": "Bienvenue en Jordanie !",
+      "en": "Welcome to Jordan!",
+      "audioStart": 5.5,
+      "audioEnd": 7.8
+    }
+  ],
+
+  "vocabulary": [
+    {
+      "id": "traditions-1-1:v0",
+      "ar": "مَرْحَبًا",
+      "arPlain": "مرحبا",
+      "translit": "marhaban",
+      "fr": "bienvenue / salut",
+      "en": "welcome / hi",
+      "root": "ر-ح-ب",
+      "tags": ["salutation", "A1"],
+      "linkedCards": []
+    },
+    {
+      "id": "traditions-1-1:v1",
+      "ar": "أَنْتَ",
+      "arPlain": "أنت",
+      "translit": "anta",
+      "fr": "tu (masculin)",
+      "en": "you (masc.)",
+      "root": null,
+      "tags": ["pronom", "A1"],
+      "linkedCards": []
+    },
+    {
+      "id": "traditions-1-1:v2",
+      "ar": "أَمِيرِكِيّ",
+      "arPlain": "أميركي",
+      "translit": "amiriki",
+      "fr": "américain",
+      "en": "American",
+      "root": null,
+      "tags": ["nationalité", "adjectif", "A1"],
+      "linkedCards": []
+    },
+    {
+      "id": "traditions-1-1:v3",
+      "ar": "الْأُرْدُنّ",
+      "arPlain": "الأردن",
+      "translit": "al-urdunn",
+      "fr": "la Jordanie",
+      "en": "Jordan",
+      "root": null,
+      "tags": ["pays", "géographie", "A1"],
+      "linkedCards": []
+    }
+  ],
+
+  "grammar": [
+    {
+      "id": "traditions-1-1:g0",
+      "title": "أَنْتَ — Pronom personnel 2ème pers. masc. sing.",
+      "titleFr": "Tu (masculin)",
+      "explanation": "Utilisé pour s'adresser à un homme. Équivalent de 'tu' au masculin. En arabe, les pronoms varient selon le genre.",
+      "examples": [
+        {
+          "ar": "أَنْتَ بريطاني.",
+          "translit": "anta britani.",
+          "fr": "Tu es Britannique.",
+          "en": "You are British."
+        },
+        {
+          "ar": "أَنْتَ تَعْبَان.",
+          "translit": "anta ta'ban.",
+          "fr": "Tu es fatigué.",
+          "en": "You are tired."
+        }
+      ]
+    },
+    {
+      "id": "traditions-1-1:g1",
+      "title": "الجملة الاسمية — La phrase nominale",
+      "titleFr": "Phrase nominale (pas de 'être' au présent)",
+      "explanation": "En arabe, on n'utilise pas le verbe 'être' au présent. On juxtapose simplement sujet et attribut.",
+      "examples": [
+        {
+          "ar": "أَنْتَ أَمِيرِكِيّ؟",
+          "translit": "anta amiriki?",
+          "fr": "Tu es américain ?",
+          "en": "Are you American?"
+        },
+        {
+          "ar": "هُوَ طَالِب.",
+          "translit": "huwa talib.",
+          "fr": "Il est étudiant.",
+          "en": "He is a student."
+        }
+      ]
+    }
+  ],
+
+  "examples": [
+    {
+      "ar": "أَنْتَ فِي الْبَيْت؟",
+      "translit": "anta fi al-bayt?",
+      "fr": "Tu es à la maison ?",
+      "en": "Are you at home?"
+    },
+    {
+      "ar": "مَرْحَبًا بِكُمْ!",
+      "translit": "marhaban bikum!",
+      "fr": "Bienvenue à vous tous !",
+      "en": "Welcome everyone!"
+    },
+    {
+      "ar": "نَعَمْ، أَنَا أَمِيرِكِيّ.",
+      "translit": "na'am, ana amiriki.",
+      "fr": "Oui, je suis américain.",
+      "en": "Yes, I am American."
+    }
+  ],
+
   "exercises": {
-    "fillBlanks": [],
-    "dialogueBlanks": []
+    "fillBlanks": [
+      {
+        "id": "traditions-1-1:fb0",
+        "type": "word",
+        "sentenceAr": "_____ أَمِيرِكِيّ؟",
+        "sentenceFr": "_____ Américain ?",
+        "answer": "أَنْتَ",
+        "answerTranslit": "anta",
+        "choices": ["أَنَا", "أَنْتَ", "هُوَ", "هِيَ"],
+        "hint": "Pronom 'tu' masculin"
+      },
+      {
+        "id": "traditions-1-1:fb1",
+        "type": "word",
+        "sentenceAr": "مَرْحَبًا _____ فِي الْأُرْدُنّ!",
+        "sentenceFr": "Bienvenue _____ en Jordanie !",
+        "answer": "بِكَ",
+        "answerTranslit": "bika",
+        "choices": ["بِكَ", "بِهِ", "بِهَا", "بِنَا"],
+        "hint": "Préposition + pronom 'toi' (masc.)"
+      }
+    ],
+    "dialogueBlanks": [
+      {
+        "id": "traditions-1-1:db0",
+        "type": "reply",
+        "contextAr": "مَرْحَبًا!",
+        "contextFr": "Salut !",
+        "contextSpeaker": "sam",
+        "answerAr": "مَرْحَبًا! أَنْتَ أَمِيرِكِيّ؟",
+        "answerFr": "Salut ! Tu es Américain ?",
+        "choices": [
+          "مَرْحَبًا! أَنْتَ أَمِيرِكِيّ؟",
+          "نَعَمْ، أَنَا أَمِيرِكِيّ.",
+          "مَعَ السَّلَامَة!"
+        ]
+      }
+    ]
   }
 }

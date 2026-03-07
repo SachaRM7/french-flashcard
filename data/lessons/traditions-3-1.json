@@ -1,0 +1,25 @@
+{
+  "id": "traditions-3-1",
+  "seriesId": "traditions-3",
+  "seriesName": "Traditions 3",
+  "number": 1,
+  "title": "Family gathering",
+  "titleFr": "Réunion de famille",
+  "description": "A typical family visit during Eid celebration.",
+  "descriptionFr": "Une visite familiale typique pendant les célébrations de l'Aïd.",
+  "level": "B1",
+  "tags": ["famille", "fêtes", "traditions"],
+  "duration": "5:45",
+  "audioUrl": null,
+  "coverUrl": null,
+  "hasAudio": false,
+  "speakers": {},
+  "dialogue": [],
+  "vocabulary": [],
+  "grammar": [],
+  "examples": [],
+  "exercises": {
+    "fillBlanks": [],
+    "dialogueBlanks": []
+  }
+}

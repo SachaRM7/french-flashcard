@@ -13,6 +13,8 @@ import { renderWordsMatch } from './pages/words-match.js';
 import { renderWordsListen } from './pages/words-listen.js';
 import { renderWordsImage } from './pages/words-image.js';
 import { renderConvHome } from './pages/conv-home.js';
+import { renderConvLesson } from './pages/conv-lesson.js';
+import { renderConvExercise } from './pages/conv-exercise.js';
 import { renderReviewDashboard } from './pages/review-dashboard.js';
 
 async function init() {
@@ -55,6 +57,8 @@ async function init() {
 
   // Phase 3 — Conversations
   route('/conversations', renderConvHome);
+  route('/conversations/lecon/:lessonId', renderConvLesson);
+  route('/conversations/lecon/:lessonId/exercice', renderConvExercise);
 
   // Phase 4 — Révision SRS
   route('/revision', renderReviewDashboard);

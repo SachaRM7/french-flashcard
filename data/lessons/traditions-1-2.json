@@ -1,0 +1,25 @@
+{
+  "id": "traditions-1-2",
+  "seriesId": "traditions-1",
+  "seriesName": "Traditions 1",
+  "number": 2,
+  "title": "I'm Jordanian.",
+  "titleFr": "Je suis Jordanien.",
+  "description": "Sam takes a taxi from Queen Rania airport to his uncle's house in Amman.",
+  "descriptionFr": "Sam prend un taxi de l'aéroport Queen Rania jusqu'à chez son oncle à Amman.",
+  "level": "A1",
+  "tags": ["nationalité", "taxi", "amman"],
+  "duration": "8:15",
+  "audioUrl": null,
+  "coverUrl": null,
+  "hasAudio": false,
+  "speakers": {},
+  "dialogue": [],
+  "vocabulary": [],
+  "grammar": [],
+  "examples": [],
+  "exercises": {
+    "fillBlanks": [],
+    "dialogueBlanks": []
+  }
+}
