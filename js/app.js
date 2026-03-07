@@ -2,8 +2,8 @@
 
 import { db } from './db.js';
 import { store } from './store.js';
-import { route, startRouter } from './router.js';
-import { renderHome, renderCourseSelect } from './pages/home.js';
+import { route, startRouter, navigate } from './router.js';
+import { renderHome } from './pages/home.js';
 import { renderWordsHome, renderWordsTheme } from './pages/words-home.js';
 import { renderWordsDeck, renderWordsDeckLesson } from './pages/words-deck.js';
 import { renderWordsFlashcards } from './pages/words-flashcards.js';
@@ -40,13 +40,25 @@ async function init() {
   store.set('courses', courses);
   store.set('themes', themes);
 
+  // Langue de l'utilisateur (détectée automatiquement) pour le TTS de la langue de traduction
+  const userLang = navigator.language || 'fr-FR';
+
   if (prefs.lastCourse) {
     const course = courses.find(c => c.id === prefs.lastCourse);
-    if (course) store.set('currentCourse', course);
+    if (course) {
+      store.set('currentCourse', { ...course, config: { ...course.config, backLang: userLang } });
+    }
+  } else {
+    // Premier lancement : auto-sélectionner le cours arabe
+    const arabicCourse = courses.find(c => c.id === 'arabic');
+    if (arabicCourse) {
+      store.set('currentCourse', { ...arabicCourse, config: { ...arabicCourse.config, backLang: userLang } });
+      await db.savePreferences({ ...prefs, lastCourse: 'arabic' });
+    }
   }
 
-  // Phase 1 — Fondations
-  route('/', renderCourseSelect);
+  // Phase 1 — Fondations (sélection cours en suspend : on va directement sur /home)
+  route('/', () => navigate('/home'));
   route('/home', renderHome);
 
   // Phase 2 — Mode Mots
