@@ -8,6 +8,13 @@ import { escapeHtml } from '../utils.js';
 import { playWord } from '../audio.js';
 
 const $app = () => document.getElementById('app');
+
+const TABS = [
+  { id: 'letters', label: 'Lettres' },
+  { id: 'diacritics', label: 'Voyelles brèves' },
+  { id: 'rules', label: 'Règles' },
+];
+
 let _state = { data: null, selectedLetter: null, activeTab: 'letters' };
 
 export async function renderAlphabet() {
@@ -26,67 +33,127 @@ const TYPE_LABELS = { sun: '☀️ Solaire', moon: '🌙 Lunaire', vowel: 'Voyel
 const TYPE_COLORS = { sun: '#d29922', moon: '#58a6ff', vowel: '#3fb950' };
 
 function _render() {
-  const { data, activeTab } = _state;
-  const tabs = [
-    { id: 'letters', label: 'Lettres' },
-    { id: 'diacritics', label: 'Voyelles brèves' },
-    { id: 'rules', label: 'Règles' },
-  ];
+  const { data, activeTab, selectedLetter } = _state;
+  const tabIndex = TABS.findIndex(t => t.id === activeTab);
 
   $app().innerHTML = `
     ${renderHeader({ title: 'Alphabet', back: '/home' })}
-    ${renderTabBar(tabs, activeTab)}
-    <main class="page-content page-content--nav">
-      ${_renderTab()}
-    </main>
-    ${_state.selectedLetter ? _renderLetterModal(_state.selectedLetter) : ''}
+    ${renderTabBar(TABS, activeTab)}
+    <div class="swipe-tabs-container has-bottom-nav" id="alpha-swipe-container">
+      <div class="swipe-tabs-track" id="alpha-swipe-track"
+           style="width:300%;transform:translateX(-${tabIndex * 33.333}%);transition:none">
+        <div class="swipe-tabs-panel" style="width:33.333%">${_renderLettersGrid(data.letters)}</div>
+        <div class="swipe-tabs-panel" style="width:33.333%">${_renderDiacritics(data.diacritics)}</div>
+        <div class="swipe-tabs-panel" style="width:33.333%">${_renderRules(data.rules)}</div>
+      </div>
+    </div>
+    ${selectedLetter ? _renderLetterModal(selectedLetter) : ''}
     ${renderBottomNav('home')}
   `;
 
-  $app().querySelectorAll('.tab-bar__tab').forEach(btn => {
-    btn.addEventListener('click', () => {
-      _state.activeTab = btn.dataset.tabId;
-      _state.selectedLetter = null;
-      _render();
-    });
+  _bindEvents();
+  feather.replace();
+}
+
+function _switchTab(index) {
+  if (index < 0 || index >= TABS.length) return;
+  _state.activeTab = TABS[index].id;
+
+  document.querySelectorAll('.tab-bar__tab').forEach((tab, i) => {
+    tab.classList.toggle('tab-bar__tab--active', i === index);
   });
 
+  const track = document.getElementById('alpha-swipe-track');
+  if (track) {
+    track.style.transition = 'transform 0.3s ease';
+    track.style.transform = `translateX(-${index * 33.333}%)`;
+  }
+}
+
+function _bindEvents() {
+  // Tab clicks — switch without full re-render
+  $app().querySelectorAll('.tab-bar__tab').forEach((btn, i) => {
+    btn.addEventListener('click', () => _switchTab(i));
+  });
+
+  // Letter card click → modal (re-render needed)
   $app().querySelectorAll('.alpha-card').forEach(el => {
     el.addEventListener('click', () => {
       const idx = parseInt(el.dataset.idx);
-      _state.selectedLetter = data.letters[idx];
+      _state.selectedLetter = _state.data.letters[idx];
       _render();
     });
   });
 
+  // Audio play buttons
   $app().querySelectorAll('[data-play-ar]').forEach(btn => {
-    btn.addEventListener('click', (e) => {
+    btn.addEventListener('click', e => {
       e.stopPropagation();
       playWord(btn.dataset.playAr, 'ar-SA');
     });
   });
 
+  // Modal close
   document.getElementById('modal-close')?.addEventListener('click', () => {
     _state.selectedLetter = null;
     _render();
   });
-
-  document.getElementById('modal-overlay')?.addEventListener('click', (e) => {
+  document.getElementById('modal-overlay')?.addEventListener('click', e => {
     if (e.target.id === 'modal-overlay') {
       _state.selectedLetter = null;
       _render();
     }
   });
 
-  feather.replace();
+  // Swipe
+  _bindSwipe();
 }
 
-function _renderTab() {
-  const { data, activeTab } = _state;
-  if (activeTab === 'letters') return _renderLettersGrid(data.letters);
-  if (activeTab === 'diacritics') return _renderDiacritics(data.diacritics);
-  if (activeTab === 'rules') return _renderRules(data.rules);
-  return '';
+function _bindSwipe() {
+  const container = document.getElementById('alpha-swipe-container');
+  const track = document.getElementById('alpha-swipe-track');
+  if (!container || !track) return;
+
+  let startX = 0, startY = 0, dragging = false, isHorizontal = null;
+
+  container.addEventListener('touchstart', e => {
+    startX = e.touches[0].clientX;
+    startY = e.touches[0].clientY;
+    dragging = true;
+    isHorizontal = null;
+    track.style.transition = 'none';
+  }, { passive: true });
+
+  container.addEventListener('touchmove', e => {
+    if (!dragging) return;
+    const dx = e.touches[0].clientX - startX;
+    const dy = e.touches[0].clientY - startY;
+
+    if (isHorizontal === null && (Math.abs(dx) > 5 || Math.abs(dy) > 5)) {
+      isHorizontal = Math.abs(dx) > Math.abs(dy) * 1.5;
+    }
+
+    if (isHorizontal) {
+      e.preventDefault();
+      const tabIdx = TABS.findIndex(t => t.id === _state.activeTab);
+      const base = -tabIdx * 33.333;
+      track.style.transform = `translateX(calc(${base}% + ${dx}px))`;
+    }
+  }, { passive: false });
+
+  container.addEventListener('touchend', e => {
+    if (!dragging) return;
+    dragging = false;
+    if (!isHorizontal) return;
+    const dx = e.changedTouches[0].clientX - startX;
+    const tabIdx = TABS.findIndex(t => t.id === _state.activeTab);
+    if (dx < -80) _switchTab(tabIdx + 1);
+    else if (dx > 80) _switchTab(tabIdx - 1);
+    else {
+      track.style.transition = 'transform 0.3s ease';
+      track.style.transform = `translateX(-${tabIdx * 33.333}%)`;
+    }
+  }, { passive: true });
 }
 
 function _renderLettersGrid(letters) {

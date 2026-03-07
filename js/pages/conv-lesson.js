@@ -70,9 +70,18 @@ function _render() {
   $app().innerHTML = `
     ${renderHeader({ title: escapeHtml(lesson.titleFr), back: '/conversations' })}
     <div class="lesson-toggles">
-      <button class="lesson-toggle-btn ${_state.showTranslation ? 'is-active' : ''}" id="toggle-translation">FR</button>
-      <button class="lesson-toggle-btn ${_state.showTranslit ? 'is-active' : ''}" id="toggle-translit">Translit.</button>
-      <button class="lesson-toggle-btn ${_state.showHarakats ? 'is-active' : ''}" id="toggle-harakats">Harakats</button>
+      <button class="lesson-toggle ${_state.showTranslation ? 'is-active' : ''}" id="toggle-translation">
+        <span class="lesson-toggle__icon">FR</span>
+        <span class="lesson-toggle__label">Traduction</span>
+      </button>
+      <button class="lesson-toggle ${_state.showTranslit ? 'is-active' : ''}" id="toggle-translit">
+        <span class="lesson-toggle__icon">Abc</span>
+        <span class="lesson-toggle__label">Translit.</span>
+      </button>
+      <button class="lesson-toggle ${_state.showHarakats ? 'is-active' : ''}" id="toggle-harakats">
+        <span class="lesson-toggle__icon text-ar">◌َ</span>
+        <span class="lesson-toggle__label">Harakats</span>
+      </button>
     </div>
     ${renderTabBar(tabs, activeTab)}
     <div class="swipe-tabs-container ${hasPlayer ? 'has-player' : ''}" id="lesson-swipe-container">
@@ -242,6 +251,7 @@ function _bindEvents() {
   // Toggles
   document.getElementById('toggle-translation')?.addEventListener('click', () => {
     _state.showTranslation = !_state.showTranslation;
+    _state.revealedLines.clear();
     _render();
   });
   document.getElementById('toggle-translit')?.addEventListener('click', () => {
