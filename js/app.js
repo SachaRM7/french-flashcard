@@ -78,3 +78,8 @@ async function init() {
 }
 
 document.addEventListener('DOMContentLoaded', init);
+
+// Service Worker
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('/sw.js').catch(() => {});
+}

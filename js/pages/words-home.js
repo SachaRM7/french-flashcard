@@ -34,6 +34,7 @@ export async function renderWordsHome() {
       <div class="themes-grid">
         ${themeItems.map(({ theme, deckCount, totalCards }) => `
           <div class="theme-card" data-theme-id="${escapeHtml(theme.id)}"
+               role="button" tabindex="0" aria-label="${escapeHtml(theme.name)}"
                style="--theme-color: ${escapeHtml(theme.color)}">
             <div class="theme-card__icon">${theme.icon}</div>
             <div class="theme-card__name">${escapeHtml(theme.name)}</div>
@@ -46,7 +47,9 @@ export async function renderWordsHome() {
   `;
 
   $app().querySelectorAll('.theme-card').forEach(el => {
-    el.addEventListener('click', () => navigate(`/mots/${el.dataset.themeId}`));
+    const go = () => navigate(`/mots/${el.dataset.themeId}`);
+    el.addEventListener('click', go);
+    el.addEventListener('keydown', (e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); go(); } });
   });
   feather.replace();
 }
@@ -66,7 +69,7 @@ export async function renderWordsTheme(params) {
     <main class="page-content">
       <div class="deck-grid">
         ${themeDecks.map(deck => `
-          <div class="deck-card" data-deck-id="${escapeHtml(deck.id)}">
+          <div class="deck-card" data-deck-id="${escapeHtml(deck.id)}" role="button" tabindex="0" aria-label="${escapeHtml(deck.name)}">
             <div>
               <div class="deck-card__name">${escapeHtml(deck.name)}</div>
               <div class="deck-card__meta">${deck.cards.length} cartes · 0 acquises</div>

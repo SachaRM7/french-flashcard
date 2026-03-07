@@ -50,3 +50,64 @@
   flex-direction: column;
   gap: var(--space-md);
 }
+
+/* ── Responsive ── */
+@media (min-width: 768px) {
+  /* Grilles passent à 3 colonnes sur desktop */
+  .themes-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .conv-filter-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .alpha-grid {
+    grid-template-columns: repeat(7, 1fr);
+  }
+  /* Modes accueil en grille 2x2 */
+  .home-modes {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  /* Player plus compact */
+  .player {
+    max-width: var(--max-width);
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: var(--radius-xl) var(--radius-xl) 0 0;
+    border: 1px solid var(--border);
+    border-bottom: none;
+  }
+}
+
+/* iPhone SE (320px) — assurer la lisibilité */
+@media (max-width: 360px) {
+  .page-content { padding: var(--space-md); }
+  .alpha-grid { grid-template-columns: repeat(4, 1fr); }
+  .home-mode-card { padding: var(--space-lg); }
+  .choice-grid { grid-template-columns: 1fr 1fr; }
+}
+
+/* ── Accessibilité ── */
+/* Navigation clavier visible */
+:focus-visible {
+  outline: 2px solid var(--accent-blue);
+  outline-offset: 2px;
+}
+
+/* Éléments cliquables non-button */
+[data-navigate],
+[data-lesson-id],
+[data-course-id] {
+  cursor: pointer;
+}
+[data-navigate][role="button"],
+.theme-card,
+.deck-card,
+.conv-lesson-card,
+.root-card {
+  role: button;
+}
+
+/* Assurer le contraste minimum sur les textes secondaires */
+.text-secondary { color: var(--text-secondary); }
+.text-tertiary { color: var(--text-tertiary); }

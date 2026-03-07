@@ -56,3 +56,87 @@ a {
   background: rgba(88, 166, 255, 0.3);
   color: var(--text-primary);
 }
+
+/* ── Animations globales ── */
+
+/* Page fade-in */
+@keyframes pageFadeIn {
+  from { opacity: 0; transform: translateY(6px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Slide up (pour les listes) */
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(12px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Modal apparition */
+@keyframes modalIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to   { opacity: 1; transform: scale(1); }
+}
+
+/* Page entrante */
+#app.page-entering > * {
+  animation: pageFadeIn 0.2s ease forwards;
+}
+
+/* Focus visible pour l'accessibilité */
+:focus-visible {
+  outline: 2px solid var(--accent-blue);
+  outline-offset: 2px;
+  border-radius: var(--radius-sm);
+}
+
+/* Modales */
+.modal {
+  animation: modalIn 0.18s ease forwards;
+}
+
+/* Stagger sur les listes */
+.dialogue-line,
+.vocab-item,
+.root-derivative,
+.conv-lesson-card,
+.choice-btn {
+  animation: slideUp 0.25s ease forwards;
+  animation-fill-mode: both;
+}
+.dialogue-line:nth-child(1), .vocab-item:nth-child(1), .conv-lesson-card:nth-child(1), .choice-btn:nth-child(1) { animation-delay: 0ms; }
+.dialogue-line:nth-child(2), .vocab-item:nth-child(2), .conv-lesson-card:nth-child(2), .choice-btn:nth-child(2) { animation-delay: 50ms; }
+.dialogue-line:nth-child(3), .vocab-item:nth-child(3), .conv-lesson-card:nth-child(3), .choice-btn:nth-child(3) { animation-delay: 100ms; }
+.dialogue-line:nth-child(4), .vocab-item:nth-child(4), .conv-lesson-card:nth-child(4), .choice-btn:nth-child(4) { animation-delay: 150ms; }
+.dialogue-line:nth-child(n+5), .vocab-item:nth-child(n+5), .conv-lesson-card:nth-child(n+5), .choice-btn:nth-child(n+5) { animation-delay: 200ms; }
+
+/* Transitions barre de progression */
+.flash-progress__fill,
+.review-box-row__bar,
+.review-week__bar {
+  transition: width 0.35s ease, height 0.35s ease;
+}
+
+/* Hover lift sur les cartes */
+.theme-card:hover,
+.deck-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+.theme-card:active,
+.deck-card:active {
+  transform: scale(0.98);
+}
+
+/* Boutons */
+button {
+  transition: background var(--transition-fast), opacity var(--transition-fast), transform 0.1s ease;
+}
+button:active { transform: scale(0.97); }
+
+/* Réduire les animations si l'utilisateur le préfère */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}

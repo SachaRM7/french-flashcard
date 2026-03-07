@@ -41,6 +41,11 @@ function dispatch(hash) {
   const result = matchRoute(hash);
   if (result) {
     _currentRoute = { path: result.path, params: result.params };
+    const app = document.getElementById('app');
+    if (app) {
+      app.classList.add('page-entering');
+      setTimeout(() => app.classList.remove('page-entering'), 250);
+    }
     result.handler(result.params);
   } else {
     navigate('/home');

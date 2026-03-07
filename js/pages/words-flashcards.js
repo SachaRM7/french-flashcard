@@ -22,12 +22,16 @@ export async function renderWordsFlashcards(params) {
   const srsAll = await db.getSRS(course.id);
   const srsMap = Object.fromEntries(srsAll.map(e => [e.cardId, e]));
 
+  // Nettoyer le handler clavier si présent
+  if (_state._keyHandler) document.removeEventListener('keydown', _state._keyHandler);
+
   _state = {
     themeId, deckId, deck, course,
     options: { shuffle: false, frontSide: 'front', favoritesOnly: false },
     favorites: new Set(favData.words),
     srsMap,
     cards: [], index: 0, known: 0, unknown: 0,
+    _keyHandler: null,
   };
 
   _initCards();
@@ -113,6 +117,17 @@ function _bindButtons() {
   document.getElementById('btn-audio')?.addEventListener('click', _playAudio);
   document.getElementById('btn-fav')?.addEventListener('click', _toggleFav);
   document.querySelector('[data-action="options"]')?.addEventListener('click', _openOptions);
+
+  // Navigation clavier : Espace = flip, → = connu, ← = à revoir
+  const _onKey = (e) => {
+    if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA') return;
+    if (e.code === 'Space') { e.preventDefault(); _flip(); }
+    else if (e.code === 'ArrowRight') { e.preventDefault(); _swipeCard(true); }
+    else if (e.code === 'ArrowLeft') { e.preventDefault(); _swipeCard(false); }
+  };
+  document.addEventListener('keydown', _onKey);
+  // Nettoyer le listener si on quitte la page
+  _state._keyHandler = _onKey;
 }
 
 function _flip() {
