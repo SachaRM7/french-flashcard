@@ -7,7 +7,7 @@ class Database {
 
   init() {
     return new Promise((resolve, reject) => {
-      const request = indexedDB.open('helloarabic', 1);
+      const request = indexedDB.open('helloarabic', 2);
 
       request.onupgradeneeded = (event) => {
         const db = event.target.result;
@@ -29,6 +29,9 @@ class Database {
         }
         if (!db.objectStoreNames.contains('stats')) {
           db.createObjectStore('stats', { keyPath: 'courseId' });
+        }
+        if (!db.objectStoreNames.contains('lessonDecks')) {
+          db.createObjectStore('lessonDecks', { keyPath: 'key' });
         }
       };
 
@@ -142,6 +145,33 @@ class Database {
 
   async saveStats(courseId, data) {
     await this._put('stats', { ...data, courseId });
+  }
+
+  async saveLessonDeck(courseId, lessonId, deck) {
+    const key = `${courseId}:${lessonId}`;
+    const today = new Date().toISOString().slice(0, 10);
+    const existing = await this._get('lessonDecks', key);
+    await this._put('lessonDecks', {
+      key,
+      courseId,
+      lessonId,
+      deck,
+      createdAt: existing?.createdAt || today,
+      lastUsed: today,
+    });
+  }
+
+  async getLessonDecks(courseId) {
+    const all = await this._getAll('lessonDecks');
+    return all.filter(e => e.courseId === courseId);
+  }
+
+  async deleteLessonDeck(courseId, lessonId) {
+    return new Promise((resolve, reject) => {
+      const req = this._store('lessonDecks', 'readwrite').delete(`${courseId}:${lessonId}`);
+      req.onsuccess = () => resolve();
+      req.onerror = () => reject(req.error);
+    });
   }
 }
 

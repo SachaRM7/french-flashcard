@@ -6,25 +6,29 @@ import { renderHeader } from '../components/header.js';
 import { shuffle, escapeHtml, checkWrittenAnswer } from '../utils.js';
 import { db } from '../db.js';
 import { createSRSEntry, processAnswer } from '../srs.js';
+import { showConfirmModal } from '../components/modal.js';
 
 const $app = () => document.getElementById('app');
 let _state = {};
 
 export async function renderWordsImage(params) {
-  const { themeId, deckId } = params;
-  const deck = (store.get('decks') || []).find(d => d.id === deckId);
-  if (!deck) { navigate(`/mots/${themeId}/${deckId}`); return; }
+  const { themeId, deckId, lessonId } = params;
+  const actualDeckId = lessonId ? `lesson-vocab-${lessonId}` : deckId;
+  const backPath = lessonId ? `/mots/lecons/${lessonId}` : `/mots/${themeId}/${deckId}`;
+
+  const deck = (store.get('decks') || []).find(d => d.id === actualDeckId);
+  if (!deck) { navigate(backPath); return; }
 
   // Only keep cards that have an emoji or image
   const validCards = deck.cards.filter(c => c.emoji || c.image);
   if (validCards.length < 2) {
     $app().innerHTML = `
-      ${renderHeader({ title: 'Mode Image', back: `/mots/${themeId}/${deckId}` })}
+      ${renderHeader({ title: 'Mode Image', back: backPath })}
       <div class="completion">
-        <div class="completion__icon">🖼️</div>
+        <div class="completion__icon">&#x1F5BC;&#xFE0F;</div>
         <div class="completion__title">Pas assez d'images</div>
         <p style="color:var(--text-secondary);text-align:center">Ce deck ne contient pas assez de cartes avec images ou emojis.</p>
-        <button class="secondary-btn" data-navigate="/mots/${themeId}/${deckId}">Retour</button>
+        <button class="secondary-btn" data-navigate="${backPath}">Retour</button>
       </div>
     `;
     feather.replace();
@@ -34,10 +38,11 @@ export async function renderWordsImage(params) {
   const course = store.get('currentCourse');
   const srsAll = await db.getSRS(course.id);
   _state = {
-    themeId, deckId, deck, course, validCards,
+    themeId, deckId: actualDeckId, lessonId, backPath, deck, course, validCards,
     srsMap: Object.fromEntries(srsAll.map(e => [e.cardId, e])),
     writtenMode: false, correctionLevel: 'flexible',
     queue: shuffle([...validCards]), retrySet: new Set(), correct: 0, wrong: 0, answered: false,
+    pendingSRS: [],
   };
   _renderQuestion();
 }
@@ -63,7 +68,7 @@ function _renderQuestion() {
 
   let answerHTML = _state.writtenMode
     ? `<div class="written-form">
-        <input class="written-input" id="written-input" type="text" placeholder="Répondre..." autocomplete="off">
+        <input class="written-input" id="written-input" type="text" placeholder="Repondre..." autocomplete="off">
         <button class="primary-btn" id="btn-validate">Valider</button>
       </div>`
     : `<div class="choice-grid">${_getChoices(card).map(c =>
@@ -71,7 +76,8 @@ function _renderQuestion() {
       ).join('')}</div>`;
 
   $app().innerHTML = `
-    ${renderHeader({ title: 'Image', back: `/mots/${_state.themeId}/${_state.deckId}` })}
+    ${renderHeader({ title: 'Image', back: _state.backPath,
+      actions: [{ id: 'reset', icon: 'refresh-cw', label: 'Recommencer' }] })}
     <main class="page-content">
       <div class="flash-progress" style="margin-bottom:var(--space-xl)">
         <span style="color:var(--accent-green);font-weight:600">${_state.correct}</span>
@@ -89,6 +95,19 @@ function _renderQuestion() {
     </main>
   `;
 
+  document.querySelector('[data-action="reset"]')?.addEventListener('click', () => {
+    showConfirmModal(
+      'Recommencer la session ?',
+      'Ta progression actuelle sera perdue.',
+      () => {
+        _state.pendingSRS = [];
+        _state.queue = shuffle([..._state.validCards]);
+        _state.retrySet.clear(); _state.correct = 0; _state.wrong = 0;
+        _renderQuestion();
+      }
+    );
+  });
+
   _state.answered = false;
   _bindAnswerEvents(card);
   feather.replace();
@@ -97,19 +116,23 @@ function _renderQuestion() {
 function _bindAnswerEvents(card) {
   const correct = card.back;
 
-  const handleAnswer = async (isCorrect) => {
+  const handleAnswer = (isCorrect) => {
     if (_state.answered) return;
     _state.answered = true;
     const feedback = document.getElementById('feedback');
     if (feedback) {
-      feedback.textContent = isCorrect ? '✓ Correct !' : `✗ Réponse : ${correct}`;
+      feedback.textContent = isCorrect ? '✓ Correct !' : `✗ Reponse : ${correct}`;
       feedback.className = `learn-feedback ${isCorrect ? 'learn-feedback--correct' : 'learn-feedback--wrong'}`;
     }
     if (isCorrect) { _state.correct++; _state.retrySet.delete(card.id); }
     else { _state.wrong++; _state.retrySet.add(card.id); }
+
+    // Collecter dans pendingSRS
     const srsEntry = _state.srsMap[card.id] || createSRSEntry(_state.course.id, card.id);
-    _state.srsMap[card.id] = processAnswer(srsEntry, isCorrect);
-    await db.updateSRS(_state.course.id, card.id, _state.srsMap[card.id]);
+    const updated = processAnswer(srsEntry, isCorrect);
+    _state.srsMap[card.id] = updated;
+    _state.pendingSRS.push({ cardId: card.id, srsData: updated });
+
     const nextBtn = document.getElementById('btn-next');
     if (nextBtn) nextBtn.style.display = '';
   };
@@ -138,18 +161,27 @@ function _bindAnswerEvents(card) {
   });
 }
 
-function _renderCompletion() {
-  const { correct, wrong, themeId, deckId } = _state;
+async function _writePendingSRS() {
+  const courseId = _state.course.id;
+  for (const entry of _state.pendingSRS) {
+    await db.updateSRS(courseId, entry.cardId, entry.srsData);
+  }
+  _state.pendingSRS = [];
+}
+
+async function _renderCompletion() {
+  await _writePendingSRS();
+  const { correct, wrong } = _state;
   const total = correct + wrong;
   const pct = total ? Math.round((correct / total) * 100) : 0;
   $app().innerHTML = `
-    ${renderHeader({ title: 'Terminé !', back: `/mots/${themeId}/${deckId}` })}
+    ${renderHeader({ title: 'Termine !', back: _state.backPath })}
     <div class="completion">
-      <div class="completion__icon">${pct >= 80 ? '🏆' : '🖼️'}</div>
-      <div class="completion__title">${pct}% de réussite</div>
+      <div class="completion__icon">${pct >= 80 ? '&#x1F3C6;' : '&#x1F5BC;&#xFE0F;'}</div>
+      <div class="completion__title">${pct}% de reussite</div>
       <div class="completion__actions">
         <button class="primary-btn" id="btn-restart">Recommencer</button>
-        <button class="secondary-btn" data-navigate="/mots/${themeId}/${deckId}">Retour</button>
+        <button class="secondary-btn" data-navigate="${_state.backPath}">Retour</button>
       </div>
     </div>
   `;

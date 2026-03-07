@@ -4,31 +4,35 @@ import { store } from '../store.js';
 import { navigate } from '../router.js';
 import { renderHeader } from '../components/header.js';
 import { shuffle, escapeHtml } from '../utils.js';
+import { showConfirmModal } from '../components/modal.js';
 
 const $app = () => document.getElementById('app');
 let _state = {};
 
 export function renderWordsMatch(params) {
-  const { themeId, deckId } = params;
-  const deck = (store.get('decks') || []).find(d => d.id === deckId);
-  if (!deck) { navigate(`/mots/${themeId}/${deckId}`); return; }
-  _state = { themeId, deckId, deck };
+  const { themeId, deckId, lessonId } = params;
+  const actualDeckId = lessonId ? `lesson-vocab-${lessonId}` : deckId;
+  const backPath = lessonId ? `/mots/lecons/${lessonId}` : `/mots/${themeId}/${deckId}`;
+
+  const deck = (store.get('decks') || []).find(d => d.id === actualDeckId);
+  if (!deck) { navigate(backPath); return; }
+  _state = { themeId, deckId: actualDeckId, lessonId, backPath, deck };
   _renderIntro();
 }
 
 function _renderIntro() {
-  const { deck, themeId, deckId } = _state;
+  const { backPath } = _state;
   $app().innerHTML = `
-    ${renderHeader({ title: 'Associer', back: `/mots/${themeId}/${deckId}` })}
+    ${renderHeader({ title: 'Associer', back: backPath })}
     <div class="completion">
-      <div class="completion__icon">🔗</div>
-      <div class="completion__title">Prêt à jouer ?</div>
+      <div class="completion__icon">&#x1F517;</div>
+      <div class="completion__title">Pret a jouer ?</div>
       <p style="color:var(--text-secondary);text-align:center">
-        Associe chaque mot arabe à sa traduction française.
+        Associe chaque mot arabe a sa traduction francaise.
       </p>
       <div class="completion__actions">
         <button class="primary-btn" id="btn-start">Commencer</button>
-        <button class="secondary-btn" data-navigate="/mots/${themeId}/${deckId}">Retour</button>
+        <button class="secondary-btn" data-navigate="${backPath}">Retour</button>
       </div>
     </div>
   `;
@@ -37,6 +41,7 @@ function _renderIntro() {
 }
 
 function _startGame() {
+  if (_state.timerInterval) clearInterval(_state.timerInterval);
   const cards = shuffle([..._state.deck.cards]).slice(0, 8);
   const cells = shuffle([
     ...cards.map(c => ({ id: c.id, text: c.front, type: 'front', pairId: c.id, isAr: true })),
@@ -53,9 +58,10 @@ function _startGame() {
 }
 
 function _renderGrid() {
-  const { cells, matched, deck, themeId, deckId } = _state;
+  const { cells, matched, backPath } = _state;
   $app().innerHTML = `
-    ${renderHeader({ title: 'Associer', back: `/mots/${themeId}/${deckId}` })}
+    ${renderHeader({ title: 'Associer', back: backPath,
+      actions: [{ id: 'reset', icon: 'refresh-cw', label: 'Recommencer' }] })}
     <main class="page-content">
       <div class="match-container">
         <div class="match-timer" id="match-timer">0:00</div>
@@ -70,6 +76,14 @@ function _renderGrid() {
       </div>
     </main>
   `;
+
+  document.querySelector('[data-action="reset"]')?.addEventListener('click', () => {
+    showConfirmModal(
+      'Recommencer la session ?',
+      'Ta progression actuelle sera perdue.',
+      () => { clearInterval(_state.timerInterval); _startGame(); }
+    );
+  });
 
   $app().querySelectorAll('.match-cell:not(.is-matched)').forEach(el => {
     el.addEventListener('click', () => _onCellClick(parseInt(el.dataset.index)));
@@ -124,17 +138,17 @@ function _onCellClick(index) {
 }
 
 function _renderCompletion(secs) {
-  const { themeId, deckId } = _state;
+  const { backPath } = _state;
   const time = `${Math.floor(secs / 60)}:${String(secs % 60).padStart(2, '0')}`;
   $app().innerHTML = `
-    ${renderHeader({ title: 'Terminé !', back: `/mots/${themeId}/${deckId}` })}
+    ${renderHeader({ title: 'Termine !', back: backPath })}
     <div class="completion">
-      <div class="completion__icon">🏆</div>
+      <div class="completion__icon">&#x1F3C6;</div>
       <div class="completion__title">Bravo !</div>
       <p style="color:var(--text-secondary)">Temps : ${time}</p>
       <div class="completion__actions">
         <button class="primary-btn" id="btn-restart">Rejouer</button>
-        <button class="secondary-btn" data-navigate="/mots/${themeId}/${deckId}">Retour</button>
+        <button class="secondary-btn" data-navigate="${backPath}">Retour</button>
       </div>
     </div>
   `;

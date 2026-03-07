@@ -245,6 +245,54 @@
 .result-item--correct .result-item__icon::before { content: '✓'; color: var(--accent-green); }
 .result-item--wrong   .result-item__icon::before { content: '✗'; color: var(--accent-red); }
 
+/* ── Section decks lecon ── */
+.lesson-decks-section {
+  margin-bottom: var(--space-2xl);
+}
+
+.lesson-decks-section__title {
+  font-size: var(--text-base);
+  font-weight: 600;
+  margin-bottom: var(--space-md);
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+}
+
+.deck-card--lesson {
+  border-left: 4px solid var(--accent-purple, #a371f7);
+}
+
+.deck-card__badge {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-xs);
+  font-size: var(--text-xs);
+  color: var(--accent-purple, #a371f7);
+  font-weight: 600;
+  margin-right: var(--space-xs);
+}
+
+.deck-card__delete {
+  width: 32px;
+  height: 32px;
+  border: none;
+  background: none;
+  color: var(--text-tertiary);
+  cursor: pointer;
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color var(--transition-fast), background var(--transition-fast);
+  flex-shrink: 0;
+}
+
+.deck-card__delete:hover {
+  color: var(--accent-red);
+  background: rgba(248, 81, 73, 0.1);
+}
+
 /* ── Mode Match ── */
 .match-container { max-width: 500px; margin: 0 auto; }
 .match-timer { text-align: center; font-size: var(--text-2xl); font-weight: 700; color: var(--accent-blue); padding: var(--space-lg) 0; }

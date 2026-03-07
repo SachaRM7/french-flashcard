@@ -5,7 +5,7 @@ import { store } from './store.js';
 import { route, startRouter } from './router.js';
 import { renderHome, renderCourseSelect } from './pages/home.js';
 import { renderWordsHome, renderWordsTheme } from './pages/words-home.js';
-import { renderWordsDeck } from './pages/words-deck.js';
+import { renderWordsDeck, renderWordsDeckLesson } from './pages/words-deck.js';
 import { renderWordsFlashcards } from './pages/words-flashcards.js';
 import { renderWordsLearn } from './pages/words-learn.js';
 import { renderWordsTest } from './pages/words-test.js';
@@ -13,6 +13,7 @@ import { renderWordsMatch } from './pages/words-match.js';
 import { renderWordsListen } from './pages/words-listen.js';
 import { renderWordsImage } from './pages/words-image.js';
 import { renderConvHome } from './pages/conv-home.js';
+import { renderConvLevel } from './pages/conv-level.js';
 import { renderConvLesson } from './pages/conv-lesson.js';
 import { renderConvExercise } from './pages/conv-exercise.js';
 import { renderReviewDashboard } from './pages/review-dashboard.js';
@@ -51,6 +52,14 @@ async function init() {
   // Phase 2 — Mode Mots
   route('/mots', renderWordsHome);
   route('/mots/:themeId', renderWordsTheme);
+  // Routes lecons (avant les routes generiques pour eviter les conflits)
+  route('/mots/lecons/:lessonId', renderWordsDeckLesson);
+  route('/mots/lecons/:lessonId/flash',  renderWordsFlashcards);
+  route('/mots/lecons/:lessonId/learn',  renderWordsLearn);
+  route('/mots/lecons/:lessonId/test',   renderWordsTest);
+  route('/mots/lecons/:lessonId/match',  renderWordsMatch);
+  route('/mots/lecons/:lessonId/listen', renderWordsListen);
+  route('/mots/lecons/:lessonId/image',  renderWordsImage);
   route('/mots/:themeId/:deckId', renderWordsDeck);
   route('/mots/:themeId/:deckId/flash',  renderWordsFlashcards);
   route('/mots/:themeId/:deckId/learn',  renderWordsLearn);
@@ -61,6 +70,7 @@ async function init() {
 
   // Phase 3 — Conversations
   route('/conversations', renderConvHome);
+  route('/conversations/niveau/:level', renderConvLevel);
   route('/conversations/lecon/:lessonId', renderConvLesson);
   route('/conversations/lecon/:lessonId/exercice', renderConvExercise);
 

@@ -1,4 +1,4 @@
-// js/pages/words-learn.js — Mode apprendre (QCM / écrit)
+// js/pages/words-learn.js — Mode apprendre (QCM / ecrit)
 
 import { store } from '../store.js';
 import { navigate } from '../router.js';
@@ -6,24 +6,28 @@ import { renderHeader } from '../components/header.js';
 import { shuffle, escapeHtml, checkWrittenAnswer } from '../utils.js';
 import { db } from '../db.js';
 import { createSRSEntry, processAnswer } from '../srs.js';
-import { renderOptionsModal, showModal, bindModalEvents } from '../components/modal.js';
+import { renderOptionsModal, showModal, bindModalEvents, showConfirmModal } from '../components/modal.js';
 
 const $app = () => document.getElementById('app');
 let _state = {};
 
 export async function renderWordsLearn(params) {
-  const { themeId, deckId } = params;
-  const deck = (store.get('decks') || []).find(d => d.id === deckId);
-  if (!deck) { navigate(`/mots/${themeId}/${deckId}`); return; }
+  const { themeId, deckId, lessonId } = params;
+  const actualDeckId = lessonId ? `lesson-vocab-${lessonId}` : deckId;
+  const backPath = lessonId ? `/mots/lecons/${lessonId}` : `/mots/${themeId}/${deckId}`;
+
+  const deck = (store.get('decks') || []).find(d => d.id === actualDeckId);
+  if (!deck) { navigate(backPath); return; }
 
   const course = store.get('currentCourse');
   const srsAll = await db.getSRS(course.id);
   const srsMap = Object.fromEntries(srsAll.map(e => [e.cardId, e]));
 
   _state = {
-    themeId, deckId, deck, course, srsMap,
+    themeId, deckId: actualDeckId, lessonId, backPath, deck, course, srsMap,
     options: { shuffle: true, frontSide: 'front', writtenMode: false, correctionLevel: 'flexible' },
     queue: [], retrySet: new Set(), correct: 0, wrong: 0, answered: false,
+    pendingSRS: [],
   };
   _buildQueue();
   _renderQuestion();
@@ -40,12 +44,8 @@ function _buildQueue() {
 
 function _currentCard() { return _state.queue[0] || null; }
 
-function _cardFront(card) {
-  return _state.options.frontSide === 'front' ? card.front : card.back;
-}
-function _cardBack(card) {
-  return _state.options.frontSide === 'front' ? card.back : card.front;
-}
+function _cardFront(card) { return _state.options.frontSide === 'front' ? card.front : card.back; }
+function _cardBack(card) { return _state.options.frontSide === 'front' ? card.back : card.front; }
 function _isFrontAr() {
   const cfg = _state.course.config;
   return _state.options.frontSide === 'front' ? cfg.frontDir === 'rtl' : cfg.backDir === 'rtl';
@@ -71,7 +71,7 @@ function _renderQuestion() {
   let answerHTML = '';
   if (_state.options.writtenMode) {
     answerHTML = `<div class="written-form">
-      <input class="written-input" id="written-input" type="text" placeholder="Répondre..." autocomplete="off">
+      <input class="written-input" id="written-input" type="text" placeholder="Repondre..." autocomplete="off">
       <button class="primary-btn" id="btn-validate">Valider</button>
     </div>`;
   } else {
@@ -82,8 +82,11 @@ function _renderQuestion() {
   }
 
   $app().innerHTML = `
-    ${renderHeader({ title: escapeHtml(_state.deck.name), back: `/mots/${_state.themeId}/${_state.deckId}`,
-      actions: [{ id: 'options', icon: 'settings', label: 'Options' }] })}
+    ${renderHeader({ title: escapeHtml(_state.deck.name), back: _state.backPath,
+      actions: [
+        { id: 'reset', icon: 'refresh-cw', label: 'Recommencer' },
+        { id: 'options', icon: 'settings', label: 'Options' }
+      ] })}
     <main class="page-content">
       <div class="flash-progress" style="margin-bottom:var(--space-xl)">
         <span style="color:var(--accent-green);font-weight:600">${_state.correct}</span>
@@ -92,7 +95,7 @@ function _renderQuestion() {
       </div>
       <div class="learn-container">
         <div class="learn-question">
-          ${isRetry ? '<div class="learn-question__retry">Essayons à nouveau</div>' : ''}
+          ${isRetry ? '<div class="learn-question__retry">Essayons a nouveau</div>' : ''}
           <div class="learn-question__text ${isAr ? 'learn-question__text--ar' : ''}">${escapeHtml(_cardFront(card))}</div>
           ${isAr && card.translit && _state.options.frontSide === 'front' ? `<div class="learn-question__translit">${escapeHtml(card.translit)}</div>` : ''}
         </div>
@@ -106,9 +109,14 @@ function _renderQuestion() {
   _state.answered = false;
   _bindQuestionEvents(card);
   document.querySelector('[data-action="options"]')?.addEventListener('click', _openOptions);
-  if (_state.options.writtenMode) {
-    document.getElementById('written-input')?.focus();
-  }
+  document.querySelector('[data-action="reset"]')?.addEventListener('click', () => {
+    showConfirmModal(
+      'Recommencer la session ?',
+      'Ta progression actuelle sera perdue.',
+      () => { _state.pendingSRS = []; _buildQueue(); _renderQuestion(); }
+    );
+  });
+  if (_state.options.writtenMode) document.getElementById('written-input')?.focus();
   feather.replace();
 }
 
@@ -150,17 +158,18 @@ async function _handleAnswer(isCorrect, card, correct) {
   _state.answered = true;
   const feedback = document.getElementById('feedback');
   if (feedback) {
-    feedback.textContent = isCorrect ? '✓ Correct !' : `✗ Réponse : ${correct}`;
+    feedback.textContent = isCorrect ? '✓ Correct !' : `✗ Reponse : ${correct}`;
     feedback.className = `learn-feedback ${isCorrect ? 'learn-feedback--correct' : 'learn-feedback--wrong'}`;
   }
 
   if (isCorrect) { _state.correct++; _state.retrySet.delete(card.id); }
   else { _state.wrong++; _state.retrySet.add(card.id); }
 
+  // Collecter dans pendingSRS
   const srsEntry = _state.srsMap[card.id] || createSRSEntry(_state.course.id, card.id);
   const updated = processAnswer(srsEntry, isCorrect);
   _state.srsMap[card.id] = updated;
-  await db.updateSRS(_state.course.id, card.id, updated);
+  _state.pendingSRS.push({ cardId: card.id, srsData: updated });
 
   const nextBtn = document.getElementById('btn-next');
   if (nextBtn) nextBtn.style.display = '';
@@ -177,19 +186,28 @@ function _openOptions() {
   showModal(renderOptionsModal({ currentOptions: _state.options, courseConfig: _state.course.config }));
   bindModalEvents(({ key, value }) => {
     _state.options[key] = value;
-    hideModal(); _buildQueue(); _renderQuestion();
+    _hideModal(); _state.pendingSRS = []; _buildQueue(); _renderQuestion();
   });
 }
 
-function _renderCompletion() {
-  const { correct, wrong, themeId, deckId } = _state;
+async function _writePendingSRS() {
+  const courseId = _state.course.id;
+  for (const entry of _state.pendingSRS) {
+    await db.updateSRS(courseId, entry.cardId, entry.srsData);
+  }
+  _state.pendingSRS = [];
+}
+
+async function _renderCompletion() {
+  await _writePendingSRS();
+  const { correct, wrong } = _state;
   const total = correct + wrong;
   const pct = total ? Math.round((correct / total) * 100) : 0;
   $app().innerHTML = `
-    ${renderHeader({ title: 'Terminé !', back: `/mots/${themeId}/${deckId}` })}
+    ${renderHeader({ title: 'Termine !', back: _state.backPath })}
     <div class="completion">
-      <div class="completion__icon">${pct >= 80 ? '🏆' : '📖'}</div>
-      <div class="completion__title">${pct}% de réussite</div>
+      <div class="completion__icon">${pct >= 80 ? '&#x1F3C6;' : '&#x1F4D6;'}</div>
+      <div class="completion__title">${pct}% de reussite</div>
       <div class="completion__stats">
         <div class="completion__stat-item">
           <div class="completion__stat-value" style="color:var(--accent-green)">${correct}</div>
@@ -202,7 +220,7 @@ function _renderCompletion() {
       </div>
       <div class="completion__actions">
         <button class="primary-btn" id="btn-restart">Recommencer</button>
-        <button class="secondary-btn" data-navigate="/mots/${themeId}/${deckId}">Retour</button>
+        <button class="secondary-btn" data-navigate="${_state.backPath}">Retour</button>
       </div>
     </div>
   `;
@@ -210,7 +228,7 @@ function _renderCompletion() {
   feather.replace();
 }
 
-function hideModal() {
+function _hideModal() {
   const overlay = document.getElementById('modal-overlay');
   if (overlay) overlay.remove();
 }

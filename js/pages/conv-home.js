@@ -173,6 +173,10 @@ function _render() {
     btn.addEventListener('click', () => {
       const f = btn.dataset.filter;
       const ft = btn.dataset.filterType;
+      if (ft === 'level') {
+        navigate(`/conversations/niveau/${f}`);
+        return;
+      }
       if (_state.filter === f && _state.filterType === ft) {
         _state.filter = null; _state.filterType = null;
       } else {

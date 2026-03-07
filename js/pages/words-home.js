@@ -1,4 +1,4 @@
-// js/pages/words-home.js — Thèmes et liste de decks
+// js/pages/words-home.js — Themes et liste de decks
 
 import { store } from '../store.js';
 import { navigate } from '../router.js';
@@ -29,9 +29,43 @@ export async function renderWordsHome() {
     return { theme, deckCount: themeDecks.length, totalCards };
   });
 
+  // Charger les decks de lecons depuis IndexedDB
+  const lessonDeckEntries = course ? await db.getLessonDecks(course.id) : [];
+
   $app().innerHTML = `
     ${renderHeader({ title: `${course?.flag ?? ''} Vocabulaire`, back: '/home' })}
     <main class="page-content page-content--nav">
+      ${lessonDeckEntries.length > 0 ? `
+        <div class="lesson-decks-section">
+          <div class="lesson-decks-section__title">
+            <i data-feather="message-square"></i>
+            Mots des lecons
+          </div>
+          <div class="deck-grid">
+            ${lessonDeckEntries.map(entry => `
+              <div class="deck-card deck-card--lesson"
+                   data-lesson-id="${escapeHtml(entry.lessonId)}"
+                   role="button" tabindex="0">
+                <div>
+                  <div class="deck-card__name">
+                    <span class="deck-card__badge">Lecon</span>
+                    ${escapeHtml(entry.deck.name)}
+                  </div>
+                  <div class="deck-card__meta">${entry.deck.cards.length} cartes</div>
+                </div>
+                <div style="display:flex;align-items:center;gap:var(--space-sm)">
+                  <button class="deck-card__delete"
+                          data-delete-lesson-id="${escapeHtml(entry.lessonId)}"
+                          aria-label="Supprimer">
+                    <i data-feather="trash-2"></i>
+                  </button>
+                  <div class="deck-card__arrow"><i data-feather="chevron-right"></i></div>
+                </div>
+              </div>
+            `).join('')}
+          </div>
+        </div>
+      ` : ''}
       <div class="themes-grid">
         ${themeItems.map(({ theme, deckCount, totalCards }) => `
           <div class="theme-card" data-theme-id="${escapeHtml(theme.id)}"
@@ -48,11 +82,40 @@ export async function renderWordsHome() {
     ${renderBottomNav('mots')}
   `;
 
+  // Lesson deck clicks
+  $app().querySelectorAll('.deck-card--lesson').forEach(el => {
+    el.addEventListener('click', e => {
+      if (e.target.closest('.deck-card__delete')) return;
+      navigate(`/mots/lecons/${el.dataset.lessonId}`);
+    });
+    el.addEventListener('keydown', e => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        navigate(`/mots/lecons/${el.dataset.lessonId}`);
+      }
+    });
+  });
+
+  // Delete lesson deck
+  $app().querySelectorAll('.deck-card__delete').forEach(btn => {
+    btn.addEventListener('click', async e => {
+      e.stopPropagation();
+      const lessonId = btn.dataset.deleteLessonId;
+      await db.deleteLessonDeck(course.id, lessonId);
+      // Supprimer du store aussi
+      const updatedDecks = store.get('decks') || [];
+      store.set('decks', updatedDecks.filter(d => d.id !== `lesson-vocab-${lessonId}`));
+      renderWordsHome();
+    });
+  });
+
+  // Theme clicks
   $app().querySelectorAll('.theme-card').forEach(el => {
     const go = () => navigate(`/mots/${el.dataset.themeId}`);
     el.addEventListener('click', go);
-    el.addEventListener('keydown', (e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); go(); } });
+    el.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); go(); } });
   });
+
   feather.replace();
 }
 

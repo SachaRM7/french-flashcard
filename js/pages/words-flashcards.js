@@ -7,30 +7,33 @@ import { shuffle, escapeHtml } from '../utils.js';
 import { db } from '../db.js';
 import { createSRSEntry, processAnswer } from '../srs.js';
 import { playWord } from '../audio.js';
-import { renderOptionsModal, showModal, bindModalEvents } from '../components/modal.js';
+import { renderOptionsModal, showModal, bindModalEvents, showConfirmModal } from '../components/modal.js';
 
 const $app = () => document.getElementById('app');
 let _state = {};
 
 export async function renderWordsFlashcards(params) {
-  const { themeId, deckId } = params;
-  const deck = (store.get('decks') || []).find(d => d.id === deckId);
-  if (!deck) { navigate(`/mots/${themeId}/${deckId}`); return; }
+  const { themeId, deckId, lessonId } = params;
+  const actualDeckId = lessonId ? `lesson-vocab-${lessonId}` : deckId;
+  const backPath = lessonId ? `/mots/lecons/${lessonId}` : `/mots/${themeId}/${deckId}`;
+
+  const deck = (store.get('decks') || []).find(d => d.id === actualDeckId);
+  if (!deck) { navigate(backPath); return; }
 
   const course = store.get('currentCourse');
   const favData = await db.getFavorites(course.id);
   const srsAll = await db.getSRS(course.id);
   const srsMap = Object.fromEntries(srsAll.map(e => [e.cardId, e]));
 
-  // Nettoyer le handler clavier si présent
   if (_state._keyHandler) document.removeEventListener('keydown', _state._keyHandler);
 
   _state = {
-    themeId, deckId, deck, course,
+    themeId, deckId: actualDeckId, lessonId, backPath, deck, course,
     options: { shuffle: false, frontSide: 'front', favoritesOnly: false },
     favorites: new Set(favData.words),
     srsMap,
     cards: [], index: 0, known: 0, unknown: 0,
+    pendingSRS: [],
     _keyHandler: null,
   };
 
@@ -70,8 +73,11 @@ function _render() {
   const progress = total > 0 ? (index / total) * 100 : 0;
 
   $app().innerHTML = `
-    ${renderHeader({ title: escapeHtml(deck.name), back: `/mots/${_state.themeId}/${_state.deckId}`,
-      actions: [{ id: 'options', icon: 'settings', label: 'Options' }] })}
+    ${renderHeader({ title: escapeHtml(deck.name), back: _state.backPath,
+      actions: [
+        { id: 'reset', icon: 'refresh-cw', label: 'Recommencer' },
+        { id: 'options', icon: 'settings', label: 'Options' }
+      ] })}
     <div class="flash-container">
       <div class="flash-progress">
         <span style="color:var(--accent-orange);font-weight:600">${unknown}</span>
@@ -98,9 +104,9 @@ function _render() {
         <button class="icon-btn" id="btn-audio" aria-label="Audio"><i data-feather="volume-2"></i></button>
       </div>
       <div class="flash-controls">
-        <button class="flash-ctrl-btn flash-ctrl-btn--unknown" id="btn-unknown" aria-label="À revoir">✗</button>
+        <button class="flash-ctrl-btn flash-ctrl-btn--unknown" id="btn-unknown" aria-label="A revoir">&#x2717;</button>
         <button class="flash-ctrl-btn flash-ctrl-btn--flip" id="btn-flip" aria-label="Retourner"><i data-feather="refresh-cw"></i></button>
-        <button class="flash-ctrl-btn flash-ctrl-btn--known" id="btn-known" aria-label="Connu">✓</button>
+        <button class="flash-ctrl-btn flash-ctrl-btn--known" id="btn-known" aria-label="Connu">&#x2713;</button>
       </div>
     </div>
   `;
@@ -117,16 +123,21 @@ function _bindButtons() {
   document.getElementById('btn-audio')?.addEventListener('click', _playAudio);
   document.getElementById('btn-fav')?.addEventListener('click', _toggleFav);
   document.querySelector('[data-action="options"]')?.addEventListener('click', _openOptions);
+  document.querySelector('[data-action="reset"]')?.addEventListener('click', () => {
+    showConfirmModal(
+      'Recommencer la session ?',
+      'Ta progression actuelle sera perdue.',
+      () => { _state.pendingSRS = []; _initCards(); _render(); }
+    );
+  });
 
-  // Navigation clavier : Espace = flip, → = connu, ← = à revoir
-  const _onKey = (e) => {
+  const _onKey = e => {
     if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA') return;
     if (e.code === 'Space') { e.preventDefault(); _flip(); }
     else if (e.code === 'ArrowRight') { e.preventDefault(); _swipeCard(true); }
     else if (e.code === 'ArrowLeft') { e.preventDefault(); _swipeCard(false); }
   };
   document.addEventListener('keydown', _onKey);
-  // Nettoyer le listener si on quitte la page
   _state._keyHandler = _onKey;
 }
 
@@ -151,21 +162,29 @@ async function _toggleFav() {
   document.getElementById('btn-fav')?.classList.toggle('is-active', _state.favorites.has(card.id));
 }
 
-async function _swipeCard(isKnown) {
+function _swipeCard(isKnown) {
   const card = _state.cards[_state.index];
-  const courseId = _state.course.id;
   const swipeEl = document.getElementById('swipe-card');
   if (!swipeEl) return;
 
   swipeEl.classList.add(isKnown ? 'fly-right' : 'fly-left');
   if (isKnown) _state.known++; else _state.unknown++;
 
-  const existing = _state.srsMap[card.id] || createSRSEntry(courseId, card.id);
+  // Collecter dans pendingSRS — ne pas ecrire en IndexedDB maintenant
+  const existing = _state.srsMap[card.id] || createSRSEntry(_state.course.id, card.id);
   const updated = processAnswer(existing, isKnown);
   _state.srsMap[card.id] = updated;
-  await db.updateSRS(courseId, card.id, updated);
+  _state.pendingSRS.push({ cardId: card.id, srsData: updated });
 
   setTimeout(() => { _state.index++; _render(); }, 300);
+}
+
+async function _writePendingSRS() {
+  const courseId = _state.course.id;
+  for (const entry of _state.pendingSRS) {
+    await db.updateSRS(courseId, entry.cardId, entry.srsData);
+  }
+  _state.pendingSRS = [];
 }
 
 let _drag = { active: false, startX: 0, startY: 0 };
@@ -175,7 +194,7 @@ function _bindSwipe() {
   if (!card) return;
 
   const onStart = (x, y) => { _drag = { active: true, startX: x, startY: y }; };
-  const onMove = (x) => {
+  const onMove = x => {
     if (!_drag.active) return;
     const dx = x - _drag.startX;
     const inner = document.getElementById('card-inner');
@@ -190,7 +209,7 @@ function _bindSwipe() {
       face.classList.toggle('swipe-overlay-unknown', dx < -40);
     }
   };
-  const onEnd = (x) => {
+  const onEnd = x => {
     if (!_drag.active) return;
     _drag.active = false;
     const dx = x - _drag.startX;
@@ -215,17 +234,18 @@ function _openOptions() {
   showModal(renderOptionsModal({ currentOptions: _state.options, courseConfig: course.config, showWrittenToggle: false }));
   bindModalEvents(({ key, value }) => {
     _state.options[key] = value;
-    hideModal(); _initCards(); _render();
+    _hideModal(); _initCards(); _render();
   });
 }
 
-function _renderCompletion() {
-  const { known, unknown, themeId, deckId } = _state;
+async function _renderCompletion() {
+  await _writePendingSRS();
+  const { known, unknown } = _state;
   $app().innerHTML = `
-    ${renderHeader({ title: 'Terminé !', back: `/mots/${themeId}/${deckId}` })}
+    ${renderHeader({ title: 'Termine !', back: _state.backPath })}
     <div class="completion">
-      <div class="completion__icon">🎉</div>
-      <div class="completion__title">Deck terminé</div>
+      <div class="completion__icon">&#x1F389;</div>
+      <div class="completion__title">Deck termine</div>
       <div class="completion__stats">
         <div class="completion__stat-item">
           <div class="completion__stat-value" style="color:var(--accent-green)">${known}</div>
@@ -233,12 +253,12 @@ function _renderCompletion() {
         </div>
         <div class="completion__stat-item">
           <div class="completion__stat-value" style="color:var(--accent-orange)">${unknown}</div>
-          <div class="completion__stat-label">À revoir</div>
+          <div class="completion__stat-label">A revoir</div>
         </div>
       </div>
       <div class="completion__actions">
         <button class="primary-btn" id="btn-restart">Recommencer</button>
-        <button class="secondary-btn" data-navigate="/mots/${themeId}/${deckId}">Retour au deck</button>
+        <button class="secondary-btn" data-navigate="${_state.backPath}">Retour au deck</button>
       </div>
     </div>
   `;
@@ -246,7 +266,7 @@ function _renderCompletion() {
   feather.replace();
 }
 
-function hideModal() {
+function _hideModal() {
   const overlay = document.getElementById('modal-overlay');
   if (overlay) overlay.remove();
 }

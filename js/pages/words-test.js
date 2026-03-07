@@ -6,21 +6,26 @@ import { renderHeader } from '../components/header.js';
 import { shuffle, escapeHtml, checkWrittenAnswer } from '../utils.js';
 import { db } from '../db.js';
 import { createSRSEntry, processAnswer } from '../srs.js';
+import { showConfirmModal } from '../components/modal.js';
 
 const $app = () => document.getElementById('app');
 let _state = {};
 
 export async function renderWordsTest(params) {
-  const { themeId, deckId } = params;
-  const deck = (store.get('decks') || []).find(d => d.id === deckId);
-  if (!deck) { navigate(`/mots/${themeId}/${deckId}`); return; }
+  const { themeId, deckId, lessonId } = params;
+  const actualDeckId = lessonId ? `lesson-vocab-${lessonId}` : deckId;
+  const backPath = lessonId ? `/mots/lecons/${lessonId}` : `/mots/${themeId}/${deckId}`;
+
+  const deck = (store.get('decks') || []).find(d => d.id === actualDeckId);
+  if (!deck) { navigate(backPath); return; }
   const course = store.get('currentCourse');
   const srsAll = await db.getSRS(course.id);
   _state = {
-    themeId, deckId, deck, course,
+    themeId, deckId: actualDeckId, lessonId, backPath, deck, course,
     srsMap: Object.fromEntries(srsAll.map(e => [e.cardId, e])),
     options: { count: 10, frontSide: 'front', writtenMode: false, correctionLevel: 'flexible' },
     questions: [], index: 0, results: [],
+    pendingSRS: [],
   };
   _renderConfig();
 }
@@ -33,7 +38,7 @@ function _renderConfig() {
   const total = _state.deck.cards.length;
   const counts = [10, 15, 20, total].filter((v, i, a) => a.indexOf(v) === i && v <= total);
   $app().innerHTML = `
-    ${renderHeader({ title: 'Examen', back: `/mots/${_state.themeId}/${_state.deckId}` })}
+    ${renderHeader({ title: 'Examen', back: _state.backPath })}
     <main class="page-content">
       <div class="test-config">
         <div class="test-config__title">Configurer l'examen</div>
@@ -45,7 +50,7 @@ function _renderConfig() {
           `).join('')}
         </div>
         <label class="modal-option" style="justify-content:space-between;margin-bottom:var(--space-xl)">
-          <span>Mode écrit</span>
+          <span>Mode ecrit</span>
           <label class="toggle"><input type="checkbox" id="opt-written"><span class="toggle__slider"></span></label>
         </label>
         <button class="primary-btn" id="btn-start">Commencer</button>
@@ -70,6 +75,7 @@ function _startTest() {
   _state.questions = cards;
   _state.index = 0;
   _state.results = [];
+  _state.pendingSRS = [];
   _renderQuestion();
 }
 
@@ -88,7 +94,7 @@ function _renderQuestion() {
 
   let answerHTML = _state.options.writtenMode
     ? `<div class="written-form">
-        <input class="written-input" id="written-input" type="text" placeholder="Répondre..." autocomplete="off">
+        <input class="written-input" id="written-input" type="text" placeholder="Repondre..." autocomplete="off">
         <button class="primary-btn" id="btn-validate">Valider</button>
       </div>`
     : `<div class="choice-grid">${_getChoices(card).map(c =>
@@ -96,7 +102,8 @@ function _renderQuestion() {
       ).join('')}</div>`;
 
   $app().innerHTML = `
-    ${renderHeader({ title: `Question ${_state.index + 1}/${total}`, back: `/mots/${_state.themeId}/${_state.deckId}` })}
+    ${renderHeader({ title: `Question ${_state.index + 1}/${total}`, back: _state.backPath,
+      actions: [{ id: 'reset', icon: 'refresh-cw', label: 'Recommencer' }] })}
     <main class="page-content">
       <div class="flash-progress" style="margin-bottom:var(--space-xl)">
         <span style="font-size:var(--text-sm);color:var(--text-secondary)">${_state.index + 1}/${total}</span>
@@ -114,6 +121,14 @@ function _renderQuestion() {
     </main>
   `;
 
+  document.querySelector('[data-action="reset"]')?.addEventListener('click', () => {
+    showConfirmModal(
+      'Recommencer la session ?',
+      'Ta progression actuelle sera perdue.',
+      () => { _state.pendingSRS = []; _startTest(); }
+    );
+  });
+
   _bindTestAnswer(card);
   feather.replace();
 }
@@ -122,19 +137,21 @@ function _bindTestAnswer(card) {
   const correct = _cardBack(card);
   let answered = false;
 
-  const handleAnswer = async (isCorrect) => {
+  const handleAnswer = (isCorrect) => {
     if (answered) return;
     answered = true;
     _state.results.push({ card, correct, isCorrect, userAnswer: '' });
     const feedback = document.getElementById('feedback');
     if (feedback) {
-      feedback.textContent = isCorrect ? '✓ Correct !' : `✗ Réponse : ${correct}`;
+      feedback.textContent = isCorrect ? '✓ Correct !' : `✗ Reponse : ${correct}`;
       feedback.className = `learn-feedback ${isCorrect ? 'learn-feedback--correct' : 'learn-feedback--wrong'}`;
     }
+    // Collecter dans pendingSRS
     const srsEntry = _state.srsMap[card.id] || createSRSEntry(_state.course.id, card.id);
     const updated = processAnswer(srsEntry, isCorrect);
     _state.srsMap[card.id] = updated;
-    await db.updateSRS(_state.course.id, card.id, updated);
+    _state.pendingSRS.push({ cardId: card.id, srsData: updated });
+
     const nextBtn = document.getElementById('btn-next');
     if (nextBtn) nextBtn.style.display = '';
   };
@@ -158,7 +175,16 @@ function _bindTestAnswer(card) {
   document.getElementById('btn-next')?.addEventListener('click', () => { _state.index++; _renderQuestion(); });
 }
 
-function _renderResults() {
+async function _writePendingSRS() {
+  const courseId = _state.course.id;
+  for (const entry of _state.pendingSRS) {
+    await db.updateSRS(courseId, entry.cardId, entry.srsData);
+  }
+  _state.pendingSRS = [];
+}
+
+async function _renderResults() {
+  await _writePendingSRS();
   const correct = _state.results.filter(r => r.isCorrect).length;
   const total = _state.results.length;
   const pct = total ? Math.round((correct / total) * 100) : 0;
@@ -166,7 +192,7 @@ function _renderResults() {
   const dash = (pct / 100) * circ;
 
   $app().innerHTML = `
-    ${renderHeader({ title: 'Résultats', back: `/mots/${_state.themeId}/${_state.deckId}` })}
+    ${renderHeader({ title: 'Resultats', back: _state.backPath })}
     <main class="page-content">
       <div class="test-results">
         <div class="score-circle">
@@ -180,19 +206,19 @@ function _renderResults() {
         </div>
         <p style="color:var(--text-secondary)">${correct} / ${total} corrects</p>
         <div class="result-list">
-          ${_state.results.map(r => `
-            <div class="result-item result-item--${r.isCorrect ? 'correct' : 'wrong'}">
+          ${_state.results.map(res => `
+            <div class="result-item result-item--${res.isCorrect ? 'correct' : 'wrong'}">
               <div class="result-item__icon"></div>
               <div>
-                <div style="font-family:var(--font-arabic);direction:rtl">${escapeHtml(r.card.front)}</div>
-                <div style="color:var(--text-secondary)">${escapeHtml(r.correct)}</div>
+                <div style="font-family:var(--font-arabic);direction:rtl">${escapeHtml(res.card.front)}</div>
+                <div style="color:var(--text-secondary)">${escapeHtml(res.correct)}</div>
               </div>
             </div>
           `).join('')}
         </div>
         <div class="completion__actions" style="margin-top:var(--space-xl)">
           <button class="primary-btn" id="btn-restart">Recommencer</button>
-          <button class="secondary-btn" data-navigate="/mots/${_state.themeId}/${_state.deckId}">Retour</button>
+          <button class="secondary-btn" data-navigate="${_state.backPath}">Retour</button>
         </div>
       </div>
     </main>

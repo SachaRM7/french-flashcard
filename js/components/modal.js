@@ -82,6 +82,31 @@ export function hideModal() {
   if (overlay) overlay.remove();
 }
 
+export function showConfirmModal(title, message, onConfirm, onCancel) {
+  showModal(`
+    <div class="modal-overlay" id="modal-overlay">
+      <div class="modal">
+        <div class="modal__header">
+          <span class="modal__title">${escapeHtml(title)}</span>
+          <button class="modal__close" id="modal-close">&#x2715;</button>
+        </div>
+        <p class="confirm-modal__message">${escapeHtml(message)}</p>
+        <div class="confirm-modal__actions">
+          <button class="primary-btn" id="confirm-ok">Recommencer</button>
+          <button class="secondary-btn" id="confirm-cancel">Annuler</button>
+        </div>
+      </div>
+    </div>
+  `);
+  const cancel = () => { hideModal(); if (onCancel) onCancel(); };
+  document.getElementById('confirm-ok')?.addEventListener('click', () => { hideModal(); onConfirm(); });
+  document.getElementById('confirm-cancel')?.addEventListener('click', cancel);
+  document.getElementById('modal-close')?.addEventListener('click', cancel);
+  document.getElementById('modal-overlay')?.addEventListener('click', e => {
+    if (e.target === document.getElementById('modal-overlay')) cancel();
+  });
+}
+
 export function bindModalEvents(onOptionChange) {
   const overlay = document.getElementById('modal-overlay');
   if (!overlay) return;
