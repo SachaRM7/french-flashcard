@@ -6,6 +6,12 @@ import { route, startRouter } from './router.js';
 import { renderHome, renderCourseSelect } from './pages/home.js';
 import { renderWordsHome, renderWordsTheme } from './pages/words-home.js';
 import { renderWordsDeck } from './pages/words-deck.js';
+import { renderWordsFlashcards } from './pages/words-flashcards.js';
+import { renderWordsLearn } from './pages/words-learn.js';
+import { renderWordsTest } from './pages/words-test.js';
+import { renderWordsMatch } from './pages/words-match.js';
+import { renderWordsListen } from './pages/words-listen.js';
+import { renderWordsImage } from './pages/words-image.js';
 import { renderConvHome } from './pages/conv-home.js';
 import { renderReviewDashboard } from './pages/review-dashboard.js';
 
@@ -32,12 +38,25 @@ async function init() {
     if (course) store.set('currentCourse', course);
   }
 
+  // Phase 1 — Fondations
   route('/', renderCourseSelect);
   route('/home', renderHome);
+
+  // Phase 2 — Mode Mots
   route('/mots', renderWordsHome);
   route('/mots/:themeId', renderWordsTheme);
   route('/mots/:themeId/:deckId', renderWordsDeck);
+  route('/mots/:themeId/:deckId/flash',  renderWordsFlashcards);
+  route('/mots/:themeId/:deckId/learn',  renderWordsLearn);
+  route('/mots/:themeId/:deckId/test',   renderWordsTest);
+  route('/mots/:themeId/:deckId/match',  renderWordsMatch);
+  route('/mots/:themeId/:deckId/listen', renderWordsListen);
+  route('/mots/:themeId/:deckId/image',  renderWordsImage);
+
+  // Phase 3 — Conversations
   route('/conversations', renderConvHome);
+
+  // Phase 4 — Révision SRS
   route('/revision', renderReviewDashboard);
 
   startRouter();

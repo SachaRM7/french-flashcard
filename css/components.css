@@ -156,3 +156,17 @@
   border-radius: var(--radius-sm);
 }
 .modal__close:hover { color: var(--text-primary); }
+
+/* Options modal internals */
+.modal-section { margin-bottom: var(--space-xl); }
+.modal-section__title { font-size: var(--text-sm); color: var(--text-tertiary); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: var(--space-md); }
+.modal-option { display: flex; align-items: center; justify-content: space-between; padding: var(--space-md) 0; gap: var(--space-md); font-size: var(--text-base); }
+.direction-btns, .correction-btns { display: flex; gap: var(--space-sm); margin-top: var(--space-sm); }
+.direction-btn, .correction-btn {
+  flex: 1; padding: var(--space-sm) var(--space-md);
+  background: var(--bg-card); border: 2px solid var(--border);
+  border-radius: var(--radius-md); cursor: pointer;
+  color: var(--text-secondary); font-family: var(--font-ui); font-size: var(--text-sm);
+  transition: border-color var(--transition-fast), color var(--transition-fast);
+}
+.direction-btn.is-active, .correction-btn.is-active { border-color: var(--accent-blue); color: var(--accent-blue); }

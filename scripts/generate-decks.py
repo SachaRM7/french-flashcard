@@ -1,41 +1,42 @@
 #!/usr/bin/env python3
 """
 Générateur de decks multilingues
-- Lit les fichiers vocabulary/*.json (mots en français)
-- Traduit automatiquement en anglais et arabe via GPT
-- Génère les fichiers decks.js pour chaque cours
+- Lit les fichiers vocabulary/*.json
+- Traduit automatiquement via GPT (optionnel)
+- Génère data/decks/arabic.json et data/decks/french.json
 
-Usage: python3 generate-decks.py [--translate]
-  Sans --translate : utilise le cache existant
-  Avec --translate : traduit les nouveaux mots
+Usage: python generate-decks.py [--translate]
 """
 
 import json
 import os
+import re
 import sys
+from datetime import datetime
 from pathlib import Path
 
 BASE_DIR = Path(__file__).parent.parent
 VOCAB_DIR = BASE_DIR / "data" / "vocabulary"
 CACHE_FILE = BASE_DIR / "data" / "translations_cache.json"
+OUTPUT_DIR = BASE_DIR / "data" / "decks"
+
+def remove_harakats(text):
+    return re.sub(r'[\u064B-\u065F\u0670]', '', text)
 
 def load_cache():
     if CACHE_FILE.exists():
-        return json.loads(CACHE_FILE.read_text())
+        return json.loads(CACHE_FILE.read_text(encoding='utf-8'))
     return {}
 
 def save_cache(cache):
-    CACHE_FILE.write_text(json.dumps(cache, ensure_ascii=False, indent=2))
+    CACHE_FILE.write_text(json.dumps(cache, ensure_ascii=False, indent=2), encoding='utf-8')
 
 def translate_batch(words, cache):
-    """Traduit un batch de mots via subprocess oracle"""
     new_words = [w for w in words if w not in cache]
-    
     if not new_words:
         return cache
-    
-    print(f"🔄 Traduction de {len(new_words)} nouveaux mots...")
-    
+
+    print(f"[...] Traduction de {len(new_words)} nouveaux mots...")
     words_list = ", ".join(new_words)
     prompt = f"""Traduis ces mots français en anglais et arabe.
 Réponds UNIQUEMENT avec un JSON array, sans markdown ni explication.
@@ -50,8 +51,6 @@ Mots: {words_list}"""
             capture_output=True, text=True, timeout=60
         )
         response = result.stdout.strip()
-        
-        # Chercher le JSON array
         start = response.find('[')
         end = response.rfind(']') + 1
         if start >= 0 and end > start:
@@ -64,62 +63,55 @@ Mots: {words_list}"""
                         "translit": t.get("translit", "")
                     }
             save_cache(cache)
-            print(f"✅ {len(translations)} mots traduits et mis en cache")
+            print(f"[ok] {len(translations)} mots traduits et mis en cache")
     except Exception as e:
-        print(f"⚠️ Erreur traduction: {e}")
-        print("💡 Utilise le cache manuel ou ajoute les traductions dans translations_cache.json")
-    
+        print(f"[err] Erreur traduction: {e}")
+
     return cache
 
 def generate_decks(do_translate=False):
     cache = load_cache()
-    
-    # Chercher tous les fichiers .json récursivement (inclut sous-dossiers)
-    vocab_files = list(VOCAB_DIR.glob("**/*.json"))
+    OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
+
+    vocab_files = sorted(VOCAB_DIR.glob("**/*.json"))
     if not vocab_files:
         print("Aucun fichier vocabulary trouvé dans data/vocabulary/")
         return
-    
-    # Collecter tous les mots
+
     all_words = set()
     all_vocabs = []
-    
+
     for vocab_file in vocab_files:
-        vocab = json.loads(vocab_file.read_text())
+        vocab = json.loads(vocab_file.read_text(encoding='utf-8'))
         all_vocabs.append(vocab)
         for card in vocab["cards"]:
             all_words.add(card["fr"])
-    
-    # Traduire si demandé
+
     if do_translate:
         cache = translate_batch(list(all_words), cache)
-    
-    # Vérifier les mots manquants
+
     missing = [w for w in all_words if w not in cache]
     if missing:
-        print(f"⚠️ {len(missing)} mots sans traduction: {missing[:5]}...")
-        print("💡 Lance avec --translate ou ajoute-les dans translations_cache.json")
-    
-    # Générer les decks
+        print(f"[warn] {len(missing)} mots sans traduction (les premiers: {missing[:5]})")
+
     arabic_decks = []
     french_decks = []
-    
+
     for vocab in all_vocabs:
-        print(f"📚 {vocab['name']}")
-        
+        print(f"  {vocab['name']}")
         arabic_cards = []
         french_cards = []
-        
-        for card in vocab["cards"]:
+
+        for index, card in enumerate(vocab["cards"]):
             word_fr = card["fr"]
             emoji = card.get("emoji", "")
-            
-            # D'abord, regarder si AR/EN/TRANSLIT sont déjà dans la carte
+            image = card.get("image", None)
+            deck_id = vocab["id"]
+
             ar = card.get("ar")
             en = card.get("en")
             translit = card.get("ar_translit", "")
-            
-            # Sinon, regarder dans le cache
+
             if not ar or not en:
                 trans = cache.get(word_fr, {})
                 if not ar:
@@ -128,46 +120,70 @@ def generate_decks(do_translate=False):
                     en = trans.get("en", word_fr)
                 if not translit:
                     translit = trans.get("translit", "")
-            
+
+            card_id = f"{deck_id}:{index}"
+
             arabic_cards.append({
+                "id": card_id,
                 "front": ar,
+                "frontPlain": remove_harakats(ar) if ar else ar,
                 "back": word_fr,
+                "en": en,
                 "translit": translit,
-                "emoji": emoji
+                "emoji": emoji,
+                "image": image,
+                "audio": None,
+                "tags": []
             })
-            
+
             french_cards.append({
+                "id": card_id,
                 "front": en,
+                "frontPlain": en,
                 "back": word_fr,
-                "emoji": emoji
+                "en": en,
+                "translit": "",
+                "emoji": emoji,
+                "image": image,
+                "audio": None,
+                "tags": []
             })
-        
+
         arabic_decks.append({
             "id": vocab["id"],
             "name": vocab["name"],
+            "nameAr": vocab.get("nameAr", ""),
             "category": vocab.get("category", "Vocabulaire"),
+            "tags": [],
             "cards": arabic_cards
         })
-        
+
         french_decks.append({
             "id": vocab["id"],
             "name": vocab["name"],
+            "nameAr": "",
             "category": vocab.get("category", "Vocabulaire"),
+            "tags": [],
             "cards": french_cards
         })
-    
-    # Écrire les fichiers avec timestamp cache-buster
-    from datetime import datetime
-    timestamp = datetime.utcnow().isoformat()
-    
-    (BASE_DIR / "data" / "arabic" / "decks.js").write_text(
-        f"// Auto-generated decks - {timestamp}\nwindow.DECKS_VERSION = '{timestamp}';\nwindow.DECKS_DATA = {json.dumps(arabic_decks, ensure_ascii=False, indent=2)};"
+
+    timestamp = datetime.utcnow().isoformat() + "Z"
+
+    (OUTPUT_DIR / "arabic.json").write_text(
+        json.dumps({"version": timestamp, "courseId": "arabic", "decks": arabic_decks},
+                   ensure_ascii=False, indent=2),
+        encoding='utf-8'
     )
-    (BASE_DIR / "data" / "french" / "decks.js").write_text(
-        f"// Auto-generated decks - {timestamp}\nwindow.DECKS_VERSION = '{timestamp}';\nwindow.DECKS_DATA = {json.dumps(french_decks, ensure_ascii=False, indent=2)};"
+    (OUTPUT_DIR / "french.json").write_text(
+        json.dumps({"version": timestamp, "courseId": "french", "decks": french_decks},
+                   ensure_ascii=False, indent=2),
+        encoding='utf-8'
     )
-    
-    print(f"\n✅ Généré: {len(arabic_decks)} decks Arabe, {len(french_decks)} decks Français")
+
+    total_cards = sum(len(d["cards"]) for d in arabic_decks)
+    print(f"\n[ok] Genere: {len(arabic_decks)} decks, {total_cards} cartes")
+    print("   -> data/decks/arabic.json")
+    print("   -> data/decks/french.json")
 
 if __name__ == "__main__":
     do_translate = "--translate" in sys.argv
