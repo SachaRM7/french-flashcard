@@ -4,6 +4,7 @@ import { store } from '../store.js';
 import { navigate } from '../router.js';
 import { renderHeader } from '../components/header.js';
 import { escapeHtml } from '../utils.js';
+import { db } from '../db.js';
 
 const $app = () => document.getElementById('app');
 
@@ -48,14 +49,41 @@ function bindCourseSelectEvents() {
   });
 }
 
-export function renderHome() {
+export async function renderHome() {
   const course = store.get('currentCourse');
-  const dueCount = 0;
+  if (!course) { navigate('/'); return; }
 
+  // Render quickly with 0, then update with real data
+  _renderHomeUI(course, 0, null);
+
+  const [dueEntries, stats, lessons] = await Promise.all([
+    db.getDueWords(course.id),
+    db.getStats(course.id),
+    _getLastLesson(course.id),
+  ]);
+
+  store.set('dueCount', dueEntries.length);
+  _renderHomeUI(course, dueEntries.length, lessons, stats);
+}
+
+async function _getLastLesson(courseId) {
+  try {
+    const lessonsIndex = store.get('lessons');
+    if (!lessonsIndex) return null;
+    for (const l of lessonsIndex) {
+      const progress = await db.getLessonProgress(courseId, l.id);
+      if (progress && progress.exercisesCompleted > 0) return { lesson: l, progress };
+    }
+  } catch {}
+  return null;
+}
+
+function _renderHomeUI(course, dueCount, lastLesson, stats) {
   $app().innerHTML = `
-    ${renderHeader({ title: course ? `${course.flag} ${course.nameLocal}` : 'HelloArabic' })}
+    ${renderHeader({ title: `${course.flag} ${course.nameLocal}` })}
     <main class="page-content">
       <div class="home-dashboard">
+
         <div class="home-modes">
           <div class="home-mode-card" data-navigate="/mots">
             <div class="home-mode-card__icon">📚</div>
@@ -72,9 +100,46 @@ export function renderHome() {
             </div>
           </div>
         </div>
-        <div class="home-review-banner" data-navigate="/revision">
-          📝 ${dueCount} mot${dueCount !== 1 ? 's' : ''} à réviser aujourd'hui
+
+        <div class="home-review-banner ${dueCount > 0 ? 'home-review-banner--due' : ''}" data-navigate="/revision">
+          📝 ${dueCount > 0
+            ? `<strong>${dueCount}</strong> mot${dueCount !== 1 ? 's' : ''} à réviser aujourd'hui`
+            : 'Révision — tout est à jour !'
+          }
+          <i data-feather="chevron-right"></i>
         </div>
+
+        ${lastLesson ? `
+        <div class="home-section">
+          <div class="home-section__title">Continuer</div>
+          <div class="home-continue-card" data-navigate="/conversations/lecon/${escapeHtml(lastLesson.lesson.id)}">
+            <div class="home-continue-card__icon">💬</div>
+            <div class="home-continue-card__body">
+              <div class="home-continue-card__title">${escapeHtml(lastLesson.lesson.titleFr)}</div>
+              <div class="home-continue-card__meta">${lastLesson.progress.exercisesCompleted} / ${lastLesson.progress.exercisesTotal} exercices</div>
+            </div>
+            <i data-feather="chevron-right"></i>
+          </div>
+        </div>
+        ` : ''}
+
+        ${stats ? `
+        <div class="home-quick-stats">
+          <div class="home-quick-stat">
+            <div class="home-quick-stat__value">${stats.totalWordsAcquired || 0}</div>
+            <div class="home-quick-stat__label">Mots acquis</div>
+          </div>
+          <div class="home-quick-stat">
+            <div class="home-quick-stat__value">${stats.totalLessonsCompleted || 0}</div>
+            <div class="home-quick-stat__label">Leçons</div>
+          </div>
+          <div class="home-quick-stat">
+            <div class="home-quick-stat__value">${stats.currentStreak || 0}</div>
+            <div class="home-quick-stat__label">Jours</div>
+          </div>
+        </div>
+        ` : ''}
+
       </div>
     </main>
   `;

@@ -16,6 +16,7 @@ import { renderConvHome } from './pages/conv-home.js';
 import { renderConvLesson } from './pages/conv-lesson.js';
 import { renderConvExercise } from './pages/conv-exercise.js';
 import { renderReviewDashboard } from './pages/review-dashboard.js';
+import { renderReviewSession } from './pages/review-session.js';
 
 async function init() {
   await db.init();
@@ -62,6 +63,7 @@ async function init() {
 
   // Phase 4 — Révision SRS
   route('/revision', renderReviewDashboard);
+  route('/revision/session', renderReviewSession);
 
   startRouter();
   feather.replace();

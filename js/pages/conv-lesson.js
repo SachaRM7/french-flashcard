@@ -133,12 +133,18 @@ function _renderVocabulary() {
       <div class="vocab-item">
         <div class="vocab-item__ar text-ar" dir="rtl">${escapeHtml(w.ar)}</div>
         <div class="vocab-item__translit">${escapeHtml(w.translit)}</div>
-        <div class="vocab-item__fr">${escapeHtml(w.fr)}</div>
+        <div class="vocab-item__fr">
+          ${escapeHtml(w.fr)}
+          ${(w.linkedCards && w.linkedCards.length) ? `<span class="vocab-item__linked" title="Dans les flashcards">📚</span>` : ''}
+        </div>
         <button class="vocab-item__play" data-ar="${escapeHtml(w.ar)}" aria-label="Écouter">
           <i data-feather="volume-2"></i>
         </button>
       </div>
     `).join('')}
+    <button class="secondary-btn" id="btn-review-vocab" style="margin-top:var(--space-lg)">
+      Réviser ces mots en flashcards
+    </button>
   </div>`;
 }
 
@@ -258,5 +264,33 @@ function _bindEvents() {
   // Start exercises
   document.getElementById('btn-start-exercises')?.addEventListener('click', () => {
     navigate(`/conversations/lecon/${_state.lessonId}/exercice`);
+  });
+
+  // Vocab → flashcards bridge
+  document.getElementById('btn-review-vocab')?.addEventListener('click', () => {
+    const vocab = _state.lesson.vocabulary;
+    if (!vocab || !vocab.length) return;
+    const tempDeck = {
+      id: `lesson-${_state.lessonId}`,
+      name: `Leçon : ${_state.lesson.titleFr}`,
+      nameAr: '',
+      cards: vocab.map((w, i) => ({
+        id: `${_state.lessonId}:vocab:${i}`,
+        front: w.ar,
+        frontPlain: w.arPlain,
+        back: w.fr,
+        translit: w.translit,
+        emoji: '',
+        image: null,
+        audio: null,
+        tags: w.tags || [],
+      })),
+    };
+    const decks = store.get('decks') || [];
+    const existingIdx = decks.findIndex(d => d.id === tempDeck.id);
+    if (existingIdx >= 0) decks[existingIdx] = tempDeck;
+    else decks.push(tempDeck);
+    store.set('decks', decks);
+    navigate(`/mots/lecons/${tempDeck.id}/flash`);
   });
 }
