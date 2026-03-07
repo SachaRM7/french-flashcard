@@ -3,6 +3,7 @@
 import { store } from '../store.js';
 import { navigate } from '../router.js';
 import { renderHeader } from '../components/header.js';
+import { renderBottomNav } from '../components/bottom-nav.js';
 import { db } from '../db.js';
 import { getBoxDistribution } from '../srs.js';
 
@@ -23,7 +24,7 @@ export async function renderProfil() {
 
   $app().innerHTML = `
     ${renderHeader({ title: 'Profil', back: '/home' })}
-    <main class="page-content">
+    <main class="page-content page-content--nav">
 
       <div class="profil-section">
         <div class="profil-section__title">Progression</div>
@@ -124,6 +125,7 @@ export async function renderProfil() {
       </div>
 
     </main>
+    ${renderBottomNav('profil')}
   `;
 
   _bindEvents(prefs, course);

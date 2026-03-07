@@ -3,6 +3,7 @@
 import { store } from '../store.js';
 import { navigate } from '../router.js';
 import { renderHeader } from '../components/header.js';
+import { renderBottomNav } from '../components/bottom-nav.js';
 import { escapeHtml } from '../utils.js';
 import { db } from '../db.js';
 
@@ -80,34 +81,34 @@ async function _getLastLesson(courseId) {
 
 function _renderHomeUI(course, dueCount, lastLesson, stats) {
   $app().innerHTML = `
-    ${renderHeader({ title: `${course.flag} ${course.nameLocal}`, actions: [{ id: 'profil', icon: 'user', label: 'Profil' }] })}
-    <main class="page-content">
+    ${renderHeader({ title: `${course.flag} ${course.nameLocal}` })}
+    <main class="page-content page-content--nav">
       <div class="home-dashboard">
 
         <div class="home-modes">
-          <div class="home-mode-card" data-navigate="/mots">
-            <div class="home-mode-card__icon">📚</div>
+          <div class="home-mode-card" data-navigate="/mots" data-mode="mots">
+            <div class="home-mode-card__icon-wrap">📚</div>
             <div>
               <div class="home-mode-card__title">Vocabulaire</div>
               <div class="home-mode-card__desc">Flashcards, quiz, association</div>
             </div>
           </div>
-          <div class="home-mode-card" data-navigate="/conversations">
-            <div class="home-mode-card__icon">💬</div>
+          <div class="home-mode-card" data-navigate="/conversations" data-mode="conversations">
+            <div class="home-mode-card__icon-wrap">💬</div>
             <div>
               <div class="home-mode-card__title">Conversations</div>
               <div class="home-mode-card__desc">Dialogues et leçons audio</div>
             </div>
           </div>
-          <div class="home-mode-card" data-navigate="/alphabet">
-            <div class="home-mode-card__icon">ا</div>
+          <div class="home-mode-card" data-navigate="/alphabet" data-mode="alphabet">
+            <div class="home-mode-card__icon-wrap">ا</div>
             <div>
               <div class="home-mode-card__title">Alphabet</div>
               <div class="home-mode-card__desc">28 lettres, diacritiques, règles</div>
             </div>
           </div>
-          <div class="home-mode-card" data-navigate="/racines">
-            <div class="home-mode-card__icon">🌱</div>
+          <div class="home-mode-card" data-navigate="/racines" data-mode="racines">
+            <div class="home-mode-card__icon-wrap">🌱</div>
             <div>
               <div class="home-mode-card__title">Racines</div>
               <div class="home-mode-card__desc">Familles de mots trilittères</div>
@@ -115,12 +116,16 @@ function _renderHomeUI(course, dueCount, lastLesson, stats) {
           </div>
         </div>
 
-        <div class="home-review-banner ${dueCount > 0 ? 'home-review-banner--due' : ''}" data-navigate="/revision">
-          📝 ${dueCount > 0
-            ? `<strong>${dueCount}</strong> mot${dueCount !== 1 ? 's' : ''} à réviser aujourd'hui`
-            : 'Révision — tout est à jour !'
-          }
-          <i data-feather="chevron-right"></i>
+        <div class="home-review-card ${dueCount > 0 ? 'home-review-card--due' : 'home-review-card--done'}" data-navigate="/revision">
+          ${dueCount > 0 ? `
+            <div class="home-review-card__eyebrow">📝 Révision du jour</div>
+            <div class="home-review-card__count">${dueCount}</div>
+            <div class="home-review-card__subtitle">mot${dueCount !== 1 ? 's' : ''} à réviser</div>
+            <div class="home-review-card__cta">Commencer <i data-feather="arrow-right"></i></div>
+          ` : `
+            <i data-feather="check-circle"></i>
+            Tout est à jour !
+          `}
         </div>
 
         ${lastLesson ? `
@@ -156,8 +161,8 @@ function _renderHomeUI(course, dueCount, lastLesson, stats) {
 
       </div>
     </main>
+    ${renderBottomNav('home')}
   `;
 
-  $app().querySelector('[data-action="profil"]')?.addEventListener('click', () => navigate('/profil'));
   feather.replace();
 }

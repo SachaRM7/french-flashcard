@@ -3,6 +3,7 @@
 import { store } from '../store.js';
 import { renderHeader } from '../components/header.js';
 import { renderTabBar } from '../components/tab-bar.js';
+import { renderBottomNav } from '../components/bottom-nav.js';
 import { escapeHtml } from '../utils.js';
 import { playWord } from '../audio.js';
 
@@ -35,10 +36,11 @@ function _render() {
   $app().innerHTML = `
     ${renderHeader({ title: 'Alphabet', back: '/home' })}
     ${renderTabBar(tabs, activeTab)}
-    <main class="page-content">
+    <main class="page-content page-content--nav">
       ${_renderTab()}
     </main>
     ${_state.selectedLetter ? _renderLetterModal(_state.selectedLetter) : ''}
+    ${renderBottomNav('home')}
   `;
 
   $app().querySelectorAll('.tab-bar__tab').forEach(btn => {

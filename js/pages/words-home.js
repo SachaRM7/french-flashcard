@@ -3,6 +3,7 @@
 import { store } from '../store.js';
 import { navigate } from '../router.js';
 import { renderHeader } from '../components/header.js';
+import { renderBottomNav } from '../components/bottom-nav.js';
 import { escapeHtml } from '../utils.js';
 import { db } from '../db.js';
 
@@ -30,7 +31,7 @@ export async function renderWordsHome() {
 
   $app().innerHTML = `
     ${renderHeader({ title: `${course?.flag ?? ''} Vocabulaire`, back: '/home' })}
-    <main class="page-content">
+    <main class="page-content page-content--nav">
       <div class="themes-grid">
         ${themeItems.map(({ theme, deckCount, totalCards }) => `
           <div class="theme-card" data-theme-id="${escapeHtml(theme.id)}"
@@ -44,6 +45,7 @@ export async function renderWordsHome() {
         `).join('')}
       </div>
     </main>
+    ${renderBottomNav('mots')}
   `;
 
   $app().querySelectorAll('.theme-card').forEach(el => {
@@ -66,7 +68,7 @@ export async function renderWordsTheme(params) {
 
   $app().innerHTML = `
     ${renderHeader({ title: `${theme.icon} ${theme.name}`, back: '/mots' })}
-    <main class="page-content">
+    <main class="page-content page-content--nav">
       <div class="deck-grid">
         ${themeDecks.map(deck => `
           <div class="deck-card" data-deck-id="${escapeHtml(deck.id)}" role="button" tabindex="0" aria-label="${escapeHtml(deck.name)}">
@@ -79,6 +81,7 @@ export async function renderWordsTheme(params) {
         `).join('')}
       </div>
     </main>
+    ${renderBottomNav('mots')}
   `;
 
   $app().querySelectorAll('.deck-card').forEach(el => {

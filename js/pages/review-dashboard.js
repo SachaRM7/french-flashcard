@@ -3,6 +3,7 @@
 import { store } from '../store.js';
 import { navigate } from '../router.js';
 import { renderHeader } from '../components/header.js';
+import { renderBottomNav } from '../components/bottom-nav.js';
 import { db } from '../db.js';
 import { getBoxDistribution, getDueCount } from '../srs.js';
 import { shuffle } from '../utils.js';
@@ -30,7 +31,7 @@ export async function renderReviewDashboard() {
 
   $app().innerHTML = `
     ${renderHeader({ title: 'Révision', back: '/home' })}
-    <main class="page-content">
+    <main class="page-content page-content--nav">
 
       <div class="review-hero ${dueCount > 0 ? 'review-hero--due' : 'review-hero--done'}">
         <div class="review-hero__count">${dueCount}</div>
@@ -97,6 +98,7 @@ export async function renderReviewDashboard() {
       ` : ''}
 
     </main>
+    ${renderBottomNav('revision')}
   `;
 
   document.getElementById('btn-start-review')?.addEventListener('click', async () => {

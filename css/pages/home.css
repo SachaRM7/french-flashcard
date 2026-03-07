@@ -10,9 +10,16 @@
   gap: var(--space-lg);
 }
 
+/* Couleurs par section */
+.home-mode-card[data-mode="mots"]          { --mode-accent: var(--accent-blue);   --mode-icon-bg: rgba(88,166,255,0.12);  }
+.home-mode-card[data-mode="conversations"] { --mode-accent: var(--accent-green);  --mode-icon-bg: rgba(63,185,80,0.12);   }
+.home-mode-card[data-mode="alphabet"]      { --mode-accent: var(--accent-purple); --mode-icon-bg: rgba(163,113,247,0.12); }
+.home-mode-card[data-mode="racines"]       { --mode-accent: var(--accent-orange); --mode-icon-bg: rgba(210,153,34,0.12);  }
+
 .home-mode-card {
   background: var(--bg-secondary);
   border: 1px solid var(--border);
+  border-left: 3px solid var(--mode-accent, var(--border));
   border-radius: var(--radius-xl);
   padding: var(--space-2xl);
   cursor: pointer;
@@ -22,26 +29,88 @@
   transition: transform var(--transition-base), border-color var(--transition-base);
   user-select: none;
 }
-.home-mode-card:hover { border-color: var(--accent-blue); }
+.home-mode-card:hover {
+  border-color: var(--mode-accent, var(--accent-blue));
+  border-left-color: var(--mode-accent, var(--accent-blue));
+}
 .home-mode-card:active { transform: scale(0.98); }
 
-.home-mode-card__icon { font-size: 2.5rem; }
+.home-mode-card__icon-wrap {
+  width: 52px;
+  height: 52px;
+  border-radius: var(--radius-lg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8rem;
+  flex-shrink: 0;
+  background: var(--mode-icon-bg, var(--bg-card));
+}
 .home-mode-card__title { font-size: var(--text-lg); font-weight: 700; }
 .home-mode-card__desc { font-size: var(--text-sm); color: var(--text-secondary); margin-top: 4px; }
 
-.home-review-banner {
+/* Review card proéminente */
+.home-review-card {
   background: var(--bg-card);
   border: 1px solid var(--border);
-  border-radius: var(--radius-lg);
-  padding: var(--space-lg);
-  text-align: center;
-  margin-top: var(--space-xl);
+  border-radius: var(--radius-xl);
+  padding: var(--space-xl);
   cursor: pointer;
-  color: var(--text-secondary);
-  font-size: var(--text-sm);
-  transition: border-color var(--transition-fast);
+  transition: border-color var(--transition-fast), transform var(--transition-fast);
+  margin-top: var(--space-xl);
+  user-select: none;
 }
-.home-review-banner:hover { border-color: var(--accent-blue); }
+.home-review-card:hover { transform: translateY(-1px); }
+.home-review-card:active { transform: scale(0.98); }
+
+.home-review-card--due {
+  background: rgba(88, 166, 255, 0.06);
+  border-color: rgba(88, 166, 255, 0.4);
+}
+.home-review-card--due:hover { border-color: var(--accent-blue); }
+
+.home-review-card--done {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  color: var(--accent-green);
+  font-weight: 600;
+  font-size: var(--text-base);
+}
+.home-review-card--done svg { color: var(--accent-green); flex-shrink: 0; }
+
+.home-review-card__eyebrow {
+  font-size: var(--text-xs);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--accent-blue);
+  margin-bottom: var(--space-sm);
+}
+.home-review-card__count {
+  font-size: 3.5rem;
+  font-weight: 800;
+  color: var(--accent-blue);
+  line-height: 1;
+}
+.home-review-card__subtitle {
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+  margin-top: var(--space-xs);
+  margin-bottom: var(--space-lg);
+}
+.home-review-card__cta {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-sm);
+  background: var(--accent-blue);
+  color: #fff;
+  padding: 8px var(--space-lg);
+  border-radius: var(--radius-md);
+  font-size: var(--text-sm);
+  font-weight: 600;
+}
+.home-review-card__cta svg { width: 14px; height: 14px; }
 
 /* Sélection de cours */
 .course-select {

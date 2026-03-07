@@ -2,6 +2,7 @@
 
 import { store } from '../store.js';
 import { renderHeader } from '../components/header.js';
+import { renderBottomNav } from '../components/bottom-nav.js';
 import { escapeHtml } from '../utils.js';
 import { playWord } from '../audio.js';
 
@@ -35,7 +36,7 @@ function _render() {
 
   $app().innerHTML = `
     ${renderHeader({ title: 'Racines', back: '/home' })}
-    <main class="page-content">
+    <main class="page-content page-content--nav">
       <p style="color:var(--text-secondary);font-size:var(--text-sm);margin-bottom:var(--space-xl)">
         L'arabe est basé sur des racines trilittères. Chaque racine donne naissance à une famille de mots partageant le même sens de base.
       </p>
@@ -73,6 +74,7 @@ function _render() {
         `).join('')}
       </div>
     </main>
+    ${renderBottomNav('home')}
   `;
 
   $app().querySelectorAll('.root-card').forEach(el => {

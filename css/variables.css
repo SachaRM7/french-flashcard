@@ -69,6 +69,7 @@
   --max-width: 500px;
   --header-height: 60px;
   --player-height: 120px;
+  --bottom-nav-height: 60px;
 }
 
 /* Light theme override */

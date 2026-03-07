@@ -3,6 +3,7 @@
 import { store } from '../store.js';
 import { navigate } from '../router.js';
 import { renderHeader } from '../components/header.js';
+import { renderBottomNav } from '../components/bottom-nav.js';
 import { escapeHtml } from '../utils.js';
 
 const $app = () => document.getElementById('app');
@@ -14,6 +15,27 @@ const LEVEL_COLORS = {
   B2: { bg: '#fff3e0', text: '#e65100' },
   C1: { bg: '#fce4ec', text: '#c2185b' },
 };
+
+// Couleurs des cartes niveau (dark-mode compatible)
+const LEVEL_CARD_STYLES = {
+  A1: { bg: 'rgba(63,185,80,0.13)',   color: '#3fb950', border: 'rgba(63,185,80,0.25)'   },
+  A2: { bg: 'rgba(88,166,255,0.13)',  color: '#58a6ff', border: 'rgba(88,166,255,0.25)'  },
+  B1: { bg: 'rgba(163,113,247,0.13)', color: '#a371f7', border: 'rgba(163,113,247,0.25)' },
+  B2: { bg: 'rgba(210,153,34,0.13)',  color: '#d29922', border: 'rgba(210,153,34,0.25)'  },
+  C1: { bg: 'rgba(248,81,73,0.13)',   color: '#f85149', border: 'rgba(248,81,73,0.25)'   },
+};
+
+// Gradients pour les cartes séries (image-style)
+const SERIES_GRADIENTS = [
+  'linear-gradient(135deg, #1565c0 0%, #00897b 100%)',
+  'linear-gradient(135deg, #7b1fa2 0%, #c2185b 100%)',
+  'linear-gradient(135deg, #e64a19 0%, #ffa000 100%)',
+  'linear-gradient(135deg, #2e7d32 0%, #0097a7 100%)',
+  'linear-gradient(135deg, #283593 0%, #1976d2 100%)',
+  'linear-gradient(135deg, #4e342e 0%, #d84315 100%)',
+  'linear-gradient(135deg, #00695c 0%, #1565c0 100%)',
+  'linear-gradient(135deg, #6a1b9a 0%, #1976d2 100%)',
+];
 
 let _state = { lessons: [], filter: null, filterType: null };
 
@@ -54,56 +76,71 @@ function _render() {
     if (filterType === 'series') filtered = lessons.filter(l => l.seriesId === filter);
   }
 
+  const popularSeriesIdx = popular ? series.findIndex(s => s.id === popular.seriesId) : 0;
+  const popularGradient = SERIES_GRADIENTS[(popularSeriesIdx >= 0 ? popularSeriesIdx : 0) % SERIES_GRADIENTS.length];
+
   $app().innerHTML = `
     ${renderHeader({ title: 'Conversations', back: '/home' })}
-    <main class="page-content">
+    <main class="page-content page-content--nav">
 
       ${popular ? `
       <section class="conv-section">
         <div class="conv-section__title">Populaire</div>
         <div class="conv-popular-card" data-lesson-id="${escapeHtml(popular.id)}">
-          <div class="conv-popular-card__badge">
-            <span style="background:${LEVEL_COLORS[popular.level]?.bg};color:${LEVEL_COLORS[popular.level]?.text};padding:3px 10px;border-radius:10px;font-size:0.75rem;font-weight:700">${escapeHtml(popular.level)}</span>
+          <div class="conv-popular-card__thumb" style="background:${popularGradient}">
+            <span class="conv-popular-card__play-icon">▶</span>
           </div>
-          <div class="conv-popular-card__title">${escapeHtml(popular.seriesName)} | ${popular.number} : ${escapeHtml(popular.titleFr)}</div>
-          <div class="conv-popular-card__desc">${escapeHtml(popular.descriptionFr)}</div>
-          <div class="conv-popular-card__meta">${(popular.playCount || 0).toLocaleString('fr-FR')} lectures &middot; ${escapeHtml(popular.duration)}</div>
+          <div class="conv-popular-card__info">
+            <div class="conv-popular-card__meta">
+              <span class="conv-lesson-card__badge" style="background:${LEVEL_COLORS[popular.level]?.bg};color:${LEVEL_COLORS[popular.level]?.text}">${escapeHtml(popular.level)}</span>
+              <span class="conv-popular-card__duration">${escapeHtml(popular.duration)}</span>
+            </div>
+            <div class="conv-popular-card__title">${escapeHtml(popular.seriesName)} | ${popular.number} : ${escapeHtml(popular.titleFr)}</div>
+            <div class="conv-popular-card__desc">${escapeHtml(popular.descriptionFr)}</div>
+            <div class="conv-popular-card__plays">▷ ${(popular.playCount || 0).toLocaleString('fr-FR')}</div>
+          </div>
         </div>
       </section>
       ` : ''}
 
       <section class="conv-section">
         <div class="conv-section__title">Par niveau</div>
-        <div class="conv-filter-grid">
-          ${Object.entries(LEVEL_COLORS).map(([lvl, col]) => `
-            <button class="conv-filter-btn ${filterType === 'level' && filter === lvl ? 'is-active' : ''}"
-              style="--filter-bg:${col.bg};--filter-text:${col.text}"
+        <div class="conv-level-grid">
+          ${Object.entries(LEVEL_CARD_STYLES).map(([lvl, s]) => `
+            <div class="conv-level-card ${filterType === 'level' && filter === lvl ? 'is-active' : ''}"
+              style="--level-bg:${s.bg};--level-color:${s.color};--level-border:${s.border}"
               data-filter="${escapeHtml(lvl)}" data-filter-type="level">
-              <span class="conv-filter-btn__level">${escapeHtml(lvl)}</span>
-              <span class="conv-filter-btn__count">${levelCounts[lvl] || 0} leçon${(levelCounts[lvl] || 0) !== 1 ? 's' : ''}</span>
-            </button>
-          `).join('')}
-        </div>
-      </section>
-
-      <section class="conv-section">
-        <div class="conv-section__title">Par thème</div>
-        <div class="conv-filter-grid">
-          ${series.map(s => `
-            <button class="conv-filter-btn conv-filter-btn--series ${filterType === 'series' && filter === s.id ? 'is-active' : ''}"
-              data-filter="${escapeHtml(s.id)}" data-filter-type="series">
-              <span class="conv-filter-btn__level">${escapeHtml(s.name)}</span>
-              <span class="conv-filter-btn__count">${s.count} leçon${s.count !== 1 ? 's' : ''}</span>
-            </button>
+              <div class="conv-level-card__name">${escapeHtml(lvl)}</div>
+              <div class="conv-level-card__count">${levelCounts[lvl] || 0} leçon${(levelCounts[lvl] || 0) !== 1 ? 's' : ''}</div>
+            </div>
           `).join('')}
         </div>
       </section>
 
       <section class="conv-section">
         <div class="conv-section__title">
-          ${filter ? `${filterType === 'level' ? 'Niveau ' + filter : filter} ` : 'Toutes les leçons '}
-          <span style="color:var(--text-tertiary);font-weight:400">(${filtered.length})</span>
-          ${filter ? `<button class="conv-clear-filter" id="btn-clear-filter">Tout afficher</button>` : ''}
+          Par thème
+          <span class="conv-section__subtitle"> — ${series.length} séries, ${lessons.length} leçons</span>
+        </div>
+        <div class="conv-series-grid">
+          ${series.map((s, i) => `
+            <div class="conv-series-card ${filterType === 'series' && filter === s.id ? 'is-active' : ''}"
+              data-filter="${escapeHtml(s.id)}" data-filter-type="series">
+              <div class="conv-series-card__image" style="background:${SERIES_GRADIENTS[i % SERIES_GRADIENTS.length]}">
+                <div class="conv-series-card__count">${s.count} leçons</div>
+              </div>
+              <div class="conv-series-card__name">${escapeHtml(s.name)}</div>
+            </div>
+          `).join('')}
+        </div>
+      </section>
+
+      ${filter ? `
+      <section class="conv-section">
+        <div class="conv-section__title">
+          ${filterType === 'level' ? 'Niveau ' + filter : filter}
+          <span style="color:var(--text-tertiary);font-weight:400;font-size:var(--text-base)"> (${filtered.length})</span>
+          <button class="conv-clear-filter" id="btn-clear-filter">Tout afficher</button>
         </div>
         <div class="conv-lesson-list">
           ${filtered.map(l => `
@@ -121,8 +158,10 @@ function _render() {
           `).join('')}
         </div>
       </section>
+      ` : ''}
 
     </main>
+    ${renderBottomNav('conversations')}
   `;
 
   // Bind events

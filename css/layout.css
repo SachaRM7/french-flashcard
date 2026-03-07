@@ -87,6 +87,72 @@
   .choice-grid { grid-template-columns: 1fr 1fr; }
 }
 
+/* ── Bottom Navigation ── */
+.bottom-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: var(--bottom-nav-height);
+  background: var(--bg-secondary);
+  border-top: 1px solid var(--border);
+  display: flex;
+  align-items: stretch;
+  z-index: var(--z-dropdown);
+}
+
+.bottom-nav__item {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+  color: var(--text-tertiary);
+  cursor: pointer;
+  transition: color var(--transition-fast);
+  user-select: none;
+  text-decoration: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.bottom-nav__item svg {
+  width: 20px;
+  height: 20px;
+  stroke-width: 2;
+}
+
+.bottom-nav__label {
+  font-size: 10px;
+  font-weight: 500;
+  font-family: var(--font-ui);
+}
+
+.bottom-nav__item--active {
+  color: var(--accent-blue);
+}
+
+.bottom-nav__item--active .bottom-nav__label {
+  font-weight: 700;
+}
+
+/* Page content avec bottom nav */
+.page-content--nav {
+  padding-bottom: calc(var(--bottom-nav-height) + var(--space-xl));
+}
+
+/* Desktop : centrer la bottom nav comme le player */
+@media (min-width: 768px) {
+  .bottom-nav {
+    max-width: var(--max-width);
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: var(--radius-xl) var(--radius-xl) 0 0;
+    border: 1px solid var(--border);
+    border-bottom: none;
+  }
+}
+
 /* ── Accessibilité ── */
 /* Navigation clavier visible */
 :focus-visible {

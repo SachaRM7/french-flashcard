@@ -3,6 +3,7 @@
 import { store } from '../store.js';
 import { navigate } from '../router.js';
 import { renderHeader } from '../components/header.js';
+import { renderBottomNav } from '../components/bottom-nav.js';
 import { escapeHtml } from '../utils.js';
 import { db } from '../db.js';
 
@@ -34,7 +35,7 @@ export async function renderWordsDeck(params) {
 
   $app().innerHTML = `
     ${renderHeader({ title: escapeHtml(deck.name), back: `/mots/${themeId}` })}
-    <main class="page-content">
+    <main class="page-content page-content--nav">
       <div class="deck-stats">
         <div class="deck-stats__item">
           <div class="deck-stats__value deck-stats__value--blue">${total}</div>
@@ -61,6 +62,7 @@ export async function renderWordsDeck(params) {
         `).join('')}
       </div>
     </main>
+    ${renderBottomNav('mots')}
   `;
 
   $app().querySelectorAll('.mode-btn').forEach(btn => {
