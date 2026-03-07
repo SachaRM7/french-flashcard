@@ -17,6 +17,9 @@ import { renderConvLesson } from './pages/conv-lesson.js';
 import { renderConvExercise } from './pages/conv-exercise.js';
 import { renderReviewDashboard } from './pages/review-dashboard.js';
 import { renderReviewSession } from './pages/review-session.js';
+import { renderAlphabet } from './pages/alphabet.js';
+import { renderRoots } from './pages/roots.js';
+import { renderProfil } from './pages/profil.js';
 
 async function init() {
   await db.init();
@@ -64,6 +67,11 @@ async function init() {
   // Phase 4 — Révision SRS
   route('/revision', renderReviewDashboard);
   route('/revision/session', renderReviewSession);
+
+  // Phase 5 — Alphabet, Racines, Profil
+  route('/alphabet', renderAlphabet);
+  route('/racines', renderRoots);
+  route('/profil', renderProfil);
 
   startRouter();
   feather.replace();

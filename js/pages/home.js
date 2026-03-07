@@ -80,7 +80,7 @@ async function _getLastLesson(courseId) {
 
 function _renderHomeUI(course, dueCount, lastLesson, stats) {
   $app().innerHTML = `
-    ${renderHeader({ title: `${course.flag} ${course.nameLocal}` })}
+    ${renderHeader({ title: `${course.flag} ${course.nameLocal}`, actions: [{ id: 'profil', icon: 'user', label: 'Profil' }] })}
     <main class="page-content">
       <div class="home-dashboard">
 
@@ -97,6 +97,20 @@ function _renderHomeUI(course, dueCount, lastLesson, stats) {
             <div>
               <div class="home-mode-card__title">Conversations</div>
               <div class="home-mode-card__desc">Dialogues et leçons audio</div>
+            </div>
+          </div>
+          <div class="home-mode-card" data-navigate="/alphabet">
+            <div class="home-mode-card__icon">ا</div>
+            <div>
+              <div class="home-mode-card__title">Alphabet</div>
+              <div class="home-mode-card__desc">28 lettres, diacritiques, règles</div>
+            </div>
+          </div>
+          <div class="home-mode-card" data-navigate="/racines">
+            <div class="home-mode-card__icon">🌱</div>
+            <div>
+              <div class="home-mode-card__title">Racines</div>
+              <div class="home-mode-card__desc">Familles de mots trilittères</div>
             </div>
           </div>
         </div>
@@ -144,5 +158,6 @@ function _renderHomeUI(course, dueCount, lastLesson, stats) {
     </main>
   `;
 
+  $app().querySelector('[data-action="profil"]')?.addEventListener('click', () => navigate('/profil'));
   feather.replace();
 }

@@ -1,4 +1,189 @@
 {
   "version": "2026-03-06",
-  "roots": []
+  "roots": [
+    {
+      "id": "k-t-b",
+      "letters": ["ك", "ت", "ب"],
+      "transliteration": "k-t-b",
+      "meaning": "écrire",
+      "derivatives": [
+        { "ar": "كَتَبَ", "arPlain": "كتب", "translit": "kataba", "fr": "il a écrit", "type": "verbe", "pattern": "فَعَلَ" },
+        { "ar": "كِتَاب", "arPlain": "كتاب", "translit": "kitāb", "fr": "livre", "type": "nom", "pattern": "فِعَال" },
+        { "ar": "كَاتِب", "arPlain": "كاتب", "translit": "kātib", "fr": "écrivain", "type": "participe actif", "pattern": "فَاعِل" },
+        { "ar": "مَكْتَبَة", "arPlain": "مكتبة", "translit": "maktaba", "fr": "bibliothèque / librairie", "type": "nom de lieu", "pattern": "مَفْعَلَة" },
+        { "ar": "مَكْتُوب", "arPlain": "مكتوب", "translit": "maktūb", "fr": "écrit / lettre", "type": "participe passif", "pattern": "مَفْعُول" },
+        { "ar": "مَكْتَب", "arPlain": "مكتب", "translit": "maktab", "fr": "bureau", "type": "nom de lieu", "pattern": "مَفْعَل" }
+      ]
+    },
+    {
+      "id": "d-r-s",
+      "letters": ["د", "ر", "س"],
+      "transliteration": "d-r-s",
+      "meaning": "étudier",
+      "derivatives": [
+        { "ar": "دَرَسَ", "arPlain": "درس", "translit": "darasa", "fr": "il a étudié", "type": "verbe", "pattern": "فَعَلَ" },
+        { "ar": "دَرْس", "arPlain": "درس", "translit": "dars", "fr": "leçon", "type": "nom", "pattern": "فَعْل" },
+        { "ar": "دِرَاسَة", "arPlain": "دراسة", "translit": "dirāsa", "fr": "étude", "type": "nom d'action", "pattern": "فِعَالَة" },
+        { "ar": "مَدْرَسَة", "arPlain": "مدرسة", "translit": "madrasa", "fr": "école", "type": "nom de lieu", "pattern": "مَفْعَلَة" },
+        { "ar": "مُدَرِّس", "arPlain": "مدرس", "translit": "mudarris", "fr": "professeur", "type": "participe actif (II)", "pattern": "مُفَعِّل" }
+      ]
+    },
+    {
+      "id": "slm",
+      "letters": ["س", "ل", "م"],
+      "transliteration": "s-l-m",
+      "meaning": "paix / soumission / intégrité",
+      "derivatives": [
+        { "ar": "سَلِمَ", "arPlain": "سلم", "translit": "salima", "fr": "être sain / être en sécurité", "type": "verbe", "pattern": "فَعِلَ" },
+        { "ar": "سَلَام", "arPlain": "سلام", "translit": "salām", "fr": "paix / salut", "type": "nom", "pattern": "فَعَال" },
+        { "ar": "إِسْلَام", "arPlain": "إسلام", "translit": "islām", "fr": "islam (soumission)", "type": "nom d'action (IV)", "pattern": "إِفْعَال" },
+        { "ar": "مُسْلِم", "arPlain": "مسلم", "translit": "muslim", "fr": "musulman", "type": "participe actif (IV)", "pattern": "مُفْعِل" },
+        { "ar": "سَلَامَة", "arPlain": "سلامة", "translit": "salāma", "fr": "sécurité / intégrité", "type": "nom", "pattern": "فَعَالَة" }
+      ]
+    },
+    {
+      "id": "elm",
+      "letters": ["ع", "ل", "م"],
+      "transliteration": "ʿ-l-m",
+      "meaning": "savoir / connaître",
+      "derivatives": [
+        { "ar": "عَلِمَ", "arPlain": "علم", "translit": "ʿalima", "fr": "il a su", "type": "verbe", "pattern": "فَعِلَ" },
+        { "ar": "عِلْم", "arPlain": "علم", "translit": "ʿilm", "fr": "science / savoir", "type": "nom", "pattern": "فِعْل" },
+        { "ar": "عَالِم", "arPlain": "عالم", "translit": "ʿālim", "fr": "savant / monde", "type": "participe actif", "pattern": "فَاعِل" },
+        { "ar": "مُعَلِّم", "arPlain": "معلم", "translit": "muʿallim", "fr": "enseignant", "type": "participe actif (II)", "pattern": "مُفَعِّل" },
+        { "ar": "مَعْلُومَة", "arPlain": "معلومة", "translit": "maʿlūma", "fr": "information", "type": "participe passif (II)", "pattern": "مَفْعُولَة" }
+      ]
+    },
+    {
+      "id": "q-r-a",
+      "letters": ["ق", "ر", "أ"],
+      "transliteration": "q-r-ʾ",
+      "meaning": "lire / réciter",
+      "derivatives": [
+        { "ar": "قَرَأَ", "arPlain": "قرأ", "translit": "qaraʾa", "fr": "il a lu", "type": "verbe", "pattern": "فَعَلَ" },
+        { "ar": "قِرَاءَة", "arPlain": "قراءة", "translit": "qirāʾa", "fr": "lecture", "type": "nom d'action", "pattern": "فِعَالَة" },
+        { "ar": "قُرْآن", "arPlain": "قرآن", "translit": "qurʾān", "fr": "Coran (la récitation)", "type": "nom", "pattern": "فُعْلَان" },
+        { "ar": "قَارِئ", "arPlain": "قارئ", "translit": "qāriʾ", "fr": "lecteur", "type": "participe actif", "pattern": "فَاعِل" }
+      ]
+    },
+    {
+      "id": "f-a-l",
+      "letters": ["ف", "ع", "ل"],
+      "transliteration": "f-ʿ-l",
+      "meaning": "faire / agir",
+      "derivatives": [
+        { "ar": "فَعَلَ", "arPlain": "فعل", "translit": "faʿala", "fr": "il a fait", "type": "verbe", "pattern": "فَعَلَ" },
+        { "ar": "فِعْل", "arPlain": "فعل", "translit": "fiʿl", "fr": "action / verbe", "type": "nom", "pattern": "فِعْل" },
+        { "ar": "فَاعِل", "arPlain": "فاعل", "translit": "fāʿil", "fr": "acteur / sujet grammatical", "type": "participe actif", "pattern": "فَاعِل" },
+        { "ar": "مَفْعُول", "arPlain": "مفعول", "translit": "mafʿūl", "fr": "accompli / complément d'objet", "type": "participe passif", "pattern": "مَفْعُول" }
+      ]
+    },
+    {
+      "id": "h-m-d",
+      "letters": ["ح", "م", "د"],
+      "transliteration": "ḥ-m-d",
+      "meaning": "louer / remercier",
+      "derivatives": [
+        { "ar": "حَمِدَ", "arPlain": "حمد", "translit": "ḥamida", "fr": "il a loué", "type": "verbe", "pattern": "فَعِلَ" },
+        { "ar": "حَمْد", "arPlain": "حمد", "translit": "ḥamd", "fr": "louange", "type": "nom", "pattern": "فَعْل" },
+        { "ar": "أَحْمَد", "arPlain": "أحمد", "translit": "aḥmad", "fr": "Ahmed (le plus loué)", "type": "prénom", "pattern": "أَفْعَل" },
+        { "ar": "مُحَمَّد", "arPlain": "محمد", "translit": "muḥammad", "fr": "Muhammad (le loué)", "type": "prénom", "pattern": "مُفَعَّل" },
+        { "ar": "مَحْمُود", "arPlain": "محمود", "translit": "maḥmūd", "fr": "Mahmoud (le loué)", "type": "participe passif", "pattern": "مَفْعُول" }
+      ]
+    },
+    {
+      "id": "j-l-s",
+      "letters": ["ج", "ل", "س"],
+      "transliteration": "j-l-s",
+      "meaning": "s'asseoir",
+      "derivatives": [
+        { "ar": "جَلَسَ", "arPlain": "جلس", "translit": "jalasa", "fr": "il s'est assis", "type": "verbe", "pattern": "فَعَلَ" },
+        { "ar": "جُلُوس", "arPlain": "جلوس", "translit": "julūs", "fr": "action de s'asseoir", "type": "nom d'action", "pattern": "فُعُول" },
+        { "ar": "مَجْلِس", "arPlain": "مجلس", "translit": "majlis", "fr": "salon / assemblée", "type": "nom de lieu", "pattern": "مَفْعِل" }
+      ]
+    },
+    {
+      "id": "sh-r-b",
+      "letters": ["ش", "ر", "ب"],
+      "transliteration": "sh-r-b",
+      "meaning": "boire",
+      "derivatives": [
+        { "ar": "شَرِبَ", "arPlain": "شرب", "translit": "shariba", "fr": "il a bu", "type": "verbe", "pattern": "فَعِلَ" },
+        { "ar": "شُرْب", "arPlain": "شرب", "translit": "shurb", "fr": "action de boire", "type": "nom d'action", "pattern": "فُعْل" },
+        { "ar": "شَرَاب", "arPlain": "شراب", "translit": "sharāb", "fr": "boisson", "type": "nom", "pattern": "فَعَال" },
+        { "ar": "مَشْرُوب", "arPlain": "مشروب", "translit": "mashrūb", "fr": "boisson (chose bue)", "type": "participe passif", "pattern": "مَفْعُول" }
+      ]
+    },
+    {
+      "id": "a-k-l",
+      "letters": ["أ", "ك", "ل"],
+      "transliteration": "ʾ-k-l",
+      "meaning": "manger",
+      "derivatives": [
+        { "ar": "أَكَلَ", "arPlain": "أكل", "translit": "ʾakala", "fr": "il a mangé", "type": "verbe", "pattern": "فَعَلَ" },
+        { "ar": "أَكْل", "arPlain": "أكل", "translit": "ʾakl", "fr": "action de manger / nourriture", "type": "nom d'action", "pattern": "فَعْل" },
+        { "ar": "طَعَام", "arPlain": "طعام", "translit": "ṭaʿām", "fr": "nourriture (de la racine ط-ع-م)", "type": "nom", "pattern": "-" },
+        { "ar": "مَأْكُول", "arPlain": "مأكول", "translit": "maʾkūl", "fr": "comestible", "type": "participe passif", "pattern": "مَفْعُول" }
+      ]
+    },
+    {
+      "id": "dh-h-b",
+      "letters": ["ذ", "ه", "ب"],
+      "transliteration": "dh-h-b",
+      "meaning": "aller / partir",
+      "derivatives": [
+        { "ar": "ذَهَبَ", "arPlain": "ذهب", "translit": "dhahaba", "fr": "il est allé", "type": "verbe", "pattern": "فَعَلَ" },
+        { "ar": "ذَهَاب", "arPlain": "ذهاب", "translit": "dhahāb", "fr": "aller (aller simple)", "type": "nom d'action", "pattern": "فَعَال" },
+        { "ar": "مَذْهَب", "arPlain": "مذهب", "translit": "madhhab", "fr": "école de droit islamique", "type": "nom de lieu", "pattern": "مَفْعَل" }
+      ]
+    },
+    {
+      "id": "kh-r-j",
+      "letters": ["خ", "ر", "ج"],
+      "transliteration": "kh-r-j",
+      "meaning": "sortir",
+      "derivatives": [
+        { "ar": "خَرَجَ", "arPlain": "خرج", "translit": "kharaja", "fr": "il est sorti", "type": "verbe", "pattern": "فَعَلَ" },
+        { "ar": "خُرُوج", "arPlain": "خروج", "translit": "khurūj", "fr": "sortie", "type": "nom d'action", "pattern": "فُعُول" },
+        { "ar": "مَخْرَج", "arPlain": "مخرج", "translit": "makhraj", "fr": "sortie / issue", "type": "nom de lieu", "pattern": "مَفْعَل" },
+        { "ar": "خَارِج", "arPlain": "خارج", "translit": "khārij", "fr": "extérieur", "type": "participe actif", "pattern": "فَاعِل" }
+      ]
+    },
+    {
+      "id": "d-kh-l",
+      "letters": ["د", "خ", "ل"],
+      "transliteration": "d-kh-l",
+      "meaning": "entrer",
+      "derivatives": [
+        { "ar": "دَخَلَ", "arPlain": "دخل", "translit": "dakhala", "fr": "il est entré", "type": "verbe", "pattern": "فَعَلَ" },
+        { "ar": "دُخُول", "arPlain": "دخول", "translit": "dukhūl", "fr": "entrée", "type": "nom d'action", "pattern": "فُعُول" },
+        { "ar": "مَدْخَل", "arPlain": "مدخل", "translit": "madkhal", "fr": "entrée / introduction", "type": "nom de lieu", "pattern": "مَفْعَل" },
+        { "ar": "دَاخِل", "arPlain": "داخل", "translit": "dākhil", "fr": "intérieur", "type": "participe actif", "pattern": "فَاعِل" }
+      ]
+    },
+    {
+      "id": "n-z-l",
+      "letters": ["ن", "ز", "ل"],
+      "transliteration": "n-z-l",
+      "meaning": "descendre / révéler",
+      "derivatives": [
+        { "ar": "نَزَلَ", "arPlain": "نزل", "translit": "nazala", "fr": "il est descendu", "type": "verbe", "pattern": "فَعَلَ" },
+        { "ar": "نُزُول", "arPlain": "نزول", "translit": "nuzūl", "fr": "descente", "type": "nom d'action", "pattern": "فُعُول" },
+        { "ar": "نَازِل", "arPlain": "نازل", "translit": "nāzil", "fr": "descendant", "type": "participe actif", "pattern": "فَاعِل" },
+        { "ar": "مَنْزِل", "arPlain": "منزل", "translit": "manzil", "fr": "maison / demeure", "type": "nom de lieu", "pattern": "مَفْعِل" }
+      ]
+    },
+    {
+      "id": "r-j-a",
+      "letters": ["ر", "ج", "ع"],
+      "transliteration": "r-j-ʿ",
+      "meaning": "revenir / retourner",
+      "derivatives": [
+        { "ar": "رَجَعَ", "arPlain": "رجع", "translit": "rajaʿa", "fr": "il est revenu", "type": "verbe", "pattern": "فَعَلَ" },
+        { "ar": "رُجُوع", "arPlain": "رجوع", "translit": "rujūʿ", "fr": "retour", "type": "nom d'action", "pattern": "فُعُول" },
+        { "ar": "مَرْجِع", "arPlain": "مرجع", "translit": "marjiʿ", "fr": "référence / source", "type": "nom de lieu", "pattern": "مَفْعِل" },
+        { "ar": "رَاجِع", "arPlain": "راجع", "translit": "rājiʿ", "fr": "retournant / révisant", "type": "participe actif", "pattern": "فَاعِل" }
+      ]
+    }
+  ]
 }
