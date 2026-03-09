@@ -16,7 +16,11 @@ export function renderWordsMatch(params) {
 
   const deck = (store.get('decks') || []).find(d => d.id === actualDeckId);
   if (!deck) { navigate(backPath); return; }
-  _state = { themeId, deckId: actualDeckId, lessonId, backPath, deck };
+  const storedPrefs = store.get('preferences') || {};
+  _state = {
+    themeId, deckId: actualDeckId, lessonId, backPath, deck,
+    prefs: { showHarakats: storedPrefs.showHarakats !== false },
+  };
   _renderIntro();
 }
 
@@ -43,9 +47,10 @@ function _renderIntro() {
 function _startGame() {
   if (_state.timerInterval) clearInterval(_state.timerInterval);
   const cards = shuffle([..._state.deck.cards]).slice(0, 8);
+  const showHarakats = _state.prefs.showHarakats;
   const cells = shuffle([
-    ...cards.map(c => ({ id: c.id, text: c.front, type: 'front', pairId: c.id, isAr: true })),
-    ...cards.map(c => ({ id: c.id + '_b', text: c.back,  type: 'back',  pairId: c.id, isAr: false })),
+    ...cards.map(c => ({ id: c.id, text: (!showHarakats && c.frontPlain) ? c.frontPlain : c.front, type: 'front', pairId: c.id, isAr: true })),
+    ...cards.map(c => ({ id: c.id + '_b', text: c.back, type: 'back', pairId: c.id, isAr: false })),
   ]);
 
   _state.cells = cells;

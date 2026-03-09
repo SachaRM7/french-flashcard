@@ -788,3 +788,33 @@
   padding: var(--space-2xl) 0;
   font-size: var(--text-sm);
 }
+
+/* ── Filtres de lecon (CSS class-based, pas de re-render) ── */
+
+/* Harakats : version avec harakats visible par defaut, plain masquee */
+.lesson-filter-container .arabic-text--plain { display: none; }
+.lesson-filter-container:not(.show-harakats) .arabic-text { display: none; }
+.lesson-filter-container:not(.show-harakats) .arabic-text--plain { display: block; }
+
+/* Transliteration */
+.lesson-filter-container .translit-text { display: none; }
+.lesson-filter-container.show-translit .translit-text { display: block; }
+
+/* Traduction */
+.lesson-filter-container .translation-text { display: none; }
+.lesson-filter-container .translation-placeholder { display: block; }
+.lesson-filter-container.show-translation .translation-text { display: block; }
+.lesson-filter-container.show-translation .translation-placeholder { display: none; }
+
+/* Reveler individuellement une ligne de dialogue */
+.lesson-filter-container:not(.show-translation) .dialogue-line.is-revealed .translation-text { display: block; }
+.lesson-filter-container:not(.show-translation) .dialogue-line.is-revealed .translation-placeholder { display: none; }
+
+/* Placeholder vocabulaire dans la grille */
+.vocab-item__fr--placeholder {
+  grid-column: 2;
+  grid-row: 1 / 3;
+  align-self: center;
+  font-size: var(--text-sm);
+  color: var(--text-tertiary);
+}

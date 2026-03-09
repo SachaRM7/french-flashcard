@@ -24,12 +24,14 @@ export async function renderWordsFlashcards(params) {
   const favData = await db.getFavorites(course.id);
   const srsAll = await db.getSRS(course.id);
   const srsMap = Object.fromEntries(srsAll.map(e => [e.cardId, e]));
+  const storedPrefs = store.get('preferences') || {};
 
   if (_state._keyHandler) document.removeEventListener('keydown', _state._keyHandler);
 
   _state = {
     themeId, deckId: actualDeckId, lessonId, backPath, deck, course,
     options: { shuffle: false, frontSide: 'front', favoritesOnly: false },
+    prefs: { showTranslit: storedPrefs.showTranslit !== false, showHarakats: storedPrefs.showHarakats !== false },
     favorites: new Set(favData.words),
     srsMap,
     cards: [], index: 0, known: 0, unknown: 0,
@@ -53,8 +55,12 @@ function _initCards() {
 
 function _cardText(card, side) {
   const front = _state.options.frontSide === 'front';
-  if (side === 'front') return front ? card.front : card.back;
-  return front ? card.back : card.front;
+  // showingArSide: true when this side shows card.front (the Arabic field)
+  const showingArSide = side === 'front' ? front : !front;
+  if (showingArSide) {
+    return (!_state.prefs.showHarakats && card.frontPlain) ? card.frontPlain : card.front;
+  }
+  return card.back;
 }
 
 function _isAr(side) {
@@ -88,9 +94,8 @@ function _render() {
         <div class="swipe-card" id="swipe-card">
           <div class="card-inner" id="card-inner">
             <div class="card-face card-face--front">
-              ${card.emoji ? `<div class="card-face__emoji">${card.emoji}</div>` : ''}
               <div class="card-face__text ${_isAr('front') ? 'card-face__text--ar' : ''}">${escapeHtml(_cardText(card, 'front'))}</div>
-              ${_isAr('front') && card.translit ? `<div class="card-face__translit">${escapeHtml(card.translit)}</div>` : ''}
+              ${_isAr('front') && card.translit && _state.prefs.showTranslit ? `<div class="card-face__translit">${escapeHtml(card.translit)}</div>` : ''}
               <div class="card-face__hint">Tape pour retourner</div>
             </div>
             <div class="card-face card-face--back">
@@ -231,9 +236,21 @@ function _bindSwipe() {
 
 function _openOptions() {
   const course = _state.course;
-  showModal(renderOptionsModal({ currentOptions: _state.options, courseConfig: course.config, showWrittenToggle: false }));
-  bindModalEvents(({ key, value }) => {
-    _state.options[key] = value;
+  showModal(renderOptionsModal({
+    currentOptions: { ..._state.options, _prefs: _state.prefs },
+    courseConfig: course.config,
+    showWrittenToggle: false,
+  }));
+  bindModalEvents(async ({ key, value, isPref }) => {
+    if (isPref) {
+      _state.prefs[key] = value;
+      const storedPrefs = store.get('preferences') || {};
+      const updated = { ...storedPrefs, [key]: value };
+      store.set('preferences', updated);
+      await db.savePreferences(updated);
+    } else {
+      _state.options[key] = value;
+    }
     _hideModal(); _initCards(); _render();
   });
 }

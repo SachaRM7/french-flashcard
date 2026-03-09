@@ -20,17 +20,24 @@ export async function renderWordsTest(params) {
   if (!deck) { navigate(backPath); return; }
   const course = store.get('currentCourse');
   const srsAll = await db.getSRS(course.id);
+  const storedPrefs = store.get('preferences') || {};
   _state = {
     themeId, deckId: actualDeckId, lessonId, backPath, deck, course,
     srsMap: Object.fromEntries(srsAll.map(e => [e.cardId, e])),
     options: { count: 10, frontSide: 'front', writtenMode: false, correctionLevel: 'flexible' },
+    prefs: { showTranslit: storedPrefs.showTranslit !== false, showHarakats: storedPrefs.showHarakats !== false },
     questions: [], index: 0, results: [],
     pendingSRS: [],
   };
   _renderConfig();
 }
 
-function _cardFront(card) { return _state.options.frontSide === 'front' ? card.front : card.back; }
+function _cardFront(card) {
+  if (_state.options.frontSide === 'front') {
+    return (!_state.prefs.showHarakats && card.frontPlain) ? card.frontPlain : card.front;
+  }
+  return card.back;
+}
 function _cardBack(card)  { return _state.options.frontSide === 'front' ? card.back : card.front; }
 function _isFrontAr() { const c = _state.course.config; return _state.options.frontSide === 'front' ? c.frontDir === 'rtl' : c.backDir === 'rtl'; }
 
@@ -112,7 +119,7 @@ function _renderQuestion() {
       <div class="learn-container">
         <div class="learn-question">
           <div class="learn-question__text ${isAr ? 'learn-question__text--ar' : ''}">${escapeHtml(_cardFront(card))}</div>
-          ${isAr && card.translit ? `<div class="learn-question__translit">${escapeHtml(card.translit)}</div>` : ''}
+          ${isAr && card.translit && _state.prefs.showTranslit ? `<div class="learn-question__translit">${escapeHtml(card.translit)}</div>` : ''}
         </div>
         ${answerHTML}
         <div class="learn-feedback" id="feedback"></div>

@@ -3,6 +3,7 @@
 import { store } from '../store.js';
 import { navigate } from '../router.js';
 import { renderHeader } from '../components/header.js';
+import { renderBottomNav } from '../components/bottom-nav.js';
 import { escapeHtml } from '../utils.js';
 
 const $app = () => document.getElementById('app');
@@ -61,6 +62,7 @@ function _render() {
         </div>
       </div>
     </div>
+    ${renderBottomNav('conversations')}
   `;
 
   _bindEvents();

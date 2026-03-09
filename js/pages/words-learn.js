@@ -23,9 +23,11 @@ export async function renderWordsLearn(params) {
   const srsAll = await db.getSRS(course.id);
   const srsMap = Object.fromEntries(srsAll.map(e => [e.cardId, e]));
 
+  const storedPrefs = store.get('preferences') || {};
   _state = {
     themeId, deckId: actualDeckId, lessonId, backPath, deck, course, srsMap,
     options: { shuffle: true, frontSide: 'front', writtenMode: false, correctionLevel: 'flexible' },
+    prefs: { showTranslit: storedPrefs.showTranslit !== false, showHarakats: storedPrefs.showHarakats !== false },
     queue: [], retrySet: new Set(), correct: 0, wrong: 0, answered: false,
     pendingSRS: [],
   };
@@ -44,7 +46,12 @@ function _buildQueue() {
 
 function _currentCard() { return _state.queue[0] || null; }
 
-function _cardFront(card) { return _state.options.frontSide === 'front' ? card.front : card.back; }
+function _cardFront(card) {
+  if (_state.options.frontSide === 'front') {
+    return (!_state.prefs.showHarakats && card.frontPlain) ? card.frontPlain : card.front;
+  }
+  return card.back;
+}
 function _cardBack(card) { return _state.options.frontSide === 'front' ? card.back : card.front; }
 function _isFrontAr() {
   const cfg = _state.course.config;
@@ -97,7 +104,7 @@ function _renderQuestion() {
         <div class="learn-question">
           ${isRetry ? '<div class="learn-question__retry">Essayons a nouveau</div>' : ''}
           <div class="learn-question__text ${isAr ? 'learn-question__text--ar' : ''}">${escapeHtml(_cardFront(card))}</div>
-          ${isAr && card.translit && _state.options.frontSide === 'front' ? `<div class="learn-question__translit">${escapeHtml(card.translit)}</div>` : ''}
+          ${isAr && card.translit && _state.options.frontSide === 'front' && _state.prefs.showTranslit ? `<div class="learn-question__translit">${escapeHtml(card.translit)}</div>` : ''}
         </div>
         ${answerHTML}
         <div class="learn-feedback" id="feedback"></div>
@@ -183,9 +190,17 @@ function _nextQuestion() {
 }
 
 function _openOptions() {
-  showModal(renderOptionsModal({ currentOptions: _state.options, courseConfig: _state.course.config }));
-  bindModalEvents(({ key, value }) => {
-    _state.options[key] = value;
+  showModal(renderOptionsModal({ currentOptions: { ..._state.options, _prefs: _state.prefs }, courseConfig: _state.course.config }));
+  bindModalEvents(async ({ key, value, isPref }) => {
+    if (isPref) {
+      _state.prefs[key] = value;
+      const storedPrefs = store.get('preferences') || {};
+      const updated = { ...storedPrefs, [key]: value };
+      store.set('preferences', updated);
+      await db.savePreferences(updated);
+    } else {
+      _state.options[key] = value;
+    }
     _hideModal(); _state.pendingSRS = []; _buildQueue(); _renderQuestion();
   });
 }

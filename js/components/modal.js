@@ -6,6 +6,9 @@ export function renderOptionsModal({ currentOptions = {}, courseConfig = {}, sho
   const { shuffle = false, favoritesOnly = false, frontSide = 'front', writtenMode = false, correctionLevel = 'flexible' } = currentOptions;
   const frontLabel = courseConfig.frontLabel || 'Recto';
   const backLabel = courseConfig.backLabel || 'Verso';
+  const prefs = currentOptions._prefs || {};
+  const showTranslit = prefs.showTranslit !== false;
+  const showHarakats = prefs.showHarakats !== false;
 
   return `
     <div class="modal-overlay" id="modal-overlay">
@@ -62,6 +65,24 @@ export function renderOptionsModal({ currentOptions = {}, courseConfig = {}, sho
             `).join('')}
           </div>` : ''}
         </div>` : ''}
+
+        <div class="modal-section">
+          <div class="modal-section__title">Affichage</div>
+          <div class="modal-option">
+            <span>Translittération</span>
+            <label class="toggle">
+              <input type="checkbox" id="opt-translit" ${showTranslit ? 'checked' : ''}>
+              <span class="toggle__slider"></span>
+            </label>
+          </div>
+          <div class="modal-option">
+            <span>Harakats (voyelles)</span>
+            <label class="toggle">
+              <input type="checkbox" id="opt-harakats" ${showHarakats ? 'checked' : ''}>
+              <span class="toggle__slider"></span>
+            </label>
+          </div>
+        </div>
       </div>
     </div>
   `;
@@ -134,4 +155,10 @@ export function bindModalEvents(onOptionChange) {
   overlay.querySelectorAll('.correction-btn').forEach(btn => {
     btn.addEventListener('click', () => onOptionChange({ key: 'correctionLevel', value: btn.dataset.level }));
   });
+
+  const translitEl = document.getElementById('opt-translit');
+  if (translitEl) translitEl.addEventListener('change', e => onOptionChange({ key: 'showTranslit', value: e.target.checked, isPref: true }));
+
+  const harakatsEl = document.getElementById('opt-harakats');
+  if (harakatsEl) harakatsEl.addEventListener('change', e => onOptionChange({ key: 'showHarakats', value: e.target.checked, isPref: true }));
 }

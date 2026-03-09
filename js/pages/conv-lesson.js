@@ -5,6 +5,7 @@ import { navigate } from '../router.js';
 import { renderHeader } from '../components/header.js';
 import { renderTabBar } from '../components/tab-bar.js';
 import { renderPlayer, bindPlayerEvents } from '../components/player.js';
+import { renderBottomNav } from '../components/bottom-nav.js';
 import { escapeHtml } from '../utils.js';
 import { db } from '../db.js';
 import { playWord } from '../audio.js';
@@ -40,6 +41,7 @@ export async function renderConvLesson(params) {
           <div class="completion__title">Lecon introuvable</div>
           <button class="secondary-btn" data-navigate="/conversations">Retour</button>
         </div>
+        ${renderBottomNav('conversations')}
       `;
       feather.replace();
       return;
@@ -54,10 +56,30 @@ export async function renderConvLesson(params) {
     showTranslation: true,
     showTranslit: true,
     showHarakats: true,
-    revealedLines: new Set(),
   };
 
   _render();
+}
+
+function _filterClasses() {
+  const { showTranslation, showTranslit, showHarakats } = _state;
+  return [
+    'lesson-filter-container',
+    showTranslation ? 'show-translation' : '',
+    showTranslit    ? 'show-translit'    : '',
+    showHarakats    ? 'show-harakats'    : '',
+  ].filter(Boolean).join(' ');
+}
+
+function _applyFilterClasses() {
+  const container = document.getElementById('lesson-swipe-container');
+  if (!container) return;
+  const hasPlayer = _state.lesson.hasAudio ? ' has-player' : '';
+  container.className = `swipe-tabs-container${hasPlayer} ${_filterClasses()}`;
+
+  document.getElementById('toggle-translation')?.classList.toggle('is-active', _state.showTranslation);
+  document.getElementById('toggle-translit')?.classList.toggle('is-active', _state.showTranslit);
+  document.getElementById('toggle-harakats')?.classList.toggle('is-active', _state.showHarakats);
 }
 
 function _render() {
@@ -79,12 +101,12 @@ function _render() {
         <span class="lesson-toggle__label">Translit.</span>
       </button>
       <button class="lesson-toggle ${_state.showHarakats ? 'is-active' : ''}" id="toggle-harakats">
-        <span class="lesson-toggle__icon text-ar">◌َ</span>
+        <span class="lesson-toggle__icon text-ar">&#x25CC;&#x064E;</span>
         <span class="lesson-toggle__label">Harakats</span>
       </button>
     </div>
     ${renderTabBar(tabs, activeTab)}
-    <div class="swipe-tabs-container ${hasPlayer ? 'has-player' : ''}" id="lesson-swipe-container">
+    <div class="swipe-tabs-container ${hasPlayer ? 'has-player' : ''} ${_filterClasses()}" id="lesson-swipe-container">
       <div class="swipe-tabs-track" id="lesson-swipe-track"
            style="transform:translateX(-${tabIndex * 20}%);transition:none">
         <div class="swipe-tabs-panel">${_renderDialogue()}</div>
@@ -95,6 +117,7 @@ function _render() {
       </div>
     </div>
     ${hasPlayer ? renderPlayer(lesson) : ''}
+    ${renderBottomNav('conversations')}
   `;
 
   _bindEvents();
@@ -118,26 +141,22 @@ function _switchTab(index, animate = true) {
 }
 
 function _renderDialogue() {
-  const { lesson, showTranslation, showTranslit, showHarakats, revealedLines } = _state;
+  const { lesson } = _state;
   if (!lesson.dialogue || !lesson.dialogue.length) {
     return `<p class="conv-empty">Dialogue bientot disponible.</p>`;
   }
   return `<div class="dialogue-list">
     ${lesson.dialogue.map(line => {
       const speaker = lesson.speakers?.[line.speaker] || { name: line.speaker, color: '#888' };
-      const arText = showHarakats ? line.ar : line.arPlain;
-      const revealed = revealedLines.has(line.id);
       return `
         <div class="dialogue-line" id="line-${escapeHtml(line.id)}">
           <div class="dialogue-line__speaker" style="color:${escapeHtml(speaker.color)}">${escapeHtml(speaker.name)}</div>
           <div class="dialogue-line__body">
-            <div class="dialogue-line__ar text-ar" dir="rtl">${escapeHtml(arText)}</div>
-            ${showTranslit ? `<div class="dialogue-line__translit">${escapeHtml(line.translit)}</div>` : ''}
-            ${showTranslation
-              ? `<div class="dialogue-line__fr">${escapeHtml(line.fr)}</div>`
-              : `<div class="dialogue-line__fr dialogue-line__fr--hidden ${revealed ? 'is-revealed' : ''}"
-                  data-line-id="${escapeHtml(line.id)}">${revealed ? escapeHtml(line.fr) : 'Appuyer pour reveler'}</div>`
-            }
+            <div class="dialogue-line__ar text-ar arabic-text" dir="rtl">${escapeHtml(line.ar)}</div>
+            <div class="dialogue-line__ar text-ar arabic-text--plain" dir="rtl">${escapeHtml(line.arPlain || line.ar)}</div>
+            <div class="dialogue-line__translit translit-text">${escapeHtml(line.translit)}</div>
+            <div class="dialogue-line__fr translation-text">${escapeHtml(line.fr)}</div>
+            <div class="dialogue-line__fr dialogue-line__fr--hidden translation-placeholder" data-line-id="${escapeHtml(line.id)}">Appuyer pour reveler</div>
           </div>
           <button class="dialogue-line__play" data-ar="${escapeHtml(line.ar)}" aria-label="Ecouter">
             <i data-feather="volume-2"></i>
@@ -156,12 +175,14 @@ function _renderVocabulary() {
   return `<div class="vocab-list">
     ${lesson.vocabulary.map(w => `
       <div class="vocab-item">
-        <div class="vocab-item__ar text-ar" dir="rtl">${escapeHtml(w.ar)}</div>
-        <div class="vocab-item__translit">${escapeHtml(w.translit)}</div>
-        <div class="vocab-item__fr">
+        <div class="vocab-item__ar text-ar arabic-text" dir="rtl">${escapeHtml(w.ar)}</div>
+        <div class="vocab-item__ar text-ar arabic-text--plain" dir="rtl">${escapeHtml(w.arPlain || w.ar)}</div>
+        <div class="vocab-item__translit translit-text">${escapeHtml(w.translit)}</div>
+        <div class="vocab-item__fr translation-text">
           ${escapeHtml(w.fr)}
           ${(w.linkedCards && w.linkedCards.length) ? `<span class="vocab-item__linked" title="Dans les flashcards">&#x1F4DA;</span>` : ''}
         </div>
+        <div class="vocab-item__fr vocab-item__fr--placeholder translation-placeholder">&middot;&middot;&middot;</div>
         <button class="vocab-item__play" data-ar="${escapeHtml(w.ar)}" aria-label="Ecouter">
           <i data-feather="volume-2"></i>
         </button>
@@ -182,15 +203,18 @@ function _renderGrammar() {
     ${lesson.grammar.map(g => `
       <div class="grammar-item">
         <div class="grammar-item__title">${escapeHtml(g.titleFr)}</div>
-        <div class="grammar-item__ar text-ar" dir="rtl">${escapeHtml(g.title)}</div>
-        <p class="grammar-item__explanation">${escapeHtml(g.explanation)}</p>
+        <div class="grammar-item__ar text-ar arabic-text" dir="rtl">${escapeHtml(g.title)}</div>
+        <div class="grammar-item__ar text-ar arabic-text--plain" dir="rtl">${escapeHtml(g.titlePlain || g.title)}</div>
+        <p class="grammar-item__explanation translation-text">${escapeHtml(g.explanation)}</p>
+        <p class="grammar-item__explanation translation-placeholder">&middot;&middot;&middot;</p>
         ${g.examples.length ? `
           <div class="grammar-examples">
             ${g.examples.map(ex => `
               <div class="grammar-example">
-                <div class="grammar-example__ar text-ar" dir="rtl">${escapeHtml(ex.ar)}</div>
-                <div class="grammar-example__translit">${escapeHtml(ex.translit)}</div>
-                <div class="grammar-example__fr">${escapeHtml(ex.fr)}</div>
+                <div class="grammar-example__ar text-ar arabic-text" dir="rtl">${escapeHtml(ex.ar)}</div>
+                <div class="grammar-example__ar text-ar arabic-text--plain" dir="rtl">${escapeHtml(ex.arPlain || ex.ar)}</div>
+                <div class="grammar-example__translit translit-text">${escapeHtml(ex.translit)}</div>
+                <div class="grammar-example__fr translation-text">${escapeHtml(ex.fr)}</div>
                 <button class="vocab-item__play" data-ar="${escapeHtml(ex.ar)}" aria-label="Ecouter">
                   <i data-feather="volume-2"></i>
                 </button>
@@ -211,9 +235,11 @@ function _renderExamples() {
   return `<div class="vocab-list">
     ${lesson.examples.map(ex => `
       <div class="vocab-item">
-        <div class="vocab-item__ar text-ar" dir="rtl">${escapeHtml(ex.ar)}</div>
-        <div class="vocab-item__translit">${escapeHtml(ex.translit)}</div>
-        <div class="vocab-item__fr">${escapeHtml(ex.fr)}</div>
+        <div class="vocab-item__ar text-ar arabic-text" dir="rtl">${escapeHtml(ex.ar)}</div>
+        <div class="vocab-item__ar text-ar arabic-text--plain" dir="rtl">${escapeHtml(ex.arPlain || ex.ar)}</div>
+        <div class="vocab-item__translit translit-text">${escapeHtml(ex.translit)}</div>
+        <div class="vocab-item__fr translation-text">${escapeHtml(ex.fr)}</div>
+        <div class="vocab-item__fr vocab-item__fr--placeholder translation-placeholder">&middot;&middot;&middot;</div>
         <button class="vocab-item__play" data-ar="${escapeHtml(ex.ar)}" aria-label="Ecouter">
           <i data-feather="volume-2"></i>
         </button>
@@ -248,19 +274,18 @@ function _bindEvents() {
     btn.addEventListener('click', () => _switchTab(i, false));
   });
 
-  // Toggles
+  // Toggles — CSS class-based, no re-render needed
   document.getElementById('toggle-translation')?.addEventListener('click', () => {
     _state.showTranslation = !_state.showTranslation;
-    _state.revealedLines.clear();
-    _render();
+    _applyFilterClasses();
   });
   document.getElementById('toggle-translit')?.addEventListener('click', () => {
     _state.showTranslit = !_state.showTranslit;
-    _render();
+    _applyFilterClasses();
   });
   document.getElementById('toggle-harakats')?.addEventListener('click', () => {
     _state.showHarakats = !_state.showHarakats;
-    _render();
+    _applyFilterClasses();
   });
 
   // Audio play buttons
@@ -271,25 +296,15 @@ function _bindEvents() {
     });
   });
 
-  // Reveal translation on click
-  $app().querySelectorAll('.dialogue-line__fr--hidden').forEach(el => {
-    el.addEventListener('click', () => {
-      const lineId = el.dataset.lineId;
-      _state.revealedLines.add(lineId);
-      const line = _state.lesson.dialogue.find(l => l.id === lineId);
-      if (line) {
-        el.textContent = line.fr;
-        el.classList.add('is-revealed');
-      }
-    });
-  });
+  // Reveal translation on click for dialogue lines
+  _bindRevealEvents();
 
   // Start exercises
   document.getElementById('btn-start-exercises')?.addEventListener('click', () => {
     navigate(`/conversations/lecon/${_state.lessonId}/exercice`);
   });
 
-  // Vocab -> page deck (amelioration 3 + 4)
+  // Vocab -> page deck
   document.getElementById('btn-review-vocab')?.addEventListener('click', async () => {
     const vocab = _state.lesson.vocabulary;
     if (!vocab || !vocab.length) return;
@@ -317,10 +332,8 @@ function _bindEvents() {
       })),
     };
 
-    // Sauvegarder dans IndexedDB (amelioration 4)
     await db.saveLessonDeck(course.id, _state.lessonId, deck);
 
-    // Ajouter au store pour acces immediat
     const decks = store.get('decks') || [];
     const idx = decks.findIndex(d => d.id === deck.id);
     if (idx >= 0) decks[idx] = deck; else decks.push(deck);
@@ -329,8 +342,16 @@ function _bindEvents() {
     navigate(`/mots/lecons/${_state.lessonId}`);
   });
 
-  // Swipe horizontal pour changer d'onglet
   _bindSwipe();
+}
+
+function _bindRevealEvents() {
+  $app().querySelectorAll('.translation-placeholder[data-line-id]').forEach(el => {
+    el.addEventListener('click', () => {
+      const lineEl = document.getElementById(`line-${el.dataset.lineId}`);
+      if (lineEl) lineEl.classList.add('is-revealed');
+    });
+  });
 }
 
 function _bindSwipe() {
